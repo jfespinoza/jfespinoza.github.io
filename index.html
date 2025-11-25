@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diplomado Internacional — Teoría de Grafos y TDA | Material y Proyectos</title>
-  <meta name="description" content="Material del módulo Teoría de Grafos y TDA, procedimiento de entrega de la tarea y proyectos del módulo de aplicaciones." />
+  <title>Diplomado Internacional — Teoría de Grafos y TDA | Material y entrega</title>
+  <meta name="description" content="Material del módulo Teoría de Grafos y TDA y procedimiento de entrega de la tarea mediante Google Forms." />
   <style>
     /* Estilo sobrio y legible, sin énfasis tipográfico innecesario */
     :root {
@@ -12,210 +12,178 @@
       --muted: #50505a;
       --bg: #ffffff;
       --line: #e6e6ea;
-      --link: #0056b3;
-      --link-hover: #003d82;
-      --bg-light: #f8f9fa; /* Color de fondo ligero para destacar enlaces */
+      --link: #0a66c2;
     }
-    
-    /* Soporte básico para modo oscuro si el usuario lo prefiere */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text: #e6e6ea;
-        --muted: #a0a0b4;
-        --bg: #1b1b1f;
-        --line: #3a3a48;
-        --link: #4da6ff;
-        --link-hover: #80c0ff;
-        --bg-light: #2a2a38;
-      }
-    }
-
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial;
       line-height: 1.6;
       color: var(--text);
-      background-color: var(--bg);
-      margin: 0;
-      padding: 0;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    header { padding: 2.5rem 1rem 1.25rem; border-bottom: 1px solid var(--line); }
+    .container { max-width: 920px; margin: 0 auto; padding: 0 1rem; }
+    h1, h2, h3 { margin: 0 0 .5rem; font-weight: 500; }
+    p { margin: .75rem 0; }
+    nav ul { display: flex; gap: .75rem; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
+    nav a {
+      display: inline-block; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: .5rem;
+      text-decoration: none; color: var(--link);
     }
-    header {
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-    }
-    h1, h2, h3 {
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 2.5rem;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 0.3rem;
-    }
-    h3 {
-      font-size: 1.15rem;
-      margin-top: 1.5rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: var(--link);
+    main { padding: 1.5rem 0 3rem; }
+    section { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+    .lead { color: var(--muted); }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 800px){ .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+    .card { padding: 1rem; border: 1px solid var(--line); border-radius: .5rem; }
+    .list { padding-left: 1.25rem; }
+    a { color: var(--link); }
+    .actions a { display: inline-block; margin-right: .75rem; text-decoration: none; }
+    .small { font-size: .95rem; color: var(--muted); }
+    footer { padding: 2rem 1rem; color: var(--muted); }
+    .btn {
+      display: inline-block; padding: .6rem .9rem; border-radius: .5rem; border: 1px solid var(--line);
       text-decoration: none;
     }
-    a:hover {
-      color: var(--link-hover);
-      text-decoration: underline;
-    }
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    .metadata {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    hr {
-        border: none;
-        border-top: 1px solid var(--line);
-        margin: 3rem 0;
-    }
-    
-    /* Estilos para la nueva sección de proyectos */
-    article {
-        margin-bottom: 2.5rem;
-        padding-bottom: 1rem;
-    }
-    .project-links {
-        list-style-type: none;
-        padding: 0.8rem;
-        font-size: 0.95rem;
-        background-color: var(--bg-light);
-        border-radius: 5px;
-        border: 1px solid var(--line);
-    }
-    .project-links li {
-        margin-bottom: 0.3rem;
-    }
-    .project-links li:last-child {
-        margin-bottom: 0;
-    }
   </style>
+  <!--
+    Coloque en la raíz del repositorio estos archivos:
+      - Grafos_TDA_Actividad_1.ipynb
+      - Grafos_TDA_Actividad_2.ipynb
+      - Instrucciones-Colab.pdf
+      - Presentacion-Teoria-de-Grafos-y-TDA.pdf  (ajuste el nombre si es otro)
+    y un archivo vacío llamado .nojekyll
+  -->
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Diplomado Internacional de Modelación Matemática y Simulaciones</h1>
-      <p class="metadata">
-        Departamento de Matemáticas, Universidad de Sonora<br>
-        Módulo: Fundamentos teóricos de la modelación con grafos y TDA
+  <header>
+    <div class="container">
+<h1>Diplomado Internacional:
+    Modelado Matemático y Simulaciones</h1>
+      <p style="font-size: 1.2em; color: var(--muted); margin-top: -10px;">Teoría de Grafos y TDA</p>
+      <p class="lead">Material de trabajo y procedimiento de entrega de la tarea del módulo.</p>
+      <nav aria-label="Atajos">
+        <ul>
+          <li><a href="#material">Material de trabajo</a></li>
+          <li><a href="#instrucciones-colab">Instrucciones para usar Colab</a></li>
+          <li><a href="#entrega">Entrega de la tarea</a></li>
+          <li><a href="#presentacion">Presentación del módulo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="contenido" role="main">
+    <section id="material" aria-labelledby="tit-material">
+      <h2 id="tit-material">Material de trabajo</h2>
+      <p>Las siguientes libretas se utilizarán para realizar la actividad. Pueden abrirse directamente en Google Colab o descargarse para guardarlas en su Google Drive.</p>
+
+      <div class="grid grid-2" style="margin-top:.75rem;">
+        <article class="card" aria-labelledby="nb1">
+          <h3 id="nb1">Actividad 1: Grafos y modelado</h3>
+          <p class="small">Archivo: Grafos_TDA_Actividad_1.ipynb</p>
+          <p class="actions">
+            <a class="btn" target="_blank" rel="noopener noreferrer"
+               href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/Grafos_TDA_Actividad_1.ipynb">Abrir en Google Colab</a>
+            <a class="btn" href="Grafos_TDA_Actividad_1.ipynb" download>Descargar (.ipynb)</a>
+          </p>
+        </article>
+
+        <article class="card" aria-labelledby="nb2">
+          <h3 id="nb2">Actividad 2: TDA básico</h3>
+          <p class="small">Archivo: Grafos_TDA_Actividad_2.ipynb</p>
+          <p class="actions">
+            <a class="btn" target="_blank" rel="noopener noreferrer"
+               href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/Grafos_TDA_Actividad_2.ipynb">Abrir en Google Colab</a>
+            <a class="btn" href="Grafos_TDA_Actividad_2.ipynb" download>Descargar (.ipynb)</a>
+          </p>
+        </article>
+      </div>
+
+      <p class="small">Si Colab solicita permisos, utilice su cuenta institucional. Para enlaces a Drive, active permisos de lectura para “cualquier persona con el vínculo”.</p>
+    </section>
+
+    <section id="instrucciones-colab" aria-labelledby="tit-colab">
+      <h2 id="tit-colab">Instrucciones para usar Colab</h2>
+
+      <div class="card">
+        <h3>Resumen operativo</h3>
+        <ol class="list">
+          <li>Guarde en su Google Drive las dos libretas del módulo. Puede organizarlas en “Mi unidad / Diplomado TDA / Actividades / Actividad 1” y “Actividad 2”.</li>
+          <li>Abra cada libreta con Google Colab desde Drive o con los enlaces “Abrir en Google Colab” de esta página.</li>
+          <li>En la primera celda ejecute el montaje de Drive:
+            <pre><code>from google.colab import drive
+drive.mount('/content/drive')</code></pre>
+            Tras autorizar, sus archivos quedarán disponibles bajo <code>/content/drive/MyDrive/...</code>.
+          </li>
+          <li>Ejecute las celdas en orden. Si hay celdas que instalan paquetes, ejecútelas primero y espere a que finalicen.</li>
+          <li>Conserve una copia en su Drive y verifique que no haya errores antes de preparar la evidencia de entrega.</li>
+        </ol>
+
+        <p class="small">Para más detalle, consulte el documento “Instrucciones-Colab.pdf”, disponible a continuación.</p>
+        <p class="actions">
+          <a class="btn" href="Instrucciones-Colab.pdf" target="_blank" rel="noopener noreferrer">Abrir el instructivo (PDF)</a>
+          <a class="btn" href="Instrucciones-Colab.pdf" download>Descargar el instructivo</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="entrega" aria-labelledby="tit-entrega">
+      <h2 id="tit-entrega">Entrega de la tarea</h2>
+      <p>La entrega se realizará exclusivamente mediante el formulario institucional indicado abajo. Lea con atención los requisitos y prepare sus archivos antes de enviar.</p>
+
+      <div class="card">
+        <h3>Requisitos de la evidencia</h3>
+        <ul class="list">
+          <li>Un archivo <code>.ipynb</code> por actividad, sin errores de ejecución.</li>
+          <li>Opcionalmente, puede adjuntar un PDF con resultados o capturas pertinentes.</li>
+          <li>Si prefiere compartir enlaces a Drive en lugar de adjuntar archivos, active permisos de lectura para “cualquier persona con el vínculo”.</li>
+          <li>Sugerencia de nombre de archivo: <code>Apellido_Nombre_Act1.ipynb</code> y <code>Apellido_Nombre_Act2.ipynb</code>.</li>
+        </ul>
+
+        <h3>Pasos para enviar</h3>
+        <ol class="list">
+          <li>Reúna los archivos de ambas actividades o, en su caso, prepare los enlaces de lectura a Drive.</li>
+          <li>Acceda al formulario de entrega en el enlace que aparece a continuación.</li>
+          <li>Complete sus datos y adjunte los archivos o pegue los enlaces solicitados.</li>
+          <li>Revise el resumen antes de enviar y conserve el comprobante que genera el sistema.</li>
+        </ol>
+
+        <p class="actions" style="margin-top:.5rem;">
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://forms.gle/88eeHhJnCM4P4LGf6">Abrir formulario de entrega (Google Forms)</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="presentacion" aria-labelledby="tit-pres">
+      <h2 id="tit-pres">Presentación del módulo</h2>
+      <p>La presentación utilizada en la sesión teórica está disponible en formato PDF.</p>
+      <p class="actions">
+        <a class="btn" href="Presentacion-Teoria-de-Grafos-y-TDA.pdf" target="_blank" rel="noopener noreferrer">Abrir la presentación (PDF)</a>
+        <a class="btn" href="Presentacion-Teoria-de-Grafos-y-TDA.pdf" download>Descargar la presentación</a>
       </p>
-    </header>
-
-    <section id="fundamentos">
-      <h2>Material del Módulo y Procedimiento de Entrega</h2>
-
-      <p>Bienvenidos al módulo de Fundamentos Teóricos de la Modelación con Grafos y Análisis Topológico de Datos (TDA). A continuación, se detalla el material de estudio y el proceso para la entrega de la tarea correspondiente.</p>
-
-      <h3>Instrucciones y Material de Apoyo</h3>
-      <p><i>(Contenido original sobre materiales y formularios de entrega)</i></p>
-
     </section>
-    <hr>
-
-    <section id="aplicaciones">
-        <h2>Módulo de Aplicaciones: Proyectos Prácticos</h2>
-        <p><i>(Aplicaciones de Teorías de Grafos y TDA)</i></p>
-
-        <p>En esta sección se documentan los proyectos desarrollados durante el módulo de aplicaciones. Estos trabajos se enfocan en la implementación práctica y la replicación de metodologías avanzadas de Análisis Topológico de Datos (TDA) aplicadas a problemas complejos en diversas disciplinas científicas y financieras.</p>
-
-        <article>
-            <h3>Proyecto 3: Clasificador Topológico para la Detección de Ataques Epilépticos</h3>
-            <p>Implementación de un clasificador topológico basado en la metodología de Piangerelli et al. (2018). Se utiliza la Entropía Persistente para analizar señales de EEG (Electroencefalograma), con el objetivo de distinguir entre actividad cerebral normal y crisis epilépticas, aprovechando los cambios en la complejidad topológica causados por la hiper-sincronización neuronal.</p>
-            <ul class="project-links">
-                <li>
-                    📄 <a href="assets/pdf/Presentacion-Proyecto-3-Epilepsia.pdf" target="_blank">
-                        Ver Presentación (PDF)
-                    </a>
-                </li>
-                <li>
-                    🔗 <a href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-3-TDA-Epilepsia.ipynb" target="_blank">
-                        Abrir Libreta en Google Colab
-                    </a>
-                </li>
-            </ul>
-        </article>
-
-        <article>
-            <h3>Proyecto 4: Análisis Topológico de Modelos de Agregación Biológica</h3>
-            <p>Estudio del comportamiento colectivo en modelos de agregación biológica (e.g., Modelo de Vicsek), replicando el análisis de Topaz et al. (2015). Se aplica la Homología Persistente (mediante gráficos CROCKER) para detectar estructuras dinámicas y patrones emergentes en enjambres (<em>swarms</em>) que las métricas físicas tradicionales (parámetros de orden) no logran capturar.</p>
-            <ul class="project-links">
-                <li>
-                    📄 <a href="assets/pdf/Presentacion-Proyecto-4-Agregaciones-Biologicas.pdf" target="_blank">
-                        Ver Presentación (PDF)
-                    </a>
-                </li>
-                <li>
-                    🔗 <a href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-4-TDA-Agregaciones-Biologicas.ipynb" target="_blank">
-                        Abrir Libreta en Google Colab
-                    </a>
-                </li>
-            </ul>
-        </article>
-
-        <article>
-            <h3>Proyecto 5: Métodos Topológicos para el Análisis de Series de Tiempo</h3>
-            <p>Aplicación del marco teórico de Perea y Harer (2015) utilizando ventanas deslizantes (<em>Takens Embedding</em>) y Homología Persistente para caracterizar la estructura geométrica y la periodicidad inherente en series de tiempo. El proyecto se divide en dos enfoques aplicados al ámbito financiero:</p>
-            
-            <h4>Presentación General:</h4>
-             <ul class="project-links">
-                <li>
-                    📄 <a href="assets/pdf/Presentacion-Proyecto-5-Series-Tiempo.pdf" target="_blank">
-                        Ver Presentación General del Marco Teórico (PDF)
-                    </a>
-                </li>
-            </ul>
-
-            <h4>Opciones del Proyecto:</h4>
-            <ul>
-                <li>
-                    <strong>Opción A: Topología de Bitcoin y Ethereum.</strong> Análisis de la estructura geométrica y la dinámica acoplada de las dos principales criptomonedas.
-                    <ul class="project-links">
-                        <li>
-                            🔗 <a href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(A)-TDA-BTC-ETH.ipynb" target="_blank">
-                                Abrir Libreta Opción A en Colab
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Opción B: TDA Aplicado al Pronóstico de Series Financieras.</strong> Integración de características topológicas en modelos estadísticos y de Machine Learning (e.g., ARIMA, LSTM) para mejorar la capacidad de pronóstico.
-                    <ul class="project-links">
-                        <li>
-                            🔗 <a href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(B)-TDA-Pronostico.ipynb" target="_blank">
-                                Abrir Libreta Opción B en Colab
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </article>
-    </section>
-
   </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p class="small">Última actualización: <time id="fecha"></time></p>
+    </div>
+  </footer>
+
+  <script>
+    // Fecha legible en el pie de página
+    (function(){
+      const el = document.getElementById('fecha');
+      const d = new Date();
+      const fmt = new Intl.DateTimeFormat('es-MX', { year: 'numeric', month: 'long', day: '2-digit' });
+      el.textContent = fmt.format(d);
+    })();
+  </script>
 </body>
 </html>
