@@ -19,15 +19,25 @@
     body {
       margin: 0;
       font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
-      line-height: 1.6;
+      font-size: 1.125rem;
+      line-height: 1.7;
       color: var(--text);
       background: var(--bg);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     header { padding: 2.5rem 1rem 1.25rem; border-bottom: 1px solid var(--line); }
-    .container { max-width: 920px; margin: 0 auto; padding: 0 1rem; }
-    h1, h2, h3, h4 { margin: 0 0 .5rem; font-weight: 500; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    /* Nuevos estilos para títulos escalados */
+    h1, h2, h3, h4 {
+      margin: 0 0 .75rem;
+      font-weight: 600; /* Un poco más de peso para destacar en Palatino */
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.5rem; }   /* Título principal grande */
+    h2 { font-size: 2rem; }     /* Secciones principales */
+    h3 { font-size: 1.5rem; }   /* Encabezados de tarjetas */
+    h4 { font-size: 1.25rem; }  /* Subtítulos menores */
     p { margin: .75rem 0; }
     nav ul { display: flex; gap: .75rem; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
     nav a {
