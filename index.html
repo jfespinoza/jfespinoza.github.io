@@ -18,7 +18,7 @@
     html, body { height: 100%; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica, Arial;
+      font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
@@ -89,7 +89,7 @@
   <main class="container" id="contenido" role="main">
     <section id="material" aria-labelledby="tit-material">
       <h2 id="tit-material">Material de trabajo</h2>
-      <p>Las siguientes libretas se utilizarán para realizar la actividad. Pueden abrirse directamente en Google Colab o descargarse para guardarlas en su Google Drive.</p>
+      <p>Las siguientes libretas se utilizarán para realizar la tarea. Pueden abrirse directamente en Google Colab o descargarse para guardarlas en su Google Drive.</p>
 
       <div class="grid grid-2" style="margin-top:.75rem;">
         <article class="card" aria-labelledby="nb1">
@@ -113,7 +113,7 @@
         </article>
       </div>
 
-      <p class="small">Si Colab solicita permisos, utilice su cuenta institucional. Para enlaces a Drive, active permisos de lectura para "cualquier persona con el vínculo".</p>
+      <p class="small">Si Colab solicita permisos, utilice su cuenta de gmail. Para enlaces a Drive, active permisos de lectura para "cualquier persona con el vínculo".</p>
     </section>
 
     <section id="instrucciones-colab" aria-labelledby="tit-colab">
@@ -143,7 +143,7 @@ drive.mount('/content/drive')</code></pre>
 
     <section id="entrega" aria-labelledby="tit-entrega">
       <h2 id="tit-entrega">Entrega de la tarea</h2>
-      <p>La entrega se realizará exclusivamente mediante el formulario institucional indicado abajo. Lea con atención los requisitos y prepare sus archivos antes de enviar.</p>
+      <p>La entrega se realizará exclusivamente mediante el formulario de Google Forms indicado abajo. Lea con atención los requisitos y prepare sus archivos antes de enviar.</p>
 
       <div class="card">
         <h3>Requisitos de la evidencia</h3>
@@ -179,11 +179,11 @@ drive.mount('/content/drive')</code></pre>
     </section>
 
     <section id="proyectos" aria-labelledby="tit-proyectos">
-      <h2 id="tit-proyectos">Módulo de Aplicaciones: Proyectos Prácticos</h2>
+      <h2 id="tit-proyectos">Módulo de Aplicaciones: Proyectos prácticos</h2>
       <p>En esta sección se documentan los proyectos desarrollados durante el módulo de aplicaciones. Estos trabajos se enfocan en la implementación práctica y la replicación de metodologías avanzadas de Análisis Topológico de Datos (TDA) aplicadas a problemas complejos en diversas disciplinas científicas y financieras.</p>
 
       <div class="card project-card">
-        <h3>Proyecto 3: Clasificador Topológico para la Detección de Ataques Epilépticos</h3>
+        <h3>Proyecto 3: Clasificador topológico para la detección de ataques epilépticos</h3>
         <p>Implementación de un clasificador topológico basado en la metodología de Piangerelli et al. (2018). Se utiliza la Entropía Persistente para analizar señales de EEG (Electroencefalograma), con el objetivo de distinguir entre actividad cerebral normal y crisis epilépticas, aprovechando los cambios en la complejidad topológica causados por la hiper-sincronización neuronal.</p>
         <p class="actions">
           <a class="btn" href="assets/pdf/Presentacion-Proyecto-3-Epilepsia.pdf" target="_blank" rel="noopener noreferrer">Ver Presentación (PDF)</a>
@@ -192,7 +192,7 @@ drive.mount('/content/drive')</code></pre>
       </div>
 
       <div class="card project-card">
-        <h3>Proyecto 4: Análisis Topológico de Modelos de Agregación Biológica</h3>
+        <h3>Proyecto 4: Análisis topológico de modelos de agregación biológica</h3>
         <p>Estudio del comportamiento colectivo en modelos de agregación biológica (e.g., Modelo de Vicsek), replicando el análisis de Topaz et al. (2015). Se aplica la Homología Persistente (mediante gráficos CROCKER) para detectar estructuras dinámicas y patrones emergentes en enjambres (<em>swarms</em>) que las métricas físicas tradicionales (parámetros de orden) no logran capturar.</p>
         <p class="actions">
           <a class="btn" href="assets/pdf/Presentacion-Proyecto-4-Agregaciones-Biologicas.pdf" target="_blank" rel="noopener noreferrer">Ver Presentación (PDF)</a>
@@ -201,7 +201,7 @@ drive.mount('/content/drive')</code></pre>
       </div>
 
       <div class="card project-card">
-        <h3>Proyecto 5: Métodos Topológicos para el Análisis de Series de Tiempo</h3>
+        <h3>Proyecto 5: Métodos topológicos para el análisis de series de tiempo</h3>
         <p>Aplicación del marco teórico de Perea y Harer (2015) utilizando ventanas deslizantes (<em>Takens Embedding</em>) y Homología Persistente para caracterizar la estructura geométrica y la periodicidad inherente en series de tiempo. El proyecto se divide en dos enfoques aplicados al ámbito financiero.</p>
 
         <h4>Presentación General</h4>
@@ -215,7 +215,7 @@ drive.mount('/content/drive')</code></pre>
           <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(A)-TDA-BTC-ETH.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta Opción A en Colab</a>
         </p>
 
-        <h4>Opción B: TDA Aplicado al Pronóstico de Series Financieras</h4>
+        <h4>Opción B: TDA aplicado al pronóstico de series financieras</h4>
         <p class="small">Integración de características topológicas en modelos estadísticos y de Machine Learning (e.g., ARIMA, LSTM) para mejorar la capacidad de pronóstico.</p>
         <p class="actions">
           <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(B)-TDA-Pronostico.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta Opción B en Colab</a>
