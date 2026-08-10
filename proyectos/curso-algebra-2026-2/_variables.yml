@@ -1,0 +1,27 @@
+curso:
+  nombre: "Álgebra"
+  clave: "22017"
+  semestre: "2026-2"
+  docente: "Dr. Jesús Francisco Espinoza Fierro"
+  modalidad: "Presencial"
+  horas: "80"
+  creditos: "5"
+
+grupos:
+  ima:
+    programa: "Ingeniería en Materiales"
+    sigla: "IMA"
+    grupo: "21"
+    horario: "08:00-09:00"
+    aula: "5I-A302"
+    equipo: "[2026-2] 22017-Álgebra (IMA)"
+    codigo_teams: "57b6jks"
+  lte:
+    programa: "Ingeniería en Tecnología Electrónica"
+    sigla: "LTE"
+    grupo: "29"
+    horario: "14:00-15:00"
+    aula: "8B-A201"
+    equipo: "[2026-2] 22017-Álgebra (LTE)"
+    codigo_teams: "gtbcf0g"
+
