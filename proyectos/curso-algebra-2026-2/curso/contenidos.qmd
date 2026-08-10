@@ -1,0 +1,30 @@
+---
+title: "Contenidos y resultados de aprendizaje"
+description: "Unidades, horas y aprendizajes previstos en el programa oficial."
+---
+
+## Resultados de aprendizaje
+
+Al concluir el curso, se espera que el estudiante pueda:
+
+1. realizar operaciones algebraicas con números reales, números complejos y expresiones algebraicas;
+2. resolver ecuaciones e inecuaciones lineales mediante propiedades y técnicas algebraicas;
+3. utilizar matrices para representar y resolver sistemas de ecuaciones lineales por los métodos de Gauss, Gauss-Jordan, regla de Cramer y matriz inversa; y
+4. relacionar las herramientas estudiadas con situaciones de modelación y toma de decisiones.
+
+## Distribución oficial de contenidos
+
+| Unidad | Contenido | Horas |
+|---:|---|---:|
+| 1 | Números reales y complejos | 15 |
+| 2 | Polinomios y raíces | 20 |
+| 3 | Sistemas de ecuaciones lineales | 10 |
+| 4 | Matrices | 15 |
+| 5 | Conceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales | 5 |
+| 6 | Transformaciones lineales en el plano | 15 |
+|  | **Total** | **80** |
+
+## Relación entre las unidades
+
+Las unidades no son compartimentos aislados. Las propiedades de los números y de las operaciones sostienen el trabajo con polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y esa representación permite introducir combinaciones y transformaciones lineales. Durante el curso se recuperarán conceptos anteriores cada vez que resulten necesarios.
+

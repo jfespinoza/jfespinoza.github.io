@@ -1,0 +1,53 @@
+---
+title: "Álgebra 22017"
+subtitle: "Material de clase · Semestre 2026-2"
+description: "Libro progresivo y autocontenido para los grupos 21 de IMA y 29 de LTE."
+number-sections: false
+---
+
+::: {.hero-course}
+## Universidad de Sonora
+
+**Departamento de Matemáticas**
+
+Este libro reúne el material de trabajo del espacio educativo **Álgebra**, clave **22017**, para el semestre **2026-2**. Está dirigido a estudiantes de primer semestre de Ingeniería en Materiales e Ingeniería en Tecnología Electrónica.
+:::
+
+## Consulta rápida
+
+| Programa | Grupo | Horario | Aula |
+|---|---:|---|---|
+| Ingeniería en Materiales (IMA) | 21 | Lunes a viernes, 08:00-09:00 | 5I-A302 |
+| Ingeniería en Tecnología Electrónica (LTE) | 29 | Lunes a viernes, 14:00-15:00 | 8B-A201 |
+
+**Docente:** Dr. Jesús Francisco Espinoza Fierro  
+**Modalidad:** presencial  
+**Periodo lectivo:** 10 de agosto al 27 de noviembre de 2026  
+**Carga:** 80 horas; 5 créditos
+
+::: {.callout-important title="Fecha que debe tener presente"}
+La fecha límite de bajas voluntarias es el **miércoles 23 de septiembre de 2026**.
+:::
+
+## Propósito de este libro
+
+El contenido se incorporará de manera progresiva, conforme avance el curso. Cada sesión conservará una estructura común:
+
+1. **Explicación:** definiciones, propiedades, procedimientos y justificaciones.
+2. **Ejemplos:** resolución razonada y verificación de resultados.
+3. **Actividad:** ejercicios individuales o en equipos pequeños para trabajar durante la clase.
+
+El material está pensado para poder estudiarse por sí mismo: la notación se define antes de utilizarse, los procedimientos se presentan paso a paso y cada tema incluye práctica. La explicación presencial seguirá siendo el espacio principal para formular preguntas, contrastar métodos y recibir retroalimentación.
+
+## Texto principal
+
+El libro de referencia principal es *Álgebra superior*, de Humberto Cárdenas, Emilio Lluis, Francisco Raggi y Francisco Tomás, publicado por Editorial Trillas. Este sitio contiene redacción, ejemplos y actividades elaborados para el curso; no reproduce el texto ni sustituye su consulta.
+
+## Accesos inmediatos
+
+- [Identificación de los grupos](curso/identificacion.qmd)
+- [Evaluación y asistencia](curso/evaluacion-asistencia.qmd)
+- [Calendario completo](curso/calendario.qmd)
+- [Códigos temporales de Teams](curso/acceso-teams.qmd)
+- [Primera sesión](sesiones/2026-08-10-sesion-01.qmd)
+

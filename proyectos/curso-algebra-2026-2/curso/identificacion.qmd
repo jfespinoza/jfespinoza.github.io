@@ -1,0 +1,35 @@
+---
+title: "Identificación"
+description: "Datos oficiales del espacio educativo y de los dos grupos."
+---
+
+## Datos del espacio educativo
+
+| Dato | Información |
+|---|---|
+| Nombre | Álgebra |
+| Clave | 22017 |
+| Área formativa | Básica |
+| Departamento que presta el servicio | Departamento de Matemáticas |
+| Modalidad | Presencial |
+| Idioma | Español |
+| Semestre curricular | Primero |
+| Carácter | Obligatoria |
+| Horas totales | 80 |
+| Créditos | 5 |
+| Espacio educativo subsecuente | Geometría Analítica |
+| Docente | Dr. Jesús Francisco Espinoza Fierro |
+
+## Grupos
+
+| Programa | Grupo | Tipo | Cupo | Horario | Aula |
+|---|---:|---:|---:|---|---|
+| Ingeniería en Materiales (IMA) | 21 | T1 | 40 | Lunes a viernes, 08:00-09:00 | 5I-A302 |
+| Ingeniería en Tecnología Electrónica (LTE) | 29 | T1 | 40 | Lunes a viernes, 14:00-15:00 | 8B-A201 |
+
+La calendarización, los contenidos, las fechas de evaluación y los criterios generales son comunes a ambos grupos. Toda actividad presencial se realizará en el horario y aula del grupo correspondiente, salvo aviso institucional o indicación expresa del profesor.
+
+## Alcance formativo
+
+El curso proporciona una base para operar con números reales y complejos, estudiar polinomios y ecuaciones, resolver sistemas de ecuaciones lineales y utilizar matrices. La parte final introduce combinaciones lineales y transformaciones lineales en el plano, con énfasis en las conexiones entre los procedimientos algebraicos y problemas propios de la ingeniería.
+

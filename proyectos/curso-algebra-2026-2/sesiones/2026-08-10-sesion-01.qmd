@@ -1,0 +1,210 @@
+---
+title: "Sesión 01. Estructura de los números reales"
+date: 2026-08-10
+description: "Conjuntos numéricos, propiedades de las operaciones y verificación algebraica."
+---
+
+## Propósito de la sesión
+
+Al finalizar la sesión, el estudiante podrá:
+
+- reconocer los principales conjuntos numéricos y sus relaciones de inclusión;
+- identificar la propiedad de los números reales utilizada en una transformación algebraica; y
+- simplificar expresiones y resolver ecuaciones lineales sin perder equivalencia.
+
+## Explicación
+
+### Conjuntos numéricos
+
+En este curso utilizaremos la convención
+
+$$
+\mathbb{N}=\{0,1,2,3,\ldots\}.
+$$
+
+Algunos textos reservan $\mathbb{N}$ para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.
+
+- Los **números naturales** forman el conjunto $\mathbb{N}$.
+- Los **números enteros** forman
+  $$
+  \mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}.
+  $$
+- Los **números racionales** son los que pueden escribirse como cociente de enteros:
+  $$
+  \mathbb{Q}=\left\{\frac{p}{q}:p,q\in\mathbb{Z},\ q\neq 0\right\}.
+  $$
+- Los **números irracionales** son reales que no pertenecen a $\mathbb{Q}$; por ejemplo, $\sqrt{2}$ y $\pi$.
+- Los **números reales** reúnen a racionales e irracionales.
+
+Las inclusiones fundamentales son
+
+$$
+\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}.
+$$
+
+Cuando se pida clasificar un número, conviene indicar el conjunto **más pequeño** de esta cadena al que pertenece.
+
+### Propiedades de las operaciones
+
+Para $a,b,c\in\mathbb{R}$ se cumplen, entre otras, las siguientes propiedades.
+
+| Propiedad | Suma | Multiplicación |
+|---|---|---|
+| Cerradura | $a+b\in\mathbb{R}$ | $ab\in\mathbb{R}$ |
+| Conmutatividad | $a+b=b+a$ | $ab=ba$ |
+| Asociatividad | $(a+b)+c=a+(b+c)$ | $(ab)c=a(bc)$ |
+| Identidad | $a+0=a$ | $a\cdot 1=a$ |
+| Inverso | $a+(-a)=0$ | $a\cdot a^{-1}=1$, si $a\neq0$ |
+
+La propiedad distributiva conecta ambas operaciones:
+
+$$
+a(b+c)=ab+ac.
+$$
+
+::: {.callout-caution title="Una condición que no debe omitirse"}
+El inverso multiplicativo $a^{-1}=1/a$ existe en $\mathbb{R}$ únicamente cuando $a\neq0$. La división entre cero no está definida.
+:::
+
+### Igualdad y transformaciones equivalentes
+
+Resolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:
+
+- sumar o restar la misma cantidad en ambos miembros;
+- multiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y
+- sustituir una expresión por otra algebraicamente equivalente.
+
+Estas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.
+
+## Ejemplos
+
+### Ejemplo 1. Clasificación
+
+Clasifiquemos cada número en el conjunto más pequeño posible:
+
+| Número | Clasificación | Razón |
+|---:|---|---|
+| $0$ | $\mathbb{N}$ | Pertenece a los naturales bajo la convención del curso. |
+| $-7$ | $\mathbb{Z}$ | Es entero, pero no natural. |
+| $\frac34$ | $\mathbb{Q}$ | Es cociente de enteros. |
+| $\sqrt9=3$ | $\mathbb{N}$ | Conviene simplificar antes de clasificar. |
+| $\sqrt2$ | $\mathbb{R}\setminus\mathbb{Q}$ | Es irracional. |
+
+### Ejemplo 2. Uso de la distributividad
+
+Simplifiquemos
+
+$$
+4(2x-3)-2(x+5).
+$$
+
+Aplicando la propiedad distributiva:
+
+$$
+4(2x-3)-2(x+5)=8x-12-2x-10.
+$$
+
+Después se agrupan términos semejantes:
+
+$$
+8x-2x-12-10=6x-22.
+$$
+
+### Ejemplo 3. Resolución y verificación
+
+Resolvamos
+
+$$
+3(2x-1)-4(x+2)=7.
+$$
+
+Primero distribuimos y reducimos términos semejantes:
+
+$$
+6x-3-4x-8=7,
+$$
+
+$$
+2x-11=7.
+$$
+
+Sumamos $11$ en ambos miembros:
+
+$$
+2x=18.
+$$
+
+Como $2\neq0$, dividimos ambos miembros entre $2$ y obtenemos $x=9$.
+
+Para verificar, sustituimos en la ecuación original:
+
+$$
+3(2\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.
+$$
+
+La igualdad se cumple, por lo que la solución es correcta.
+
+### Un error frecuente
+
+En general,
+
+$$
+\sqrt{a+b}\neq\sqrt a+\sqrt b.
+$$
+
+Basta un contraejemplo: si $a=b=1$, entonces $\sqrt{1+1}=\sqrt2$, mientras que $\sqrt1+\sqrt1=2$. Como $\sqrt2\neq2$, la supuesta regla es falsa.
+
+## Actividad
+
+::: {.callout-important title="Trabajo de la sesión · 30 minutos"}
+Resuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.
+:::
+
+### Parte A. Conjuntos y propiedades
+
+1. Clasifique en el conjunto más pequeño posible:
+   $$
+   -12,\qquad \frac{-18}{6},\qquad 0.125,\qquad \sqrt{49},\qquad \sqrt5.
+   $$
+2. Indique la propiedad que justifica cada igualdad:
+   
+   a. $7+x=x+7$  
+   b. $(ab)c=a(bc)$  
+   c. $5(y-2)=5y-10$  
+   d. $r+0=r$
+3. Explique por qué $0$ no tiene inverso multiplicativo.
+
+### Parte B. Cálculo algebraico
+
+4. Simplifique:
+   
+   a. $5(3x-2)-3(x+4)$  
+   b. $2(4-3y)+7(y-1)$
+5. Resuelva y verifique:
+   
+   a. $4(x-3)+2=3x+7$  
+   b. $5-2(3x-1)=4(x+2)-1$
+6. Construya un contraejemplo para mostrar que $(a+b)^2=a^2+b^2$ no es una identidad.
+
+::: {.callout-note collapse="true" title="Resultados para comprobar después del intento"}
+1. $-12\in\mathbb Z$; $-18/6=-3\in\mathbb Z$; $0.125=1/8\in\mathbb Q$; $\sqrt{49}=7\in\mathbb N$; $\sqrt5\in\mathbb R\setminus\mathbb Q$.
+2. Conmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.
+3. Si existiera $b$ con $0b=1$, se tendría $0=1$, contradicción.
+4. a. $12x-22$; b. $1+y$.
+5. a. $x=17$; b. $x=0$.
+6. Por ejemplo, $a=b=1$: $(1+1)^2=4$, pero $1^2+1^2=2$.
+:::
+
+## Cierre
+
+- Los conjuntos numéricos se organizan mediante inclusiones.
+- Las transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.
+- Verificar una solución es parte del procedimiento, no un paso opcional.
+
+## Para practicar
+
+1. Determine si cada afirmación es verdadera o falsa y justifique: $\mathbb Z\subset\mathbb Q$; $\mathbb Q\subset\mathbb Z$; $\sqrt{16}\notin\mathbb N$.
+2. Simplifique $3(2x-5)-4(1-x)+2$.
+3. Resuelva $2(3x+1)-5=x+12$ y compruebe el resultado.
+4. Encuentre un contraejemplo para $\frac{a+b}{c+d}=\frac ac+\frac bd$.
+

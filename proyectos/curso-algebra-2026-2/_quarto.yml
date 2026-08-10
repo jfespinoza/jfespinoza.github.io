@@ -1,0 +1,75 @@
+project:
+  type: book
+  output-dir: _site
+
+lang: es
+bibliography: references.bib
+
+book:
+  title: "Álgebra"
+  subtitle: "Espacio educativo 22017 · Semestre 2026-2"
+  author: "Dr. Jesús Francisco Espinoza Fierro"
+  date: last-modified
+  page-navigation: true
+  search: true
+  site-url: "https://jfespinoza.github.io/curso-algebra-2026-2/"
+  repo-url: "https://github.com/jfespinoza/jfespinoza.github.io/tree/main/proyectos/curso-algebra-2026-2"
+  page-footer:
+    left: "Álgebra 22017 · Departamento de Matemáticas · Universidad de Sonora"
+    right: "Semestre 2026-2"
+  chapters:
+    - index.qmd
+    - part: "Información del curso"
+      chapters:
+        - curso/identificacion.qmd
+        - curso/metodologia.qmd
+        - curso/contenidos.qmd
+        - curso/evaluacion-asistencia.qmd
+        - curso/calendario.qmd
+        - curso/acceso-teams.qmd
+    - part: "Unidad 1. Números reales y complejos"
+      chapters:
+        - unidades/01-reales-complejos.qmd
+        - sesiones/2026-08-10-sesion-01.qmd
+    - part: "Unidad 2. Polinomios y raíces"
+      chapters:
+        - unidades/02-polinomios-raices.qmd
+    - part: "Unidad 3. Sistemas de ecuaciones lineales"
+      chapters:
+        - unidades/03-sistemas-ecuaciones.qmd
+    - part: "Unidad 4. Matrices"
+      chapters:
+        - unidades/04-matrices.qmd
+    - part: "Unidad 5. Conceptos básicos de álgebra lineal"
+      chapters:
+        - unidades/05-conceptos-algebra-lineal.qmd
+    - part: "Unidad 6. Transformaciones lineales en el plano"
+      chapters:
+        - unidades/06-transformaciones-lineales.qmd
+    - part: "Recursos de consulta"
+      chapters:
+        - recursos/notacion.qmd
+        - recursos/bibliografia.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    html-math-method: mathjax
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-copy: true
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: true
+    citation-hover: true
+    footnotes-hover: true
+
+crossref:
+  chapters: true
+
+execute:
+  freeze: auto
+

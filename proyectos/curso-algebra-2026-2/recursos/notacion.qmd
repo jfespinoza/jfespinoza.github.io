@@ -1,0 +1,31 @@
+---
+title: "Notación"
+description: "Convenciones que se utilizarán a lo largo del curso."
+---
+
+## Conjuntos numéricos
+
+| Símbolo | Significado |
+|---|---|
+| $\mathbb N$ | Números naturales; en este curso incluye al cero. |
+| $\mathbb Z$ | Números enteros. |
+| $\mathbb Q$ | Números racionales. |
+| $\mathbb R$ | Números reales. |
+| $\mathbb C$ | Números complejos. |
+
+## Símbolos frecuentes
+
+| Símbolo | Lectura o uso |
+|---|---|
+| $x\in A$ | $x$ pertenece a $A$. |
+| $x\notin A$ | $x$ no pertenece a $A$. |
+| $A\subseteq B$ | $A$ es subconjunto de $B$. |
+| $A\setminus B$ | Elementos de $A$ que no pertenecen a $B$. |
+| $\Rightarrow$ | Implica. |
+| $\Leftrightarrow$ | Equivale lógicamente a; implica en ambos sentidos. |
+| $\therefore$ | Por lo tanto. |
+
+## Criterio editorial
+
+Todo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.
+

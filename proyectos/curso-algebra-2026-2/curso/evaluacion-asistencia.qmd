@@ -1,0 +1,47 @@
+---
+title: "Evaluación y asistencia"
+description: "Ponderaciones, fechas de parciales y requisito institucional de asistencia."
+---
+
+## Integración de la calificación
+
+La evaluación se integra por **cinco exámenes parciales**. Cada examen representa 20% de la calificación del curso:
+
+$$
+\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5,
+$$
+
+donde $P_i$ es la calificación obtenida en el parcial $i$.
+
+| Parcial | Fecha | Ponderación |
+|---:|---|---:|
+| 1 | Viernes 28 de agosto | 20% |
+| 2 | Viernes 18 de septiembre | 20% |
+| 3 | Viernes 16 de octubre | 20% |
+| 4 | Viernes 6 de noviembre | 20% |
+| 5 | Viernes 27 de noviembre | 20% |
+|  | **Total** | **100%** |
+
+El día hábil anterior a cada parcial se dedicará a una asesoría grupal presencial en el horario ordinario de clase. Del 30 de noviembre al 4 de diciembre se aplicarán exámenes de reposición conforme a la programación que comunique el profesor.
+
+## Asistencia y derecho a evaluación ordinaria
+
+El artículo 70 del Reglamento Escolar de la Universidad de Sonora establece que, para tener derecho a evaluación ordinaria, el estudiante debe asistir al menos al **75% de las sesiones del curso**. Para este espacio educativo se establece un máximo de **20 inasistencias**.
+
+::: {.callout-warning title="Dos criterios distintos"}
+Las inasistencias **no reducen directamente** la calificación obtenida en los exámenes. Sin embargo, cumplir el mínimo de asistencia es un requisito independiente para conservar el derecho a evaluación ordinaria.
+:::
+
+## Registro de inasistencias
+
+El registro se realizará de manera uniforme, con base en la presencia efectiva durante cada sesión. Por razones de equidad entre todos los integrantes del grupo, una inasistencia registrada se contabilizará con independencia de su causa y no se retirará ni se sustituirá por una asistencia.
+
+Si una situación médica, familiar o personal afecta la continuidad académica, es conveniente comunicarla oportunamente al profesor para recibir orientación y procurar el seguimiento del curso. Esa comunicación puede facilitar apoyos académicos dentro de las posibilidades institucionales, pero no modifica el registro de asistencia.
+
+::: {.callout-important title="Responsabilidad personal"}
+Cada estudiante debe llevar su propio control de asistencias e inasistencias y administrar responsablemente el margen permitido.
+:::
+
+## Referencia normativa
+
+- Universidad de Sonora, [*Reglamento Escolar*](https://www.unison.mx/reglamento-escolar/), artículo 70.

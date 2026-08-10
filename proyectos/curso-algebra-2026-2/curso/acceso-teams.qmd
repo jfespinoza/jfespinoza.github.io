@@ -1,0 +1,29 @@
+---
+title: "Acceso temporal a Teams"
+description: "Códigos de autoinscripción para cada grupo."
+number-sections: false
+---
+
+::: {.callout-warning title="Códigos temporales"}
+Los códigos de autoinscripción estarán visibles sólo durante el inicio del semestre. Pueden restablecerse o dejar de funcionar sin previo aviso una vez concluido el periodo de incorporación.
+:::
+
+## Seleccione el grupo en el que está inscrito
+
+| Programa y grupo | Nombre del equipo | Código de Teams |
+|---|---|---|
+| Ingeniería en Materiales (IMA), grupo 21 | `[2026-2] 22017-Álgebra (IMA)` | **`{{< var grupos.ima.codigo_teams >}}`** |
+| Ingeniería en Tecnología Electrónica (LTE), grupo 29 | `[2026-2] 22017-Álgebra (LTE)` | **`{{< var grupos.lte.codigo_teams >}}`** |
+
+Utilice exclusivamente el código que corresponde a su inscripción. Antes de continuar, verifique el nombre completo del equipo que muestra Teams.
+
+## Procedimiento
+
+1. Ingrese a Microsoft Teams con su cuenta institucional.
+2. Abra la sección **Equipos**.
+3. Seleccione la opción para **unirse a un equipo con un código**.
+4. Capture el código del grupo correspondiente, respetando letras y números.
+5. Confirme que el nombre del equipo coincide con el indicado en la tabla.
+
+Si ya forma parte del equipo correcto, no necesita utilizar nuevamente el código.
+

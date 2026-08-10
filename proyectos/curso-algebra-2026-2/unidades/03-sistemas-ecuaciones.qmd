@@ -1,0 +1,15 @@
+---
+title: "Unidad 3. Sistemas de ecuaciones lineales"
+description: "Modelación, tipos de solución y eliminación."
+---
+
+**Duración prevista:** 10 horas.
+
+## Contenidos
+
+1. Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.
+2. Métodos de Gauss y Gauss-Jordan.
+3. Sistemas consistentes e inconsistentes.
+
+Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.
+

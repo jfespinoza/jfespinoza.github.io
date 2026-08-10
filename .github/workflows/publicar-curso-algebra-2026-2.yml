@@ -1,0 +1,51 @@
+name: Publicar curso Álgebra 2026-2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "proyectos/curso-algebra-2026-2/**"
+      - ".github/workflows/publicar-curso-algebra-2026-2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-curso-algebra-2026-2
+  cancel-in-progress: true
+
+jobs:
+  renderizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Renderizar el libro
+        run: quarto render proyectos/curso-algebra-2026-2
+
+      - name: Actualizar la carpeta pública
+        run: |
+          rm -rf curso-algebra-2026-2
+          mkdir -p curso-algebra-2026-2
+          cp -R proyectos/curso-algebra-2026-2/_site/. curso-algebra-2026-2/
+          touch curso-algebra-2026-2/.nojekyll
+
+      - name: Registrar la versión publicada
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add curso-algebra-2026-2
+          if git diff --cached --quiet; then
+            echo "No hay cambios que publicar."
+            exit 0
+          fi
+          git commit -m "Actualizar libro de Álgebra 2026-2 [skip ci]"
+          git push
+

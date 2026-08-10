@@ -1,0 +1,37 @@
+---
+title: "Forma de trabajo"
+description: "Organización de las sesiones y criterios para el estudio del material."
+---
+
+## Estructura habitual de una clase
+
+Cada sesión se organizará, en lo posible, en tres momentos.
+
+### 1. Explicación
+
+Se introducirán los conceptos y la notación, se precisarán las condiciones de uso de cada resultado y se justificará el procedimiento que corresponda. En matemáticas, conocer una regla no basta: es necesario reconocer cuándo puede aplicarse y explicar por qué.
+
+### 2. Ejemplos
+
+Los ejemplos se resolverán de manera razonada. Se hará explícita la elección del método, se comprobará el resultado y se señalarán errores frecuentes. El propósito no es acumular soluciones, sino identificar estrategias que puedan transferirse a problemas nuevos.
+
+### 3. Actividad
+
+La parte final se destinará a ejercicios individuales o en equipos pequeños. Las actividades se diseñarán para resolverse durante la sesión y permitirán detectar dudas antes de avanzar. Cuando se incluyan orientaciones o soluciones en este libro, conviene consultarlas únicamente después de haber intentado el problema.
+
+## Responsabilidad de estudio
+
+- Leer la sección correspondiente antes o después de cada clase.
+- Conservar un desarrollo ordenado de los ejercicios; una respuesta sin procedimiento puede ocultar un error conceptual.
+- Anotar dudas concretas y plantearlas oportunamente.
+- Verificar resultados por sustitución, estimación, operación inversa o un segundo método cuando sea posible.
+- Mantener al día las actividades, aun cuando no tengan una ponderación independiente.
+
+## Uso del libro
+
+El menú lateral sigue la secuencia oficial de contenidos. Dentro de cada unidad aparecerán las sesiones conforme se impartan. La página de [notación](../recursos/notacion.qmd) concentrará las convenciones que deban mantenerse durante todo el semestre.
+
+::: {.callout-note title="Versión vigente"}
+El sitio se actualizará durante el semestre. Para preparar una evaluación, revise siempre la versión publicada más reciente y los avisos comunicados en clase o en Teams.
+:::
+

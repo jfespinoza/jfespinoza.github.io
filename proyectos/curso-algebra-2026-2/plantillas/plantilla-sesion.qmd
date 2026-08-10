@@ -1,0 +1,56 @@
+---
+title: "Sesión NN. Título"
+date: 2026-08-10
+description: "Síntesis breve del contenido de la sesión."
+---
+
+## Propósito de la sesión
+
+Al finalizar la sesión, el estudiante podrá:
+
+- ...
+
+## Explicación
+
+### Conceptos y definiciones
+
+Defina cada símbolo antes de utilizarlo y señale las hipótesis necesarias.
+
+### Propiedades y resultados
+
+Incluya justificación, observaciones y conexiones con contenidos previos.
+
+## Ejemplos
+
+### Ejemplo 1
+
+Planteamiento, elección del método, desarrollo y verificación.
+
+### Error frecuente
+
+Explique el error y proporcione un contraejemplo cuando corresponda.
+
+## Actividad
+
+::: {.callout-important title="Trabajo de la sesión"}
+Indique modalidad, tiempo estimado y producto esperado.
+:::
+
+1. Ejercicio directo.
+2. Ejercicio de aplicación.
+3. Ejercicio para discutir en equipo.
+
+::: {.callout-note collapse="true" title="Orientaciones o resultados"}
+Publique sólo la ayuda necesaria y colóquela después de los ejercicios.
+:::
+
+## Cierre
+
+- Idea central.
+- Procedimiento que debe dominarse.
+- Duda o error que conviene evitar.
+
+## Para practicar
+
+1. ...
+

@@ -1,0 +1,20 @@
+---
+title: "Unidad 2. Polinomios y raíces"
+description: "Ecuaciones, raíces, factorización y aproximación."
+---
+
+**Duración prevista:** 20 horas.
+
+## Contenidos
+
+1. Resolución algebraica de ecuaciones de segundo y tercer grado.
+2. Polinomios de grado $n$ en una variable y su representación gráfica.
+3. Raíces reales y complejas.
+4. Construcción de un polinomio a partir de sus raíces.
+5. Relación entre el grado de un polinomio y su número de raíces.
+6. Coeficientes, raíces, división sintética, factores, residuos y multiplicidad.
+7. Regla de Descartes para la separación de raíces.
+8. Método de bisección para aproximar raíces.
+
+Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.
+

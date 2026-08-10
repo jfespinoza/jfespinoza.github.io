@@ -1,0 +1,51 @@
+---
+title: "Calendario del curso"
+description: "Clases, asesorías, parciales, días inhábiles y reposiciones."
+---
+
+## Fechas principales
+
+- **Inicio de clases:** lunes 10 de agosto de 2026.
+- **Último día lectivo:** viernes 27 de noviembre de 2026.
+- **Límite de bajas voluntarias:** miércoles 23 de septiembre de 2026.
+- **Evaluación ordinaria y reposiciones:** lunes 30 de noviembre al viernes 4 de diciembre de 2026.
+
+## Asesorías y exámenes parciales
+
+| Evaluación | Asesoría grupal presencial | Examen parcial |
+|---|---|---|
+| Parcial 1 | Jueves 27 de agosto | Viernes 28 de agosto |
+| Parcial 2 | Jueves 17 de septiembre | Viernes 18 de septiembre |
+| Parcial 3 | Jueves 15 de octubre | Viernes 16 de octubre |
+| Parcial 4 | Jueves 5 de noviembre | Viernes 6 de noviembre |
+| Parcial 5 | Jueves 26 de noviembre | Viernes 27 de noviembre |
+
+## Calendarización semanal
+
+| Semana | Lunes | Martes | Miércoles | Jueves | Viernes |
+|---:|---|---|---|---|---|
+| 1 | 10 ago · Clase | 11 ago · Clase | 12 ago · Clase | 13 ago · Clase | 14 ago · Clase |
+| 2 | 17 ago · Clase | 18 ago · Clase | 19 ago · Clase | 20 ago · Clase | 21 ago · Clase |
+| 3 | 24 ago · Clase | 25 ago · Clase | 26 ago · Clase | **27 ago · Asesoría P1** | **28 ago · Parcial 1** |
+| 4 | 31 ago · Clase | 1 sep · Clase | 2 sep · Clase | 3 sep · Clase | 4 sep · Clase |
+| 5 | 7 sep · Clase | 8 sep · Clase | 9 sep · Clase | 10 sep · Clase | 11 sep · Clase |
+| 6 | 14 sep · Clase | 15 sep · Clase | **16 sep · Inhábil** | **17 sep · Asesoría P2** | **18 sep · Parcial 2** |
+| 7 | 21 sep · Clase | 22 sep · Clase | **23 sep · Clase y límite de bajas** | 24 sep · Clase | 25 sep · Clase |
+| 8 | 28 sep · Clase | 29 sep · Clase | 30 sep · Clase | 1 oct · Clase | 2 oct · Clase |
+| 9 | 5 oct · Clase | 6 oct · Clase | 7 oct · Clase | 8 oct · Clase | 9 oct · Clase |
+| 10 | 12 oct · Clase | 13 oct · Clase | 14 oct · Clase | **15 oct · Asesoría P3** | **16 oct · Parcial 3** |
+| 11 | 19 oct · Clase | 20 oct · Clase | 21 oct · Clase | 22 oct · Clase | 23 oct · Clase |
+| 12 | 26 oct · Clase | 27 oct · Clase | 28 oct · Clase | 29 oct · Clase | 30 oct · Clase |
+| 13 | **2 nov · Inhábil** | 3 nov · Clase | 4 nov · Clase | **5 nov · Asesoría P4** | **6 nov · Parcial 4** |
+| 14 | 9 nov · Clase | 10 nov · Clase | 11 nov · Clase | 12 nov · Clase | 13 nov · Clase |
+| 15 | **16 nov · Inhábil** | 17 nov · Clase | 18 nov · Clase | 19 nov · Clase | 20 nov · Clase |
+| 16 | 23 nov · Clase | 24 nov · Clase | 25 nov · Clase | **26 nov · Asesoría P5** | **27 nov · Parcial 5** |
+
+## Semana de reposiciones
+
+El periodo del **30 de noviembre al 4 de diciembre** se reserva para exámenes de reposición. La asignación de cada examen dentro de esa semana se comunicará oportunamente.
+
+::: {.callout-note title="Posibles ajustes"}
+El calendario podrá modificarse si se emiten disposiciones institucionales posteriores o se presenta una contingencia. Cualquier cambio se comunicará por los medios del curso.
+:::
+
