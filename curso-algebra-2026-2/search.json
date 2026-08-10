@@ -52,9 +52,9 @@
   {
     "objectID": "curso/identificacion.html",
     "href": "curso/identificacion.html",
-    "title": "2  Identificación",
+    "title": "Identificación",
     "section": "",
-    "text": "2.1 Datos del espacio educativo",
+    "text": "Datos del espacio educativo",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Identificación</span>"
@@ -63,7 +63,7 @@
   {
     "objectID": "curso/identificacion.html#datos-del-espacio-educativo",
     "href": "curso/identificacion.html#datos-del-espacio-educativo",
-    "title": "2  Identificación",
+    "title": "Identificación",
     "section": "",
     "text": "Dato\nInformación\n\n\n\n\nNombre\nÁlgebra\n\n\nClave\n22017\n\n\nÁrea formativa\nBásica\n\n\nDepartamento que presta el servicio\nDepartamento de Matemáticas\n\n\nModalidad\nPresencial\n\n\nIdioma\nEspañol\n\n\nSemestre curricular\nPrimero\n\n\nCarácter\nObligatoria\n\n\nHoras totales\n80\n\n\nCréditos\n5\n\n\nEspacio educativo subsecuente\nGeometría Analítica\n\n\nDocente\nDr. Jesús Francisco Espinoza Fierro",
     "crumbs": [
@@ -74,9 +74,9 @@
   {
     "objectID": "curso/identificacion.html#grupos",
     "href": "curso/identificacion.html#grupos",
-    "title": "2  Identificación",
-    "section": "2.2 Grupos",
-    "text": "2.2 Grupos\n\n\n\n\n\n\n\n\n\n\n\nPrograma\nGrupo\nTipo\nCupo\nHorario\nAula\n\n\n\n\nIngeniería en Materiales (IMA)\n21\nT1\n40\nLunes a viernes, 08:00-09:00\n5I-A302\n\n\nIngeniería en Tecnología Electrónica (LTE)\n29\nT1\n40\nLunes a viernes, 14:00-15:00\n8B-A201\n\n\n\nLa calendarización, los contenidos, las fechas de evaluación y los criterios generales son comunes a ambos grupos. Toda actividad presencial se realizará en el horario y aula del grupo correspondiente, salvo aviso institucional o indicación expresa del profesor.",
+    "title": "Identificación",
+    "section": "Grupos",
+    "text": "Grupos\n\n\n\n\n\n\n\n\n\n\n\nPrograma\nGrupo\nTipo\nCupo\nHorario\nAula\n\n\n\n\nIngeniería en Materiales (IMA)\n21\nT1\n40\nLunes a viernes, 08:00-09:00\n5I-A302\n\n\nIngeniería en Tecnología Electrónica (LTE)\n29\nT1\n40\nLunes a viernes, 14:00-15:00\n8B-A201\n\n\n\nLa calendarización, los contenidos, las fechas de evaluación y los criterios generales son comunes a ambos grupos. Toda actividad presencial se realizará en el horario y aula del grupo correspondiente, salvo aviso institucional o indicación expresa del profesor.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Identificación</span>"
@@ -85,9 +85,9 @@
   {
     "objectID": "curso/identificacion.html#alcance-formativo",
     "href": "curso/identificacion.html#alcance-formativo",
-    "title": "2  Identificación",
-    "section": "2.3 Alcance formativo",
-    "text": "2.3 Alcance formativo\nEl curso proporciona una base para operar con números reales y complejos, estudiar polinomios y ecuaciones, resolver sistemas de ecuaciones lineales y utilizar matrices. La parte final introduce combinaciones lineales y transformaciones lineales en el plano, con énfasis en las conexiones entre los procedimientos algebraicos y problemas propios de la ingeniería.",
+    "title": "Identificación",
+    "section": "Alcance formativo",
+    "text": "Alcance formativo\nEl curso proporciona una base para operar con números reales y complejos, estudiar polinomios y ecuaciones, resolver sistemas de ecuaciones lineales y utilizar matrices. La parte final introduce combinaciones lineales y transformaciones lineales en el plano, con énfasis en las conexiones entre los procedimientos algebraicos y problemas propios de la ingeniería.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Identificación</span>"
@@ -96,9 +96,9 @@
   {
     "objectID": "curso/metodologia.html",
     "href": "curso/metodologia.html",
-    "title": "3  Forma de trabajo",
+    "title": "Forma de trabajo",
     "section": "",
-    "text": "3.1 Estructura habitual de una clase\nCada sesión se organizará, en lo posible, en tres momentos.",
+    "text": "Estructura habitual de una clase\nCada sesión se organizará, en lo posible, en tres momentos.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Forma de trabajo</span>"
@@ -107,9 +107,9 @@
   {
     "objectID": "curso/metodologia.html#estructura-habitual-de-una-clase",
     "href": "curso/metodologia.html#estructura-habitual-de-una-clase",
-    "title": "3  Forma de trabajo",
+    "title": "Forma de trabajo",
     "section": "",
-    "text": "3.1.1 1. Explicación\nSe introducirán los conceptos y la notación, se precisarán las condiciones de uso de cada resultado y se justificará el procedimiento que corresponda. En matemáticas, conocer una regla no basta: es necesario reconocer cuándo puede aplicarse y explicar por qué.\n\n\n3.1.2 2. Ejemplos\nLos ejemplos se resolverán de manera razonada. Se hará explícita la elección del método, se comprobará el resultado y se señalarán errores frecuentes. El propósito no es acumular soluciones, sino identificar estrategias que puedan transferirse a problemas nuevos.\n\n\n3.1.3 3. Actividad\nLa parte final se destinará a ejercicios individuales o en equipos pequeños. Las actividades se diseñarán para resolverse durante la sesión y permitirán detectar dudas antes de avanzar. Cuando se incluyan orientaciones o soluciones en este libro, conviene consultarlas únicamente después de haber intentado el problema.",
+    "text": "1. Explicación\nSe introducirán los conceptos y la notación, se precisarán las condiciones de uso de cada resultado y se justificará el procedimiento que corresponda. En matemáticas, conocer una regla no basta: es necesario reconocer cuándo puede aplicarse y explicar por qué.\n\n\n2. Ejemplos\nLos ejemplos se resolverán de manera razonada. Se hará explícita la elección del método, se comprobará el resultado y se señalarán errores frecuentes. El propósito no es acumular soluciones, sino identificar estrategias que puedan transferirse a problemas nuevos.\n\n\n3. Actividad\nLa parte final se destinará a ejercicios individuales o en equipos pequeños. Las actividades se diseñarán para resolverse durante la sesión y permitirán detectar dudas antes de avanzar. Cuando se incluyan orientaciones o soluciones en este libro, conviene consultarlas únicamente después de haber intentado el problema.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Forma de trabajo</span>"
@@ -118,9 +118,9 @@
   {
     "objectID": "curso/metodologia.html#responsabilidad-de-estudio",
     "href": "curso/metodologia.html#responsabilidad-de-estudio",
-    "title": "3  Forma de trabajo",
-    "section": "3.2 Responsabilidad de estudio",
-    "text": "3.2 Responsabilidad de estudio\n\nLeer la sección correspondiente antes o después de cada clase.\nConservar un desarrollo ordenado de los ejercicios; una respuesta sin procedimiento puede ocultar un error conceptual.\nAnotar dudas concretas y plantearlas oportunamente.\nVerificar resultados por sustitución, estimación, operación inversa o un segundo método cuando sea posible.\nMantener al día las actividades, aun cuando no tengan una ponderación independiente.",
+    "title": "Forma de trabajo",
+    "section": "Responsabilidad de estudio",
+    "text": "Responsabilidad de estudio\n\nLeer la sección correspondiente antes o después de cada clase.\nConservar un desarrollo ordenado de los ejercicios; una respuesta sin procedimiento puede ocultar un error conceptual.\nAnotar dudas concretas y plantearlas oportunamente.\nVerificar resultados por sustitución, estimación, operación inversa o un segundo método cuando sea posible.\nMantener al día las actividades, aun cuando no tengan una ponderación independiente.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Forma de trabajo</span>"
@@ -129,9 +129,9 @@
   {
     "objectID": "curso/metodologia.html#uso-del-libro",
     "href": "curso/metodologia.html#uso-del-libro",
-    "title": "3  Forma de trabajo",
-    "section": "3.3 Uso del libro",
-    "text": "3.3 Uso del libro\nEl menú lateral sigue la secuencia oficial de contenidos. Dentro de cada unidad aparecerán las sesiones conforme se impartan. La página de notación concentrará las convenciones que deban mantenerse durante todo el semestre.\n\n\n\n\n\n\nNotaVersión vigente\n\n\n\nEl sitio se actualizará durante el semestre. Para preparar una evaluación, revise siempre la versión publicada más reciente y los avisos comunicados en clase o en Teams.",
+    "title": "Forma de trabajo",
+    "section": "Uso del libro",
+    "text": "Uso del libro\nEl menú lateral sigue la secuencia oficial de contenidos. Dentro de cada unidad aparecerán las sesiones conforme se impartan. La página de notación concentrará las convenciones que deban mantenerse durante todo el semestre.\n\n\n\n\n\n\nNotaVersión vigente\n\n\n\nEl sitio se actualizará durante el semestre. Para preparar una evaluación, revise siempre la versión publicada más reciente y los avisos comunicados en clase o en Teams.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Forma de trabajo</span>"
@@ -140,9 +140,9 @@
   {
     "objectID": "curso/contenidos.html",
     "href": "curso/contenidos.html",
-    "title": "4  Contenidos y resultados de aprendizaje",
+    "title": "Contenidos y resultados de aprendizaje",
     "section": "",
-    "text": "4.1 Resultados de aprendizaje\nAl concluir el curso, se espera que el estudiante pueda:",
+    "text": "Resultados de aprendizaje\nAl concluir el curso, se espera que el estudiante pueda:",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Contenidos y resultados de aprendizaje</span>"
@@ -151,7 +151,7 @@
   {
     "objectID": "curso/contenidos.html#resultados-de-aprendizaje",
     "href": "curso/contenidos.html#resultados-de-aprendizaje",
-    "title": "4  Contenidos y resultados de aprendizaje",
+    "title": "Contenidos y resultados de aprendizaje",
     "section": "",
     "text": "realizar operaciones algebraicas con números reales, números complejos y expresiones algebraicas;\nresolver ecuaciones e inecuaciones lineales mediante propiedades y técnicas algebraicas;\nutilizar matrices para representar y resolver sistemas de ecuaciones lineales por los métodos de Gauss, Gauss-Jordan, regla de Cramer y matriz inversa; y\nrelacionar las herramientas estudiadas con situaciones de modelación y toma de decisiones.",
     "crumbs": [
@@ -162,9 +162,9 @@
   {
     "objectID": "curso/contenidos.html#distribución-oficial-de-contenidos",
     "href": "curso/contenidos.html#distribución-oficial-de-contenidos",
-    "title": "4  Contenidos y resultados de aprendizaje",
-    "section": "4.2 Distribución oficial de contenidos",
-    "text": "4.2 Distribución oficial de contenidos\n\n\n\n\n\n\n\n\nUnidad\nContenido\nHoras\n\n\n\n\n1\nNúmeros reales y complejos\n15\n\n\n2\nPolinomios y raíces\n20\n\n\n3\nSistemas de ecuaciones lineales\n10\n\n\n4\nMatrices\n15\n\n\n5\nConceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales\n5\n\n\n6\nTransformaciones lineales en el plano\n15\n\n\n\nTotal\n80",
+    "title": "Contenidos y resultados de aprendizaje",
+    "section": "Distribución oficial de contenidos",
+    "text": "Distribución oficial de contenidos\n\n\n\n\n\n\n\n\nUnidad\nContenido\nHoras\n\n\n\n\n1\nNúmeros reales y complejos\n15\n\n\n2\nPolinomios y raíces\n20\n\n\n3\nSistemas de ecuaciones lineales\n10\n\n\n4\nMatrices\n15\n\n\n5\nConceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales\n5\n\n\n6\nTransformaciones lineales en el plano\n15\n\n\n\nTotal\n80",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Contenidos y resultados de aprendizaje</span>"
@@ -173,9 +173,9 @@
   {
     "objectID": "curso/contenidos.html#relación-entre-las-unidades",
     "href": "curso/contenidos.html#relación-entre-las-unidades",
-    "title": "4  Contenidos y resultados de aprendizaje",
-    "section": "4.3 Relación entre las unidades",
-    "text": "4.3 Relación entre las unidades\nLas unidades no son compartimentos aislados. Las propiedades de los números y de las operaciones sostienen el trabajo con polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y esa representación permite introducir combinaciones y transformaciones lineales. Durante el curso se recuperarán conceptos anteriores cada vez que resulten necesarios.",
+    "title": "Contenidos y resultados de aprendizaje",
+    "section": "Relación entre las unidades",
+    "text": "Relación entre las unidades\nLas unidades no son compartimentos aislados. Las propiedades de los números y de las operaciones sostienen el trabajo con polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y esa representación permite introducir combinaciones y transformaciones lineales. Durante el curso se recuperarán conceptos anteriores cada vez que resulten necesarios.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Contenidos y resultados de aprendizaje</span>"
@@ -184,9 +184,9 @@
   {
     "objectID": "curso/evaluacion-asistencia.html",
     "href": "curso/evaluacion-asistencia.html",
-    "title": "5  Evaluación y asistencia",
+    "title": "Evaluación y asistencia",
     "section": "",
-    "text": "5.1 Integración de la calificación\nLa evaluación se integra por cinco exámenes parciales. Cada examen representa 20% de la calificación del curso:\n\\[\n\\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5,\n\\]\ndonde \\(P_i\\) es la calificación obtenida en el parcial \\(i\\).\nEl día hábil anterior a cada parcial se dedicará a una asesoría grupal presencial en el horario ordinario de clase. Del 30 de noviembre al 4 de diciembre se aplicarán exámenes de reposición conforme a la programación que comunique el profesor.",
+    "text": "Integración de la calificación\nLa evaluación se integra por cinco exámenes parciales. Cada examen representa 20% de la calificación del curso:\n\\[\n\\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5,\n\\]\ndonde \\(P_i\\) es la calificación obtenida en el parcial \\(i\\).\nEl día hábil anterior a cada parcial se dedicará a una asesoría grupal presencial en el horario ordinario de clase. Del 30 de noviembre al 4 de diciembre se aplicarán exámenes de reposición conforme a la programación que comunique el profesor.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluación y asistencia</span>"
@@ -195,7 +195,7 @@
   {
     "objectID": "curso/evaluacion-asistencia.html#integración-de-la-calificación",
     "href": "curso/evaluacion-asistencia.html#integración-de-la-calificación",
-    "title": "5  Evaluación y asistencia",
+    "title": "Evaluación y asistencia",
     "section": "",
     "text": "Parcial\nFecha\nPonderación\n\n\n\n\n1\nViernes 28 de agosto\n20%\n\n\n2\nViernes 18 de septiembre\n20%\n\n\n3\nViernes 16 de octubre\n20%\n\n\n4\nViernes 6 de noviembre\n20%\n\n\n5\nViernes 27 de noviembre\n20%\n\n\n\nTotal\n100%",
     "crumbs": [
@@ -206,9 +206,9 @@
   {
     "objectID": "curso/evaluacion-asistencia.html#asistencia-y-derecho-a-evaluación-ordinaria",
     "href": "curso/evaluacion-asistencia.html#asistencia-y-derecho-a-evaluación-ordinaria",
-    "title": "5  Evaluación y asistencia",
-    "section": "5.2 Asistencia y derecho a evaluación ordinaria",
-    "text": "5.2 Asistencia y derecho a evaluación ordinaria\nEl artículo 70 del Reglamento Escolar de la Universidad de Sonora establece que, para tener derecho a evaluación ordinaria, el estudiante debe asistir al menos al 75% de las sesiones del curso. Para este espacio educativo se establece un máximo de 20 inasistencias.\n\n\n\n\n\n\nAdvertenciaDos criterios distintos\n\n\n\nLas inasistencias no reducen directamente la calificación obtenida en los exámenes. Sin embargo, cumplir el mínimo de asistencia es un requisito independiente para conservar el derecho a evaluación ordinaria.",
+    "title": "Evaluación y asistencia",
+    "section": "Asistencia y derecho a evaluación ordinaria",
+    "text": "Asistencia y derecho a evaluación ordinaria\nEl artículo 70 del Reglamento Escolar de la Universidad de Sonora establece que, para tener derecho a evaluación ordinaria, el estudiante debe asistir al menos al 75% de las sesiones del curso. Para este espacio educativo se establece un máximo de 20 inasistencias.\n\n\n\n\n\n\nAdvertenciaDos criterios distintos\n\n\n\nLas inasistencias no reducen directamente la calificación obtenida en los exámenes. Sin embargo, cumplir el mínimo de asistencia es un requisito independiente para conservar el derecho a evaluación ordinaria.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluación y asistencia</span>"
@@ -217,9 +217,9 @@
   {
     "objectID": "curso/evaluacion-asistencia.html#registro-de-inasistencias",
     "href": "curso/evaluacion-asistencia.html#registro-de-inasistencias",
-    "title": "5  Evaluación y asistencia",
-    "section": "5.3 Registro de inasistencias",
-    "text": "5.3 Registro de inasistencias\nEl registro se realizará de manera uniforme, con base en la presencia efectiva durante cada sesión. Por razones de equidad entre todos los integrantes del grupo, una inasistencia registrada se contabilizará con independencia de su causa y no se retirará ni se sustituirá por una asistencia.\nSi una situación médica, familiar o personal afecta la continuidad académica, es conveniente comunicarla oportunamente al profesor para recibir orientación y procurar el seguimiento del curso. Esa comunicación puede facilitar apoyos académicos dentro de las posibilidades institucionales, pero no modifica el registro de asistencia.\n\n\n\n\n\n\nImportanteResponsabilidad personal\n\n\n\nCada estudiante debe llevar su propio control de asistencias e inasistencias y administrar responsablemente el margen permitido.",
+    "title": "Evaluación y asistencia",
+    "section": "Registro de inasistencias",
+    "text": "Registro de inasistencias\nEl registro se realizará de manera uniforme, con base en la presencia efectiva durante cada sesión. Por razones de equidad entre todos los integrantes del grupo, una inasistencia registrada se contabilizará con independencia de su causa y no se retirará ni se sustituirá por una asistencia.\nSi una situación médica, familiar o personal afecta la continuidad académica, es conveniente comunicarla oportunamente al profesor para recibir orientación y procurar el seguimiento del curso. Esa comunicación puede facilitar apoyos académicos dentro de las posibilidades institucionales, pero no modifica el registro de asistencia.\n\n\n\n\n\n\nImportanteResponsabilidad personal\n\n\n\nCada estudiante debe llevar su propio control de asistencias e inasistencias y administrar responsablemente el margen permitido.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluación y asistencia</span>"
@@ -228,9 +228,9 @@
   {
     "objectID": "curso/evaluacion-asistencia.html#referencia-normativa",
     "href": "curso/evaluacion-asistencia.html#referencia-normativa",
-    "title": "5  Evaluación y asistencia",
-    "section": "5.4 Referencia normativa",
-    "text": "5.4 Referencia normativa\n\nUniversidad de Sonora, Reglamento Escolar, artículo 70.",
+    "title": "Evaluación y asistencia",
+    "section": "Referencia normativa",
+    "text": "Referencia normativa\n\nUniversidad de Sonora, Reglamento Escolar, artículo 70.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluación y asistencia</span>"
@@ -239,9 +239,9 @@
   {
     "objectID": "curso/calendario.html",
     "href": "curso/calendario.html",
-    "title": "6  Calendario del curso",
+    "title": "Calendario del curso",
     "section": "",
-    "text": "6.1 Fechas principales",
+    "text": "Fechas principales",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Calendario del curso</span>"
@@ -250,9 +250,9 @@
   {
     "objectID": "curso/calendario.html#fechas-principales",
     "href": "curso/calendario.html#fechas-principales",
-    "title": "6  Calendario del curso",
+    "title": "Calendario del curso",
     "section": "",
-    "text": "Inicio de clases: lunes 10 de agosto de 2026.\nÚltimo día lectivo: viernes 27 de noviembre de 2026.\nLímite de bajas voluntarias: miércoles 23 de septiembre de 2026.\nEvaluación ordinaria y reposiciones: lunes 30 de noviembre al viernes 4 de diciembre de 2026.",
+    "text": "Inicio de clases: lunes 10 de agosto de 2026.\nÚltimo día lectivo: viernes 27 de noviembre de 2026.\nLímite de bajas voluntarias: miércoles 23 de septiembre de 2026.\nSemana de evaluación ordinaria: lunes 30 de noviembre al viernes 4 de diciembre de 2026; en este curso se destinará a exámenes de reposición.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Calendario del curso</span>"
@@ -261,9 +261,9 @@
   {
     "objectID": "curso/calendario.html#asesorías-y-exámenes-parciales",
     "href": "curso/calendario.html#asesorías-y-exámenes-parciales",
-    "title": "6  Calendario del curso",
-    "section": "6.2 Asesorías y exámenes parciales",
-    "text": "6.2 Asesorías y exámenes parciales\n\n\n\nEvaluación\nAsesoría grupal presencial\nExamen parcial\n\n\n\n\nParcial 1\nJueves 27 de agosto\nViernes 28 de agosto\n\n\nParcial 2\nJueves 17 de septiembre\nViernes 18 de septiembre\n\n\nParcial 3\nJueves 15 de octubre\nViernes 16 de octubre\n\n\nParcial 4\nJueves 5 de noviembre\nViernes 6 de noviembre\n\n\nParcial 5\nJueves 26 de noviembre\nViernes 27 de noviembre",
+    "title": "Calendario del curso",
+    "section": "Asesorías y exámenes parciales",
+    "text": "Asesorías y exámenes parciales\n\n\n\nEvaluación\nAsesoría grupal presencial\nExamen parcial\n\n\n\n\nParcial 1\nJueves 27 de agosto\nViernes 28 de agosto\n\n\nParcial 2\nJueves 17 de septiembre\nViernes 18 de septiembre\n\n\nParcial 3\nJueves 15 de octubre\nViernes 16 de octubre\n\n\nParcial 4\nJueves 5 de noviembre\nViernes 6 de noviembre\n\n\nParcial 5\nJueves 26 de noviembre\nViernes 27 de noviembre",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Calendario del curso</span>"
@@ -272,20 +272,20 @@
   {
     "objectID": "curso/calendario.html#calendarización-semanal",
     "href": "curso/calendario.html#calendarización-semanal",
-    "title": "6  Calendario del curso",
-    "section": "6.3 Calendarización semanal",
-    "text": "6.3 Calendarización semanal\n\n\n\n\n\n\n\n\n\n\n\nSemana\nLunes\nMartes\nMiércoles\nJueves\nViernes\n\n\n\n\n1\n10 ago · Clase\n11 ago · Clase\n12 ago · Clase\n13 ago · Clase\n14 ago · Clase\n\n\n2\n17 ago · Clase\n18 ago · Clase\n19 ago · Clase\n20 ago · Clase\n21 ago · Clase\n\n\n3\n24 ago · Clase\n25 ago · Clase\n26 ago · Clase\n27 ago · Asesoría P1\n28 ago · Parcial 1\n\n\n4\n31 ago · Clase\n1 sep · Clase\n2 sep · Clase\n3 sep · Clase\n4 sep · Clase\n\n\n5\n7 sep · Clase\n8 sep · Clase\n9 sep · Clase\n10 sep · Clase\n11 sep · Clase\n\n\n6\n14 sep · Clase\n15 sep · Clase\n16 sep · Inhábil\n17 sep · Asesoría P2\n18 sep · Parcial 2\n\n\n7\n21 sep · Clase\n22 sep · Clase\n23 sep · Clase y límite de bajas\n24 sep · Clase\n25 sep · Clase\n\n\n8\n28 sep · Clase\n29 sep · Clase\n30 sep · Clase\n1 oct · Clase\n2 oct · Clase\n\n\n9\n5 oct · Clase\n6 oct · Clase\n7 oct · Clase\n8 oct · Clase\n9 oct · Clase\n\n\n10\n12 oct · Clase\n13 oct · Clase\n14 oct · Clase\n15 oct · Asesoría P3\n16 oct · Parcial 3\n\n\n11\n19 oct · Clase\n20 oct · Clase\n21 oct · Clase\n22 oct · Clase\n23 oct · Clase\n\n\n12\n26 oct · Clase\n27 oct · Clase\n28 oct · Clase\n29 oct · Clase\n30 oct · Clase\n\n\n13\n2 nov · Inhábil\n3 nov · Clase\n4 nov · Clase\n5 nov · Asesoría P4\n6 nov · Parcial 4\n\n\n14\n9 nov · Clase\n10 nov · Clase\n11 nov · Clase\n12 nov · Clase\n13 nov · Clase\n\n\n15\n16 nov · Inhábil\n17 nov · Clase\n18 nov · Clase\n19 nov · Clase\n20 nov · Clase\n\n\n16\n23 nov · Clase\n24 nov · Clase\n25 nov · Clase\n26 nov · Asesoría P5\n27 nov · Parcial 5",
+    "title": "Calendario del curso",
+    "section": "Calendarización semanal",
+    "text": "Calendarización semanal\n\n\n\n\n\n\n\n\n\n\n\nSemana\nLunes\nMartes\nMiércoles\nJueves\nViernes\n\n\n\n\n1\n10 ago · Clase\n11 ago · Clase\n12 ago · Clase\n13 ago · Clase\n14 ago · Clase\n\n\n2\n17 ago · Clase\n18 ago · Clase\n19 ago · Clase\n20 ago · Clase\n21 ago · Clase\n\n\n3\n24 ago · Clase\n25 ago · Clase\n26 ago · Clase\n27 ago · Asesoría P1\n28 ago · Parcial 1\n\n\n4\n31 ago · Clase\n1 sep · Clase\n2 sep · Clase\n3 sep · Clase\n4 sep · Clase\n\n\n5\n7 sep · Clase\n8 sep · Clase\n9 sep · Clase\n10 sep · Clase\n11 sep · Clase\n\n\n6\n14 sep · Clase\n15 sep · Clase\n16 sep · Inhábil\n17 sep · Asesoría P2\n18 sep · Parcial 2\n\n\n7\n21 sep · Clase\n22 sep · Clase\n23 sep · Clase y límite de bajas\n24 sep · Clase\n25 sep · Clase\n\n\n8\n28 sep · Clase\n29 sep · Clase\n30 sep · Clase\n1 oct · Clase\n2 oct · Clase\n\n\n9\n5 oct · Clase\n6 oct · Clase\n7 oct · Clase\n8 oct · Clase\n9 oct · Clase\n\n\n10\n12 oct · Clase\n13 oct · Clase\n14 oct · Clase\n15 oct · Asesoría P3\n16 oct · Parcial 3\n\n\n11\n19 oct · Clase\n20 oct · Clase\n21 oct · Clase\n22 oct · Clase\n23 oct · Clase\n\n\n12\n26 oct · Clase\n27 oct · Clase\n28 oct · Clase\n29 oct · Clase\n30 oct · Clase\n\n\n13\n2 nov · Inhábil\n3 nov · Clase\n4 nov · Clase\n5 nov · Asesoría P4\n6 nov · Parcial 4\n\n\n14\n9 nov · Clase\n10 nov · Clase\n11 nov · Clase\n12 nov · Clase\n13 nov · Clase\n\n\n15\n16 nov · Inhábil\n17 nov · Clase\n18 nov · Clase\n19 nov · Clase\n20 nov · Clase\n\n\n16\n23 nov · Clase\n24 nov · Clase\n25 nov · Clase\n26 nov · Asesoría P5\n27 nov · Parcial 5",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Calendario del curso</span>"
     ]
   },
   {
-    "objectID": "curso/calendario.html#semana-de-reposiciones",
-    "href": "curso/calendario.html#semana-de-reposiciones",
-    "title": "6  Calendario del curso",
-    "section": "6.4 Semana de reposiciones",
-    "text": "6.4 Semana de reposiciones\nEl periodo del 30 de noviembre al 4 de diciembre se reserva para exámenes de reposición. La asignación de cada examen dentro de esa semana se comunicará oportunamente.\n\n\n\n\n\n\nNotaPosibles ajustes\n\n\n\nEl calendario podrá modificarse si se emiten disposiciones institucionales posteriores o se presenta una contingencia. Cualquier cambio se comunicará por los medios del curso.",
+    "objectID": "curso/calendario.html#semana-de-evaluación-ordinaria-y-reposiciones",
+    "href": "curso/calendario.html#semana-de-evaluación-ordinaria-y-reposiciones",
+    "title": "Calendario del curso",
+    "section": "Semana de evaluación ordinaria y reposiciones",
+    "text": "Semana de evaluación ordinaria y reposiciones\nEl Calendario Escolar identifica el periodo del 30 de noviembre al 4 de diciembre como semana de evaluación ordinaria. En este curso se utilizará para exámenes de reposición; la asignación de cada examen se comunicará oportunamente.\n\n\n\n\n\n\nNotaPosibles ajustes\n\n\n\nEl calendario podrá modificarse si se emiten disposiciones institucionales posteriores o se presenta una contingencia. Cualquier cambio se comunicará por los medios del curso.",
     "crumbs": [
       "Información del curso",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Calendario del curso</span>"
@@ -327,9 +327,9 @@
   {
     "objectID": "unidades/01-reales-complejos.html",
     "href": "unidades/01-reales-complejos.html",
-    "title": "8  Unidad 1. Números reales y complejos",
+    "title": "Unidad 1. Números reales y complejos",
     "section": "",
-    "text": "8.1 Contenidos\nDuración prevista: 15 horas.",
+    "text": "Contenidos\nDuración prevista: 15 horas.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Unidad 1. Números reales y complejos</span>"
@@ -338,7 +338,7 @@
   {
     "objectID": "unidades/01-reales-complejos.html#contenidos",
     "href": "unidades/01-reales-complejos.html#contenidos",
-    "title": "8  Unidad 1. Números reales y complejos",
+    "title": "Unidad 1. Números reales y complejos",
     "section": "",
     "text": "Operaciones con números reales y sus propiedades.\nOrigen y definición de los números imaginarios y complejos.\nRepresentación gráfica de números reales y complejos.\nForma cartesiana y forma polar de un número complejo.\nSuma, resta, multiplicación, división, potencias y raíces de números complejos.",
     "crumbs": [
@@ -349,20 +349,9 @@
   {
     "objectID": "unidades/01-reales-complejos.html#propósito-de-la-unidad",
     "href": "unidades/01-reales-complejos.html#propósito-de-la-unidad",
-    "title": "8  Unidad 1. Números reales y complejos",
-    "section": "8.2 Propósito de la unidad",
-    "text": "8.2 Propósito de la unidad\nConsolidar las operaciones y propiedades de los números reales, y extenderlas al sistema de los números complejos. Se pondrá especial atención en la interpretación geométrica, la elección de una representación conveniente y la verificación de resultados.",
-    "crumbs": [
-      "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Unidad 1. Números reales y complejos</span>"
-    ]
-  },
-  {
-    "objectID": "unidades/01-reales-complejos.html#sesiones-publicadas",
-    "href": "unidades/01-reales-complejos.html#sesiones-publicadas",
-    "title": "8  Unidad 1. Números reales y complejos",
-    "section": "8.3 Sesiones publicadas",
-    "text": "8.3 Sesiones publicadas\n\nSesión 01. Estructura de los números reales",
+    "title": "Unidad 1. Números reales y complejos",
+    "section": "Propósito de la unidad",
+    "text": "Propósito de la unidad\nConsolidar las operaciones y propiedades de los números reales, y extenderlas al sistema de los números complejos. Se pondrá especial atención en la interpretación geométrica, la elección de una representación conveniente y la verificación de resultados.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Unidad 1. Números reales y complejos</span>"
@@ -371,9 +360,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html",
     "href": "sesiones/2026-08-10-sesion-01.html",
-    "title": "9  Sesión 01. Estructura de los números reales",
+    "title": "Sesión 01. Estructura de los números reales",
     "section": "",
-    "text": "9.1 Propósito de la sesión\nAl finalizar la sesión, el estudiante podrá:",
+    "text": "Propósito de la sesión\nAl finalizar la sesión, el estudiante podrá:",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -382,7 +371,7 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#propósito-de-la-sesión",
     "href": "sesiones/2026-08-10-sesion-01.html#propósito-de-la-sesión",
-    "title": "9  Sesión 01. Estructura de los números reales",
+    "title": "Sesión 01. Estructura de los números reales",
     "section": "",
     "text": "reconocer los principales conjuntos numéricos y sus relaciones de inclusión;\nidentificar la propiedad de los números reales utilizada en una transformación algebraica; y\nsimplificar expresiones y resolver ecuaciones lineales sin perder equivalencia.",
     "crumbs": [
@@ -393,9 +382,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#explicación",
     "href": "sesiones/2026-08-10-sesion-01.html#explicación",
-    "title": "9  Sesión 01. Estructura de los números reales",
-    "section": "9.2 Explicación",
-    "text": "9.2 Explicación\n\n9.2.1 Conjuntos numéricos\nEn este curso utilizaremos la convención\n\\[\n\\mathbb{N}=\\{0,1,2,3,\\ldots\\}.\n\\]\nAlgunos textos reservan \\(\\mathbb{N}\\) para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.\n\nLos números naturales forman el conjunto \\(\\mathbb{N}\\).\nLos números enteros forman \\[\n\\mathbb{Z}=\\{\\ldots,-2,-1,0,1,2,\\ldots\\}.\n\\]\nLos números racionales son los que pueden escribirse como cociente de enteros: \\[\n\\mathbb{Q}=\\left\\{\\frac{p}{q}:p,q\\in\\mathbb{Z},\\ q\\neq 0\\right\\}.\n\\]\nLos números irracionales son reales que no pertenecen a \\(\\mathbb{Q}\\); por ejemplo, \\(\\sqrt{2}\\) y \\(\\pi\\).\nLos números reales reúnen a racionales e irracionales.\n\nLas inclusiones fundamentales son\n\\[\n\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}.\n\\]\nCuando se pida clasificar un número, conviene indicar el conjunto más pequeño de esta cadena al que pertenece.\n\n\n9.2.2 Propiedades de las operaciones\nPara \\(a,b,c\\in\\mathbb{R}\\) se cumplen, entre otras, las siguientes propiedades.\n\n\n\nPropiedad\nSuma\nMultiplicación\n\n\n\n\nCerradura\n\\(a+b\\in\\mathbb{R}\\)\n\\(ab\\in\\mathbb{R}\\)\n\n\nConmutatividad\n\\(a+b=b+a\\)\n\\(ab=ba\\)\n\n\nAsociatividad\n\\((a+b)+c=a+(b+c)\\)\n\\((ab)c=a(bc)\\)\n\n\nIdentidad\n\\(a+0=a\\)\n\\(a\\cdot 1=a\\)\n\n\nInverso\n\\(a+(-a)=0\\)\n\\(a\\cdot a^{-1}=1\\), si \\(a\\neq0\\)\n\n\n\nLa propiedad distributiva conecta ambas operaciones:\n\\[\na(b+c)=ab+ac.\n\\]\n\n\n\n\n\n\nPrecauciónUna condición que no debe omitirse\n\n\n\nEl inverso multiplicativo \\(a^{-1}=1/a\\) existe en \\(\\mathbb{R}\\) únicamente cuando \\(a\\neq0\\). La división entre cero no está definida.\n\n\n\n\n9.2.3 Igualdad y transformaciones equivalentes\nResolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:\n\nsumar o restar la misma cantidad en ambos miembros;\nmultiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y\nsustituir una expresión por otra algebraicamente equivalente.\n\nEstas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.",
+    "title": "Sesión 01. Estructura de los números reales",
+    "section": "Explicación",
+    "text": "Explicación\n\nConjuntos numéricos\nEn este curso utilizaremos la convención\n\\[\n\\mathbb{N}=\\{0,1,2,3,\\ldots\\}.\n\\]\nAlgunos textos reservan \\(\\mathbb{N}\\) para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.\n\nLos números naturales forman el conjunto \\(\\mathbb{N}\\).\nLos números enteros forman \\[\n\\mathbb{Z}=\\{\\ldots,-2,-1,0,1,2,\\ldots\\}.\n\\]\nLos números racionales son los que pueden escribirse como cociente de enteros: \\[\n\\mathbb{Q}=\\left\\{\\frac{p}{q}:p,q\\in\\mathbb{Z},\\ q\\neq 0\\right\\}.\n\\]\nLos números irracionales son reales que no pertenecen a \\(\\mathbb{Q}\\); por ejemplo, \\(\\sqrt{2}\\) y \\(\\pi\\).\nLos números reales reúnen a racionales e irracionales.\n\nLas inclusiones fundamentales son\n\\[\n\\mathbb{N}\\subseteq\\mathbb{Z}\\subseteq\\mathbb{Q}\\subseteq\\mathbb{R}.\n\\]\nCuando se pida clasificar un número, conviene indicar el conjunto numérico más específico de los estudiados. En particular, si es irracional, se indicará que pertenece a \\(\\mathbb{R}\\setminus\\mathbb{Q}\\).\n\n\nPropiedades de las operaciones\nPara \\(a,b,c\\in\\mathbb{R}\\) se cumplen, entre otras, las siguientes propiedades.\n\n\n\nPropiedad\nSuma\nMultiplicación\n\n\n\n\nCerradura\n\\(a+b\\in\\mathbb{R}\\)\n\\(ab\\in\\mathbb{R}\\)\n\n\nConmutatividad\n\\(a+b=b+a\\)\n\\(ab=ba\\)\n\n\nAsociatividad\n\\((a+b)+c=a+(b+c)\\)\n\\((ab)c=a(bc)\\)\n\n\nIdentidad\n\\(a+0=a\\)\n\\(a\\cdot 1=a\\)\n\n\nInverso\n\\(a+(-a)=0\\)\n\\(a\\cdot a^{-1}=1\\), si \\(a\\neq0\\)\n\n\n\nLa propiedad distributiva conecta ambas operaciones:\n\\[\na(b+c)=ab+ac.\n\\]\n\n\n\n\n\n\nPrecauciónUna condición que no debe omitirse\n\n\n\nEl inverso multiplicativo \\(a^{-1}=1/a\\) existe en \\(\\mathbb{R}\\) únicamente cuando \\(a\\neq0\\). La división entre cero no está definida.\n\n\n\n\nIgualdad y transformaciones equivalentes\nResolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:\n\nsumar o restar la misma cantidad en ambos miembros;\nmultiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y\nsustituir una expresión por otra algebraicamente equivalente.\n\nEstas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -404,9 +393,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#ejemplos",
     "href": "sesiones/2026-08-10-sesion-01.html#ejemplos",
-    "title": "9  Sesión 01. Estructura de los números reales",
-    "section": "9.3 Ejemplos",
-    "text": "9.3 Ejemplos\n\n9.3.1 Ejemplo 1. Clasificación\nClasifiquemos cada número en el conjunto más pequeño posible:\n\n\n\n\n\n\n\n\nNúmero\nClasificación\nRazón\n\n\n\n\n\\(0\\)\n\\(\\mathbb{N}\\)\nPertenece a los naturales bajo la convención del curso.\n\n\n\\(-7\\)\n\\(\\mathbb{Z}\\)\nEs entero, pero no natural.\n\n\n\\(\\frac34\\)\n\\(\\mathbb{Q}\\)\nEs cociente de enteros.\n\n\n\\(\\sqrt9=3\\)\n\\(\\mathbb{N}\\)\nConviene simplificar antes de clasificar.\n\n\n\\(\\sqrt2\\)\n\\(\\mathbb{R}\\setminus\\mathbb{Q}\\)\nEs irracional.\n\n\n\n\n\n9.3.2 Ejemplo 2. Uso de la distributividad\nSimplifiquemos\n\\[\n4(2x-3)-2(x+5).\n\\]\nAplicando la propiedad distributiva:\n\\[\n4(2x-3)-2(x+5)=8x-12-2x-10.\n\\]\nDespués se agrupan términos semejantes:\n\\[\n8x-2x-12-10=6x-22.\n\\]\n\n\n9.3.3 Ejemplo 3. Resolución y verificación\nResolvamos\n\\[\n3(2x-1)-4(x+2)=7.\n\\]\nPrimero distribuimos y reducimos términos semejantes:\n\\[\n6x-3-4x-8=7,\n\\]\n\\[\n2x-11=7.\n\\]\nSumamos \\(11\\) en ambos miembros:\n\\[\n2x=18.\n\\]\nComo \\(2\\neq0\\), dividimos ambos miembros entre \\(2\\) y obtenemos \\(x=9\\).\nPara verificar, sustituimos en la ecuación original:\n\\[\n3(2\\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.\n\\]\nLa igualdad se cumple, por lo que la solución es correcta.\n\n\n9.3.4 Un error frecuente\nEn general,\n\\[\n\\sqrt{a+b}\\neq\\sqrt a+\\sqrt b.\n\\]\nBasta un contraejemplo: si \\(a=b=1\\), entonces \\(\\sqrt{1+1}=\\sqrt2\\), mientras que \\(\\sqrt1+\\sqrt1=2\\). Como \\(\\sqrt2\\neq2\\), la supuesta regla es falsa.",
+    "title": "Sesión 01. Estructura de los números reales",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Clasificación\nClasifiquemos cada número en el conjunto numérico más específico posible:\n\n\n\n\n\n\n\n\nNúmero\nClasificación\nRazón\n\n\n\n\n\\(0\\)\n\\(\\mathbb{N}\\)\nPertenece a los naturales bajo la convención del curso.\n\n\n\\(-7\\)\n\\(\\mathbb{Z}\\)\nEs entero, pero no natural.\n\n\n\\(\\frac34\\)\n\\(\\mathbb{Q}\\)\nEs cociente de enteros.\n\n\n\\(\\sqrt9=3\\)\n\\(\\mathbb{N}\\)\nConviene simplificar antes de clasificar.\n\n\n\\(\\sqrt2\\)\n\\(\\mathbb{R}\\setminus\\mathbb{Q}\\)\nEs irracional.\n\n\n\n\n\nEjemplo 2. Uso de la distributividad\nSimplifiquemos\n\\[\n4(2x-3)-2(x+5).\n\\]\nAplicando la propiedad distributiva:\n\\[\n4(2x-3)-2(x+5)=8x-12-2x-10.\n\\]\nDespués se agrupan términos semejantes:\n\\[\n8x-2x-12-10=6x-22.\n\\]\n\n\nEjemplo 3. Resolución y verificación\nResolvamos\n\\[\n3(2x-1)-4(x+2)=7.\n\\]\nPrimero distribuimos y reducimos términos semejantes:\n\\[\n6x-3-4x-8=7,\n\\]\n\\[\n2x-11=7.\n\\]\nSumamos \\(11\\) en ambos miembros:\n\\[\n2x=18.\n\\]\nComo \\(2\\neq0\\), dividimos ambos miembros entre \\(2\\) y obtenemos \\(x=9\\).\nPara verificar, sustituimos en la ecuación original:\n\\[\n3(2\\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.\n\\]\nLa igualdad se cumple, por lo que la solución es correcta.\n\n\nUn error frecuente\nEn general,\n\\[\n\\sqrt{a+b}\\neq\\sqrt a+\\sqrt b.\n\\]\nBasta un contraejemplo: si \\(a=b=1\\), entonces \\(\\sqrt{1+1}=\\sqrt2\\), mientras que \\(\\sqrt1+\\sqrt1=2\\). Como \\(\\sqrt2\\neq2\\), la supuesta regla es falsa.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -415,9 +404,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#actividad",
     "href": "sesiones/2026-08-10-sesion-01.html#actividad",
-    "title": "9  Sesión 01. Estructura de los números reales",
-    "section": "9.4 Actividad",
-    "text": "9.4 Actividad\n\n\n\n\n\n\nImportanteTrabajo de la sesión · 30 minutos\n\n\n\nResuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.\n\n\n\n9.4.1 Parte A. Conjuntos y propiedades\n\nClasifique en el conjunto más pequeño posible: \\[\n-12,\\qquad \\frac{-18}{6},\\qquad 0.125,\\qquad \\sqrt{49},\\qquad \\sqrt5.\n\\]\nIndique la propiedad que justifica cada igualdad:\n\n\\(7+x=x+7\\)\n\n\\((ab)c=a(bc)\\)\n\n\\(5(y-2)=5y-10\\)\n\n\\(r+0=r\\)\n\nExplique por qué \\(0\\) no tiene inverso multiplicativo.\n\n\n\n9.4.2 Parte B. Cálculo algebraico\n\nSimplifique:\n\n\\(5(3x-2)-3(x+4)\\)\n\n\\(2(4-3y)+7(y-1)\\)\n\nResuelva y verifique:\n\n\\(4(x-3)+2=3x+7\\)\n\n\\(5-2(3x-1)=4(x+2)-1\\)\n\nConstruya un contraejemplo para mostrar que \\((a+b)^2=a^2+b^2\\) no es una identidad.\n\n\n\n\n\n\n\nNotaResultados para comprobar después del intento\n\n\n\n\n\n\n\\(-12\\in\\mathbb Z\\); \\(-18/6=-3\\in\\mathbb Z\\); \\(0.125=1/8\\in\\mathbb Q\\); \\(\\sqrt{49}=7\\in\\mathbb N\\); \\(\\sqrt5\\in\\mathbb R\\setminus\\mathbb Q\\).\nConmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.\nSi existiera \\(b\\) con \\(0b=1\\), se tendría \\(0=1\\), contradicción.\n\n\\(12x-22\\); b. \\(1+y\\).\n\n\n\\(x=17\\); b. \\(x=0\\).\n\nPor ejemplo, \\(a=b=1\\): \\((1+1)^2=4\\), pero \\(1^2+1^2=2\\).",
+    "title": "Sesión 01. Estructura de los números reales",
+    "section": "Actividad",
+    "text": "Actividad\n\n\n\n\n\n\nImportanteTrabajo de la sesión · 30 minutos\n\n\n\nResuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.\n\n\n\nParte A. Conjuntos y propiedades\n\nClasifique en el conjunto más pequeño posible: \\[\n-12,\\qquad \\frac{-18}{6},\\qquad 0.125,\\qquad \\sqrt{49},\\qquad \\sqrt5.\n\\]\nIndique la propiedad que justifica cada igualdad:\n\n\\(7+x=x+7\\)\n\n\\((ab)c=a(bc)\\)\n\n\\(5(y-2)=5y-10\\)\n\n\\(r+0=r\\)\n\nExplique por qué \\(0\\) no tiene inverso multiplicativo.\n\n\n\nParte B. Cálculo algebraico\n\nSimplifique:\n\n\\(5(3x-2)-3(x+4)\\)\n\n\\(2(4-3y)+7(y-1)\\)\n\nResuelva y verifique:\n\n\\(4(x-3)+2=3x+7\\)\n\n\\(5-2(3x-1)=4(x+2)-1\\)\n\nConstruya un contraejemplo para mostrar que \\((a+b)^2=a^2+b^2\\) no es una identidad.\n\n\n\n\n\n\n\nNotaResultados para comprobar después del intento\n\n\n\n\n\n\n\\(-12\\in\\mathbb Z\\); \\(-18/6=-3\\in\\mathbb Z\\); \\(0.125=1/8\\in\\mathbb Q\\); \\(\\sqrt{49}=7\\in\\mathbb N\\); \\(\\sqrt5\\in\\mathbb R\\setminus\\mathbb Q\\).\nConmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.\nPara todo \\(b\\in\\mathbb R\\) se tiene \\(0b=0\\): en efecto, \\(0b=(0+0)b=0b+0b\\), y al restar \\(0b\\) en ambos miembros se obtiene \\(0=0b\\). Por tanto, si existiera \\(b\\) con \\(0b=1\\), se tendría \\(0=1\\), contradicción.\n\n\\(12x-22\\); b. \\(1+y\\).\n\n\n\\(x=17\\); b. \\(x=0\\).\n\nPor ejemplo, \\(a=b=1\\): \\((1+1)^2=4\\), pero \\(1^2+1^2=2\\).",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -426,9 +415,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#cierre",
     "href": "sesiones/2026-08-10-sesion-01.html#cierre",
-    "title": "9  Sesión 01. Estructura de los números reales",
-    "section": "9.5 Cierre",
-    "text": "9.5 Cierre\n\nLos conjuntos numéricos se organizan mediante inclusiones.\nLas transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.\nVerificar una solución es parte del procedimiento, no un paso opcional.",
+    "title": "Sesión 01. Estructura de los números reales",
+    "section": "Cierre",
+    "text": "Cierre\n\nLos conjuntos numéricos se organizan mediante inclusiones.\nLas transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.\nVerificar una solución es parte del procedimiento, no un paso opcional.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -437,9 +426,9 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#para-practicar",
     "href": "sesiones/2026-08-10-sesion-01.html#para-practicar",
-    "title": "9  Sesión 01. Estructura de los números reales",
-    "section": "9.6 Para practicar",
-    "text": "9.6 Para practicar\n\nDetermine si cada afirmación es verdadera o falsa y justifique: \\(\\mathbb Z\\subset\\mathbb Q\\); \\(\\mathbb Q\\subset\\mathbb Z\\); \\(\\sqrt{16}\\notin\\mathbb N\\).\nSimplifique \\(3(2x-5)-4(1-x)+2\\).\nResuelva \\(2(3x+1)-5=x+12\\) y compruebe el resultado.\nEncuentre un contraejemplo para \\(\\frac{a+b}{c+d}=\\frac ac+\\frac bd\\).",
+    "title": "Sesión 01. Estructura de los números reales",
+    "section": "Para practicar",
+    "text": "Para practicar\n\nDetermine si cada afirmación es verdadera o falsa y justifique: \\(\\mathbb Z\\subseteq\\mathbb Q\\); \\(\\mathbb Q\\subseteq\\mathbb Z\\); \\(\\sqrt{16}\\notin\\mathbb N\\).\nSimplifique \\(3(2x-5)-4(1-x)+2\\).\nResuelva \\(2(3x+1)-5=x+12\\) y compruebe el resultado.\nEncuentre un contraejemplo para \\(\\frac{a+b}{c+d}=\\frac ac+\\frac bd\\).",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
@@ -448,9 +437,9 @@
   {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
-    "title": "10  Unidad 2. Polinomios y raíces",
+    "title": "Unidad 2. Polinomios y raíces",
     "section": "",
-    "text": "10.1 Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
+    "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
@@ -459,7 +448,7 @@
   {
     "objectID": "unidades/02-polinomios-raices.html#contenidos",
     "href": "unidades/02-polinomios-raices.html#contenidos",
-    "title": "10  Unidad 2. Polinomios y raíces",
+    "title": "Unidad 2. Polinomios y raíces",
     "section": "",
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
@@ -470,9 +459,9 @@
   {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
-    "title": "11  Unidad 3. Sistemas de ecuaciones lineales",
+    "title": "Unidad 3. Sistemas de ecuaciones lineales",
     "section": "",
-    "text": "11.1 Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
+    "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
@@ -481,7 +470,7 @@
   {
     "objectID": "unidades/03-sistemas-ecuaciones.html#contenidos",
     "href": "unidades/03-sistemas-ecuaciones.html#contenidos",
-    "title": "11  Unidad 3. Sistemas de ecuaciones lineales",
+    "title": "Unidad 3. Sistemas de ecuaciones lineales",
     "section": "",
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
@@ -492,9 +481,9 @@
   {
     "objectID": "unidades/04-matrices.html",
     "href": "unidades/04-matrices.html",
-    "title": "12  Unidad 4. Matrices",
+    "title": "Unidad 4. Matrices",
     "section": "",
-    "text": "12.1 Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
+    "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
@@ -503,7 +492,7 @@
   {
     "objectID": "unidades/04-matrices.html#contenidos",
     "href": "unidades/04-matrices.html#contenidos",
-    "title": "12  Unidad 4. Matrices",
+    "title": "Unidad 4. Matrices",
     "section": "",
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
@@ -514,9 +503,9 @@
   {
     "objectID": "unidades/05-conceptos-algebra-lineal.html",
     "href": "unidades/05-conceptos-algebra-lineal.html",
-    "title": "13  Unidad 5. Conceptos básicos de álgebra lineal",
+    "title": "Unidad 5. Conceptos básicos de álgebra lineal",
     "section": "",
-    "text": "13.1 Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
+    "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
@@ -525,7 +514,7 @@
   {
     "objectID": "unidades/05-conceptos-algebra-lineal.html#contenidos",
     "href": "unidades/05-conceptos-algebra-lineal.html#contenidos",
-    "title": "13  Unidad 5. Conceptos básicos de álgebra lineal",
+    "title": "Unidad 5. Conceptos básicos de álgebra lineal",
     "section": "",
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
@@ -536,9 +525,9 @@
   {
     "objectID": "unidades/06-transformaciones-lineales.html",
     "href": "unidades/06-transformaciones-lineales.html",
-    "title": "14  Unidad 6. Transformaciones lineales en el plano",
+    "title": "Unidad 6. Transformaciones lineales en el plano",
     "section": "",
-    "text": "14.1 Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
+    "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
@@ -547,7 +536,7 @@
   {
     "objectID": "unidades/06-transformaciones-lineales.html#contenidos",
     "href": "unidades/06-transformaciones-lineales.html#contenidos",
-    "title": "14  Unidad 6. Transformaciones lineales en el plano",
+    "title": "Unidad 6. Transformaciones lineales en el plano",
     "section": "",
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
@@ -558,9 +547,9 @@
   {
     "objectID": "recursos/notacion.html",
     "href": "recursos/notacion.html",
-    "title": "15  Notación",
+    "title": "Notación",
     "section": "",
-    "text": "15.1 Conjuntos numéricos",
+    "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
@@ -569,7 +558,7 @@
   {
     "objectID": "recursos/notacion.html#conjuntos-numéricos",
     "href": "recursos/notacion.html#conjuntos-numéricos",
-    "title": "15  Notación",
+    "title": "Notación",
     "section": "",
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
@@ -580,9 +569,9 @@
   {
     "objectID": "recursos/notacion.html#símbolos-frecuentes",
     "href": "recursos/notacion.html#símbolos-frecuentes",
-    "title": "15  Notación",
-    "section": "15.2 Símbolos frecuentes",
-    "text": "15.2 Símbolos frecuentes\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
+    "title": "Notación",
+    "section": "Símbolos frecuentes",
+    "text": "Símbolos frecuentes\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
@@ -591,9 +580,9 @@
   {
     "objectID": "recursos/notacion.html#criterio-editorial",
     "href": "recursos/notacion.html#criterio-editorial",
-    "title": "15  Notación",
-    "section": "15.3 Criterio editorial",
-    "text": "15.3 Criterio editorial\nTodo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.",
+    "title": "Notación",
+    "section": "Criterio editorial",
+    "text": "Criterio editorial\nTodo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
@@ -602,20 +591,20 @@
   {
     "objectID": "recursos/bibliografia.html",
     "href": "recursos/bibliografia.html",
-    "title": "16  Bibliografía",
+    "title": "Bibliografía",
     "section": "",
-    "text": "16.1 Texto principal\nCárdenas, Humberto; Lluis, Emilio; Raggi, Francisco; y Tomás, Francisco. Álgebra superior. 2.ª edición. México: Editorial Trillas. ISBN 978-968-24-3783-0.\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
+    "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
-    "objectID": "recursos/bibliografia.html#bibliografía-del-programa",
-    "href": "recursos/bibliografia.html#bibliografía-del-programa",
-    "title": "16  Bibliografía",
-    "section": "16.2 Bibliografía del programa",
-    "text": "16.2 Bibliografía del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1990. Álgebra superior. 2.ª ed. Trillas.\n\n\nEstrada Castillo, M. P., N. E. Flores Moreno, L. I. García Ortiz, y P. A. Valdez Rodríguez. 2024. Álgebra: una base para la ingeniería. Cengage.\n\n\nGómez Laveaga, Carlos. 2014. Álgebra superior: curso completo. Dirección General de Publicaciones y Fomento Editorial, UNAM.\n\n\nGrossman, Stanley I. 2019. Álgebra lineal. 8.ª ed. McGraw-Hill.\n\n\nLarson, Ron. 2015. Fundamentos de álgebra lineal. 7.ª ed. Cengage.\n\n\nRincón, C. et al. 2014. Álgebra superior. McGraw-Hill.",
+    "objectID": "recursos/bibliografia.html#bibliografía-completa-del-programa",
+    "href": "recursos/bibliografia.html#bibliografía-completa-del-programa",
+    "title": "Bibliografía",
+    "section": "Bibliografía completa del programa",
+    "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
@@ -624,9 +613,9 @@
   {
     "objectID": "recursos/bibliografia.html#documentos-institucionales",
     "href": "recursos/bibliografia.html#documentos-institucionales",
-    "title": "16  Bibliografía",
-    "section": "16.3 Documentos institucionales",
-    "text": "16.3 Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
+    "title": "Bibliografía",
+    "section": "Documentos institucionales",
+    "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
