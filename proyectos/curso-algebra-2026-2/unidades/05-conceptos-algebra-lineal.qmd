@@ -1,0 +1,14 @@
+---
+title: "Unidad 5. Conceptos básicos de álgebra lineal"
+description: "Combinaciones lineales, dependencia e independencia."
+---
+
+**Duración prevista:** 5 horas.
+
+## Contenidos
+
+1. Combinaciones lineales.
+2. Dependencia e independencia lineal.
+
+Los conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.
+
