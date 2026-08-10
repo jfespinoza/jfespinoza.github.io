@@ -1,0 +1,16 @@
+---
+title: "Unidad 4. Matrices"
+description: "Operaciones, sistemas, inversas y determinantes."
+---
+
+**Duración prevista:** 15 horas.
+
+## Contenidos
+
+1. Operaciones con matrices y sus propiedades.
+2. Representación matricial de un sistema de ecuaciones lineales.
+3. Matriz inversa en la resolución de sistemas.
+4. Determinantes y regla de Cramer.
+
+Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.
+
