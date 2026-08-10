@@ -39,10 +39,10 @@ Algunos textos reservan $\mathbb{N}$ para los enteros positivos; cuando esa dife
 Las inclusiones fundamentales son
 
 $$
-\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}.
+\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}.
 $$
 
-Cuando se pida clasificar un número, conviene indicar el conjunto **más pequeño** de esta cadena al que pertenece.
+Cuando se pida clasificar un número, conviene indicar el conjunto numérico **más específico** de los estudiados. En particular, si es irracional, se indicará que pertenece a $\mathbb{R}\setminus\mathbb{Q}$.
 
 ### Propiedades de las operaciones
 
@@ -80,7 +80,7 @@ Estas operaciones no son reglas aisladas: se apoyan en las propiedades anteriore
 
 ### Ejemplo 1. Clasificación
 
-Clasifiquemos cada número en el conjunto más pequeño posible:
+Clasifiquemos cada número en el conjunto numérico más específico posible:
 
 | Número | Clasificación | Razón |
 |---:|---|---|
@@ -189,7 +189,7 @@ Resuelva primero de manera individual. Después compare procedimientos con una p
 ::: {.callout-note collapse="true" title="Resultados para comprobar después del intento"}
 1. $-12\in\mathbb Z$; $-18/6=-3\in\mathbb Z$; $0.125=1/8\in\mathbb Q$; $\sqrt{49}=7\in\mathbb N$; $\sqrt5\in\mathbb R\setminus\mathbb Q$.
 2. Conmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.
-3. Si existiera $b$ con $0b=1$, se tendría $0=1$, contradicción.
+3. Para todo $b\in\mathbb R$ se tiene $0b=0$: en efecto, $0b=(0+0)b=0b+0b$, y al restar $0b$ en ambos miembros se obtiene $0=0b$. Por tanto, si existiera $b$ con $0b=1$, se tendría $0=1$, contradicción.
 4. a. $12x-22$; b. $1+y$.
 5. a. $x=17$; b. $x=0$.
 6. Por ejemplo, $a=b=1$: $(1+1)^2=4$, pero $1^2+1^2=2$.
@@ -203,8 +203,7 @@ Resuelva primero de manera individual. Después compare procedimientos con una p
 
 ## Para practicar
 
-1. Determine si cada afirmación es verdadera o falsa y justifique: $\mathbb Z\subset\mathbb Q$; $\mathbb Q\subset\mathbb Z$; $\sqrt{16}\notin\mathbb N$.
+1. Determine si cada afirmación es verdadera o falsa y justifique: $\mathbb Z\subseteq\mathbb Q$; $\mathbb Q\subseteq\mathbb Z$; $\sqrt{16}\notin\mathbb N$.
 2. Simplifique $3(2x-5)-4(1-x)+2$.
 3. Resuelva $2(3x+1)-5=x+12$ y compruebe el resultado.
 4. Encuentre un contraejemplo para $\frac{a+b}{c+d}=\frac ac+\frac bd$.
-
