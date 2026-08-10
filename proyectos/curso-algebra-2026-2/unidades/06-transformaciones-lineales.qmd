@@ -1,0 +1,15 @@
+---
+title: "Unidad 6. Transformaciones lineales en el plano"
+description: "Definición, matriz estándar, núcleo e imagen."
+---
+
+**Duración prevista:** 15 horas.
+
+## Contenidos
+
+1. Definición y ejemplos de transformaciones lineales en el plano.
+2. Matriz estándar de una transformación lineal.
+3. Aproximación intuitiva al núcleo y a la imagen.
+
+Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.
+
