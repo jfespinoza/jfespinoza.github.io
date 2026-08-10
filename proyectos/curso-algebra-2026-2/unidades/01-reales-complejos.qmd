@@ -1,0 +1,23 @@
+---
+title: "Unidad 1. Números reales y complejos"
+description: "Operaciones, representaciones y propiedades de los sistemas numéricos."
+---
+
+**Duración prevista:** 15 horas.
+
+## Contenidos
+
+1. Operaciones con números reales y sus propiedades.
+2. Origen y definición de los números imaginarios y complejos.
+3. Representación gráfica de números reales y complejos.
+4. Forma cartesiana y forma polar de un número complejo.
+5. Suma, resta, multiplicación, división, potencias y raíces de números complejos.
+
+## Propósito de la unidad
+
+Consolidar las operaciones y propiedades de los números reales, y extenderlas al sistema de los números complejos. Se pondrá especial atención en la interpretación geométrica, la elección de una representación conveniente y la verificación de resultados.
+
+## Sesiones publicadas
+
+- [Sesión 01. Estructura de los números reales](../sesiones/2026-08-10-sesion-01.qmd)
+
