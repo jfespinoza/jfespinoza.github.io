@@ -8,7 +8,7 @@ description: "Clases, asesorías, parciales, días inhábiles y reposiciones."
 - **Inicio de clases:** lunes 10 de agosto de 2026.
 - **Último día lectivo:** viernes 27 de noviembre de 2026.
 - **Límite de bajas voluntarias:** miércoles 23 de septiembre de 2026.
-- **Evaluación ordinaria y reposiciones:** lunes 30 de noviembre al viernes 4 de diciembre de 2026.
+- **Semana de evaluación ordinaria:** lunes 30 de noviembre al viernes 4 de diciembre de 2026; en este curso se destinará a exámenes de reposición.
 
 ## Asesorías y exámenes parciales
 
@@ -41,11 +41,10 @@ description: "Clases, asesorías, parciales, días inhábiles y reposiciones."
 | 15 | **16 nov · Inhábil** | 17 nov · Clase | 18 nov · Clase | 19 nov · Clase | 20 nov · Clase |
 | 16 | 23 nov · Clase | 24 nov · Clase | 25 nov · Clase | **26 nov · Asesoría P5** | **27 nov · Parcial 5** |
 
-## Semana de reposiciones
+## Semana de evaluación ordinaria y reposiciones
 
-El periodo del **30 de noviembre al 4 de diciembre** se reserva para exámenes de reposición. La asignación de cada examen dentro de esa semana se comunicará oportunamente.
+El Calendario Escolar identifica el periodo del **30 de noviembre al 4 de diciembre** como semana de evaluación ordinaria. En este curso se utilizará para exámenes de reposición; la asignación de cada examen se comunicará oportunamente.
 
 ::: {.callout-note title="Posibles ajustes"}
 El calendario podrá modificarse si se emiten disposiciones institucionales posteriores o se presenta una contingencia. Cualquier cambio se comunicará por los medios del curso.
 :::
-

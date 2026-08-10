@@ -2,16 +2,16 @@
 title: "Bibliografía"
 description: "Texto principal y obras de consulta del programa oficial."
 nocite: |
-  @cardenas1990, @grossman2019, @larson2015, @estrada2024, @rincon2014, @gomez2014
+  @grossman2019, @larson2015, @estrada2024, @rincon2014, @gomez2014
 ---
 
 ## Texto principal
 
-Cárdenas, Humberto; Lluis, Emilio; Raggi, Francisco; y Tomás, Francisco. *Álgebra superior*. 2.ª edición. México: Editorial Trillas. ISBN 978-968-24-3783-0.
+El texto principal del curso es *Álgebra superior*, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas [@cardenas1990].
 
 El texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.
 
-## Bibliografía del programa
+## Bibliografía completa del programa
 
 ::: {#refs}
 :::
