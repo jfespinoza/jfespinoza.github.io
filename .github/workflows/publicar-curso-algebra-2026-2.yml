@@ -26,6 +26,8 @@ jobs:
 
       - name: Instalar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.10.18"
 
       - name: Renderizar el libro
         run: quarto render proyectos/curso-algebra-2026-2
@@ -47,5 +49,12 @@ jobs:
             exit 0
           fi
           git commit -m "Actualizar libro de Álgebra 2026-2 [skip ci]"
+          git fetch origin main
+          if ! git diff --quiet "$GITHUB_SHA..origin/main" -- \
+            proyectos/curso-algebra-2026-2 \
+            .github/workflows/publicar-curso-algebra-2026-2.yml; then
+            echo "Hay cambios fuente más recientes; la ejecución nueva realizará la publicación."
+            exit 0
+          fi
+          git rebase origin/main
           git push
-
