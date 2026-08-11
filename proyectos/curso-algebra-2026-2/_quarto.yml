@@ -36,6 +36,7 @@ book:
       chapters:
         - unidades/01-reales-complejos.qmd
         - sesiones/2026-08-10-sesion-01.qmd
+        - sesiones/2026-08-11-sesion-02.qmd
     - part: "Unidad 2. Polinomios y raíces"
       chapters:
         - unidades/02-polinomios-raices.qmd
