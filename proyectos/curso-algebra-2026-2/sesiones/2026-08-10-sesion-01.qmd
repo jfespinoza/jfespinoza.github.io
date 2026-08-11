@@ -11,12 +11,6 @@ description: "Organización del curso, medios de comunicación, evaluación, asi
 | Lunes 10 de agosto de 2026 | Ingeniería en Materiales (IMA) | 21 | 08:00-09:00 | 5I-A302 |
 | Lunes 10 de agosto de 2026 | Ingeniería en Tecnología Electrónica (LTE) | 29 | 14:00-15:00 | 8B-A201 |
 
-::: {.callout-note title="Una sola entrada para ambos grupos"}
-Esta página consolida lo presentado en las dos clases. La organización, los contenidos, las fechas de evaluación y los criterios generales son comunes a IMA y LTE; únicamente cambian el horario, el aula y algunos contextos de aplicación.
-:::
-
-La sesión tuvo carácter de **presentación y encuadre**. El desarrollo formal de la Unidad 1 comienza el martes 11 de agosto.
-
 ## Propósitos de la sesión
 
 Al concluir este encuadre, el estudiante deberá poder:
@@ -37,7 +31,7 @@ Al concluir este encuadre, el estudiante deberá poder:
 
 ### Libro público del curso
 
-Este libro se construirá progresivamente durante el semestre. Reunirá explicaciones, ejemplos, actividades, orientaciones y ejercicios adicionales. Está pensado para permitir el repaso autónomo, pero no sustituye la participación en clase ni la formulación oportuna de dudas.
+El libro público del curso reúne explicaciones, ejemplos, actividades, orientaciones y ejercicios adicionales para apoyar el estudio autónomo. Su consulta complementa, pero no sustituye, la participación en clase ni la formulación oportuna de dudas.
 
 - [Página principal del libro](../index.qmd)
 - [Identificación de los grupos](../curso/identificacion.qmd)
@@ -123,7 +117,7 @@ Cualquier ajuste posterior se comunicará en clase y mediante los canales instit
 
 ## Forma habitual de trabajo
 
-En lo posible, cada clase tendrá tres momentos:
+Cada clase se organizará habitualmente en tres momentos:
 
 1. **Explicación inicial.** Durante aproximadamente 15 a 20 minutos se introducirán definiciones, propiedades, notación y condiciones de uso. Por ello es especialmente importante llegar puntualmente.
 2. **Ejemplos y contraejemplos.** Se mostrarán procedimientos razonados, verificaciones y errores frecuentes.
@@ -135,9 +129,9 @@ Cuando el libro incluya resultados u orientaciones, deben consultarse **después
 
 El texto de referencia principal es *Álgebra superior*, de Humberto Cárdenas, Emilio Lluis, Francisco Raggi y Francisco Tomás [@cardenas1990]. Hay ejemplares disponibles en las bibliotecas de la Universidad. El material del sitio es de elaboración propia para el curso y no reproduce ni sustituye el libro de texto. La [bibliografía completa](../recursos/bibliografia.qmd) incluye fuentes adicionales para cada bloque.
 
-## Panorama matemático presentado
+## Panorama matemático
 
-Como anticipo del primer bloque, se recordó la cadena de inclusiones
+Los principales conjuntos numéricos se relacionan mediante la cadena de inclusiones
 
 $$
 \mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
@@ -151,7 +145,7 @@ $$
 z=a+bi,\qquad a,b\in\mathbb R,\qquad i^2=-1.
 $$
 
-Esta ampliación permite resolver ecuaciones que no tienen solución real. El ejemplo considerado fue
+Esta ampliación permite resolver ecuaciones que no tienen solución real. Un ejemplo elemental es
 
 $$
 x^2+1=0.
@@ -169,7 +163,7 @@ $$
 x^2+1=(x-i)(x+i).
 $$
 
-No aparece una sola raíz, sino **dos soluciones complejas**, $i$ y $-i$. Más adelante, el teorema fundamental del álgebra precisará esta idea: todo polinomio no constante de grado $n$ con coeficientes complejos puede factorizarse en $n$ factores lineales sobre $\mathbb C$, contando multiplicidades.
+No aparece una sola raíz, sino **dos soluciones complejas**, $i$ y $-i$. El teorema fundamental del álgebra precisa esta idea: todo polinomio no constante de grado $n$ con coeficientes complejos puede factorizarse en $n$ factores lineales sobre $\mathbb C$, contando multiplicidades.
 
 ::: {.callout-note title="Distinción conceptual"}
 Los números complejos sí constituyen una ampliación de los números reales. Las matrices que se estudiarán después no son un sistema numérico “más grande”: son arreglos de escalares que permiten representar sistemas de ecuaciones y transformaciones lineales.
