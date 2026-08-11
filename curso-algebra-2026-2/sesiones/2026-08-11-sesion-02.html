@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Clasificación de números reales, pertenencia e inclusión, recta real, orden, intervalos y diagnóstico inicial.">
+<meta name="description" content="Subconjuntos de los números reales, números racionales e irracionales, orden, recta real y notación de intervalos.">
 
 <title>Sesión 02. Números reales: clasificación, orden e intervalos – Álgebra</title>
 <style>
@@ -109,7 +109,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Sesión 02. Números reales: clasificación, orden e intervalos – Álgebra">
-<meta property="og:description" content="Clasificación de números reales, pertenencia e inclusión, recta real, orden, intervalos y diagnóstico inicial.">
+<meta property="og:description" content="Subconjuntos de los números reales, números racionales e irracionales, orden, recta real y notación de intervalos.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -333,29 +333,23 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#registro-de-la-sesión" id="toc-registro-de-la-sesión" class="nav-link active" data-scroll-target="#registro-de-la-sesión">Registro de la sesión</a></li>
-  <li><a href="#resultado-de-aprendizaje" id="toc-resultado-de-aprendizaje" class="nav-link" data-scroll-target="#resultado-de-aprendizaje">Resultado de aprendizaje</a></li>
-  <li><a href="#ruta-de-trabajo" id="toc-ruta-de-trabajo" class="nav-link" data-scroll-target="#ruta-de-trabajo">Ruta de trabajo</a></li>
-  <li><a href="#diagnóstico-inicial" id="toc-diagnóstico-inicial" class="nav-link" data-scroll-target="#diagnóstico-inicial">Diagnóstico inicial</a></li>
-  <li><a href="#explicación" id="toc-explicación" class="nav-link" data-scroll-target="#explicación">Explicación</a>
+  <li><a href="#los-subconjuntos-de-los-números-reales" id="toc-los-subconjuntos-de-los-números-reales" class="nav-link active" data-scroll-target="#los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</a>
   <ul class="collapse">
-  <li><a href="#los-subconjuntos-de-los-números-reales" id="toc-los-subconjuntos-de-los-números-reales" class="nav-link" data-scroll-target="#los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</a></li>
-  <li><a href="#un-criterio-operativo-para-racionales-e-irracionales" id="toc-un-criterio-operativo-para-racionales-e-irracionales" class="nav-link" data-scroll-target="#un-criterio-operativo-para-racionales-e-irracionales">Un criterio operativo para racionales e irracionales</a></li>
-  <li><a href="#la-recta-real-y-el-orden" id="toc-la-recta-real-y-el-orden" class="nav-link" data-scroll-target="#la-recta-real-y-el-orden">La recta real y el orden</a></li>
-  <li><a href="#intervalos" id="toc-intervalos" class="nav-link" data-scroll-target="#intervalos">Intervalos</a></li>
-  <li><a href="#propiedades-en-uso" id="toc-propiedades-en-uso" class="nav-link" data-scroll-target="#propiedades-en-uso">Propiedades en uso</a></li>
+  <li><a href="#pertenencia-e-inclusión" id="toc-pertenencia-e-inclusión" class="nav-link" data-scroll-target="#pertenencia-e-inclusión">Pertenencia e inclusión</a></li>
   </ul></li>
+  <li><a href="#números-racionales-e-irracionales" id="toc-números-racionales-e-irracionales" class="nav-link" data-scroll-target="#números-racionales-e-irracionales">Números racionales e irracionales</a></li>
+  <li><a href="#la-recta-real-y-el-orden" id="toc-la-recta-real-y-el-orden" class="nav-link" data-scroll-target="#la-recta-real-y-el-orden">La recta real y el orden</a></li>
+  <li><a href="#intervalos-de-números-reales" id="toc-intervalos-de-números-reales" class="nav-link" data-scroll-target="#intervalos-de-números-reales">Intervalos de números reales</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-clasificar-en-el-conjunto-más-específico" id="toc-ejemplo-1.-clasificar-en-el-conjunto-más-específico" class="nav-link" data-scroll-target="#ejemplo-1.-clasificar-en-el-conjunto-más-específico">Ejemplo 1. Clasificar en el conjunto más específico</a></li>
-  <li><a href="#ejemplo-2.-traducir-entre-representaciones" id="toc-ejemplo-2.-traducir-entre-representaciones" class="nav-link" data-scroll-target="#ejemplo-2.-traducir-entre-representaciones">Ejemplo 2. Traducir entre representaciones</a></li>
-  <li><a href="#errores-frecuentes-y-contraejemplos" id="toc-errores-frecuentes-y-contraejemplos" class="nav-link" data-scroll-target="#errores-frecuentes-y-contraejemplos">Errores frecuentes y contraejemplos</a></li>
+  <li><a href="#ejemplo-1.-clasificación-de-números-reales" id="toc-ejemplo-1.-clasificación-de-números-reales" class="nav-link" data-scroll-target="#ejemplo-1.-clasificación-de-números-reales">Ejemplo 1. Clasificación de números reales</a></li>
+  <li><a href="#ejemplo-2.-pertenencia-e-inclusión" id="toc-ejemplo-2.-pertenencia-e-inclusión" class="nav-link" data-scroll-target="#ejemplo-2.-pertenencia-e-inclusión">Ejemplo 2. Pertenencia e inclusión</a></li>
+  <li><a href="#ejemplo-3.-notación-de-intervalos" id="toc-ejemplo-3.-notación-de-intervalos" class="nav-link" data-scroll-target="#ejemplo-3.-notación-de-intervalos">Ejemplo 3. Notación de intervalos</a></li>
+  <li><a href="#ejemplo-4.-orden-de-números-reales" id="toc-ejemplo-4.-orden-de-números-reales" class="nav-link" data-scroll-target="#ejemplo-4.-orden-de-números-reales">Ejemplo 4. Orden de números reales</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   </ul></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
-  <li><a href="#evidencia-de-salida" id="toc-evidencia-de-salida" class="nav-link" data-scroll-target="#evidencia-de-salida">Evidencia de salida</a></li>
-  <li><a href="#cierre" id="toc-cierre" class="nav-link" data-scroll-target="#cierre">Cierre</a></li>
-  <li><a href="#para-practicar-después-de-clase" id="toc-para-practicar-después-de-clase" class="nav-link" data-scroll-target="#para-practicar-después-de-clase">Para practicar después de clase</a></li>
-  <li><a href="#próxima-sesión" id="toc-próxima-sesión" class="nav-link" data-scroll-target="#próxima-sesión">Próxima sesión</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
@@ -387,209 +381,101 @@ window.Quarto = {
 </header>
 
 
-<section id="registro-de-la-sesión" class="level2">
-<h2 class="anchored" data-anchor-id="registro-de-la-sesión">Registro de la sesión</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 25%">
-<col style="width: 18%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Fecha</th>
-<th>Programa</th>
-<th style="text-align: right;">Grupo</th>
-<th>Horario</th>
-<th>Aula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Martes 11 de agosto de 2026</td>
-<td>Ingeniería en Materiales (IMA)</td>
-<td style="text-align: right;">21</td>
-<td>08:00-09:00</td>
-<td>5I-A302</td>
-</tr>
-<tr class="even">
-<td>Martes 11 de agosto de 2026</td>
-<td>Ingeniería en Tecnología Electrónica (LTE)</td>
-<td style="text-align: right;">29</td>
-<td>14:00-15:00</td>
-<td>8B-A201</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled" title="Primera sesión de desarrollo temático">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Primera sesión de desarrollo temático
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Esta es la <strong>Sesión 02 del libro</strong>, porque el encuadre del 10 de agosto quedó registrado como Sesión 01, y la <strong>primera de las 61 sesiones presenciales destinadas al desarrollo de contenidos</strong>. El núcleo matemático es común a IMA y LTE; algunos contextos de práctica se adaptan al programa.</p>
-</div>
-</div>
-</section>
-<section id="resultado-de-aprendizaje" class="level2">
-<h2 class="anchored" data-anchor-id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
-<p>Al finalizar la sesión, el estudiante podrá:</p>
+<section id="los-subconjuntos-de-los-números-reales" class="level2">
+<h2 class="anchored" data-anchor-id="los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</h2>
+<p>Los números reales comprenden distintos conjuntos numéricos. Adoptaremos la convención <span class="math inline">\(0\in\mathbb N\)</span>. Los conjuntos que utilizaremos son los siguientes:</p>
 <ul>
-<li>clasificar números reales en el conjunto más específico pertinente;</li>
-<li>distinguir la pertenencia de un elemento de la inclusión entre conjuntos;</li>
-<li>relacionar orden, desigualdades, intervalos y representación en la recta real; y</li>
-<li>reconocer, mediante un diagnóstico breve, qué destrezas operativas necesita reforzar.</li>
-</ul>
-<p>La evidencia de salida consistirá en <strong>clasificar números y justificar una inclusión o una exclusión</strong>.</p>
-</section>
-<section id="ruta-de-trabajo" class="level2">
-<h2 class="anchored" data-anchor-id="ruta-de-trabajo">Ruta de trabajo</h2>
-<p>La sesión está diseñada para 50–55 minutos efectivos.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 40%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Momento</th>
-<th style="text-align: right;">Minutos</th>
-<th>Producto</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Diagnóstico individual</td>
-<td style="text-align: right;">0–8</td>
-<td>Respuestas sin calculadora</td>
-</tr>
-<tr class="even">
-<td>Autorrevisión</td>
-<td style="text-align: right;">8–11</td>
-<td>Registro personal de dificultades</td>
-</tr>
-<tr class="odd">
-<td>Explicación: conjuntos numéricos</td>
-<td style="text-align: right;">11–22</td>
-<td>Notación y relaciones correctas</td>
-</tr>
-<tr class="even">
-<td>Explicación: orden e intervalos</td>
-<td style="text-align: right;">22–31</td>
-<td>Traducción entre representaciones</td>
-</tr>
-<tr class="odd">
-<td>Ejemplos guiados</td>
-<td style="text-align: right;">31–39</td>
-<td>Clasificación y justificación</td>
-</tr>
-<tr class="even">
-<td>Actividad individual y en parejas</td>
-<td style="text-align: right;">39–50</td>
-<td>Desarrollo escrito</td>
-</tr>
-<tr class="odd">
-<td>Evidencia de salida</td>
-<td style="text-align: right;">50–55</td>
-<td>Respuesta individual breve</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="diagnóstico-inicial" class="level2">
-<h2 class="anchored" data-anchor-id="diagnóstico-inicial">Diagnóstico inicial</h2>
-<p>Resuelva individualmente, sin calculadora y sin consultar apuntes. Este diagnóstico <strong>no tiene valor en la calificación</strong>; su función es orientar el repaso de las primeras sesiones.</p>
-<ol type="1">
-<li>Calcule <span class="math inline">\(\dfrac{1}{2}+\dfrac{1}{3}\)</span>.</li>
-<li>¿Cuál es mayor: <span class="math inline">\(-3\)</span> o <span class="math inline">\(-5\)</span>?</li>
-<li>Escriba <span class="math inline">\(0.4\)</span> como fracción.</li>
-<li>Determine <span class="math inline">\(\dfrac{0}{8}\)</span> y explique qué ocurre con <span class="math inline">\(\dfrac{8}{0}\)</span>.</li>
-<li>Calcule <span class="math inline">\(2\cdot 3^2\)</span> y <span class="math inline">\((2\cdot 3)^2\)</span>.</li>
-<li>Compare <span class="math inline">\(\sqrt{9+16}\)</span> con <span class="math inline">\(\sqrt 9+\sqrt{16}\)</span>.</li>
-</ol>
-<p>La revisión se realizará en clase. Después, marque cada respuesta con un semáforo personal: <strong>verde</strong> si está seguro del procedimiento, <strong>amarillo</strong> si tuvo dudas y <strong>rojo</strong> si no pudo resolverla. Los reactivos 1–4 se relacionan con el trabajo de hoy; los reactivos 5 y 6 anticipan la sesión del 12 de agosto.</p>
-</section>
-<section id="explicación" class="level2">
-<h2 class="anchored" data-anchor-id="explicación">Explicación</h2>
-<section id="los-subconjuntos-de-los-números-reales" class="level3">
-<h3 class="anchored" data-anchor-id="los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</h3>
-<p>En este curso se adopta la convención</p>
+<li><p>Los <strong>números naturales</strong>:</p>
 <p><span class="math display">\[
 \mathbb N=\{0,1,2,3,\ldots\}.
-\]</span></p>
-<p>Los conjuntos numéricos que utilizaremos al comenzar el curso son:</p>
-<ul>
-<li><span class="math inline">\(\mathbb N\)</span>: números naturales;</li>
-<li><span class="math inline">\(\mathbb Z\)</span>: números enteros;</li>
-<li><span class="math inline">\(\mathbb Q\)</span>: números racionales; y</li>
-<li><span class="math inline">\(\mathbb R\)</span>: números reales.</li>
-</ul>
-<p>Un número racional es un cociente de enteros cuyo denominador no es cero:</p>
+\]</span></p></li>
+<li><p>Los <strong>números enteros</strong>:</p>
+<p><span class="math display">\[
+\mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
+\]</span></p></li>
+<li><p>Los <strong>números racionales</strong>, que pueden escribirse como el cociente de dos enteros con denominador distinto de cero:</p>
 <p><span class="math display">\[
 \mathbb Q=
 \left\{\frac{p}{q}:p,q\in\mathbb Z,\ q\ne0\right\}.
 \]</span></p>
-<p>Los conjuntos forman la cadena</p>
+<p>La condición <span class="math inline">\(q\ne0\)</span> es indispensable: <span class="math inline">\(\frac a0\)</span> no está definido para ningún número real <span class="math inline">\(a\)</span>. En cambio, <span class="math inline">\(\frac0q=0\)</span> cuando <span class="math inline">\(q\ne0\)</span>.</p></li>
+<li><p>Los <strong>números reales</strong>, representados por <span class="math inline">\(\mathbb R\)</span>, que incluyen tanto a los racionales como a los irracionales.</p></li>
+</ul>
+<p>Estos conjuntos satisfacen la cadena de inclusiones</p>
 <p><span class="math display">\[
 \mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R.
 \]</span></p>
-<p>Los <strong>irracionales</strong> no son un eslabón adicional de la cadena: son los números reales que no son racionales,</p>
+<p>Los <strong>números irracionales</strong> son los números reales que no son racionales. El conjunto de irracionales se escribe</p>
 <p><span class="math display">\[
 \mathbb R\setminus\mathbb Q.
 \]</span></p>
-<p>Así, todo número real es racional o irracional, pero no ambas cosas.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Pertenencia no es inclusión">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Pertenencia no es inclusión
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>El símbolo <span class="math inline">\(\in\)</span> relaciona un <strong>elemento</strong> con un conjunto; el símbolo <span class="math inline">\(\subseteq\)</span> relaciona <strong>dos conjuntos</strong>. Por ejemplo,</p>
+<p>Por ejemplo, <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(\pi\)</span> son irracionales.</p>
+<section id="pertenencia-e-inclusión" class="level3">
+<h3 class="anchored" data-anchor-id="pertenencia-e-inclusión">Pertenencia e inclusión</h3>
+<p>El símbolo <span class="math inline">\(\in\)</span> relaciona un elemento con un conjunto, mientras que <span class="math inline">\(\subseteq\)</span> relaciona dos conjuntos. Por ejemplo,</p>
 <p><span class="math display">\[
--3\in\mathbb Z,
-\qquad
+-3\in\mathbb Z
+\qquad\text{y}\qquad
 \mathbb Z\subseteq\mathbb Q.
 \]</span></p>
-<p>No se debe escribir <span class="math inline">\(-3\subseteq\mathbb Z\)</span> ni <span class="math inline">\(\mathbb Z\in\mathbb Q\)</span>.</p>
-</div>
-</div>
-<p>Cuando se pide el conjunto <strong>más específico</strong>, se elige el primero de la cadena al que pertenece el número. Por ejemplo, <span class="math inline">\(5\in\mathbb N\)</span>; también pertenece a <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\)</span>, pero <span class="math inline">\(\mathbb N\)</span> es la clasificación más específica.</p>
+<p>En cambio, las expresiones <span class="math inline">\(-3\subseteq\mathbb Z\)</span> y <span class="math inline">\(\mathbb Z\in\mathbb Q\)</span> son incorrectas.</p>
+<p>Como los conjuntos numéricos están anidados, un mismo número puede pertenecer a varios de ellos. El número <span class="math inline">\(5\)</span>, por ejemplo, pertenece a <span class="math inline">\(\mathbb N\)</span>, <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\)</span>. Cuando se solicita clasificar un número en el conjunto más específico, se elige el menor de estos conjuntos anidados que lo contiene; en este caso, <span class="math inline">\(5\)</span> se clasifica como natural.</p>
 </section>
-<section id="un-criterio-operativo-para-racionales-e-irracionales" class="level3">
-<h3 class="anchored" data-anchor-id="un-criterio-operativo-para-racionales-e-irracionales">Un criterio operativo para racionales e irracionales</h3>
-<p>La expansión decimal de un número racional es finita o <strong>eventualmente periódica</strong>: después de cierto punto, un bloque de cifras se repite indefinidamente. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.</p>
-<ul>
-<li><span class="math inline">\(0.125=\dfrac18\)</span> es racional porque su expansión es finita.</li>
-<li><span class="math inline">\(0.\overline{27}=0.272727\ldots\)</span> es racional porque es periódico.</li>
-<li><span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(\pi\)</span> son irracionales: sus expansiones decimales son infinitas y no son eventualmente periódicas.</li>
-</ul>
-<p>En esta sesión utilizaremos el criterio para <strong>clasificar</strong>; la conversión general de decimales periódicos a fracciones se reserva como práctica posterior.</p>
 </section>
-<section id="la-recta-real-y-el-orden" class="level3">
-<h3 class="anchored" data-anchor-id="la-recta-real-y-el-orden">La recta real y el orden</h3>
-<p>A cada número real le corresponde un punto de la recta real. Si <span class="math inline">\(a&lt;b\)</span>, entonces <span class="math inline">\(a\)</span> se encuentra a la izquierda de <span class="math inline">\(b\)</span>. Por ejemplo,</p>
+<section id="números-racionales-e-irracionales" class="level2">
+<h2 class="anchored" data-anchor-id="números-racionales-e-irracionales">Números racionales e irracionales</h2>
+<p>La expansión decimal en base diez de todo número racional es finita o eventualmente periódica. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.</p>
 <p><span class="math display">\[
--5&lt;-3&lt;0&lt;\frac23&lt;1.
+0.125=\frac18,
+\qquad
+0.\overline{27}=0.272727\ldots.
 \]</span></p>
-<p>Entre números negativos es mayor el que se encuentra más cerca de cero. Para comparar representaciones distintas conviene expresarlas de una misma forma; por ejemplo,</p>
+<p>La segunda igualdad puede comprobarse algebraicamente. Si <span class="math inline">\(x=0.\overline{27}\)</span>, entonces</p>
 <p><span class="math display">\[
-\frac23=0.666\ldots&gt;0.66.
+100x=27.\overline{27}=27+x;
+\]</span></p>
+<p>por tanto,</p>
+<p><span class="math display">\[
+99x=27
+\qquad\Longrightarrow\qquad
+x=\frac{27}{99}=\frac3{11}.
+\]</span></p>
+<p>Los números <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(\pi\)</span> son irracionales; en consecuencia, sus expansiones decimales son infinitas y no son eventualmente periódicas.</p>
+<p>Si <span class="math inline">\(n\)</span> es un entero no negativo, entonces <span class="math inline">\(\sqrt n\)</span> es racional si y solo si <span class="math inline">\(n\)</span> es un cuadrado perfecto. Por tanto,</p>
+<p><span class="math display">\[
+\sqrt{49}=7\in\mathbb N,
+\qquad
+\sqrt{10}\in\mathbb R\setminus\mathbb Q.
+\]</span></p>
+<p>El símbolo <span class="math inline">\(\sqrt n\)</span> representa la raíz cuadrada no negativa de <span class="math inline">\(n\)</span>. Así, <span class="math inline">\(\sqrt{49}=7\)</span>; en cambio, la ecuación <span class="math inline">\(x^2=49\)</span> tiene dos soluciones: <span class="math inline">\(x=7\)</span> y <span class="math inline">\(x=-7\)</span>.</p>
+<p>Antes de clasificar una expresión, es necesario simplificarla. Por ejemplo,</p>
+<p><span class="math display">\[
+\frac{18}{6}=3\in\mathbb N
+\qquad\text{y}\qquad
+-\sqrt{36}=-6\in\mathbb Z.
 \]</span></p>
 </section>
-<section id="intervalos" class="level3">
-<h3 class="anchored" data-anchor-id="intervalos">Intervalos</h3>
-<p>Sea <span class="math inline">\(a&lt;b\)</span>. Un intervalo describe un tramo de la recta real.</p>
+<section id="la-recta-real-y-el-orden" class="level2">
+<h2 class="anchored" data-anchor-id="la-recta-real-y-el-orden">La recta real y el orden</h2>
+<p>A cada número real le corresponde un punto de la recta real. Si <span class="math inline">\(a&lt;b\)</span>, entonces <span class="math inline">\(a\)</span> se encuentra a la izquierda de <span class="math inline">\(b\)</span>; si <span class="math inline">\(a&gt;b\)</span>, se encuentra a la derecha.</p>
+<p>Entre dos números negativos es mayor el que está más cerca de cero. Por ejemplo,</p>
+<p><span class="math display">\[
+-5&lt;-3&lt;0.
+\]</span></p>
+<p>Para comparar números escritos de manera distinta, puede ser útil expresarlos en una forma común. Por ejemplo,</p>
+<p><span class="math display">\[
+0.66=\frac{33}{50}
+\qquad\text{y}\qquad
+\frac23-\frac{33}{50}=\frac1{150}&gt;0.
+\]</span></p>
+<p>Por consiguiente,</p>
+<p><span class="math display">\[
+0.66&lt;\frac23.
+\]</span></p>
+</section>
+<section id="intervalos-de-números-reales" class="level2">
+<h2 class="anchored" data-anchor-id="intervalos-de-números-reales">Intervalos de números reales</h2>
+<p>Sean <span class="math inline">\(a,b\in\mathbb R\)</span> con <span class="math inline">\(a&lt;b\)</span>. Los intervalos permiten describir subconjuntos de la recta real.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -600,19 +486,19 @@ window.Quarto = {
 <tr class="header">
 <th>Intervalo</th>
 <th>Notación por comprensión</th>
-<th>Extremos</th>
+<th>Condición sobre los extremos</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><span class="math inline">\((a,b)\)</span></td>
 <td><span class="math inline">\(\{x\in\mathbb R:a&lt;x&lt;b\}\)</span></td>
-<td>Excluye <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span></td>
+<td>Excluye ambos extremos</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\([a,b]\)</span></td>
 <td><span class="math inline">\(\{x\in\mathbb R:a\le x\le b\}\)</span></td>
-<td>Incluye <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span></td>
+<td>Incluye ambos extremos</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\([a,b)\)</span></td>
@@ -620,38 +506,44 @@ window.Quarto = {
 <td>Incluye <span class="math inline">\(a\)</span> y excluye <span class="math inline">\(b\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\((-\infty,b]\)</span></td>
-<td><span class="math inline">\(\{x\in\mathbb R:x\le b\}\)</span></td>
-<td>Se extiende hacia la izquierda</td>
+<td><span class="math inline">\((a,b]\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:a&lt;x\le b\}\)</span></td>
+<td>Excluye <span class="math inline">\(a\)</span> e incluye <span class="math inline">\(b\)</span></td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\((-\infty,b)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x&lt;b\}\)</span></td>
+<td>Se extiende indefinidamente hacia la izquierda</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((-\infty,b]\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x\le b\}\)</span></td>
+<td>Se extiende indefinidamente hacia la izquierda</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((a,\infty)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x&gt;a\}\)</span></td>
+<td>Se extiende indefinidamente hacia la derecha</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\([a,\infty)\)</span></td>
 <td><span class="math inline">\(\{x\in\mathbb R:x\ge a\}\)</span></td>
-<td>Se extiende hacia la derecha</td>
+<td>Se extiende indefinidamente hacia la derecha</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((-\infty,\infty)\)</span></td>
+<td><span class="math inline">\(\mathbb R\)</span></td>
+<td>Comprende toda la recta real</td>
 </tr>
 </tbody>
 </table>
-<p>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> <strong>no son números reales</strong>. Por ello siempre se usa un paréntesis junto a ellos: nunca se escribe <span class="math inline">\([a,\infty]\)</span>.</p>
-</section>
-<section id="propiedades-en-uso" class="level3">
-<h3 class="anchored" data-anchor-id="propiedades-en-uso">Propiedades en uso</h3>
-<p>No se axiomatizará <span class="math inline">\(\mathbb R\)</span> en este curso. Las propiedades se emplearán para justificar cálculos concretos. Hoy aparecen tres ideas:</p>
-<ol type="1">
-<li>todo entero es racional porque <span class="math inline">\(n=\dfrac n1\)</span>;</li>
-<li>el cero no tiene inverso multiplicativo, por lo que <span class="math inline">\(\dfrac a0\)</span> no está definido para ningún número real <span class="math inline">\(a\)</span>; y</li>
-<li>se debe simplificar antes de clasificar: <span class="math inline">\(\sqrt{49}=7\)</span> y <span class="math inline">\(\dfrac82=4\)</span> son números naturales.</li>
-</ol>
-</section>
+<p>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números reales. Por esta razón, siempre se utiliza un paréntesis junto a ellos.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-clasificar-en-el-conjunto-más-específico" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-clasificar-en-el-conjunto-más-específico">Ejemplo 1. Clasificar en el conjunto más específico</h3>
-<p>Clasifiquemos</p>
-<p><span class="math display">\[
-\sqrt{49},\qquad -7,\qquad 0.125,\qquad
-0.\overline{27},\qquad \sqrt{10}.
-\]</span></p>
+<section id="ejemplo-1.-clasificación-de-números-reales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-clasificación-de-números-reales">Ejemplo 1. Clasificación de números reales</h3>
+<p>Clasifiquemos cada número en el conjunto más específico al que pertenece.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -661,47 +553,66 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th>Número</th>
-<th>Reescritura o criterio</th>
-<th>Clasificación más específica</th>
+<th>Simplificación o criterio</th>
+<th>Clasificación</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(\sqrt{49}\)</span></td>
-<td><span class="math inline">\(\sqrt{49}=7\)</span></td>
+<td><span class="math inline">\(\sqrt{64}\)</span></td>
+<td><span class="math inline">\(\sqrt{64}=8\)</span></td>
 <td><span class="math inline">\(\mathbb N\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(-7\)</span></td>
+<td><span class="math inline">\(-5\)</span></td>
 <td>Es un entero negativo</td>
 <td><span class="math inline">\(\mathbb Z\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(0.125\)</span></td>
-<td><span class="math inline">\(0.125=\dfrac18\)</span></td>
+<td><span class="math inline">\(\dfrac{11}{4}\)</span></td>
+<td>Es un cociente de enteros</td>
 <td><span class="math inline">\(\mathbb Q\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(0.\overline{27}\)</span></td>
-<td>Decimal periódico</td>
+<td><span class="math inline">\(0.\overline{18}\)</span></td>
+<td>Su expansión decimal es periódica</td>
 <td><span class="math inline">\(\mathbb Q\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\sqrt{10}\)</span></td>
-<td><span class="math inline">\(10\)</span> no es cuadrado perfecto</td>
+<td><span class="math inline">\(\sqrt{13}\)</span></td>
+<td><span class="math inline">\(13\)</span> no es un cuadrado perfecto</td>
+<td><span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\pi\)</span></td>
+<td>Es irracional</td>
 <td><span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>La tabla indica el conjunto más específico, sin negar las inclusiones posteriores. Por ejemplo, <span class="math inline">\(-7\in\mathbb Z\)</span> también implica <span class="math inline">\(-7\in\mathbb Q\)</span> y <span class="math inline">\(-7\in\mathbb R\)</span>.</p>
+<p>La clasificación más específica no elimina las inclusiones posteriores. Por ejemplo, <span class="math inline">\(-5\in\mathbb Z\)</span> también implica que <span class="math inline">\(-5\in\mathbb Q\)</span> y <span class="math inline">\(-5\in\mathbb R\)</span>.</p>
 </section>
-<section id="ejemplo-2.-traducir-entre-representaciones" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-traducir-entre-representaciones">Ejemplo 2. Traducir entre representaciones</h3>
+<section id="ejemplo-2.-pertenencia-e-inclusión" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-pertenencia-e-inclusión">Ejemplo 2. Pertenencia e inclusión</h3>
+<p>Consideremos las expresiones</p>
+<p><span class="math display">\[
+-2\in\mathbb Z,
+\qquad
+\mathbb Z\subseteq\mathbb Q,
+\qquad
+\pi\in\mathbb R,
+\qquad
+\mathbb Q\subseteq\mathbb Z.
+\]</span></p>
+<p>Las tres primeras son correctas. La última es falsa, porque existen números racionales que no son enteros; por ejemplo, <span class="math inline">\(\frac12\in\mathbb Q\)</span> pero <span class="math inline">\(\frac12\notin\mathbb Z\)</span>.</p>
+</section>
+<section id="ejemplo-3.-notación-de-intervalos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-notación-de-intervalos">Ejemplo 3. Notación de intervalos</h3>
 <p>Sea</p>
 <p><span class="math display">\[
 A=\{x\in\mathbb R:-2&lt;x\le3\}.
 \]</span></p>
-<p>El extremo <span class="math inline">\(-2\)</span> se excluye y el extremo <span class="math inline">\(3\)</span> se incluye; por tanto,</p>
+<p>El extremo <span class="math inline">\(-2\)</span> se excluye y el extremo <span class="math inline">\(3\)</span> se incluye. Por tanto,</p>
 <p><span class="math display">\[
 A=(-2,3].
 \]</span></p>
@@ -710,42 +621,42 @@ A=(-2,3].
 [1,\infty)=\{x\in\mathbb R:x\ge1\}.
 \]</span></p>
 </section>
-<section id="errores-frecuentes-y-contraejemplos" class="level3">
-<h3 class="anchored" data-anchor-id="errores-frecuentes-y-contraejemplos">Errores frecuentes y contraejemplos</h3>
+<section id="ejemplo-4.-orden-de-números-reales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-4.-orden-de-números-reales">Ejemplo 4. Orden de números reales</h3>
+<p>Para ordenar</p>
+<p><span class="math display">\[
+-\sqrt9,\qquad -\frac52,\qquad 0.6,
+\qquad \frac23,
+\]</span></p>
+<p>reescribimos <span class="math inline">\(-\sqrt9=-3\)</span> y <span class="math inline">\(0.6=\frac35\)</span>. Además,</p>
+<p><span class="math display">\[
+\frac23-\frac35=\frac1{15}&gt;0.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+-\sqrt9&lt;-\frac52&lt;0.6&lt;\frac23.
+\]</span></p>
+</section>
+<section id="errores-frecuentes" class="level3">
+<h3 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h3>
 <ul>
-<li><strong>“Todo decimal infinito es irracional”.</strong> Es falso: <span class="math inline">\(0.\overline3=\dfrac13\)</span>.</li>
-<li><strong>“Todo radical es irracional”.</strong> Es falso: <span class="math inline">\(\sqrt{16}=4\)</span>.</li>
-<li><strong>“La suma de dos irracionales siempre es irracional”.</strong> Es falso: <span class="math inline">\(\sqrt2+(-\sqrt2)=0\)</span>.</li>
-<li><strong>“<span class="math inline">\(\dfrac{22}{7}=\pi\)</span>”.</strong> Es falso: <span class="math inline">\(\dfrac{22}{7}\)</span> es racional y solamente aproxima a <span class="math inline">\(\pi\)</span>.</li>
+<li>No todo decimal infinito es irracional: <span class="math inline">\(0.\overline3=\frac13\)</span>.</li>
+<li>No todo número escrito con un radical es irracional: <span class="math inline">\(\sqrt{16}=4\)</span>.</li>
+<li>El número <span class="math inline">\(\frac{22}{7}\)</span> no es igual a <span class="math inline">\(\pi\)</span>; es un número racional que lo aproxima.</li>
+<li>La suma de dos irracionales no siempre es irracional: <span class="math inline">\(\sqrt2+(-\sqrt2)=0\)</span>.</li>
+<li>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> nunca se incluyen como extremos de un intervalo.</li>
 </ul>
 </section>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="Trabajo de la sesión · 10–11 minutos">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Trabajo de la sesión · 10–11 minutos
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Resuelva primero de manera individual y compare después sus respuestas con una pareja. El producto esperado es un desarrollo breve que utilice correctamente <span class="math inline">\(\in\)</span>, <span class="math inline">\(\notin\)</span>, <span class="math inline">\(\subseteq\)</span> y la notación de intervalos.</p>
-</div>
-</div>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
-<li><p>Clasifique en el conjunto más específico:</p>
+<li><p>Clasifique cada número en el conjunto más específico al que pertenece:</p>
 <p><span class="math display">\[
--\sqrt{16},\qquad 0.125,\qquad
-0.\overline{12},\qquad \sqrt7.
+0,\qquad -\sqrt{36},\qquad \frac{17}{5},
+\qquad 0.\overline{12},\qquad \sqrt7.
 \]</span></p></li>
-<li><p>Escriba como intervalo el conjunto</p>
-<p><span class="math display">\[
-A=\{x\in\mathbb R:-1&lt;x\le3\},
-\]</span></p>
-<p>y determine si <span class="math inline">\(-1\)</span> y <span class="math inline">\(3\)</span> pertenecen a <span class="math inline">\(A\)</span>.</p></li>
 <li><p>Determine cuáles expresiones son correctas y corrija las que no lo sean:</p>
 <p><span class="math display">\[
 3\in\mathbb N,
@@ -754,89 +665,116 @@ A=\{x\in\mathbb R:-1&lt;x\le3\},
 \qquad
 \mathbb N\subseteq\mathbb Z,
 \qquad
+\pi\in\mathbb Q,
+\qquad
 \infty\in\mathbb R.
 \]</span></p></li>
-<li><p>Escriba <span class="math inline">\([2,\infty)\)</span> mediante notación por comprensión.</p></li>
-<li><p><strong>Si concluye antes:</strong> encuentre un contraejemplo para la afirmación “la suma de dos números irracionales siempre es irracional”.</p></li>
+<li><p>Escriba como intervalo el conjunto</p>
+<p><span class="math display">\[
+A=\{x\in\mathbb R:-1&lt;x\le3\},
+\]</span></p>
+<p>y determine si <span class="math inline">\(-1\)</span> y <span class="math inline">\(3\)</span> pertenecen a <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Escriba el intervalo <span class="math inline">\([2,\infty)\)</span> mediante notación por comprensión. Determine si los números <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span> y <span class="math inline">\(5\)</span> pertenecen a este intervalo.</p></li>
+<li><p>Ordene de menor a mayor:</p>
+<p><span class="math display">\[
+-\sqrt4,\qquad -\frac32,\qquad 0.66,
+\qquad \frac23.
+\]</span></p></li>
+<li><p>Proporcione un contraejemplo para cada afirmación:</p>
+<ol type="a">
+<li>Todo número escrito con un radical es irracional.<br>
+</li>
+<li>La suma de dos números irracionales siempre es irracional.</li>
+</ol></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled" title="Comprobación de la actividad">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Comprobación de la actividad
+<span class="screen-reader-only">Nota</span>Soluciones
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><span class="math inline">\(-\sqrt{16}=-4\in\mathbb Z\)</span>; <span class="math inline">\(0.125=\dfrac18\in\mathbb Q\)</span>; <span class="math inline">\(0.\overline{12}\in\mathbb Q\)</span>; <span class="math inline">\(\sqrt7\in\mathbb R\setminus\mathbb Q\)</span>.</li>
-<li><span class="math inline">\(A=(-1,3]\)</span>; por tanto, <span class="math inline">\(-1\notin A\)</span> y <span class="math inline">\(3\in A\)</span>.</li>
-<li>Son correctas <span class="math inline">\(3\in\mathbb N\)</span> y <span class="math inline">\(\mathbb N\subseteq\mathbb Z\)</span>. Debe escribirse <span class="math inline">\(\mathbb N\subseteq\mathbb Z\)</span>, no <span class="math inline">\(\mathbb N\in\mathbb Z\)</span>; además, <span class="math inline">\(\infty\notin\mathbb R\)</span>.</li>
-<li><span class="math inline">\([2,\infty)=\{x\in\mathbb R:x\ge2\}\)</span>.</li>
-<li>Por ejemplo, <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(-\sqrt2\)</span> son irracionales, pero su suma es <span class="math inline">\(0\)</span>, que es racional.</li>
+<li><p>Se tiene</p>
+<p><span class="math display">\[
+0\in\mathbb N,
+\qquad
+-\sqrt{36}=-6\in\mathbb Z,
+\qquad
+\frac{17}{5}\in\mathbb Q,
+\]</span></p>
+<p><span class="math display">\[
+0.\overline{12}=\frac4{33}\in\mathbb Q,
+\qquad
+\sqrt7\in\mathbb R\setminus\mathbb Q.
+\]</span></p></li>
+<li><p>Las expresiones <span class="math inline">\(3\in\mathbb N\)</span> y <span class="math inline">\(\mathbb N\subseteq\mathbb Z\)</span> son correctas. La expresión <span class="math inline">\(\mathbb N\in\mathbb Z\)</span> es incorrecta y debe sustituirse por <span class="math inline">\(\mathbb N\subseteq\mathbb Z\)</span>. Asimismo,</p>
+<p><span class="math display">\[
+\pi\in\mathbb R\setminus\mathbb Q
+\qquad\text{y}\qquad
+\infty\notin\mathbb R.
+\]</span></p></li>
+<li><p><span class="math inline">\(A=(-1,3]\)</span>; por tanto, <span class="math inline">\(-1\notin A\)</span> y <span class="math inline">\(3\in A\)</span>.</p></li>
+<li><p><span class="math display">\[
+[2,\infty)=\{x\in\mathbb R:x\ge2\}.
+\]</span></p>
+<p>Los números <span class="math inline">\(2\)</span> y <span class="math inline">\(5\)</span> pertenecen al intervalo; <span class="math inline">\(-1\)</span> no pertenece.</p></li>
+<li><p>Como <span class="math inline">\(-\sqrt4=-2\)</span>, <span class="math inline">\(-\frac32=-1.5\)</span> y <span class="math inline">\(\frac23&gt;0.66\)</span>,</p>
+<p><span class="math display">\[
+-\sqrt4&lt;-\frac32&lt;0.66&lt;\frac23.
+\]</span></p></li>
+<li><p>Se pueden utilizar <span class="math inline">\(\sqrt{16}=4\)</span> para la primera afirmación y</p>
+<p><span class="math display">\[
+\sqrt2+(-\sqrt2)=0
+\]</span></p>
+<p>para la segunda.</p></li>
 </ol>
 </div>
 </div>
 </div>
 </section>
-<section id="evidencia-de-salida" class="level2">
-<h2 class="anchored" data-anchor-id="evidencia-de-salida">Evidencia de salida</h2>
-<p>En los últimos cinco minutos, resuelva individualmente y entregue una respuesta breve.</p>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Clasifique en el conjunto más específico:</p>
-<p><span class="math display">\[
-\frac{12}{3},\qquad -\frac92,\qquad \sqrt5.
-\]</span></p></li>
-<li><p>Escriba como intervalo</p>
-<p><span class="math display">\[
-\{x\in\mathbb R:-1&lt;x\le2\}.
-\]</span></p></li>
-<li><p>Justifique en una línea por qué</p>
-<p><span class="math display">\[
--\frac92\in\mathbb Q
-\qquad\text{pero}\qquad
--\frac92\notin\mathbb Z.
-\]</span></p></li>
-</ol>
-<p><strong>Criterio de logro:</strong> cuatro de los cinco elementos esperados —tres clasificaciones, un intervalo y una justificación— deben ser correctos. La solución no se publica antes de trabajar la evidencia en ambos grupos.</p>
-</section>
-<section id="cierre" class="level2">
-<h2 class="anchored" data-anchor-id="cierre">Cierre</h2>
-<ul>
-<li>La cadena <span class="math inline">\(\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\)</span> organiza los conjuntos numéricos, mientras que los irracionales forman <span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span>.</li>
-<li>Un elemento <strong>pertenece</strong> a un conjunto; un conjunto está <strong>incluido</strong> en otro.</li>
-<li>La desigualdad, la notación por comprensión, el intervalo y la recta real son representaciones distintas de una misma condición de orden.</li>
-<li>Un decimal finito o eventualmente periódico es racional; no todo decimal infinito es irracional.</li>
-</ul>
-</section>
-<section id="para-practicar-después-de-clase" class="level2">
-<h2 class="anchored" data-anchor-id="para-practicar-después-de-clase">Para practicar después de clase</h2>
-<ol type="1">
-<li><p>Clasifique en el conjunto más específico e indique cuáles son irracionales:</p>
+<li><p>Clasifique cada número en el conjunto más específico e indique cuáles son irracionales:</p>
 <p><span class="math display">\[
 -11,\qquad \frac{45}{9},\qquad
-2.\overline{04},\qquad -\sqrt{36},\qquad \sqrt{10}.
+2.\overline{04},\qquad -\sqrt{25},
+\qquad \sqrt{10},\qquad \pi.
 \]</span></p></li>
 <li><p>Escriba cada conjunto como intervalo:</p>
 <p><span class="math display">\[
 \{x\in\mathbb R:x&lt;4\},
 \qquad
-\{x\in\mathbb R:-3\le x&lt;1\}.
+\{x\in\mathbb R:-3\le x&lt;1\},
+\qquad
+\{x\in\mathbb R:x&gt;2\}.
 \]</span></p></li>
-<li><p>Una lectura digital muestra un número con cuatro cifras decimales, mientras que un modelo idealizado contiene <span class="math inline">\(\pi\)</span>:</p>
-<ul>
-<li>para IMA, compare una lectura de masa como <span class="math inline">\(2.7050\)</span> g con el volumen <span class="math inline">\(\dfrac{4\pi}{3}\)</span> cm<span class="math inline">\(^3\)</span> de una esfera de radio <span class="math inline">\(1\)</span> cm;</li>
-<li>para LTE, compare una lectura de voltaje como <span class="math inline">\(3.1416\)</span> V con la frecuencia angular <span class="math inline">\(120\pi\)</span> rad/s.</li>
-</ul>
-<p>Clasifique los números mostrados y explique por qué una lectura decimal finita puede aproximar un valor irracional sin ser igual a él.</p></li>
+<li><p>Escriba cada intervalo mediante notación por comprensión:</p>
+<p><span class="math display">\[
+(-5,2],
+\qquad
+[0,\infty),
+\qquad
+(-\infty,7).
+\]</span></p></li>
+<li><p>Determine si cada afirmación es verdadera o falsa. Justifique su respuesta.</p>
+<ol type="a">
+<li>Todo número entero es racional.<br>
+</li>
+<li>Todo número racional es entero.<br>
+</li>
+<li>Todo decimal infinito es irracional.<br>
+</li>
+<li>Si <span class="math inline">\(x\in\mathbb Z\)</span>, entonces <span class="math inline">\(x\in\mathbb R\)</span>.</li>
+</ol></li>
+<li><p>Una pantalla muestra el valor decimal <span class="math inline">\(3.1416\)</span>, mientras que una fórmula utiliza el valor exacto <span class="math inline">\(\pi\)</span>. Clasifique ambos números y explique por qué <span class="math inline">\(3.1416\)</span> puede aproximar a <span class="math inline">\(\pi\)</span> sin ser igual a él.</p></li>
 </ol>
-</section>
-<section id="próxima-sesión" class="level2">
-<h2 class="anchored" data-anchor-id="próxima-sesión">Próxima sesión</h2>
-<p><strong>Miércoles 12 de agosto:</strong> leyes de los exponentes y radicales, jerarquía de operaciones, equivalencia de expresiones y errores frecuentes de simplificación. Los reactivos 5 y 6 del diagnóstico son el antecedente directo.</p>
 
 
 </section>
