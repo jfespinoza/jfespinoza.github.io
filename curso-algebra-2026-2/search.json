@@ -512,6 +512,138 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-11-sesion-02.html",
+    "href": "sesiones/2026-08-11-sesion-02.html",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "",
+    "text": "Registro de la sesión",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#registro-de-la-sesión",
+    "href": "sesiones/2026-08-11-sesion-02.html#registro-de-la-sesión",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "",
+    "text": "Fecha\nPrograma\nGrupo\nHorario\nAula\n\n\n\n\nMartes 11 de agosto de 2026\nIngeniería en Materiales (IMA)\n21\n08:00-09:00\n5I-A302\n\n\nMartes 11 de agosto de 2026\nIngeniería en Tecnología Electrónica (LTE)\n29\n14:00-15:00\n8B-A201\n\n\n\n\n\n\n\n\n\nNotaPrimera sesión de desarrollo temático\n\n\n\nEsta es la Sesión 02 del libro, porque el encuadre del 10 de agosto quedó registrado como Sesión 01, y la primera de las 61 sesiones presenciales destinadas al desarrollo de contenidos. El núcleo matemático es común a IMA y LTE; algunos contextos de práctica se adaptan al programa.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#resultado-de-aprendizaje",
+    "href": "sesiones/2026-08-11-sesion-02.html#resultado-de-aprendizaje",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Resultado de aprendizaje",
+    "text": "Resultado de aprendizaje\nAl finalizar la sesión, el estudiante podrá:\n\nclasificar números reales en el conjunto más específico pertinente;\ndistinguir la pertenencia de un elemento de la inclusión entre conjuntos;\nrelacionar orden, desigualdades, intervalos y representación en la recta real; y\nreconocer, mediante un diagnóstico breve, qué destrezas operativas necesita reforzar.\n\nLa evidencia de salida consistirá en clasificar números y justificar una inclusión o una exclusión.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#ruta-de-trabajo",
+    "href": "sesiones/2026-08-11-sesion-02.html#ruta-de-trabajo",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Ruta de trabajo",
+    "text": "Ruta de trabajo\nLa sesión está diseñada para 50–55 minutos efectivos.\n\n\n\n\n\n\n\n\nMomento\nMinutos\nProducto\n\n\n\n\nDiagnóstico individual\n0–8\nRespuestas sin calculadora\n\n\nAutorrevisión\n8–11\nRegistro personal de dificultades\n\n\nExplicación: conjuntos numéricos\n11–22\nNotación y relaciones correctas\n\n\nExplicación: orden e intervalos\n22–31\nTraducción entre representaciones\n\n\nEjemplos guiados\n31–39\nClasificación y justificación\n\n\nActividad individual y en parejas\n39–50\nDesarrollo escrito\n\n\nEvidencia de salida\n50–55\nRespuesta individual breve",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#diagnóstico-inicial",
+    "href": "sesiones/2026-08-11-sesion-02.html#diagnóstico-inicial",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Diagnóstico inicial",
+    "text": "Diagnóstico inicial\nResuelva individualmente, sin calculadora y sin consultar apuntes. Este diagnóstico no tiene valor en la calificación; su función es orientar el repaso de las primeras sesiones.\n\nCalcule \\(\\dfrac{1}{2}+\\dfrac{1}{3}\\).\n¿Cuál es mayor: \\(-3\\) o \\(-5\\)?\nEscriba \\(0.4\\) como fracción.\nDetermine \\(\\dfrac{0}{8}\\) y explique qué ocurre con \\(\\dfrac{8}{0}\\).\nCalcule \\(2\\cdot 3^2\\) y \\((2\\cdot 3)^2\\).\nCompare \\(\\sqrt{9+16}\\) con \\(\\sqrt 9+\\sqrt{16}\\).\n\nLa revisión se realizará en clase. Después, marque cada respuesta con un semáforo personal: verde si está seguro del procedimiento, amarillo si tuvo dudas y rojo si no pudo resolverla. Los reactivos 1–4 se relacionan con el trabajo de hoy; los reactivos 5 y 6 anticipan la sesión del 12 de agosto.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#explicación",
+    "href": "sesiones/2026-08-11-sesion-02.html#explicación",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Explicación",
+    "text": "Explicación\n\nLos subconjuntos de los números reales\nEn este curso se adopta la convención\n\\[\n\\mathbb N=\\{0,1,2,3,\\ldots\\}.\n\\]\nLos conjuntos numéricos que utilizaremos al comenzar el curso son:\n\n\\(\\mathbb N\\): números naturales;\n\\(\\mathbb Z\\): números enteros;\n\\(\\mathbb Q\\): números racionales; y\n\\(\\mathbb R\\): números reales.\n\nUn número racional es un cociente de enteros cuyo denominador no es cero:\n\\[\n\\mathbb Q=\n\\left\\{\\frac{p}{q}:p,q\\in\\mathbb Z,\\ q\\ne0\\right\\}.\n\\]\nLos conjuntos forman la cadena\n\\[\n\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R.\n\\]\nLos irracionales no son un eslabón adicional de la cadena: son los números reales que no son racionales,\n\\[\n\\mathbb R\\setminus\\mathbb Q.\n\\]\nAsí, todo número real es racional o irracional, pero no ambas cosas.\n\n\n\n\n\n\nImportantePertenencia no es inclusión\n\n\n\nEl símbolo \\(\\in\\) relaciona un elemento con un conjunto; el símbolo \\(\\subseteq\\) relaciona dos conjuntos. Por ejemplo,\n\\[\n-3\\in\\mathbb Z,\n\\qquad\n\\mathbb Z\\subseteq\\mathbb Q.\n\\]\nNo se debe escribir \\(-3\\subseteq\\mathbb Z\\) ni \\(\\mathbb Z\\in\\mathbb Q\\).\n\n\nCuando se pide el conjunto más específico, se elige el primero de la cadena al que pertenece el número. Por ejemplo, \\(5\\in\\mathbb N\\); también pertenece a \\(\\mathbb Z\\), \\(\\mathbb Q\\) y \\(\\mathbb R\\), pero \\(\\mathbb N\\) es la clasificación más específica.\n\n\nUn criterio operativo para racionales e irracionales\nLa expansión decimal de un número racional es finita o eventualmente periódica: después de cierto punto, un bloque de cifras se repite indefinidamente. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.\n\n\\(0.125=\\dfrac18\\) es racional porque su expansión es finita.\n\\(0.\\overline{27}=0.272727\\ldots\\) es racional porque es periódico.\n\\(\\sqrt2\\) y \\(\\pi\\) son irracionales: sus expansiones decimales son infinitas y no son eventualmente periódicas.\n\nEn esta sesión utilizaremos el criterio para clasificar; la conversión general de decimales periódicos a fracciones se reserva como práctica posterior.\n\n\nLa recta real y el orden\nA cada número real le corresponde un punto de la recta real. Si \\(a&lt;b\\), entonces \\(a\\) se encuentra a la izquierda de \\(b\\). Por ejemplo,\n\\[\n-5&lt;-3&lt;0&lt;\\frac23&lt;1.\n\\]\nEntre números negativos es mayor el que se encuentra más cerca de cero. Para comparar representaciones distintas conviene expresarlas de una misma forma; por ejemplo,\n\\[\n\\frac23=0.666\\ldots&gt;0.66.\n\\]\n\n\nIntervalos\nSea \\(a&lt;b\\). Un intervalo describe un tramo de la recta real.\n\n\n\n\n\n\n\n\nIntervalo\nNotación por comprensión\nExtremos\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\nExcluye \\(a\\) y \\(b\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\nIncluye \\(a\\) y \\(b\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\nIncluye \\(a\\) y excluye \\(b\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\nSe extiende hacia la izquierda\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\nSe extiende hacia la derecha\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no son números reales. Por ello siempre se usa un paréntesis junto a ellos: nunca se escribe \\([a,\\infty]\\).\n\n\nPropiedades en uso\nNo se axiomatizará \\(\\mathbb R\\) en este curso. Las propiedades se emplearán para justificar cálculos concretos. Hoy aparecen tres ideas:\n\ntodo entero es racional porque \\(n=\\dfrac n1\\);\nel cero no tiene inverso multiplicativo, por lo que \\(\\dfrac a0\\) no está definido para ningún número real \\(a\\); y\nse debe simplificar antes de clasificar: \\(\\sqrt{49}=7\\) y \\(\\dfrac82=4\\) son números naturales.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#ejemplos",
+    "href": "sesiones/2026-08-11-sesion-02.html#ejemplos",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Clasificar en el conjunto más específico\nClasifiquemos\n\\[\n\\sqrt{49},\\qquad -7,\\qquad 0.125,\\qquad\n0.\\overline{27},\\qquad \\sqrt{10}.\n\\]\n\n\n\n\n\n\n\n\nNúmero\nReescritura o criterio\nClasificación más específica\n\n\n\n\n\\(\\sqrt{49}\\)\n\\(\\sqrt{49}=7\\)\n\\(\\mathbb N\\)\n\n\n\\(-7\\)\nEs un entero negativo\n\\(\\mathbb Z\\)\n\n\n\\(0.125\\)\n\\(0.125=\\dfrac18\\)\n\\(\\mathbb Q\\)\n\n\n\\(0.\\overline{27}\\)\nDecimal periódico\n\\(\\mathbb Q\\)\n\n\n\\(\\sqrt{10}\\)\n\\(10\\) no es cuadrado perfecto\n\\(\\mathbb R\\setminus\\mathbb Q\\)\n\n\n\nLa tabla indica el conjunto más específico, sin negar las inclusiones posteriores. Por ejemplo, \\(-7\\in\\mathbb Z\\) también implica \\(-7\\in\\mathbb Q\\) y \\(-7\\in\\mathbb R\\).\n\n\nEjemplo 2. Traducir entre representaciones\nSea\n\\[\nA=\\{x\\in\\mathbb R:-2&lt;x\\le3\\}.\n\\]\nEl extremo \\(-2\\) se excluye y el extremo \\(3\\) se incluye; por tanto,\n\\[\nA=(-2,3].\n\\]\nEn particular, \\(-2\\notin A\\) y \\(3\\in A\\). En sentido inverso,\n\\[\n[1,\\infty)=\\{x\\in\\mathbb R:x\\ge1\\}.\n\\]\n\n\nErrores frecuentes y contraejemplos\n\n“Todo decimal infinito es irracional”. Es falso: \\(0.\\overline3=\\dfrac13\\).\n“Todo radical es irracional”. Es falso: \\(\\sqrt{16}=4\\).\n“La suma de dos irracionales siempre es irracional”. Es falso: \\(\\sqrt2+(-\\sqrt2)=0\\).\n“\\(\\dfrac{22}{7}=\\pi\\)”. Es falso: \\(\\dfrac{22}{7}\\) es racional y solamente aproxima a \\(\\pi\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#actividad",
+    "href": "sesiones/2026-08-11-sesion-02.html#actividad",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Actividad",
+    "text": "Actividad\n\n\n\n\n\n\nImportanteTrabajo de la sesión · 10–11 minutos\n\n\n\nResuelva primero de manera individual y compare después sus respuestas con una pareja. El producto esperado es un desarrollo breve que utilice correctamente \\(\\in\\), \\(\\notin\\), \\(\\subseteq\\) y la notación de intervalos.\n\n\n\nClasifique en el conjunto más específico:\n\\[\n-\\sqrt{16},\\qquad 0.125,\\qquad\n0.\\overline{12},\\qquad \\sqrt7.\n\\]\nEscriba como intervalo el conjunto\n\\[\nA=\\{x\\in\\mathbb R:-1&lt;x\\le3\\},\n\\]\ny determine si \\(-1\\) y \\(3\\) pertenecen a \\(A\\).\nDetermine cuáles expresiones son correctas y corrija las que no lo sean:\n\\[\n3\\in\\mathbb N,\n\\qquad\n\\mathbb N\\in\\mathbb Z,\n\\qquad\n\\mathbb N\\subseteq\\mathbb Z,\n\\qquad\n\\infty\\in\\mathbb R.\n\\]\nEscriba \\([2,\\infty)\\) mediante notación por comprensión.\nSi concluye antes: encuentre un contraejemplo para la afirmación “la suma de dos números irracionales siempre es irracional”.\n\n\n\n\n\n\n\nNotaComprobación de la actividad\n\n\n\n\n\n\n\\(-\\sqrt{16}=-4\\in\\mathbb Z\\); \\(0.125=\\dfrac18\\in\\mathbb Q\\); \\(0.\\overline{12}\\in\\mathbb Q\\); \\(\\sqrt7\\in\\mathbb R\\setminus\\mathbb Q\\).\n\\(A=(-1,3]\\); por tanto, \\(-1\\notin A\\) y \\(3\\in A\\).\nSon correctas \\(3\\in\\mathbb N\\) y \\(\\mathbb N\\subseteq\\mathbb Z\\). Debe escribirse \\(\\mathbb N\\subseteq\\mathbb Z\\), no \\(\\mathbb N\\in\\mathbb Z\\); además, \\(\\infty\\notin\\mathbb R\\).\n\\([2,\\infty)=\\{x\\in\\mathbb R:x\\ge2\\}\\).\nPor ejemplo, \\(\\sqrt2\\) y \\(-\\sqrt2\\) son irracionales, pero su suma es \\(0\\), que es racional.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#evidencia-de-salida",
+    "href": "sesiones/2026-08-11-sesion-02.html#evidencia-de-salida",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Evidencia de salida",
+    "text": "Evidencia de salida\nEn los últimos cinco minutos, resuelva individualmente y entregue una respuesta breve.\n\nClasifique en el conjunto más específico:\n\\[\n\\frac{12}{3},\\qquad -\\frac92,\\qquad \\sqrt5.\n\\]\nEscriba como intervalo\n\\[\n\\{x\\in\\mathbb R:-1&lt;x\\le2\\}.\n\\]\nJustifique en una línea por qué\n\\[\n-\\frac92\\in\\mathbb Q\n\\qquad\\text{pero}\\qquad\n-\\frac92\\notin\\mathbb Z.\n\\]\n\nCriterio de logro: cuatro de los cinco elementos esperados —tres clasificaciones, un intervalo y una justificación— deben ser correctos. La solución no se publica antes de trabajar la evidencia en ambos grupos.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#cierre",
+    "href": "sesiones/2026-08-11-sesion-02.html#cierre",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Cierre",
+    "text": "Cierre\n\nLa cadena \\(\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R\\) organiza los conjuntos numéricos, mientras que los irracionales forman \\(\\mathbb R\\setminus\\mathbb Q\\).\nUn elemento pertenece a un conjunto; un conjunto está incluido en otro.\nLa desigualdad, la notación por comprensión, el intervalo y la recta real son representaciones distintas de una misma condición de orden.\nUn decimal finito o eventualmente periódico es racional; no todo decimal infinito es irracional.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#para-practicar-después-de-clase",
+    "href": "sesiones/2026-08-11-sesion-02.html#para-practicar-después-de-clase",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Para practicar después de clase",
+    "text": "Para practicar después de clase\n\nClasifique en el conjunto más específico e indique cuáles son irracionales:\n\\[\n-11,\\qquad \\frac{45}{9},\\qquad\n2.\\overline{04},\\qquad -\\sqrt{36},\\qquad \\sqrt{10}.\n\\]\nEscriba cada conjunto como intervalo:\n\\[\n\\{x\\in\\mathbb R:x&lt;4\\},\n\\qquad\n\\{x\\in\\mathbb R:-3\\le x&lt;1\\}.\n\\]\nUna lectura digital muestra un número con cuatro cifras decimales, mientras que un modelo idealizado contiene \\(\\pi\\):\n\npara IMA, compare una lectura de masa como \\(2.7050\\) g con el volumen \\(\\dfrac{4\\pi}{3}\\) cm\\(^3\\) de una esfera de radio \\(1\\) cm;\npara LTE, compare una lectura de voltaje como \\(3.1416\\) V con la frecuencia angular \\(120\\pi\\) rad/s.\n\nClasifique los números mostrados y explique por qué una lectura decimal finita puede aproximar un valor irracional sin ser igual a él.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-11-sesion-02.html#próxima-sesión",
+    "href": "sesiones/2026-08-11-sesion-02.html#próxima-sesión",
+    "title": "Sesión 02. Números reales: clasificación, orden e intervalos",
+    "section": "Próxima sesión",
+    "text": "Próxima sesión\nMiércoles 12 de agosto: leyes de los exponentes y radicales, jerarquía de operaciones, equivalencia de expresiones y errores frecuentes de simplificación. Los reactivos 5 y 6 del diagnóstico son el antecedente directo.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sesión 02. Números reales: clasificación, orden e intervalos</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -519,7 +651,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -530,7 +662,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -541,7 +673,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -552,7 +684,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -563,7 +695,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -574,7 +706,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -585,7 +717,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -596,7 +728,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -607,7 +739,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -618,7 +750,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -629,7 +761,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -640,7 +772,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -651,7 +783,7 @@
     "text": "Símbolos frecuentes\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -662,7 +794,7 @@
     "text": "Criterio editorial\nTodo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -673,7 +805,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -684,7 +816,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -695,7 +827,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
