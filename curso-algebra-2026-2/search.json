@@ -360,78 +360,155 @@
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html",
     "href": "sesiones/2026-08-10-sesion-01.html",
-    "title": "Sesión 01. Estructura de los números reales",
+    "title": "Sesión 01. Presentación y encuadre del curso",
     "section": "",
-    "text": "Propósito de la sesión\nAl finalizar la sesión, el estudiante podrá:",
+    "text": "Registro de la sesión\nLa sesión tuvo carácter de presentación y encuadre. El desarrollo formal de la Unidad 1 comienza el martes 11 de agosto.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {
-    "objectID": "sesiones/2026-08-10-sesion-01.html#propósito-de-la-sesión",
-    "href": "sesiones/2026-08-10-sesion-01.html#propósito-de-la-sesión",
-    "title": "Sesión 01. Estructura de los números reales",
+    "objectID": "sesiones/2026-08-10-sesion-01.html#registro-de-la-sesión",
+    "href": "sesiones/2026-08-10-sesion-01.html#registro-de-la-sesión",
+    "title": "Sesión 01. Presentación y encuadre del curso",
     "section": "",
-    "text": "reconocer los principales conjuntos numéricos y sus relaciones de inclusión;\nidentificar la propiedad de los números reales utilizada en una transformación algebraica; y\nsimplificar expresiones y resolver ecuaciones lineales sin perder equivalencia.",
+    "text": "Fecha\nPrograma\nGrupo\nHorario\nAula\n\n\n\n\nLunes 10 de agosto de 2026\nIngeniería en Materiales (IMA)\n21\n08:00-09:00\n5I-A302\n\n\nLunes 10 de agosto de 2026\nIngeniería en Tecnología Electrónica (LTE)\n29\n14:00-15:00\n8B-A201\n\n\n\n\n\n\n\n\n\nNotaUna sola entrada para ambos grupos\n\n\n\nEsta página consolida lo presentado en las dos clases. La organización, los contenidos, las fechas de evaluación y los criterios generales son comunes a IMA y LTE; únicamente cambian el horario, el aula y algunos contextos de aplicación.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {
-    "objectID": "sesiones/2026-08-10-sesion-01.html#explicación",
-    "href": "sesiones/2026-08-10-sesion-01.html#explicación",
-    "title": "Sesión 01. Estructura de los números reales",
-    "section": "Explicación",
-    "text": "Explicación\n\nConjuntos numéricos\nEn este curso utilizaremos la convención\n\\[\n\\mathbb{N}=\\{0,1,2,3,\\ldots\\}.\n\\]\nAlgunos textos reservan \\(\\mathbb{N}\\) para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.\n\nLos números naturales forman el conjunto \\(\\mathbb{N}\\).\nLos números enteros forman \\[\n\\mathbb{Z}=\\{\\ldots,-2,-1,0,1,2,\\ldots\\}.\n\\]\nLos números racionales son los que pueden escribirse como cociente de enteros: \\[\n\\mathbb{Q}=\\left\\{\\frac{p}{q}:p,q\\in\\mathbb{Z},\\ q\\neq 0\\right\\}.\n\\]\nLos números irracionales son reales que no pertenecen a \\(\\mathbb{Q}\\); por ejemplo, \\(\\sqrt{2}\\) y \\(\\pi\\).\nLos números reales reúnen a racionales e irracionales.\n\nLas inclusiones fundamentales son\n\\[\n\\mathbb{N}\\subseteq\\mathbb{Z}\\subseteq\\mathbb{Q}\\subseteq\\mathbb{R}.\n\\]\nCuando se pida clasificar un número, conviene indicar el conjunto numérico más específico de los estudiados. En particular, si es irracional, se indicará que pertenece a \\(\\mathbb{R}\\setminus\\mathbb{Q}\\).\n\n\nPropiedades de las operaciones\nPara \\(a,b,c\\in\\mathbb{R}\\) se cumplen, entre otras, las siguientes propiedades.\n\n\n\nPropiedad\nSuma\nMultiplicación\n\n\n\n\nCerradura\n\\(a+b\\in\\mathbb{R}\\)\n\\(ab\\in\\mathbb{R}\\)\n\n\nConmutatividad\n\\(a+b=b+a\\)\n\\(ab=ba\\)\n\n\nAsociatividad\n\\((a+b)+c=a+(b+c)\\)\n\\((ab)c=a(bc)\\)\n\n\nIdentidad\n\\(a+0=a\\)\n\\(a\\cdot 1=a\\)\n\n\nInverso\n\\(a+(-a)=0\\)\n\\(a\\cdot a^{-1}=1\\), si \\(a\\neq0\\)\n\n\n\nLa propiedad distributiva conecta ambas operaciones:\n\\[\na(b+c)=ab+ac.\n\\]\n\n\n\n\n\n\nPrecauciónUna condición que no debe omitirse\n\n\n\nEl inverso multiplicativo \\(a^{-1}=1/a\\) existe en \\(\\mathbb{R}\\) únicamente cuando \\(a\\neq0\\). La división entre cero no está definida.\n\n\n\n\nIgualdad y transformaciones equivalentes\nResolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:\n\nsumar o restar la misma cantidad en ambos miembros;\nmultiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y\nsustituir una expresión por otra algebraicamente equivalente.\n\nEstas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.",
+    "objectID": "sesiones/2026-08-10-sesion-01.html#propósitos-de-la-sesión",
+    "href": "sesiones/2026-08-10-sesion-01.html#propósitos-de-la-sesión",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Propósitos de la sesión",
+    "text": "Propósitos de la sesión\nAl concluir este encuadre, el estudiante deberá poder:\n\nidentificar los datos de su grupo y los medios institucionales de comunicación;\nexplicar cómo se integra la calificación y qué requisito de asistencia debe cumplir;\nreconocer la secuencia de contenidos y la forma habitual de trabajo; y\ndescribir por qué los números complejos serán necesarios en el curso.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {
-    "objectID": "sesiones/2026-08-10-sesion-01.html#ejemplos",
-    "href": "sesiones/2026-08-10-sesion-01.html#ejemplos",
-    "title": "Sesión 01. Estructura de los números reales",
-    "section": "Ejemplos",
-    "text": "Ejemplos\n\nEjemplo 1. Clasificación\nClasifiquemos cada número en el conjunto numérico más específico posible:\n\n\n\n\n\n\n\n\nNúmero\nClasificación\nRazón\n\n\n\n\n\\(0\\)\n\\(\\mathbb{N}\\)\nPertenece a los naturales bajo la convención del curso.\n\n\n\\(-7\\)\n\\(\\mathbb{Z}\\)\nEs entero, pero no natural.\n\n\n\\(\\frac34\\)\n\\(\\mathbb{Q}\\)\nEs cociente de enteros.\n\n\n\\(\\sqrt9=3\\)\n\\(\\mathbb{N}\\)\nConviene simplificar antes de clasificar.\n\n\n\\(\\sqrt2\\)\n\\(\\mathbb{R}\\setminus\\mathbb{Q}\\)\nEs irracional.\n\n\n\n\n\nEjemplo 2. Uso de la distributividad\nSimplifiquemos\n\\[\n4(2x-3)-2(x+5).\n\\]\nAplicando la propiedad distributiva:\n\\[\n4(2x-3)-2(x+5)=8x-12-2x-10.\n\\]\nDespués se agrupan términos semejantes:\n\\[\n8x-2x-12-10=6x-22.\n\\]\n\n\nEjemplo 3. Resolución y verificación\nResolvamos\n\\[\n3(2x-1)-4(x+2)=7.\n\\]\nPrimero distribuimos y reducimos términos semejantes:\n\\[\n6x-3-4x-8=7,\n\\]\n\\[\n2x-11=7.\n\\]\nSumamos \\(11\\) en ambos miembros:\n\\[\n2x=18.\n\\]\nComo \\(2\\neq0\\), dividimos ambos miembros entre \\(2\\) y obtenemos \\(x=9\\).\nPara verificar, sustituimos en la ecuación original:\n\\[\n3(2\\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.\n\\]\nLa igualdad se cumple, por lo que la solución es correcta.\n\n\nUn error frecuente\nEn general,\n\\[\n\\sqrt{a+b}\\neq\\sqrt a+\\sqrt b.\n\\]\nBasta un contraejemplo: si \\(a=b=1\\), entonces \\(\\sqrt{1+1}=\\sqrt2\\), mientras que \\(\\sqrt1+\\sqrt1=2\\). Como \\(\\sqrt2\\neq2\\), la supuesta regla es falsa.",
+    "objectID": "sesiones/2026-08-10-sesion-01.html#datos-y-medios-del-curso",
+    "href": "sesiones/2026-08-10-sesion-01.html#datos-y-medios-del-curso",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Datos y medios del curso",
+    "text": "Datos y medios del curso\nEspacio educativo: Álgebra\nClave: 22017\nModalidad: presencial\nDocente: Dr. Jesús Francisco Espinoza Fierro\nCorreo institucional: jesusfrancisco.espinoza@unison.mx\nAtención presencial: Departamento de Matemáticas, edificio 3K-1, planta baja\n\nLibro público del curso\nEste libro se construirá progresivamente durante el semestre. Reunirá explicaciones, ejemplos, actividades, orientaciones y ejercicios adicionales. Está pensado para permitir el repaso autónomo, pero no sustituye la participación en clase ni la formulación oportuna de dudas.\n\nPágina principal del libro\nIdentificación de los grupos\nCalendario del curso\nEvaluación y asistencia\n\n\n\nMicrosoft Teams\nTeams será el medio institucional complementario para avisos, comunicación por chat y materiales que, por su tamaño o condiciones de acceso, no deban alojarse en el sitio público. Las clases son presenciales, salvo que se comunique expresamente una disposición distinta.\n\n\n\n\n\n\n\n\nPrograma y grupo\nEquipo\nCódigo temporal\n\n\n\n\nIMA, grupo 21\n[2026-2] 22017-Álgebra (IMA)\n57b6jks\n\n\nLTE, grupo 29\n[2026-2] 22017-Álgebra (LTE)\ngtbcf0g\n\n\n\nPara incorporarse, se debe ingresar a Teams con la cuenta institucional, elegir la opción para unirse mediante código y comprobar que el nombre del equipo corresponde al programa y grupo de inscripción. Los códigos son temporales; la página de acceso a Teams conservará la información vigente.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {
-    "objectID": "sesiones/2026-08-10-sesion-01.html#actividad",
-    "href": "sesiones/2026-08-10-sesion-01.html#actividad",
-    "title": "Sesión 01. Estructura de los números reales",
-    "section": "Actividad",
-    "text": "Actividad\n\n\n\n\n\n\nImportanteTrabajo de la sesión · 30 minutos\n\n\n\nResuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.\n\n\n\nParte A. Conjuntos y propiedades\n\nClasifique en el conjunto más pequeño posible: \\[\n-12,\\qquad \\frac{-18}{6},\\qquad 0.125,\\qquad \\sqrt{49},\\qquad \\sqrt5.\n\\]\nIndique la propiedad que justifica cada igualdad:\n\n\\(7+x=x+7\\)\n\n\\((ab)c=a(bc)\\)\n\n\\(5(y-2)=5y-10\\)\n\n\\(r+0=r\\)\n\nExplique por qué \\(0\\) no tiene inverso multiplicativo.\n\n\n\nParte B. Cálculo algebraico\n\nSimplifique:\n\n\\(5(3x-2)-3(x+4)\\)\n\n\\(2(4-3y)+7(y-1)\\)\n\nResuelva y verifique:\n\n\\(4(x-3)+2=3x+7\\)\n\n\\(5-2(3x-1)=4(x+2)-1\\)\n\nConstruya un contraejemplo para mostrar que \\((a+b)^2=a^2+b^2\\) no es una identidad.\n\n\n\n\n\n\n\nNotaResultados para comprobar después del intento\n\n\n\n\n\n\n\\(-12\\in\\mathbb Z\\); \\(-18/6=-3\\in\\mathbb Z\\); \\(0.125=1/8\\in\\mathbb Q\\); \\(\\sqrt{49}=7\\in\\mathbb N\\); \\(\\sqrt5\\in\\mathbb R\\setminus\\mathbb Q\\).\nConmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.\nPara todo \\(b\\in\\mathbb R\\) se tiene \\(0b=0\\): en efecto, \\(0b=(0+0)b=0b+0b\\), y al restar \\(0b\\) en ambos miembros se obtiene \\(0=0b\\). Por tanto, si existiera \\(b\\) con \\(0b=1\\), se tendría \\(0=1\\), contradicción.\n\n\\(12x-22\\); b. \\(1+y\\).\n\n\n\\(x=17\\); b. \\(x=0\\).\n\nPor ejemplo, \\(a=b=1\\): \\((1+1)^2=4\\), pero \\(1^2+1^2=2\\).",
+    "objectID": "sesiones/2026-08-10-sesion-01.html#contenidos-y-relación-entre-las-unidades",
+    "href": "sesiones/2026-08-10-sesion-01.html#contenidos-y-relación-entre-las-unidades",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Contenidos y relación entre las unidades",
+    "text": "Contenidos y relación entre las unidades\nEl programa oficial comprende seis unidades:\n\n\n\n\n\n\n\n\nUnidad\nContenido\nHoras oficiales\n\n\n\n\n1\nNúmeros reales y complejos\n15\n\n\n2\nPolinomios y raíces\n20\n\n\n3\nSistemas de ecuaciones lineales\n10\n\n\n4\nMatrices\n15\n\n\n5\nConceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales\n5\n\n\n6\nTransformaciones lineales en el plano\n15\n\n\n\nLas unidades no son independientes. Las propiedades de los números sostienen el trabajo con expresiones y polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y las matrices permiten describir transformaciones lineales. El temario y los resultados de aprendizaje pueden consultarse en la sección de información del curso.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#evaluación",
+    "href": "sesiones/2026-08-10-sesion-01.html#evaluación",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Evaluación",
+    "text": "Evaluación\nLa calificación se integrará mediante cinco exámenes parciales, cada uno con una ponderación de 20%:\n\\[\n\\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5.\n\\]\ndonde \\(P_i\\) es la calificación obtenida en el parcial \\(i\\).\n\n\n\n\n\n\n\n\n\n\nParcial\nContenido principal\nAsesoría grupal\nExamen\nPonderación\n\n\n\n\n1\nUnidad 1\nJueves 27 de agosto\nViernes 28 de agosto\n20%\n\n\n2\nUnidad 2\nJueves 17 de septiembre\nViernes 18 de septiembre\n20%\n\n\n3\nUnidad 3\nJueves 15 de octubre\nViernes 16 de octubre\n20%\n\n\n4\nUnidad 4\nJueves 5 de noviembre\nViernes 6 de noviembre\n20%\n\n\n5\nUnidades 5 y 6\nJueves 26 de noviembre\nViernes 27 de noviembre\n20%\n\n\n\nEl día hábil anterior a cada parcial se dedicará a una asesoría grupal presencial en el horario ordinario. Las actividades de clase son formativas y no tienen una ponderación independiente, pero constituyen la práctica necesaria para preparar los exámenes.\n\nExámenes de reposición\nDel 30 de noviembre al 4 de diciembre, durante la semana institucional de evaluación ordinaria, se aplicarán reposiciones conforme al calendario que se comunique oportunamente. La reposición permitirá:\n\npresentar un parcial que no se haya realizado en la fecha ordinaria; o\nintentar mejorar la calificación de un parcial ya presentado.\n\nSi el segundo resultado es menor que el primero, se conservará la calificación más alta. La evaluación extraordinaria, cuando corresponda conforme a la normativa institucional, será global.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#asistencia",
+    "href": "sesiones/2026-08-10-sesion-01.html#asistencia",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Asistencia",
+    "text": "Asistencia\nPara conservar el derecho a evaluación ordinaria se requiere asistir al menos al 75% de las sesiones. Con base en las 80 horas del espacio educativo, se establece un máximo de 20 inasistencias.\n\n\n\n\n\n\nAdvertenciaLa asistencia es un requisito independiente\n\n\n\nUna inasistencia no descuenta puntos de un examen; sin embargo, acumular 21 inasistencias implica no cumplir el mínimo de asistencia requerido para la evaluación ordinaria. Cada estudiante debe llevar su propio control.\n\n\nEl registro se realizará con base en la presencia efectiva. Si una situación médica, familiar o personal afecta la continuidad académica, conviene comunicarla oportunamente para recibir orientación; esa comunicación no modifica por sí misma el registro de asistencia.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#fechas-adicionales-que-deben-tenerse-presentes",
+    "href": "sesiones/2026-08-10-sesion-01.html#fechas-adicionales-que-deben-tenerse-presentes",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Fechas adicionales que deben tenerse presentes",
+    "text": "Fechas adicionales que deben tenerse presentes\n\nMiércoles 16 de septiembre: día no laborable.\nMiércoles 23 de septiembre: límite institucional de bajas voluntarias.\nDel lunes 28 de septiembre al viernes 2 de octubre: trabajo autónomo formativo; no habrá sesiones presenciales y no se introducirá contenido nuevo.\nLunes 2 de noviembre: día no laborable.\nLunes 16 de noviembre: día no laborable.\nViernes 27 de noviembre: último día lectivo y Parcial 5.\nDel lunes 30 de noviembre al viernes 4 de diciembre: reposiciones.\n\nCualquier ajuste posterior se comunicará en clase y mediante los canales institucionales del curso.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#forma-habitual-de-trabajo",
+    "href": "sesiones/2026-08-10-sesion-01.html#forma-habitual-de-trabajo",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Forma habitual de trabajo",
+    "text": "Forma habitual de trabajo\nEn lo posible, cada clase tendrá tres momentos:\n\nExplicación inicial. Durante aproximadamente 15 a 20 minutos se introducirán definiciones, propiedades, notación y condiciones de uso. Por ello es especialmente importante llegar puntualmente.\nEjemplos y contraejemplos. Se mostrarán procedimientos razonados, verificaciones y errores frecuentes.\nActividad. La parte final, alrededor de 30 minutos, se destinará a ejercicios individuales, en pareja o en equipos de tres integrantes.\n\nCuando el libro incluya resultados u orientaciones, deben consultarse después de intentar los ejercicios. El objetivo no es sólo obtener una respuesta, sino explicar el procedimiento y comprobar que el resultado es válido.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#texto-principal-y-bibliografía",
+    "href": "sesiones/2026-08-10-sesion-01.html#texto-principal-y-bibliografía",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Texto principal y bibliografía",
+    "text": "Texto principal y bibliografía\nEl texto de referencia principal es Álgebra superior, de Humberto Cárdenas, Emilio Lluis, Francisco Raggi y Francisco Tomás (Cárdenas et al. 1990). Hay ejemplares disponibles en las bibliotecas de la Universidad. El material del sitio es de elaboración propia para el curso y no reproduce ni sustituye el libro de texto. La bibliografía completa incluye fuentes adicionales para cada bloque.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#panorama-matemático-presentado",
+    "href": "sesiones/2026-08-10-sesion-01.html#panorama-matemático-presentado",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Panorama matemático presentado",
+    "text": "Panorama matemático presentado\nComo anticipo del primer bloque, se recordó la cadena de inclusiones\n\\[\n\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R\\subseteq\\mathbb C.\n\\]\nLos números naturales, enteros, racionales e irracionales forman parte de los números reales. Por ejemplo, \\(-8\\), \\(\\sqrt7\\) y \\(\\pi\\) son números reales, aunque pertenecen a subconjuntos distintos.\nLos números complejos amplían a los reales. Se escriben como\n\\[\nz=a+bi,\\qquad a,b\\in\\mathbb R,\\qquad i^2=-1.\n\\]\nEsta ampliación permite resolver ecuaciones que no tienen solución real. El ejemplo considerado fue\n\\[\nx^2+1=0.\n\\]\nSi \\(x\\) es real, entonces \\(x^2\\ge 0\\) y, por tanto, \\(x^2+1\\ge1\\); la ecuación no tiene raíces reales. En cambio, en \\(\\mathbb C\\) se obtiene\n\\[\nx^2=-1 \\quad\\Longrightarrow\\quad x=i\\quad\\text{o}\\quad x=-i,\n\\]\nde modo que\n\\[\nx^2+1=(x-i)(x+i).\n\\]\nNo aparece una sola raíz, sino dos soluciones complejas, \\(i\\) y \\(-i\\). Más adelante, el teorema fundamental del álgebra precisará esta idea: todo polinomio no constante de grado \\(n\\) con coeficientes complejos puede factorizarse en \\(n\\) factores lineales sobre \\(\\mathbb C\\), contando multiplicidades.\n\n\n\n\n\n\nNotaDistinción conceptual\n\n\n\nLos números complejos sí constituyen una ampliación de los números reales. Las matrices que se estudiarán después no son un sistema numérico “más grande”: son arreglos de escalares que permiten representar sistemas de ecuaciones y transformaciones lineales.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#actividad-de-seguimiento",
+    "href": "sesiones/2026-08-10-sesion-01.html#actividad-de-seguimiento",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Actividad de seguimiento",
+    "text": "Actividad de seguimiento\nAntes de la siguiente clase:\n\nAcceda al libro y guarde el enlace para consulta frecuente.\nIncorpórese al equipo de Teams que corresponde a su grupo mediante la cuenta institucional.\nRegistre las fechas de los cinco parciales, las asesorías previas y la semana de reposiciones.\nRevise las secciones de evaluación, asistencia y calendario; anote cualquier duda concreta.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-10-sesion-01.html#próxima-sesión",
+    "href": "sesiones/2026-08-10-sesion-01.html#próxima-sesión",
+    "title": "Sesión 01. Presentación y encuadre del curso",
+    "section": "Próxima sesión",
+    "text": "Próxima sesión\nMartes 11 de agosto: clasificación de números reales; relaciones entre \\(\\mathbb N\\), \\(\\mathbb Z\\), \\(\\mathbb Q\\) y \\(\\mathbb R\\); recta real, orden e intervalos; y diagnóstico breve de dificultades operativas.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {
     "objectID": "sesiones/2026-08-10-sesion-01.html#cierre",
     "href": "sesiones/2026-08-10-sesion-01.html#cierre",
-    "title": "Sesión 01. Estructura de los números reales",
+    "title": "Sesión 01. Presentación y encuadre del curso",
     "section": "Cierre",
-    "text": "Cierre\n\nLos conjuntos numéricos se organizan mediante inclusiones.\nLas transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.\nVerificar una solución es parte del procedimiento, no un paso opcional.",
+    "text": "Cierre\n\nEl curso combina práctica algebraica, justificación y verificación de resultados.\nLos cinco parciales constituyen el 100% de la calificación y cada uno cuenta con una asesoría grupal previa.\nEl libro público y Teams cumplen funciones complementarias y deben consultarse durante todo el semestre.\nLa ecuación \\(x^2+1=0\\) anticipa por qué será necesario pasar de \\(\\mathbb R\\) a \\(\\mathbb C\\).\n\n\n\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1990. Álgebra superior. Trillas.",
     "crumbs": [
       "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
-    ]
-  },
-  {
-    "objectID": "sesiones/2026-08-10-sesion-01.html#para-practicar",
-    "href": "sesiones/2026-08-10-sesion-01.html#para-practicar",
-    "title": "Sesión 01. Estructura de los números reales",
-    "section": "Para practicar",
-    "text": "Para practicar\n\nDetermine si cada afirmación es verdadera o falsa y justifique: \\(\\mathbb Z\\subseteq\\mathbb Q\\); \\(\\mathbb Q\\subseteq\\mathbb Z\\); \\(\\sqrt{16}\\notin\\mathbb N\\).\nSimplifique \\(3(2x-5)-4(1-x)+2\\).\nResuelva \\(2(3x+1)-5=x+12\\) y compruebe el resultado.\nEncuentre un contraejemplo para \\(\\frac{a+b}{c+d}=\\frac ac+\\frac bd\\).",
-    "crumbs": [
-      "Unidad 1. Números reales y complejos",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Estructura de los números reales</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Sesión 01. Presentación y encuadre del curso</span>"
     ]
   },
   {

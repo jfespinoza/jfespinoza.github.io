@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Conjuntos numéricos, propiedades de las operaciones y verificación algebraica.">
+<meta name="description" content="Organización del curso, medios de comunicación, evaluación, asistencia, dinámica de trabajo y panorama inicial de los contenidos.">
 
-<title>Sesión 01. Estructura de los números reales – Álgebra</title>
+<title>Sesión 01. Presentación y encuadre del curso – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,7 +27,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -108,8 +127,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 01. Estructura de los números reales – Álgebra">
-<meta property="og:description" content="Conjuntos numéricos, propiedades de las operaciones y verificación algebraica.">
+<meta property="og:title" content="Sesión 01. Presentación y encuadre del curso – Álgebra">
+<meta property="og:description" content="Organización del curso, medios de comunicación, evaluación, asistencia, dinámica de trabajo y panorama inicial de los contenidos.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -122,7 +141,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-10-sesion-01.html"><span class="chapter-title">Sesión 01. Estructura de los números reales</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-10-sesion-01.html"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -212,7 +231,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 01. Estructura de los números reales</span></a>
+  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a>
   </div>
 </li>
       </ul>
@@ -328,36 +347,35 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#propósito-de-la-sesión" id="toc-propósito-de-la-sesión" class="nav-link active" data-scroll-target="#propósito-de-la-sesión">Propósito de la sesión</a></li>
-  <li><a href="#explicación" id="toc-explicación" class="nav-link" data-scroll-target="#explicación">Explicación</a>
+  <li><a href="#registro-de-la-sesión" id="toc-registro-de-la-sesión" class="nav-link active" data-scroll-target="#registro-de-la-sesión">Registro de la sesión</a></li>
+  <li><a href="#propósitos-de-la-sesión" id="toc-propósitos-de-la-sesión" class="nav-link" data-scroll-target="#propósitos-de-la-sesión">Propósitos de la sesión</a></li>
+  <li><a href="#datos-y-medios-del-curso" id="toc-datos-y-medios-del-curso" class="nav-link" data-scroll-target="#datos-y-medios-del-curso">Datos y medios del curso</a>
   <ul class="collapse">
-  <li><a href="#conjuntos-numéricos" id="toc-conjuntos-numéricos" class="nav-link" data-scroll-target="#conjuntos-numéricos">Conjuntos numéricos</a></li>
-  <li><a href="#propiedades-de-las-operaciones" id="toc-propiedades-de-las-operaciones" class="nav-link" data-scroll-target="#propiedades-de-las-operaciones">Propiedades de las operaciones</a></li>
-  <li><a href="#igualdad-y-transformaciones-equivalentes" id="toc-igualdad-y-transformaciones-equivalentes" class="nav-link" data-scroll-target="#igualdad-y-transformaciones-equivalentes">Igualdad y transformaciones equivalentes</a></li>
+  <li><a href="#libro-público-del-curso" id="toc-libro-público-del-curso" class="nav-link" data-scroll-target="#libro-público-del-curso">Libro público del curso</a></li>
+  <li><a href="#microsoft-teams" id="toc-microsoft-teams" class="nav-link" data-scroll-target="#microsoft-teams">Microsoft Teams</a></li>
   </ul></li>
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <li><a href="#contenidos-y-relación-entre-las-unidades" id="toc-contenidos-y-relación-entre-las-unidades" class="nav-link" data-scroll-target="#contenidos-y-relación-entre-las-unidades">Contenidos y relación entre las unidades</a></li>
+  <li><a href="#evaluación" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluación">Evaluación</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-clasificación" id="toc-ejemplo-1.-clasificación" class="nav-link" data-scroll-target="#ejemplo-1.-clasificación">Ejemplo 1. Clasificación</a></li>
-  <li><a href="#ejemplo-2.-uso-de-la-distributividad" id="toc-ejemplo-2.-uso-de-la-distributividad" class="nav-link" data-scroll-target="#ejemplo-2.-uso-de-la-distributividad">Ejemplo 2. Uso de la distributividad</a></li>
-  <li><a href="#ejemplo-3.-resolución-y-verificación" id="toc-ejemplo-3.-resolución-y-verificación" class="nav-link" data-scroll-target="#ejemplo-3.-resolución-y-verificación">Ejemplo 3. Resolución y verificación</a></li>
-  <li><a href="#un-error-frecuente" id="toc-un-error-frecuente" class="nav-link" data-scroll-target="#un-error-frecuente">Un error frecuente</a></li>
+  <li><a href="#exámenes-de-reposición" id="toc-exámenes-de-reposición" class="nav-link" data-scroll-target="#exámenes-de-reposición">Exámenes de reposición</a></li>
   </ul></li>
-  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a>
-  <ul class="collapse">
-  <li><a href="#parte-a.-conjuntos-y-propiedades" id="toc-parte-a.-conjuntos-y-propiedades" class="nav-link" data-scroll-target="#parte-a.-conjuntos-y-propiedades">Parte A. Conjuntos y propiedades</a></li>
-  <li><a href="#parte-b.-cálculo-algebraico" id="toc-parte-b.-cálculo-algebraico" class="nav-link" data-scroll-target="#parte-b.-cálculo-algebraico">Parte B. Cálculo algebraico</a></li>
-  </ul></li>
+  <li><a href="#asistencia" id="toc-asistencia" class="nav-link" data-scroll-target="#asistencia">Asistencia</a></li>
+  <li><a href="#fechas-adicionales-que-deben-tenerse-presentes" id="toc-fechas-adicionales-que-deben-tenerse-presentes" class="nav-link" data-scroll-target="#fechas-adicionales-que-deben-tenerse-presentes">Fechas adicionales que deben tenerse presentes</a></li>
+  <li><a href="#forma-habitual-de-trabajo" id="toc-forma-habitual-de-trabajo" class="nav-link" data-scroll-target="#forma-habitual-de-trabajo">Forma habitual de trabajo</a></li>
+  <li><a href="#texto-principal-y-bibliografía" id="toc-texto-principal-y-bibliografía" class="nav-link" data-scroll-target="#texto-principal-y-bibliografía">Texto principal y bibliografía</a></li>
+  <li><a href="#panorama-matemático-presentado" id="toc-panorama-matemático-presentado" class="nav-link" data-scroll-target="#panorama-matemático-presentado">Panorama matemático presentado</a></li>
+  <li><a href="#actividad-de-seguimiento" id="toc-actividad-de-seguimiento" class="nav-link" data-scroll-target="#actividad-de-seguimiento">Actividad de seguimiento</a></li>
+  <li><a href="#próxima-sesión" id="toc-próxima-sesión" class="nav-link" data-scroll-target="#próxima-sesión">Próxima sesión</a></li>
   <li><a href="#cierre" id="toc-cierre" class="nav-link" data-scroll-target="#cierre">Cierre</a></li>
-  <li><a href="#para-practicar" id="toc-para-practicar" class="nav-link" data-scroll-target="#para-practicar">Para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-10-sesion-01.html"><span class="chapter-title">Sesión 01. Estructura de los números reales</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-10-sesion-01.html"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 01. Estructura de los números reales</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></h1>
 </div>
 
 
@@ -380,302 +398,353 @@ window.Quarto = {
 </header>
 
 
-<section id="propósito-de-la-sesión" class="level2">
-<h2 class="anchored" data-anchor-id="propósito-de-la-sesión">Propósito de la sesión</h2>
-<p>Al finalizar la sesión, el estudiante podrá:</p>
-<ul>
-<li>reconocer los principales conjuntos numéricos y sus relaciones de inclusión;</li>
-<li>identificar la propiedad de los números reales utilizada en una transformación algebraica; y</li>
-<li>simplificar expresiones y resolver ecuaciones lineales sin perder equivalencia.</li>
-</ul>
-</section>
-<section id="explicación" class="level2">
-<h2 class="anchored" data-anchor-id="explicación">Explicación</h2>
-<section id="conjuntos-numéricos" class="level3">
-<h3 class="anchored" data-anchor-id="conjuntos-numéricos">Conjuntos numéricos</h3>
-<p>En este curso utilizaremos la convención</p>
-<p><span class="math display">\[
-\mathbb{N}=\{0,1,2,3,\ldots\}.
-\]</span></p>
-<p>Algunos textos reservan <span class="math inline">\(\mathbb{N}\)</span> para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.</p>
-<ul>
-<li>Los <strong>números naturales</strong> forman el conjunto <span class="math inline">\(\mathbb{N}\)</span>.</li>
-<li>Los <strong>números enteros</strong> forman <span class="math display">\[
-\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}.
-\]</span></li>
-<li>Los <strong>números racionales</strong> son los que pueden escribirse como cociente de enteros: <span class="math display">\[
-\mathbb{Q}=\left\{\frac{p}{q}:p,q\in\mathbb{Z},\ q\neq 0\right\}.
-\]</span></li>
-<li>Los <strong>números irracionales</strong> son reales que no pertenecen a <span class="math inline">\(\mathbb{Q}\)</span>; por ejemplo, <span class="math inline">\(\sqrt{2}\)</span> y <span class="math inline">\(\pi\)</span>.</li>
-<li>Los <strong>números reales</strong> reúnen a racionales e irracionales.</li>
-</ul>
-<p>Las inclusiones fundamentales son</p>
-<p><span class="math display">\[
-\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}.
-\]</span></p>
-<p>Cuando se pida clasificar un número, conviene indicar el conjunto numérico <strong>más específico</strong> de los estudiados. En particular, si es irracional, se indicará que pertenece a <span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span>.</p>
-</section>
-<section id="propiedades-de-las-operaciones" class="level3">
-<h3 class="anchored" data-anchor-id="propiedades-de-las-operaciones">Propiedades de las operaciones</h3>
-<p>Para <span class="math inline">\(a,b,c\in\mathbb{R}\)</span> se cumplen, entre otras, las siguientes propiedades.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Propiedad</th>
-<th>Suma</th>
-<th>Multiplicación</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cerradura</td>
-<td><span class="math inline">\(a+b\in\mathbb{R}\)</span></td>
-<td><span class="math inline">\(ab\in\mathbb{R}\)</span></td>
-</tr>
-<tr class="even">
-<td>Conmutatividad</td>
-<td><span class="math inline">\(a+b=b+a\)</span></td>
-<td><span class="math inline">\(ab=ba\)</span></td>
-</tr>
-<tr class="odd">
-<td>Asociatividad</td>
-<td><span class="math inline">\((a+b)+c=a+(b+c)\)</span></td>
-<td><span class="math inline">\((ab)c=a(bc)\)</span></td>
-</tr>
-<tr class="even">
-<td>Identidad</td>
-<td><span class="math inline">\(a+0=a\)</span></td>
-<td><span class="math inline">\(a\cdot 1=a\)</span></td>
-</tr>
-<tr class="odd">
-<td>Inverso</td>
-<td><span class="math inline">\(a+(-a)=0\)</span></td>
-<td><span class="math inline">\(a\cdot a^{-1}=1\)</span>, si <span class="math inline">\(a\neq0\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>La propiedad distributiva conecta ambas operaciones:</p>
-<p><span class="math display">\[
-a(b+c)=ab+ac.
-\]</span></p>
-<div class="callout callout-style-default callout-caution callout-titled" title="Una condición que no debe omitirse">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Precaución</span>Una condición que no debe omitirse
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>El inverso multiplicativo <span class="math inline">\(a^{-1}=1/a\)</span> existe en <span class="math inline">\(\mathbb{R}\)</span> únicamente cuando <span class="math inline">\(a\neq0\)</span>. La división entre cero no está definida.</p>
-</div>
-</div>
-</section>
-<section id="igualdad-y-transformaciones-equivalentes" class="level3">
-<h3 class="anchored" data-anchor-id="igualdad-y-transformaciones-equivalentes">Igualdad y transformaciones equivalentes</h3>
-<p>Resolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:</p>
-<ul>
-<li>sumar o restar la misma cantidad en ambos miembros;</li>
-<li>multiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y</li>
-<li>sustituir una expresión por otra algebraicamente equivalente.</li>
-</ul>
-<p>Estas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.</p>
-</section>
-</section>
-<section id="ejemplos" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-clasificación" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-clasificación">Ejemplo 1. Clasificación</h3>
-<p>Clasifiquemos cada número en el conjunto numérico más específico posible:</p>
+<section id="registro-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="registro-de-la-sesión">Registro de la sesión</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 40%">
-<col style="width: 30%">
-<col style="width: 30%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 25%">
+<col style="width: 18%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Número</th>
-<th>Clasificación</th>
-<th>Razón</th>
+<th>Fecha</th>
+<th>Programa</th>
+<th style="text-align: right;">Grupo</th>
+<th>Horario</th>
+<th>Aula</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\(\mathbb{N}\)</span></td>
-<td>Pertenece a los naturales bajo la convención del curso.</td>
+<td>Lunes 10 de agosto de 2026</td>
+<td>Ingeniería en Materiales (IMA)</td>
+<td style="text-align: right;">21</td>
+<td>08:00-09:00</td>
+<td>5I-A302</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;"><span class="math inline">\(-7\)</span></td>
-<td><span class="math inline">\(\mathbb{Z}\)</span></td>
-<td>Es entero, pero no natural.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">\(\frac34\)</span></td>
-<td><span class="math inline">\(\mathbb{Q}\)</span></td>
-<td>Es cociente de enteros.</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><span class="math inline">\(\sqrt9=3\)</span></td>
-<td><span class="math inline">\(\mathbb{N}\)</span></td>
-<td>Conviene simplificar antes de clasificar.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">\(\sqrt2\)</span></td>
-<td><span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span></td>
-<td>Es irracional.</td>
+<td>Lunes 10 de agosto de 2026</td>
+<td>Ingeniería en Tecnología Electrónica (LTE)</td>
+<td style="text-align: right;">29</td>
+<td>14:00-15:00</td>
+<td>8B-A201</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="ejemplo-2.-uso-de-la-distributividad" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-uso-de-la-distributividad">Ejemplo 2. Uso de la distributividad</h3>
-<p>Simplifiquemos</p>
-<p><span class="math display">\[
-4(2x-3)-2(x+5).
-\]</span></p>
-<p>Aplicando la propiedad distributiva:</p>
-<p><span class="math display">\[
-4(2x-3)-2(x+5)=8x-12-2x-10.
-\]</span></p>
-<p>Después se agrupan términos semejantes:</p>
-<p><span class="math display">\[
-8x-2x-12-10=6x-22.
-\]</span></p>
-</section>
-<section id="ejemplo-3.-resolución-y-verificación" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-resolución-y-verificación">Ejemplo 3. Resolución y verificación</h3>
-<p>Resolvamos</p>
-<p><span class="math display">\[
-3(2x-1)-4(x+2)=7.
-\]</span></p>
-<p>Primero distribuimos y reducimos términos semejantes:</p>
-<p><span class="math display">\[
-6x-3-4x-8=7,
-\]</span></p>
-<p><span class="math display">\[
-2x-11=7.
-\]</span></p>
-<p>Sumamos <span class="math inline">\(11\)</span> en ambos miembros:</p>
-<p><span class="math display">\[
-2x=18.
-\]</span></p>
-<p>Como <span class="math inline">\(2\neq0\)</span>, dividimos ambos miembros entre <span class="math inline">\(2\)</span> y obtenemos <span class="math inline">\(x=9\)</span>.</p>
-<p>Para verificar, sustituimos en la ecuación original:</p>
-<p><span class="math display">\[
-3(2\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.
-\]</span></p>
-<p>La igualdad se cumple, por lo que la solución es correcta.</p>
-</section>
-<section id="un-error-frecuente" class="level3">
-<h3 class="anchored" data-anchor-id="un-error-frecuente">Un error frecuente</h3>
-<p>En general,</p>
-<p><span class="math display">\[
-\sqrt{a+b}\neq\sqrt a+\sqrt b.
-\]</span></p>
-<p>Basta un contraejemplo: si <span class="math inline">\(a=b=1\)</span>, entonces <span class="math inline">\(\sqrt{1+1}=\sqrt2\)</span>, mientras que <span class="math inline">\(\sqrt1+\sqrt1=2\)</span>. Como <span class="math inline">\(\sqrt2\neq2\)</span>, la supuesta regla es falsa.</p>
-</section>
-</section>
-<section id="actividad" class="level2">
-<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="Trabajo de la sesión · 30 minutos">
+<div class="callout callout-style-default callout-note callout-titled" title="Una sola entrada para ambos grupos">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Trabajo de la sesión · 30 minutos
+<span class="screen-reader-only">Nota</span>Una sola entrada para ambos grupos
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Resuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.</p>
+<p>Esta página consolida lo presentado en las dos clases. La organización, los contenidos, las fechas de evaluación y los criterios generales son comunes a IMA y LTE; únicamente cambian el horario, el aula y algunos contextos de aplicación.</p>
 </div>
 </div>
-<section id="parte-a.-conjuntos-y-propiedades" class="level3">
-<h3 class="anchored" data-anchor-id="parte-a.-conjuntos-y-propiedades">Parte A. Conjuntos y propiedades</h3>
-<ol type="1">
-<li><p>Clasifique en el conjunto más pequeño posible: <span class="math display">\[
--12,\qquad \frac{-18}{6},\qquad 0.125,\qquad \sqrt{49},\qquad \sqrt5.
-\]</span></p></li>
-<li><p>Indique la propiedad que justifica cada igualdad:</p>
-<ol type="a">
-<li><span class="math inline">\(7+x=x+7\)</span><br>
-</li>
-<li><span class="math inline">\((ab)c=a(bc)\)</span><br>
-</li>
-<li><span class="math inline">\(5(y-2)=5y-10\)</span><br>
-</li>
-<li><span class="math inline">\(r+0=r\)</span></li>
-</ol></li>
-<li><p>Explique por qué <span class="math inline">\(0\)</span> no tiene inverso multiplicativo.</p></li>
-</ol>
+<p>La sesión tuvo carácter de <strong>presentación y encuadre</strong>. El desarrollo formal de la Unidad 1 comienza el martes 11 de agosto.</p>
 </section>
-<section id="parte-b.-cálculo-algebraico" class="level3">
-<h3 class="anchored" data-anchor-id="parte-b.-cálculo-algebraico">Parte B. Cálculo algebraico</h3>
-<ol start="4" type="1">
-<li><p>Simplifique:</p>
-<ol type="a">
-<li><span class="math inline">\(5(3x-2)-3(x+4)\)</span><br>
-</li>
-<li><span class="math inline">\(2(4-3y)+7(y-1)\)</span></li>
-</ol></li>
-<li><p>Resuelva y verifique:</p>
-<ol type="a">
-<li><span class="math inline">\(4(x-3)+2=3x+7\)</span><br>
-</li>
-<li><span class="math inline">\(5-2(3x-1)=4(x+2)-1\)</span></li>
-</ol></li>
-<li><p>Construya un contraejemplo para mostrar que <span class="math inline">\((a+b)^2=a^2+b^2\)</span> no es una identidad.</p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled" title="Resultados para comprobar después del intento">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<section id="propósitos-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="propósitos-de-la-sesión">Propósitos de la sesión</h2>
+<p>Al concluir este encuadre, el estudiante deberá poder:</p>
+<ul>
+<li>identificar los datos de su grupo y los medios institucionales de comunicación;</li>
+<li>explicar cómo se integra la calificación y qué requisito de asistencia debe cumplir;</li>
+<li>reconocer la secuencia de contenidos y la forma habitual de trabajo; y</li>
+<li>describir por qué los números complejos serán necesarios en el curso.</li>
+</ul>
+</section>
+<section id="datos-y-medios-del-curso" class="level2">
+<h2 class="anchored" data-anchor-id="datos-y-medios-del-curso">Datos y medios del curso</h2>
+<p><strong>Espacio educativo:</strong> Álgebra<br>
+<strong>Clave:</strong> 22017<br>
+<strong>Modalidad:</strong> presencial<br>
+<strong>Docente:</strong> Dr.&nbsp;Jesús Francisco Espinoza Fierro<br>
+<strong>Correo institucional:</strong> <a href="mailto:jesusfrancisco.espinoza@unison.mx">jesusfrancisco.espinoza@unison.mx</a><br>
+<strong>Atención presencial:</strong> Departamento de Matemáticas, edificio 3K-1, planta baja</p>
+<section id="libro-público-del-curso" class="level3">
+<h3 class="anchored" data-anchor-id="libro-público-del-curso">Libro público del curso</h3>
+<p>Este libro se construirá progresivamente durante el semestre. Reunirá explicaciones, ejemplos, actividades, orientaciones y ejercicios adicionales. Está pensado para permitir el repaso autónomo, pero no sustituye la participación en clase ni la formulación oportuna de dudas.</p>
+<ul>
+<li><a href="../index.html">Página principal del libro</a></li>
+<li><a href="../curso/identificacion.html">Identificación de los grupos</a></li>
+<li><a href="../curso/calendario.html">Calendario del curso</a></li>
+<li><a href="../curso/evaluacion-asistencia.html">Evaluación y asistencia</a></li>
+</ul>
+</section>
+<section id="microsoft-teams" class="level3">
+<h3 class="anchored" data-anchor-id="microsoft-teams">Microsoft Teams</h3>
+<p>Teams será el medio institucional complementario para avisos, comunicación por chat y materiales que, por su tamaño o condiciones de acceso, no deban alojarse en el sitio público. Las clases son presenciales, salvo que se comunique expresamente una disposición distinta.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Programa y grupo</th>
+<th>Equipo</th>
+<th>Código temporal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IMA, grupo 21</td>
+<td><code>[2026-2] 22017-Álgebra (IMA)</code></td>
+<td><strong><code>57b6jks</code></strong></td>
+</tr>
+<tr class="even">
+<td>LTE, grupo 29</td>
+<td><code>[2026-2] 22017-Álgebra (LTE)</code></td>
+<td><strong><code>gtbcf0g</code></strong></td>
+</tr>
+</tbody>
+</table>
+<p>Para incorporarse, se debe ingresar a Teams con la <strong>cuenta institucional</strong>, elegir la opción para unirse mediante código y comprobar que el nombre del equipo corresponde al programa y grupo de inscripción. Los códigos son temporales; la <a href="../curso/acceso-teams.html">página de acceso a Teams</a> conservará la información vigente.</p>
+</section>
+</section>
+<section id="contenidos-y-relación-entre-las-unidades" class="level2">
+<h2 class="anchored" data-anchor-id="contenidos-y-relación-entre-las-unidades">Contenidos y relación entre las unidades</h2>
+<p>El programa oficial comprende seis unidades:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 27%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Unidad</th>
+<th>Contenido</th>
+<th style="text-align: right;">Horas oficiales</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Números reales y complejos</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Polinomios y raíces</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Sistemas de ecuaciones lineales</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Matrices</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Conceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Transformaciones lineales en el plano</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<p>Las unidades no son independientes. Las propiedades de los números sostienen el trabajo con expresiones y polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y las matrices permiten describir transformaciones lineales. El <a href="../curso/contenidos.html">temario y los resultados de aprendizaje</a> pueden consultarse en la sección de información del curso.</p>
+</section>
+<section id="evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación">Evaluación</h2>
+<p>La calificación se integrará mediante <strong>cinco exámenes parciales</strong>, cada uno con una ponderación de 20%:</p>
+<p><span class="math display">\[
+\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5.
+\]</span></p>
+<p>donde <span class="math inline">\(P_i\)</span> es la calificación obtenida en el parcial <span class="math inline">\(i\)</span>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Parcial</th>
+<th>Contenido principal</th>
+<th>Asesoría grupal</th>
+<th>Examen</th>
+<th style="text-align: right;">Ponderación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Unidad 1</td>
+<td>Jueves 27 de agosto</td>
+<td>Viernes 28 de agosto</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Unidad 2</td>
+<td>Jueves 17 de septiembre</td>
+<td>Viernes 18 de septiembre</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Unidad 3</td>
+<td>Jueves 15 de octubre</td>
+<td>Viernes 16 de octubre</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Unidad 4</td>
+<td>Jueves 5 de noviembre</td>
+<td>Viernes 6 de noviembre</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Unidades 5 y 6</td>
+<td>Jueves 26 de noviembre</td>
+<td>Viernes 27 de noviembre</td>
+<td style="text-align: right;">20%</td>
+</tr>
+</tbody>
+</table>
+<p>El día hábil anterior a cada parcial se dedicará a una <strong>asesoría grupal presencial</strong> en el horario ordinario. Las actividades de clase son formativas y no tienen una ponderación independiente, pero constituyen la práctica necesaria para preparar los exámenes.</p>
+<section id="exámenes-de-reposición" class="level3">
+<h3 class="anchored" data-anchor-id="exámenes-de-reposición">Exámenes de reposición</h3>
+<p>Del <strong>30 de noviembre al 4 de diciembre</strong>, durante la semana institucional de evaluación ordinaria, se aplicarán reposiciones conforme al calendario que se comunique oportunamente. La reposición permitirá:</p>
+<ul>
+<li>presentar un parcial que no se haya realizado en la fecha ordinaria; o</li>
+<li>intentar mejorar la calificación de un parcial ya presentado.</li>
+</ul>
+<p>Si el segundo resultado es menor que el primero, se conservará la calificación más alta. La evaluación extraordinaria, cuando corresponda conforme a la normativa institucional, será global.</p>
+</section>
+</section>
+<section id="asistencia" class="level2">
+<h2 class="anchored" data-anchor-id="asistencia">Asistencia</h2>
+<p>Para conservar el derecho a evaluación ordinaria se requiere asistir al menos al <strong>75% de las sesiones</strong>. Con base en las 80 horas del espacio educativo, se establece un máximo de <strong>20 inasistencias</strong>.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="La asistencia es un requisito independiente">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Resultados para comprobar después del intento
+<span class="screen-reader-only">Advertencia</span>La asistencia es un requisito independiente
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><span class="math inline">\(-12\in\mathbb Z\)</span>; <span class="math inline">\(-18/6=-3\in\mathbb Z\)</span>; <span class="math inline">\(0.125=1/8\in\mathbb Q\)</span>; <span class="math inline">\(\sqrt{49}=7\in\mathbb N\)</span>; <span class="math inline">\(\sqrt5\in\mathbb R\setminus\mathbb Q\)</span>.</li>
-<li>Conmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.</li>
-<li>Para todo <span class="math inline">\(b\in\mathbb R\)</span> se tiene <span class="math inline">\(0b=0\)</span>: en efecto, <span class="math inline">\(0b=(0+0)b=0b+0b\)</span>, y al restar <span class="math inline">\(0b\)</span> en ambos miembros se obtiene <span class="math inline">\(0=0b\)</span>. Por tanto, si existiera <span class="math inline">\(b\)</span> con <span class="math inline">\(0b=1\)</span>, se tendría <span class="math inline">\(0=1\)</span>, contradicción.</li>
-<li><ol type="a">
-<li><span class="math inline">\(12x-22\)</span>; b. <span class="math inline">\(1+y\)</span>.</li>
-</ol></li>
-<li><ol type="a">
-<li><span class="math inline">\(x=17\)</span>; b. <span class="math inline">\(x=0\)</span>.</li>
-</ol></li>
-<li>Por ejemplo, <span class="math inline">\(a=b=1\)</span>: <span class="math inline">\((1+1)^2=4\)</span>, pero <span class="math inline">\(1^2+1^2=2\)</span>.</li>
-</ol>
+<p>Una inasistencia no descuenta puntos de un examen; sin embargo, acumular 21 inasistencias implica no cumplir el mínimo de asistencia requerido para la evaluación ordinaria. Cada estudiante debe llevar su propio control.</p>
 </div>
+</div>
+<p>El registro se realizará con base en la presencia efectiva. Si una situación médica, familiar o personal afecta la continuidad académica, conviene comunicarla oportunamente para recibir orientación; esa comunicación no modifica por sí misma el registro de asistencia.</p>
+</section>
+<section id="fechas-adicionales-que-deben-tenerse-presentes" class="level2">
+<h2 class="anchored" data-anchor-id="fechas-adicionales-que-deben-tenerse-presentes">Fechas adicionales que deben tenerse presentes</h2>
+<ul>
+<li><strong>Miércoles 16 de septiembre:</strong> día no laborable.</li>
+<li><strong>Miércoles 23 de septiembre:</strong> límite institucional de bajas voluntarias.</li>
+<li><strong>Del lunes 28 de septiembre al viernes 2 de octubre:</strong> trabajo autónomo formativo; no habrá sesiones presenciales y no se introducirá contenido nuevo.</li>
+<li><strong>Lunes 2 de noviembre:</strong> día no laborable.</li>
+<li><strong>Lunes 16 de noviembre:</strong> día no laborable.</li>
+<li><strong>Viernes 27 de noviembre:</strong> último día lectivo y Parcial 5.</li>
+<li><strong>Del lunes 30 de noviembre al viernes 4 de diciembre:</strong> reposiciones.</li>
+</ul>
+<p>Cualquier ajuste posterior se comunicará en clase y mediante los canales institucionales del curso.</p>
+</section>
+<section id="forma-habitual-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="forma-habitual-de-trabajo">Forma habitual de trabajo</h2>
+<p>En lo posible, cada clase tendrá tres momentos:</p>
+<ol type="1">
+<li><strong>Explicación inicial.</strong> Durante aproximadamente 15 a 20 minutos se introducirán definiciones, propiedades, notación y condiciones de uso. Por ello es especialmente importante llegar puntualmente.</li>
+<li><strong>Ejemplos y contraejemplos.</strong> Se mostrarán procedimientos razonados, verificaciones y errores frecuentes.</li>
+<li><strong>Actividad.</strong> La parte final, alrededor de 30 minutos, se destinará a ejercicios individuales, en pareja o en equipos de tres integrantes.</li>
+</ol>
+<p>Cuando el libro incluya resultados u orientaciones, deben consultarse <strong>después de intentar los ejercicios</strong>. El objetivo no es sólo obtener una respuesta, sino explicar el procedimiento y comprobar que el resultado es válido.</p>
+</section>
+<section id="texto-principal-y-bibliografía" class="level2">
+<h2 class="anchored" data-anchor-id="texto-principal-y-bibliografía">Texto principal y bibliografía</h2>
+<p>El texto de referencia principal es <em>Álgebra superior</em>, de Humberto Cárdenas, Emilio Lluis, Francisco Raggi y Francisco Tomás <span class="citation" data-cites="cardenas1990">(<a href="../recursos/bibliografia.html#ref-cardenas1990" role="doc-biblioref">Cárdenas et&nbsp;al. 1990</a>)</span>. Hay ejemplares disponibles en las bibliotecas de la Universidad. El material del sitio es de elaboración propia para el curso y no reproduce ni sustituye el libro de texto. La <a href="../recursos/bibliografia.html">bibliografía completa</a> incluye fuentes adicionales para cada bloque.</p>
+</section>
+<section id="panorama-matemático-presentado" class="level2">
+<h2 class="anchored" data-anchor-id="panorama-matemático-presentado">Panorama matemático presentado</h2>
+<p>Como anticipo del primer bloque, se recordó la cadena de inclusiones</p>
+<p><span class="math display">\[
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
+\]</span></p>
+<p>Los números naturales, enteros, racionales e irracionales forman parte de los números reales. Por ejemplo, <span class="math inline">\(-8\)</span>, <span class="math inline">\(\sqrt7\)</span> y <span class="math inline">\(\pi\)</span> son números reales, aunque pertenecen a subconjuntos distintos.</p>
+<p>Los números complejos amplían a los reales. Se escriben como</p>
+<p><span class="math display">\[
+z=a+bi,\qquad a,b\in\mathbb R,\qquad i^2=-1.
+\]</span></p>
+<p>Esta ampliación permite resolver ecuaciones que no tienen solución real. El ejemplo considerado fue</p>
+<p><span class="math display">\[
+x^2+1=0.
+\]</span></p>
+<p>Si <span class="math inline">\(x\)</span> es real, entonces <span class="math inline">\(x^2\ge 0\)</span> y, por tanto, <span class="math inline">\(x^2+1\ge1\)</span>; la ecuación no tiene raíces reales. En cambio, en <span class="math inline">\(\mathbb C\)</span> se obtiene</p>
+<p><span class="math display">\[
+x^2=-1 \quad\Longrightarrow\quad x=i\quad\text{o}\quad x=-i,
+\]</span></p>
+<p>de modo que</p>
+<p><span class="math display">\[
+x^2+1=(x-i)(x+i).
+\]</span></p>
+<p>No aparece una sola raíz, sino <strong>dos soluciones complejas</strong>, <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span>. Más adelante, el teorema fundamental del álgebra precisará esta idea: todo polinomio no constante de grado <span class="math inline">\(n\)</span> con coeficientes complejos puede factorizarse en <span class="math inline">\(n\)</span> factores lineales sobre <span class="math inline">\(\mathbb C\)</span>, contando multiplicidades.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Distinción conceptual">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Distinción conceptual
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los números complejos sí constituyen una ampliación de los números reales. Las matrices que se estudiarán después no son un sistema numérico “más grande”: son arreglos de escalares que permiten representar sistemas de ecuaciones y transformaciones lineales.</p>
 </div>
 </div>
 </section>
+<section id="actividad-de-seguimiento" class="level2">
+<h2 class="anchored" data-anchor-id="actividad-de-seguimiento">Actividad de seguimiento</h2>
+<p>Antes de la siguiente clase:</p>
+<ol type="1">
+<li>Acceda al libro y guarde el enlace para consulta frecuente.</li>
+<li>Incorpórese al equipo de Teams que corresponde a su grupo mediante la cuenta institucional.</li>
+<li>Registre las fechas de los cinco parciales, las asesorías previas y la semana de reposiciones.</li>
+<li>Revise las secciones de evaluación, asistencia y calendario; anote cualquier duda concreta.</li>
+</ol>
+</section>
+<section id="próxima-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="próxima-sesión">Próxima sesión</h2>
+<p><strong>Martes 11 de agosto:</strong> clasificación de números reales; relaciones entre <span class="math inline">\(\mathbb N\)</span>, <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\)</span>; recta real, orden e intervalos; y diagnóstico breve de dificultades operativas.</p>
 </section>
 <section id="cierre" class="level2">
 <h2 class="anchored" data-anchor-id="cierre">Cierre</h2>
 <ul>
-<li>Los conjuntos numéricos se organizan mediante inclusiones.</li>
-<li>Las transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.</li>
-<li>Verificar una solución es parte del procedimiento, no un paso opcional.</li>
+<li>El curso combina práctica algebraica, justificación y verificación de resultados.</li>
+<li>Los cinco parciales constituyen el 100% de la calificación y cada uno cuenta con una asesoría grupal previa.</li>
+<li>El libro público y Teams cumplen funciones complementarias y deben consultarse durante todo el semestre.</li>
+<li>La ecuación <span class="math inline">\(x^2+1=0\)</span> anticipa por qué será necesario pasar de <span class="math inline">\(\mathbb R\)</span> a <span class="math inline">\(\mathbb C\)</span>.</li>
 </ul>
-</section>
-<section id="para-practicar" class="level2">
-<h2 class="anchored" data-anchor-id="para-practicar">Para practicar</h2>
-<ol type="1">
-<li>Determine si cada afirmación es verdadera o falsa y justifique: <span class="math inline">\(\mathbb Z\subseteq\mathbb Q\)</span>; <span class="math inline">\(\mathbb Q\subseteq\mathbb Z\)</span>; <span class="math inline">\(\sqrt{16}\notin\mathbb N\)</span>.</li>
-<li>Simplifique <span class="math inline">\(3(2x-5)-4(1-x)+2\)</span>.</li>
-<li>Resuelva <span class="math inline">\(2(3x+1)-5=x+12\)</span> y compruebe el resultado.</li>
-<li>Encuentre un contraejemplo para <span class="math inline">\(\frac{a+b}{c+d}=\frac ac+\frac bd\)</span>.</li>
-</ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-cardenas1990" class="csl-entry" role="listitem">
+Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1990. <em>Álgebra superior</em>. Trillas.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
