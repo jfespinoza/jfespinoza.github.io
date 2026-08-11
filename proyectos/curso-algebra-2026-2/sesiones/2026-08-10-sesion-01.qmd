@@ -1,209 +1,196 @@
 ---
-title: "Sesión 01. Estructura de los números reales"
+title: "Sesión 01. Presentación y encuadre del curso"
 date: 2026-08-10
-description: "Conjuntos numéricos, propiedades de las operaciones y verificación algebraica."
+description: "Organización del curso, medios de comunicación, evaluación, asistencia, dinámica de trabajo y panorama inicial de los contenidos."
 ---
 
-## Propósito de la sesión
+## Registro de la sesión
 
-Al finalizar la sesión, el estudiante podrá:
+| Fecha | Programa | Grupo | Horario | Aula |
+|---|---|---:|---|---|
+| Lunes 10 de agosto de 2026 | Ingeniería en Materiales (IMA) | 21 | 08:00-09:00 | 5I-A302 |
+| Lunes 10 de agosto de 2026 | Ingeniería en Tecnología Electrónica (LTE) | 29 | 14:00-15:00 | 8B-A201 |
 
-- reconocer los principales conjuntos numéricos y sus relaciones de inclusión;
-- identificar la propiedad de los números reales utilizada en una transformación algebraica; y
-- simplificar expresiones y resolver ecuaciones lineales sin perder equivalencia.
+::: {.callout-note title="Una sola entrada para ambos grupos"}
+Esta página consolida lo presentado en las dos clases. La organización, los contenidos, las fechas de evaluación y los criterios generales son comunes a IMA y LTE; únicamente cambian el horario, el aula y algunos contextos de aplicación.
+:::
 
-## Explicación
+La sesión tuvo carácter de **presentación y encuadre**. El desarrollo formal de la Unidad 1 comienza el martes 11 de agosto.
 
-### Conjuntos numéricos
+## Propósitos de la sesión
 
-En este curso utilizaremos la convención
+Al concluir este encuadre, el estudiante deberá poder:
 
-$$
-\mathbb{N}=\{0,1,2,3,\ldots\}.
-$$
+- identificar los datos de su grupo y los medios institucionales de comunicación;
+- explicar cómo se integra la calificación y qué requisito de asistencia debe cumplir;
+- reconocer la secuencia de contenidos y la forma habitual de trabajo; y
+- describir por qué los números complejos serán necesarios en el curso.
 
-Algunos textos reservan $\mathbb{N}$ para los enteros positivos; cuando esa diferencia sea relevante, se indicará explícitamente.
+## Datos y medios del curso
 
-- Los **números naturales** forman el conjunto $\mathbb{N}$.
-- Los **números enteros** forman
-  $$
-  \mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}.
-  $$
-- Los **números racionales** son los que pueden escribirse como cociente de enteros:
-  $$
-  \mathbb{Q}=\left\{\frac{p}{q}:p,q\in\mathbb{Z},\ q\neq 0\right\}.
-  $$
-- Los **números irracionales** son reales que no pertenecen a $\mathbb{Q}$; por ejemplo, $\sqrt{2}$ y $\pi$.
-- Los **números reales** reúnen a racionales e irracionales.
+**Espacio educativo:** Álgebra  
+**Clave:** 22017  
+**Modalidad:** presencial  
+**Docente:** Dr. Jesús Francisco Espinoza Fierro  
+**Correo institucional:** [jesusfrancisco.espinoza@unison.mx](mailto:jesusfrancisco.espinoza@unison.mx)  
+**Atención presencial:** Departamento de Matemáticas, edificio 3K-1, planta baja
 
-Las inclusiones fundamentales son
+### Libro público del curso
 
-$$
-\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}.
-$$
+Este libro se construirá progresivamente durante el semestre. Reunirá explicaciones, ejemplos, actividades, orientaciones y ejercicios adicionales. Está pensado para permitir el repaso autónomo, pero no sustituye la participación en clase ni la formulación oportuna de dudas.
 
-Cuando se pida clasificar un número, conviene indicar el conjunto numérico **más específico** de los estudiados. En particular, si es irracional, se indicará que pertenece a $\mathbb{R}\setminus\mathbb{Q}$.
+- [Página principal del libro](../index.qmd)
+- [Identificación de los grupos](../curso/identificacion.qmd)
+- [Calendario del curso](../curso/calendario.qmd)
+- [Evaluación y asistencia](../curso/evaluacion-asistencia.qmd)
 
-### Propiedades de las operaciones
+### Microsoft Teams
 
-Para $a,b,c\in\mathbb{R}$ se cumplen, entre otras, las siguientes propiedades.
+Teams será el medio institucional complementario para avisos, comunicación por chat y materiales que, por su tamaño o condiciones de acceso, no deban alojarse en el sitio público. Las clases son presenciales, salvo que se comunique expresamente una disposición distinta.
 
-| Propiedad | Suma | Multiplicación |
+| Programa y grupo | Equipo | Código temporal |
 |---|---|---|
-| Cerradura | $a+b\in\mathbb{R}$ | $ab\in\mathbb{R}$ |
-| Conmutatividad | $a+b=b+a$ | $ab=ba$ |
-| Asociatividad | $(a+b)+c=a+(b+c)$ | $(ab)c=a(bc)$ |
-| Identidad | $a+0=a$ | $a\cdot 1=a$ |
-| Inverso | $a+(-a)=0$ | $a\cdot a^{-1}=1$, si $a\neq0$ |
+| IMA, grupo 21 | `[2026-2] 22017-Álgebra (IMA)` | **`{{< var grupos.ima.codigo_teams >}}`** |
+| LTE, grupo 29 | `[2026-2] 22017-Álgebra (LTE)` | **`{{< var grupos.lte.codigo_teams >}}`** |
 
-La propiedad distributiva conecta ambas operaciones:
+Para incorporarse, se debe ingresar a Teams con la **cuenta institucional**, elegir la opción para unirse mediante código y comprobar que el nombre del equipo corresponde al programa y grupo de inscripción. Los códigos son temporales; la [página de acceso a Teams](../curso/acceso-teams.qmd) conservará la información vigente.
+
+## Contenidos y relación entre las unidades
+
+El programa oficial comprende seis unidades:
+
+| Unidad | Contenido | Horas oficiales |
+|---:|---|---:|
+| 1 | Números reales y complejos | 15 |
+| 2 | Polinomios y raíces | 20 |
+| 3 | Sistemas de ecuaciones lineales | 10 |
+| 4 | Matrices | 15 |
+| 5 | Conceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales | 5 |
+| 6 | Transformaciones lineales en el plano | 15 |
+
+Las unidades no son independientes. Las propiedades de los números sostienen el trabajo con expresiones y polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y las matrices permiten describir transformaciones lineales. El [temario y los resultados de aprendizaje](../curso/contenidos.qmd) pueden consultarse en la sección de información del curso.
+
+## Evaluación
+
+La calificación se integrará mediante **cinco exámenes parciales**, cada uno con una ponderación de 20%:
 
 $$
-a(b+c)=ab+ac.
+\text{Calificación}=0.20P_1+0.20P_2+0.20P_3+0.20P_4+0.20P_5.
 $$
 
-::: {.callout-caution title="Una condición que no debe omitirse"}
-El inverso multiplicativo $a^{-1}=1/a$ existe en $\mathbb{R}$ únicamente cuando $a\neq0$. La división entre cero no está definida.
+donde $P_i$ es la calificación obtenida en el parcial $i$.
+
+| Parcial | Contenido principal | Asesoría grupal | Examen | Ponderación |
+|---:|---|---|---|---:|
+| 1 | Unidad 1 | Jueves 27 de agosto | Viernes 28 de agosto | 20% |
+| 2 | Unidad 2 | Jueves 17 de septiembre | Viernes 18 de septiembre | 20% |
+| 3 | Unidad 3 | Jueves 15 de octubre | Viernes 16 de octubre | 20% |
+| 4 | Unidad 4 | Jueves 5 de noviembre | Viernes 6 de noviembre | 20% |
+| 5 | Unidades 5 y 6 | Jueves 26 de noviembre | Viernes 27 de noviembre | 20% |
+
+El día hábil anterior a cada parcial se dedicará a una **asesoría grupal presencial** en el horario ordinario. Las actividades de clase son formativas y no tienen una ponderación independiente, pero constituyen la práctica necesaria para preparar los exámenes.
+
+### Exámenes de reposición
+
+Del **30 de noviembre al 4 de diciembre**, durante la semana institucional de evaluación ordinaria, se aplicarán reposiciones conforme al calendario que se comunique oportunamente. La reposición permitirá:
+
+- presentar un parcial que no se haya realizado en la fecha ordinaria; o
+- intentar mejorar la calificación de un parcial ya presentado.
+
+Si el segundo resultado es menor que el primero, se conservará la calificación más alta. La evaluación extraordinaria, cuando corresponda conforme a la normativa institucional, será global.
+
+## Asistencia
+
+Para conservar el derecho a evaluación ordinaria se requiere asistir al menos al **75% de las sesiones**. Con base en las 80 horas del espacio educativo, se establece un máximo de **20 inasistencias**.
+
+::: {.callout-warning title="La asistencia es un requisito independiente"}
+Una inasistencia no descuenta puntos de un examen; sin embargo, acumular 21 inasistencias implica no cumplir el mínimo de asistencia requerido para la evaluación ordinaria. Cada estudiante debe llevar su propio control.
 :::
 
-### Igualdad y transformaciones equivalentes
+El registro se realizará con base en la presencia efectiva. Si una situación médica, familiar o personal afecta la continuidad académica, conviene comunicarla oportunamente para recibir orientación; esa comunicación no modifica por sí misma el registro de asistencia.
 
-Resolver una ecuación significa determinar todos los valores que hacen verdadera la igualdad. Para conservar las soluciones podemos:
+## Fechas adicionales que deben tenerse presentes
 
-- sumar o restar la misma cantidad en ambos miembros;
-- multiplicar o dividir ambos miembros por la misma cantidad distinta de cero; y
-- sustituir una expresión por otra algebraicamente equivalente.
+- **Miércoles 16 de septiembre:** día no laborable.
+- **Miércoles 23 de septiembre:** límite institucional de bajas voluntarias.
+- **Del lunes 28 de septiembre al viernes 2 de octubre:** trabajo autónomo formativo; no habrá sesiones presenciales y no se introducirá contenido nuevo.
+- **Lunes 2 de noviembre:** día no laborable.
+- **Lunes 16 de noviembre:** día no laborable.
+- **Viernes 27 de noviembre:** último día lectivo y Parcial 5.
+- **Del lunes 30 de noviembre al viernes 4 de diciembre:** reposiciones.
 
-Estas operaciones no son reglas aisladas: se apoyan en las propiedades anteriores.
+Cualquier ajuste posterior se comunicará en clase y mediante los canales institucionales del curso.
 
-## Ejemplos
+## Forma habitual de trabajo
 
-### Ejemplo 1. Clasificación
+En lo posible, cada clase tendrá tres momentos:
 
-Clasifiquemos cada número en el conjunto numérico más específico posible:
+1. **Explicación inicial.** Durante aproximadamente 15 a 20 minutos se introducirán definiciones, propiedades, notación y condiciones de uso. Por ello es especialmente importante llegar puntualmente.
+2. **Ejemplos y contraejemplos.** Se mostrarán procedimientos razonados, verificaciones y errores frecuentes.
+3. **Actividad.** La parte final, alrededor de 30 minutos, se destinará a ejercicios individuales, en pareja o en equipos de tres integrantes.
 
-| Número | Clasificación | Razón |
-|---:|---|---|
-| $0$ | $\mathbb{N}$ | Pertenece a los naturales bajo la convención del curso. |
-| $-7$ | $\mathbb{Z}$ | Es entero, pero no natural. |
-| $\frac34$ | $\mathbb{Q}$ | Es cociente de enteros. |
-| $\sqrt9=3$ | $\mathbb{N}$ | Conviene simplificar antes de clasificar. |
-| $\sqrt2$ | $\mathbb{R}\setminus\mathbb{Q}$ | Es irracional. |
+Cuando el libro incluya resultados u orientaciones, deben consultarse **después de intentar los ejercicios**. El objetivo no es sólo obtener una respuesta, sino explicar el procedimiento y comprobar que el resultado es válido.
 
-### Ejemplo 2. Uso de la distributividad
+## Texto principal y bibliografía
 
-Simplifiquemos
+El texto de referencia principal es *Álgebra superior*, de Humberto Cárdenas, Emilio Lluis, Francisco Raggi y Francisco Tomás [@cardenas1990]. Hay ejemplares disponibles en las bibliotecas de la Universidad. El material del sitio es de elaboración propia para el curso y no reproduce ni sustituye el libro de texto. La [bibliografía completa](../recursos/bibliografia.qmd) incluye fuentes adicionales para cada bloque.
 
-$$
-4(2x-3)-2(x+5).
-$$
+## Panorama matemático presentado
 
-Aplicando la propiedad distributiva:
+Como anticipo del primer bloque, se recordó la cadena de inclusiones
 
 $$
-4(2x-3)-2(x+5)=8x-12-2x-10.
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
 $$
 
-Después se agrupan términos semejantes:
+Los números naturales, enteros, racionales e irracionales forman parte de los números reales. Por ejemplo, $-8$, $\sqrt7$ y $\pi$ son números reales, aunque pertenecen a subconjuntos distintos.
+
+Los números complejos amplían a los reales. Se escriben como
 
 $$
-8x-2x-12-10=6x-22.
+z=a+bi,\qquad a,b\in\mathbb R,\qquad i^2=-1.
 $$
 
-### Ejemplo 3. Resolución y verificación
-
-Resolvamos
+Esta ampliación permite resolver ecuaciones que no tienen solución real. El ejemplo considerado fue
 
 $$
-3(2x-1)-4(x+2)=7.
+x^2+1=0.
 $$
 
-Primero distribuimos y reducimos términos semejantes:
+Si $x$ es real, entonces $x^2\ge 0$ y, por tanto, $x^2+1\ge1$; la ecuación no tiene raíces reales. En cambio, en $\mathbb C$ se obtiene
 
 $$
-6x-3-4x-8=7,
+x^2=-1 \quad\Longrightarrow\quad x=i\quad\text{o}\quad x=-i,
 $$
 
-$$
-2x-11=7.
-$$
-
-Sumamos $11$ en ambos miembros:
+de modo que
 
 $$
-2x=18.
+x^2+1=(x-i)(x+i).
 $$
 
-Como $2\neq0$, dividimos ambos miembros entre $2$ y obtenemos $x=9$.
+No aparece una sola raíz, sino **dos soluciones complejas**, $i$ y $-i$. Más adelante, el teorema fundamental del álgebra precisará esta idea: todo polinomio no constante de grado $n$ con coeficientes complejos puede factorizarse en $n$ factores lineales sobre $\mathbb C$, contando multiplicidades.
 
-Para verificar, sustituimos en la ecuación original:
-
-$$
-3(2\cdot9-1)-4(9+2)=3(17)-4(11)=51-44=7.
-$$
-
-La igualdad se cumple, por lo que la solución es correcta.
-
-### Un error frecuente
-
-En general,
-
-$$
-\sqrt{a+b}\neq\sqrt a+\sqrt b.
-$$
-
-Basta un contraejemplo: si $a=b=1$, entonces $\sqrt{1+1}=\sqrt2$, mientras que $\sqrt1+\sqrt1=2$. Como $\sqrt2\neq2$, la supuesta regla es falsa.
-
-## Actividad
-
-::: {.callout-important title="Trabajo de la sesión · 30 minutos"}
-Resuelva primero de manera individual. Después compare procedimientos con una pareja y acuerden una justificación breve para cada respuesta.
+::: {.callout-note title="Distinción conceptual"}
+Los números complejos sí constituyen una ampliación de los números reales. Las matrices que se estudiarán después no son un sistema numérico “más grande”: son arreglos de escalares que permiten representar sistemas de ecuaciones y transformaciones lineales.
 :::
 
-### Parte A. Conjuntos y propiedades
+## Actividad de seguimiento
 
-1. Clasifique en el conjunto más pequeño posible:
-   $$
-   -12,\qquad \frac{-18}{6},\qquad 0.125,\qquad \sqrt{49},\qquad \sqrt5.
-   $$
-2. Indique la propiedad que justifica cada igualdad:
-   
-   a. $7+x=x+7$  
-   b. $(ab)c=a(bc)$  
-   c. $5(y-2)=5y-10$  
-   d. $r+0=r$
-3. Explique por qué $0$ no tiene inverso multiplicativo.
+Antes de la siguiente clase:
 
-### Parte B. Cálculo algebraico
+1. Acceda al libro y guarde el enlace para consulta frecuente.
+2. Incorpórese al equipo de Teams que corresponde a su grupo mediante la cuenta institucional.
+3. Registre las fechas de los cinco parciales, las asesorías previas y la semana de reposiciones.
+4. Revise las secciones de evaluación, asistencia y calendario; anote cualquier duda concreta.
 
-4. Simplifique:
-   
-   a. $5(3x-2)-3(x+4)$  
-   b. $2(4-3y)+7(y-1)$
-5. Resuelva y verifique:
-   
-   a. $4(x-3)+2=3x+7$  
-   b. $5-2(3x-1)=4(x+2)-1$
-6. Construya un contraejemplo para mostrar que $(a+b)^2=a^2+b^2$ no es una identidad.
+## Próxima sesión
 
-::: {.callout-note collapse="true" title="Resultados para comprobar después del intento"}
-1. $-12\in\mathbb Z$; $-18/6=-3\in\mathbb Z$; $0.125=1/8\in\mathbb Q$; $\sqrt{49}=7\in\mathbb N$; $\sqrt5\in\mathbb R\setminus\mathbb Q$.
-2. Conmutatividad de la suma; asociatividad de la multiplicación; distributividad; identidad aditiva.
-3. Para todo $b\in\mathbb R$ se tiene $0b=0$: en efecto, $0b=(0+0)b=0b+0b$, y al restar $0b$ en ambos miembros se obtiene $0=0b$. Por tanto, si existiera $b$ con $0b=1$, se tendría $0=1$, contradicción.
-4. a. $12x-22$; b. $1+y$.
-5. a. $x=17$; b. $x=0$.
-6. Por ejemplo, $a=b=1$: $(1+1)^2=4$, pero $1^2+1^2=2$.
-:::
+**Martes 11 de agosto:** clasificación de números reales; relaciones entre $\mathbb N$, $\mathbb Z$, $\mathbb Q$ y $\mathbb R$; recta real, orden e intervalos; y diagnóstico breve de dificultades operativas.
 
 ## Cierre
 
-- Los conjuntos numéricos se organizan mediante inclusiones.
-- Las transformaciones algebraicas se justifican por propiedades de las operaciones y de la igualdad.
-- Verificar una solución es parte del procedimiento, no un paso opcional.
-
-## Para practicar
-
-1. Determine si cada afirmación es verdadera o falsa y justifique: $\mathbb Z\subseteq\mathbb Q$; $\mathbb Q\subseteq\mathbb Z$; $\sqrt{16}\notin\mathbb N$.
-2. Simplifique $3(2x-5)-4(1-x)+2$.
-3. Resuelva $2(3x+1)-5=x+12$ y compruebe el resultado.
-4. Encuentre un contraejemplo para $\frac{a+b}{c+d}=\frac ac+\frac bd$.
+- El curso combina práctica algebraica, justificación y verificación de resultados.
+- Los cinco parciales constituyen el 100% de la calificación y cada uno cuenta con una asesoría grupal previa.
+- El libro público y Teams cumplen funciones complementarias y deben consultarse durante todo el semestre.
+- La ecuación $x^2+1=0$ anticipa por qué será necesario pasar de $\mathbb R$ a $\mathbb C$.
