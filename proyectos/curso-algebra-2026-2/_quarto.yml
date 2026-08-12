@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _site
+  resources:
+    - mathjax/**
 
 lang: es
 language:
@@ -63,7 +65,9 @@ format:
     theme:
       - cosmo
       - styles.scss
-    html-math-method: mathjax
+    html-math-method:
+      method: mathjax
+      url: mathjax/tex-chtml-full.js
     toc: true
     toc-depth: 3
     number-sections: false
@@ -73,6 +77,8 @@ format:
     smooth-scroll: true
     citation-hover: true
     footnotes-hover: true
+
+mathjax: false
 
 execute:
   freeze: auto
