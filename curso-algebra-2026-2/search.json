@@ -633,6 +633,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-12-sesion-03.html",
+    "href": "sesiones/2026-08-12-sesion-03.html",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "",
+    "text": "Simplificación y equivalencia\nSimplificar una expresión consiste en sustituirla por otra que tenga el mismo valor y sea más conveniente para efectuar cálculos o reconocer sus propiedades. Una expresión más corta no es necesariamente equivalente a la original: cada transformación debe respetar las operaciones y las restricciones bajo las cuales está definida.\nDos expresiones son equivalentes en un conjunto \\(D\\) si ambas están definidas y tienen el mismo valor para todo elemento de \\(D\\). El conjunto \\(D\\) forma parte de la afirmación. Por ejemplo,\n\\[\nx^0=1\n\\]\nes válido para \\(x\\ne0\\), pero no permite asignar un valor a \\(0^0\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#jerarquía-de-operaciones",
+    "href": "sesiones/2026-08-12-sesion-03.html#jerarquía-de-operaciones",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Jerarquía de operaciones",
+    "text": "Jerarquía de operaciones\nCuando una expresión contiene varias operaciones, se procede en el siguiente orden:\n\nsignos de agrupación, desde los más internos;\npotencias y raíces;\nmultiplicaciones y divisiones, de izquierda a derecha;\nsumas y restas, de izquierda a derecha.\n\nLa barra de una fracción agrupa por separado todo el numerador y todo el denominador. Asimismo, el signo negativo no forma parte de la base de una potencia a menos que se incluya entre paréntesis:\n\\[\n-3^2=-(3^2)=-9,\n\\qquad\n(-3)^2=9.\n\\]\nPor ejemplo,\n\\[\n2-3\\left[4-(1+2)^2\\right]+\\frac{8}{2^2}\n\\]\nse evalúa como\n\\[\n2-3(4-9)+\\frac84\n=2-3(-5)+2\n=19.\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#potencias-de-exponente-entero",
+    "href": "sesiones/2026-08-12-sesion-03.html#potencias-de-exponente-entero",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Potencias de exponente entero",
+    "text": "Potencias de exponente entero\nSi \\(n\\) es un entero positivo, la potencia \\(a^n\\) representa el producto de \\(n\\) factores iguales a \\(a\\):\n\\[\na^n=\\underbrace{a\\cdot a\\cdots a}_{n\\text{ factores}}.\n\\]\nPara extender esta notación a los exponentes cero y negativos se define\n\\[\na^0=1,\n\\qquad\na^{-n}=\\frac{1}{a^n},\n\\qquad a\\ne0.\n\\]\nEn particular, un exponente negativo indica un recíproco; no convierte por sí mismo la potencia en un número negativo.\nSean \\(m,n\\in\\mathbb Z\\). En cada una de las leyes siguientes se supone que todas las potencias involucradas están definidas:\n\n\n\n\n\n\n\nLey\nCondiciones\n\n\n\n\n\\(a^m a^n=a^{m+n}\\)\nTodas las potencias involucradas deben estar definidas\n\n\n\\(\\dfrac{a^m}{a^n}=a^{m-n}\\)\n\\(a\\ne0\\)\n\n\n\\((a^m)^n=a^{mn}\\)\nTodas las potencias involucradas deben estar definidas\n\n\n\\((ab)^n=a^n b^n\\)\nSi \\(n\\le0\\), \\(a\\ne0\\) y \\(b\\ne0\\)\n\n\n\\(\\left(\\dfrac ab\\right)^n=\\dfrac{a^n}{b^n}\\)\n\\(b\\ne0\\); además, si \\(n\\le0\\), \\(a\\ne0\\)\n\n\n\nEstas leyes se aplican a productos, cocientes y potencias de potencias. No existe una ley análoga para una suma:\n\\[\na^m+a^n\\ne a^{m+n}\n\\]\nen general.\n\nSimplificación de un producto de potencias\nPara \\(x\\ne0\\) y \\(y\\ne0\\),\n\\[\n(3x^{-2}y^3)(2x^5y^{-1})\n=6x^{-2+5}y^{3-1}\n=6x^3y^2.\n\\]\nAunque los exponentes negativos desaparecen del resultado, las restricciones \\(x\\ne0\\) y \\(y\\ne0\\) provienen de la expresión original y deben conservarse.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#raíces-n-ésimas",
+    "href": "sesiones/2026-08-12-sesion-03.html#raíces-n-ésimas",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Raíces n-ésimas",
+    "text": "Raíces n-ésimas\nSea \\(n\\ge2\\) un número entero. La expresión \\(\\sqrt[n]{a}\\) representa la raíz n-ésima principal de \\(a\\).\n\nSi \\(n\\) es par, se requiere \\(a\\ge0\\) y \\(\\sqrt[n]{a}\\) es el único número no negativo cuya potencia \\(n\\)-ésima es \\(a\\).\nSi \\(n\\) es impar, \\(a\\) puede ser cualquier número real y \\(\\sqrt[n]{a}\\) es el único número real cuya potencia \\(n\\)-ésima es \\(a\\).\n\nPor ejemplo,\n\\[\n\\sqrt{25}=5,\n\\qquad\n\\sqrt[3]{-8}=-2.\n\\]\nEl símbolo \\(\\sqrt{25}\\) designa solamente la raíz cuadrada principal, que es \\(5\\). En cambio, la ecuación \\(x^2=25\\) tiene las dos soluciones \\(x=5\\) y \\(x=-5\\).\nLa paridad del índice determina la forma correcta de deshacer una potencia:\n\\[\n\\sqrt[n]{a^n}=\n\\begin{cases}\n|a|, & n\\text{ par},\\\\\na, & n\\text{ impar}.\n\\end{cases}\n\\]\nEn particular,\n\\[\n\\sqrt{a^2}=|a|,\n\\qquad\n\\sqrt[3]{a^3}=a.\n\\]\n\nProductos y cocientes de radicales\nSi \\(n\\) es par y \\(a,b\\ge0\\), entonces\n\\[\n\\sqrt[n]{ab}=\\sqrt[n]{a}\\sqrt[n]{b}.\n\\]\nPara el cociente se requiere además \\(b&gt;0\\):\n\\[\n\\sqrt[n]{\\frac ab}=\\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}.\n\\]\nSi \\(n\\) es impar, las mismas identidades son válidas para \\(a,b\\in\\mathbb R\\), con \\(b\\ne0\\) en el cociente.\nEstas propiedades corresponden a productos y cocientes; no se distribuyen sobre sumas o restas. En general,\n\\[\n\\sqrt{a+b}\\ne\\sqrt a+\\sqrt b.\n\\]\n\n\nSimplificación de radicales\nUn radical se simplifica separando del radicando una potencia perfecta del mismo índice. Por ejemplo,\n\\[\n\\sqrt{72}\n=\\sqrt{36\\cdot2}\n=6\\sqrt2,\n\\]\ny\n\\[\n\\sqrt[3]{-54}\n=\\sqrt[3]{(-27)\\cdot2}\n=-3\\sqrt[3]{2}.\n\\]\nLos radicales semejantes tienen el mismo índice y el mismo radicando después de simplificarlos. Por ello,\n\\[\n3\\sqrt8-\\sqrt{18}\n=3(2\\sqrt2)-3\\sqrt2\n=3\\sqrt2.\n\\]\n\n\nExponentes racionales\nSea \\(p/q\\) un número racional no entero escrito en forma irreducible, con \\(p\\in\\mathbb Z\\), \\(q\\in\\mathbb N\\) y \\(q\\ge2\\). Se define\n\\[\na^{p/q}=\\left(\\sqrt[q]{a}\\right)^p\n\\]\nsiempre que la raíz sea real. Cuando \\(q\\) es par se requiere \\(a\\ge0\\); cuando \\(q\\) es impar, \\(a\\) puede ser cualquier número real. Si \\(p&lt;0\\), también se exige \\(a\\ne0\\).\nPor ejemplo,\n\\[\n27^{2/3}=\\left(\\sqrt[3]{27}\\right)^2=3^2=9,\n\\]\nmientras que \\((-16)^{1/2}\\) no es un número real.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#restricciones-de-las-expresiones",
+    "href": "sesiones/2026-08-12-sesion-03.html#restricciones-de-las-expresiones",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Restricciones de las expresiones",
+    "text": "Restricciones de las expresiones\nEl dominio natural de una expresión algebraica es el conjunto de números reales para los cuales todas sus operaciones están definidas. Dos restricciones aparecen con especial frecuencia:\n\nningún denominador puede ser cero;\nel radicando de una raíz de índice par debe ser no negativo.\n\nSi una raíz de índice par se encuentra en un denominador, su radicando debe ser estrictamente positivo.\n\n\n\nExpresión\nDominio natural\n\n\n\n\n\\(x^{-3}\\)\n\\(x\\ne0\\)\n\n\n\\(\\sqrt{2x-1}\\)\n\\(x\\ge\\dfrac12\\)\n\n\n\\(\\dfrac{1}{\\sqrt{2x-1}}\\)\n\\(x&gt;\\dfrac12\\)\n\n\n\\(\\sqrt[3]{2x-1}\\)\n\\(x\\in\\mathbb R\\)\n\n\n\nLas siguientes igualdades muestran por qué las restricciones no deben separarse de una simplificación:\n\\[\nx^2x^{-2}=1,\n\\qquad x\\ne0,\n\\]\ny\n\\[\n\\sqrt{9(x-2)^2}=3|x-2|,\n\\qquad x\\in\\mathbb R.\n\\]\nEn la primera igualdad, la expresión de la izquierda no está definida en \\(x=0\\), aunque la expresión final sí lo esté. En la segunda, el valor absoluto es indispensable cuando \\(x&lt;2\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#ejemplos",
+    "href": "sesiones/2026-08-12-sesion-03.html#ejemplos",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Potencias y restricciones\nSimplifiquemos\n\\[\n\\frac{(a^2b^{-1})^3}{a^{-1}b^2}.\n\\]\nLa expresión original exige \\(a\\ne0\\) y \\(b\\ne0\\). Aplicando las leyes de los exponentes,\n\\[\n\\frac{a^6b^{-3}}{a^{-1}b^2}\n=a^{6-(-1)}b^{-3-2}\n=a^7b^{-5}\n=\\frac{a^7}{b^5}.\n\\]\nPor tanto,\n\\[\n\\frac{(a^2b^{-1})^3}{a^{-1}b^2}\n=\\frac{a^7}{b^5},\n\\qquad a\\ne0,\n\\quad b\\ne0.\n\\]\n\n\nEjemplo 2. Radicales semejantes\nPara simplificar\n\\[\n\\sqrt{180}-2\\sqrt{20}+\\sqrt{45},\n\\]\nextraemos los cuadrados perfectos:\n\\[\n\\sqrt{180}=6\\sqrt5,\n\\qquad\n\\sqrt{20}=2\\sqrt5,\n\\qquad\n\\sqrt{45}=3\\sqrt5.\n\\]\nAsí,\n\\[\n\\sqrt{180}-2\\sqrt{20}+\\sqrt{45}\n=6\\sqrt5-4\\sqrt5+3\\sqrt5\n=5\\sqrt5.\n\\]\n\n\nEjemplo 3. Valor absoluto en una raíz\nPara todo \\(x\\in\\mathbb R\\),\n\\[\n\\sqrt{9(x-2)^2}\n=\\sqrt9\\sqrt{(x-2)^2}\n=3|x-2|.\n\\]\nEl resultado puede escribirse por casos:\n\\[\n3|x-2|=\n\\begin{cases}\n3(x-2), & x\\ge2,\\\\\n3(2-x), & x&lt;2.\n\\end{cases}\n\\]\n\n\nEjemplo 4. Comprobación de una igualdad\nLa igualdad\n\\[\n\\sqrt{a+b}=\\sqrt a+\\sqrt b\n\\]\nno es una propiedad de los radicales. Basta tomar \\(a=b=1\\):\n\\[\n\\sqrt{1+1}=\\sqrt2\n\\qquad\\text{y}\\qquad\n\\sqrt1+\\sqrt1=2.\n\\]\nComo \\(\\sqrt2\\ne2\\), este caso constituye un contraejemplo y demuestra que la igualdad no es válida en general.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#errores-frecuentes",
+    "href": "sesiones/2026-08-12-sesion-03.html#errores-frecuentes",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nConfundir \\(-a^n\\) con \\((-a)^n\\).\nInterpretar un exponente negativo como un signo negativo: \\(a^{-n}=\\dfrac1{a^n}\\), no \\(-a^n\\).\nSumar exponentes cuando las potencias se están sumando: \\(a^m+a^n\\) no se reduce a \\(a^{m+n}\\).\nOlvidar elevar todos los factores: \\((2x^3)^2=4x^6\\), no \\(2x^6\\).\nEscribir \\(\\sqrt{a^2}=a\\) sin considerar que \\(a\\) puede ser negativo; la identidad correcta es \\(\\sqrt{a^2}=|a|\\).\nDistribuir una raíz sobre una suma o una resta.\nOmitir las restricciones de la expresión original después de simplificarla.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#actividad",
+    "href": "sesiones/2026-08-12-sesion-03.html#actividad",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\n\nEvalúe respetando la jerarquía de operaciones:\n\n\\(-2^4+(-2)^3+3^0\\).\n\n\\(18\\div3\\cdot2-(5-7)^2\\).\n\nSimplifique y escriba el resultado con exponentes positivos. Indique las restricciones de la expresión original:\n\\[\n\\frac{(x^2y^{-1})^3}{x^{-1}y^2}.\n\\]\nSimplifique:\n\n\\(\\sqrt{48}+\\sqrt{75}\\).\n\n\\(\\sqrt[3]{54x^3}\\).\n\nDetermine el dominio natural de cada expresión:\n\n\\(\\sqrt{5-2x}\\).\n\n\\(\\dfrac1{\\sqrt{x+4}}\\).\n\nDetermine cuáles igualdades son falsas y corríjalas cuando exista una identidad general que las sustituya:\n\n\\((u^3)^2=u^5\\).\n\n\\(\\sqrt{t^2}=t\\).\n\n\\(r^{-4}=-r^4\\).\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n\nSe obtiene\n\\[\n-2^4+(-2)^3+3^0=-16-8+1=-23,\n\\]\ny, al efectuar multiplicación y división de izquierda a derecha,\n\\[\n18\\div3\\cdot2-(5-7)^2=6\\cdot2-4=8.\n\\]\nSe tiene\n\\[\n\\frac{(x^2y^{-1})^3}{x^{-1}y^2}\n=\\frac{x^6y^{-3}}{x^{-1}y^2}\n=x^7y^{-5}\n=\\frac{x^7}{y^5},\n\\]\ncon \\(x\\ne0\\) y \\(y\\ne0\\).\nAl extraer cuadrados y cubos perfectos,\n\\[\n\\sqrt{48}+\\sqrt{75}\n=4\\sqrt3+5\\sqrt3\n=9\\sqrt3,\n\\]\ny\n\\[\n\\sqrt[3]{54x^3}\n=\\sqrt[3]{27\\cdot2\\cdot x^3}\n=3x\\sqrt[3]{2}.\n\\]\nLas condiciones son\n\\[\n5-2x\\ge0,\n\\qquad\nx+4&gt;0,\n\\]\nrespectivamente. Por tanto, los dominios son\n\\[\n\\left(-\\infty,\\frac52\\right],\n\\qquad\n(-4,\\infty).\n\\]\nLas tres igualdades son falsas en general. Se corrigen como\n\\[\n(u^3)^2=u^6,\n\\qquad\n\\sqrt{t^2}=|t|,\n\\qquad\nr^{-4}=\\frac1{r^4}\\quad(r\\ne0).\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-12-sesion-03.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-12-sesion-03.html#ejercicios-para-practicar",
+    "title": "Sesión 03. Potencias, radicales y expresiones equivalentes",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nEvalúe:\n\n\\(4-2(3-5)^2+\\dfrac{18}{3^2}\\).\n\n\\((-3)^2-3^2\\).\n\n\\(5-[2-3(1-4)]\\).\n\nSimplifique y escriba el resultado con exponentes positivos. Conserve las restricciones necesarias:\n\n\\((2x^{-3}y^2)^2\\).\n\n\\(\\dfrac{a^4b^{-2}}{a^{-1}b^3}\\).\n\n\\((m^2n^{-1})^{-2}\\).\n\nSimplifique:\n\n\\(\\sqrt{98}-\\sqrt8\\).\n\n\\(2\\sqrt{12}+\\sqrt{27}\\).\n\n\\(\\sqrt[3]{128}\\).\n\nCalcule, cuando el resultado sea un número real:\n\\[\n81^{3/4},\n\\qquad\n32^{2/5},\n\\qquad\n(-27)^{2/3},\n\\qquad\n16^{-1/2}.\n\\]\nDetermine el dominio natural de cada expresión:\n\\[\n\\sqrt{3x+6},\n\\qquad\n\\frac1{\\sqrt{7-x}},\n\\qquad\n(x-1)^{-2}.\n\\]\nDetermine si cada igualdad es válida para todos los valores reales para los cuales ambos lados están definidos. Si es falsa, proporcione un contraejemplo.\n\n\\(a^2a^3=a^6\\).\n\n\\(\\sqrt{a^2+b^2}=a+b\\).\n\n\\((ab)^{-2}=a^{-2}b^{-2}\\).\n\n\\(\\sqrt[3]{x^3}=x\\).\n\nDetermine el mayor subconjunto de \\(\\mathbb R\\) en el que son equivalentes las expresiones de cada par:\n\n\\(x^2x^{-2}\\) y \\(1\\).\n\n\\(\\sqrt{9(x-2)^2}\\) y \\(3(x-2)\\).\n\nSimplifique \\(\\sqrt{16(x+1)^2}\\) y escriba el resultado por casos.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Sesión 03. Potencias, radicales y expresiones equivalentes</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -640,7 +739,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -651,7 +750,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -662,7 +761,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -673,7 +772,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -684,7 +783,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -695,7 +794,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -706,7 +805,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -717,7 +816,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -728,7 +827,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -739,7 +838,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -750,7 +849,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -761,7 +860,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -772,7 +871,7 @@
     "text": "Símbolos frecuentes\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -783,7 +882,7 @@
     "text": "Criterio editorial\nTodo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -794,7 +893,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -805,7 +904,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -816,7 +915,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
