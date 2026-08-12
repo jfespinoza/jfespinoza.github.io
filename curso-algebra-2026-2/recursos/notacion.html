@@ -339,8 +339,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#conjuntos-numéricos" id="toc-conjuntos-numéricos" class="nav-link active" data-scroll-target="#conjuntos-numéricos">Conjuntos numéricos</a></li>
-  <li><a href="#símbolos-frecuentes" id="toc-símbolos-frecuentes" class="nav-link" data-scroll-target="#símbolos-frecuentes">Símbolos frecuentes</a></li>
-  <li><a href="#criterio-editorial" id="toc-criterio-editorial" class="nav-link" data-scroll-target="#criterio-editorial">Criterio editorial</a></li>
+  <li><a href="#elementos-y-conjuntos" id="toc-elementos-y-conjuntos" class="nav-link" data-scroll-target="#elementos-y-conjuntos">Elementos y conjuntos</a></li>
+  <li><a href="#operaciones-y-relaciones" id="toc-operaciones-y-relaciones" class="nav-link" data-scroll-target="#operaciones-y-relaciones">Operaciones y relaciones</a></li>
+  <li><a href="#intervalos" id="toc-intervalos" class="nav-link" data-scroll-target="#intervalos">Intervalos</a></li>
   </ul>
 </nav>
     </div>
@@ -393,14 +394,18 @@ window.Quarto = {
 <td>Números reales.</td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span></td>
+<td>Números irracionales.</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(\mathbb C\)</span></td>
 <td>Números complejos.</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="símbolos-frecuentes" class="level2">
-<h2 class="anchored" data-anchor-id="símbolos-frecuentes">Símbolos frecuentes</h2>
+<section id="elementos-y-conjuntos" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-y-conjuntos">Elementos y conjuntos</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -423,11 +428,48 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(A\subseteq B\)</span></td>
-<td><span class="math inline">\(A\)</span> es subconjunto de <span class="math inline">\(B\)</span>.</td>
+<td><span class="math inline">\(A\)</span> es subconjunto de <span class="math inline">\(B\)</span>; todos los elementos de <span class="math inline">\(A\)</span> pertenecen a <span class="math inline">\(B\)</span>.</td>
 </tr>
 <tr class="even">
+<td><span class="math inline">\(A\nsubseteq B\)</span></td>
+<td><span class="math inline">\(A\)</span> no es subconjunto de <span class="math inline">\(B\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A\subsetneq B\)</span></td>
+<td><span class="math inline">\(A\)</span> es subconjunto propio de <span class="math inline">\(B\)</span>: <span class="math inline">\(A\subseteq B\)</span> y <span class="math inline">\(A\ne B\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A\supseteq B\)</span></td>
+<td><span class="math inline">\(A\)</span> contiene a <span class="math inline">\(B\)</span>.</td>
+</tr>
+<tr class="odd">
 <td><span class="math inline">\(A\setminus B\)</span></td>
 <td>Elementos de <span class="math inline">\(A\)</span> que no pertenecen a <span class="math inline">\(B\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operaciones-y-relaciones" class="level2">
+<h2 class="anchored" data-anchor-id="operaciones-y-relaciones">Operaciones y relaciones</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Lectura o uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(|a|\)</span></td>
+<td>Valor absoluto de <span class="math inline">\(a\)</span>; distancia de <span class="math inline">\(a\)</span> al cero en la recta real.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sqrt[n]{a}\)</span></td>
+<td>Raíz real <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(a\)</span>; si <span class="math inline">\(n\)</span> es par, designa la raíz no negativa.</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\Rightarrow\)</span></td>
@@ -444,9 +486,52 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="criterio-editorial" class="level2">
-<h2 class="anchored" data-anchor-id="criterio-editorial">Criterio editorial</h2>
-<p>Todo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.</p>
+<section id="intervalos" class="level2">
+<h2 class="anchored" data-anchor-id="intervalos">Intervalos</h2>
+<p>Sean <span class="math inline">\(a,b\in\mathbb R\)</span> con <span class="math inline">\(a&lt;b\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Conjunto representado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\((a,b)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:a&lt;x&lt;b\}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([a,b]\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:a\le x\le b\}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\([a,b)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:a\le x&lt;b\}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((a,b]\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:a&lt;x\le b\}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((-\infty,b)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x&lt;b\}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\((-\infty,b]\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x\le b\}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((a,\infty)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x&gt;a\}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([a,\infty)\)</span></td>
+<td><span class="math inline">\(\{x\in\mathbb R:x\ge a\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.</p>
 
 
 </section>
