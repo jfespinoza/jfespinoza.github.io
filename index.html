@@ -1,253 +1,348 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diplomado Internacional – Teoría de Grafos y TDA | Material y Proyectos</title>
-  <meta name="description" content="Material del módulo Teoría de Grafos y TDA, procedimiento de entrega de la tarea y proyectos del módulo de aplicaciones." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jesús Francisco Espinoza Fierro | Sitio académico</title>
+  <meta name="description" content="Sitio académico del Dr. Jesús Francisco Espinoza Fierro, profesor-investigador del Departamento de Matemáticas de la Universidad de Sonora.">
+  <meta name="theme-color" content="#123B63">
+  <link rel="canonical" href="https://jfespinoza.github.io/">
   <style>
-    /* Estilo sobrio y legible, sin énfasis tipográfico innecesario */
     :root {
-      --text: #1b1b1f;
-      --muted: #50505a;
-      --bg: #ffffff;
-      --line: #e6e6ea;
-      --link: #0a66c2;
+      --azul: #123b63;
+      --azul-oscuro: #0b2946;
+      --amarillo: #f2b323;
+      --fondo: #f4f6f8;
+      --superficie: #ffffff;
+      --texto: #202832;
+      --secundario: #56616d;
+      --borde: #d8dee5;
+      --sombra: 0 14px 35px rgba(21, 43, 67, 0.08);
+      --radio: 0.6rem;
+      --ancho: 1120px;
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
-      font-size: 1.125rem;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
+      color: var(--texto);
+      background: var(--fondo);
+      font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
-    header { padding: 2.5rem 1rem 1.25rem; border-bottom: 1px solid var(--line); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    /* Nuevos estilos para títulos escalados */
-    h1, h2, h3, h4 {
-      margin: 0 0 .75rem;
-      font-weight: 600; /* Un poco más de peso para destacar en Palatino */
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.7rem 1rem;
+      color: #ffffff;
+      background: var(--azul-oscuro);
+      border-radius: 0.35rem;
+      transform: translateY(-160%);
+      transition: transform 150ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .institutional-bar {
+      height: 0.65rem;
+      background: linear-gradient(to right, var(--azul) 0 84%, var(--amarillo) 84% 100%);
+    }
+
+    .container {
+      width: min(calc(100% - 2.5rem), var(--ancho));
+      margin-inline: auto;
+    }
+
+    header {
+      background: var(--superficie);
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .identity {
+      padding: clamp(3.25rem, 7vw, 5.75rem) 0 clamp(2.75rem, 6vw, 4.75rem);
+    }
+
+    .eyebrow,
+    .category,
+    .period {
+      margin: 0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.095em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow,
+    .category {
+      color: var(--azul);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      overflow-wrap: break-word;
+    }
+
+    h1 {
+      max-width: 870px;
+      margin: 0.55rem 0 0;
+      color: var(--azul-oscuro);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(2.35rem, 6vw, 4.35rem);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.06;
+    }
+
+    .role {
+      margin: 1.35rem 0 0;
+      color: var(--texto);
+      font-size: clamp(1.05rem, 2.2vw, 1.24rem);
+      font-weight: 600;
+    }
+
+    .affiliation {
+      margin: 0.15rem 0 0;
+      color: var(--secundario);
+      font-size: 1.02rem;
+    }
+
+    .summary {
+      max-width: 760px;
+      margin: 1.55rem 0 0;
+      color: var(--secundario);
+      font-size: 1.08rem;
+    }
+
+    main {
+      padding: clamp(3rem, 7vw, 5.5rem) 0;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--azul-oscuro);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 600;
       line-height: 1.2;
     }
-    h1 { font-size: 2.5rem; }   /* Título principal grande */
-    h2 { font-size: 2rem; }     /* Secciones principales */
-    h3 { font-size: 1.5rem; }   /* Encabezados de tarjetas */
-    h4 { font-size: 1.25rem; }  /* Subtítulos menores */
-    p { margin: .75rem 0; }
-    nav ul { display: flex; gap: .75rem; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
-    nav a {
-      display: inline-block; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: .5rem;
-      text-decoration: none; color: var(--link);
+
+    .section-intro {
+      max-width: 680px;
+      margin: 0.55rem 0 0;
+      color: var(--secundario);
     }
-    main { padding: 1.5rem 0 3rem; }
-    section { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
-    .lead { color: var(--muted); }
-    .grid { display: grid; gap: 1rem; }
-    @media (min-width: 800px){ .grid-2 { grid-template-columns: repeat(2, 1fr); } }
-    .card { padding: 1rem; border: 1px solid var(--line); border-radius: .5rem; }
-    .list { padding-left: 1.25rem; }
-    a { color: var(--link); }
-    .actions a { display: inline-block; margin-right: .75rem; text-decoration: none; }
-    .small { font-size: .95rem; color: var(--muted); }
-    footer { padding: 2rem 1rem; color: var(--muted); }
-    .btn {
-      display: inline-block; padding: .6rem .9rem; border-radius: .5rem; border: 1px solid var(--line);
+
+    .project-groups {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2.3rem;
+    }
+
+    .project-group {
+      min-width: 0;
+    }
+
+    .group-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--texto);
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .period {
+      flex: none;
+      color: var(--secundario);
+      letter-spacing: 0.05em;
+    }
+
+    .card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      padding: clamp(1.5rem, 4vw, 2.15rem);
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-top: 0.28rem solid var(--azul);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+    }
+
+    h4 {
+      margin: 0.75rem 0 0;
+      color: var(--azul-oscuro);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: clamp(1.42rem, 3vw, 1.78rem);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .description {
+      margin: 1rem 0 1.6rem;
+      color: var(--secundario);
+    }
+
+    .project-link {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      align-self: flex-start;
+      gap: 0.55rem;
+      margin-top: auto;
+      padding: 0.68rem 1rem;
+      color: #ffffff;
+      background: var(--azul);
+      border: 2px solid var(--azul);
+      border-radius: 0.35rem;
+      font-weight: 700;
+      line-height: 1.2;
       text-decoration: none;
+      transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
     }
-    .project-card { margin-bottom: 1.5rem; }
-    .project-card h4 { margin-top: 1rem; font-weight: 500; }
+
+    .project-link:hover {
+      background: var(--azul-oscuro);
+      border-color: var(--azul-oscuro);
+      transform: translateY(-1px);
+    }
+
+    .project-link:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--amarillo);
+      outline-offset: 3px;
+    }
+
+    footer {
+      padding: 1.8rem 0;
+      color: var(--secundario);
+      background: var(--superficie);
+      border-top: 1px solid var(--borde);
+      font-size: 0.92rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (min-width: 820px) {
+      .project-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(calc(100% - 1.5rem), var(--ancho));
+      }
+
+      .group-heading {
+        display: block;
+      }
+
+      .period {
+        margin-top: 0.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
   </style>
-  <!--
-    Coloque en la raíz del repositorio estos archivos:
-      - Grafos_TDA_Actividad_1.ipynb
-      - Grafos_TDA_Actividad_2.ipynb
-      - Instrucciones-Colab.pdf
-      - Presentacion-Teoria-de-Grafos-y-TDA.pdf  (ajuste el nombre si es otro)
-      - assets/pdf/Presentacion-Proyecto-3-Epilepsia.pdf
-      - assets/pdf/Presentacion-Proyecto-4-Agregaciones-Biologicas.pdf
-      - assets/pdf/Presentacion-Proyecto-5-Series-Tiempo.pdf
-      - assets/notebooks/Proyecto-3-TDA-Epilepsia.ipynb
-      - assets/notebooks/Proyecto-4-TDA-Agregaciones-Biologicas.ipynb
-      - assets/notebooks/Proyecto-5(A)-TDA-BTC-ETH.ipynb
-      - assets/notebooks/Proyecto-5(B)-TDA-Pronostico.ipynb
-    y un archivo vacío llamado .nojekyll
-  -->
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <div class="institutional-bar" aria-hidden="true"></div>
+
   <header>
-    <div class="container">
-      <h1>Diplomado Internacional: Modelado Matemático y Simulaciones</h1>
-      <p style="font-size: 1.2em; color: var(--muted); margin-top: -10px;">Teoría de Grafos y TDA</p>
-      <p class="lead">Material de trabajo, procedimiento de entrega de la tarea y proyectos del módulo de aplicaciones.</p>
-      <nav aria-label="Atajos">
-        <ul>
-          <li><a href="#material">Material de trabajo</a></li>
-          <li><a href="#instrucciones-colab">Instrucciones para usar Colab</a></li>
-          <li><a href="#entrega">Entrega de la tarea</a></li>
-          <li><a href="#presentacion">Presentación del módulo</a></li>
-          <li><a href="#proyectos">Proyectos prácticos</a></li>
-        </ul>
-      </nav>
+    <div class="container identity">
+      <p class="eyebrow">Sitio académico</p>
+      <h1>Dr. Jesús Francisco Espinoza Fierro</h1>
+      <p class="role">Profesor-investigador en matemáticas</p>
+      <p class="affiliation">Departamento de Matemáticas · Universidad de Sonora</p>
+      <p class="summary">Docencia, investigación y formación especializada en matemáticas y sus aplicaciones.</p>
     </div>
   </header>
 
-  <main class="container" id="contenido" role="main">
-    <section id="material" aria-labelledby="tit-material">
-      <h2 id="tit-material">Material de trabajo</h2>
-      <p>Las siguientes libretas se utilizarán para realizar la tarea. Pueden abrirse directamente en Google Colab o descargarse para guardarlas en su Google Drive.</p>
+  <main id="contenido" class="container">
+    <section aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo">Proyectos académicos</h2>
+      <p class="section-intro">Acceso a cursos, materiales de formación y recursos académicos disponibles.</p>
 
-      <div class="grid grid-2" style="margin-top:.75rem;">
-        <article class="card" aria-labelledby="nb1">
-          <h3 id="nb1">Actividad 1: Grafos y modelado</h3>
-          <p class="small">Archivo: Grafos_TDA_Actividad_1.ipynb</p>
-          <p class="actions">
-            <a class="btn" target="_blank" rel="noopener noreferrer"
-               href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/Grafos_TDA_Actividad_1.ipynb">Abrir en Google Colab</a>
-            <a class="btn" href="Grafos_TDA_Actividad_1.ipynb" download>Descargar (.ipynb)</a>
-          </p>
-        </article>
+      <div class="project-groups">
+        <section class="project-group" aria-labelledby="docencia-titulo">
+          <div class="group-heading">
+            <h3 id="docencia-titulo">Docencia universitaria</h3>
+            <p class="period">Semestre 2026-2</p>
+          </div>
+          <article class="card">
+            <p class="category">Curso universitario</p>
+            <h4>Álgebra 2026-2</h4>
+            <p class="description">Libro digital progresivo y autocontenido para los grupos de Ingeniería en Materiales e Ingeniería en Tecnología Electrónica.</p>
+            <a class="project-link" href="https://jfespinoza.github.io/curso-algebra-2026-2/" aria-label="Acceder al curso de Álgebra 2026-2">
+              Acceder al curso <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </section>
 
-        <article class="card" aria-labelledby="nb2">
-          <h3 id="nb2">Actividad 2: TDA básico</h3>
-          <p class="small">Archivo: Grafos_TDA_Actividad_2.ipynb</p>
-          <p class="actions">
-            <a class="btn" target="_blank" rel="noopener noreferrer"
-               href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/Grafos_TDA_Actividad_2.ipynb">Abrir en Google Colab</a>
-            <a class="btn" href="Grafos_TDA_Actividad_2.ipynb" download>Descargar (.ipynb)</a>
-          </p>
-        </article>
-      </div>
-
-      <p class="small">Si Colab solicita permisos, utilice su cuenta de gmail. Para enlaces a Drive, active permisos de lectura para "cualquier persona con el vínculo".</p>
-    </section>
-
-    <section id="instrucciones-colab" aria-labelledby="tit-colab">
-      <h2 id="tit-colab">Instrucciones para usar Colab</h2>
-
-      <div class="card">
-        <h3>Resumen operativo</h3>
-        <ol class="list">
-          <li>Guarde en su Google Drive las dos libretas del módulo. Puede organizarlas en "Mi unidad / Diplomado TDA / Actividades / Actividad 1" y "Actividad 2".</li>
-          <li>Abra cada libreta con Google Colab desde Drive o con los enlaces "Abrir en Google Colab" de esta página.</li>
-          <li>En la primera celda ejecute el montaje de Drive:
-            <pre><code>from google.colab import drive
-drive.mount('/content/drive')</code></pre>
-            Tras autorizar, sus archivos quedarán disponibles bajo <code>/content/drive/MyDrive/...</code>.
-          </li>
-          <li>Ejecute las celdas en orden. Si hay celdas que instalan paquetes, ejecútelas primero y espere a que finalicen.</li>
-          <li>Conserve una copia en su Drive y verifique que no haya errores antes de preparar la evidencia de entrega.</li>
-        </ol>
-
-        <p class="small">Para más detalle, consulte el documento "Instrucciones-Colab.pdf", disponible a continuación.</p>
-        <p class="actions">
-          <a class="btn" href="Instrucciones-Colab.pdf" target="_blank" rel="noopener noreferrer">Abrir el instructivo (PDF)</a>
-          <a class="btn" href="Instrucciones-Colab.pdf" download>Descargar el instructivo</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="entrega" aria-labelledby="tit-entrega">
-      <h2 id="tit-entrega">Entrega de la tarea</h2>
-      <p>La entrega se realizará exclusivamente mediante el formulario de Google Forms indicado abajo. Lea con atención los requisitos y prepare sus archivos antes de enviar.</p>
-
-      <div class="card">
-        <h3>Requisitos de la evidencia</h3>
-        <ul class="list">
-          <li>Un archivo <code>.ipynb</code> por actividad, sin errores de ejecución.</li>
-          <li>Opcionalmente, puede adjuntar un PDF con resultados o capturas pertinentes.</li>
-          <li>Si prefiere compartir enlaces a Drive en lugar de adjuntar archivos, active permisos de lectura para "cualquier persona con el vínculo".</li>
-          <li>Sugerencia de nombre de archivo: <code>Apellido_Nombre_Act1.ipynb</code> y <code>Apellido_Nombre_Act2.ipynb</code>.</li>
-        </ul>
-
-        <h3>Pasos para enviar</h3>
-        <ol class="list">
-          <li>Reúna los archivos de ambas actividades o, en su caso, prepare los enlaces de lectura a Drive.</li>
-          <li>Acceda al formulario de entrega en el enlace que aparece a continuación.</li>
-          <li>Complete sus datos y adjunte los archivos o pegue los enlaces solicitados.</li>
-          <li>Revise el resumen antes de enviar y conserve el comprobante que genera el sistema.</li>
-        </ol>
-
-        <p class="actions" style="margin-top:.5rem;">
-          <a class="btn" target="_blank" rel="noopener noreferrer"
-             href="https://forms.gle/88eeHhJnCM4P4LGf6">Abrir formulario de entrega (Google Forms)</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="presentacion" aria-labelledby="tit-pres">
-      <h2 id="tit-pres">Presentación del módulo</h2>
-      <p>La presentación utilizada en la sesión teórica está disponible en formato PDF.</p>
-      <p class="actions">
-        <a class="btn" href="Presentacion-Teoria-de-Grafos-y-TDA.pdf" target="_blank" rel="noopener noreferrer">Abrir la presentación (PDF)</a>
-        <a class="btn" href="Presentacion-Teoria-de-Grafos-y-TDA.pdf" download>Descargar la presentación</a>
-      </p>
-    </section>
-
-    <section id="proyectos" aria-labelledby="tit-proyectos">
-      <h2 id="tit-proyectos">Módulo de Aplicaciones: Proyectos prácticos</h2>
-      <p>En esta sección se documentan los proyectos desarrollados durante el módulo de aplicaciones. Estos trabajos se enfocan en la implementación práctica y la replicación de metodologías avanzadas de Análisis Topológico de Datos (TDA) aplicadas a problemas complejos en diversas disciplinas científicas y financieras.</p>
-
-      <div class="card project-card">
-        <h3>Proyecto 3: Clasificador topológico para la detección de ataques epilépticos</h3>
-        <p>Implementación de un clasificador topológico basado en la metodología de Piangerelli et al. (2018). Se utiliza la Entropía Persistente para analizar señales de EEG (Electroencefalograma), con el objetivo de distinguir entre actividad cerebral normal y crisis epilépticas, aprovechando los cambios en la complejidad topológica causados por la hiper-sincronización neuronal.</p>
-        <p class="actions">
-          <a class="btn" href="assets/pdf/Presentacion-Proyecto-3-Epilepsia.pdf" target="_blank" rel="noopener noreferrer">Ver Presentación (PDF)</a>
-          <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-3-TDA-Epilepsia.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta en Google Colab</a>
-        </p>
-      </div>
-
-      <div class="card project-card">
-        <h3>Proyecto 4: Análisis topológico de modelos de agregación biológica</h3>
-        <p>Estudio del comportamiento colectivo en modelos de agregación biológica (e.g., Modelo de Vicsek), replicando el análisis de Topaz et al. (2015). Se aplica la Homología Persistente (mediante gráficos CROCKER) para detectar estructuras dinámicas y patrones emergentes en enjambres (<em>swarms</em>) que las métricas físicas tradicionales (parámetros de orden) no logran capturar.</p>
-        <p class="actions">
-          <a class="btn" href="assets/pdf/Presentacion-Proyecto-4-Agregaciones-Biologicas.pdf" target="_blank" rel="noopener noreferrer">Ver Presentación (PDF)</a>
-          <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-4-TDA-Agregaciones-Biologicas.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta en Google Colab</a>
-        </p>
-      </div>
-
-      <div class="card project-card">
-        <h3>Proyecto 5: Métodos topológicos para el análisis de series de tiempo</h3>
-        <p>Aplicación del marco teórico de Perea y Harer (2015) utilizando ventanas deslizantes (<em>Takens Embedding</em>) y Homología Persistente para caracterizar la estructura geométrica y la periodicidad inherente en series de tiempo. El proyecto se divide en dos enfoques aplicados al ámbito financiero.</p>
-
-        <h4>Presentación General</h4>
-        <p class="actions">
-          <a class="btn" href="assets/pdf/Presentacion-Proyecto-5-Series-Tiempo.pdf" target="_blank" rel="noopener noreferrer">Ver Presentación del Marco Teórico (PDF)</a>
-        </p>
-
-        <h4>Opción A: Topología de Bitcoin y Ethereum</h4>
-        <p class="small">Análisis de la estructura geométrica y la dinámica acoplada de las dos principales criptomonedas.</p>
-        <p class="actions">
-          <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(A)-TDA-BTC-ETH.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta Opción A en Colab</a>
-        </p>
-
-        <h4>Opción B: TDA aplicado al pronóstico de series financieras</h4>
-        <p class="small">Integración de características topológicas en modelos estadísticos y de Machine Learning (e.g., ARIMA, LSTM) para mejorar la capacidad de pronóstico.</p>
-        <p class="actions">
-          <a class="btn" href="https://colab.research.google.com/github/jfespinoza/jfespinoza.github.io/blob/main/assets/notebooks/Proyecto-5(B)-TDA-Pronostico.ipynb" target="_blank" rel="noopener noreferrer">Abrir Libreta Opción B en Colab</a>
-        </p>
+        <section class="project-group" aria-labelledby="formacion-titulo">
+          <div class="group-heading">
+            <h3 id="formacion-titulo">Formación especializada</h3>
+            <p class="period">Edición 2025</p>
+          </div>
+          <article class="card">
+            <p class="category">Diplomado internacional</p>
+            <h4>Modelado Matemático y Simulaciones</h4>
+            <p class="description">Materiales del módulo de Teoría de Grafos y Análisis Topológico de Datos, con actividades y proyectos de aplicación.</p>
+            <a class="project-link" href="https://jfespinoza.github.io/diplomado-interncional-modelado-simulaciones-2025/" aria-label="Acceder al Diplomado Internacional: Modelado Matemático y Simulaciones">
+              Acceder al diplomado <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </section>
       </div>
     </section>
   </main>
 
-  <footer role="contentinfo">
+  <footer>
     <div class="container">
-      <p class="small">Última actualización: <time id="fecha"></time></p>
+      <p>Dr. Jesús Francisco Espinoza Fierro · Departamento de Matemáticas · Universidad de Sonora</p>
     </div>
   </footer>
-
-  <script>
-    // Fecha legible en el pie de página
-    (function(){
-      const el = document.getElementById('fecha');
-      const d = new Date();
-      const fmt = new Intl.DateTimeFormat('es-MX', { year: 'numeric', month: 'long', day: '2-digit' });
-      el.textContent = fmt.format(d);
-    })();
-  </script>
 </body>
 </html>
