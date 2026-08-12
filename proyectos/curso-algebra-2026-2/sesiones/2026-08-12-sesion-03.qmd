@@ -1,0 +1,486 @@
+---
+title: "Sesión 03. Potencias, radicales y expresiones equivalentes"
+date: 2026-08-12
+description: "Jerarquía de operaciones, leyes de los exponentes, radicales, restricciones y equivalencia de expresiones."
+---
+
+## Simplificación y equivalencia
+
+Simplificar una expresión consiste en sustituirla por otra que tenga el mismo valor y sea más conveniente para efectuar cálculos o reconocer sus propiedades. Una expresión más corta no es necesariamente equivalente a la original: cada transformación debe respetar las operaciones y las restricciones bajo las cuales está definida.
+
+Dos expresiones son **equivalentes en un conjunto** $D$ si ambas están definidas y tienen el mismo valor para todo elemento de $D$. El conjunto $D$ forma parte de la afirmación. Por ejemplo,
+
+$$
+x^0=1
+$$
+
+es válido para $x\ne0$, pero no permite asignar un valor a $0^0$.
+
+## Jerarquía de operaciones
+
+Cuando una expresión contiene varias operaciones, se procede en el siguiente orden:
+
+1. signos de agrupación, desde los más internos;
+2. potencias y raíces;
+3. multiplicaciones y divisiones, de izquierda a derecha;
+4. sumas y restas, de izquierda a derecha.
+
+La barra de una fracción agrupa por separado todo el numerador y todo el denominador. Asimismo, el signo negativo no forma parte de la base de una potencia a menos que se incluya entre paréntesis:
+
+$$
+-3^2=-(3^2)=-9,
+\qquad
+(-3)^2=9.
+$$
+
+Por ejemplo,
+
+$$
+2-3\left[4-(1+2)^2\right]+\frac{8}{2^2}
+$$
+
+se evalúa como
+
+$$
+2-3(4-9)+\frac84
+=2-3(-5)+2
+=19.
+$$
+
+## Potencias de exponente entero
+
+Si $n$ es un entero positivo, la potencia $a^n$ representa el producto de $n$ factores iguales a $a$:
+
+$$
+a^n=\underbrace{a\cdot a\cdots a}_{n\text{ factores}}.
+$$
+
+Para extender esta notación a los exponentes cero y negativos se define
+
+$$
+a^0=1,
+\qquad
+a^{-n}=\frac{1}{a^n},
+\qquad a\ne0.
+$$
+
+En particular, un exponente negativo indica un recíproco; no convierte por sí mismo la potencia en un número negativo.
+
+Sean $m,n\in\mathbb Z$. En cada una de las leyes siguientes se supone que todas las potencias involucradas están definidas:
+
+| Ley | Condiciones |
+|---|---|
+| $a^m a^n=a^{m+n}$ | Todas las potencias involucradas deben estar definidas |
+| $\dfrac{a^m}{a^n}=a^{m-n}$ | $a\ne0$ |
+| $(a^m)^n=a^{mn}$ | Todas las potencias involucradas deben estar definidas |
+| $(ab)^n=a^n b^n$ | Si $n\le0$, $a\ne0$ y $b\ne0$ |
+| $\left(\dfrac ab\right)^n=\dfrac{a^n}{b^n}$ | $b\ne0$; además, si $n\le0$, $a\ne0$ |
+
+Estas leyes se aplican a productos, cocientes y potencias de potencias. No existe una ley análoga para una suma:
+
+$$
+a^m+a^n\ne a^{m+n}
+$$
+
+en general.
+
+### Simplificación de un producto de potencias
+
+Para $x\ne0$ y $y\ne0$,
+
+$$
+(3x^{-2}y^3)(2x^5y^{-1})
+=6x^{-2+5}y^{3-1}
+=6x^3y^2.
+$$
+
+Aunque los exponentes negativos desaparecen del resultado, las restricciones $x\ne0$ y $y\ne0$ provienen de la expresión original y deben conservarse.
+
+## Raíces n-ésimas
+
+Sea $n\ge2$ un número entero. La expresión $\sqrt[n]{a}$ representa la **raíz n-ésima principal** de $a$.
+
+- Si $n$ es par, se requiere $a\ge0$ y $\sqrt[n]{a}$ es el único número no negativo cuya potencia $n$-ésima es $a$.
+- Si $n$ es impar, $a$ puede ser cualquier número real y $\sqrt[n]{a}$ es el único número real cuya potencia $n$-ésima es $a$.
+
+Por ejemplo,
+
+$$
+\sqrt{25}=5,
+\qquad
+\sqrt[3]{-8}=-2.
+$$
+
+El símbolo $\sqrt{25}$ designa solamente la raíz cuadrada principal, que es $5$. En cambio, la ecuación $x^2=25$ tiene las dos soluciones $x=5$ y $x=-5$.
+
+La paridad del índice determina la forma correcta de deshacer una potencia:
+
+$$
+\sqrt[n]{a^n}=
+\begin{cases}
+|a|, & n\text{ par},\\
+a, & n\text{ impar}.
+\end{cases}
+$$
+
+En particular,
+
+$$
+\sqrt{a^2}=|a|,
+\qquad
+\sqrt[3]{a^3}=a.
+$$
+
+### Productos y cocientes de radicales
+
+Si $n$ es par y $a,b\ge0$, entonces
+
+$$
+\sqrt[n]{ab}=\sqrt[n]{a}\sqrt[n]{b}.
+$$
+
+Para el cociente se requiere además $b>0$:
+
+$$
+\sqrt[n]{\frac ab}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}.
+$$
+
+Si $n$ es impar, las mismas identidades son válidas para $a,b\in\mathbb R$, con $b\ne0$ en el cociente.
+
+Estas propiedades corresponden a productos y cocientes; no se distribuyen sobre sumas o restas. En general,
+
+$$
+\sqrt{a+b}\ne\sqrt a+\sqrt b.
+$$
+
+### Simplificación de radicales
+
+Un radical se simplifica separando del radicando una potencia perfecta del mismo índice. Por ejemplo,
+
+$$
+\sqrt{72}
+=\sqrt{36\cdot2}
+=6\sqrt2,
+$$
+
+y
+
+$$
+\sqrt[3]{-54}
+=\sqrt[3]{(-27)\cdot2}
+=-3\sqrt[3]{2}.
+$$
+
+Los radicales semejantes tienen el mismo índice y el mismo radicando después de simplificarlos. Por ello,
+
+$$
+3\sqrt8-\sqrt{18}
+=3(2\sqrt2)-3\sqrt2
+=3\sqrt2.
+$$
+
+### Exponentes racionales
+
+Sea $p/q$ un número racional no entero escrito en forma irreducible, con $p\in\mathbb Z$, $q\in\mathbb N$ y $q\ge2$. Se define
+
+$$
+a^{p/q}=\left(\sqrt[q]{a}\right)^p
+$$
+
+siempre que la raíz sea real. Cuando $q$ es par se requiere $a\ge0$; cuando $q$ es impar, $a$ puede ser cualquier número real. Si $p<0$, también se exige $a\ne0$.
+
+Por ejemplo,
+
+$$
+27^{2/3}=\left(\sqrt[3]{27}\right)^2=3^2=9,
+$$
+
+mientras que $(-16)^{1/2}$ no es un número real.
+
+## Restricciones de las expresiones
+
+El **dominio natural** de una expresión algebraica es el conjunto de números reales para los cuales todas sus operaciones están definidas. Dos restricciones aparecen con especial frecuencia:
+
+- ningún denominador puede ser cero;
+- el radicando de una raíz de índice par debe ser no negativo.
+
+Si una raíz de índice par se encuentra en un denominador, su radicando debe ser estrictamente positivo.
+
+| Expresión | Dominio natural |
+|---|---|
+| $x^{-3}$ | $x\ne0$ |
+| $\sqrt{2x-1}$ | $x\ge\dfrac12$ |
+| $\dfrac{1}{\sqrt{2x-1}}$ | $x>\dfrac12$ |
+| $\sqrt[3]{2x-1}$ | $x\in\mathbb R$ |
+
+Las siguientes igualdades muestran por qué las restricciones no deben separarse de una simplificación:
+
+$$
+x^2x^{-2}=1,
+\qquad x\ne0,
+$$
+
+y
+
+$$
+\sqrt{9(x-2)^2}=3|x-2|,
+\qquad x\in\mathbb R.
+$$
+
+En la primera igualdad, la expresión de la izquierda no está definida en $x=0$, aunque la expresión final sí lo esté. En la segunda, el valor absoluto es indispensable cuando $x<2$.
+
+## Ejemplos
+
+### Ejemplo 1. Potencias y restricciones
+
+Simplifiquemos
+
+$$
+\frac{(a^2b^{-1})^3}{a^{-1}b^2}.
+$$
+
+La expresión original exige $a\ne0$ y $b\ne0$. Aplicando las leyes de los exponentes,
+
+$$
+\frac{a^6b^{-3}}{a^{-1}b^2}
+=a^{6-(-1)}b^{-3-2}
+=a^7b^{-5}
+=\frac{a^7}{b^5}.
+$$
+
+Por tanto,
+
+$$
+\frac{(a^2b^{-1})^3}{a^{-1}b^2}
+=\frac{a^7}{b^5},
+\qquad a\ne0,
+\quad b\ne0.
+$$
+
+### Ejemplo 2. Radicales semejantes
+
+Para simplificar
+
+$$
+\sqrt{180}-2\sqrt{20}+\sqrt{45},
+$$
+
+extraemos los cuadrados perfectos:
+
+$$
+\sqrt{180}=6\sqrt5,
+\qquad
+\sqrt{20}=2\sqrt5,
+\qquad
+\sqrt{45}=3\sqrt5.
+$$
+
+Así,
+
+$$
+\sqrt{180}-2\sqrt{20}+\sqrt{45}
+=6\sqrt5-4\sqrt5+3\sqrt5
+=5\sqrt5.
+$$
+
+### Ejemplo 3. Valor absoluto en una raíz
+
+Para todo $x\in\mathbb R$,
+
+$$
+\sqrt{9(x-2)^2}
+=\sqrt9\sqrt{(x-2)^2}
+=3|x-2|.
+$$
+
+El resultado puede escribirse por casos:
+
+$$
+3|x-2|=
+\begin{cases}
+3(x-2), & x\ge2,\\
+3(2-x), & x<2.
+\end{cases}
+$$
+
+### Ejemplo 4. Comprobación de una igualdad
+
+La igualdad
+
+$$
+\sqrt{a+b}=\sqrt a+\sqrt b
+$$
+
+no es una propiedad de los radicales. Basta tomar $a=b=1$:
+
+$$
+\sqrt{1+1}=\sqrt2
+\qquad\text{y}\qquad
+\sqrt1+\sqrt1=2.
+$$
+
+Como $\sqrt2\ne2$, este caso constituye un contraejemplo y demuestra que la igualdad no es válida en general.
+
+## Errores frecuentes
+
+- Confundir $-a^n$ con $(-a)^n$.
+- Interpretar un exponente negativo como un signo negativo: $a^{-n}=\dfrac1{a^n}$, no $-a^n$.
+- Sumar exponentes cuando las potencias se están sumando: $a^m+a^n$ no se reduce a $a^{m+n}$.
+- Olvidar elevar todos los factores: $(2x^3)^2=4x^6$, no $2x^6$.
+- Escribir $\sqrt{a^2}=a$ sin considerar que $a$ puede ser negativo; la identidad correcta es $\sqrt{a^2}=|a|$.
+- Distribuir una raíz sobre una suma o una resta.
+- Omitir las restricciones de la expresión original después de simplificarla.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+1. Evalúe respetando la jerarquía de operaciones:
+
+   a. $-2^4+(-2)^3+3^0$.  
+   b. $18\div3\cdot2-(5-7)^2$.
+
+2. Simplifique y escriba el resultado con exponentes positivos. Indique las restricciones de la expresión original:
+
+   $$
+   \frac{(x^2y^{-1})^3}{x^{-1}y^2}.
+   $$
+
+3. Simplifique:
+
+   a. $\sqrt{48}+\sqrt{75}$.  
+   b. $\sqrt[3]{54x^3}$.
+
+4. Determine el dominio natural de cada expresión:
+
+   a. $\sqrt{5-2x}$.  
+   b. $\dfrac1{\sqrt{x+4}}$.
+
+5. Determine cuáles igualdades son falsas y corríjalas cuando exista una identidad general que las sustituya:
+
+   a. $(u^3)^2=u^5$.  
+   b. $\sqrt{t^2}=t$.  
+   c. $r^{-4}=-r^4$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+1. Se obtiene
+
+   $$
+   -2^4+(-2)^3+3^0=-16-8+1=-23,
+   $$
+
+   y, al efectuar multiplicación y división de izquierda a derecha,
+
+   $$
+   18\div3\cdot2-(5-7)^2=6\cdot2-4=8.
+   $$
+
+2. Se tiene
+
+   $$
+   \frac{(x^2y^{-1})^3}{x^{-1}y^2}
+   =\frac{x^6y^{-3}}{x^{-1}y^2}
+   =x^7y^{-5}
+   =\frac{x^7}{y^5},
+   $$
+
+   con $x\ne0$ y $y\ne0$.
+
+3. Al extraer cuadrados y cubos perfectos,
+
+   $$
+   \sqrt{48}+\sqrt{75}
+   =4\sqrt3+5\sqrt3
+   =9\sqrt3,
+   $$
+
+   y
+
+   $$
+   \sqrt[3]{54x^3}
+   =\sqrt[3]{27\cdot2\cdot x^3}
+   =3x\sqrt[3]{2}.
+   $$
+
+4. Las condiciones son
+
+   $$
+   5-2x\ge0,
+   \qquad
+   x+4>0,
+   $$
+
+   respectivamente. Por tanto, los dominios son
+
+   $$
+   \left(-\infty,\frac52\right],
+   \qquad
+   (-4,\infty).
+   $$
+
+5. Las tres igualdades son falsas en general. Se corrigen como
+
+   $$
+   (u^3)^2=u^6,
+   \qquad
+   \sqrt{t^2}=|t|,
+   \qquad
+   r^{-4}=\frac1{r^4}\quad(r\ne0).
+   $$
+:::
+
+## Ejercicios para practicar
+
+1. Evalúe:
+
+   a. $4-2(3-5)^2+\dfrac{18}{3^2}$.  
+   b. $(-3)^2-3^2$.  
+   c. $5-[2-3(1-4)]$.
+
+2. Simplifique y escriba el resultado con exponentes positivos. Conserve las restricciones necesarias:
+
+   a. $(2x^{-3}y^2)^2$.  
+   b. $\dfrac{a^4b^{-2}}{a^{-1}b^3}$.  
+   c. $(m^2n^{-1})^{-2}$.
+
+3. Simplifique:
+
+   a. $\sqrt{98}-\sqrt8$.  
+   b. $2\sqrt{12}+\sqrt{27}$.  
+   c. $\sqrt[3]{128}$.
+
+4. Calcule, cuando el resultado sea un número real:
+
+   $$
+   81^{3/4},
+   \qquad
+   32^{2/5},
+   \qquad
+   (-27)^{2/3},
+   \qquad
+   16^{-1/2}.
+   $$
+
+5. Determine el dominio natural de cada expresión:
+
+   $$
+   \sqrt{3x+6},
+   \qquad
+   \frac1{\sqrt{7-x}},
+   \qquad
+   (x-1)^{-2}.
+   $$
+
+6. Determine si cada igualdad es válida para todos los valores reales para los cuales ambos lados están definidos. Si es falsa, proporcione un contraejemplo.
+
+   a. $a^2a^3=a^6$.  
+   b. $\sqrt{a^2+b^2}=a+b$.  
+   c. $(ab)^{-2}=a^{-2}b^{-2}$.  
+   d. $\sqrt[3]{x^3}=x$.
+
+7. Determine el mayor subconjunto de $\mathbb R$ en el que son equivalentes las expresiones de cada par:
+
+   a. $x^2x^{-2}$ y $1$.  
+   b. $\sqrt{9(x-2)^2}$ y $3(x-2)$.
+
+8. Simplifique $\sqrt{16(x+1)^2}$ y escriba el resultado por casos.
