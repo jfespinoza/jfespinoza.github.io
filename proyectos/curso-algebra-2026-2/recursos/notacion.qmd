@@ -11,21 +11,44 @@ description: "Convenciones que se utilizarán a lo largo del curso."
 | $\mathbb Z$ | Números enteros. |
 | $\mathbb Q$ | Números racionales. |
 | $\mathbb R$ | Números reales. |
+| $\mathbb R\setminus\mathbb Q$ | Números irracionales. |
 | $\mathbb C$ | Números complejos. |
 
-## Símbolos frecuentes
+## Elementos y conjuntos
 
 | Símbolo | Lectura o uso |
 |---|---|
 | $x\in A$ | $x$ pertenece a $A$. |
 | $x\notin A$ | $x$ no pertenece a $A$. |
-| $A\subseteq B$ | $A$ es subconjunto de $B$. |
+| $A\subseteq B$ | $A$ es subconjunto de $B$; todos los elementos de $A$ pertenecen a $B$. |
+| $A\nsubseteq B$ | $A$ no es subconjunto de $B$. |
+| $A\subsetneq B$ | $A$ es subconjunto propio de $B$: $A\subseteq B$ y $A\ne B$. |
+| $A\supseteq B$ | $A$ contiene a $B$. |
 | $A\setminus B$ | Elementos de $A$ que no pertenecen a $B$. |
+
+## Operaciones y relaciones
+
+| Símbolo | Lectura o uso |
+|---|---|
+| $|a|$ | Valor absoluto de $a$; distancia de $a$ al cero en la recta real. |
+| $\sqrt[n]{a}$ | Raíz real $n$-ésima de $a$; si $n$ es par, designa la raíz no negativa. |
 | $\Rightarrow$ | Implica. |
 | $\Leftrightarrow$ | Equivale lógicamente a; implica en ambos sentidos. |
 | $\therefore$ | Por lo tanto. |
 
-## Criterio editorial
+## Intervalos
 
-Todo símbolo se definirá antes de su primer uso sustantivo. Cuando dos libros adopten convenciones distintas, se declarará la utilizada en el curso.
+Sean $a,b\in\mathbb R$ con $a<b$.
 
+| Símbolo | Conjunto representado |
+|---|---|
+| $(a,b)$ | $\{x\in\mathbb R:a<x<b\}$ |
+| $[a,b]$ | $\{x\in\mathbb R:a\le x\le b\}$ |
+| $[a,b)$ | $\{x\in\mathbb R:a\le x<b\}$ |
+| $(a,b]$ | $\{x\in\mathbb R:a<x\le b\}$ |
+| $(-\infty,b)$ | $\{x\in\mathbb R:x<b\}$ |
+| $(-\infty,b]$ | $\{x\in\mathbb R:x\le b\}$ |
+| $(a,\infty)$ | $\{x\in\mathbb R:x>a\}$ |
+| $[a,\infty)$ | $\{x\in\mathbb R:x\ge a\}$ |
+
+Los símbolos $\infty$ y $-\infty$ no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.
