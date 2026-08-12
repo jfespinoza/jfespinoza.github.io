@@ -32,6 +32,15 @@ jobs:
       - name: Renderizar el libro
         run: quarto render proyectos/curso-algebra-2026-2
 
+      - name: Verificar recursos matemáticos locales
+        run: |
+          test -f proyectos/curso-algebra-2026-2/_site/mathjax/tex-chtml-full.js
+          if grep -RIlE 'cdnjs\.cloudflare\.com/polyfill|cdn\.jsdelivr\.net/npm/mathjax' \
+            proyectos/curso-algebra-2026-2/_site --include='*.html'; then
+            echo "Se detectó una dependencia matemática externa; se cancela la publicación."
+            exit 1
+          fi
+
       - name: Actualizar la carpeta pública
         run: |
           rm -rf curso-algebra-2026-2
