@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Subconjuntos de los números reales, números racionales e irracionales, orden, recta real y notación de intervalos.">
+<meta name="description" content="Conjuntos numéricos, pertenencia e inclusión, números racionales e irracionales, orden y notación de intervalos.">
 
 <title>Sesión 02. Números reales: clasificación, orden e intervalos – Álgebra</title>
 <style>
@@ -109,7 +109,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Sesión 02. Números reales: clasificación, orden e intervalos – Álgebra">
-<meta property="og:description" content="Subconjuntos de los números reales, números racionales e irracionales, orden, recta real y notación de intervalos.">
+<meta property="og:description" content="Conjuntos numéricos, pertenencia e inclusión, números racionales e irracionales, orden y notación de intervalos.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -333,11 +333,20 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#los-subconjuntos-de-los-números-reales" id="toc-los-subconjuntos-de-los-números-reales" class="nav-link active" data-scroll-target="#los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</a>
+  <li><a href="#los-conjuntos-numéricos" id="toc-los-conjuntos-numéricos" class="nav-link active" data-scroll-target="#los-conjuntos-numéricos">Los conjuntos numéricos</a>
   <ul class="collapse">
-  <li><a href="#pertenencia-e-inclusión" id="toc-pertenencia-e-inclusión" class="nav-link" data-scroll-target="#pertenencia-e-inclusión">Pertenencia e inclusión</a></li>
+  <li><a href="#números-naturales" id="toc-números-naturales" class="nav-link" data-scroll-target="#números-naturales">Números naturales</a></li>
+  <li><a href="#números-enteros" id="toc-números-enteros" class="nav-link" data-scroll-target="#números-enteros">Números enteros</a></li>
+  <li><a href="#números-racionales" id="toc-números-racionales" class="nav-link" data-scroll-target="#números-racionales">Números racionales</a></li>
+  <li><a href="#números-reales-e-irracionales" id="toc-números-reales-e-irracionales" class="nav-link" data-scroll-target="#números-reales-e-irracionales">Números reales e irracionales</a></li>
   </ul></li>
-  <li><a href="#números-racionales-e-irracionales" id="toc-números-racionales-e-irracionales" class="nav-link" data-scroll-target="#números-racionales-e-irracionales">Números racionales e irracionales</a></li>
+  <li><a href="#pertenencia-e-inclusión" id="toc-pertenencia-e-inclusión" class="nav-link" data-scroll-target="#pertenencia-e-inclusión">Pertenencia e inclusión</a></li>
+  <li><a href="#expansiones-decimales-de-los-números-racionales" id="toc-expansiones-decimales-de-los-números-racionales" class="nav-link" data-scroll-target="#expansiones-decimales-de-los-números-racionales">Expansiones decimales de los números racionales</a>
+  <ul class="collapse">
+  <li><a href="#conversión-de-un-decimal-periódico-en-fracción" id="toc-conversión-de-un-decimal-periódico-en-fracción" class="nav-link" data-scroll-target="#conversión-de-un-decimal-periódico-en-fracción">Conversión de un decimal periódico en fracción</a></li>
+  <li><a href="#tener-un-patrón-no-significa-ser-periódico" id="toc-tener-un-patrón-no-significa-ser-periódico" class="nav-link" data-scroll-target="#tener-un-patrón-no-significa-ser-periódico">Tener un patrón no significa ser periódico</a></li>
+  </ul></li>
+  <li><a href="#raíces-cuadradas-y-clasificación" id="toc-raíces-cuadradas-y-clasificación" class="nav-link" data-scroll-target="#raíces-cuadradas-y-clasificación">Raíces cuadradas y clasificación</a></li>
   <li><a href="#la-recta-real-y-el-orden" id="toc-la-recta-real-y-el-orden" class="nav-link" data-scroll-target="#la-recta-real-y-el-orden">La recta real y el orden</a></li>
   <li><a href="#intervalos-de-números-reales" id="toc-intervalos-de-números-reales" class="nav-link" data-scroll-target="#intervalos-de-números-reales">Intervalos de números reales</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
@@ -346,8 +355,8 @@ window.Quarto = {
   <li><a href="#ejemplo-2.-pertenencia-e-inclusión" id="toc-ejemplo-2.-pertenencia-e-inclusión" class="nav-link" data-scroll-target="#ejemplo-2.-pertenencia-e-inclusión">Ejemplo 2. Pertenencia e inclusión</a></li>
   <li><a href="#ejemplo-3.-notación-de-intervalos" id="toc-ejemplo-3.-notación-de-intervalos" class="nav-link" data-scroll-target="#ejemplo-3.-notación-de-intervalos">Ejemplo 3. Notación de intervalos</a></li>
   <li><a href="#ejemplo-4.-orden-de-números-reales" id="toc-ejemplo-4.-orden-de-números-reales" class="nav-link" data-scroll-target="#ejemplo-4.-orden-de-números-reales">Ejemplo 4. Orden de números reales</a></li>
-  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
@@ -381,79 +390,242 @@ window.Quarto = {
 </header>
 
 
-<section id="los-subconjuntos-de-los-números-reales" class="level2">
-<h2 class="anchored" data-anchor-id="los-subconjuntos-de-los-números-reales">Los subconjuntos de los números reales</h2>
-<p>Los números reales comprenden distintos conjuntos numéricos. Adoptaremos la convención <span class="math inline">\(0\in\mathbb N\)</span>. Los conjuntos que utilizaremos son los siguientes:</p>
-<ul>
-<li><p>Los <strong>números naturales</strong>:</p>
+<section id="los-conjuntos-numéricos" class="level2">
+<h2 class="anchored" data-anchor-id="los-conjuntos-numéricos">Los conjuntos numéricos</h2>
+<p>Un conjunto es una colección de objetos. En este capítulo, los objetos serán números y los agruparemos de acuerdo con sus propiedades.</p>
+<section id="números-naturales" class="level3">
+<h3 class="anchored" data-anchor-id="números-naturales">Números naturales</h3>
+<p>Los <strong>números naturales</strong> se utilizan para contar y enumerar. Adoptaremos la convención</p>
 <p><span class="math display">\[
 \mathbb N=\{0,1,2,3,\ldots\}.
-\]</span></p></li>
-<li><p>Los <strong>números enteros</strong>:</p>
+\]</span></p>
+<p>Algunos textos comienzan los números naturales en <span class="math inline">\(1\)</span> y escriben <span class="math inline">\(\mathbb N=\{1,2,3,\ldots\}\)</span>. Por ello, al consultar otra fuente conviene verificar si el autor incluye el cero. En este curso, <span class="math inline">\(0\in\mathbb N\)</span>.</p>
+</section>
+<section id="números-enteros" class="level3">
+<h3 class="anchored" data-anchor-id="números-enteros">Números enteros</h3>
+<p>Los <strong>números enteros</strong> comprenden los naturales, sus opuestos y el cero:</p>
 <p><span class="math display">\[
 \mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
-\]</span></p></li>
-<li><p>Los <strong>números racionales</strong>, que pueden escribirse como el cociente de dos enteros con denominador distinto de cero:</p>
+\]</span></p>
+<p>En particular, todo número natural es entero.</p>
+</section>
+<section id="números-racionales" class="level3">
+<h3 class="anchored" data-anchor-id="números-racionales">Números racionales</h3>
+<p>Los <strong>números racionales</strong> son los que pueden escribirse como el cociente de dos enteros:</p>
 <p><span class="math display">\[
 \mathbb Q=
 \left\{\frac{p}{q}:p,q\in\mathbb Z,\ q\ne0\right\}.
 \]</span></p>
-<p>La condición <span class="math inline">\(q\ne0\)</span> es indispensable: <span class="math inline">\(\frac a0\)</span> no está definido para ningún número real <span class="math inline">\(a\)</span>. En cambio, <span class="math inline">\(\frac0q=0\)</span> cuando <span class="math inline">\(q\ne0\)</span>.</p></li>
-<li><p>Los <strong>números reales</strong>, representados por <span class="math inline">\(\mathbb R\)</span>, que incluyen tanto a los racionales como a los irracionales.</p></li>
-</ul>
-<p>Estos conjuntos satisfacen la cadena de inclusiones</p>
+<p>En la fracción <span class="math inline">\(\frac pq\)</span>, el entero <span class="math inline">\(p\)</span> es el numerador y el entero <span class="math inline">\(q\)</span> es el denominador. La condición <span class="math inline">\(q\ne0\)</span> es indispensable: <span class="math inline">\(\frac a0\)</span> no está definido para ningún número real <span class="math inline">\(a\)</span>. En cambio, <span class="math inline">\(\frac0q=0\)</span> cuando <span class="math inline">\(q\ne0\)</span>.</p>
+<p>No es necesario que la fracción esté simplificada: un mismo número racional admite distintas representaciones, como <span class="math inline">\(\frac12=\frac24=\frac{50}{100}\)</span>.</p>
+<p>Un número no necesita aparecer escrito como fracción para ser racional. Por ejemplo,</p>
+<p><span class="math display">\[
+17=\frac{17}{1}
+\qquad\text{y}\qquad
+3.5=\frac{35}{10}=\frac72.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(17\)</span> y <span class="math inline">\(3.5\)</span> son racionales, aunque el primero esté escrito como entero y el segundo como decimal.</p>
+</section>
+<section id="números-reales-e-irracionales" class="level3">
+<h3 class="anchored" data-anchor-id="números-reales-e-irracionales">Números reales e irracionales</h3>
+<p>El conjunto de los <strong>números reales</strong>, representado por <span class="math inline">\(\mathbb R\)</span>, contiene a los racionales y a los irracionales. Los conjuntos anteriores satisfacen</p>
 <p><span class="math display">\[
 \mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R.
 \]</span></p>
-<p>Los <strong>números irracionales</strong> son los números reales que no son racionales. El conjunto de irracionales se escribe</p>
+<p>Los <strong>números irracionales</strong> son los números reales que no son racionales. Su conjunto se escribe</p>
 <p><span class="math display">\[
-\mathbb R\setminus\mathbb Q.
+\mathbb R\setminus\mathbb Q,
 \]</span></p>
-<p>Por ejemplo, <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(\pi\)</span> son irracionales.</p>
-<section id="pertenencia-e-inclusión" class="level3">
-<h3 class="anchored" data-anchor-id="pertenencia-e-inclusión">Pertenencia e inclusión</h3>
-<p>El símbolo <span class="math inline">\(\in\)</span> relaciona un elemento con un conjunto, mientras que <span class="math inline">\(\subseteq\)</span> relaciona dos conjuntos. Por ejemplo,</p>
+<p>que se lee «<span class="math inline">\(\mathbb R\)</span> menos <span class="math inline">\(\mathbb Q\)</span>». Por ejemplo,</p>
 <p><span class="math display">\[
--3\in\mathbb Z
-\qquad\text{y}\qquad
-\mathbb Z\subseteq\mathbb Q.
+\sqrt2,\ \sqrt{10},\ \pi\in\mathbb R\setminus\mathbb Q.
 \]</span></p>
-<p>En cambio, las expresiones <span class="math inline">\(-3\subseteq\mathbb Z\)</span> y <span class="math inline">\(\mathbb Z\in\mathbb Q\)</span> son incorrectas.</p>
-<p>Como los conjuntos numéricos están anidados, un mismo número puede pertenecer a varios de ellos. El número <span class="math inline">\(5\)</span>, por ejemplo, pertenece a <span class="math inline">\(\mathbb N\)</span>, <span class="math inline">\(\mathbb Z\)</span>, <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\)</span>. Cuando se solicita clasificar un número en el conjunto más específico, se elige el menor de estos conjuntos anidados que lo contiene; en este caso, <span class="math inline">\(5\)</span> se clasifica como natural.</p>
+<p>No existe un símbolo único de uso universal para el conjunto de los irracionales; la notación <span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span> evita cualquier ambigüedad.</p>
+<p>Aunque <span class="math inline">\(\mathbb Q\)</span> y <span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span> son conjuntos infinitos, no tienen el mismo tamaño en el sentido matemático: los racionales forman un conjunto numerable —pueden disponerse en una lista infinita—, mientras que los irracionales forman un conjunto no numerable.</p>
 </section>
 </section>
-<section id="números-racionales-e-irracionales" class="level2">
-<h2 class="anchored" data-anchor-id="números-racionales-e-irracionales">Números racionales e irracionales</h2>
-<p>La expansión decimal en base diez de todo número racional es finita o eventualmente periódica. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.</p>
+<section id="pertenencia-e-inclusión" class="level2">
+<h2 class="anchored" data-anchor-id="pertenencia-e-inclusión">Pertenencia e inclusión</h2>
+<p>Los símbolos <span class="math inline">\(\in\)</span> y <span class="math inline">\(\notin\)</span> relacionan un <strong>elemento</strong> con un <strong>conjunto</strong>:</p>
 <p><span class="math display">\[
-0.125=\frac18,
+-3\in\mathbb Z,
 \qquad
-0.\overline{27}=0.272727\ldots.
+3.5\notin\mathbb Z,
+\qquad
+3.5\in\mathbb Q.
 \]</span></p>
-<p>La segunda igualdad puede comprobarse algebraicamente. Si <span class="math inline">\(x=0.\overline{27}\)</span>, entonces</p>
+<p>Los símbolos <span class="math inline">\(\subseteq\)</span> y <span class="math inline">\(\nsubseteq\)</span> relacionan <strong>dos conjuntos</strong>. La expresión <span class="math inline">\(A\subseteq B\)</span> significa que todos los elementos de <span class="math inline">\(A\)</span> pertenecen a <span class="math inline">\(B\)</span>. Por ejemplo,</p>
 <p><span class="math display">\[
-100x=27.\overline{27}=27+x;
+\mathbb N\subseteq\mathbb Z.
+\]</span></p>
+<p>Al intercambiar los conjuntos, la inclusión resultante es falsa:</p>
+<p><span class="math display">\[
+\mathbb Z\nsubseteq\mathbb N,
+\]</span></p>
+<p>porque basta observar que <span class="math inline">\(-1\in\mathbb Z\)</span> pero <span class="math inline">\(-1\notin\mathbb N\)</span>. En general, para demostrar que <span class="math inline">\(A\nsubseteq B\)</span> es suficiente encontrar un elemento de <span class="math inline">\(A\)</span> que no pertenezca a <span class="math inline">\(B\)</span>.</p>
+<p>La misma inclusión puede leerse en sentido inverso mediante el símbolo <span class="math inline">\(\supseteq\)</span>:</p>
+<p><span class="math display">\[
+\mathbb N\subseteq\mathbb Z
+\qquad\Longleftrightarrow\qquad
+\mathbb Z\supseteq\mathbb N.
+\]</span></p>
+<p>La notación</p>
+<p><span class="math display">\[
+A\subsetneq B
+\]</span></p>
+<p>indica que <span class="math inline">\(A\)</span> es un <strong>subconjunto propio</strong> de <span class="math inline">\(B\)</span>: todos los elementos de <span class="math inline">\(A\)</span> pertenecen a <span class="math inline">\(B\)</span>, pero <span class="math inline">\(A\ne B\)</span>. Así,</p>
+<p><span class="math display">\[
+\mathbb N\subsetneq\mathbb Z
+\subsetneq\mathbb Q
+\subsetneq\mathbb R.
+\]</span></p>
+<p>En particular, si <span class="math inline">\(A\subsetneq B\)</span>, existe al menos un elemento de <span class="math inline">\(B\)</span> que no pertenece a <span class="math inline">\(A\)</span>.</p>
+<p>Algunos libros emplean <span class="math inline">\(\subset\)</span> con convenciones distintas: unas veces significa inclusión con igualdad permitida y otras, inclusión propia. Utilizaremos <span class="math inline">\(\subseteq\)</span> y <span class="math inline">\(\subsetneq\)</span> para evitar esa ambigüedad.</p>
+<p>No deben intercambiarse pertenencia e inclusión. Por ejemplo,</p>
+<p><span class="math display">\[
+17\in\mathbb N
+\qquad\text{y}\qquad
+\{17\}\subseteq\mathbb N,
+\]</span></p>
+<p>pero <span class="math inline">\(17\subseteq\mathbb N\)</span> no es una expresión correcta, pues <span class="math inline">\(17\)</span> es un número, no un conjunto.</p>
+<p>Como los conjuntos numéricos están anidados, un mismo número puede pertenecer a varios de ellos. La clasificación de <span class="math inline">\(17\)</span> y <span class="math inline">\(3.5\)</span> puede resumirse así:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Número</th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb N\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb Z\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb Q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathbb R\)</span></th>
+<th>Conjunto más específico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(17\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td><span class="math inline">\(\mathbb N\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(3.5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\notin\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\notin\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\in\)</span></td>
+<td><span class="math inline">\(\mathbb Q\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Cuando se pide clasificar un número en el conjunto más específico, se elige el menor de estos conjuntos anidados que lo contiene.</p>
+</section>
+<section id="expansiones-decimales-de-los-números-racionales" class="level2">
+<h2 class="anchored" data-anchor-id="expansiones-decimales-de-los-números-racionales">Expansiones decimales de los números racionales</h2>
+<p>La expansión decimal en base diez de todo número racional es <strong>finita</strong> o <strong>eventualmente periódica</strong>. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.</p>
+<p>Una expansión es finita cuando termina, como en</p>
+<p><span class="math display">\[
+0.125=\frac18.
+\]</span></p>
+<p>Es eventualmente periódica cuando, a partir de cierta posición, un bloque fijo de cifras se repite indefinidamente. La barra indica exactamente el bloque que se repite:</p>
+<p><span class="math display">\[
+0.\overline3=0.3333\ldots,
+\]</span></p>
+<p><span class="math display">\[
+0.1\overline3=0.13333\ldots,
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+0.17\overline{41}=0.17414141\ldots.
+\]</span></p>
+<p>En los dos últimos ejemplos hay cifras iniciales que no forman parte del periodo.</p>
+<section id="conversión-de-un-decimal-periódico-en-fracción" class="level3">
+<h3 class="anchored" data-anchor-id="conversión-de-un-decimal-periódico-en-fracción">Conversión de un decimal periódico en fracción</h3>
+<p>La periodicidad permite eliminar la parte decimal mediante una resta. Sea</p>
+<p><span class="math display">\[
+x=0.\overline3=0.3333\ldots.
+\]</span></p>
+<p>Al multiplicar por <span class="math inline">\(10\)</span> y restar las dos igualdades, se obtiene</p>
+<p><span class="math display">\[
+10x=3.3333\ldots,
+\]</span></p>
+<p><span class="math display">\[
+10x-x=3.3333\ldots-0.3333\ldots,
+\]</span></p>
+<p>de donde</p>
+<p><span class="math display">\[
+9x=3
+\qquad\Longrightarrow\qquad
+x=\frac13.
+\]</span></p>
+<p>Ahora consideremos</p>
+<p><span class="math display">\[
+y=0.1\overline3=0.13333\ldots.
+\]</span></p>
+<p>Para alinear las partes decimales periódicas utilizamos dos potencias de <span class="math inline">\(10\)</span>:</p>
+<p><span class="math display">\[
+10y=1.3333\ldots,
+\qquad
+100y=13.3333\ldots.
+\]</span></p>
+<p>Al restar,</p>
+<p><span class="math display">\[
+100y-10y=12,
 \]</span></p>
 <p>por tanto,</p>
 <p><span class="math display">\[
-99x=27
+90y=12
 \qquad\Longrightarrow\qquad
-x=\frac{27}{99}=\frac3{11}.
+y=\frac{12}{90}=\frac2{15}.
 \]</span></p>
-<p>Los números <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(\pi\)</span> son irracionales; en consecuencia, sus expansiones decimales son infinitas y no son eventualmente periódicas.</p>
-<p>Si <span class="math inline">\(n\)</span> es un entero no negativo, entonces <span class="math inline">\(\sqrt n\)</span> es racional si y solo si <span class="math inline">\(n\)</span> es un cuadrado perfecto. Por tanto,</p>
+<p>El mismo procedimiento funciona para cualquier decimal eventualmente periódico: se eligen potencias de <span class="math inline">\(10\)</span> que hagan coincidir la parte periódica y luego se restan las igualdades.</p>
+</section>
+<section id="tener-un-patrón-no-significa-ser-periódico" class="level3">
+<h3 class="anchored" data-anchor-id="tener-un-patrón-no-significa-ser-periódico">Tener un patrón no significa ser periódico</h3>
+<p>Una expansión decimal puede seguir una regla clara sin repetir eventualmente un bloque fijo. Considérese</p>
 <p><span class="math display">\[
-\sqrt{49}=7\in\mathbb N,
-\qquad
+z=0.101001000100001\ldots,
+\]</span></p>
+<p>donde entre dos cifras <span class="math inline">\(1\)</span> consecutivas aparecen uno, dos, tres, cuatro y, sucesivamente, cada vez más ceros. Existe un patrón para construir sus cifras, pero no hay un bloque fijo que se repita a partir de cierta posición. Por ello, su expansión no es eventualmente periódica y <span class="math inline">\(z\)</span> es irracional.</p>
+<p>En efecto, las separaciones entre cifras <span class="math inline">\(1\)</span> crecen sin límite; una cola decimal con un periodo fijo no puede presentar separaciones cada vez mayores.</p>
+<p>En consecuencia, no basta con preguntar si un decimal infinito «tiene un patrón». La condición precisa para que sea racional es que su expansión sea eventualmente periódica.</p>
+</section>
+</section>
+<section id="raíces-cuadradas-y-clasificación" class="level2">
+<h2 class="anchored" data-anchor-id="raíces-cuadradas-y-clasificación">Raíces cuadradas y clasificación</h2>
+<p>Antes de clasificar una expresión, es necesario simplificarla. Si <span class="math inline">\(n\)</span> es un entero no negativo, entonces</p>
+<p><span class="math display">\[
+\sqrt n\in\mathbb Q
+\qquad\Longleftrightarrow\qquad
+n\text{ es un cuadrado perfecto}.
+\]</span></p>
+<p>Por ejemplo,</p>
+<p><span class="math display">\[
+-\sqrt{25}=-5\in\mathbb Z.
+\]</span></p>
+<p>El signo negativo está fuera del radical: primero se calcula <span class="math inline">\(\sqrt{25}=5\)</span> y después se toma su opuesto.</p>
+<p>En cambio, <span class="math inline">\(10\)</span> no es un cuadrado perfecto. Como</p>
+<p><span class="math display">\[
+3^2&lt;10&lt;4^2,
+\]</span></p>
+<p>la raíz se encuentra entre <span class="math inline">\(3\)</span> y <span class="math inline">\(4\)</span>:</p>
+<p><span class="math display">\[
+3&lt;\sqrt{10}&lt;4.
+\]</span></p>
+<p>Además, como <span class="math inline">\(10\)</span> no es un cuadrado perfecto, el criterio anterior permite concluir que</p>
+<p><span class="math display">\[
 \sqrt{10}\in\mathbb R\setminus\mathbb Q.
 \]</span></p>
-<p>El símbolo <span class="math inline">\(\sqrt n\)</span> representa la raíz cuadrada no negativa de <span class="math inline">\(n\)</span>. Así, <span class="math inline">\(\sqrt{49}=7\)</span>; en cambio, la ecuación <span class="math inline">\(x^2=49\)</span> tiene dos soluciones: <span class="math inline">\(x=7\)</span> y <span class="math inline">\(x=-7\)</span>.</p>
-<p>Antes de clasificar una expresión, es necesario simplificarla. Por ejemplo,</p>
-<p><span class="math display">\[
-\frac{18}{6}=3\in\mathbb N
-\qquad\text{y}\qquad
--\sqrt{36}=-6\in\mathbb Z.
-\]</span></p>
+<p>El símbolo <span class="math inline">\(\sqrt n\)</span> representa la raíz cuadrada no negativa de <span class="math inline">\(n\)</span>. Así, <span class="math inline">\(\sqrt{25}=5\)</span>; en cambio, la ecuación <span class="math inline">\(x^2=25\)</span> tiene dos soluciones: <span class="math inline">\(x=5\)</span> y <span class="math inline">\(x=-5\)</span>.</p>
 </section>
 <section id="la-recta-real-y-el-orden" class="level2">
 <h2 class="anchored" data-anchor-id="la-recta-real-y-el-orden">La recta real y el orden</h2>
@@ -538,6 +710,19 @@ x=\frac{27}{99}=\frac3{11}.
 </tbody>
 </table>
 <p>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números reales. Por esta razón, siempre se utiliza un paréntesis junto a ellos.</p>
+<p>En relación con el cero, conviene distinguir cuatro intervalos básicos:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(0,\infty)&amp;=\{x\in\mathbb R:x&gt;0\},\\
+[0,\infty)&amp;=\{x\in\mathbb R:x\ge0\},\\
+(-\infty,0)&amp;=\{x\in\mathbb R:x&lt;0\},\\
+(-\infty,0]&amp;=\{x\in\mathbb R:x\le0\}.
+\end{aligned}
+\]</span></p>
+<p>Los dos primeros conjuntos son, respectivamente, los números positivos y los no negativos; los dos últimos son los números negativos y los no positivos. El cero no es positivo ni negativo. Toda la recta real se expresa como</p>
+<p><span class="math display">\[
+(-\infty,\infty)=\mathbb R.
+\]</span></p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -564,8 +749,8 @@ x=\frac{27}{99}=\frac3{11}.
 <td><span class="math inline">\(\mathbb N\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(-5\)</span></td>
-<td>Es un entero negativo</td>
+<td><span class="math inline">\(-\sqrt{25}\)</span></td>
+<td><span class="math inline">\(-\sqrt{25}=-5\)</span></td>
 <td><span class="math inline">\(\mathbb Z\)</span></td>
 </tr>
 <tr class="odd">
@@ -579,8 +764,8 @@ x=\frac{27}{99}=\frac3{11}.
 <td><span class="math inline">\(\mathbb Q\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\sqrt{13}\)</span></td>
-<td><span class="math inline">\(13\)</span> no es un cuadrado perfecto</td>
+<td><span class="math inline">\(\sqrt{10}\)</span></td>
+<td><span class="math inline">\(10\)</span> no es un cuadrado perfecto</td>
 <td><span class="math inline">\(\mathbb R\setminus\mathbb Q\)</span></td>
 </tr>
 <tr class="even">
@@ -637,16 +822,20 @@ A=(-2,3].
 -\sqrt9&lt;-\frac52&lt;0.6&lt;\frac23.
 \]</span></p>
 </section>
-<section id="errores-frecuentes" class="level3">
-<h3 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h3>
-<ul>
-<li>No todo decimal infinito es irracional: <span class="math inline">\(0.\overline3=\frac13\)</span>.</li>
-<li>No todo número escrito con un radical es irracional: <span class="math inline">\(\sqrt{16}=4\)</span>.</li>
-<li>El número <span class="math inline">\(\frac{22}{7}\)</span> no es igual a <span class="math inline">\(\pi\)</span>; es un número racional que lo aproxima.</li>
-<li>La suma de dos irracionales no siempre es irracional: <span class="math inline">\(\sqrt2+(-\sqrt2)=0\)</span>.</li>
-<li>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> nunca se incluyen como extremos de un intervalo.</li>
-</ul>
 </section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Un número entero también es racional: <span class="math inline">\(17=\frac{17}{1}\)</span>.</li>
+<li>La presencia de un punto decimal no determina el tipo de número: <span class="math inline">\(3.0=3\)</span> es entero, mientras que <span class="math inline">\(3.5=\frac72\)</span> no lo es.</li>
+<li>No todo decimal infinito es irracional: <span class="math inline">\(0.\overline3=\frac13\)</span>.</li>
+<li>Un patrón visible no implica periodicidad eventual.</li>
+<li>La presencia de un radical no determina por sí sola que un número sea irracional; primero debe simplificarse la expresión.</li>
+<li>El número <span class="math inline">\(\frac{22}{7}\)</span> no es igual a <span class="math inline">\(\pi\)</span>; es un número racional que lo aproxima.</li>
+<li>La suma de dos irracionales no siempre es irracional.</li>
+<li>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> nunca se incluyen como extremos de un intervalo.</li>
+<li>Los símbolos <span class="math inline">\(\in\)</span> y <span class="math inline">\(\subseteq\)</span> no son intercambiables: el primero relaciona un elemento con un conjunto y el segundo relaciona dos conjuntos.</li>
+</ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
@@ -687,13 +876,13 @@ A=\{x\in\mathbb R:-1&lt;x\le3\},
 <li>La suma de dos números irracionales siempre es irracional.</li>
 </ol></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled" title="Soluciones">
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Soluciones
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -774,6 +963,12 @@ A=\{x\in\mathbb R:-1&lt;x\le3\},
 <li>Si <span class="math inline">\(x\in\mathbb Z\)</span>, entonces <span class="math inline">\(x\in\mathbb R\)</span>.</li>
 </ol></li>
 <li><p>Una pantalla muestra el valor decimal <span class="math inline">\(3.1416\)</span>, mientras que una fórmula utiliza el valor exacto <span class="math inline">\(\pi\)</span>. Clasifique ambos números y explique por qué <span class="math inline">\(3.1416\)</span> puede aproximar a <span class="math inline">\(\pi\)</span> sin ser igual a él.</p></li>
+<li><p>Convierta <span class="math inline">\(0.\overline7\)</span> y <span class="math inline">\(0.2\overline7\)</span> en fracciones.</p></li>
+<li><p>Explique por qué</p>
+<p><span class="math display">\[
+0.101001000100001\ldots
+\]</span></p>
+<p>no es un decimal eventualmente periódico.</p></li>
 </ol>
 
 
