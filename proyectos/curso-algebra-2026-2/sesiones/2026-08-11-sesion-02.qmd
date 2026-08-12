@@ -1,107 +1,286 @@
 ---
 title: "Sesión 02. Números reales: clasificación, orden e intervalos"
 date: 2026-08-11
-description: "Subconjuntos de los números reales, números racionales e irracionales, orden, recta real y notación de intervalos."
+description: "Conjuntos numéricos, pertenencia e inclusión, números racionales e irracionales, orden y notación de intervalos."
 ---
 
-## Los subconjuntos de los números reales
+## Los conjuntos numéricos
 
-Los números reales comprenden distintos conjuntos numéricos. Adoptaremos la convención $0\in\mathbb N$. Los conjuntos que utilizaremos son los siguientes:
+Un conjunto es una colección de objetos. En este capítulo, los objetos serán números y los agruparemos de acuerdo con sus propiedades.
 
-- Los **números naturales**:
+### Números naturales
 
-  $$
-  \mathbb N=\{0,1,2,3,\ldots\}.
-  $$
+Los **números naturales** se utilizan para contar y enumerar. Adoptaremos la convención
 
-- Los **números enteros**:
+$$
+\mathbb N=\{0,1,2,3,\ldots\}.
+$$
 
-  $$
-  \mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
-  $$
+Algunos textos comienzan los números naturales en $1$ y escriben $\mathbb N=\{1,2,3,\ldots\}$. Por ello, al consultar otra fuente conviene verificar si el autor incluye el cero. En este curso, $0\in\mathbb N$.
 
-- Los **números racionales**, que pueden escribirse como el cociente de dos enteros con denominador distinto de cero:
+### Números enteros
 
-  $$
-  \mathbb Q=
-  \left\{\frac{p}{q}:p,q\in\mathbb Z,\ q\ne0\right\}.
-  $$
+Los **números enteros** comprenden los naturales, sus opuestos y el cero:
 
-  La condición $q\ne0$ es indispensable: $\frac a0$ no está definido para ningún número real $a$. En cambio, $\frac0q=0$ cuando $q\ne0$.
+$$
+\mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
+$$
 
-- Los **números reales**, representados por $\mathbb R$, que incluyen tanto a los racionales como a los irracionales.
+En particular, todo número natural es entero.
 
-Estos conjuntos satisfacen la cadena de inclusiones
+### Números racionales
+
+Los **números racionales** son los que pueden escribirse como el cociente de dos enteros:
+
+$$
+\mathbb Q=
+\left\{\frac{p}{q}:p,q\in\mathbb Z,\ q\ne0\right\}.
+$$
+
+En la fracción $\frac pq$, el entero $p$ es el numerador y el entero $q$ es el denominador. La condición $q\ne0$ es indispensable: $\frac a0$ no está definido para ningún número real $a$. En cambio, $\frac0q=0$ cuando $q\ne0$.
+
+No es necesario que la fracción esté simplificada: un mismo número racional admite distintas representaciones, como $\frac12=\frac24=\frac{50}{100}$.
+
+Un número no necesita aparecer escrito como fracción para ser racional. Por ejemplo,
+
+$$
+17=\frac{17}{1}
+\qquad\text{y}\qquad
+3.5=\frac{35}{10}=\frac72.
+$$
+
+Por tanto, $17$ y $3.5$ son racionales, aunque el primero esté escrito como entero y el segundo como decimal.
+
+### Números reales e irracionales
+
+El conjunto de los **números reales**, representado por $\mathbb R$, contiene a los racionales y a los irracionales. Los conjuntos anteriores satisfacen
 
 $$
 \mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R.
 $$
 
-Los **números irracionales** son los números reales que no son racionales. El conjunto de irracionales se escribe
+Los **números irracionales** son los números reales que no son racionales. Su conjunto se escribe
 
 $$
-\mathbb R\setminus\mathbb Q.
+\mathbb R\setminus\mathbb Q,
 $$
 
-Por ejemplo, $\sqrt2$ y $\pi$ son irracionales.
-
-### Pertenencia e inclusión
-
-El símbolo $\in$ relaciona un elemento con un conjunto, mientras que $\subseteq$ relaciona dos conjuntos. Por ejemplo,
+que se lee «$\mathbb R$ menos $\mathbb Q$». Por ejemplo,
 
 $$
--3\in\mathbb Z
-\qquad\text{y}\qquad
-\mathbb Z\subseteq\mathbb Q.
+\sqrt2,\ \sqrt{10},\ \pi\in\mathbb R\setminus\mathbb Q.
 $$
 
-En cambio, las expresiones $-3\subseteq\mathbb Z$ y $\mathbb Z\in\mathbb Q$ son incorrectas.
+No existe un símbolo único de uso universal para el conjunto de los irracionales; la notación $\mathbb R\setminus\mathbb Q$ evita cualquier ambigüedad.
 
-Como los conjuntos numéricos están anidados, un mismo número puede pertenecer a varios de ellos. El número $5$, por ejemplo, pertenece a $\mathbb N$, $\mathbb Z$, $\mathbb Q$ y $\mathbb R$. Cuando se solicita clasificar un número en el conjunto más específico, se elige el menor de estos conjuntos anidados que lo contiene; en este caso, $5$ se clasifica como natural.
+Aunque $\mathbb Q$ y $\mathbb R\setminus\mathbb Q$ son conjuntos infinitos, no tienen el mismo tamaño en el sentido matemático: los racionales forman un conjunto numerable —pueden disponerse en una lista infinita—, mientras que los irracionales forman un conjunto no numerable.
 
-## Números racionales e irracionales
+## Pertenencia e inclusión
 
-La expansión decimal en base diez de todo número racional es finita o eventualmente periódica. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.
+Los símbolos $\in$ y $\notin$ relacionan un **elemento** con un **conjunto**:
 
 $$
-0.125=\frac18,
+-3\in\mathbb Z,
 \qquad
-0.\overline{27}=0.272727\ldots.
+3.5\notin\mathbb Z,
+\qquad
+3.5\in\mathbb Q.
 $$
 
-La segunda igualdad puede comprobarse algebraicamente. Si $x=0.\overline{27}$, entonces
+Los símbolos $\subseteq$ y $\nsubseteq$ relacionan **dos conjuntos**. La expresión $A\subseteq B$ significa que todos los elementos de $A$ pertenecen a $B$. Por ejemplo,
 
 $$
-100x=27.\overline{27}=27+x;
+\mathbb N\subseteq\mathbb Z.
+$$
+
+Al intercambiar los conjuntos, la inclusión resultante es falsa:
+
+$$
+\mathbb Z\nsubseteq\mathbb N,
+$$
+
+porque basta observar que $-1\in\mathbb Z$ pero $-1\notin\mathbb N$. En general, para demostrar que $A\nsubseteq B$ es suficiente encontrar un elemento de $A$ que no pertenezca a $B$.
+
+La misma inclusión puede leerse en sentido inverso mediante el símbolo $\supseteq$:
+
+$$
+\mathbb N\subseteq\mathbb Z
+\qquad\Longleftrightarrow\qquad
+\mathbb Z\supseteq\mathbb N.
+$$
+
+La notación
+
+$$
+A\subsetneq B
+$$
+
+indica que $A$ es un **subconjunto propio** de $B$: todos los elementos de $A$ pertenecen a $B$, pero $A\ne B$. Así,
+
+$$
+\mathbb N\subsetneq\mathbb Z
+\subsetneq\mathbb Q
+\subsetneq\mathbb R.
+$$
+
+En particular, si $A\subsetneq B$, existe al menos un elemento de $B$ que no pertenece a $A$.
+
+Algunos libros emplean $\subset$ con convenciones distintas: unas veces significa inclusión con igualdad permitida y otras, inclusión propia. Utilizaremos $\subseteq$ y $\subsetneq$ para evitar esa ambigüedad.
+
+No deben intercambiarse pertenencia e inclusión. Por ejemplo,
+
+$$
+17\in\mathbb N
+\qquad\text{y}\qquad
+\{17\}\subseteq\mathbb N,
+$$
+
+pero $17\subseteq\mathbb N$ no es una expresión correcta, pues $17$ es un número, no un conjunto.
+
+Como los conjuntos numéricos están anidados, un mismo número puede pertenecer a varios de ellos. La clasificación de $17$ y $3.5$ puede resumirse así:
+
+| Número | $\mathbb N$ | $\mathbb Z$ | $\mathbb Q$ | $\mathbb R$ | Conjunto más específico |
+|---|:---:|:---:|:---:|:---:|---|
+| $17$ | $\in$ | $\in$ | $\in$ | $\in$ | $\mathbb N$ |
+| $3.5$ | $\notin$ | $\notin$ | $\in$ | $\in$ | $\mathbb Q$ |
+
+Cuando se pide clasificar un número en el conjunto más específico, se elige el menor de estos conjuntos anidados que lo contiene.
+
+## Expansiones decimales de los números racionales
+
+La expansión decimal en base diez de todo número racional es **finita** o **eventualmente periódica**. Recíprocamente, todo decimal finito o eventualmente periódico representa un número racional.
+
+Una expansión es finita cuando termina, como en
+
+$$
+0.125=\frac18.
+$$
+
+Es eventualmente periódica cuando, a partir de cierta posición, un bloque fijo de cifras se repite indefinidamente. La barra indica exactamente el bloque que se repite:
+
+$$
+0.\overline3=0.3333\ldots,
+$$
+
+$$
+0.1\overline3=0.13333\ldots,
+$$
+
+y
+
+$$
+0.17\overline{41}=0.17414141\ldots.
+$$
+
+En los dos últimos ejemplos hay cifras iniciales que no forman parte del periodo.
+
+### Conversión de un decimal periódico en fracción
+
+La periodicidad permite eliminar la parte decimal mediante una resta. Sea
+
+$$
+x=0.\overline3=0.3333\ldots.
+$$
+
+Al multiplicar por $10$ y restar las dos igualdades, se obtiene
+
+$$
+10x=3.3333\ldots,
+$$
+
+$$
+10x-x=3.3333\ldots-0.3333\ldots,
+$$
+
+de donde
+
+$$
+9x=3
+\qquad\Longrightarrow\qquad
+x=\frac13.
+$$
+
+Ahora consideremos
+
+$$
+y=0.1\overline3=0.13333\ldots.
+$$
+
+Para alinear las partes decimales periódicas utilizamos dos potencias de $10$:
+
+$$
+10y=1.3333\ldots,
+\qquad
+100y=13.3333\ldots.
+$$
+
+Al restar,
+
+$$
+100y-10y=12,
 $$
 
 por tanto,
 
 $$
-99x=27
+90y=12
 \qquad\Longrightarrow\qquad
-x=\frac{27}{99}=\frac3{11}.
+y=\frac{12}{90}=\frac2{15}.
 $$
 
-Los números $\sqrt2$ y $\pi$ son irracionales; en consecuencia, sus expansiones decimales son infinitas y no son eventualmente periódicas.
+El mismo procedimiento funciona para cualquier decimal eventualmente periódico: se eligen potencias de $10$ que hagan coincidir la parte periódica y luego se restan las igualdades.
 
-Si $n$ es un entero no negativo, entonces $\sqrt n$ es racional si y solo si $n$ es un cuadrado perfecto. Por tanto,
+### Tener un patrón no significa ser periódico
+
+Una expansión decimal puede seguir una regla clara sin repetir eventualmente un bloque fijo. Considérese
 
 $$
-\sqrt{49}=7\in\mathbb N,
-\qquad
+z=0.101001000100001\ldots,
+$$
+
+donde entre dos cifras $1$ consecutivas aparecen uno, dos, tres, cuatro y, sucesivamente, cada vez más ceros. Existe un patrón para construir sus cifras, pero no hay un bloque fijo que se repita a partir de cierta posición. Por ello, su expansión no es eventualmente periódica y $z$ es irracional.
+
+En efecto, las separaciones entre cifras $1$ crecen sin límite; una cola decimal con un periodo fijo no puede presentar separaciones cada vez mayores.
+
+En consecuencia, no basta con preguntar si un decimal infinito «tiene un patrón». La condición precisa para que sea racional es que su expansión sea eventualmente periódica.
+
+## Raíces cuadradas y clasificación
+
+Antes de clasificar una expresión, es necesario simplificarla. Si $n$ es un entero no negativo, entonces
+
+$$
+\sqrt n\in\mathbb Q
+\qquad\Longleftrightarrow\qquad
+n\text{ es un cuadrado perfecto}.
+$$
+
+Por ejemplo,
+
+$$
+-\sqrt{25}=-5\in\mathbb Z.
+$$
+
+El signo negativo está fuera del radical: primero se calcula $\sqrt{25}=5$ y después se toma su opuesto.
+
+En cambio, $10$ no es un cuadrado perfecto. Como
+
+$$
+3^2<10<4^2,
+$$
+
+la raíz se encuentra entre $3$ y $4$:
+
+$$
+3<\sqrt{10}<4.
+$$
+
+Además, como $10$ no es un cuadrado perfecto, el criterio anterior permite concluir que
+
+$$
 \sqrt{10}\in\mathbb R\setminus\mathbb Q.
 $$
 
-El símbolo $\sqrt n$ representa la raíz cuadrada no negativa de $n$. Así, $\sqrt{49}=7$; en cambio, la ecuación $x^2=49$ tiene dos soluciones: $x=7$ y $x=-7$.
-
-Antes de clasificar una expresión, es necesario simplificarla. Por ejemplo,
-
-$$
-\frac{18}{6}=3\in\mathbb N
-\qquad\text{y}\qquad
--\sqrt{36}=-6\in\mathbb Z.
-$$
+El símbolo $\sqrt n$ representa la raíz cuadrada no negativa de $n$. Así, $\sqrt{25}=5$; en cambio, la ecuación $x^2=25$ tiene dos soluciones: $x=5$ y $x=-5$.
 
 ## La recta real y el orden
 
@@ -145,6 +324,23 @@ Sean $a,b\in\mathbb R$ con $a<b$. Los intervalos permiten describir subconjuntos
 
 Los símbolos $\infty$ y $-\infty$ no representan números reales. Por esta razón, siempre se utiliza un paréntesis junto a ellos.
 
+En relación con el cero, conviene distinguir cuatro intervalos básicos:
+
+$$
+\begin{aligned}
+(0,\infty)&=\{x\in\mathbb R:x>0\},\\
+[0,\infty)&=\{x\in\mathbb R:x\ge0\},\\
+(-\infty,0)&=\{x\in\mathbb R:x<0\},\\
+(-\infty,0]&=\{x\in\mathbb R:x\le0\}.
+\end{aligned}
+$$
+
+Los dos primeros conjuntos son, respectivamente, los números positivos y los no negativos; los dos últimos son los números negativos y los no positivos. El cero no es positivo ni negativo. Toda la recta real se expresa como
+
+$$
+(-\infty,\infty)=\mathbb R.
+$$
+
 ## Ejemplos
 
 ### Ejemplo 1. Clasificación de números reales
@@ -154,10 +350,10 @@ Clasifiquemos cada número en el conjunto más específico al que pertenece.
 | Número | Simplificación o criterio | Clasificación |
 |---|---|---|
 | $\sqrt{64}$ | $\sqrt{64}=8$ | $\mathbb N$ |
-| $-5$ | Es un entero negativo | $\mathbb Z$ |
+| $-\sqrt{25}$ | $-\sqrt{25}=-5$ | $\mathbb Z$ |
 | $\dfrac{11}{4}$ | Es un cociente de enteros | $\mathbb Q$ |
 | $0.\overline{18}$ | Su expansión decimal es periódica | $\mathbb Q$ |
-| $\sqrt{13}$ | $13$ no es un cuadrado perfecto | $\mathbb R\setminus\mathbb Q$ |
+| $\sqrt{10}$ | $10$ no es un cuadrado perfecto | $\mathbb R\setminus\mathbb Q$ |
 | $\pi$ | Es irracional | $\mathbb R\setminus\mathbb Q$ |
 
 La clasificación más específica no elimina las inclusiones posteriores. Por ejemplo, $-5\in\mathbb Z$ también implica que $-5\in\mathbb Q$ y $-5\in\mathbb R$.
@@ -219,13 +415,17 @@ $$
 -\sqrt9<-\frac52<0.6<\frac23.
 $$
 
-### Errores frecuentes
+## Errores frecuentes
 
+- Un número entero también es racional: $17=\frac{17}{1}$.
+- La presencia de un punto decimal no determina el tipo de número: $3.0=3$ es entero, mientras que $3.5=\frac72$ no lo es.
 - No todo decimal infinito es irracional: $0.\overline3=\frac13$.
-- No todo número escrito con un radical es irracional: $\sqrt{16}=4$.
+- Un patrón visible no implica periodicidad eventual.
+- La presencia de un radical no determina por sí sola que un número sea irracional; primero debe simplificarse la expresión.
 - El número $\frac{22}{7}$ no es igual a $\pi$; es un número racional que lo aproxima.
-- La suma de dos irracionales no siempre es irracional: $\sqrt2+(-\sqrt2)=0$.
+- La suma de dos irracionales no siempre es irracional.
 - Los símbolos $\infty$ y $-\infty$ nunca se incluyen como extremos de un intervalo.
+- Los símbolos $\in$ y $\subseteq$ no son intercambiables: el primero relaciona un elemento con un conjunto y el segundo relaciona dos conjuntos.
 
 ## Actividad
 
@@ -274,7 +474,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    a. Todo número escrito con un radical es irracional.  
    b. La suma de dos números irracionales siempre es irracional.
 
-::: {.callout-note collapse="true" title="Soluciones"}
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 1. Se tiene
 
    $$
@@ -301,7 +501,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
 3. $A=(-1,3]$; por tanto, $-1\notin A$ y $3\in A$.
 
-4. 
+4.
 
    $$
    [2,\infty)=\{x\in\mathbb R:x\ge2\}.
@@ -362,3 +562,13 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    d. Si $x\in\mathbb Z$, entonces $x\in\mathbb R$.
 
 5. Una pantalla muestra el valor decimal $3.1416$, mientras que una fórmula utiliza el valor exacto $\pi$. Clasifique ambos números y explique por qué $3.1416$ puede aproximar a $\pi$ sin ser igual a él.
+
+6. Convierta $0.\overline7$ y $0.2\overline7$ en fracciones.
+
+7. Explique por qué
+
+   $$
+   0.101001000100001\ldots
+   $$
+
+   no es un decimal eventualmente periódico.
