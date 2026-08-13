@@ -355,7 +355,7 @@ window.Quarto = {
   <li><a href="#ejemplo-1.-potencias-y-restricciones" id="toc-ejemplo-1.-potencias-y-restricciones" class="nav-link" data-scroll-target="#ejemplo-1.-potencias-y-restricciones">Ejemplo 1. Potencias y restricciones</a></li>
   <li><a href="#ejemplo-2.-radicales-semejantes" id="toc-ejemplo-2.-radicales-semejantes" class="nav-link" data-scroll-target="#ejemplo-2.-radicales-semejantes">Ejemplo 2. Radicales semejantes</a></li>
   <li><a href="#ejemplo-3.-valor-absoluto-en-una-raíz" id="toc-ejemplo-3.-valor-absoluto-en-una-raíz" class="nav-link" data-scroll-target="#ejemplo-3.-valor-absoluto-en-una-raíz">Ejemplo 3. Valor absoluto en una raíz</a></li>
-  <li><a href="#ejemplo-4.-comprobación-de-una-igualdad" id="toc-ejemplo-4.-comprobación-de-una-igualdad" class="nav-link" data-scroll-target="#ejemplo-4.-comprobación-de-una-igualdad">Ejemplo 4. Comprobación de una igualdad</a></li>
+  <li><a href="#ejemplo-4.-contraejemplo-para-una-igualdad-falsa" id="toc-ejemplo-4.-contraejemplo-para-una-igualdad-falsa" class="nav-link" data-scroll-target="#ejemplo-4.-contraejemplo-para-una-igualdad-falsa">Ejemplo 4. Contraejemplo para una igualdad falsa</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -396,9 +396,13 @@ window.Quarto = {
 <p>Simplificar una expresión consiste en sustituirla por otra que tenga el mismo valor y sea más conveniente para efectuar cálculos o reconocer sus propiedades. Una expresión más corta no es necesariamente equivalente a la original: cada transformación debe respetar las operaciones y las restricciones bajo las cuales está definida.</p>
 <p>Dos expresiones son <strong>equivalentes en un conjunto</strong> <span class="math inline">\(D\)</span> si ambas están definidas y tienen el mismo valor para todo elemento de <span class="math inline">\(D\)</span>. El conjunto <span class="math inline">\(D\)</span> forma parte de la afirmación. Por ejemplo,</p>
 <p><span class="math display">\[
+5x+3x-2x=(5+3-2)x=6x
+\]</span></p>
+<p>para todo <span class="math inline">\(x\in\mathbb R\)</span>. En cambio, la igualdad</p>
+<p><span class="math display">\[
 x^0=1
 \]</span></p>
-<p>es válido para <span class="math inline">\(x\ne0\)</span>, pero no permite asignar un valor a <span class="math inline">\(0^0\)</span>.</p>
+<p>solo es válida para <span class="math inline">\(x\ne0\)</span>. La expresión <span class="math inline">\(0^0\)</span> no se define en la aritmética real elemental.</p>
 </section>
 <section id="jerarquía-de-operaciones" class="level2">
 <h2 class="anchored" data-anchor-id="jerarquía-de-operaciones">Jerarquía de operaciones</h2>
@@ -409,12 +413,15 @@ x^0=1
 <li>multiplicaciones y divisiones, de izquierda a derecha;</li>
 <li>sumas y restas, de izquierda a derecha.</li>
 </ol>
-<p>La barra de una fracción agrupa por separado todo el numerador y todo el denominador. Asimismo, el signo negativo no forma parte de la base de una potencia a menos que se incluya entre paréntesis:</p>
+<p>La barra de una fracción agrupa por separado todo el numerador y todo el denominador. La base de una potencia es la expresión sobre la que actúa el exponente. Un signo negativo colocado delante de una potencia queda fuera de la base, a menos que se incluya entre paréntesis:</p>
 <p><span class="math display">\[
 -3^2=-(3^2)=-9,
 \qquad
-(-3)^2=9.
+(-3)^2=9,
+\qquad
+(-3)^3=-27.
 \]</span></p>
+<p>En la primera expresión, el exponente afecta solamente al <span class="math inline">\(3\)</span>. En las otras dos, la base completa es <span class="math inline">\(-3\)</span>.</p>
 <p>Por ejemplo,</p>
 <p><span class="math display">\[
 2-3\left[4-(1+2)^2\right]+\frac{8}{2^2}
@@ -439,7 +446,18 @@ a^0=1,
 a^{-n}=\frac{1}{a^n},
 \qquad a\ne0.
 \]</span></p>
-<p>En particular, un exponente negativo indica un recíproco; no convierte por sí mismo la potencia en un número negativo.</p>
+<p>La definición del exponente cero es compatible con la ley del cociente. Si <span class="math inline">\(m\)</span> es un entero positivo y <span class="math inline">\(a\ne0\)</span>, entonces</p>
+<p><span class="math display">\[
+\frac{a^m}{a^m}=1
+\qquad\text{y}\qquad
+\frac{a^m}{a^m}=a^{m-m}=a^0.
+\]</span></p>
+<p>Un exponente negativo indica un recíproco; no convierte por sí mismo la potencia en un número negativo. Por ejemplo,</p>
+<p><span class="math display">\[
+2^{-3}=\frac1{2^3}=\frac18,
+\qquad
+-2^3=-(2^3)=-8.
+\]</span></p>
 <p>Sean <span class="math inline">\(m,n\in\mathbb Z\)</span>. En cada una de las leyes siguientes se supone que todas las potencias involucradas están definidas:</p>
 <table class="caption-top table">
 <colgroup>
@@ -475,11 +493,32 @@ a^{-n}=\frac{1}{a^n},
 </tr>
 </tbody>
 </table>
-<p>Estas leyes se aplican a productos, cocientes y potencias de potencias. No existe una ley análoga para una suma:</p>
+<p>Para sumar o restar exponentes mediante las leyes del producto o del cociente, las bases deben ser iguales. Así,</p>
+<p><span class="math display">\[
+x^2x^5=x^7,
+\]</span></p>
+<p>pero la ley <span class="math inline">\(a^ma^n=a^{m+n}\)</span> no permite reducir <span class="math inline">\(x^2y^5\)</span> a una sola potencia cuando <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> son bases distintas.</p>
+<p>Un exponente exterior afecta a cada factor del producto. Después se aplica la ley de potencia de una potencia:</p>
+<p><span class="math display">\[
+(xy^2)^3=x^3(y^2)^3=x^3y^6,
+\]</span></p>
+<p>y, cuando hay un coeficiente,</p>
+<p><span class="math display">\[
+(3u^2v^{-1})^2=3^2(u^2)^2(v^{-1})^2
+=9u^4v^{-2}.
+\]</span></p>
+<p>Estas leyes se aplican a productos, cocientes y potencias de potencias. No existe una ley análoga que convierta una suma en una sola potencia. En general,</p>
 <p><span class="math display">\[
 a^m+a^n\ne a^{m+n}
+\qquad\text{y}\qquad
+(a+b)^n\ne a^n+b^n.
 \]</span></p>
-<p>en general.</p>
+<p>Por ejemplo,</p>
+<p><span class="math display">\[
+(1+1)^2=4,
+\qquad
+1^2+1^2=2.
+\]</span></p>
 <section id="simplificación-de-un-producto-de-potencias" class="level3">
 <h3 class="anchored" data-anchor-id="simplificación-de-un-producto-de-potencias">Simplificación de un producto de potencias</h3>
 <p>Para <span class="math inline">\(x\ne0\)</span> y <span class="math inline">\(y\ne0\)</span>,</p>
@@ -504,7 +543,14 @@ a^m+a^n\ne a^{m+n}
 \qquad
 \sqrt[3]{-8}=-2.
 \]</span></p>
-<p>El símbolo <span class="math inline">\(\sqrt{25}\)</span> designa solamente la raíz cuadrada principal, que es <span class="math inline">\(5\)</span>. En cambio, la ecuación <span class="math inline">\(x^2=25\)</span> tiene las dos soluciones <span class="math inline">\(x=5\)</span> y <span class="math inline">\(x=-5\)</span>.</p>
+<p>El símbolo <span class="math inline">\(\sqrt{25}\)</span> designa solamente la raíz cuadrada principal, que es <span class="math inline">\(5\)</span>. En cambio, la ecuación <span class="math inline">\(x^2=25\)</span> tiene las dos soluciones <span class="math inline">\(x=5\)</span> y <span class="math inline">\(x=-5\)</span>. Al aplicar la raíz cuadrada a ambos lados se obtiene</p>
+<p><span class="math display">\[
+\sqrt{x^2}=\sqrt{25}
+\quad\Longrightarrow\quad
+|x|=5
+\quad\Longrightarrow\quad
+x=\pm5.
+\]</span></p>
 <p>Para <span class="math inline">\(a\in\mathbb R\)</span>, el <strong>valor absoluto</strong> de <span class="math inline">\(a\)</span> se define por</p>
 <p><span class="math display">\[
 |a|=
@@ -546,10 +592,20 @@ a, &amp; n\text{ impar}.
 </section>
 <section id="simplificación-de-radicales" class="level3">
 <h3 class="anchored" data-anchor-id="simplificación-de-radicales">Simplificación de radicales</h3>
-<p>Un radical se simplifica separando del radicando una potencia perfecta del mismo índice. Por ejemplo,</p>
+<p>Un radical se simplifica separando del radicando una potencia perfecta del mismo índice. Si <span class="math inline">\(a\)</span> es un entero positivo, puede escribirse</p>
+<p><span class="math display">\[
+a=s^2r,
+\]</span></p>
+<p>donde <span class="math inline">\(s\)</span> es un entero no negativo y <span class="math inline">\(r\)</span> no tiene factores cuadrados mayores que <span class="math inline">\(1\)</span>. Entonces</p>
+<p><span class="math display">\[
+\sqrt a=s\sqrt r.
+\]</span></p>
+<p>La factorización prima proporciona un procedimiento sistemático: se agrupan pares de factores iguales y se extrae un factor de cada par. Para una raíz <span class="math inline">\(n\)</span>-ésima se forman grupos de <span class="math inline">\(n\)</span> factores iguales.</p>
+<p>Por ejemplo,</p>
 <p><span class="math display">\[
 \sqrt{72}
-=\sqrt{36\cdot2}
+=\sqrt{2^3\cdot3^2}
+=\sqrt{(2\cdot3)^2\cdot2}
 =6\sqrt2,
 \]</span></p>
 <p>y</p>
@@ -558,7 +614,7 @@ a, &amp; n\text{ impar}.
 =\sqrt[3]{(-27)\cdot2}
 =-3\sqrt[3]{2}.
 \]</span></p>
-<p>Los radicales semejantes tienen el mismo índice y el mismo radicando después de simplificarlos. Por ello,</p>
+<p>Cada radical se simplifica por separado. Solo después pueden combinarse los radicales semejantes, es decir, los que tienen el mismo índice y el mismo radicando reducido. Por ello,</p>
 <p><span class="math display">\[
 3\sqrt8-\sqrt{18}
 =3(2\sqrt2)-3\sqrt2
@@ -656,11 +712,11 @@ x^2x^{-2}=1,
 \]</span></p>
 <p>extraemos los cuadrados perfectos:</p>
 <p><span class="math display">\[
-\sqrt{180}=6\sqrt5,
+\sqrt{180}=\sqrt{36\cdot5}=6\sqrt5,
 \qquad
-\sqrt{20}=2\sqrt5,
+\sqrt{20}=\sqrt{4\cdot5}=2\sqrt5,
 \qquad
-\sqrt{45}=3\sqrt5.
+\sqrt{45}=\sqrt{9\cdot5}=3\sqrt5.
 \]</span></p>
 <p>Así,</p>
 <p><span class="math display">\[
@@ -686,19 +742,19 @@ x^2x^{-2}=1,
 \end{cases}
 \]</span></p>
 </section>
-<section id="ejemplo-4.-comprobación-de-una-igualdad" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-comprobación-de-una-igualdad">Ejemplo 4. Comprobación de una igualdad</h3>
+<section id="ejemplo-4.-contraejemplo-para-una-igualdad-falsa" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-4.-contraejemplo-para-una-igualdad-falsa">Ejemplo 4. Contraejemplo para una igualdad falsa</h3>
 <p>La igualdad</p>
 <p><span class="math display">\[
 \sqrt{a+b}=\sqrt a+\sqrt b
 \]</span></p>
-<p>no es una propiedad de los radicales. Basta tomar <span class="math inline">\(a=b=1\)</span>:</p>
+<p>no es una propiedad de los radicales. Por ejemplo, como <span class="math inline">\(20=16+4\)</span>,</p>
 <p><span class="math display">\[
-\sqrt{1+1}=\sqrt2
-\qquad\text{y}\qquad
-\sqrt1+\sqrt1=2.
+\sqrt{16+4}=\sqrt{20}=2\sqrt5,
+\qquad
+\sqrt{16}+\sqrt4=4+2=6.
 \]</span></p>
-<p>Como <span class="math inline">\(\sqrt2\ne2\)</span>, este caso constituye un contraejemplo y demuestra que la igualdad no es válida en general.</p>
+<p>Como <span class="math inline">\(2\sqrt5\ne6\)</span>, este caso constituye un contraejemplo y demuestra que la igualdad no es válida en general.</p>
 <p>Un solo contraejemplo basta para refutar una identidad general. En cambio, comprobar que una igualdad se cumple para uno o varios valores particulares no demuestra que sea válida en general.</p>
 </section>
 </section>
@@ -764,13 +820,16 @@ x^2x^{-2}=1,
 <ol type="1">
 <li><p>Se obtiene</p>
 <p><span class="math display">\[
--2^4+(-2)^3+3^0=-16-8+1=-23,
+-2^4+(-2)^3+3^0
+=-(2^4)+(-2)(-2)(-2)+1
+=-16-8+1
+=-23,
 \]</span></p>
 <p>y, al efectuar multiplicación y división de izquierda a derecha,</p>
 <p><span class="math display">\[
 18\div3\cdot2-(5-7)^2=6\cdot2-4=8.
 \]</span></p></li>
-<li><p>Se tiene</p>
+<li><p>El exponente exterior afecta al coeficiente y a cada factor del numerador. Se tiene</p>
 <p><span class="math display">\[
 \frac{(2x^3y^{-2})^2}{x^{-1}y^3}
 =\frac{4x^6y^{-4}}{x^{-1}y^3}
@@ -778,7 +837,13 @@ x^2x^{-2}=1,
 =\frac{4x^7}{y^7},
 \]</span></p>
 <p>con <span class="math inline">\(x\ne0\)</span> y <span class="math inline">\(y\ne0\)</span>.</p></li>
-<li><p>Al extraer cuadrados y cubos perfectos,</p>
+<li><p>Para el primer inciso, las factorizaciones</p>
+<p><span class="math display">\[
+48=2^4\cdot3=16\cdot3,
+\qquad
+75=5^2\cdot3=25\cdot3
+\]</span></p>
+<p>exhiben los mayores factores cuadrados perfectos que pueden extraerse. Por tanto,</p>
 <p><span class="math display">\[
 \sqrt{48}+\sqrt{75}
 =4\sqrt3+5\sqrt3
