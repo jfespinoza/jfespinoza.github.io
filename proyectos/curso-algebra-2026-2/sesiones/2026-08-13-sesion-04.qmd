@@ -1,0 +1,384 @@
+---
+title: "Sesión 04. Productos notables, factorización y fracciones algebraicas"
+date: 2026-08-13
+description: "Productos notables, métodos elementales de factorización, fracciones algebraicas y restricciones de dominio."
+---
+
+## Productos notables
+
+La propiedad distributiva permite desarrollar un producto:
+
+$$
+A(B+C)=AB+AC.
+$$
+
+Al aplicarla a ciertos productos se obtienen identidades que aparecen con frecuencia. Para cualesquiera expresiones reales $A$ y $B$,
+
+$$
+(A+B)^2=A^2+2AB+B^2,
+$$
+
+$$
+(A-B)^2=A^2-2AB+B^2,
+$$
+
+y
+
+$$
+(A+B)(A-B)=A^2-B^2.
+$$
+
+Por ejemplo,
+
+$$
+(2x-3y)^2
+=(2x)^2-2(2x)(3y)+(3y)^2
+=4x^2-12xy+9y^2.
+$$
+
+La igualdad $(A+B)^2=A^2+B^2$ no es una identidad: el término $2AB$ solo desaparece cuando $AB=0$.
+
+## Factorización
+
+Factorizar una expresión consiste en escribirla como producto. Es el proceso inverso de desarrollar: una factorización puede comprobarse multiplicando nuevamente los factores.
+
+### Factor común
+
+La propiedad distributiva, utilizada en sentido inverso, da
+
+$$
+AB+AC=A(B+C).
+$$
+
+Cuando todos los términos contienen un factor común, este se extrae antes de buscar otros patrones. Por ejemplo,
+
+$$
+12x^3y-18x^2y^2
+=6x^2y(2x-3y).
+$$
+
+### Diferencia de cuadrados y trinomios cuadrados perfectos
+
+La identidad del producto de binomios conjugados permite factorizar una diferencia de cuadrados:
+
+$$
+A^2-B^2=(A-B)(A+B).
+$$
+
+Así,
+
+$$
+25x^2-16y^2
+=(5x)^2-(4y)^2
+=(5x-4y)(5x+4y).
+$$
+
+La igualdad $A^2+B^2=(A-B)(A+B)$ no es una identidad. El producto del lado derecho es $A^2-B^2$.
+
+Las identidades de los cuadrados de binomios también se utilizan en sentido inverso:
+
+$$
+A^2+2AB+B^2=(A+B)^2,
+$$
+
+$$
+A^2-2AB+B^2=(A-B)^2.
+$$
+
+Por ejemplo,
+
+$$
+9x^2-24x+16
+=(3x)^2-2(3x)(4)+4^2
+=(3x-4)^2.
+$$
+
+### Trinomios sencillos
+
+Un trinomio cuadrático es mónico cuando el coeficiente de $x^2$ es $1$. Para factorizar un trinomio mónico con coeficientes enteros,
+
+$$
+x^2+bx+c,
+$$
+
+se buscan enteros $m$ y $n$ tales que
+
+$$
+m+n=b,
+\qquad
+mn=c.
+$$
+
+Entonces
+
+$$
+x^2+bx+c=(x+m)(x+n).
+$$
+
+Por ejemplo, para $x^2-x-12$ se pueden tomar $m=-4$ y $n=3$, porque
+
+$$
+-4+3=-1,
+\qquad
+(-4)(3)=-12.
+$$
+
+Por tanto,
+
+$$
+x^2-x-12=(x-4)(x+3).
+$$
+
+En un trinomio no mónico sencillo, el término lineal puede descomponerse para obtener un factor binomial común. Por ejemplo,
+
+$$
+\begin{aligned}
+6x^2+x-2
+&=6x^2+4x-3x-2\\
+&=2x(3x+2)-(3x+2)\\
+&=(3x+2)(2x-1).
+\end{aligned}
+$$
+
+Los números $4$ y $-3$ se eligieron porque su suma es $1$ y su producto es $6(-2)=-12$.
+
+Si no existe el par de enteros requerido, solo se concluye que este procedimiento no produce una factorización con coeficientes enteros.
+
+## Fracciones algebraicas y dominio
+
+Una fracción algebraica elemental tiene la forma
+
+$$
+\frac{P(x)}{Q(x)},
+$$
+
+donde $P$ y $Q$ son polinomios y $Q$ no es el polinomio cero. Su dominio natural es
+
+$$
+D=\{x\in\mathbb R:Q(x)\ne0\}.
+$$
+
+Los ceros del denominador se excluyen del dominio. Estas restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.
+
+La cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces
+
+$$
+\frac{A(x)C(x)}{B(x)C(x)}=\frac{A(x)}{B(x)},
+\qquad
+B(x)\ne0,
+\quad
+C(x)\ne0.
+$$
+
+No se cancelan términos de una suma. Por ejemplo,
+
+$$
+\frac{x^2+4x}{x}
+=\frac{x(x+4)}{x}
+=x+4,
+\qquad x\ne0,
+$$
+
+pero
+
+$$
+\frac{x^2+4}{x}
+=x+\frac4x,
+\qquad x\ne0;
+$$
+
+el numerador $x^2+4$ no contiene el factor $x$.
+
+## Ejemplos
+
+### Ejemplo 1. Factorización sucesiva
+
+En la expresión
+
+$$
+2x^3-18x
+$$
+
+se extrae primero el factor común y después se reconoce una diferencia de cuadrados:
+
+$$
+\begin{aligned}
+2x^3-18x
+&=2x(x^2-9)\\
+&=2x(x-3)(x+3).
+\end{aligned}
+$$
+
+La comprobación se obtiene al desarrollar el producto:
+
+$$
+2x(x-3)(x+3)
+=2x(x^2-9)
+=2x^3-18x.
+$$
+
+### Ejemplo 2. Simplificación y restricciones
+
+Simplifiquemos
+
+$$
+\frac{x^2-9}{x^2-3x}.
+$$
+
+El denominador original se factoriza como $x(x-3)$, por lo que
+
+$$
+x\ne0,
+\qquad
+x\ne3.
+$$
+
+Después se factorizan numerador y denominador:
+
+$$
+\begin{aligned}
+\frac{x^2-9}{x^2-3x}
+&=\frac{(x-3)(x+3)}{x(x-3)}\\
+&=\frac{x+3}{x},
+\qquad x\notin\{0,3\}.
+\end{aligned}
+$$
+
+La expresión reducida está definida en $x=3$, pero la fracción original no. La igualdad anterior se considera únicamente en el dominio de la expresión original.
+
+## Errores frecuentes
+
+- Suponer que $(A+B)^2=A^2+B^2$ es una identidad y omitir el término central $2AB$.
+- Suponer que $A^2+B^2=(A-B)(A+B)$ es una identidad; el producto de binomios conjugados produce una diferencia de cuadrados.
+- Detener la factorización después de extraer un factor común, aunque todavía aparezca una diferencia de cuadrados u otro patrón reconocible.
+- Elegir los signos de un trinomio atendiendo solo al producto; también debe verificarse la suma.
+- Cancelar términos de una suma en lugar de factores multiplicativos completos.
+- Obtener las restricciones después de cancelar y reincorporar valores excluidos por el denominador original.
+- Concluir que un trinomio no admite otra factorización porque no aparece el par de enteros buscado; esa búsqueda solo decide si funciona el procedimiento descrito.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+1. Factorice:
+
+   $$
+   16x^2+24xy+9y^2.
+   $$
+
+2. Factorice completamente:
+
+   $$
+   3x^3+12x^2+12x.
+   $$
+
+3. Factorice:
+
+   $$
+   x^2-2x-15.
+   $$
+
+4. Factorice:
+
+   $$
+   6x^2-7x-3.
+   $$
+
+5. Simplifique e indique todas las restricciones de la expresión original:
+
+   $$
+   \frac{2x^2-8}{x^2+x-6}.
+   $$
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+1. Los términos extremos son cuadrados perfectos y el término central es $2(4x)(3y)$:
+
+   $$
+   16x^2+24xy+9y^2
+   =(4x+3y)^2.
+   $$
+
+2. Se extrae el factor común y se factoriza el trinomio cuadrado perfecto:
+
+   $$
+   \begin{aligned}
+   3x^3+12x^2+12x
+   &=3x(x^2+4x+4)\\
+   &=3x(x+2)^2.
+   \end{aligned}
+   $$
+
+3. Los números $-5$ y $3$ suman $-2$ y su producto es $-15$. Por tanto,
+
+   $$
+   x^2-2x-15=(x-5)(x+3).
+   $$
+
+4. Como $6(-3)=-18$, se buscan dos enteros cuya suma sea $-7$ y cuyo producto sea $-18$. Se eligen $-9$ y $2$:
+
+   $$
+   \begin{aligned}
+   6x^2-7x-3
+   &=6x^2-9x+2x-3\\
+   &=3x(2x-3)+(2x-3)\\
+   &=(3x+1)(2x-3).
+   \end{aligned}
+   $$
+
+5. El denominador original se anula en $x=2$ y $x=-3$. Al factorizar,
+
+   $$
+   \begin{aligned}
+   \frac{2x^2-8}{x^2+x-6}
+   &=\frac{2(x^2-4)}{(x-2)(x+3)}\\
+   &=\frac{2(x-2)(x+2)}{(x-2)(x+3)}\\
+   &=\frac{2(x+2)}{x+3},
+   \qquad x\notin\{2,-3\}.
+   \end{aligned}
+   $$
+:::
+
+## Ejercicios para practicar
+
+1. Desarrolle:
+
+   a. $(x+6)^2$.  
+   b. $(2a-5b)^2$.  
+   c. $(4m+n)(4m-n)$.
+
+2. Factorice completamente:
+
+   a. $15x^3y-10x^2y^2$.  
+   b. $36u^2-49v^2$.  
+   c. $3x^3-27x$.
+
+3. Factorice:
+
+   a. $x^2-7x+12$.  
+   b. $x^2+2x-24$.  
+   c. $8x^2-2x-3$.
+
+4. Simplifique e indique todas las restricciones de la expresión original:
+
+   a. $\dfrac{x^2-16}{x^2+x-20}$.  
+   b. $\dfrac{3x^2-12x}{x^2-16}$.  
+   c. $\dfrac{x^2-6x+9}{x^2-9}$.  
+   d. $\dfrac{2x^2+10x}{x^2+7x+10}$.
+
+5. Compare los dominios naturales de
+
+   $$
+   \frac{x^2-1}{x-1}
+   \qquad\text{y}\qquad
+   x+1.
+   $$
+
+6. Determine si la igualdad
+
+   $$
+   \frac{x^2+9}{x+3}=x+3
+   $$
+
+   es válida para todos los valores reales en los que la fracción está definida. Si es falsa, proporcione un contraejemplo.
+
+7. Construya una fracción algebraica cuya forma simplificada sea $x-2$ y cuyo dominio natural sea $\mathbb R\setminus\{5\}$.
