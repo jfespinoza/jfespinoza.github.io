@@ -9,23 +9,23 @@ description: "Productos notables, métodos elementales de factorización, fracci
 La propiedad distributiva permite desarrollar un producto:
 
 $$
-A(B+C)=AB+AC.
+a(b+c)=ab+ac.
 $$
 
-Al aplicarla a ciertos productos se obtienen identidades que aparecen con frecuencia. Para cualesquiera expresiones reales $A$ y $B$,
+Al aplicarla a ciertos productos se obtienen identidades que aparecen con frecuencia. Para cualesquiera expresiones reales $a$ y $b$,
 
 $$
-(A+B)^2=A^2+2AB+B^2,
+(a+b)^2=a^2+2ab+b^2,
 $$
 
 $$
-(A-B)^2=A^2-2AB+B^2,
+(a-b)^2=a^2-2ab+b^2,
 $$
 
 y
 
 $$
-(A+B)(A-B)=A^2-B^2.
+(a+b)(a-b)=a^2-b^2.
 $$
 
 Por ejemplo,
@@ -36,7 +36,7 @@ $$
 =4x^2-12xy+9y^2.
 $$
 
-La igualdad $(A+B)^2=A^2+B^2$ no es una identidad: el término $2AB$ solo desaparece cuando $AB=0$.
+La igualdad $(a+b)^2=a^2+b^2$ no es una identidad: el término $2ab$ solo desaparece cuando $ab=0$.
 
 ## Factorización
 
@@ -47,7 +47,7 @@ Factorizar una expresión consiste en escribirla como producto. Es el proceso in
 La propiedad distributiva, utilizada en sentido inverso, da
 
 $$
-AB+AC=A(B+C).
+ab+ac=a(b+c).
 $$
 
 Cuando todos los términos contienen un factor común, este se extrae antes de buscar otros patrones. Por ejemplo,
@@ -62,7 +62,7 @@ $$
 La identidad del producto de binomios conjugados permite factorizar una diferencia de cuadrados:
 
 $$
-A^2-B^2=(A-B)(A+B).
+a^2-b^2=(a-b)(a+b).
 $$
 
 Así,
@@ -73,16 +73,16 @@ $$
 =(5x-4y)(5x+4y).
 $$
 
-La igualdad $A^2+B^2=(A-B)(A+B)$ no es una identidad. El producto del lado derecho es $A^2-B^2$.
+La igualdad $a^2+b^2=(a-b)(a+b)$ no es una identidad. El producto del lado derecho es $a^2-b^2$.
 
 Las identidades de los cuadrados de binomios también se utilizan en sentido inverso:
 
 $$
-A^2+2AB+B^2=(A+B)^2,
+a^2+2ab+b^2=(a+b)^2,
 $$
 
 $$
-A^2-2AB+B^2=(A-B)^2.
+a^2-2ab+b^2=(a-b)^2.
 $$
 
 Por ejemplo,
@@ -149,13 +149,13 @@ Si no existe el par de enteros requerido, solo se concluye que este procedimient
 Una fracción algebraica elemental tiene la forma
 
 $$
-\frac{P(x)}{Q(x)},
+\frac{p(x)}{q(x)},
 $$
 
-donde $P$ y $Q$ son polinomios y $Q$ no es el polinomio cero. Su dominio natural es
+donde $p$ y $q$ son polinomios y $q$ no es el polinomio cero. Su dominio natural es
 
 $$
-D=\{x\in\mathbb R:Q(x)\ne0\}.
+D=\{x\in\mathbb R:q(x)\ne0\}.
 $$
 
 Los ceros del denominador se excluyen del dominio. Estas restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.
@@ -163,11 +163,11 @@ Los ceros del denominador se excluyen del dominio. Estas restricciones se determ
 La cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces
 
 $$
-\frac{A(x)C(x)}{B(x)C(x)}=\frac{A(x)}{B(x)},
+\frac{a(x)c(x)}{b(x)c(x)}=\frac{a(x)}{b(x)},
 \qquad
-B(x)\ne0,
+b(x)\ne0,
 \quad
-C(x)\ne0.
+c(x)\ne0.
 $$
 
 No se cancelan términos de una suma. Por ejemplo,
@@ -248,13 +248,14 @@ La expresión reducida está definida en $x=3$, pero la fracción original no. L
 
 ## Errores frecuentes
 
-- Suponer que $(A+B)^2=A^2+B^2$ es una identidad y omitir el término central $2AB$.
-- Suponer que $A^2+B^2=(A-B)(A+B)$ es una identidad; el producto de binomios conjugados produce una diferencia de cuadrados.
+- Suponer que $(a+b)^2=a^2+b^2$ es una identidad y omitir el término central $2ab$.
+- Suponer que $a^2+b^2=(a-b)(a+b)$ es una identidad; el producto de binomios conjugados produce una diferencia de cuadrados.
 - Detener la factorización después de extraer un factor común, aunque todavía aparezca una diferencia de cuadrados u otro patrón reconocible.
 - Elegir los signos de un trinomio atendiendo solo al producto; también debe verificarse la suma.
 - Cancelar términos de una suma en lugar de factores multiplicativos completos.
 - Obtener las restricciones después de cancelar y reincorporar valores excluidos por el denominador original.
 - Concluir que un trinomio no admite otra factorización porque no aparece el par de enteros buscado; esa búsqueda solo decide si funciona el procedimiento descrito.
+- Verificar una igualdad para uno o varios valores y concluir que es una identidad; esas comprobaciones no constituyen una demostración, mientras que un solo contraejemplo basta para refutarla.
 
 ## Actividad
 
@@ -373,12 +374,12 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    x+1.
    $$
 
-6. Determine si la igualdad
+6. Determine, mediante una transformación algebraica, si la igualdad
 
    $$
    \frac{x^2+9}{x+3}=x+3
    $$
 
-   es válida para todos los valores reales en los que la fracción está definida. Si es falsa, proporcione un contraejemplo.
+   es válida para todo $x\ne-3$. Justifique su respuesta y, si es falsa, proporcione un contraejemplo.
 
 7. Construya una fracción algebraica cuya forma simplificada sea $x-2$ y cuyo dominio natural sea $\mathbb R\setminus\{5\}$.
