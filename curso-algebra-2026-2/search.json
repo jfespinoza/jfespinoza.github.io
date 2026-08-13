@@ -732,6 +732,83 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-13-sesion-04.html",
+    "href": "sesiones/2026-08-13-sesion-04.html",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "",
+    "text": "Productos notables\nLa propiedad distributiva permite desarrollar un producto:\n\\[\nA(B+C)=AB+AC.\n\\]\nAl aplicarla a ciertos productos se obtienen identidades que aparecen con frecuencia. Para cualesquiera expresiones reales \\(A\\) y \\(B\\),\n\\[\n(A+B)^2=A^2+2AB+B^2,\n\\]\n\\[\n(A-B)^2=A^2-2AB+B^2,\n\\]\ny\n\\[\n(A+B)(A-B)=A^2-B^2.\n\\]\nPor ejemplo,\n\\[\n(2x-3y)^2\n=(2x)^2-2(2x)(3y)+(3y)^2\n=4x^2-12xy+9y^2.\n\\]\nLa igualdad \\((A+B)^2=A^2+B^2\\) no es una identidad: el término \\(2AB\\) solo desaparece cuando \\(AB=0\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#factorización",
+    "href": "sesiones/2026-08-13-sesion-04.html#factorización",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Factorización",
+    "text": "Factorización\nFactorizar una expresión consiste en escribirla como producto. Es el proceso inverso de desarrollar: una factorización puede comprobarse multiplicando nuevamente los factores.\n\nFactor común\nLa propiedad distributiva, utilizada en sentido inverso, da\n\\[\nAB+AC=A(B+C).\n\\]\nCuando todos los términos contienen un factor común, este se extrae antes de buscar otros patrones. Por ejemplo,\n\\[\n12x^3y-18x^2y^2\n=6x^2y(2x-3y).\n\\]\n\n\nDiferencia de cuadrados y trinomios cuadrados perfectos\nLa identidad del producto de binomios conjugados permite factorizar una diferencia de cuadrados:\n\\[\nA^2-B^2=(A-B)(A+B).\n\\]\nAsí,\n\\[\n25x^2-16y^2\n=(5x)^2-(4y)^2\n=(5x-4y)(5x+4y).\n\\]\nLa igualdad \\(A^2+B^2=(A-B)(A+B)\\) no es una identidad. El producto del lado derecho es \\(A^2-B^2\\).\nLas identidades de los cuadrados de binomios también se utilizan en sentido inverso:\n\\[\nA^2+2AB+B^2=(A+B)^2,\n\\]\n\\[\nA^2-2AB+B^2=(A-B)^2.\n\\]\nPor ejemplo,\n\\[\n9x^2-24x+16\n=(3x)^2-2(3x)(4)+4^2\n=(3x-4)^2.\n\\]\n\n\nTrinomios sencillos\nUn trinomio cuadrático es mónico cuando el coeficiente de \\(x^2\\) es \\(1\\). Para factorizar un trinomio mónico con coeficientes enteros,\n\\[\nx^2+bx+c,\n\\]\nse buscan enteros \\(m\\) y \\(n\\) tales que\n\\[\nm+n=b,\n\\qquad\nmn=c.\n\\]\nEntonces\n\\[\nx^2+bx+c=(x+m)(x+n).\n\\]\nPor ejemplo, para \\(x^2-x-12\\) se pueden tomar \\(m=-4\\) y \\(n=3\\), porque\n\\[\n-4+3=-1,\n\\qquad\n(-4)(3)=-12.\n\\]\nPor tanto,\n\\[\nx^2-x-12=(x-4)(x+3).\n\\]\nEn un trinomio no mónico sencillo, el término lineal puede descomponerse para obtener un factor binomial común. Por ejemplo,\n\\[\n\\begin{aligned}\n6x^2+x-2\n&=6x^2+4x-3x-2\\\\\n&=2x(3x+2)-(3x+2)\\\\\n&=(3x+2)(2x-1).\n\\end{aligned}\n\\]\nLos números \\(4\\) y \\(-3\\) se eligieron porque su suma es \\(1\\) y su producto es \\(6(-2)=-12\\).\nSi no existe el par de enteros requerido, solo se concluye que este procedimiento no produce una factorización con coeficientes enteros.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#fracciones-algebraicas-y-dominio",
+    "href": "sesiones/2026-08-13-sesion-04.html#fracciones-algebraicas-y-dominio",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Fracciones algebraicas y dominio",
+    "text": "Fracciones algebraicas y dominio\nUna fracción algebraica elemental tiene la forma\n\\[\n\\frac{P(x)}{Q(x)},\n\\]\ndonde \\(P\\) y \\(Q\\) son polinomios y \\(Q\\) no es el polinomio cero. Su dominio natural es\n\\[\nD=\\{x\\in\\mathbb R:Q(x)\\ne0\\}.\n\\]\nLos ceros del denominador se excluyen del dominio. Estas restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.\nLa cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces\n\\[\n\\frac{A(x)C(x)}{B(x)C(x)}=\\frac{A(x)}{B(x)},\n\\qquad\nB(x)\\ne0,\n\\quad\nC(x)\\ne0.\n\\]\nNo se cancelan términos de una suma. Por ejemplo,\n\\[\n\\frac{x^2+4x}{x}\n=\\frac{x(x+4)}{x}\n=x+4,\n\\qquad x\\ne0,\n\\]\npero\n\\[\n\\frac{x^2+4}{x}\n=x+\\frac4x,\n\\qquad x\\ne0;\n\\]\nel numerador \\(x^2+4\\) no contiene el factor \\(x\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#ejemplos",
+    "href": "sesiones/2026-08-13-sesion-04.html#ejemplos",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Factorización sucesiva\nEn la expresión\n\\[\n2x^3-18x\n\\]\nse extrae primero el factor común y después se reconoce una diferencia de cuadrados:\n\\[\n\\begin{aligned}\n2x^3-18x\n&=2x(x^2-9)\\\\\n&=2x(x-3)(x+3).\n\\end{aligned}\n\\]\nLa comprobación se obtiene al desarrollar el producto:\n\\[\n2x(x-3)(x+3)\n=2x(x^2-9)\n=2x^3-18x.\n\\]\n\n\nEjemplo 2. Simplificación y restricciones\nSimplifiquemos\n\\[\n\\frac{x^2-9}{x^2-3x}.\n\\]\nEl denominador original se factoriza como \\(x(x-3)\\), por lo que\n\\[\nx\\ne0,\n\\qquad\nx\\ne3.\n\\]\nDespués se factorizan numerador y denominador:\n\\[\n\\begin{aligned}\n\\frac{x^2-9}{x^2-3x}\n&=\\frac{(x-3)(x+3)}{x(x-3)}\\\\\n&=\\frac{x+3}{x},\n\\qquad x\\notin\\{0,3\\}.\n\\end{aligned}\n\\]\nLa expresión reducida está definida en \\(x=3\\), pero la fracción original no. La igualdad anterior se considera únicamente en el dominio de la expresión original.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#errores-frecuentes",
+    "href": "sesiones/2026-08-13-sesion-04.html#errores-frecuentes",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nSuponer que \\((A+B)^2=A^2+B^2\\) es una identidad y omitir el término central \\(2AB\\).\nSuponer que \\(A^2+B^2=(A-B)(A+B)\\) es una identidad; el producto de binomios conjugados produce una diferencia de cuadrados.\nDetener la factorización después de extraer un factor común, aunque todavía aparezca una diferencia de cuadrados u otro patrón reconocible.\nElegir los signos de un trinomio atendiendo solo al producto; también debe verificarse la suma.\nCancelar términos de una suma en lugar de factores multiplicativos completos.\nObtener las restricciones después de cancelar y reincorporar valores excluidos por el denominador original.\nConcluir que un trinomio no admite otra factorización porque no aparece el par de enteros buscado; esa búsqueda solo decide si funciona el procedimiento descrito.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#actividad",
+    "href": "sesiones/2026-08-13-sesion-04.html#actividad",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\n\nFactorice:\n\\[\n16x^2+24xy+9y^2.\n\\]\nFactorice completamente:\n\\[\n3x^3+12x^2+12x.\n\\]\nFactorice:\n\\[\nx^2-2x-15.\n\\]\nFactorice:\n\\[\n6x^2-7x-3.\n\\]\nSimplifique e indique todas las restricciones de la expresión original:\n\\[\n\\frac{2x^2-8}{x^2+x-6}.\n\\]\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n\nLos términos extremos son cuadrados perfectos y el término central es \\(2(4x)(3y)\\):\n\\[\n16x^2+24xy+9y^2\n=(4x+3y)^2.\n\\]\nSe extrae el factor común y se factoriza el trinomio cuadrado perfecto:\n\\[\n\\begin{aligned}\n3x^3+12x^2+12x\n&=3x(x^2+4x+4)\\\\\n&=3x(x+2)^2.\n\\end{aligned}\n\\]\nLos números \\(-5\\) y \\(3\\) suman \\(-2\\) y su producto es \\(-15\\). Por tanto,\n\\[\nx^2-2x-15=(x-5)(x+3).\n\\]\nComo \\(6(-3)=-18\\), se buscan dos enteros cuya suma sea \\(-7\\) y cuyo producto sea \\(-18\\). Se eligen \\(-9\\) y \\(2\\):\n\\[\n\\begin{aligned}\n6x^2-7x-3\n&=6x^2-9x+2x-3\\\\\n&=3x(2x-3)+(2x-3)\\\\\n&=(3x+1)(2x-3).\n\\end{aligned}\n\\]\nEl denominador original se anula en \\(x=2\\) y \\(x=-3\\). Al factorizar,\n\\[\n\\begin{aligned}\n\\frac{2x^2-8}{x^2+x-6}\n&=\\frac{2(x^2-4)}{(x-2)(x+3)}\\\\\n&=\\frac{2(x-2)(x+2)}{(x-2)(x+3)}\\\\\n&=\\frac{2(x+2)}{x+3},\n\\qquad x\\notin\\{2,-3\\}.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-13-sesion-04.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-13-sesion-04.html#ejercicios-para-practicar",
+    "title": "Sesión 04. Productos notables, factorización y fracciones algebraicas",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nDesarrolle:\n\n\\((x+6)^2\\).\n\n\\((2a-5b)^2\\).\n\n\\((4m+n)(4m-n)\\).\n\nFactorice completamente:\n\n\\(15x^3y-10x^2y^2\\).\n\n\\(36u^2-49v^2\\).\n\n\\(3x^3-27x\\).\n\nFactorice:\n\n\\(x^2-7x+12\\).\n\n\\(x^2+2x-24\\).\n\n\\(8x^2-2x-3\\).\n\nSimplifique e indique todas las restricciones de la expresión original:\n\n\\(\\dfrac{x^2-16}{x^2+x-20}\\).\n\n\\(\\dfrac{3x^2-12x}{x^2-16}\\).\n\n\\(\\dfrac{x^2-6x+9}{x^2-9}\\).\n\n\\(\\dfrac{2x^2+10x}{x^2+7x+10}\\).\n\nCompare los dominios naturales de\n\\[\n\\frac{x^2-1}{x-1}\n\\qquad\\text{y}\\qquad\nx+1.\n\\]\nDetermine si la igualdad\n\\[\n\\frac{x^2+9}{x+3}=x+3\n\\]\nes válida para todos los valores reales en los que la fracción está definida. Si es falsa, proporcione un contraejemplo.\nConstruya una fracción algebraica cuya forma simplificada sea \\(x-2\\) y cuyo dominio natural sea \\(\\mathbb R\\setminus\\{5\\}\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Sesión 04. Productos notables, factorización y fracciones algebraicas</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -739,7 +816,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -750,7 +827,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -761,7 +838,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -772,7 +849,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -783,7 +860,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -794,7 +871,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -805,7 +882,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -816,7 +893,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -827,7 +904,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -838,7 +915,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -849,7 +926,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -860,7 +937,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -871,7 +948,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -882,7 +959,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(|a|\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real.\n\n\n\\(\\sqrt[n]{a}\\)\nRaíz real \\(n\\)-ésima de \\(a\\); si \\(n\\) es par, designa la raíz no negativa.\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -893,7 +970,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -904,7 +981,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -915,7 +992,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -926,7 +1003,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
