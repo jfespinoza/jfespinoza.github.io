@@ -1,0 +1,286 @@
+---
+title: "Sesión 05. Ecuaciones lineales y despeje de fórmulas"
+date: 2026-08-14
+description: "Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional."
+---
+
+## Ecuaciones, soluciones y equivalencia
+
+Una **ecuación en una variable** es una igualdad que contiene una incógnita. Una solución es un valor de esa incógnita que hace verdadera la igualdad. El **conjunto solución**, denotado por $S$, reúne todas las soluciones que pertenecen al dominio original $D$ de la ecuación.
+
+Dos ecuaciones son **equivalentes** en un dominio $D$ si tienen el mismo conjunto solución. Las siguientes operaciones conservan la equivalencia:
+
+- sumar o restar en ambos miembros la misma expresión, siempre que esté definida para todo valor de $D$;
+- multiplicar o dividir ambos miembros por la misma constante real distinta de cero;
+- sustituir una expresión por otra algebraicamente equivalente en el dominio original.
+
+Por ejemplo, para expresiones $u$ y $v$ y constantes $c,k\in\mathbb R$, con $k\ne0$,
+
+$$
+u=v
+\quad\Longleftrightarrow\quad
+u+c=v+c
+$$
+
+y
+
+$$
+u=v
+\quad\Longleftrightarrow\quad
+ku=kv.
+$$
+
+La condición $k\ne0$ es indispensable: al multiplicar por cero, ecuaciones con conjuntos solución distintos pueden convertirse en la misma igualdad $0=0$.
+
+## Resolución de ecuaciones lineales
+
+Una ecuación lineal en $x$ puede escribirse, después de simplificar, como
+
+$$
+ax+b=cx+d,
+\qquad
+a,b,c,d\in\mathbb R.
+$$
+
+Al reunir los términos con $x$ en un miembro y los términos constantes en el otro se obtiene
+
+$$
+(a-c)x=d-b.
+$$
+
+El resultado depende del coeficiente $a-c$:
+
+$$
+S=
+\begin{cases}
+D\cap\left\{\dfrac{d-b}{a-c}\right\}, & a-c\ne0,\\[8pt]
+D, & a=c\ \text{y}\ b=d,\\
+\varnothing, & a=c\ \text{y}\ b\ne d.
+\end{cases}
+$$
+
+En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.
+
+Un procedimiento ordenado es el siguiente:
+
+1. Determinar el dominio original y registrar sus restricciones.
+2. Si hay denominadores numéricos, multiplicar todos los términos por su mínimo común múltiplo.
+3. Eliminar paréntesis y simplificar cada miembro.
+4. Reunir los términos con la incógnita en un miembro y los términos constantes en el otro.
+5. Dividir entre el coeficiente de la incógnita si es distinto de cero; en caso contrario, clasificar la igualdad obtenida.
+6. Sustituir el valor hallado en la ecuación original.
+
+Las transformaciones equivalentes garantizan que se conserva el conjunto solución. La sustitución en la ecuación original confirma que el valor obtenido satisface la igualdad.
+
+### Ejemplo 1. Ecuación con denominadores numéricos
+
+Resolvamos
+
+$$
+\frac{x}{3}-\frac{x-2}{4}=1.
+$$
+
+El mínimo común múltiplo de $3$ y $4$ es $12$. Al multiplicar todos los términos por $12$,
+
+$$
+4x-3(x-2)=12.
+$$
+
+Por tanto,
+
+$$
+\begin{aligned}
+4x-3x+6&=12,\\
+x&=6.
+\end{aligned}
+$$
+
+La comprobación se realiza en la ecuación original:
+
+$$
+\frac{6}{3}-\frac{6-2}{4}
+=2-1
+=1.
+$$
+
+Así, $S=\{6\}$.
+
+### Ejemplo 2. Cuando desaparece la incógnita
+
+En la ecuación
+
+$$
+3(x-2)+x=4x-6
+$$
+
+ambos miembros se reducen a $4x-6$. Se obtiene $0=0$, de modo que la igualdad es una identidad y $S=\mathbb R$.
+
+En cambio,
+
+$$
+2(x+3)=2x+1
+$$
+
+se reduce a $2x+6=2x+1$ y después a $6=1$. Esta contradicción implica que $S=\varnothing$.
+
+## Despeje de fórmulas y comprobación dimensional
+
+Despejar una variable consiste en resolver una fórmula respecto de ella, tratando las demás letras como parámetros. Toda división requiere que el divisor sea distinto de cero.
+
+Consideremos la fórmula de dilatación lineal
+
+$$
+L=L_0(1+\alpha\Delta T),
+$$
+
+donde $L$ y $L_0$ representan longitudes, $\alpha$ es el coeficiente de dilatación lineal y $\Delta T$ es un cambio de temperatura. Suponiendo $L_0\ne0$ y $\alpha\ne0$, se despeja $\Delta T$ como sigue:
+
+$$
+\begin{aligned}
+\frac{L}{L_0}&=1+\alpha\Delta T,\\
+\frac{L}{L_0}-1&=\alpha\Delta T,\\
+\Delta T&=\frac{L-L_0}{L_0\alpha},
+\end{aligned}
+$$
+
+La sustitución del resultado recupera la fórmula original:
+
+$$
+L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
+=L_0+(L-L_0)
+=L.
+$$
+
+Además, si $L$ y $L_0$ se miden en metros y $\alpha$ en $({}^\circ\mathrm C)^{-1}$, entonces
+
+$$
+\left[\frac{L-L_0}{L_0\alpha}\right]
+=\frac{\mathrm m}{\mathrm m\cdot({}^\circ\mathrm C)^{-1}}
+={}^\circ\mathrm C.
+$$
+
+La homogeneidad dimensional es una condición necesaria: una incompatibilidad de unidades demuestra que el resultado es incorrecto. Sin embargo, unidades compatibles no bastan para demostrar que el despeje sea algebraicamente correcto.
+
+## Errores frecuentes
+
+- Efectuar una operación en un solo miembro de la ecuación.
+- Aplicar incorrectamente la propiedad distributiva, en particular cuando un signo negativo precede a un paréntesis.
+- Al eliminar denominadores, no multiplicar todos los términos por el mínimo común múltiplo.
+- Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.
+- Interpretar $0=0$ o $0=k$, con $k\ne0$, como si la solución fuera $x=0$.
+- Perder las restricciones del dominio original durante una simplificación.
+- Considerar que la compatibilidad dimensional demuestra por sí sola que un despeje es correcto.
+
+## Actividad
+
+Resuelva los siguientes ejercicios.
+
+1. Resuelva y verifique:
+
+   $$
+   2(3x-1)=5x+7.
+   $$
+
+2. Determine el conjunto solución de cada ecuación:
+
+   a. $5(x-1)-3x=2x-5$.  
+   b. $4x-(x-2)=3x+9$.  
+   c. $7x-4=3x+12$.
+
+3. La potencia eléctrica está dada por
+
+   $$
+   P=VI.
+   $$
+
+   a. Despeje $I$ e indique la restricción necesaria.  
+   b. Compruebe dimensionalmente el despeje usando $\mathrm W=\mathrm V\cdot\mathrm A$.  
+   c. Calcule $I$ si $P=60\ \mathrm W$ y $V=120\ \mathrm V$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+1. Al desarrollar y reunir términos,
+
+   $$
+   \begin{aligned}
+   2(3x-1)&=5x+7,\\
+   6x-2&=5x+7,\\
+   x&=9.
+   \end{aligned}
+   $$
+
+   La sustitución en la ecuación original da
+
+   $$
+   2[3(9)-1]=52
+   \qquad\text{y}\qquad
+   5(9)+7=52.
+   $$
+
+   Por tanto, $S=\{9\}$.
+
+2. Se obtiene:
+
+   a. Ambos miembros se reducen a $2x-5$. Por tanto, $S=\mathbb R$.  
+   b. La ecuación se reduce a $3x+2=3x+9$, es decir, $2=9$. Por tanto, $S=\varnothing$.  
+   c. Se obtiene $4x=16$, de modo que $S=\{4\}$. La comprobación da $7(4)-4=24$ y $3(4)+12=24$.
+
+3. Si $V\ne0$, se divide entre $V$:
+
+   $$
+   I=\frac{P}{V}.
+   $$
+
+   Las unidades son
+
+   $$
+   [I]=\frac{\mathrm W}{\mathrm V}=\mathrm A.
+   $$
+
+   Finalmente,
+
+   $$
+   I=\frac{60\ \mathrm W}{120\ \mathrm V}
+   =0.5\ \mathrm A.
+   $$
+
+:::
+
+## Ejercicios para practicar
+
+1. Resuelva y verifique:
+
+   a. $7x+4=3x-12$.  
+   b. $3(2x-5)+4=x+9$.  
+   c. $\dfrac{x+1}{2}-\dfrac{x-2}{3}=4$.
+
+2. Clasifique cada ecuación como identidad, ecuación sin solución o ecuación con solución única. Determine su conjunto solución.
+
+   a. $4(x+2)=4x+8$.  
+   b. $3(x-1)=3x+2$.  
+   c. $8x+1=5x-8$.
+
+3. Realice los despejes e indique las restricciones necesarias.
+
+   a. $P=2a+2b$; despeje $b$.  
+   b. $T_F=\dfrac95T_C+32$; despeje $T_C$, donde $T_F$ y $T_C$ son los valores numéricos de una temperatura en grados Fahrenheit y Celsius, respectivamente.  
+   c. $v=v_0+at$; despeje $t$.
+
+4. La relación entre distancia, rapidez constante y tiempo es
+
+   $$
+   d=vt.
+   $$
+
+   Despeje $t$, indique la restricción necesaria, compruebe las unidades y calcule el tiempo requerido para recorrer $180\ \mathrm{km}$ a $72\ \mathrm{km/h}$.
+
+5. Construya una ecuación lineal con denominadores numéricos cuyo conjunto solución sea $S=\{-3\}$.
+
+6. En el procedimiento
+
+   $$
+   2x+6=10
+   \quad\Longrightarrow\quad
+   x+6=5,
+   $$
+
+   identifique el error, corrija el procedimiento y verifique la solución.
