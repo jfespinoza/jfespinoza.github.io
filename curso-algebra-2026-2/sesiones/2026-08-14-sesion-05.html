@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Definición, matriz estándar, núcleo e imagen.">
+<meta name="description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional.">
 
-<title>Unidad 6. Transformaciones lineales en el plano – Álgebra</title>
+<title>Sesión 05. Ecuaciones lineales y despeje de fórmulas – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../recursos/notacion.html" rel="next">
-<link href="../unidades/05-conceptos-algebra-lineal.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-13-sesion-04.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Unidad 6. Transformaciones lineales en el plano – Álgebra">
-<meta property="og:description" content="Definición, matriz estándar, núcleo e imagen.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 05. Ecuaciones lineales y despeje de fórmulas – Álgebra">
+<meta property="og:description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-14-sesion-05.html"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -169,13 +197,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -203,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
+  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
   </div>
 </li>
       </ul>
@@ -274,16 +302,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 6. Transformaciones lineales en el plano</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
+  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
   </div>
 </li>
       </ul>
@@ -319,16 +347,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#ecuaciones-soluciones-y-equivalencia" id="toc-ecuaciones-soluciones-y-equivalencia" class="nav-link active" data-scroll-target="#ecuaciones-soluciones-y-equivalencia">Ecuaciones, soluciones y equivalencia</a></li>
+  <li><a href="#resolución-de-ecuaciones-lineales" id="toc-resolución-de-ecuaciones-lineales" class="nav-link" data-scroll-target="#resolución-de-ecuaciones-lineales">Resolución de ecuaciones lineales</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-ecuación-con-denominadores-numéricos" id="toc-ejemplo-1.-ecuación-con-denominadores-numéricos" class="nav-link" data-scroll-target="#ejemplo-1.-ecuación-con-denominadores-numéricos">Ejemplo 1. Ecuación con denominadores numéricos</a></li>
+  <li><a href="#ejemplo-2.-cuando-desaparece-la-incógnita" id="toc-ejemplo-2.-cuando-desaparece-la-incógnita" class="nav-link" data-scroll-target="#ejemplo-2.-cuando-desaparece-la-incógnita">Ejemplo 2. Cuando desaparece la incógnita</a></li>
+  </ul></li>
+  <li><a href="#despeje-de-fórmulas-y-comprobación-dimensional" id="toc-despeje-de-fórmulas-y-comprobación-dimensional" class="nav-link" data-scroll-target="#despeje-de-fórmulas-y-comprobación-dimensional">Despeje de fórmulas y comprobación dimensional</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-14-sesion-05.html"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></h1>
 </div>
 
 
@@ -336,6 +373,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">14 de agosto de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -345,15 +388,264 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 15 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="ecuaciones-soluciones-y-equivalencia" class="level2">
+<h2 class="anchored" data-anchor-id="ecuaciones-soluciones-y-equivalencia">Ecuaciones, soluciones y equivalencia</h2>
+<p>Una <strong>ecuación en una variable</strong> es una igualdad que contiene una incógnita. Una solución es un valor de esa incógnita que hace verdadera la igualdad. El <strong>conjunto solución</strong>, denotado por <span class="math inline">\(S\)</span>, reúne todas las soluciones que pertenecen al dominio original <span class="math inline">\(D\)</span> de la ecuación.</p>
+<p>Dos ecuaciones son <strong>equivalentes</strong> en un dominio <span class="math inline">\(D\)</span> si tienen el mismo conjunto solución. Las siguientes operaciones conservan la equivalencia:</p>
+<ul>
+<li>sumar o restar en ambos miembros la misma expresión, siempre que esté definida para todo valor de <span class="math inline">\(D\)</span>;</li>
+<li>multiplicar o dividir ambos miembros por la misma constante real distinta de cero;</li>
+<li>sustituir una expresión por otra algebraicamente equivalente en el dominio original.</li>
+</ul>
+<p>Por ejemplo, para expresiones <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> y constantes <span class="math inline">\(c,k\in\mathbb R\)</span>, con <span class="math inline">\(k\ne0\)</span>,</p>
+<p><span class="math display">\[
+u=v
+\quad\Longleftrightarrow\quad
+u+c=v+c
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+u=v
+\quad\Longleftrightarrow\quad
+ku=kv.
+\]</span></p>
+<p>La condición <span class="math inline">\(k\ne0\)</span> es indispensable: al multiplicar por cero, ecuaciones con conjuntos solución distintos pueden convertirse en la misma igualdad <span class="math inline">\(0=0\)</span>.</p>
+</section>
+<section id="resolución-de-ecuaciones-lineales" class="level2">
+<h2 class="anchored" data-anchor-id="resolución-de-ecuaciones-lineales">Resolución de ecuaciones lineales</h2>
+<p>Una ecuación lineal en <span class="math inline">\(x\)</span> puede escribirse, después de simplificar, como</p>
+<p><span class="math display">\[
+ax+b=cx+d,
+\qquad
+a,b,c,d\in\mathbb R.
+\]</span></p>
+<p>Al reunir los términos con <span class="math inline">\(x\)</span> en un miembro y los términos constantes en el otro se obtiene</p>
+<p><span class="math display">\[
+(a-c)x=d-b.
+\]</span></p>
+<p>El resultado depende del coeficiente <span class="math inline">\(a-c\)</span>:</p>
+<p><span class="math display">\[
+S=
+\begin{cases}
+D\cap\left\{\dfrac{d-b}{a-c}\right\}, &amp; a-c\ne0,\\[8pt]
+D, &amp; a=c\ \text{y}\ b=d,\\
+\varnothing, &amp; a=c\ \text{y}\ b\ne d.
+\end{cases}
+\]</span></p>
+<p>En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.</p>
+<p>Un procedimiento ordenado es el siguiente:</p>
 <ol type="1">
-<li>Definición y ejemplos de transformaciones lineales en el plano.</li>
-<li>Matriz estándar de una transformación lineal.</li>
-<li>Aproximación intuitiva al núcleo y a la imagen.</li>
+<li>Determinar el dominio original y registrar sus restricciones.</li>
+<li>Si hay denominadores numéricos, multiplicar todos los términos por su mínimo común múltiplo.</li>
+<li>Eliminar paréntesis y simplificar cada miembro.</li>
+<li>Reunir los términos con la incógnita en un miembro y los términos constantes en el otro.</li>
+<li>Dividir entre el coeficiente de la incógnita si es distinto de cero; en caso contrario, clasificar la igualdad obtenida.</li>
+<li>Sustituir el valor hallado en la ecuación original.</li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<p>Las transformaciones equivalentes garantizan que se conserva el conjunto solución. La sustitución en la ecuación original confirma que el valor obtenido satisface la igualdad.</p>
+<section id="ejemplo-1.-ecuación-con-denominadores-numéricos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-ecuación-con-denominadores-numéricos">Ejemplo 1. Ecuación con denominadores numéricos</h3>
+<p>Resolvamos</p>
+<p><span class="math display">\[
+\frac{x}{3}-\frac{x-2}{4}=1.
+\]</span></p>
+<p>El mínimo común múltiplo de <span class="math inline">\(3\)</span> y <span class="math inline">\(4\)</span> es <span class="math inline">\(12\)</span>. Al multiplicar todos los términos por <span class="math inline">\(12\)</span>,</p>
+<p><span class="math display">\[
+4x-3(x-2)=12.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\begin{aligned}
+4x-3x+6&amp;=12,\\
+x&amp;=6.
+\end{aligned}
+\]</span></p>
+<p>La comprobación se realiza en la ecuación original:</p>
+<p><span class="math display">\[
+\frac{6}{3}-\frac{6-2}{4}
+=2-1
+=1.
+\]</span></p>
+<p>Así, <span class="math inline">\(S=\{6\}\)</span>.</p>
+</section>
+<section id="ejemplo-2.-cuando-desaparece-la-incógnita" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-cuando-desaparece-la-incógnita">Ejemplo 2. Cuando desaparece la incógnita</h3>
+<p>En la ecuación</p>
+<p><span class="math display">\[
+3(x-2)+x=4x-6
+\]</span></p>
+<p>ambos miembros se reducen a <span class="math inline">\(4x-6\)</span>. Se obtiene <span class="math inline">\(0=0\)</span>, de modo que la igualdad es una identidad y <span class="math inline">\(S=\mathbb R\)</span>.</p>
+<p>En cambio,</p>
+<p><span class="math display">\[
+2(x+3)=2x+1
+\]</span></p>
+<p>se reduce a <span class="math inline">\(2x+6=2x+1\)</span> y después a <span class="math inline">\(6=1\)</span>. Esta contradicción implica que <span class="math inline">\(S=\varnothing\)</span>.</p>
+</section>
+</section>
+<section id="despeje-de-fórmulas-y-comprobación-dimensional" class="level2">
+<h2 class="anchored" data-anchor-id="despeje-de-fórmulas-y-comprobación-dimensional">Despeje de fórmulas y comprobación dimensional</h2>
+<p>Despejar una variable consiste en resolver una fórmula respecto de ella, tratando las demás letras como parámetros. Toda división requiere que el divisor sea distinto de cero.</p>
+<p>Consideremos la fórmula de dilatación lineal</p>
+<p><span class="math display">\[
+L=L_0(1+\alpha\Delta T),
+\]</span></p>
+<p>donde <span class="math inline">\(L\)</span> y <span class="math inline">\(L_0\)</span> representan longitudes, <span class="math inline">\(\alpha\)</span> es el coeficiente de dilatación lineal y <span class="math inline">\(\Delta T\)</span> es un cambio de temperatura. Suponiendo <span class="math inline">\(L_0\ne0\)</span> y <span class="math inline">\(\alpha\ne0\)</span>, se despeja <span class="math inline">\(\Delta T\)</span> como sigue:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{L}{L_0}&amp;=1+\alpha\Delta T,\\
+\frac{L}{L_0}-1&amp;=\alpha\Delta T,\\
+\Delta T&amp;=\frac{L-L_0}{L_0\alpha},
+\end{aligned}
+\]</span></p>
+<p>La sustitución del resultado recupera la fórmula original:</p>
+<p><span class="math display">\[
+L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
+=L_0+(L-L_0)
+=L.
+\]</span></p>
+<p>Además, si <span class="math inline">\(L\)</span> y <span class="math inline">\(L_0\)</span> se miden en metros y <span class="math inline">\(\alpha\)</span> en <span class="math inline">\(({}^\circ\mathrm C)^{-1}\)</span>, entonces</p>
+<p><span class="math display">\[
+\left[\frac{L-L_0}{L_0\alpha}\right]
+=\frac{\mathrm m}{\mathrm m\cdot({}^\circ\mathrm C)^{-1}}
+={}^\circ\mathrm C.
+\]</span></p>
+<p>La homogeneidad dimensional es una condición necesaria: una incompatibilidad de unidades demuestra que el resultado es incorrecto. Sin embargo, unidades compatibles no bastan para demostrar que el despeje sea algebraicamente correcto.</p>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Efectuar una operación en un solo miembro de la ecuación.</li>
+<li>Aplicar incorrectamente la propiedad distributiva, en particular cuando un signo negativo precede a un paréntesis.</li>
+<li>Al eliminar denominadores, no multiplicar todos los términos por el mínimo común múltiplo.</li>
+<li>Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.</li>
+<li>Interpretar <span class="math inline">\(0=0\)</span> o <span class="math inline">\(0=k\)</span>, con <span class="math inline">\(k\ne0\)</span>, como si la solución fuera <span class="math inline">\(x=0\)</span>.</li>
+<li>Perder las restricciones del dominio original durante una simplificación.</li>
+<li>Considerar que la compatibilidad dimensional demuestra por sí sola que un despeje es correcto.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva los siguientes ejercicios.</p>
+<ol type="1">
+<li><p>Resuelva y verifique:</p>
+<p><span class="math display">\[
+2(3x-1)=5x+7.
+\]</span></p></li>
+<li><p>Determine el conjunto solución de cada ecuación:</p>
+<ol type="a">
+<li><span class="math inline">\(5(x-1)-3x=2x-5\)</span>.<br>
+</li>
+<li><span class="math inline">\(4x-(x-2)=3x+9\)</span>.<br>
+</li>
+<li><span class="math inline">\(7x-4=3x+12\)</span>.</li>
+</ol></li>
+<li><p>La potencia eléctrica está dada por</p>
+<p><span class="math display">\[
+P=VI.
+\]</span></p>
+<ol type="a">
+<li>Despeje <span class="math inline">\(I\)</span> e indique la restricción necesaria.<br>
+</li>
+<li>Compruebe dimensionalmente el despeje usando <span class="math inline">\(\mathrm W=\mathrm V\cdot\mathrm A\)</span>.<br>
+</li>
+<li>Calcule <span class="math inline">\(I\)</span> si <span class="math inline">\(P=60\ \mathrm W\)</span> y <span class="math inline">\(V=120\ \mathrm V\)</span>.</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Al desarrollar y reunir términos,</p>
+<p><span class="math display">\[
+\begin{aligned}
+2(3x-1)&amp;=5x+7,\\
+6x-2&amp;=5x+7,\\
+x&amp;=9.
+\end{aligned}
+\]</span></p>
+<p>La sustitución en la ecuación original da</p>
+<p><span class="math display">\[
+2[3(9)-1]=52
+\qquad\text{y}\qquad
+5(9)+7=52.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(S=\{9\}\)</span>.</p></li>
+<li><p>Se obtiene:</p>
+<ol type="a">
+<li>Ambos miembros se reducen a <span class="math inline">\(2x-5\)</span>. Por tanto, <span class="math inline">\(S=\mathbb R\)</span>.<br>
+</li>
+<li>La ecuación se reduce a <span class="math inline">\(3x+2=3x+9\)</span>, es decir, <span class="math inline">\(2=9\)</span>. Por tanto, <span class="math inline">\(S=\varnothing\)</span>.<br>
+</li>
+<li>Se obtiene <span class="math inline">\(4x=16\)</span>, de modo que <span class="math inline">\(S=\{4\}\)</span>. La comprobación da <span class="math inline">\(7(4)-4=24\)</span> y <span class="math inline">\(3(4)+12=24\)</span>.</li>
+</ol></li>
+<li><p>Si <span class="math inline">\(V\ne0\)</span>, se divide entre <span class="math inline">\(V\)</span>:</p>
+<p><span class="math display">\[
+I=\frac{P}{V}.
+\]</span></p>
+<p>Las unidades son</p>
+<p><span class="math display">\[
+[I]=\frac{\mathrm W}{\mathrm V}=\mathrm A.
+\]</span></p>
+<p>Finalmente,</p>
+<p><span class="math display">\[
+I=\frac{60\ \mathrm W}{120\ \mathrm V}
+=0.5\ \mathrm A.
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Resuelva y verifique:</p>
+<ol type="a">
+<li><span class="math inline">\(7x+4=3x-12\)</span>.<br>
+</li>
+<li><span class="math inline">\(3(2x-5)+4=x+9\)</span>.<br>
+</li>
+<li><span class="math inline">\(\dfrac{x+1}{2}-\dfrac{x-2}{3}=4\)</span>.</li>
+</ol></li>
+<li><p>Clasifique cada ecuación como identidad, ecuación sin solución o ecuación con solución única. Determine su conjunto solución.</p>
+<ol type="a">
+<li><span class="math inline">\(4(x+2)=4x+8\)</span>.<br>
+</li>
+<li><span class="math inline">\(3(x-1)=3x+2\)</span>.<br>
+</li>
+<li><span class="math inline">\(8x+1=5x-8\)</span>.</li>
+</ol></li>
+<li><p>Realice los despejes e indique las restricciones necesarias.</p>
+<ol type="a">
+<li><span class="math inline">\(P=2a+2b\)</span>; despeje <span class="math inline">\(b\)</span>.<br>
+</li>
+<li><span class="math inline">\(T_F=\dfrac95T_C+32\)</span>; despeje <span class="math inline">\(T_C\)</span>, donde <span class="math inline">\(T_F\)</span> y <span class="math inline">\(T_C\)</span> son los valores numéricos de una temperatura en grados Fahrenheit y Celsius, respectivamente.<br>
+</li>
+<li><span class="math inline">\(v=v_0+at\)</span>; despeje <span class="math inline">\(t\)</span>.</li>
+</ol></li>
+<li><p>La relación entre distancia, rapidez constante y tiempo es</p>
+<p><span class="math display">\[
+d=vt.
+\]</span></p>
+<p>Despeje <span class="math inline">\(t\)</span>, indique la restricción necesaria, compruebe las unidades y calcule el tiempo requerido para recorrer <span class="math inline">\(180\ \mathrm{km}\)</span> a <span class="math inline">\(72\ \mathrm{km/h}\)</span>.</p></li>
+<li><p>Construya una ecuación lineal con denominadores numéricos cuyo conjunto solución sea <span class="math inline">\(S=\{-3\}\)</span>.</p></li>
+<li><p>En el procedimiento</p>
+<p><span class="math display">\[
+2x+6=10
+\quad\Longrightarrow\quad
+x+6=5,
+\]</span></p>
+<p>identifique el error, corrija el procedimiento y verifique la solución.</p></li>
+</ol>
 
 
 </section>
@@ -768,13 +1060,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span>
+      <a href="../sesiones/2026-08-13-sesion-04.html" class="pagination-link" aria-label="Sesión 04. Productos notables, factorización y fracciones algebraicas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../recursos/notacion.html" class="pagination-link" aria-label="Notación">
-        <span class="nav-page-text"><span class="chapter-title">Notación</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

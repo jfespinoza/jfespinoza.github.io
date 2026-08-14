@@ -809,6 +809,83 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-14-sesion-05.html",
+    "href": "sesiones/2026-08-14-sesion-05.html",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "",
+    "text": "Ecuaciones, soluciones y equivalencia\nUna ecuación en una variable es una igualdad que contiene una incógnita. Una solución es un valor de esa incógnita que hace verdadera la igualdad. El conjunto solución, denotado por \\(S\\), reúne todas las soluciones que pertenecen al dominio original \\(D\\) de la ecuación.\nDos ecuaciones son equivalentes en un dominio \\(D\\) si tienen el mismo conjunto solución. Las siguientes operaciones conservan la equivalencia:\nPor ejemplo, para expresiones \\(u\\) y \\(v\\) y constantes \\(c,k\\in\\mathbb R\\), con \\(k\\ne0\\),\n\\[\nu=v\n\\quad\\Longleftrightarrow\\quad\nu+c=v+c\n\\]\ny\n\\[\nu=v\n\\quad\\Longleftrightarrow\\quad\nku=kv.\n\\]\nLa condición \\(k\\ne0\\) es indispensable: al multiplicar por cero, ecuaciones con conjuntos solución distintos pueden convertirse en la misma igualdad \\(0=0\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#ecuaciones-soluciones-y-equivalencia",
+    "href": "sesiones/2026-08-14-sesion-05.html#ecuaciones-soluciones-y-equivalencia",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "",
+    "text": "sumar o restar en ambos miembros la misma expresión, siempre que esté definida para todo valor de \\(D\\);\nmultiplicar o dividir ambos miembros por la misma constante real distinta de cero;\nsustituir una expresión por otra algebraicamente equivalente en el dominio original.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#resolución-de-ecuaciones-lineales",
+    "href": "sesiones/2026-08-14-sesion-05.html#resolución-de-ecuaciones-lineales",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "Resolución de ecuaciones lineales",
+    "text": "Resolución de ecuaciones lineales\nUna ecuación lineal en \\(x\\) puede escribirse, después de simplificar, como\n\\[\nax+b=cx+d,\n\\qquad\na,b,c,d\\in\\mathbb R.\n\\]\nAl reunir los términos con \\(x\\) en un miembro y los términos constantes en el otro se obtiene\n\\[\n(a-c)x=d-b.\n\\]\nEl resultado depende del coeficiente \\(a-c\\):\n\\[\nS=\n\\begin{cases}\nD\\cap\\left\\{\\dfrac{d-b}{a-c}\\right\\}, & a-c\\ne0,\\\\[8pt]\nD, & a=c\\ \\text{y}\\ b=d,\\\\\n\\varnothing, & a=c\\ \\text{y}\\ b\\ne d.\n\\end{cases}\n\\]\nEn el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.\nUn procedimiento ordenado es el siguiente:\n\nDeterminar el dominio original y registrar sus restricciones.\nSi hay denominadores numéricos, multiplicar todos los términos por su mínimo común múltiplo.\nEliminar paréntesis y simplificar cada miembro.\nReunir los términos con la incógnita en un miembro y los términos constantes en el otro.\nDividir entre el coeficiente de la incógnita si es distinto de cero; en caso contrario, clasificar la igualdad obtenida.\nSustituir el valor hallado en la ecuación original.\n\nLas transformaciones equivalentes garantizan que se conserva el conjunto solución. La sustitución en la ecuación original confirma que el valor obtenido satisface la igualdad.\n\nEjemplo 1. Ecuación con denominadores numéricos\nResolvamos\n\\[\n\\frac{x}{3}-\\frac{x-2}{4}=1.\n\\]\nEl mínimo común múltiplo de \\(3\\) y \\(4\\) es \\(12\\). Al multiplicar todos los términos por \\(12\\),\n\\[\n4x-3(x-2)=12.\n\\]\nPor tanto,\n\\[\n\\begin{aligned}\n4x-3x+6&=12,\\\\\nx&=6.\n\\end{aligned}\n\\]\nLa comprobación se realiza en la ecuación original:\n\\[\n\\frac{6}{3}-\\frac{6-2}{4}\n=2-1\n=1.\n\\]\nAsí, \\(S=\\{6\\}\\).\n\n\nEjemplo 2. Cuando desaparece la incógnita\nEn la ecuación\n\\[\n3(x-2)+x=4x-6\n\\]\nambos miembros se reducen a \\(4x-6\\). Se obtiene \\(0=0\\), de modo que la igualdad es una identidad y \\(S=\\mathbb R\\).\nEn cambio,\n\\[\n2(x+3)=2x+1\n\\]\nse reduce a \\(2x+6=2x+1\\) y después a \\(6=1\\). Esta contradicción implica que \\(S=\\varnothing\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#despeje-de-fórmulas-y-comprobación-dimensional",
+    "href": "sesiones/2026-08-14-sesion-05.html#despeje-de-fórmulas-y-comprobación-dimensional",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "Despeje de fórmulas y comprobación dimensional",
+    "text": "Despeje de fórmulas y comprobación dimensional\nDespejar una variable consiste en resolver una fórmula respecto de ella, tratando las demás letras como parámetros. Toda división requiere que el divisor sea distinto de cero.\nConsideremos la fórmula de dilatación lineal\n\\[\nL=L_0(1+\\alpha\\Delta T),\n\\]\ndonde \\(L\\) y \\(L_0\\) representan longitudes, \\(\\alpha\\) es el coeficiente de dilatación lineal y \\(\\Delta T\\) es un cambio de temperatura. Suponiendo \\(L_0\\ne0\\) y \\(\\alpha\\ne0\\), se despeja \\(\\Delta T\\) como sigue:\n\\[\n\\begin{aligned}\n\\frac{L}{L_0}&=1+\\alpha\\Delta T,\\\\\n\\frac{L}{L_0}-1&=\\alpha\\Delta T,\\\\\n\\Delta T&=\\frac{L-L_0}{L_0\\alpha},\n\\end{aligned}\n\\]\nLa sustitución del resultado recupera la fórmula original:\n\\[\nL_0\\left(1+\\alpha\\frac{L-L_0}{L_0\\alpha}\\right)\n=L_0+(L-L_0)\n=L.\n\\]\nAdemás, si \\(L\\) y \\(L_0\\) se miden en metros y \\(\\alpha\\) en \\(({}^\\circ\\mathrm C)^{-1}\\), entonces\n\\[\n\\left[\\frac{L-L_0}{L_0\\alpha}\\right]\n=\\frac{\\mathrm m}{\\mathrm m\\cdot({}^\\circ\\mathrm C)^{-1}}\n={}^\\circ\\mathrm C.\n\\]\nLa homogeneidad dimensional es una condición necesaria: una incompatibilidad de unidades demuestra que el resultado es incorrecto. Sin embargo, unidades compatibles no bastan para demostrar que el despeje sea algebraicamente correcto.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#errores-frecuentes",
+    "href": "sesiones/2026-08-14-sesion-05.html#errores-frecuentes",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nEfectuar una operación en un solo miembro de la ecuación.\nAplicar incorrectamente la propiedad distributiva, en particular cuando un signo negativo precede a un paréntesis.\nAl eliminar denominadores, no multiplicar todos los términos por el mínimo común múltiplo.\nDividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.\nInterpretar \\(0=0\\) o \\(0=k\\), con \\(k\\ne0\\), como si la solución fuera \\(x=0\\).\nPerder las restricciones del dominio original durante una simplificación.\nConsiderar que la compatibilidad dimensional demuestra por sí sola que un despeje es correcto.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#actividad",
+    "href": "sesiones/2026-08-14-sesion-05.html#actividad",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva los siguientes ejercicios.\n\nResuelva y verifique:\n\\[\n2(3x-1)=5x+7.\n\\]\nDetermine el conjunto solución de cada ecuación:\n\n\\(5(x-1)-3x=2x-5\\).\n\n\\(4x-(x-2)=3x+9\\).\n\n\\(7x-4=3x+12\\).\n\nLa potencia eléctrica está dada por\n\\[\nP=VI.\n\\]\n\nDespeje \\(I\\) e indique la restricción necesaria.\n\nCompruebe dimensionalmente el despeje usando \\(\\mathrm W=\\mathrm V\\cdot\\mathrm A\\).\n\nCalcule \\(I\\) si \\(P=60\\ \\mathrm W\\) y \\(V=120\\ \\mathrm V\\).\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n\nAl desarrollar y reunir términos,\n\\[\n\\begin{aligned}\n2(3x-1)&=5x+7,\\\\\n6x-2&=5x+7,\\\\\nx&=9.\n\\end{aligned}\n\\]\nLa sustitución en la ecuación original da\n\\[\n2[3(9)-1]=52\n\\qquad\\text{y}\\qquad\n5(9)+7=52.\n\\]\nPor tanto, \\(S=\\{9\\}\\).\nSe obtiene:\n\nAmbos miembros se reducen a \\(2x-5\\). Por tanto, \\(S=\\mathbb R\\).\n\nLa ecuación se reduce a \\(3x+2=3x+9\\), es decir, \\(2=9\\). Por tanto, \\(S=\\varnothing\\).\n\nSe obtiene \\(4x=16\\), de modo que \\(S=\\{4\\}\\). La comprobación da \\(7(4)-4=24\\) y \\(3(4)+12=24\\).\n\nSi \\(V\\ne0\\), se divide entre \\(V\\):\n\\[\nI=\\frac{P}{V}.\n\\]\nLas unidades son\n\\[\n[I]=\\frac{\\mathrm W}{\\mathrm V}=\\mathrm A.\n\\]\nFinalmente,\n\\[\nI=\\frac{60\\ \\mathrm W}{120\\ \\mathrm V}\n=0.5\\ \\mathrm A.\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-14-sesion-05.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-14-sesion-05.html#ejercicios-para-practicar",
+    "title": "Sesión 05. Ecuaciones lineales y despeje de fórmulas",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nResuelva y verifique:\n\n\\(7x+4=3x-12\\).\n\n\\(3(2x-5)+4=x+9\\).\n\n\\(\\dfrac{x+1}{2}-\\dfrac{x-2}{3}=4\\).\n\nClasifique cada ecuación como identidad, ecuación sin solución o ecuación con solución única. Determine su conjunto solución.\n\n\\(4(x+2)=4x+8\\).\n\n\\(3(x-1)=3x+2\\).\n\n\\(8x+1=5x-8\\).\n\nRealice los despejes e indique las restricciones necesarias.\n\n\\(P=2a+2b\\); despeje \\(b\\).\n\n\\(T_F=\\dfrac95T_C+32\\); despeje \\(T_C\\), donde \\(T_F\\) y \\(T_C\\) son los valores numéricos de una temperatura en grados Fahrenheit y Celsius, respectivamente.\n\n\\(v=v_0+at\\); despeje \\(t\\).\n\nLa relación entre distancia, rapidez constante y tiempo es\n\\[\nd=vt.\n\\]\nDespeje \\(t\\), indique la restricción necesaria, compruebe las unidades y calcule el tiempo requerido para recorrer \\(180\\ \\mathrm{km}\\) a \\(72\\ \\mathrm{km/h}\\).\nConstruya una ecuación lineal con denominadores numéricos cuyo conjunto solución sea \\(S=\\{-3\\}\\).\nEn el procedimiento\n\\[\n2x+6=10\n\\quad\\Longrightarrow\\quad\nx+6=5,\n\\]\nidentifique el error, corrija el procedimiento y verifique la solución.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sesión 05. Ecuaciones lineales y despeje de fórmulas</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -816,7 +893,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -827,7 +904,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -838,7 +915,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -849,7 +926,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -860,7 +937,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -871,7 +948,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -882,7 +959,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -893,7 +970,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -904,7 +981,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -915,7 +992,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -926,7 +1003,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -937,7 +1014,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -948,7 +1025,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -959,7 +1036,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(|a|\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real.\n\n\n\\(\\sqrt[n]{a}\\)\nRaíz real \\(n\\)-ésima de \\(a\\); si \\(n\\) es par, designa la raíz no negativa.\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -970,7 +1047,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -981,7 +1058,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -992,7 +1069,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1003,7 +1080,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
