@@ -1,7 +1,7 @@
 ---
 title: "Sesión 05. Ecuaciones lineales y despeje de fórmulas"
 date: 2026-08-14
-description: "Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional."
+description: "Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica."
 ---
 
 ## Ecuaciones, soluciones y equivalencia
@@ -58,6 +58,8 @@ D, & a=c\ \text{y}\ b=d,\\
 \varnothing, & a=c\ \text{y}\ b\ne d.
 \end{cases}
 $$
+
+En esta expresión, $\cap$ denota la intersección de conjuntos y $\varnothing$, el conjunto vacío. Por tanto, en el primer caso el valor calculado se conserva únicamente si pertenece al dominio original $D$.
 
 En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.
 
@@ -123,9 +125,11 @@ $$
 
 se reduce a $2x+6=2x+1$ y después a $6=1$. Esta contradicción implica que $S=\varnothing$.
 
-## Despeje de fórmulas y comprobación dimensional
+## Despeje de fórmulas
 
 Despejar una variable consiste en resolver una fórmula respecto de ella, tratando las demás letras como parámetros. Toda división requiere que el divisor sea distinto de cero.
+
+### Ejemplo 3. Despeje en la fórmula de dilatación lineal
 
 Consideremos la fórmula de dilatación lineal
 
@@ -139,7 +143,7 @@ $$
 \begin{aligned}
 \frac{L}{L_0}&=1+\alpha\Delta T,\\
 \frac{L}{L_0}-1&=\alpha\Delta T,\\
-\Delta T&=\frac{L-L_0}{L_0\alpha},
+\Delta T&=\frac{L-L_0}{L_0\alpha}.
 \end{aligned}
 $$
 
@@ -151,16 +155,6 @@ L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
 =L.
 $$
 
-Además, si $L$ y $L_0$ se miden en metros y $\alpha$ en $({}^\circ\mathrm C)^{-1}$, entonces
-
-$$
-\left[\frac{L-L_0}{L_0\alpha}\right]
-=\frac{\mathrm m}{\mathrm m\cdot({}^\circ\mathrm C)^{-1}}
-={}^\circ\mathrm C.
-$$
-
-La homogeneidad dimensional es una condición necesaria: una incompatibilidad de unidades demuestra que el resultado es incorrecto. Sin embargo, unidades compatibles no bastan para demostrar que el despeje sea algebraicamente correcto.
-
 ## Errores frecuentes
 
 - Efectuar una operación en un solo miembro de la ecuación.
@@ -169,7 +163,6 @@ La homogeneidad dimensional es una condición necesaria: una incompatibilidad de
 - Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.
 - Interpretar $0=0$ o $0=k$, con $k\ne0$, como si la solución fuera $x=0$.
 - Perder las restricciones del dominio original durante una simplificación.
-- Considerar que la compatibilidad dimensional demuestra por sí sola que un despeje es correcto.
 
 ## Actividad
 
@@ -194,8 +187,7 @@ Resuelva los siguientes ejercicios.
    $$
 
    a. Despeje $I$ e indique la restricción necesaria.  
-   b. Compruebe dimensionalmente el despeje usando $\mathrm W=\mathrm V\cdot\mathrm A$.  
-   c. Calcule $I$ si $P=60\ \mathrm W$ y $V=120\ \mathrm V$.
+   b. Calcule $I$ si $P=60\ \mathrm W$ y $V=120\ \mathrm V$.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 1. Al desarrollar y reunir términos,
@@ -224,19 +216,13 @@ Resuelva los siguientes ejercicios.
    b. La ecuación se reduce a $3x+2=3x+9$, es decir, $2=9$. Por tanto, $S=\varnothing$.  
    c. Se obtiene $4x=16$, de modo que $S=\{4\}$. La comprobación da $7(4)-4=24$ y $3(4)+12=24$.
 
-3. Si $V\ne0$, se divide entre $V$:
+3. Para el inciso a, si $V\ne0$, se divide entre $V$:
 
    $$
    I=\frac{P}{V}.
    $$
 
-   Las unidades son
-
-   $$
-   [I]=\frac{\mathrm W}{\mathrm V}=\mathrm A.
-   $$
-
-   Finalmente,
+   Para el inciso b, al sustituir los valores proporcionados,
 
    $$
    I=\frac{60\ \mathrm W}{120\ \mathrm V}
@@ -271,7 +257,7 @@ Resuelva los siguientes ejercicios.
    d=vt.
    $$
 
-   Despeje $t$, indique la restricción necesaria, compruebe las unidades y calcule el tiempo requerido para recorrer $180\ \mathrm{km}$ a $72\ \mathrm{km/h}$.
+   Despeje $t$, indique la restricción necesaria y calcule el tiempo requerido para recorrer $180\ \mathrm{km}$ a $72\ \mathrm{km/h}$.
 
 5. Construya una ecuación lineal con denominadores numéricos cuyo conjunto solución sea $S=\{-3\}$.
 
