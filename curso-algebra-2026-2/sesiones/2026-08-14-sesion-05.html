@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional.">
+<meta name="description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica.">
 
 <title>Sesión 05. Ecuaciones lineales y despeje de fórmulas – Álgebra</title>
 <style>
@@ -108,7 +108,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Sesión 05. Ecuaciones lineales y despeje de fórmulas – Álgebra">
-<meta property="og:description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica y dimensional.">
+<meta property="og:description" content="Ecuaciones equivalentes, resolución de ecuaciones lineales, despeje de variables y verificación algebraica.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -353,7 +353,10 @@ window.Quarto = {
   <li><a href="#ejemplo-1.-ecuación-con-denominadores-numéricos" id="toc-ejemplo-1.-ecuación-con-denominadores-numéricos" class="nav-link" data-scroll-target="#ejemplo-1.-ecuación-con-denominadores-numéricos">Ejemplo 1. Ecuación con denominadores numéricos</a></li>
   <li><a href="#ejemplo-2.-cuando-desaparece-la-incógnita" id="toc-ejemplo-2.-cuando-desaparece-la-incógnita" class="nav-link" data-scroll-target="#ejemplo-2.-cuando-desaparece-la-incógnita">Ejemplo 2. Cuando desaparece la incógnita</a></li>
   </ul></li>
-  <li><a href="#despeje-de-fórmulas-y-comprobación-dimensional" id="toc-despeje-de-fórmulas-y-comprobación-dimensional" class="nav-link" data-scroll-target="#despeje-de-fórmulas-y-comprobación-dimensional">Despeje de fórmulas y comprobación dimensional</a></li>
+  <li><a href="#despeje-de-fórmulas" id="toc-despeje-de-fórmulas" class="nav-link" data-scroll-target="#despeje-de-fórmulas">Despeje de fórmulas</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-3.-despeje-en-la-fórmula-de-dilatación-lineal" id="toc-ejemplo-3.-despeje-en-la-fórmula-de-dilatación-lineal" class="nav-link" data-scroll-target="#ejemplo-3.-despeje-en-la-fórmula-de-dilatación-lineal">Ejemplo 3. Despeje en la fórmula de dilatación lineal</a></li>
+  </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -432,6 +435,7 @@ D, &amp; a=c\ \text{y}\ b=d,\\
 \varnothing, &amp; a=c\ \text{y}\ b\ne d.
 \end{cases}
 \]</span></p>
+<p>En esta expresión, <span class="math inline">\(\cap\)</span> denota la intersección de conjuntos y <span class="math inline">\(\varnothing\)</span>, el conjunto vacío. Por tanto, en el primer caso el valor calculado se conserva únicamente si pertenece al dominio original <span class="math inline">\(D\)</span>.</p>
 <p>En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.</p>
 <p>Un procedimiento ordenado es el siguiente:</p>
 <ol type="1">
@@ -482,9 +486,11 @@ x&amp;=6.
 <p>se reduce a <span class="math inline">\(2x+6=2x+1\)</span> y después a <span class="math inline">\(6=1\)</span>. Esta contradicción implica que <span class="math inline">\(S=\varnothing\)</span>.</p>
 </section>
 </section>
-<section id="despeje-de-fórmulas-y-comprobación-dimensional" class="level2">
-<h2 class="anchored" data-anchor-id="despeje-de-fórmulas-y-comprobación-dimensional">Despeje de fórmulas y comprobación dimensional</h2>
+<section id="despeje-de-fórmulas" class="level2">
+<h2 class="anchored" data-anchor-id="despeje-de-fórmulas">Despeje de fórmulas</h2>
 <p>Despejar una variable consiste en resolver una fórmula respecto de ella, tratando las demás letras como parámetros. Toda división requiere que el divisor sea distinto de cero.</p>
+<section id="ejemplo-3.-despeje-en-la-fórmula-de-dilatación-lineal" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-despeje-en-la-fórmula-de-dilatación-lineal">Ejemplo 3. Despeje en la fórmula de dilatación lineal</h3>
 <p>Consideremos la fórmula de dilatación lineal</p>
 <p><span class="math display">\[
 L=L_0(1+\alpha\Delta T),
@@ -494,7 +500,7 @@ L=L_0(1+\alpha\Delta T),
 \begin{aligned}
 \frac{L}{L_0}&amp;=1+\alpha\Delta T,\\
 \frac{L}{L_0}-1&amp;=\alpha\Delta T,\\
-\Delta T&amp;=\frac{L-L_0}{L_0\alpha},
+\Delta T&amp;=\frac{L-L_0}{L_0\alpha}.
 \end{aligned}
 \]</span></p>
 <p>La sustitución del resultado recupera la fórmula original:</p>
@@ -503,13 +509,7 @@ L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
 =L_0+(L-L_0)
 =L.
 \]</span></p>
-<p>Además, si <span class="math inline">\(L\)</span> y <span class="math inline">\(L_0\)</span> se miden en metros y <span class="math inline">\(\alpha\)</span> en <span class="math inline">\(({}^\circ\mathrm C)^{-1}\)</span>, entonces</p>
-<p><span class="math display">\[
-\left[\frac{L-L_0}{L_0\alpha}\right]
-=\frac{\mathrm m}{\mathrm m\cdot({}^\circ\mathrm C)^{-1}}
-={}^\circ\mathrm C.
-\]</span></p>
-<p>La homogeneidad dimensional es una condición necesaria: una incompatibilidad de unidades demuestra que el resultado es incorrecto. Sin embargo, unidades compatibles no bastan para demostrar que el despeje sea algebraicamente correcto.</p>
+</section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
@@ -520,7 +520,6 @@ L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
 <li>Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.</li>
 <li>Interpretar <span class="math inline">\(0=0\)</span> o <span class="math inline">\(0=k\)</span>, con <span class="math inline">\(k\ne0\)</span>, como si la solución fuera <span class="math inline">\(x=0\)</span>.</li>
 <li>Perder las restricciones del dominio original durante una simplificación.</li>
-<li>Considerar que la compatibilidad dimensional demuestra por sí sola que un despeje es correcto.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -545,8 +544,6 @@ P=VI.
 \]</span></p>
 <ol type="a">
 <li>Despeje <span class="math inline">\(I\)</span> e indique la restricción necesaria.<br>
-</li>
-<li>Compruebe dimensionalmente el despeje usando <span class="math inline">\(\mathrm W=\mathrm V\cdot\mathrm A\)</span>.<br>
 </li>
 <li>Calcule <span class="math inline">\(I\)</span> si <span class="math inline">\(P=60\ \mathrm W\)</span> y <span class="math inline">\(V=120\ \mathrm V\)</span>.</li>
 </ol></li>
@@ -587,15 +584,11 @@ x&amp;=9.
 </li>
 <li>Se obtiene <span class="math inline">\(4x=16\)</span>, de modo que <span class="math inline">\(S=\{4\}\)</span>. La comprobación da <span class="math inline">\(7(4)-4=24\)</span> y <span class="math inline">\(3(4)+12=24\)</span>.</li>
 </ol></li>
-<li><p>Si <span class="math inline">\(V\ne0\)</span>, se divide entre <span class="math inline">\(V\)</span>:</p>
+<li><p>Para el inciso a, si <span class="math inline">\(V\ne0\)</span>, se divide entre <span class="math inline">\(V\)</span>:</p>
 <p><span class="math display">\[
 I=\frac{P}{V}.
 \]</span></p>
-<p>Las unidades son</p>
-<p><span class="math display">\[
-[I]=\frac{\mathrm W}{\mathrm V}=\mathrm A.
-\]</span></p>
-<p>Finalmente,</p>
+<p>Para el inciso b, al sustituir los valores proporcionados,</p>
 <p><span class="math display">\[
 I=\frac{60\ \mathrm W}{120\ \mathrm V}
 =0.5\ \mathrm A.
@@ -636,7 +629,7 @@ I=\frac{60\ \mathrm W}{120\ \mathrm V}
 <p><span class="math display">\[
 d=vt.
 \]</span></p>
-<p>Despeje <span class="math inline">\(t\)</span>, indique la restricción necesaria, compruebe las unidades y calcule el tiempo requerido para recorrer <span class="math inline">\(180\ \mathrm{km}\)</span> a <span class="math inline">\(72\ \mathrm{km/h}\)</span>.</p></li>
+<p>Despeje <span class="math inline">\(t\)</span>, indique la restricción necesaria y calcule el tiempo requerido para recorrer <span class="math inline">\(180\ \mathrm{km}\)</span> a <span class="math inline">\(72\ \mathrm{km/h}\)</span>.</p></li>
 <li><p>Construya una ecuación lineal con denominadores numéricos cuyo conjunto solución sea <span class="math inline">\(S=\{-3\}\)</span>.</p></li>
 <li><p>En el procedimiento</p>
 <p><span class="math display">\[
