@@ -36,6 +36,8 @@ $$
 =4x^2-12xy+9y^2.
 $$
 
+Al elevar un monomio al cuadrado se eleva cada factor: $(kx)^2=k^2x^2$. En particular, $(2x)^2=4x^2$ y $(-b)^2=b^2$.
+
 La igualdad $(a+b)^2=a^2+b^2$ no es una identidad: el término $2ab$ solo desaparece cuando $ab=0$.
 
 ## Factorización
@@ -50,7 +52,9 @@ $$
 ab+ac=a(b+c).
 $$
 
-Cuando todos los términos contienen un factor común, este se extrae antes de buscar otros patrones. Por ejemplo,
+Cuando los coeficientes son enteros, el máximo factor común monomial se obtiene tomando el máximo común divisor de los coeficientes y el menor exponente de cada variable presente en todos los términos. El factor común puede ser numérico, literal o ambos. Después de extraerlo, se revisa si los factores restantes admiten otra factorización.
+
+Por ejemplo,
 
 $$
 12x^3y-18x^2y^2
@@ -84,6 +88,8 @@ $$
 $$
 a^2-2ab+b^2=(a-b)^2.
 $$
+
+Para reconocer un trinomio cuadrado perfecto, los términos extremos deben poder escribirse como $u^2$ y $v^2$, y el término central debe ser $2uv$ o $-2uv$.
 
 Por ejemplo,
 
@@ -129,7 +135,22 @@ $$
 x^2-x-12=(x-4)(x+3).
 $$
 
-En un trinomio no mónico sencillo, el término lineal puede descomponerse para obtener un factor binomial común. Por ejemplo,
+Para factorizar un trinomio no mónico sencillo con coeficientes enteros
+
+$$
+ax^2+bx+c,
+\qquad a\ne0,
+\quad a\ne1,
+$$
+
+se puede aplicar el siguiente procedimiento:
+
+1. Encontrar enteros $r$ y $s$ tales que $r+s=b$ y $rs=ac$.
+2. Reescribir el término lineal como $bx=rx+sx$.
+3. Agrupar los cuatro términos en dos pares y extraer el factor común de cada par.
+4. Extraer el factor binomial que aparece en ambos grupos.
+
+Por ejemplo, para $6x^2+x-2$ se pueden tomar $r=4$ y $s=-3$ porque su suma es $1$ y su producto es $6(-2)=-12$:
 
 $$
 \begin{aligned}
@@ -140,7 +161,16 @@ $$
 \end{aligned}
 $$
 
-Los números $4$ y $-3$ se eligieron porque su suma es $1$ y su producto es $6(-2)=-12$.
+El orden de $r$ y $s$ no modifica la factorización. También puede escribirse
+
+$$
+\begin{aligned}
+6x^2+x-2
+&=6x^2-3x+4x-2\\
+&=3x(2x-1)+2(2x-1)\\
+&=(2x-1)(3x+2).
+\end{aligned}
+$$
 
 Si no existe el par de enteros requerido, solo se concluye que este procedimiento no produce una factorización con coeficientes enteros.
 
@@ -158,7 +188,7 @@ $$
 D=\{x\in\mathbb R:q(x)\ne0\}.
 $$
 
-Los ceros del denominador se excluyen del dominio. Estas restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.
+Los ceros del denominador se excluyen del dominio. Un cero del numerador es admisible siempre que el denominador sea distinto de cero; en ese caso, la fracción vale cero. Las restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.
 
 La cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces
 
@@ -259,7 +289,7 @@ La expresión reducida está definida en $x=3$, pero la fracción original no. L
 
 ## Actividad
 
-Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+Resuelva los siguientes ejercicios.
 
 1. Factorice:
 
