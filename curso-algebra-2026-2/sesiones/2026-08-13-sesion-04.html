@@ -412,6 +412,7 @@ a(b+c)=ab+ac.
 =(2x)^2-2(2x)(3y)+(3y)^2
 =4x^2-12xy+9y^2.
 \]</span></p>
+<p>Al elevar un monomio al cuadrado se eleva cada factor: <span class="math inline">\((kx)^2=k^2x^2\)</span>. En particular, <span class="math inline">\((2x)^2=4x^2\)</span> y <span class="math inline">\((-b)^2=b^2\)</span>.</p>
 <p>La igualdad <span class="math inline">\((a+b)^2=a^2+b^2\)</span> no es una identidad: el término <span class="math inline">\(2ab\)</span> solo desaparece cuando <span class="math inline">\(ab=0\)</span>.</p>
 </section>
 <section id="factorización" class="level2">
@@ -423,7 +424,8 @@ a(b+c)=ab+ac.
 <p><span class="math display">\[
 ab+ac=a(b+c).
 \]</span></p>
-<p>Cuando todos los términos contienen un factor común, este se extrae antes de buscar otros patrones. Por ejemplo,</p>
+<p>Cuando los coeficientes son enteros, el máximo factor común monomial se obtiene tomando el máximo común divisor de los coeficientes y el menor exponente de cada variable presente en todos los términos. El factor común puede ser numérico, literal o ambos. Después de extraerlo, se revisa si los factores restantes admiten otra factorización.</p>
+<p>Por ejemplo,</p>
 <p><span class="math display">\[
 12x^3y-18x^2y^2
 =6x^2y(2x-3y).
@@ -449,6 +451,7 @@ a^2+2ab+b^2=(a+b)^2,
 <p><span class="math display">\[
 a^2-2ab+b^2=(a-b)^2.
 \]</span></p>
+<p>Para reconocer un trinomio cuadrado perfecto, los términos extremos deben poder escribirse como <span class="math inline">\(u^2\)</span> y <span class="math inline">\(v^2\)</span>, y el término central debe ser <span class="math inline">\(2uv\)</span> o <span class="math inline">\(-2uv\)</span>.</p>
 <p>Por ejemplo,</p>
 <p><span class="math display">\[
 9x^2-24x+16
@@ -482,7 +485,20 @@ x^2+bx+c=(x+m)(x+n).
 <p><span class="math display">\[
 x^2-x-12=(x-4)(x+3).
 \]</span></p>
-<p>En un trinomio no mónico sencillo, el término lineal puede descomponerse para obtener un factor binomial común. Por ejemplo,</p>
+<p>Para factorizar un trinomio no mónico sencillo con coeficientes enteros</p>
+<p><span class="math display">\[
+ax^2+bx+c,
+\qquad a\ne0,
+\quad a\ne1,
+\]</span></p>
+<p>se puede aplicar el siguiente procedimiento:</p>
+<ol type="1">
+<li>Encontrar enteros <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> tales que <span class="math inline">\(r+s=b\)</span> y <span class="math inline">\(rs=ac\)</span>.</li>
+<li>Reescribir el término lineal como <span class="math inline">\(bx=rx+sx\)</span>.</li>
+<li>Agrupar los cuatro términos en dos pares y extraer el factor común de cada par.</li>
+<li>Extraer el factor binomial que aparece en ambos grupos.</li>
+</ol>
+<p>Por ejemplo, para <span class="math inline">\(6x^2+x-2\)</span> se pueden tomar <span class="math inline">\(r=4\)</span> y <span class="math inline">\(s=-3\)</span> porque su suma es <span class="math inline">\(1\)</span> y su producto es <span class="math inline">\(6(-2)=-12\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 6x^2+x-2
@@ -491,7 +507,15 @@ x^2-x-12=(x-4)(x+3).
 &amp;=(3x+2)(2x-1).
 \end{aligned}
 \]</span></p>
-<p>Los números <span class="math inline">\(4\)</span> y <span class="math inline">\(-3\)</span> se eligieron porque su suma es <span class="math inline">\(1\)</span> y su producto es <span class="math inline">\(6(-2)=-12\)</span>.</p>
+<p>El orden de <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> no modifica la factorización. También puede escribirse</p>
+<p><span class="math display">\[
+\begin{aligned}
+6x^2+x-2
+&amp;=6x^2-3x+4x-2\\
+&amp;=3x(2x-1)+2(2x-1)\\
+&amp;=(2x-1)(3x+2).
+\end{aligned}
+\]</span></p>
 <p>Si no existe el par de enteros requerido, solo se concluye que este procedimiento no produce una factorización con coeficientes enteros.</p>
 </section>
 </section>
@@ -505,7 +529,7 @@ x^2-x-12=(x-4)(x+3).
 <p><span class="math display">\[
 D=\{x\in\mathbb R:q(x)\ne0\}.
 \]</span></p>
-<p>Los ceros del denominador se excluyen del dominio. Estas restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.</p>
+<p>Los ceros del denominador se excluyen del dominio. Un cero del numerador es admisible siempre que el denominador sea distinto de cero; en ese caso, la fracción vale cero. Las restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.</p>
 <p>La cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces</p>
 <p><span class="math display">\[
 \frac{a(x)c(x)}{b(x)c(x)}=\frac{a(x)}{b(x)},
@@ -591,7 +615,7 @@ x\ne3.
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
+<p>Resuelva los siguientes ejercicios.</p>
 <ol type="1">
 <li><p>Factorice:</p>
 <p><span class="math display">\[
