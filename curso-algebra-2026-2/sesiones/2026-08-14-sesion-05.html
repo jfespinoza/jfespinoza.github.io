@@ -394,6 +394,7 @@ window.Quarto = {
 <section id="ecuaciones-soluciones-y-equivalencia" class="level2">
 <h2 class="anchored" data-anchor-id="ecuaciones-soluciones-y-equivalencia">Ecuaciones, soluciones y equivalencia</h2>
 <p>Una <strong>ecuación en una variable</strong> es una igualdad que contiene una incógnita. Una solución es un valor de esa incógnita que hace verdadera la igualdad. El <strong>conjunto solución</strong>, denotado por <span class="math inline">\(S\)</span>, reúne todas las soluciones que pertenecen al dominio original <span class="math inline">\(D\)</span> de la ecuación.</p>
+<p>Una expresión algebraica puede evaluarse o simplificarse, pero no tiene por sí sola un conjunto solución; una ecuación impone una condición que la incógnita debe satisfacer.</p>
 <p>Dos ecuaciones son <strong>equivalentes</strong> en un dominio <span class="math inline">\(D\)</span> si tienen el mismo conjunto solución. Las siguientes operaciones conservan la equivalencia:</p>
 <ul>
 <li>sumar o restar en ambos miembros la misma expresión, siempre que esté definida para todo valor de <span class="math inline">\(D\)</span>;</li>
@@ -413,6 +414,7 @@ u=v
 ku=kv.
 \]</span></p>
 <p>La condición <span class="math inline">\(k\ne0\)</span> es indispensable: al multiplicar por cero, ecuaciones con conjuntos solución distintos pueden convertirse en la misma igualdad <span class="math inline">\(0=0\)</span>.</p>
+<p>Las expresiones «pasar sumando», «pasar restando» o «pasar dividiendo» son abreviaturas: el paso válido consiste en aplicar la misma operación inversa a ambos miembros.</p>
 </section>
 <section id="resolución-de-ecuaciones-lineales" class="level2">
 <h2 class="anchored" data-anchor-id="resolución-de-ecuaciones-lineales">Resolución de ecuaciones lineales</h2>
@@ -437,6 +439,7 @@ D, &amp; a=c\ \text{y}\ b=d,\\
 \]</span></p>
 <p>En esta expresión, <span class="math inline">\(\cap\)</span> denota la intersección de conjuntos y <span class="math inline">\(\varnothing\)</span>, el conjunto vacío. Por tanto, en el primer caso el valor calculado se conserva únicamente si pertenece al dominio original <span class="math inline">\(D\)</span>.</p>
 <p>En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.</p>
+<p>Debe distinguirse <span class="math inline">\(S=\varnothing\)</span> de <span class="math inline">\(S=\{0\}\)</span>: el primer conjunto no contiene soluciones; el segundo contiene únicamente la solución <span class="math inline">\(x=0\)</span>.</p>
 <p>Un procedimiento ordenado es el siguiente:</p>
 <ol type="1">
 <li>Determinar el dominio original y registrar sus restricciones.</li>
@@ -446,6 +449,7 @@ D, &amp; a=c\ \text{y}\ b=d,\\
 <li>Dividir entre el coeficiente de la incógnita si es distinto de cero; en caso contrario, clasificar la igualdad obtenida.</li>
 <li>Sustituir el valor hallado en la ecuación original.</li>
 </ol>
+<p>Los términos con la incógnita pueden reunirse en cualquiera de los dos miembros; conviene elegir la disposición que simplifique la aritmética.</p>
 <p>Las transformaciones equivalentes garantizan que se conserva el conjunto solución. La sustitución en la ecuación original confirma que el valor obtenido satisface la igualdad.</p>
 <section id="ejemplo-1.-ecuación-con-denominadores-numéricos" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-1.-ecuación-con-denominadores-numéricos">Ejemplo 1. Ecuación con denominadores numéricos</h3>
@@ -500,6 +504,7 @@ L=L_0(1+\alpha\Delta T),
 \begin{aligned}
 \frac{L}{L_0}&amp;=1+\alpha\Delta T,\\
 \frac{L}{L_0}-1&amp;=\alpha\Delta T,\\
+\frac{L-L_0}{L_0}&amp;=\alpha\Delta T,\\
 \Delta T&amp;=\frac{L-L_0}{L_0\alpha}.
 \end{aligned}
 \]</span></p>
@@ -515,7 +520,7 @@ L_0\left(1+\alpha\frac{L-L_0}{L_0\alpha}\right)
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li>Efectuar una operación en un solo miembro de la ecuación.</li>
-<li>Aplicar incorrectamente la propiedad distributiva, en particular cuando un signo negativo precede a un paréntesis.</li>
+<li>Distribuir incorrectamente un signo negativo delante de un paréntesis; la distribución correcta es, por ejemplo, <span class="math inline">\(-(u-v)=-u+v\)</span>.</li>
 <li>Al eliminar denominadores, no multiplicar todos los términos por el mínimo común múltiplo.</li>
 <li>Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.</li>
 <li>Interpretar <span class="math inline">\(0=0\)</span> o <span class="math inline">\(0=k\)</span>, con <span class="math inline">\(k\ne0\)</span>, como si la solución fuera <span class="math inline">\(x=0\)</span>.</li>
