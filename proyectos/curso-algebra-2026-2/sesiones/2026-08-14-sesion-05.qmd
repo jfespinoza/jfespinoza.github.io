@@ -8,6 +8,8 @@ description: "Ecuaciones equivalentes, resolución de ecuaciones lineales, despe
 
 Una **ecuación en una variable** es una igualdad que contiene una incógnita. Una solución es un valor de esa incógnita que hace verdadera la igualdad. El **conjunto solución**, denotado por $S$, reúne todas las soluciones que pertenecen al dominio original $D$ de la ecuación.
 
+Una expresión algebraica puede evaluarse o simplificarse, pero no tiene por sí sola un conjunto solución; una ecuación impone una condición que la incógnita debe satisfacer.
+
 Dos ecuaciones son **equivalentes** en un dominio $D$ si tienen el mismo conjunto solución. Las siguientes operaciones conservan la equivalencia:
 
 - sumar o restar en ambos miembros la misma expresión, siempre que esté definida para todo valor de $D$;
@@ -31,6 +33,8 @@ ku=kv.
 $$
 
 La condición $k\ne0$ es indispensable: al multiplicar por cero, ecuaciones con conjuntos solución distintos pueden convertirse en la misma igualdad $0=0$.
+
+Las expresiones «pasar sumando», «pasar restando» o «pasar dividiendo» son abreviaturas: el paso válido consiste en aplicar la misma operación inversa a ambos miembros.
 
 ## Resolución de ecuaciones lineales
 
@@ -63,6 +67,8 @@ En esta expresión, $\cap$ denota la intersección de conjuntos y $\varnothing$,
 
 En el segundo caso se obtiene una identidad: todos los valores del dominio original satisfacen la ecuación. En el tercero aparece una contradicción, por lo que no existe solución.
 
+Debe distinguirse $S=\varnothing$ de $S=\{0\}$: el primer conjunto no contiene soluciones; el segundo contiene únicamente la solución $x=0$.
+
 Un procedimiento ordenado es el siguiente:
 
 1. Determinar el dominio original y registrar sus restricciones.
@@ -71,6 +77,8 @@ Un procedimiento ordenado es el siguiente:
 4. Reunir los términos con la incógnita en un miembro y los términos constantes en el otro.
 5. Dividir entre el coeficiente de la incógnita si es distinto de cero; en caso contrario, clasificar la igualdad obtenida.
 6. Sustituir el valor hallado en la ecuación original.
+
+Los términos con la incógnita pueden reunirse en cualquiera de los dos miembros; conviene elegir la disposición que simplifique la aritmética.
 
 Las transformaciones equivalentes garantizan que se conserva el conjunto solución. La sustitución en la ecuación original confirma que el valor obtenido satisface la igualdad.
 
@@ -143,6 +151,7 @@ $$
 \begin{aligned}
 \frac{L}{L_0}&=1+\alpha\Delta T,\\
 \frac{L}{L_0}-1&=\alpha\Delta T,\\
+\frac{L-L_0}{L_0}&=\alpha\Delta T,\\
 \Delta T&=\frac{L-L_0}{L_0\alpha}.
 \end{aligned}
 $$
@@ -158,7 +167,7 @@ $$
 ## Errores frecuentes
 
 - Efectuar una operación en un solo miembro de la ecuación.
-- Aplicar incorrectamente la propiedad distributiva, en particular cuando un signo negativo precede a un paréntesis.
+- Distribuir incorrectamente un signo negativo delante de un paréntesis; la distribución correcta es, por ejemplo, $-(u-v)=-u+v$.
 - Al eliminar denominadores, no multiplicar todos los términos por el mínimo común múltiplo.
 - Dividir entre un coeficiente o parámetro sin comprobar que sea distinto de cero.
 - Interpretar $0=0$ o $0=k$, con $k\ne0$, como si la solución fuera $x=0$.
