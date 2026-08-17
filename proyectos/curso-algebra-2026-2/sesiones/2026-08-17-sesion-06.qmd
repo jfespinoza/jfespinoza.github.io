@@ -1,0 +1,300 @@
+---
+title: "Sesión 06. Inecuaciones lineales y valor absoluto como distancia"
+date: 2026-08-17
+description: "Propiedades de orden, resolución de inecuaciones lineales, intervalos y valor absoluto como distancia."
+---
+
+## Inecuaciones y conjuntos solución
+
+Una **desigualdad** compara dos expresiones mediante alguno de los signos $<$, $\le$, $>$ o $\ge$. Una **inecuación** es una desigualdad que contiene una incógnita. Una solución es un valor de la incógnita que hace verdadera la desigualdad, y el **conjunto solución** $S$ reúne todas las soluciones.
+
+En los casos no degenerados, una inecuación lineal tiene infinitas soluciones que forman una semirrecta. También puede tener como conjunto solución a $\mathbb R$ o a $\varnothing$. Los conjuntos solución no vacíos se expresan mediante intervalos y se representan en la recta real.
+
+| Desigualdad | Intervalo | Representación en la recta real |
+|---|---|---|
+| $x<b$ | $(-\infty,\,b)$ | Semirrecta hacia la izquierda de $b$, con extremo abierto |
+| $x\le b$ | $(-\infty,\,b]$ | Semirrecta hacia la izquierda de $b$, con extremo cerrado |
+| $x>a$ | $(a,\,\infty)$ | Semirrecta hacia la derecha de $a$, con extremo abierto |
+| $x\ge a$ | $[a,\,\infty)$ | Semirrecta hacia la derecha de $a$, con extremo cerrado |
+| $a<x\le b$ | $(a,\,b]$ | Segmento abierto en $a$ y cerrado en $b$ |
+
+En la última fila se supone que $a,b\in\mathbb R$ y $a<b$. Un extremo abierto no pertenece al conjunto solución; un extremo cerrado sí. Los símbolos $\infty$ y $-\infty$ no representan números, por lo que siempre se escriben junto a un paréntesis.
+
+Una inecuación lineal puede escribirse, después de simplificar, como
+
+$$
+ax+b<cx+d,
+\qquad
+a,b,c,d\in\mathbb R.
+$$
+
+Al reunir términos se obtiene
+
+$$
+(a-c)x<d-b.
+$$
+
+Si $a-c\ne0$, se obtiene una semirrecta al dividir entre ese coeficiente. Si la incógnita desaparece, queda una proposición numérica: cuando es verdadera, $S=\mathbb R$; cuando es falsa, $S=\varnothing$, donde $\varnothing$ denota el conjunto vacío. El mismo criterio se aplica a los signos $\le$, $>$ y $\ge$.
+
+## Propiedades de orden y equivalencia
+
+Dos inecuaciones son **equivalentes** cuando tienen el mismo conjunto solución. Para $u,v,c,k\in\mathbb R$ se cumplen las siguientes propiedades:
+
+- si $u<v$, entonces $u+c<v+c$;
+- si $u<v$ y $k>0$, entonces $ku<kv$;
+- si $u<v$ y $k<0$, entonces $ku>kv$.
+
+Las propiedades correspondientes son válidas para $\le$, $>$ y $\ge$. Por tanto:
+
+| Operación aplicada en ambos miembros | Efecto sobre el signo de orden |
+|---|---|
+| Sumar o restar una misma cantidad | Se conserva |
+| Multiplicar o dividir por una constante positiva | Se conserva |
+| Multiplicar o dividir por una constante negativa | Se invierte |
+
+La inversión del signo al multiplicar por un número negativo refleja el orden en la recta real: aunque $2<5$, se tiene $-2>-5$.
+
+Multiplicar por cero no conserva, en general, el conjunto solución, y dividir entre cero no está definido. Tampoco se debe multiplicar o dividir una inecuación por una expresión que contiene la incógnita sin haber establecido que no se anula y cuál es su signo en el dominio considerado, pues este puede variar y determinar si el signo de orden se conserva o se invierte.
+
+## El valor absoluto como distancia
+
+El valor absoluto de un número real $a$ se define por
+
+$$
+|a|=
+\begin{cases}
+a, & a\ge0,\\
+-a, & a<0.
+\end{cases}
+$$
+
+Geométricamente, $|a|$ es la distancia entre $a$ y $0$. En general,
+
+$$
+|x-y|
+$$
+
+es la distancia entre $x$ y $y$ en la recta real. Por ejemplo,
+
+$$
+|4-9|=|-5|=5=|9-4|.
+$$
+
+Para $r>0$, la condición $|x-a|<r$ describe los números cuya distancia a $a$ es menor que $r$:
+
+$$
+|x-a|<r
+\quad\Longleftrightarrow\quad
+a-r<x<a+r.
+$$
+
+Del mismo modo,
+
+$$
+|x-a|\le r
+\quad\Longleftrightarrow\quad
+a-r\le x\le a+r.
+$$
+
+Así, $|x-2|<3$ tiene como conjunto solución $(-1,\,5)$. La desigualdad debe acotar por ambos lados: conservar únicamente $x-2<3$ admitiría valores cuya distancia a $2$ es mayor que $3$.
+
+Una tolerancia puede expresarse con esta notación. Por ejemplo, $|L-50|\le0.2$ indica que la longitud $L$ difiere de $50$ en no más de $0.2$ unidades.
+
+## Ejemplos
+
+### Ejemplo 1. Incógnita en ambos miembros
+
+Resolver
+
+$$
+3x-5<7+x.
+$$
+
+Se aplican operaciones equivalentes hasta aislar $x$:
+
+$$
+\begin{aligned}
+3x-5 &< 7+x,\\
+2x-5 &< 7,\\
+2x &< 12,\\
+x &< 6.
+\end{aligned}
+$$
+
+En el último paso se dividió entre $2>0$, por lo que el signo se conservó. El conjunto solución es
+
+$$
+S=(-\infty,\,6).
+$$
+
+El valor $x=0$ satisface la inecuación original, mientras que $x=10$ no la satisface. Estas sustituciones no demuestran el resultado, pero permiten detectar algunos errores de cálculo.
+
+### Ejemplo 2. División entre una constante negativa
+
+Resolver
+
+$$
+4-2x\le10.
+$$
+
+Se obtiene
+
+$$
+\begin{aligned}
+4-2x &\le 10,\\
+-2x &\le 6,\\
+x &\ge -3.
+\end{aligned}
+$$
+
+Al dividir entre $-2<0$, el signo se invirtió. Por tanto,
+
+$$
+S=[-3,\,\infty).
+$$
+
+También puede evitarse la división entre una constante negativa:
+
+$$
+4-2x\le10
+\quad\Longleftrightarrow\quad
+4\le10+2x
+\quad\Longleftrightarrow\quad
+-3\le x.
+$$
+
+### Ejemplo 3. Denominadores numéricos
+
+Resolver
+
+$$
+\frac{x-1}{3}-\frac{x}{4}\ge1.
+$$
+
+El mínimo común múltiplo de $3$ y $4$ es $12$. Como $12>0$, al multiplicar todos los términos por esta cantidad el signo se conserva:
+
+$$
+\begin{aligned}
+4(x-1)-3x &\ge 12,\\
+x-4 &\ge 12,\\
+x &\ge 16.
+\end{aligned}
+$$
+
+Así,
+
+$$
+S=[16,\,\infty).
+$$
+
+El extremo pertenece al conjunto solución porque, para $x=16$,
+
+$$
+\frac{16-1}{3}-\frac{16}{4}=1.
+$$
+
+### Ejemplo 4. Desigualdad doble
+
+Resolver
+
+$$
+-3<2x+1\le5.
+$$
+
+Las mismas operaciones deben aplicarse en los tres miembros:
+
+$$
+\begin{aligned}
+-3 &< 2x+1\le 5,\\
+-4 &< 2x\le 4,\\
+-2 &< x\le 2.
+\end{aligned}
+$$
+
+Por tanto,
+
+$$
+S=(-2,\,2].
+$$
+
+El extremo $2$ está incluido porque $2(2)+1=5$; el extremo $-2$ está excluido porque $2(-2)+1=-3$ no satisface la desigualdad estricta $-3<2x+1$.
+
+## Errores frecuentes
+
+- **No invertir el signo al dividir entre una constante negativa.** De $-2x<6$ se obtiene $x>-3$, no $x<-3$.
+- **Invertir el signo al sumar o restar.** De $x+5<8$ se obtiene $x<3$; sumar o restar conserva el orden.
+- **Descuidar los extremos.** La solución de $x\ge-3$ es $[-3,\,\infty)$, mientras que la de $x>-3$ es $(-3,\,\infty)$.
+- **Confundir la frontera con el conjunto solución.** En $2x<10$, el número $5$ es la frontera y no pertenece a $S=(-\infty,\,5)$.
+- **Resolver una desigualdad con valor absoluto por un solo lado.** La condición $|x-a|<r$ exige simultáneamente $a-r<x$ y $x<a+r$.
+
+## Actividad
+
+Resuelva los siguientes ejercicios.
+
+1. Resuelva $4-3(2x-1)\ge2(x+5)$; exprese el conjunto solución como intervalo y represéntelo en la recta real.
+2. Construya una inecuación lineal cuyo conjunto solución sea $[-2,\,\infty)$. Resuélvala para verificar su propuesta y describa su representación en la recta real.
+3. Un procedimiento propone que, de $6-2x<18$, se obtiene $x<-6$. Identifique el error, corrija la solución y compruebe con un valor concreto que el resultado corregido es coherente.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Al desarrollar y reunir términos se obtiene
+
+$$
+\begin{aligned}
+4-3(2x-1)&\ge2(x+5),\\
+7-6x&\ge2x+10,\\
+-8x&\ge3,\\
+x&\le-\frac38.
+\end{aligned}
+$$
+
+En el último paso se dividió entre $-8<0$, por lo que el signo se invirtió. Así,
+
+$$
+S=\left(-\infty,\,-\frac38\right].
+$$
+
+En la recta real se representa con extremo cerrado en $-\dfrac38$ y una semirrecta hacia la izquierda.
+
+**2.** Hay distintas respuestas posibles. Por ejemplo,
+
+$$
+2x+4\ge0
+$$
+
+tiene como solución
+
+$$
+2x\ge-4
+\quad\Longleftrightarrow\quad
+x\ge-2,
+\qquad
+S=[-2,\,\infty).
+$$
+
+En la recta real se representa con extremo cerrado en $-2$ y una semirrecta hacia la derecha.
+
+**3.** El error consiste en no invertir el signo al dividir entre $-2$. El procedimiento correcto es
+
+$$
+6-2x<18
+\quad\Longleftrightarrow\quad
+-2x<12
+\quad\Longleftrightarrow\quad
+x>-6.
+$$
+
+Así, $S=(-6,\,\infty)$. El valor $x=0$ satisface la inecuación original y pertenece a este intervalo. En cambio, $x=-10$ pertenece al conjunto incorrecto $(-\infty,\,-6)$, pero no satisface la inecuación original.
+
+:::
+
+## Ejercicios para practicar
+
+1. Resuelva $2x+9<3$ y represente el conjunto solución en la recta real.
+2. Resuelva $4-x\ge9$.
+3. Resuelva $\dfrac{2x+1}{5}\le\dfrac{x-2}{2}$.
+4. Resuelva $-7<3x-1\le8$ y exprese el conjunto solución como intervalo.
+5. Escriba una inecuación lineal cuyo conjunto solución sea exactamente $[4,\,\infty)$ y compruebe su propuesta.
+6. Resuelva $3(x+2)<3x+1$ y $2(x+1)\ge2x-5$. Explique por qué en un caso el conjunto solución es vacío y en el otro es $\mathbb R$.
+7. Exprese la condición «la distancia de $x$ a $5$ es menor que $2$» mediante valor absoluto y determine el intervalo correspondiente.
+8. Una longitud $L$, medida en milímetros, es admisible cuando $|L-50|\le0.2$. Exprese esta condición como un intervalo e interprete sus extremos.
