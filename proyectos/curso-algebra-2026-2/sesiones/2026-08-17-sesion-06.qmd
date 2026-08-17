@@ -127,6 +127,8 @@ $$
 S=(-\infty,\,6).
 $$
 
+En la recta real se representa mediante una semirrecta hacia la izquierda, con extremo abierto en $6$.
+
 El valor $x=0$ satisface la inecuación original, mientras que $x=10$ no la satisface. Estas sustituciones no demuestran el resultado, pero permiten detectar algunos errores de cálculo.
 
 ### Ejemplo 2. División entre una constante negativa
@@ -217,6 +219,8 @@ $$
 S=(-2,\,2].
 $$
 
+En la recta real se representa mediante un segmento abierto en $-2$ y cerrado en $2$.
+
 El extremo $2$ está incluido porque $2(2)+1=5$; el extremo $-2$ está excluido porque $2(-2)+1=-3$ no satisface la desigualdad estricta $-3<2x+1$.
 
 ## Errores frecuentes
@@ -237,7 +241,7 @@ Resuelva los siguientes ejercicios.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
-**1.** Al desarrollar y reunir términos se obtiene
+**1.** La propiedad distributiva da $-3(2x-1)=-6x+3$ y $2(x+5)=2x+10$. Al desarrollar y reunir términos se obtiene
 
 $$
 \begin{aligned}
