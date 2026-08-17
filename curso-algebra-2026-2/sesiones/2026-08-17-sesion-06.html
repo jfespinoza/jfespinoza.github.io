@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Jerarquía de operaciones, leyes de los exponentes, radicales, restricciones y equivalencia de expresiones.">
+<meta name="description" content="Propiedades de orden, resolución de inecuaciones lineales, intervalos y valor absoluto como distancia.">
 
-<title>Sesión 03. Potencias, radicales y expresiones equivalentes – Álgebra</title>
+<title>Sesión 06. Inecuaciones lineales y valor absoluto como distancia – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-13-sesion-04.html" rel="next">
-<link href="../sesiones/2026-08-11-sesion-02.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-14-sesion-05.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 03. Potencias, radicales y expresiones equivalentes – Álgebra">
-<meta property="og:description" content="Jerarquía de operaciones, leyes de los exponentes, radicales, restricciones y equivalencia de expresiones.">
+<meta property="og:title" content="Sesión 06. Inecuaciones lineales y valor absoluto como distancia – Álgebra">
+<meta property="og:description" content="Propiedades de orden, resolución de inecuaciones lineales, intervalos y valor absoluto como distancia.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-12-sesion-03.html"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-17-sesion-06.html"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -221,7 +221,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
+  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,7 +236,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
   </div>
 </li>
       </ul>
@@ -352,25 +352,15 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#simplificación-y-equivalencia" id="toc-simplificación-y-equivalencia" class="nav-link active" data-scroll-target="#simplificación-y-equivalencia">Simplificación y equivalencia</a></li>
-  <li><a href="#jerarquía-de-operaciones" id="toc-jerarquía-de-operaciones" class="nav-link" data-scroll-target="#jerarquía-de-operaciones">Jerarquía de operaciones</a></li>
-  <li><a href="#potencias-de-exponente-entero" id="toc-potencias-de-exponente-entero" class="nav-link" data-scroll-target="#potencias-de-exponente-entero">Potencias de exponente entero</a>
-  <ul class="collapse">
-  <li><a href="#simplificación-de-un-producto-de-potencias" id="toc-simplificación-de-un-producto-de-potencias" class="nav-link" data-scroll-target="#simplificación-de-un-producto-de-potencias">Simplificación de un producto de potencias</a></li>
-  </ul></li>
-  <li><a href="#raíces-n-ésimas" id="toc-raíces-n-ésimas" class="nav-link" data-scroll-target="#raíces-n-ésimas">Raíces n-ésimas</a>
-  <ul class="collapse">
-  <li><a href="#productos-y-cocientes-de-radicales" id="toc-productos-y-cocientes-de-radicales" class="nav-link" data-scroll-target="#productos-y-cocientes-de-radicales">Productos y cocientes de radicales</a></li>
-  <li><a href="#simplificación-de-radicales" id="toc-simplificación-de-radicales" class="nav-link" data-scroll-target="#simplificación-de-radicales">Simplificación de radicales</a></li>
-  <li><a href="#exponentes-racionales" id="toc-exponentes-racionales" class="nav-link" data-scroll-target="#exponentes-racionales">Exponentes racionales</a></li>
-  </ul></li>
-  <li><a href="#restricciones-de-las-expresiones" id="toc-restricciones-de-las-expresiones" class="nav-link" data-scroll-target="#restricciones-de-las-expresiones">Restricciones de las expresiones</a></li>
+  <li><a href="#inecuaciones-y-conjuntos-solución" id="toc-inecuaciones-y-conjuntos-solución" class="nav-link active" data-scroll-target="#inecuaciones-y-conjuntos-solución">Inecuaciones y conjuntos solución</a></li>
+  <li><a href="#propiedades-de-orden-y-equivalencia" id="toc-propiedades-de-orden-y-equivalencia" class="nav-link" data-scroll-target="#propiedades-de-orden-y-equivalencia">Propiedades de orden y equivalencia</a></li>
+  <li><a href="#el-valor-absoluto-como-distancia" id="toc-el-valor-absoluto-como-distancia" class="nav-link" data-scroll-target="#el-valor-absoluto-como-distancia">El valor absoluto como distancia</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-potencias-y-restricciones" id="toc-ejemplo-1.-potencias-y-restricciones" class="nav-link" data-scroll-target="#ejemplo-1.-potencias-y-restricciones">Ejemplo 1. Potencias y restricciones</a></li>
-  <li><a href="#ejemplo-2.-radicales-semejantes" id="toc-ejemplo-2.-radicales-semejantes" class="nav-link" data-scroll-target="#ejemplo-2.-radicales-semejantes">Ejemplo 2. Radicales semejantes</a></li>
-  <li><a href="#ejemplo-3.-valor-absoluto-en-una-raíz" id="toc-ejemplo-3.-valor-absoluto-en-una-raíz" class="nav-link" data-scroll-target="#ejemplo-3.-valor-absoluto-en-una-raíz">Ejemplo 3. Valor absoluto en una raíz</a></li>
-  <li><a href="#ejemplo-4.-contraejemplo-para-una-igualdad-falsa" id="toc-ejemplo-4.-contraejemplo-para-una-igualdad-falsa" class="nav-link" data-scroll-target="#ejemplo-4.-contraejemplo-para-una-igualdad-falsa">Ejemplo 4. Contraejemplo para una igualdad falsa</a></li>
+  <li><a href="#ejemplo-1.-incógnita-en-ambos-miembros" id="toc-ejemplo-1.-incógnita-en-ambos-miembros" class="nav-link" data-scroll-target="#ejemplo-1.-incógnita-en-ambos-miembros">Ejemplo 1. Incógnita en ambos miembros</a></li>
+  <li><a href="#ejemplo-2.-división-entre-una-constante-negativa" id="toc-ejemplo-2.-división-entre-una-constante-negativa" class="nav-link" data-scroll-target="#ejemplo-2.-división-entre-una-constante-negativa">Ejemplo 2. División entre una constante negativa</a></li>
+  <li><a href="#ejemplo-3.-denominadores-numéricos" id="toc-ejemplo-3.-denominadores-numéricos" class="nav-link" data-scroll-target="#ejemplo-3.-denominadores-numéricos">Ejemplo 3. Denominadores numéricos</a></li>
+  <li><a href="#ejemplo-4.-desigualdad-doble" id="toc-ejemplo-4.-desigualdad-doble" class="nav-link" data-scroll-target="#ejemplo-4.-desigualdad-doble">Ejemplo 4. Desigualdad doble</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -381,9 +371,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-12-sesion-03.html"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-17-sesion-06.html"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></h1>
 </div>
 
 
@@ -394,7 +384,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">12 de agosto de 2026</p>
+      <p class="date">17 de agosto de 2026</p>
     </div>
   </div>
   
@@ -406,74 +396,73 @@ window.Quarto = {
 </header>
 
 
-<section id="simplificación-y-equivalencia" class="level2">
-<h2 class="anchored" data-anchor-id="simplificación-y-equivalencia">Simplificación y equivalencia</h2>
-<p>Simplificar una expresión consiste en sustituirla por otra que tenga el mismo valor y sea más conveniente para efectuar cálculos o reconocer sus propiedades. Una expresión más corta no es necesariamente equivalente a la original: cada transformación debe respetar las operaciones y las restricciones bajo las cuales está definida.</p>
-<p>Dos expresiones son <strong>equivalentes en un conjunto</strong> <span class="math inline">\(D\)</span> si ambas están definidas y tienen el mismo valor para todo elemento de <span class="math inline">\(D\)</span>. El conjunto <span class="math inline">\(D\)</span> forma parte de la afirmación. Por ejemplo,</p>
+<section id="inecuaciones-y-conjuntos-solución" class="level2">
+<h2 class="anchored" data-anchor-id="inecuaciones-y-conjuntos-solución">Inecuaciones y conjuntos solución</h2>
+<p>Una <strong>desigualdad</strong> compara dos expresiones mediante alguno de los signos <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> o <span class="math inline">\(\ge\)</span>. Una <strong>inecuación</strong> es una desigualdad que contiene una incógnita. Una solución es un valor de la incógnita que hace verdadera la desigualdad, y el <strong>conjunto solución</strong> <span class="math inline">\(S\)</span> reúne todas las soluciones.</p>
+<p>En los casos no degenerados, una inecuación lineal tiene infinitas soluciones que forman una semirrecta. También puede tener como conjunto solución a <span class="math inline">\(\mathbb R\)</span> o a <span class="math inline">\(\varnothing\)</span>. Los conjuntos solución no vacíos se expresan mediante intervalos y se representan en la recta real.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Desigualdad</th>
+<th>Intervalo</th>
+<th>Representación en la recta real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x&lt;b\)</span></td>
+<td><span class="math inline">\((-\infty,\,b)\)</span></td>
+<td>Semirrecta hacia la izquierda de <span class="math inline">\(b\)</span>, con extremo abierto</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x\le b\)</span></td>
+<td><span class="math inline">\((-\infty,\,b]\)</span></td>
+<td>Semirrecta hacia la izquierda de <span class="math inline">\(b\)</span>, con extremo cerrado</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x&gt;a\)</span></td>
+<td><span class="math inline">\((a,\,\infty)\)</span></td>
+<td>Semirrecta hacia la derecha de <span class="math inline">\(a\)</span>, con extremo abierto</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x\ge a\)</span></td>
+<td><span class="math inline">\([a,\,\infty)\)</span></td>
+<td>Semirrecta hacia la derecha de <span class="math inline">\(a\)</span>, con extremo cerrado</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a&lt;x\le b\)</span></td>
+<td><span class="math inline">\((a,\,b]\)</span></td>
+<td>Segmento abierto en <span class="math inline">\(a\)</span> y cerrado en <span class="math inline">\(b\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>En la última fila se supone que <span class="math inline">\(a,b\in\mathbb R\)</span> y <span class="math inline">\(a&lt;b\)</span>. Un extremo abierto no pertenece al conjunto solución; un extremo cerrado sí. Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números, por lo que siempre se escriben junto a un paréntesis.</p>
+<p>Una inecuación lineal puede escribirse, después de simplificar, como</p>
 <p><span class="math display">\[
-5x+3x-2x=(5+3-2)x=6x
+ax+b&lt;cx+d,
+\qquad
+a,b,c,d\in\mathbb R.
 \]</span></p>
-<p>para todo <span class="math inline">\(x\in\mathbb R\)</span>. En cambio, la igualdad</p>
+<p>Al reunir términos se obtiene</p>
 <p><span class="math display">\[
-x^0=1
+(a-c)x&lt;d-b.
 \]</span></p>
-<p>solo es válida para <span class="math inline">\(x\ne0\)</span>. La expresión <span class="math inline">\(0^0\)</span> no se define en la aritmética real elemental.</p>
+<p>Si <span class="math inline">\(a-c\ne0\)</span>, se obtiene una semirrecta al dividir entre ese coeficiente. Si la incógnita desaparece, queda una proposición numérica: cuando es verdadera, <span class="math inline">\(S=\mathbb R\)</span>; cuando es falsa, <span class="math inline">\(S=\varnothing\)</span>, donde <span class="math inline">\(\varnothing\)</span> denota el conjunto vacío. El mismo criterio se aplica a los signos <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> y <span class="math inline">\(\ge\)</span>.</p>
 </section>
-<section id="jerarquía-de-operaciones" class="level2">
-<h2 class="anchored" data-anchor-id="jerarquía-de-operaciones">Jerarquía de operaciones</h2>
-<p>Cuando una expresión contiene varias operaciones, se procede en el siguiente orden:</p>
-<ol type="1">
-<li>signos de agrupación, desde los más internos;</li>
-<li>potencias y raíces;</li>
-<li>multiplicaciones y divisiones, de izquierda a derecha;</li>
-<li>sumas y restas, de izquierda a derecha.</li>
-</ol>
-<p>La barra de una fracción agrupa por separado todo el numerador y todo el denominador. La base de una potencia es la expresión sobre la que actúa el exponente. Un signo negativo colocado delante de una potencia queda fuera de la base, a menos que se incluya entre paréntesis:</p>
-<p><span class="math display">\[
--3^2=-(3^2)=-9,
-\qquad
-(-3)^2=9,
-\qquad
-(-3)^3=-27.
-\]</span></p>
-<p>En la primera expresión, el exponente afecta solamente al <span class="math inline">\(3\)</span>. En las otras dos, la base completa es <span class="math inline">\(-3\)</span>.</p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-2-3\left[4-(1+2)^2\right]+\frac{8}{2^2}
-\]</span></p>
-<p>se evalúa como</p>
-<p><span class="math display">\[
-2-3(4-9)+\frac84
-=2-3(-5)+2
-=19.
-\]</span></p>
-</section>
-<section id="potencias-de-exponente-entero" class="level2">
-<h2 class="anchored" data-anchor-id="potencias-de-exponente-entero">Potencias de exponente entero</h2>
-<p>Si <span class="math inline">\(n\)</span> es un entero positivo, la potencia <span class="math inline">\(a^n\)</span> representa el producto de <span class="math inline">\(n\)</span> factores iguales a <span class="math inline">\(a\)</span>:</p>
-<p><span class="math display">\[
-a^n=\underbrace{a\cdot a\cdots a}_{n\text{ factores}}.
-\]</span></p>
-<p>Para extender esta notación a los exponentes cero y negativos se define</p>
-<p><span class="math display">\[
-a^0=1,
-\qquad
-a^{-n}=\frac{1}{a^n},
-\qquad a\ne0.
-\]</span></p>
-<p>La definición del exponente cero es compatible con la ley del cociente. Si <span class="math inline">\(m\)</span> es un entero positivo y <span class="math inline">\(a\ne0\)</span>, entonces</p>
-<p><span class="math display">\[
-\frac{a^m}{a^m}=1
-\qquad\text{y}\qquad
-\frac{a^m}{a^m}=a^{m-m}=a^0.
-\]</span></p>
-<p>Un exponente negativo indica un recíproco; no convierte por sí mismo la potencia en un número negativo. Por ejemplo,</p>
-<p><span class="math display">\[
-2^{-3}=\frac1{2^3}=\frac18,
-\qquad
--2^3=-(2^3)=-8.
-\]</span></p>
-<p>Sean <span class="math inline">\(m,n\in\mathbb Z\)</span>. En cada una de las leyes siguientes se supone que todas las potencias involucradas están definidas:</p>
+<section id="propiedades-de-orden-y-equivalencia" class="level2">
+<h2 class="anchored" data-anchor-id="propiedades-de-orden-y-equivalencia">Propiedades de orden y equivalencia</h2>
+<p>Dos inecuaciones son <strong>equivalentes</strong> cuando tienen el mismo conjunto solución. Para <span class="math inline">\(u,v,c,k\in\mathbb R\)</span> se cumplen las siguientes propiedades:</p>
+<ul>
+<li>si <span class="math inline">\(u&lt;v\)</span>, entonces <span class="math inline">\(u+c&lt;v+c\)</span>;</li>
+<li>si <span class="math inline">\(u&lt;v\)</span> y <span class="math inline">\(k&gt;0\)</span>, entonces <span class="math inline">\(ku&lt;kv\)</span>;</li>
+<li>si <span class="math inline">\(u&lt;v\)</span> y <span class="math inline">\(k&lt;0\)</span>, entonces <span class="math inline">\(ku&gt;kv\)</span>.</li>
+</ul>
+<p>Las propiedades correspondientes son válidas para <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> y <span class="math inline">\(\ge\)</span>. Por tanto:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -481,92 +470,31 @@ a^{-n}=\frac{1}{a^n},
 </colgroup>
 <thead>
 <tr class="header">
-<th>Ley</th>
-<th>Condiciones</th>
+<th>Operación aplicada en ambos miembros</th>
+<th>Efecto sobre el signo de orden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(a^m a^n=a^{m+n}\)</span></td>
-<td>Todas las potencias involucradas deben estar definidas</td>
+<td>Sumar o restar una misma cantidad</td>
+<td>Se conserva</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\dfrac{a^m}{a^n}=a^{m-n}\)</span></td>
-<td><span class="math inline">\(a\ne0\)</span></td>
+<td>Multiplicar o dividir por una constante positiva</td>
+<td>Se conserva</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\((a^m)^n=a^{mn}\)</span></td>
-<td>Todas las potencias involucradas deben estar definidas</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\((ab)^n=a^n b^n\)</span></td>
-<td>Si <span class="math inline">\(n\le0\)</span>, <span class="math inline">\(a\ne0\)</span> y <span class="math inline">\(b\ne0\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\left(\dfrac ab\right)^n=\dfrac{a^n}{b^n}\)</span></td>
-<td><span class="math inline">\(b\ne0\)</span>; además, si <span class="math inline">\(n\le0\)</span>, <span class="math inline">\(a\ne0\)</span></td>
+<td>Multiplicar o dividir por una constante negativa</td>
+<td>Se invierte</td>
 </tr>
 </tbody>
 </table>
-<p>Para sumar o restar exponentes mediante las leyes del producto o del cociente, las bases deben ser iguales. Así,</p>
-<p><span class="math display">\[
-x^2x^5=x^7,
-\]</span></p>
-<p>pero la ley <span class="math inline">\(a^ma^n=a^{m+n}\)</span> no permite reducir <span class="math inline">\(x^2y^5\)</span> a una sola potencia cuando <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> son bases distintas.</p>
-<p>Un exponente exterior afecta a cada factor del producto. Después se aplica la ley de potencia de una potencia:</p>
-<p><span class="math display">\[
-(xy^2)^3=x^3(y^2)^3=x^3y^6,
-\]</span></p>
-<p>y, cuando hay un coeficiente,</p>
-<p><span class="math display">\[
-(3u^2v^{-1})^2=3^2(u^2)^2(v^{-1})^2
-=9u^4v^{-2}.
-\]</span></p>
-<p>Estas leyes se aplican a productos, cocientes y potencias de potencias. No existe una ley análoga que convierta una suma en una sola potencia. En general,</p>
-<p><span class="math display">\[
-a^m+a^n\ne a^{m+n}
-\qquad\text{y}\qquad
-(a+b)^n\ne a^n+b^n.
-\]</span></p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-(1+1)^2=4,
-\qquad
-1^2+1^2=2.
-\]</span></p>
-<section id="simplificación-de-un-producto-de-potencias" class="level3">
-<h3 class="anchored" data-anchor-id="simplificación-de-un-producto-de-potencias">Simplificación de un producto de potencias</h3>
-<p>Para <span class="math inline">\(x\ne0\)</span> y <span class="math inline">\(y\ne0\)</span>,</p>
-<p><span class="math display">\[
-(3x^{-2}y^3)(2x^5y^{-1})
-=6x^{-2+5}y^{3-1}
-=6x^3y^2.
-\]</span></p>
-<p>Aunque los exponentes negativos desaparecen del resultado, las restricciones <span class="math inline">\(x\ne0\)</span> y <span class="math inline">\(y\ne0\)</span> provienen de la expresión original y deben conservarse.</p>
+<p>La inversión del signo al multiplicar por un número negativo refleja el orden en la recta real: aunque <span class="math inline">\(2&lt;5\)</span>, se tiene <span class="math inline">\(-2&gt;-5\)</span>.</p>
+<p>Multiplicar por cero no conserva, en general, el conjunto solución, y dividir entre cero no está definido. Tampoco se debe multiplicar o dividir una inecuación por una expresión que contiene la incógnita sin haber establecido que no se anula y cuál es su signo en el dominio considerado, pues este puede variar y determinar si el signo de orden se conserva o se invierte.</p>
 </section>
-</section>
-<section id="raíces-n-ésimas" class="level2">
-<h2 class="anchored" data-anchor-id="raíces-n-ésimas">Raíces n-ésimas</h2>
-<p>Sea <span class="math inline">\(n\ge2\)</span> un número entero. La expresión <span class="math inline">\(\sqrt[n]{a}\)</span> representa la <strong>raíz n-ésima principal</strong> de <span class="math inline">\(a\)</span>.</p>
-<ul>
-<li>Si <span class="math inline">\(n\)</span> es par, se requiere <span class="math inline">\(a\ge0\)</span> y <span class="math inline">\(\sqrt[n]{a}\)</span> es el único número no negativo cuya potencia <span class="math inline">\(n\)</span>-ésima es <span class="math inline">\(a\)</span>.</li>
-<li>Si <span class="math inline">\(n\)</span> es impar, <span class="math inline">\(a\)</span> puede ser cualquier número real y <span class="math inline">\(\sqrt[n]{a}\)</span> es el único número real cuya potencia <span class="math inline">\(n\)</span>-ésima es <span class="math inline">\(a\)</span>.</li>
-</ul>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-\sqrt{25}=5,
-\qquad
-\sqrt[3]{-8}=-2.
-\]</span></p>
-<p>El símbolo <span class="math inline">\(\sqrt{25}\)</span> designa solamente la raíz cuadrada principal, que es <span class="math inline">\(5\)</span>. En cambio, la ecuación <span class="math inline">\(x^2=25\)</span> tiene las dos soluciones <span class="math inline">\(x=5\)</span> y <span class="math inline">\(x=-5\)</span>. Al aplicar la raíz cuadrada a ambos lados se obtiene</p>
-<p><span class="math display">\[
-\sqrt{x^2}=\sqrt{25}
-\quad\Longrightarrow\quad
-|x|=5
-\quad\Longrightarrow\quad
-x=\pm5.
-\]</span></p>
-<p>Para <span class="math inline">\(a\in\mathbb R\)</span>, el <strong>valor absoluto</strong> de <span class="math inline">\(a\)</span> se define por</p>
+<section id="el-valor-absoluto-como-distancia" class="level2">
+<h2 class="anchored" data-anchor-id="el-valor-absoluto-como-distancia">El valor absoluto como distancia</h2>
+<p>El valor absoluto de un número real <span class="math inline">\(a\)</span> se define por</p>
 <p><span class="math display">\[
 |a|=
 \begin{cases}
@@ -574,251 +502,140 @@ a, &amp; a\ge0,\\
 -a, &amp; a&lt;0.
 \end{cases}
 \]</span></p>
-<p>Geométricamente, <span class="math inline">\(|a|\)</span> es la distancia de <span class="math inline">\(a\)</span> al cero en la recta real.</p>
-<p>La paridad del índice determina la forma correcta de deshacer una potencia:</p>
+<p>Geométricamente, <span class="math inline">\(|a|\)</span> es la distancia entre <span class="math inline">\(a\)</span> y <span class="math inline">\(0\)</span>. En general,</p>
 <p><span class="math display">\[
-\sqrt[n]{a^n}=
-\begin{cases}
-|a|, &amp; n\text{ par},\\
-a, &amp; n\text{ impar}.
-\end{cases}
+|x-y|
 \]</span></p>
-<p>En particular,</p>
+<p>es la distancia entre <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> en la recta real. Por ejemplo,</p>
 <p><span class="math display">\[
-\sqrt{a^2}=|a|,
-\qquad
-\sqrt[3]{a^3}=a.
+|4-9|=|-5|=5=|9-4|.
 \]</span></p>
-<section id="productos-y-cocientes-de-radicales" class="level3">
-<h3 class="anchored" data-anchor-id="productos-y-cocientes-de-radicales">Productos y cocientes de radicales</h3>
-<p>Si <span class="math inline">\(n\)</span> es par y <span class="math inline">\(a,b\ge0\)</span>, entonces</p>
+<p>Para <span class="math inline">\(r&gt;0\)</span>, la condición <span class="math inline">\(|x-a|&lt;r\)</span> describe los números cuya distancia a <span class="math inline">\(a\)</span> es menor que <span class="math inline">\(r\)</span>:</p>
 <p><span class="math display">\[
-\sqrt[n]{ab}=\sqrt[n]{a}\sqrt[n]{b}.
+|x-a|&lt;r
+\quad\Longleftrightarrow\quad
+a-r&lt;x&lt;a+r.
 \]</span></p>
-<p>Para el cociente se requiere además <span class="math inline">\(b&gt;0\)</span>:</p>
+<p>Del mismo modo,</p>
 <p><span class="math display">\[
-\sqrt[n]{\frac ab}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}.
+|x-a|\le r
+\quad\Longleftrightarrow\quad
+a-r\le x\le a+r.
 \]</span></p>
-<p>Si <span class="math inline">\(n\)</span> es impar, las mismas identidades son válidas para <span class="math inline">\(a,b\in\mathbb R\)</span>, con <span class="math inline">\(b\ne0\)</span> en el cociente.</p>
-<p>Estas propiedades corresponden a productos y cocientes; no se distribuyen sobre sumas o restas. En general,</p>
-<p><span class="math display">\[
-\sqrt{a+b}\ne\sqrt a+\sqrt b.
-\]</span></p>
-</section>
-<section id="simplificación-de-radicales" class="level3">
-<h3 class="anchored" data-anchor-id="simplificación-de-radicales">Simplificación de radicales</h3>
-<p>Un radical se simplifica separando del radicando una potencia perfecta del mismo índice. Si <span class="math inline">\(a\)</span> es un entero positivo, puede escribirse</p>
-<p><span class="math display">\[
-a=s^2r,
-\]</span></p>
-<p>donde <span class="math inline">\(s\)</span> es un entero no negativo y <span class="math inline">\(r\)</span> no tiene factores cuadrados mayores que <span class="math inline">\(1\)</span>. Entonces</p>
-<p><span class="math display">\[
-\sqrt a=s\sqrt r.
-\]</span></p>
-<p>La factorización prima proporciona un procedimiento sistemático: se agrupan pares de factores iguales y se extrae un factor de cada par. Para una raíz <span class="math inline">\(n\)</span>-ésima se forman grupos de <span class="math inline">\(n\)</span> factores iguales.</p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-\sqrt{72}
-=\sqrt{2^3\cdot3^2}
-=\sqrt{(2\cdot3)^2\cdot2}
-=6\sqrt2,
-\]</span></p>
-<p>y</p>
-<p><span class="math display">\[
-\sqrt[3]{-54}
-=\sqrt[3]{(-27)\cdot2}
-=-3\sqrt[3]{2}.
-\]</span></p>
-<p>Cada radical se simplifica por separado. Solo después pueden combinarse los radicales semejantes, es decir, los que tienen el mismo índice y el mismo radicando reducido. Por ello,</p>
-<p><span class="math display">\[
-3\sqrt8-\sqrt{18}
-=3(2\sqrt2)-3\sqrt2
-=3\sqrt2.
-\]</span></p>
-</section>
-<section id="exponentes-racionales" class="level3">
-<h3 class="anchored" data-anchor-id="exponentes-racionales">Exponentes racionales</h3>
-<p>Sea <span class="math inline">\(p/q\)</span> un número racional no entero escrito en forma irreducible, con <span class="math inline">\(p\in\mathbb Z\)</span>, <span class="math inline">\(q\in\mathbb N\)</span> y <span class="math inline">\(q\ge2\)</span>. Se define</p>
-<p><span class="math display">\[
-a^{p/q}=\left(\sqrt[q]{a}\right)^p
-\]</span></p>
-<p>siempre que la raíz sea real. Cuando <span class="math inline">\(q\)</span> es par se requiere <span class="math inline">\(a\ge0\)</span>; cuando <span class="math inline">\(q\)</span> es impar, <span class="math inline">\(a\)</span> puede ser cualquier número real. Si <span class="math inline">\(p&lt;0\)</span>, también se exige <span class="math inline">\(a\ne0\)</span>.</p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-27^{2/3}=\left(\sqrt[3]{27}\right)^2=3^2=9,
-\]</span></p>
-<p>mientras que <span class="math inline">\((-16)^{1/2}\)</span> no es un número real.</p>
-</section>
-</section>
-<section id="restricciones-de-las-expresiones" class="level2">
-<h2 class="anchored" data-anchor-id="restricciones-de-las-expresiones">Restricciones de las expresiones</h2>
-<p>El <strong>dominio natural</strong> de una expresión algebraica es el conjunto de números reales para los cuales todas sus operaciones están definidas. Dos restricciones aparecen con especial frecuencia:</p>
-<ul>
-<li>ningún denominador puede ser cero;</li>
-<li>el radicando de una raíz de índice par debe ser no negativo.</li>
-</ul>
-<p>Si una raíz de índice par se encuentra en un denominador, su radicando debe ser estrictamente positivo.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Expresión</th>
-<th>Dominio natural</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(x^{-3}\)</span></td>
-<td><span class="math inline">\(x\ne0\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\sqrt{2x-1}\)</span></td>
-<td><span class="math inline">\(x\ge\dfrac12\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\dfrac{1}{\sqrt{2x-1}}\)</span></td>
-<td><span class="math inline">\(x&gt;\dfrac12\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\sqrt[3]{2x-1}\)</span></td>
-<td><span class="math inline">\(x\in\mathbb R\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Las siguientes igualdades muestran por qué las restricciones no deben separarse de una simplificación:</p>
-<p><span class="math display">\[
-x^2x^{-2}=1,
-\qquad x\ne0,
-\]</span></p>
-<p>y</p>
-<p><span class="math display">\[
-\sqrt{9(x-2)^2}=3|x-2|,
-\qquad x\in\mathbb R.
-\]</span></p>
-<p>En la primera igualdad, la expresión de la izquierda no está definida en <span class="math inline">\(x=0\)</span>, aunque la expresión final sí lo esté. En la segunda, el valor absoluto es indispensable cuando <span class="math inline">\(x&lt;2\)</span>.</p>
+<p>Así, <span class="math inline">\(|x-2|&lt;3\)</span> tiene como conjunto solución <span class="math inline">\((-1,\,5)\)</span>. La desigualdad debe acotar por ambos lados: conservar únicamente <span class="math inline">\(x-2&lt;3\)</span> admitiría valores cuya distancia a <span class="math inline">\(2\)</span> es mayor que <span class="math inline">\(3\)</span>.</p>
+<p>Una tolerancia puede expresarse con esta notación. Por ejemplo, <span class="math inline">\(|L-50|\le0.2\)</span> indica que la longitud <span class="math inline">\(L\)</span> difiere de <span class="math inline">\(50\)</span> en no más de <span class="math inline">\(0.2\)</span> unidades.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-potencias-y-restricciones" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-potencias-y-restricciones">Ejemplo 1. Potencias y restricciones</h3>
-<p>Simplifiquemos</p>
+<section id="ejemplo-1.-incógnita-en-ambos-miembros" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-incógnita-en-ambos-miembros">Ejemplo 1. Incógnita en ambos miembros</h3>
+<p>Resolver</p>
 <p><span class="math display">\[
-\frac{(a^2b^{-1})^3}{a^{-1}b^2}.
+3x-5&lt;7+x.
 \]</span></p>
-<p>La expresión original exige <span class="math inline">\(a\ne0\)</span> y <span class="math inline">\(b\ne0\)</span>. Aplicando las leyes de los exponentes,</p>
+<p>Se aplican operaciones equivalentes hasta aislar <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
-\frac{a^6b^{-3}}{a^{-1}b^2}
-=a^{6-(-1)}b^{-3-2}
-=a^7b^{-5}
-=\frac{a^7}{b^5}.
+\begin{aligned}
+3x-5 &amp;&lt; 7+x,\\
+2x-5 &amp;&lt; 7,\\
+2x &amp;&lt; 12,\\
+x &amp;&lt; 6.
+\end{aligned}
 \]</span></p>
-<p>Por tanto,</p>
+<p>En el último paso se dividió entre <span class="math inline">\(2&gt;0\)</span>, por lo que el signo se conservó. El conjunto solución es</p>
 <p><span class="math display">\[
-\frac{(a^2b^{-1})^3}{a^{-1}b^2}
-=\frac{a^7}{b^5},
-\qquad a\ne0,
-\quad b\ne0.
+S=(-\infty,\,6).
+\]</span></p>
+<p>El valor <span class="math inline">\(x=0\)</span> satisface la inecuación original, mientras que <span class="math inline">\(x=10\)</span> no la satisface. Estas sustituciones no demuestran el resultado, pero permiten detectar algunos errores de cálculo.</p>
+</section>
+<section id="ejemplo-2.-división-entre-una-constante-negativa" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-división-entre-una-constante-negativa">Ejemplo 2. División entre una constante negativa</h3>
+<p>Resolver</p>
+<p><span class="math display">\[
+4-2x\le10.
+\]</span></p>
+<p>Se obtiene</p>
+<p><span class="math display">\[
+\begin{aligned}
+4-2x &amp;\le 10,\\
+-2x &amp;\le 6,\\
+x &amp;\ge -3.
+\end{aligned}
+\]</span></p>
+<p>Al dividir entre <span class="math inline">\(-2&lt;0\)</span>, el signo se invirtió. Por tanto,</p>
+<p><span class="math display">\[
+S=[-3,\,\infty).
+\]</span></p>
+<p>También puede evitarse la división entre una constante negativa:</p>
+<p><span class="math display">\[
+4-2x\le10
+\quad\Longleftrightarrow\quad
+4\le10+2x
+\quad\Longleftrightarrow\quad
+-3\le x.
 \]</span></p>
 </section>
-<section id="ejemplo-2.-radicales-semejantes" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-radicales-semejantes">Ejemplo 2. Radicales semejantes</h3>
-<p>Para simplificar</p>
+<section id="ejemplo-3.-denominadores-numéricos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-denominadores-numéricos">Ejemplo 3. Denominadores numéricos</h3>
+<p>Resolver</p>
 <p><span class="math display">\[
-\sqrt{180}-2\sqrt{20}+\sqrt{45},
+\frac{x-1}{3}-\frac{x}{4}\ge1.
 \]</span></p>
-<p>extraemos los cuadrados perfectos:</p>
+<p>El mínimo común múltiplo de <span class="math inline">\(3\)</span> y <span class="math inline">\(4\)</span> es <span class="math inline">\(12\)</span>. Como <span class="math inline">\(12&gt;0\)</span>, al multiplicar todos los términos por esta cantidad el signo se conserva:</p>
 <p><span class="math display">\[
-\sqrt{180}=\sqrt{36\cdot5}=6\sqrt5,
-\qquad
-\sqrt{20}=\sqrt{4\cdot5}=2\sqrt5,
-\qquad
-\sqrt{45}=\sqrt{9\cdot5}=3\sqrt5.
+\begin{aligned}
+4(x-1)-3x &amp;\ge 12,\\
+x-4 &amp;\ge 12,\\
+x &amp;\ge 16.
+\end{aligned}
 \]</span></p>
 <p>Así,</p>
 <p><span class="math display">\[
-\sqrt{180}-2\sqrt{20}+\sqrt{45}
-=6\sqrt5-4\sqrt5+3\sqrt5
-=5\sqrt5.
+S=[16,\,\infty).
+\]</span></p>
+<p>El extremo pertenece al conjunto solución porque, para <span class="math inline">\(x=16\)</span>,</p>
+<p><span class="math display">\[
+\frac{16-1}{3}-\frac{16}{4}=1.
 \]</span></p>
 </section>
-<section id="ejemplo-3.-valor-absoluto-en-una-raíz" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-valor-absoluto-en-una-raíz">Ejemplo 3. Valor absoluto en una raíz</h3>
-<p>Para todo <span class="math inline">\(x\in\mathbb R\)</span>,</p>
+<section id="ejemplo-4.-desigualdad-doble" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-4.-desigualdad-doble">Ejemplo 4. Desigualdad doble</h3>
+<p>Resolver</p>
 <p><span class="math display">\[
-\sqrt{9(x-2)^2}
-=\sqrt9\sqrt{(x-2)^2}
-=3|x-2|.
+-3&lt;2x+1\le5.
 \]</span></p>
-<p>El resultado puede escribirse por casos:</p>
+<p>Las mismas operaciones deben aplicarse en los tres miembros:</p>
 <p><span class="math display">\[
-3|x-2|=
-\begin{cases}
-3(x-2), &amp; x\ge2,\\
-3(2-x), &amp; x&lt;2.
-\end{cases}
+\begin{aligned}
+-3 &amp;&lt; 2x+1\le 5,\\
+-4 &amp;&lt; 2x\le 4,\\
+-2 &amp;&lt; x\le 2.
+\end{aligned}
 \]</span></p>
-</section>
-<section id="ejemplo-4.-contraejemplo-para-una-igualdad-falsa" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-contraejemplo-para-una-igualdad-falsa">Ejemplo 4. Contraejemplo para una igualdad falsa</h3>
-<p>La igualdad</p>
+<p>Por tanto,</p>
 <p><span class="math display">\[
-\sqrt{a+b}=\sqrt a+\sqrt b
+S=(-2,\,2].
 \]</span></p>
-<p>no es una propiedad de los radicales. Por ejemplo, como <span class="math inline">\(20=16+4\)</span>,</p>
-<p><span class="math display">\[
-\sqrt{16+4}=\sqrt{20}=2\sqrt5,
-\qquad
-\sqrt{16}+\sqrt4=4+2=6.
-\]</span></p>
-<p>Como <span class="math inline">\(2\sqrt5\ne6\)</span>, este caso constituye un contraejemplo y demuestra que la igualdad no es válida en general.</p>
-<p>Un solo contraejemplo basta para refutar una identidad general. En cambio, comprobar que una igualdad se cumple para uno o varios valores particulares no demuestra que sea válida en general.</p>
+<p>El extremo <span class="math inline">\(2\)</span> está incluido porque <span class="math inline">\(2(2)+1=5\)</span>; el extremo <span class="math inline">\(-2\)</span> está excluido porque <span class="math inline">\(2(-2)+1=-3\)</span> no satisface la desigualdad estricta <span class="math inline">\(-3&lt;2x+1\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>Confundir <span class="math inline">\(-a^n\)</span> con <span class="math inline">\((-a)^n\)</span>.</li>
-<li>Interpretar un exponente negativo como un signo negativo: <span class="math inline">\(a^{-n}=\dfrac1{a^n}\)</span>, no <span class="math inline">\(-a^n\)</span>.</li>
-<li>Sumar exponentes cuando las potencias se están sumando: <span class="math inline">\(a^m+a^n\)</span> no se reduce a <span class="math inline">\(a^{m+n}\)</span>.</li>
-<li>Olvidar elevar todos los factores: <span class="math inline">\((2x^3)^2=4x^6\)</span>, no <span class="math inline">\(2x^6\)</span>.</li>
-<li>Escribir <span class="math inline">\(\sqrt{a^2}=a\)</span> sin considerar que <span class="math inline">\(a\)</span> puede ser negativo; la identidad correcta es <span class="math inline">\(\sqrt{a^2}=|a|\)</span>.</li>
-<li>Distribuir una raíz sobre una suma o una resta.</li>
-<li>Omitir las restricciones de la expresión original después de simplificarla.</li>
+<li><strong>No invertir el signo al dividir entre una constante negativa.</strong> De <span class="math inline">\(-2x&lt;6\)</span> se obtiene <span class="math inline">\(x&gt;-3\)</span>, no <span class="math inline">\(x&lt;-3\)</span>.</li>
+<li><strong>Invertir el signo al sumar o restar.</strong> De <span class="math inline">\(x+5&lt;8\)</span> se obtiene <span class="math inline">\(x&lt;3\)</span>; sumar o restar conserva el orden.</li>
+<li><strong>Descuidar los extremos.</strong> La solución de <span class="math inline">\(x\ge-3\)</span> es <span class="math inline">\([-3,\,\infty)\)</span>, mientras que la de <span class="math inline">\(x&gt;-3\)</span> es <span class="math inline">\((-3,\,\infty)\)</span>.</li>
+<li><strong>Confundir la frontera con el conjunto solución.</strong> En <span class="math inline">\(2x&lt;10\)</span>, el número <span class="math inline">\(5\)</span> es la frontera y no pertenece a <span class="math inline">\(S=(-\infty,\,5)\)</span>.</li>
+<li><strong>Resolver una desigualdad con valor absoluto por un solo lado.</strong> La condición <span class="math inline">\(|x-a|&lt;r\)</span> exige simultáneamente <span class="math inline">\(a-r&lt;x\)</span> y <span class="math inline">\(x&lt;a+r\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
+<p>Resuelva los siguientes ejercicios.</p>
 <ol type="1">
-<li><p>Evalúe respetando la jerarquía de operaciones:</p>
-<ol type="a">
-<li><span class="math inline">\(-2^4+(-2)^3+3^0\)</span>.<br>
-</li>
-<li><span class="math inline">\(18\div3\cdot2-(5-7)^2\)</span>.</li>
-</ol></li>
-<li><p>Simplifique y escriba el resultado con exponentes positivos. Indique las restricciones de la expresión original:</p>
-<p><span class="math display">\[
-\frac{(2x^3y^{-2})^2}{x^{-1}y^3}.
-\]</span></p></li>
-<li><p>Simplifique:</p>
-<ol type="a">
-<li><span class="math inline">\(\sqrt{48}+\sqrt{75}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt[3]{54x^3}\)</span>.</li>
-</ol></li>
-<li><p>Determine el dominio natural de cada expresión:</p>
-<ol type="a">
-<li><span class="math inline">\(\sqrt{5-2x}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\dfrac1{\sqrt{x+4}}\)</span>.</li>
-</ol></li>
-<li><p>Determine cuáles igualdades son falsas y corríjalas cuando exista una identidad general que las sustituya:</p>
-<ol type="a">
-<li><span class="math inline">\((u^3)^2=u^5\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt{t^2}=t\)</span>.<br>
-</li>
-<li><span class="math inline">\(r^{-4}=-r^4\)</span>.</li>
-</ol></li>
+<li>Resuelva <span class="math inline">\(4-3(2x-1)\ge2(x+5)\)</span>; exprese el conjunto solución como intervalo y represéntelo en la recta real.</li>
+<li>Construya una inecuación lineal cuyo conjunto solución sea <span class="math inline">\([-2,\,\infty)\)</span>. Resuélvala para verificar su propuesta y describa su representación en la recta real.</li>
+<li>Un procedimiento propone que, de <span class="math inline">\(6-2x&lt;18\)</span>, se obtiene <span class="math inline">\(x&lt;-6\)</span>. Identifique el error, corrija la solución y compruebe con un valor concreto que el resultado corregido es coherente.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -832,65 +649,42 @@ x^2x^{-2}=1,
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Se obtiene</p>
+<p><strong>1.</strong> Al desarrollar y reunir términos se obtiene</p>
 <p><span class="math display">\[
--2^4+(-2)^3+3^0
-=-(2^4)+(-2)(-2)(-2)+1
-=-16-8+1
-=-23,
+\begin{aligned}
+4-3(2x-1)&amp;\ge2(x+5),\\
+7-6x&amp;\ge2x+10,\\
+-8x&amp;\ge3,\\
+x&amp;\le-\frac38.
+\end{aligned}
 \]</span></p>
-<p>y, al efectuar multiplicación y división de izquierda a derecha,</p>
+<p>En el último paso se dividió entre <span class="math inline">\(-8&lt;0\)</span>, por lo que el signo se invirtió. Así,</p>
 <p><span class="math display">\[
-18\div3\cdot2-(5-7)^2=6\cdot2-4=8.
-\]</span></p></li>
-<li><p>El exponente exterior afecta al coeficiente y a cada factor del numerador. Se tiene</p>
-<p><span class="math display">\[
-\frac{(2x^3y^{-2})^2}{x^{-1}y^3}
-=\frac{4x^6y^{-4}}{x^{-1}y^3}
-=4x^7y^{-7}
-=\frac{4x^7}{y^7},
+S=\left(-\infty,\,-\frac38\right].
 \]</span></p>
-<p>con <span class="math inline">\(x\ne0\)</span> y <span class="math inline">\(y\ne0\)</span>.</p></li>
-<li><p>Para el primer inciso, las factorizaciones</p>
+<p>En la recta real se representa con extremo cerrado en <span class="math inline">\(-\dfrac38\)</span> y una semirrecta hacia la izquierda.</p>
+<p><strong>2.</strong> Hay distintas respuestas posibles. Por ejemplo,</p>
 <p><span class="math display">\[
-48=2^4\cdot3=16\cdot3,
-\qquad
-75=5^2\cdot3=25\cdot3
+2x+4\ge0
 \]</span></p>
-<p>exhiben los mayores factores cuadrados perfectos que pueden extraerse. Por tanto,</p>
+<p>tiene como solución</p>
 <p><span class="math display">\[
-\sqrt{48}+\sqrt{75}
-=4\sqrt3+5\sqrt3
-=9\sqrt3,
+2x\ge-4
+\quad\Longleftrightarrow\quad
+x\ge-2,
+\qquad
+S=[-2,\,\infty).
 \]</span></p>
-<p>y</p>
+<p>En la recta real se representa con extremo cerrado en <span class="math inline">\(-2\)</span> y una semirrecta hacia la derecha.</p>
+<p><strong>3.</strong> El error consiste en no invertir el signo al dividir entre <span class="math inline">\(-2\)</span>. El procedimiento correcto es</p>
 <p><span class="math display">\[
-\sqrt[3]{54x^3}
-=\sqrt[3]{27\cdot2\cdot x^3}
-=3x\sqrt[3]{2}.
-\]</span></p></li>
-<li><p>Las condiciones son</p>
-<p><span class="math display">\[
-5-2x\ge0,
-\qquad
-x+4&gt;0,
+6-2x&lt;18
+\quad\Longleftrightarrow\quad
+-2x&lt;12
+\quad\Longleftrightarrow\quad
+x&gt;-6.
 \]</span></p>
-<p>respectivamente. Por tanto, los dominios son</p>
-<p><span class="math display">\[
-\left(-\infty,\frac52\right],
-\qquad
-(-4,\infty).
-\]</span></p></li>
-<li><p>Las tres igualdades son falsas en general. Se corrigen como</p>
-<p><span class="math display">\[
-(u^3)^2=u^6,
-\qquad
-\sqrt{t^2}=|t|,
-\qquad
-r^{-4}=\frac1{r^4}\quad(r\ne0).
-\]</span></p></li>
-</ol>
+<p>Así, <span class="math inline">\(S=(-6,\,\infty)\)</span>. El valor <span class="math inline">\(x=0\)</span> satisface la inecuación original y pertenece a este intervalo. En cambio, <span class="math inline">\(x=-10\)</span> pertenece al conjunto incorrecto <span class="math inline">\((-\infty,\,-6)\)</span>, pero no satisface la inecuación original.</p>
 </div>
 </div>
 </div>
@@ -898,65 +692,14 @@ r^{-4}=\frac1{r^4}\quad(r\ne0).
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Evalúe:</p>
-<ol type="a">
-<li><span class="math inline">\(4-2(3-5)^2+\dfrac{18}{3^2}\)</span>.<br>
-</li>
-<li><span class="math inline">\((-3)^2-3^2\)</span>.<br>
-</li>
-<li><span class="math inline">\(5-[2-3(1-4)]\)</span>.</li>
-</ol></li>
-<li><p>Simplifique y escriba el resultado con exponentes positivos. Conserve las restricciones necesarias:</p>
-<ol type="a">
-<li><span class="math inline">\((2x^{-3}y^2)^2\)</span>.<br>
-</li>
-<li><span class="math inline">\(\dfrac{a^4b^{-2}}{a^{-1}b^3}\)</span>.<br>
-</li>
-<li><span class="math inline">\((m^2n^{-1})^{-2}\)</span>.</li>
-</ol></li>
-<li><p>Simplifique:</p>
-<ol type="a">
-<li><span class="math inline">\(\sqrt{98}-\sqrt8\)</span>.<br>
-</li>
-<li><span class="math inline">\(2\sqrt{12}+\sqrt{27}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt[3]{128}\)</span>.</li>
-</ol></li>
-<li><p>Calcule, cuando el resultado sea un número real:</p>
-<p><span class="math display">\[
-81^{3/4},
-\qquad
-32^{2/5},
-\qquad
-(-27)^{2/3},
-\qquad
-16^{-1/2}.
-\]</span></p></li>
-<li><p>Determine el dominio natural de cada expresión:</p>
-<p><span class="math display">\[
-\sqrt{3x+6},
-\qquad
-\frac1{\sqrt{7-x}},
-\qquad
-(x-1)^{-2}.
-\]</span></p></li>
-<li><p>Determine si cada igualdad es válida para todos los valores reales para los cuales ambos lados están definidos. Si es falsa, proporcione un contraejemplo.</p>
-<ol type="a">
-<li><span class="math inline">\(a^2a^3=a^6\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt{a^2+b^2}=a+b\)</span>.<br>
-</li>
-<li><span class="math inline">\((ab)^{-2}=a^{-2}b^{-2}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt[3]{x^3}=x\)</span>.</li>
-</ol></li>
-<li><p>Determine el mayor subconjunto de <span class="math inline">\(\mathbb R\)</span> en el que son equivalentes las expresiones de cada par:</p>
-<ol type="a">
-<li><span class="math inline">\(x^2x^{-2}\)</span> y <span class="math inline">\(1\)</span>.<br>
-</li>
-<li><span class="math inline">\(\sqrt{9(x-2)^2}\)</span> y <span class="math inline">\(3(x-2)\)</span>.</li>
-</ol></li>
-<li><p>Simplifique <span class="math inline">\(\sqrt{16(x+1)^2}\)</span> y escriba el resultado por casos.</p></li>
+<li>Resuelva <span class="math inline">\(2x+9&lt;3\)</span> y represente el conjunto solución en la recta real.</li>
+<li>Resuelva <span class="math inline">\(4-x\ge9\)</span>.</li>
+<li>Resuelva <span class="math inline">\(\dfrac{2x+1}{5}\le\dfrac{x-2}{2}\)</span>.</li>
+<li>Resuelva <span class="math inline">\(-7&lt;3x-1\le8\)</span> y exprese el conjunto solución como intervalo.</li>
+<li>Escriba una inecuación lineal cuyo conjunto solución sea exactamente <span class="math inline">\([4,\,\infty)\)</span> y compruebe su propuesta.</li>
+<li>Resuelva <span class="math inline">\(3(x+2)&lt;3x+1\)</span> y <span class="math inline">\(2(x+1)\ge2x-5\)</span>. Explique por qué en un caso el conjunto solución es vacío y en el otro es <span class="math inline">\(\mathbb R\)</span>.</li>
+<li>Exprese la condición «la distancia de <span class="math inline">\(x\)</span> a <span class="math inline">\(5\)</span> es menor que <span class="math inline">\(2\)</span>» mediante valor absoluto y determine el intervalo correspondiente.</li>
+<li>Una longitud <span class="math inline">\(L\)</span>, medida en milímetros, es admisible cuando <span class="math inline">\(|L-50|\le0.2\)</span>. Exprese esta condición como un intervalo e interprete sus extremos.</li>
 </ol>
 
 
@@ -1372,13 +1115,13 @@ r^{-4}=\frac1{r^4}\quad(r\ne0).
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-11-sesion-02.html" class="pagination-link" aria-label="Sesión 02. Números reales: clasificación, orden e intervalos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 02. Números reales: clasificación, orden e intervalos</span></span>
+      <a href="../sesiones/2026-08-14-sesion-05.html" class="pagination-link" aria-label="Sesión 05. Ecuaciones lineales y despeje de fórmulas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-13-sesion-04.html" class="pagination-link" aria-label="Sesión 04. Productos notables, factorización y fracciones algebraicas">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

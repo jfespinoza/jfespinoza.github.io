@@ -886,6 +886,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-17-sesion-06.html",
+    "href": "sesiones/2026-08-17-sesion-06.html",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "",
+    "text": "Inecuaciones y conjuntos solución\nUna desigualdad compara dos expresiones mediante alguno de los signos \\(&lt;\\), \\(\\le\\), \\(&gt;\\) o \\(\\ge\\). Una inecuación es una desigualdad que contiene una incógnita. Una solución es un valor de la incógnita que hace verdadera la desigualdad, y el conjunto solución \\(S\\) reúne todas las soluciones.\nEn los casos no degenerados, una inecuación lineal tiene infinitas soluciones que forman una semirrecta. También puede tener como conjunto solución a \\(\\mathbb R\\) o a \\(\\varnothing\\). Los conjuntos solución no vacíos se expresan mediante intervalos y se representan en la recta real.\nEn la última fila se supone que \\(a,b\\in\\mathbb R\\) y \\(a&lt;b\\). Un extremo abierto no pertenece al conjunto solución; un extremo cerrado sí. Los símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números, por lo que siempre se escriben junto a un paréntesis.\nUna inecuación lineal puede escribirse, después de simplificar, como\n\\[\nax+b&lt;cx+d,\n\\qquad\na,b,c,d\\in\\mathbb R.\n\\]\nAl reunir términos se obtiene\n\\[\n(a-c)x&lt;d-b.\n\\]\nSi \\(a-c\\ne0\\), se obtiene una semirrecta al dividir entre ese coeficiente. Si la incógnita desaparece, queda una proposición numérica: cuando es verdadera, \\(S=\\mathbb R\\); cuando es falsa, \\(S=\\varnothing\\), donde \\(\\varnothing\\) denota el conjunto vacío. El mismo criterio se aplica a los signos \\(\\le\\), \\(&gt;\\) y \\(\\ge\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#inecuaciones-y-conjuntos-solución",
+    "href": "sesiones/2026-08-17-sesion-06.html#inecuaciones-y-conjuntos-solución",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "",
+    "text": "Desigualdad\nIntervalo\nRepresentación en la recta real\n\n\n\n\n\\(x&lt;b\\)\n\\((-\\infty,\\,b)\\)\nSemirrecta hacia la izquierda de \\(b\\), con extremo abierto\n\n\n\\(x\\le b\\)\n\\((-\\infty,\\,b]\\)\nSemirrecta hacia la izquierda de \\(b\\), con extremo cerrado\n\n\n\\(x&gt;a\\)\n\\((a,\\,\\infty)\\)\nSemirrecta hacia la derecha de \\(a\\), con extremo abierto\n\n\n\\(x\\ge a\\)\n\\([a,\\,\\infty)\\)\nSemirrecta hacia la derecha de \\(a\\), con extremo cerrado\n\n\n\\(a&lt;x\\le b\\)\n\\((a,\\,b]\\)\nSegmento abierto en \\(a\\) y cerrado en \\(b\\)",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#propiedades-de-orden-y-equivalencia",
+    "href": "sesiones/2026-08-17-sesion-06.html#propiedades-de-orden-y-equivalencia",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "Propiedades de orden y equivalencia",
+    "text": "Propiedades de orden y equivalencia\nDos inecuaciones son equivalentes cuando tienen el mismo conjunto solución. Para \\(u,v,c,k\\in\\mathbb R\\) se cumplen las siguientes propiedades:\n\nsi \\(u&lt;v\\), entonces \\(u+c&lt;v+c\\);\nsi \\(u&lt;v\\) y \\(k&gt;0\\), entonces \\(ku&lt;kv\\);\nsi \\(u&lt;v\\) y \\(k&lt;0\\), entonces \\(ku&gt;kv\\).\n\nLas propiedades correspondientes son válidas para \\(\\le\\), \\(&gt;\\) y \\(\\ge\\). Por tanto:\n\n\n\n\n\n\n\nOperación aplicada en ambos miembros\nEfecto sobre el signo de orden\n\n\n\n\nSumar o restar una misma cantidad\nSe conserva\n\n\nMultiplicar o dividir por una constante positiva\nSe conserva\n\n\nMultiplicar o dividir por una constante negativa\nSe invierte\n\n\n\nLa inversión del signo al multiplicar por un número negativo refleja el orden en la recta real: aunque \\(2&lt;5\\), se tiene \\(-2&gt;-5\\).\nMultiplicar por cero no conserva, en general, el conjunto solución, y dividir entre cero no está definido. Tampoco se debe multiplicar o dividir una inecuación por una expresión que contiene la incógnita sin haber establecido que no se anula y cuál es su signo en el dominio considerado, pues este puede variar y determinar si el signo de orden se conserva o se invierte.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#el-valor-absoluto-como-distancia",
+    "href": "sesiones/2026-08-17-sesion-06.html#el-valor-absoluto-como-distancia",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "El valor absoluto como distancia",
+    "text": "El valor absoluto como distancia\nEl valor absoluto de un número real \\(a\\) se define por\n\\[\n|a|=\n\\begin{cases}\na, & a\\ge0,\\\\\n-a, & a&lt;0.\n\\end{cases}\n\\]\nGeométricamente, \\(|a|\\) es la distancia entre \\(a\\) y \\(0\\). En general,\n\\[\n|x-y|\n\\]\nes la distancia entre \\(x\\) y \\(y\\) en la recta real. Por ejemplo,\n\\[\n|4-9|=|-5|=5=|9-4|.\n\\]\nPara \\(r&gt;0\\), la condición \\(|x-a|&lt;r\\) describe los números cuya distancia a \\(a\\) es menor que \\(r\\):\n\\[\n|x-a|&lt;r\n\\quad\\Longleftrightarrow\\quad\na-r&lt;x&lt;a+r.\n\\]\nDel mismo modo,\n\\[\n|x-a|\\le r\n\\quad\\Longleftrightarrow\\quad\na-r\\le x\\le a+r.\n\\]\nAsí, \\(|x-2|&lt;3\\) tiene como conjunto solución \\((-1,\\,5)\\). La desigualdad debe acotar por ambos lados: conservar únicamente \\(x-2&lt;3\\) admitiría valores cuya distancia a \\(2\\) es mayor que \\(3\\).\nUna tolerancia puede expresarse con esta notación. Por ejemplo, \\(|L-50|\\le0.2\\) indica que la longitud \\(L\\) difiere de \\(50\\) en no más de \\(0.2\\) unidades.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#ejemplos",
+    "href": "sesiones/2026-08-17-sesion-06.html#ejemplos",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Incógnita en ambos miembros\nResolver\n\\[\n3x-5&lt;7+x.\n\\]\nSe aplican operaciones equivalentes hasta aislar \\(x\\):\n\\[\n\\begin{aligned}\n3x-5 &&lt; 7+x,\\\\\n2x-5 &&lt; 7,\\\\\n2x &&lt; 12,\\\\\nx &&lt; 6.\n\\end{aligned}\n\\]\nEn el último paso se dividió entre \\(2&gt;0\\), por lo que el signo se conservó. El conjunto solución es\n\\[\nS=(-\\infty,\\,6).\n\\]\nEl valor \\(x=0\\) satisface la inecuación original, mientras que \\(x=10\\) no la satisface. Estas sustituciones no demuestran el resultado, pero permiten detectar algunos errores de cálculo.\n\n\nEjemplo 2. División entre una constante negativa\nResolver\n\\[\n4-2x\\le10.\n\\]\nSe obtiene\n\\[\n\\begin{aligned}\n4-2x &\\le 10,\\\\\n-2x &\\le 6,\\\\\nx &\\ge -3.\n\\end{aligned}\n\\]\nAl dividir entre \\(-2&lt;0\\), el signo se invirtió. Por tanto,\n\\[\nS=[-3,\\,\\infty).\n\\]\nTambién puede evitarse la división entre una constante negativa:\n\\[\n4-2x\\le10\n\\quad\\Longleftrightarrow\\quad\n4\\le10+2x\n\\quad\\Longleftrightarrow\\quad\n-3\\le x.\n\\]\n\n\nEjemplo 3. Denominadores numéricos\nResolver\n\\[\n\\frac{x-1}{3}-\\frac{x}{4}\\ge1.\n\\]\nEl mínimo común múltiplo de \\(3\\) y \\(4\\) es \\(12\\). Como \\(12&gt;0\\), al multiplicar todos los términos por esta cantidad el signo se conserva:\n\\[\n\\begin{aligned}\n4(x-1)-3x &\\ge 12,\\\\\nx-4 &\\ge 12,\\\\\nx &\\ge 16.\n\\end{aligned}\n\\]\nAsí,\n\\[\nS=[16,\\,\\infty).\n\\]\nEl extremo pertenece al conjunto solución porque, para \\(x=16\\),\n\\[\n\\frac{16-1}{3}-\\frac{16}{4}=1.\n\\]\n\n\nEjemplo 4. Desigualdad doble\nResolver\n\\[\n-3&lt;2x+1\\le5.\n\\]\nLas mismas operaciones deben aplicarse en los tres miembros:\n\\[\n\\begin{aligned}\n-3 &&lt; 2x+1\\le 5,\\\\\n-4 &&lt; 2x\\le 4,\\\\\n-2 &&lt; x\\le 2.\n\\end{aligned}\n\\]\nPor tanto,\n\\[\nS=(-2,\\,2].\n\\]\nEl extremo \\(2\\) está incluido porque \\(2(2)+1=5\\); el extremo \\(-2\\) está excluido porque \\(2(-2)+1=-3\\) no satisface la desigualdad estricta \\(-3&lt;2x+1\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#errores-frecuentes",
+    "href": "sesiones/2026-08-17-sesion-06.html#errores-frecuentes",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nNo invertir el signo al dividir entre una constante negativa. De \\(-2x&lt;6\\) se obtiene \\(x&gt;-3\\), no \\(x&lt;-3\\).\nInvertir el signo al sumar o restar. De \\(x+5&lt;8\\) se obtiene \\(x&lt;3\\); sumar o restar conserva el orden.\nDescuidar los extremos. La solución de \\(x\\ge-3\\) es \\([-3,\\,\\infty)\\), mientras que la de \\(x&gt;-3\\) es \\((-3,\\,\\infty)\\).\nConfundir la frontera con el conjunto solución. En \\(2x&lt;10\\), el número \\(5\\) es la frontera y no pertenece a \\(S=(-\\infty,\\,5)\\).\nResolver una desigualdad con valor absoluto por un solo lado. La condición \\(|x-a|&lt;r\\) exige simultáneamente \\(a-r&lt;x\\) y \\(x&lt;a+r\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#actividad",
+    "href": "sesiones/2026-08-17-sesion-06.html#actividad",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva los siguientes ejercicios.\n\nResuelva \\(4-3(2x-1)\\ge2(x+5)\\); exprese el conjunto solución como intervalo y represéntelo en la recta real.\nConstruya una inecuación lineal cuyo conjunto solución sea \\([-2,\\,\\infty)\\). Resuélvala para verificar su propuesta y describa su representación en la recta real.\nUn procedimiento propone que, de \\(6-2x&lt;18\\), se obtiene \\(x&lt;-6\\). Identifique el error, corrija la solución y compruebe con un valor concreto que el resultado corregido es coherente.\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Al desarrollar y reunir términos se obtiene\n\\[\n\\begin{aligned}\n4-3(2x-1)&\\ge2(x+5),\\\\\n7-6x&\\ge2x+10,\\\\\n-8x&\\ge3,\\\\\nx&\\le-\\frac38.\n\\end{aligned}\n\\]\nEn el último paso se dividió entre \\(-8&lt;0\\), por lo que el signo se invirtió. Así,\n\\[\nS=\\left(-\\infty,\\,-\\frac38\\right].\n\\]\nEn la recta real se representa con extremo cerrado en \\(-\\dfrac38\\) y una semirrecta hacia la izquierda.\n2. Hay distintas respuestas posibles. Por ejemplo,\n\\[\n2x+4\\ge0\n\\]\ntiene como solución\n\\[\n2x\\ge-4\n\\quad\\Longleftrightarrow\\quad\nx\\ge-2,\n\\qquad\nS=[-2,\\,\\infty).\n\\]\nEn la recta real se representa con extremo cerrado en \\(-2\\) y una semirrecta hacia la derecha.\n3. El error consiste en no invertir el signo al dividir entre \\(-2\\). El procedimiento correcto es\n\\[\n6-2x&lt;18\n\\quad\\Longleftrightarrow\\quad\n-2x&lt;12\n\\quad\\Longleftrightarrow\\quad\nx&gt;-6.\n\\]\nAsí, \\(S=(-6,\\,\\infty)\\). El valor \\(x=0\\) satisface la inecuación original y pertenece a este intervalo. En cambio, \\(x=-10\\) pertenece al conjunto incorrecto \\((-\\infty,\\,-6)\\), pero no satisface la inecuación original.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-17-sesion-06.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-17-sesion-06.html#ejercicios-para-practicar",
+    "title": "Sesión 06. Inecuaciones lineales y valor absoluto como distancia",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nResuelva \\(2x+9&lt;3\\) y represente el conjunto solución en la recta real.\nResuelva \\(4-x\\ge9\\).\nResuelva \\(\\dfrac{2x+1}{5}\\le\\dfrac{x-2}{2}\\).\nResuelva \\(-7&lt;3x-1\\le8\\) y exprese el conjunto solución como intervalo.\nEscriba una inecuación lineal cuyo conjunto solución sea exactamente \\([4,\\,\\infty)\\) y compruebe su propuesta.\nResuelva \\(3(x+2)&lt;3x+1\\) y \\(2(x+1)\\ge2x-5\\). Explique por qué en un caso el conjunto solución es vacío y en el otro es \\(\\mathbb R\\).\nExprese la condición «la distancia de \\(x\\) a \\(5\\) es menor que \\(2\\)» mediante valor absoluto y determine el intervalo correspondiente.\nUna longitud \\(L\\), medida en milímetros, es admisible cuando \\(|L-50|\\le0.2\\). Exprese esta condición como un intervalo e interprete sus extremos.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -893,7 +981,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -904,7 +992,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -915,7 +1003,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -926,7 +1014,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -937,7 +1025,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -948,7 +1036,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -959,7 +1047,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -970,7 +1058,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -981,7 +1069,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -992,7 +1080,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1003,7 +1091,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1014,7 +1102,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1025,7 +1113,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1036,7 +1124,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(|a|\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real.\n\n\n\\(\\sqrt[n]{a}\\)\nRaíz real \\(n\\)-ésima de \\(a\\); si \\(n\\) es par, designa la raíz no negativa.\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1047,7 +1135,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1058,7 +1146,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1069,7 +1157,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1080,7 +1168,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
