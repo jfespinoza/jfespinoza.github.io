@@ -98,6 +98,19 @@ $$
 
 Así, $|x-2|<3$ tiene como conjunto solución $(-1,\,5)$. La desigualdad debe acotar por ambos lados: conservar únicamente $x-2<3$ admitiría valores cuya distancia a $2$ es mayor que $3$.
 
+La misma equivalencia permite resolver una expresión lineal dentro del valor absoluto. Por ejemplo,
+
+$$
+\begin{aligned}
+|2x+7|\le9
+&\quad\Longleftrightarrow\quad -9\le2x+7\le9,\\
+&\quad\Longleftrightarrow\quad -16\le2x\le2,\\
+&\quad\Longleftrightarrow\quad -8\le x\le1.
+\end{aligned}
+$$
+
+Por tanto, el conjunto solución es $S=[-8,\,1]$.
+
 Una tolerancia puede expresarse con esta notación. Por ejemplo, $|L-50|\le0.2$ indica que la longitud $L$ difiere de $50$ en no más de $0.2$ unidades.
 
 ## Ejemplos
