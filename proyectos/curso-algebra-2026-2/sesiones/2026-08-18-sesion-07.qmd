@@ -58,7 +58,7 @@ $$
 \operatorname{Im}(z)=b.
 $$
 
-La parte imaginaria de $z$ es $b$, no $bi$. La escritura $a+bi$ se denomina **forma cartesiana**. Se simplifica la notación escribiendo, por ejemplo, $2+i$ en lugar de $2+1i$, $3-2i$ en lugar de $3+(-2)i$, $bi$ en lugar de $0+bi$ y $a$ en lugar de $a+0i$.
+La parte imaginaria de $z$ es $b$, no $bi$. La escritura $a+bi$ se denomina **forma cartesiana**. Se simplifica la notación escribiendo, por ejemplo, $2+i$ en lugar de $2+1i$, $3-2i$ en lugar de $3+(-2)i$, $bi$ en lugar de $0+bi$ y $a$ en lugar de $a+0i$. En particular, $i=0+1i$ y $-i=0+(-1)i$.
 
 Dos casos particulares son:
 
@@ -95,7 +95,7 @@ Antes de operar con un radical de radicando negativo debe convertirse a la forma
 
 ## El plano complejo
 
-Así como cada número real corresponde a un punto de la recta real, estudiada en la Sesión 02, el número $z=a+bi$ se representa mediante el punto $(a,b)$ del plano. El eje horizontal es el **eje real** y el eje vertical es el **eje imaginario**. El origen representa al número $0$.
+Así como cada número real corresponde a un punto de la recta real, estudiada en la Sesión 02, el número $z=a+bi$ se representa mediante el punto $(a,b)$ del plano. Esta correspondencia se escribe $a+bi\longleftrightarrow(a,b)$ y puede leerse en ambos sentidos: el punto $(a,b)$ representa al número $a+bi$. El eje horizontal es el **eje real** y el eje vertical es el **eje imaginario**. El origen representa al número $0$.
 
 Esta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:
 
@@ -122,6 +122,14 @@ En el plano, $-z$ es el punto simétrico de $z$ respecto del origen. La resta se
 $$
 (a+bi)-(c+di)=(a-c)+(b-d)i.
 $$
+
+Bajo la correspondencia entre números complejos y puntos del plano, estas operaciones se expresan como
+
+$$
+(a,b)\pm(c,d)=(a\pm c,\,b\pm d).
+$$
+
+Al identificar cada punto $(a,b)$ con su vector de posición, la suma y la resta de números complejos en forma cartesiana se realizan componente a componente.
 
 Estas definiciones extienden la suma y la resta de números reales. Si el origen y los puntos que representan a $z$ y $w$ no son colineales, los puntos que representan a $0$, $z$, $w$ y $z+w$ son los vértices de un paralelogramo; el punto correspondiente a $z+w$ es el vértice opuesto al origen.
 
