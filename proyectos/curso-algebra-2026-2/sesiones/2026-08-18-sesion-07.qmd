@@ -65,7 +65,7 @@ Dos casos particulares son:
 - si $b=0$, entonces $z=a$ es real; por ello $\mathbb R\subseteq\mathbb C$;
 - si $a=0$ y $b\ne0$, entonces $z=bi$ es un **imaginario puro**.
 
-La cadena de inclusiones queda
+La cadena de inclusiones estudiada en la Sesión 02 se extiende a
 
 $$
 \mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
@@ -79,40 +79,29 @@ a+bi=c+di
 a=c\ \text{ y }\ b=d.
 $$
 
-Para $d>0$, las soluciones de $x^2=-d$ son
+Para $d>0$, las soluciones en $\mathbb C$ de $x^2=-d$ son
 
 $$
 x=\pm\bigl(\sqrt d\bigr)i.
 $$
 
-La raíz cuadrada principal se denotará mediante la convención
+Se adoptará la convención
 
 $$
 \sqrt{-d}=\bigl(\sqrt d\bigr)i.
 $$
 
-Antes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales establecidas para radicandos no negativos no se aplican directamente.
+Antes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales estudiadas en la Sesión 03 para radicandos no negativos no se aplican directamente.
 
 ## El plano complejo
 
-El número $z=a+bi$ se representa mediante el punto $(a,b)$ del plano. El eje horizontal es el **eje real** y el eje vertical es el **eje imaginario**. El origen representa al número $0$.
+Así como cada número real corresponde a un punto de la recta real, estudiada en la Sesión 02, el número $z=a+bi$ se representa mediante el punto $(a,b)$ del plano. El eje horizontal es el **eje real** y el eje vertical es el **eje imaginario**. El origen representa al número $0$.
 
 Esta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:
 
 - los números reales se encuentran sobre el eje real;
 - los imaginarios puros se encuentran sobre el eje imaginario;
 - dos números complejos son iguales exactamente cuando corresponden al mismo punto.
-
-### Ejemplo 1. Ubicación en el plano
-
-| Número | Parte real | Parte imaginaria | Punto |
-|---|---:|---:|---|
-| $3+2i$ | $3$ | $2$ | $(3,2)$ |
-| $-4+i$ | $-4$ | $1$ | $(-4,1)$ |
-| $-2i$ | $0$ | $-2$ | $(0,-2)$ |
-| $-3$ | $-3$ | $0$ | $(-3,0)$ |
-
-Así, $-2i$ se ubica sobre el eje imaginario y $-3$ sobre el eje real.
 
 ## Suma y resta
 
@@ -134,7 +123,22 @@ $$
 (a+bi)-(c+di)=(a-c)+(b-d)i.
 $$
 
-Estas definiciones extienden la suma y la resta de números reales. Geométricamente, la suma corresponde a la regla del paralelogramo aplicada a los vectores de posición asociados con $(a,b)$ y $(c,d)$.
+Estas definiciones extienden la suma y la resta de números reales. Si el origen y los puntos que representan a $z$ y $w$ no son colineales, los puntos que representan a $0$, $z$, $w$ y $z+w$ son los vértices de un paralelogramo; el punto correspondiente a $z+w$ es el vértice opuesto al origen.
+
+## Ejemplos
+
+### Ejemplo 1. Ubicación en el plano
+
+Ubicar los números $3+2i$, $-4+i$, $-2i$ y $-3$ en el plano complejo e identificar sus partes real e imaginaria.
+
+| Número | Parte real | Parte imaginaria | Punto |
+|---|---:|---:|---|
+| $3+2i$ | $3$ | $2$ | $(3,2)$ |
+| $-4+i$ | $-4$ | $1$ | $(-4,1)$ |
+| $-2i$ | $0$ | $-2$ | $(0,-2)$ |
+| $-3$ | $-3$ | $0$ | $(-3,0)$ |
+
+Los dos primeros números se representan fuera de los ejes. El número $-2i$ se ubica sobre el eje imaginario y $-3$ sobre el eje real.
 
 ### Ejemplo 2. Igualdad de números complejos
 
@@ -144,7 +148,7 @@ $$
 (2x-1)+(y+3)i=5-2i.
 $$
 
-La igualdad de las partes reales y de las partes imaginarias produce
+La igualdad de las partes reales y de las partes imaginarias produce dos ecuaciones lineales, del tipo estudiado en la Sesión 05:
 
 $$
 2x-1=5
@@ -178,17 +182,37 @@ $$
 (z-w)+w=(5-5i)+(-1+2i)=4-3i=z.
 $$
 
+### Ejemplo 4. Las expresiones del problema de Cardano
+
+Con la convención para radicales de radicando negativo, los números de la referencia histórica se escriben en forma cartesiana como
+
+$$
+5+\bigl(\sqrt{15}\bigr)i
+\qquad\text{y}\qquad
+5-\bigl(\sqrt{15}\bigr)i.
+$$
+
+Su suma es
+
+$$
+\Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
++\Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
+=10,
+$$
+
+pues las partes imaginarias son opuestas y se cancelan.
+
 ## Errores frecuentes
 
-- **Mezclar partes reales e imaginarias.** Se tiene $(3+2i)+(1+4i)=4+6i$.
+- **Mezclar partes reales e imaginarias.** Se tiene $(3+2i)+(1+4i)=4+6i$, no $10$ ni $10i$.
 - **Confundir la parte imaginaria con el término imaginario.** En $5-7i$, la parte imaginaria es el número real $-7$.
-- **Distribuir la resta solo a una componente.** Se tiene $(5+2i)-(3+4i)=2-2i$.
+- **Distribuir la resta solo a una componente.** Se tiene $(5+2i)-(3+4i)=2-2i$, no $2+2i$.
 - **Aplicar sin hipótesis las leyes de los radicales.** El cálculo $\sqrt{-1}\sqrt{-1}=\sqrt{(-1)(-1)}=1$ es inválido. Al escribir $\sqrt{-1}=i$, se obtiene $i^2=-1$.
 - **Intercambiar las coordenadas.** El número $4i$ corresponde a $(0,4)$, mientras que $(4,0)$ corresponde al número real $4$.
 
 ## Actividad
 
-Resuelva los siguientes ejercicios.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
 
 1. Los puntos $P=(-2,4)$ y $Q=(5,-1)$ representan los números complejos $z$ y $w$, respectivamente. Escriba $z$ y $w$ en forma cartesiana, calcule $z+w$ y represente el resultado.
 2. En el cálculo
@@ -227,7 +251,7 @@ $$
 \end{aligned}
 $$
 
-El resultado se representa mediante el punto $(6,-4)$. El procedimiento propuesto trató incorrectamente la parte real $-4$ y no distribuyó el signo de la resta.
+El resultado se representa mediante el punto $(6,-4)$. El procedimiento propuesto sumó el segundo número en lugar de restarlo: no cambió los signos de sus dos componentes.
 
 **3.** Al sumar a ambos miembros el opuesto de $-3+2i$,
 
