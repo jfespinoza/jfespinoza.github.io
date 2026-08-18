@@ -361,6 +361,8 @@ window.Quarto = {
   <li><a href="#elementos-y-conjuntos" id="toc-elementos-y-conjuntos" class="nav-link" data-scroll-target="#elementos-y-conjuntos">Elementos y conjuntos</a></li>
   <li><a href="#operaciones-y-relaciones" id="toc-operaciones-y-relaciones" class="nav-link" data-scroll-target="#operaciones-y-relaciones">Operaciones y relaciones</a></li>
   <li><a href="#intervalos" id="toc-intervalos" class="nav-link" data-scroll-target="#intervalos">Intervalos</a></li>
+  <li><a href="#números-complejos" id="toc-números-complejos" class="nav-link" data-scroll-target="#números-complejos">Números complejos</a></li>
+  <li><a href="#letras-de-uso-frecuente" id="toc-letras-de-uso-frecuente" class="nav-link" data-scroll-target="#letras-de-uso-frecuente">Letras de uso frecuente</a></li>
   </ul>
 </nav>
     </div>
@@ -438,28 +440,44 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
+<td><span class="math inline">\(\{a_1,a_2,\ldots\}\)</span></td>
+<td>Conjunto descrito por extensión, mediante la enumeración de sus elementos.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\{x\in A:P(x)\}\)</span></td>
+<td>Conjunto descrito por comprensión: elementos <span class="math inline">\(x\)</span> de <span class="math inline">\(A\)</span> que satisfacen la condición <span class="math inline">\(P(x)\)</span>; los dos puntos se leen «tal que».</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\varnothing\)</span></td>
+<td>Conjunto vacío; no contiene elementos.</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(x\in A\)</span></td>
 <td><span class="math inline">\(x\)</span> pertenece a <span class="math inline">\(A\)</span>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(x\notin A\)</span></td>
 <td><span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(A\)</span>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(A\subseteq B\)</span></td>
 <td><span class="math inline">\(A\)</span> es subconjunto de <span class="math inline">\(B\)</span>; todos los elementos de <span class="math inline">\(A\)</span> pertenecen a <span class="math inline">\(B\)</span>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(A\nsubseteq B\)</span></td>
 <td><span class="math inline">\(A\)</span> no es subconjunto de <span class="math inline">\(B\)</span>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(A\subsetneq B\)</span></td>
 <td><span class="math inline">\(A\)</span> es subconjunto propio de <span class="math inline">\(B\)</span>: <span class="math inline">\(A\subseteq B\)</span> y <span class="math inline">\(A\ne B\)</span>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(A\supseteq B\)</span></td>
 <td><span class="math inline">\(A\)</span> contiene a <span class="math inline">\(B\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A\cap B\)</span></td>
+<td>Intersección de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>: elementos que pertenecen a ambos conjuntos.</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(A\setminus B\)</span></td>
@@ -483,22 +501,50 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(|a|\)</span></td>
-<td>Valor absoluto de <span class="math inline">\(a\)</span>; distancia de <span class="math inline">\(a\)</span> al cero en la recta real.</td>
+<td><span class="math inline">\(a&lt;b\)</span>, <span class="math inline">\(a\le b\)</span>, <span class="math inline">\(a&gt;b\)</span>, <span class="math inline">\(a\ge b\)</span></td>
+<td>Relaciones de orden en <span class="math inline">\(\mathbb R\)</span>: menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\ne b\)</span></td>
+<td><span class="math inline">\(a\)</span> es distinto de <span class="math inline">\(b\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a^n\)</span></td>
+<td>Potencia de base <span class="math inline">\(a\)</span> y exponente <span class="math inline">\(n\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a^0\)</span>, <span class="math inline">\(a^{-n}\)</span></td>
+<td>Si <span class="math inline">\(a\ne0\)</span> y <span class="math inline">\(n\)</span> es un entero positivo, <span class="math inline">\(a^0=1\)</span> y <span class="math inline">\(a^{-n}=\dfrac{1}{a^n}\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\lvert a\rvert\)</span></td>
+<td>Valor absoluto de <span class="math inline">\(a\)</span>; distancia de <span class="math inline">\(a\)</span> al cero en la recta real. En general, <span class="math inline">\(\lvert x-y\rvert\)</span> es la distancia entre <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\sqrt[n]{a}\)</span></td>
-<td>Raíz real <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(a\)</span>; si <span class="math inline">\(n\)</span> es par, designa la raíz no negativa.</td>
+<td>En <span class="math inline">\(\mathbb R\)</span>, para <span class="math inline">\(n\ge2\)</span> entero, denota la raíz <span class="math inline">\(n\)</span>-ésima principal de <span class="math inline">\(a\)</span>. Si <span class="math inline">\(n\)</span> es par, requiere <span class="math inline">\(a\ge0\)</span> y denota la raíz no negativa; si <span class="math inline">\(n\)</span> es impar, está definida para todo <span class="math inline">\(a\in\mathbb R\)</span>.</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\Rightarrow\)</span></td>
-<td>Implica.</td>
+<td><span class="math inline">\(a^{p/q}\)</span></td>
+<td>Si <span class="math inline">\(p/q\)</span> está en forma irreducible y <span class="math inline">\(q\ge2\)</span>, entonces <span class="math inline">\(a^{p/q}=\bigl(\sqrt[q]{a}\bigr)^p\)</span> cuando la raíz real está definida; si <span class="math inline">\(p&lt;0\)</span>, además se requiere <span class="math inline">\(a\ne0\)</span>.</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\Leftrightarrow\)</span></td>
-<td>Equivale lógicamente a; implica en ambos sentidos.</td>
+<td><span class="math inline">\(a\pm b\)</span></td>
+<td>Abrevia las dos expresiones <span class="math inline">\(a+b\)</span> y <span class="math inline">\(a-b\)</span>.</td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\(0.1\overline{3}\)</span></td>
+<td>La barra señala el período, es decir, el bloque de cifras que se repite: <span class="math inline">\(0.1\overline{3}=0.1333\ldots\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Rightarrow\)</span>, <span class="math inline">\(\Longrightarrow\)</span></td>
+<td>Implica.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Leftrightarrow\)</span>, <span class="math inline">\(\Longleftrightarrow\)</span></td>
+<td>Equivale lógicamente a; implica en ambos sentidos.</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(\therefore\)</span></td>
 <td>Por lo tanto.</td>
 </tr>
@@ -548,9 +594,76 @@ window.Quarto = {
 <td><span class="math inline">\([a,\infty)\)</span></td>
 <td><span class="math inline">\(\{x\in\mathbb R:x\ge a\}\)</span></td>
 </tr>
+<tr class="odd">
+<td><span class="math inline">\((-\infty,\infty)\)</span></td>
+<td><span class="math inline">\(\mathbb R\)</span>; toda la recta real.</td>
+</tr>
 </tbody>
 </table>
 <p>Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.</p>
+</section>
+<section id="números-complejos" class="level2">
+<h2 class="anchored" data-anchor-id="números-complejos">Números complejos</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Lectura o uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(i\)</span></td>
+<td>Unidad imaginaria: <span class="math inline">\(i^2=-1\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(z=a+bi\)</span></td>
+<td>Forma cartesiana de un número complejo, con <span class="math inline">\(a,b\in\mathbb R\)</span>; corresponde al punto <span class="math inline">\((a,b)\)</span> del plano complejo. En este contexto, <span class="math inline">\((a,b)\)</span> es un par ordenado, no un intervalo.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\operatorname{Re}(z)\)</span></td>
+<td>Parte real de <span class="math inline">\(z=a+bi\)</span>: <span class="math inline">\(\operatorname{Re}(z)=a\)</span>.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\operatorname{Im}(z)\)</span></td>
+<td>Parte imaginaria de <span class="math inline">\(z=a+bi\)</span>: <span class="math inline">\(\operatorname{Im}(z)=b\)</span>. Es el número real <span class="math inline">\(b\)</span>, no <span class="math inline">\(bi\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\sqrt{-d}\)</span></td>
+<td>Para <span class="math inline">\(d&gt;0\)</span>, en este curso se adopta la convención <span class="math inline">\(\sqrt{-d}=(\sqrt d)i\)</span>. Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="letras-de-uso-frecuente" class="level2">
+<h2 class="anchored" data-anchor-id="letras-de-uso-frecuente">Letras de uso frecuente</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Uso en este curso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(D\)</span></td>
+<td>Dominio o conjunto de valores considerado, según se declare en el contexto.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S\)</span></td>
+<td>Conjunto solución de la ecuación o inecuación considerada.</td>
+</tr>
+</tbody>
+</table>
+<p>Cuando <span class="math inline">\(S\)</span> denota un conjunto solución, <span class="math inline">\(S=\varnothing\)</span> indica que no hay soluciones, mientras que <span class="math inline">\(S=\{0\}\)</span> indica que el cero es la única solución.</p>
 
 
 </section>
