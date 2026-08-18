@@ -974,6 +974,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-18-sesion-07.html",
+    "href": "sesiones/2026-08-18-sesion-07.html",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "",
+    "text": "De los números reales a los complejos\nLa ampliación de un conjunto numérico permite resolver ecuaciones que no tienen solución en el conjunto anterior. Por ejemplo:\nLa última ecuación no tiene solución real porque \\(x^2\\ge0\\) para todo \\(x\\in\\mathbb R\\). Para resolverla se introduce un número \\(i\\), llamado unidad imaginaria, que cumple\n\\[\ni^2=-1.\n\\]\nSu opuesto \\(-i\\) también cumple la misma propiedad. Por tanto, \\(i\\) y \\(-i\\) satisfacen \\(x^2+1=0\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#de-los-números-reales-a-los-complejos",
+    "href": "sesiones/2026-08-18-sesion-07.html#de-los-números-reales-a-los-complejos",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "",
+    "text": "Ecuación\nNo tiene solución en\nTiene solución en\n\n\n\n\n\\(x+5=2\\)\n\\(\\mathbb N\\)\n\\(\\mathbb Z\\): \\(x=-3\\)\n\n\n\\(3x=2\\)\n\\(\\mathbb Z\\)\n\\(\\mathbb Q\\): \\(x=\\dfrac23\\)\n\n\n\\(x^2=2\\)\n\\(\\mathbb Q\\)\n\\(\\mathbb R\\): \\(x=\\pm\\sqrt2\\)\n\n\n\\(x^2+1=0\\)\n\\(\\mathbb R\\)\n\\(\\mathbb C\\): \\(x=\\pm i\\)",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#una-referencia-histórica",
+    "href": "sesiones/2026-08-18-sesion-07.html#una-referencia-histórica",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Una referencia histórica",
+    "text": "Una referencia histórica\nEn 1545, Girolamo Cardano estudió el problema de encontrar dos números cuya suma fuera \\(10\\) y cuyo producto fuera \\(40\\). El cálculo conduce a\n\\[\n5+\\sqrt{-15}\n\\qquad\\text{y}\\qquad\n5-\\sqrt{-15}.\n\\]\nEn el estudio de ciertas ecuaciones cúbicas, expresiones de este tipo aparecen en pasos intermedios aun cuando las soluciones buscadas sean reales. En 1572, Rafael Bombelli estableció reglas coherentes para operar con ellas. Este trabajo fue decisivo para la aceptación operativa de los números complejos, cuya formalización y representación geométrica se desarrollaron posteriormente.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#forma-cartesiana",
+    "href": "sesiones/2026-08-18-sesion-07.html#forma-cartesiana",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Forma cartesiana",
+    "text": "Forma cartesiana\nUn número complejo se escribe en la forma\n\\[\nz=a+bi,\n\\qquad a,b\\in\\mathbb R.\n\\]\nEl conjunto de los números complejos es\n\\[\n\\mathbb C=\\{a+bi:a,b\\in\\mathbb R\\}.\n\\]\nEn \\(z=a+bi\\), el número real \\(a\\) es la parte real y el número real \\(b\\) es la parte imaginaria:\n\\[\n\\operatorname{Re}(z)=a,\n\\qquad\n\\operatorname{Im}(z)=b.\n\\]\nLa parte imaginaria de \\(z\\) es \\(b\\), no \\(bi\\). La escritura \\(a+bi\\) se denomina forma cartesiana. Se simplifica la notación escribiendo, por ejemplo, \\(2+i\\) en lugar de \\(2+1i\\), \\(3-2i\\) en lugar de \\(3+(-2)i\\), \\(bi\\) en lugar de \\(0+bi\\) y \\(a\\) en lugar de \\(a+0i\\).\nDos casos particulares son:\n\nsi \\(b=0\\), entonces \\(z=a\\) es real; por ello \\(\\mathbb R\\subseteq\\mathbb C\\);\nsi \\(a=0\\) y \\(b\\ne0\\), entonces \\(z=bi\\) es un imaginario puro.\n\nLa cadena de inclusiones queda\n\\[\n\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R\\subseteq\\mathbb C.\n\\]\nDos números complejos son iguales si coinciden sus partes reales y sus partes imaginarias:\n\\[\na+bi=c+di\n\\quad\\Longleftrightarrow\\quad\na=c\\ \\text{ y }\\ b=d.\n\\]\nPara \\(d&gt;0\\), las soluciones de \\(x^2=-d\\) son\n\\[\nx=\\pm\\bigl(\\sqrt d\\bigr)i.\n\\]\nLa raíz cuadrada principal se denotará mediante la convención\n\\[\n\\sqrt{-d}=\\bigl(\\sqrt d\\bigr)i.\n\\]\nAntes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales establecidas para radicandos no negativos no se aplican directamente.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#el-plano-complejo",
+    "href": "sesiones/2026-08-18-sesion-07.html#el-plano-complejo",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "El plano complejo",
+    "text": "El plano complejo\nEl número \\(z=a+bi\\) se representa mediante el punto \\((a,b)\\) del plano. El eje horizontal es el eje real y el eje vertical es el eje imaginario. El origen representa al número \\(0\\).\nEsta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:\n\nlos números reales se encuentran sobre el eje real;\nlos imaginarios puros se encuentran sobre el eje imaginario;\ndos números complejos son iguales exactamente cuando corresponden al mismo punto.\n\n\nEjemplo 1. Ubicación en el plano\n\n\n\nNúmero\nParte real\nParte imaginaria\nPunto\n\n\n\n\n\\(3+2i\\)\n\\(3\\)\n\\(2\\)\n\\((3,2)\\)\n\n\n\\(-4+i\\)\n\\(-4\\)\n\\(1\\)\n\\((-4,1)\\)\n\n\n\\(-2i\\)\n\\(0\\)\n\\(-2\\)\n\\((0,-2)\\)\n\n\n\\(-3\\)\n\\(-3\\)\n\\(0\\)\n\\((-3,0)\\)\n\n\n\nAsí, \\(-2i\\) se ubica sobre el eje imaginario y \\(-3\\) sobre el eje real.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#suma-y-resta",
+    "href": "sesiones/2026-08-18-sesion-07.html#suma-y-resta",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Suma y resta",
+    "text": "Suma y resta\nLa suma se realiza componente a componente:\n\\[\n(a+bi)+(c+di)=(a+c)+(b+d)i.\n\\]\nEl opuesto de \\(z=a+bi\\) es\n\\[\n-z=-a-bi.\n\\]\nEn el plano, \\(-z\\) es el punto simétrico de \\(z\\) respecto del origen. La resta se define como la suma del opuesto:\n\\[\n(a+bi)-(c+di)=(a-c)+(b-d)i.\n\\]\nEstas definiciones extienden la suma y la resta de números reales. Geométricamente, la suma corresponde a la regla del paralelogramo aplicada a los vectores de posición asociados con \\((a,b)\\) y \\((c,d)\\).\n\nEjemplo 2. Igualdad de números complejos\nDeterminar los números reales \\(x\\) y \\(y\\) tales que\n\\[\n(2x-1)+(y+3)i=5-2i.\n\\]\nLa igualdad de las partes reales y de las partes imaginarias produce\n\\[\n2x-1=5\n\\qquad\\text{y}\\qquad\ny+3=-2.\n\\]\nPor tanto, \\(x=3\\) y \\(y=-5\\). La sustitución verifica que\n\\[\n(2\\cdot3-1)+(-5+3)i=5-2i.\n\\]\n\n\nEjemplo 3. Suma y resta\nSean \\(z=4-3i\\) y \\(w=-1+2i\\). Entonces\n\\[\nz+w=(4-1)+(-3+2)i=3-i\n\\]\ny\n\\[\nz-w=(4-(-1))+(-3-2)i=5-5i.\n\\]\nEl signo de la resta afecta a las dos componentes de \\(w\\). La comprobación se obtiene al sumar de nuevo \\(w\\):\n\\[\n(z-w)+w=(5-5i)+(-1+2i)=4-3i=z.\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#errores-frecuentes",
+    "href": "sesiones/2026-08-18-sesion-07.html#errores-frecuentes",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nMezclar partes reales e imaginarias. Se tiene \\((3+2i)+(1+4i)=4+6i\\).\nConfundir la parte imaginaria con el término imaginario. En \\(5-7i\\), la parte imaginaria es el número real \\(-7\\).\nDistribuir la resta solo a una componente. Se tiene \\((5+2i)-(3+4i)=2-2i\\).\nAplicar sin hipótesis las leyes de los radicales. El cálculo \\(\\sqrt{-1}\\sqrt{-1}=\\sqrt{(-1)(-1)}=1\\) es inválido. Al escribir \\(\\sqrt{-1}=i\\), se obtiene \\(i^2=-1\\).\nIntercambiar las coordenadas. El número \\(4i\\) corresponde a \\((0,4)\\), mientras que \\((4,0)\\) corresponde al número real \\(4\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#actividad",
+    "href": "sesiones/2026-08-18-sesion-07.html#actividad",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva los siguientes ejercicios.\n\nLos puntos \\(P=(-2,4)\\) y \\(Q=(5,-1)\\) representan los números complejos \\(z\\) y \\(w\\), respectivamente. Escriba \\(z\\) y \\(w\\) en forma cartesiana, calcule \\(z+w\\) y represente el resultado.\nEn el cálculo\n\\[\n(2-3i)-(-4+i)=(2-4)+(-3+1)i=-2-2i\n\\]\nidentifique el error, obtenga el resultado correcto y ubíquelo en el plano complejo.\nDetermine el número complejo \\(z\\) que satisface\n\\[\nz+(-3+2i)=4-i.\n\\]\nRepresente \\(z\\) y verifique el resultado mediante una suma.\nProponga dos números complejos no reales cuya suma sea \\(6\\). Represente ambos números y su suma. ¿Qué condiciones deben cumplir sus partes reales e imaginarias?\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Del punto \\(P=(-2,4)\\) se obtiene \\(z=-2+4i\\), y de \\(Q=(5,-1)\\) se obtiene \\(w=5-i\\). Por tanto,\n\\[\nz+w=(-2+5)+(4-1)i=3+3i.\n\\]\nLa suma corresponde al punto \\((3,3)\\).\n2. En la resta se cambian los signos de las dos componentes del segundo número. Por tanto,\n\\[\n\\begin{aligned}\n(2-3i)-(-4+i)\n&=(2-(-4))+(-3-1)i\\\\\n&=6-4i.\n\\end{aligned}\n\\]\nEl resultado se representa mediante el punto \\((6,-4)\\). El procedimiento propuesto trató incorrectamente la parte real \\(-4\\) y no distribuyó el signo de la resta.\n3. Al sumar a ambos miembros el opuesto de \\(-3+2i\\),\n\\[\nz=(4-i)-(-3+2i)=7-3i.\n\\]\nEl número corresponde al punto \\((7,-3)\\). La verificación es\n\\[\n(7-3i)+(-3+2i)=4-i.\n\\]\n4. Si los números son \\(a+bi\\) y \\(c+di\\), entonces su suma es \\(6\\) exactamente cuando\n\\[\na+c=6\n\\qquad\\text{y}\\qquad\nb+d=0.\n\\]\nAdemás, para que ambos sean no reales se requiere \\(b\\ne0\\) y \\(d\\ne0\\). Por ejemplo,\n\\[\n(2+i)+(4-i)=6.\n\\]\nLos puntos \\((2,1)\\) y \\((4,-1)\\) representan los sumandos, y \\((6,0)\\) representa la suma.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-18-sesion-07.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-18-sesion-07.html#ejercicios-para-practicar",
+    "title": "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nUbique en el plano complejo \\(1+4i\\), \\(-3-3i\\), \\(-5i\\) y \\(2\\), e indique sus partes real e imaginaria.\nEscriba el número complejo con parte real \\(-2\\) y parte imaginaria \\(3\\). Determine su opuesto y represente ambos.\nCalcule \\((7-2i)+(-3+6i)\\) y \\((7-2i)-(-3+6i)\\).\nDetermine los números reales \\(x\\) y \\(y\\) tales que \\((3x+1)+(2y-5)i=10-9i\\).\nEncuentre \\(w\\in\\mathbb C\\) tal que \\((4-7i)+w=1+2i\\).\nExprese \\(6+\\sqrt{-25}\\) y \\(6-\\sqrt{-25}\\) en la forma cartesiana y calcule su suma.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -981,7 +1080,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -992,7 +1091,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1003,7 +1102,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1014,7 +1113,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1025,7 +1124,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1036,7 +1135,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1047,7 +1146,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1058,7 +1157,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1069,7 +1168,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1080,7 +1179,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1091,7 +1190,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1102,7 +1201,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1113,7 +1212,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1124,7 +1223,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(|a|\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real.\n\n\n\\(\\sqrt[n]{a}\\)\nRaíz real \\(n\\)-ésima de \\(a\\); si \\(n\\) es par, designa la raíz no negativa.\n\n\n\\(\\Rightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1135,7 +1234,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1146,7 +1245,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1157,7 +1256,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1168,7 +1267,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]

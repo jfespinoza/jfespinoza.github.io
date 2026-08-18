@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Productos notables, métodos elementales de factorización, fracciones algebraicas y restricciones de dominio.">
+<meta name="description" content="Unidad imaginaria, forma cartesiana, igualdad, plano complejo y suma y resta de números complejos.">
 
-<title>Sesión 04. Productos notables, factorización y fracciones algebraicas – Álgebra</title>
+<title>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-14-sesion-05.html" rel="next">
-<link href="../sesiones/2026-08-12-sesion-03.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-17-sesion-06.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 04. Productos notables, factorización y fracciones algebraicas – Álgebra">
-<meta property="og:description" content="Productos notables, métodos elementales de factorización, fracciones algebraicas y restricciones de dominio.">
+<meta property="og:title" content="Sesión 07. Números complejos: forma cartesiana, plano, suma y resta – Álgebra">
+<meta property="og:description" content="Unidad imaginaria, forma cartesiana, igualdad, plano complejo y suma y resta de números complejos.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-13-sesion-04.html"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-18-sesion-07.html"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -226,7 +226,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
+  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -241,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
   </div>
 </li>
       </ul>
@@ -357,18 +357,17 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#productos-notables" id="toc-productos-notables" class="nav-link active" data-scroll-target="#productos-notables">Productos notables</a></li>
-  <li><a href="#factorización" id="toc-factorización" class="nav-link" data-scroll-target="#factorización">Factorización</a>
+  <li><a href="#de-los-números-reales-a-los-complejos" id="toc-de-los-números-reales-a-los-complejos" class="nav-link active" data-scroll-target="#de-los-números-reales-a-los-complejos">De los números reales a los complejos</a></li>
+  <li><a href="#una-referencia-histórica" id="toc-una-referencia-histórica" class="nav-link" data-scroll-target="#una-referencia-histórica">Una referencia histórica</a></li>
+  <li><a href="#forma-cartesiana" id="toc-forma-cartesiana" class="nav-link" data-scroll-target="#forma-cartesiana">Forma cartesiana</a></li>
+  <li><a href="#el-plano-complejo" id="toc-el-plano-complejo" class="nav-link" data-scroll-target="#el-plano-complejo">El plano complejo</a>
   <ul class="collapse">
-  <li><a href="#factor-común" id="toc-factor-común" class="nav-link" data-scroll-target="#factor-común">Factor común</a></li>
-  <li><a href="#diferencia-de-cuadrados-y-trinomios-cuadrados-perfectos" id="toc-diferencia-de-cuadrados-y-trinomios-cuadrados-perfectos" class="nav-link" data-scroll-target="#diferencia-de-cuadrados-y-trinomios-cuadrados-perfectos">Diferencia de cuadrados y trinomios cuadrados perfectos</a></li>
-  <li><a href="#trinomios-sencillos" id="toc-trinomios-sencillos" class="nav-link" data-scroll-target="#trinomios-sencillos">Trinomios sencillos</a></li>
+  <li><a href="#ejemplo-1.-ubicación-en-el-plano" id="toc-ejemplo-1.-ubicación-en-el-plano" class="nav-link" data-scroll-target="#ejemplo-1.-ubicación-en-el-plano">Ejemplo 1. Ubicación en el plano</a></li>
   </ul></li>
-  <li><a href="#fracciones-algebraicas-y-dominio" id="toc-fracciones-algebraicas-y-dominio" class="nav-link" data-scroll-target="#fracciones-algebraicas-y-dominio">Fracciones algebraicas y dominio</a></li>
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <li><a href="#suma-y-resta" id="toc-suma-y-resta" class="nav-link" data-scroll-target="#suma-y-resta">Suma y resta</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-factorización-sucesiva" id="toc-ejemplo-1.-factorización-sucesiva" class="nav-link" data-scroll-target="#ejemplo-1.-factorización-sucesiva">Ejemplo 1. Factorización sucesiva</a></li>
-  <li><a href="#ejemplo-2.-simplificación-y-restricciones" id="toc-ejemplo-2.-simplificación-y-restricciones" class="nav-link" data-scroll-target="#ejemplo-2.-simplificación-y-restricciones">Ejemplo 2. Simplificación y restricciones</a></li>
+  <li><a href="#ejemplo-2.-igualdad-de-números-complejos" id="toc-ejemplo-2.-igualdad-de-números-complejos" class="nav-link" data-scroll-target="#ejemplo-2.-igualdad-de-números-complejos">Ejemplo 2. Igualdad de números complejos</a></li>
+  <li><a href="#ejemplo-3.-suma-y-resta" id="toc-ejemplo-3.-suma-y-resta" class="nav-link" data-scroll-target="#ejemplo-3.-suma-y-resta">Ejemplo 3. Suma y resta</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -379,9 +378,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-13-sesion-04.html"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-18-sesion-07.html"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></h1>
 </div>
 
 
@@ -392,7 +391,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">13 de agosto de 2026</p>
+      <p class="date">18 de agosto de 2026</p>
     </div>
   </div>
   
@@ -404,254 +403,223 @@ window.Quarto = {
 </header>
 
 
-<section id="productos-notables" class="level2">
-<h2 class="anchored" data-anchor-id="productos-notables">Productos notables</h2>
-<p>La propiedad distributiva permite desarrollar un producto:</p>
+<section id="de-los-números-reales-a-los-complejos" class="level2">
+<h2 class="anchored" data-anchor-id="de-los-números-reales-a-los-complejos">De los números reales a los complejos</h2>
+<p>La ampliación de un conjunto numérico permite resolver ecuaciones que no tienen solución en el conjunto anterior. Por ejemplo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ecuación</th>
+<th>No tiene solución en</th>
+<th>Tiene solución en</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x+5=2\)</span></td>
+<td><span class="math inline">\(\mathbb N\)</span></td>
+<td><span class="math inline">\(\mathbb Z\)</span>: <span class="math inline">\(x=-3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(3x=2\)</span></td>
+<td><span class="math inline">\(\mathbb Z\)</span></td>
+<td><span class="math inline">\(\mathbb Q\)</span>: <span class="math inline">\(x=\dfrac23\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x^2=2\)</span></td>
+<td><span class="math inline">\(\mathbb Q\)</span></td>
+<td><span class="math inline">\(\mathbb R\)</span>: <span class="math inline">\(x=\pm\sqrt2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x^2+1=0\)</span></td>
+<td><span class="math inline">\(\mathbb R\)</span></td>
+<td><span class="math inline">\(\mathbb C\)</span>: <span class="math inline">\(x=\pm i\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>La última ecuación no tiene solución real porque <span class="math inline">\(x^2\ge0\)</span> para todo <span class="math inline">\(x\in\mathbb R\)</span>. Para resolverla se introduce un número <span class="math inline">\(i\)</span>, llamado <strong>unidad imaginaria</strong>, que cumple</p>
 <p><span class="math display">\[
-a(b+c)=ab+ac.
+i^2=-1.
 \]</span></p>
-<p>Al aplicarla a ciertos productos se obtienen identidades que aparecen con frecuencia. Para cualesquiera expresiones reales <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>,</p>
+<p>Su opuesto <span class="math inline">\(-i\)</span> también cumple la misma propiedad. Por tanto, <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> satisfacen <span class="math inline">\(x^2+1=0\)</span>.</p>
+</section>
+<section id="una-referencia-histórica" class="level2">
+<h2 class="anchored" data-anchor-id="una-referencia-histórica">Una referencia histórica</h2>
+<p>En 1545, Girolamo Cardano estudió el problema de encontrar dos números cuya suma fuera <span class="math inline">\(10\)</span> y cuyo producto fuera <span class="math inline">\(40\)</span>. El cálculo conduce a</p>
 <p><span class="math display">\[
-(a+b)^2=a^2+2ab+b^2,
+5+\sqrt{-15}
+\qquad\text{y}\qquad
+5-\sqrt{-15}.
 \]</span></p>
+<p>En el estudio de ciertas ecuaciones cúbicas, expresiones de este tipo aparecen en pasos intermedios aun cuando las soluciones buscadas sean reales. En 1572, Rafael Bombelli estableció reglas coherentes para operar con ellas. Este trabajo fue decisivo para la aceptación operativa de los números complejos, cuya formalización y representación geométrica se desarrollaron posteriormente.</p>
+</section>
+<section id="forma-cartesiana" class="level2">
+<h2 class="anchored" data-anchor-id="forma-cartesiana">Forma cartesiana</h2>
+<p>Un <strong>número complejo</strong> se escribe en la forma</p>
 <p><span class="math display">\[
-(a-b)^2=a^2-2ab+b^2,
+z=a+bi,
+\qquad a,b\in\mathbb R.
+\]</span></p>
+<p>El conjunto de los números complejos es</p>
+<p><span class="math display">\[
+\mathbb C=\{a+bi:a,b\in\mathbb R\}.
+\]</span></p>
+<p>En <span class="math inline">\(z=a+bi\)</span>, el número real <span class="math inline">\(a\)</span> es la <strong>parte real</strong> y el número real <span class="math inline">\(b\)</span> es la <strong>parte imaginaria</strong>:</p>
+<p><span class="math display">\[
+\operatorname{Re}(z)=a,
+\qquad
+\operatorname{Im}(z)=b.
+\]</span></p>
+<p>La parte imaginaria de <span class="math inline">\(z\)</span> es <span class="math inline">\(b\)</span>, no <span class="math inline">\(bi\)</span>. La escritura <span class="math inline">\(a+bi\)</span> se denomina <strong>forma cartesiana</strong>. Se simplifica la notación escribiendo, por ejemplo, <span class="math inline">\(2+i\)</span> en lugar de <span class="math inline">\(2+1i\)</span>, <span class="math inline">\(3-2i\)</span> en lugar de <span class="math inline">\(3+(-2)i\)</span>, <span class="math inline">\(bi\)</span> en lugar de <span class="math inline">\(0+bi\)</span> y <span class="math inline">\(a\)</span> en lugar de <span class="math inline">\(a+0i\)</span>.</p>
+<p>Dos casos particulares son:</p>
+<ul>
+<li>si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(z=a\)</span> es real; por ello <span class="math inline">\(\mathbb R\subseteq\mathbb C\)</span>;</li>
+<li>si <span class="math inline">\(a=0\)</span> y <span class="math inline">\(b\ne0\)</span>, entonces <span class="math inline">\(z=bi\)</span> es un <strong>imaginario puro</strong>.</li>
+</ul>
+<p>La cadena de inclusiones queda</p>
+<p><span class="math display">\[
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
+\]</span></p>
+<p>Dos números complejos son iguales si coinciden sus partes reales y sus partes imaginarias:</p>
+<p><span class="math display">\[
+a+bi=c+di
+\quad\Longleftrightarrow\quad
+a=c\ \text{ y }\ b=d.
+\]</span></p>
+<p>Para <span class="math inline">\(d&gt;0\)</span>, las soluciones de <span class="math inline">\(x^2=-d\)</span> son</p>
+<p><span class="math display">\[
+x=\pm\bigl(\sqrt d\bigr)i.
+\]</span></p>
+<p>La raíz cuadrada principal se denotará mediante la convención</p>
+<p><span class="math display">\[
+\sqrt{-d}=\bigl(\sqrt d\bigr)i.
+\]</span></p>
+<p>Antes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales establecidas para radicandos no negativos no se aplican directamente.</p>
+</section>
+<section id="el-plano-complejo" class="level2">
+<h2 class="anchored" data-anchor-id="el-plano-complejo">El plano complejo</h2>
+<p>El número <span class="math inline">\(z=a+bi\)</span> se representa mediante el punto <span class="math inline">\((a,b)\)</span> del plano. El eje horizontal es el <strong>eje real</strong> y el eje vertical es el <strong>eje imaginario</strong>. El origen representa al número <span class="math inline">\(0\)</span>.</p>
+<p>Esta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:</p>
+<ul>
+<li>los números reales se encuentran sobre el eje real;</li>
+<li>los imaginarios puros se encuentran sobre el eje imaginario;</li>
+<li>dos números complejos son iguales exactamente cuando corresponden al mismo punto.</li>
+</ul>
+<section id="ejemplo-1.-ubicación-en-el-plano" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-ubicación-en-el-plano">Ejemplo 1. Ubicación en el plano</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Número</th>
+<th style="text-align: right;">Parte real</th>
+<th style="text-align: right;">Parte imaginaria</th>
+<th>Punto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(3+2i\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\((3,2)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-4+i\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\((-4,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(-2i\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\((0,-2)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\((-3,0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Así, <span class="math inline">\(-2i\)</span> se ubica sobre el eje imaginario y <span class="math inline">\(-3\)</span> sobre el eje real.</p>
+</section>
+</section>
+<section id="suma-y-resta" class="level2">
+<h2 class="anchored" data-anchor-id="suma-y-resta">Suma y resta</h2>
+<p>La suma se realiza componente a componente:</p>
+<p><span class="math display">\[
+(a+bi)+(c+di)=(a+c)+(b+d)i.
+\]</span></p>
+<p>El opuesto de <span class="math inline">\(z=a+bi\)</span> es</p>
+<p><span class="math display">\[
+-z=-a-bi.
+\]</span></p>
+<p>En el plano, <span class="math inline">\(-z\)</span> es el punto simétrico de <span class="math inline">\(z\)</span> respecto del origen. La resta se define como la suma del opuesto:</p>
+<p><span class="math display">\[
+(a+bi)-(c+di)=(a-c)+(b-d)i.
+\]</span></p>
+<p>Estas definiciones extienden la suma y la resta de números reales. Geométricamente, la suma corresponde a la regla del paralelogramo aplicada a los vectores de posición asociados con <span class="math inline">\((a,b)\)</span> y <span class="math inline">\((c,d)\)</span>.</p>
+<section id="ejemplo-2.-igualdad-de-números-complejos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-igualdad-de-números-complejos">Ejemplo 2. Igualdad de números complejos</h3>
+<p>Determinar los números reales <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tales que</p>
+<p><span class="math display">\[
+(2x-1)+(y+3)i=5-2i.
+\]</span></p>
+<p>La igualdad de las partes reales y de las partes imaginarias produce</p>
+<p><span class="math display">\[
+2x-1=5
+\qquad\text{y}\qquad
+y+3=-2.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(x=3\)</span> y <span class="math inline">\(y=-5\)</span>. La sustitución verifica que</p>
+<p><span class="math display">\[
+(2\cdot3-1)+(-5+3)i=5-2i.
+\]</span></p>
+</section>
+<section id="ejemplo-3.-suma-y-resta" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-suma-y-resta">Ejemplo 3. Suma y resta</h3>
+<p>Sean <span class="math inline">\(z=4-3i\)</span> y <span class="math inline">\(w=-1+2i\)</span>. Entonces</p>
+<p><span class="math display">\[
+z+w=(4-1)+(-3+2)i=3-i
 \]</span></p>
 <p>y</p>
 <p><span class="math display">\[
-(a+b)(a-b)=a^2-b^2.
+z-w=(4-(-1))+(-3-2)i=5-5i.
 \]</span></p>
-<p>Por ejemplo,</p>
+<p>El signo de la resta afecta a las dos componentes de <span class="math inline">\(w\)</span>. La comprobación se obtiene al sumar de nuevo <span class="math inline">\(w\)</span>:</p>
 <p><span class="math display">\[
-(2x-3y)^2
-=(2x)^2-2(2x)(3y)+(3y)^2
-=4x^2-12xy+9y^2.
+(z-w)+w=(5-5i)+(-1+2i)=4-3i=z.
 \]</span></p>
-<p>Al elevar un monomio al cuadrado se eleva cada factor: <span class="math inline">\((kx)^2=k^2x^2\)</span>. En particular, <span class="math inline">\((2x)^2=4x^2\)</span> y <span class="math inline">\((-b)^2=b^2\)</span>.</p>
-<p>La igualdad <span class="math inline">\((a+b)^2=a^2+b^2\)</span> no es una identidad: el término <span class="math inline">\(2ab\)</span> solo desaparece cuando <span class="math inline">\(ab=0\)</span>.</p>
-</section>
-<section id="factorización" class="level2">
-<h2 class="anchored" data-anchor-id="factorización">Factorización</h2>
-<p>Factorizar una expresión consiste en escribirla como producto. Es el proceso inverso de desarrollar: una factorización puede comprobarse multiplicando nuevamente los factores.</p>
-<section id="factor-común" class="level3">
-<h3 class="anchored" data-anchor-id="factor-común">Factor común</h3>
-<p>La propiedad distributiva, utilizada en sentido inverso, da</p>
-<p><span class="math display">\[
-ab+ac=a(b+c).
-\]</span></p>
-<p>Cuando los coeficientes son enteros, el máximo factor común monomial se obtiene tomando el máximo común divisor de los coeficientes y el menor exponente de cada variable presente en todos los términos. El factor común puede ser numérico, literal o ambos. Después de extraerlo, se revisa si los factores restantes admiten otra factorización.</p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-12x^3y-18x^2y^2
-=6x^2y(2x-3y).
-\]</span></p>
-</section>
-<section id="diferencia-de-cuadrados-y-trinomios-cuadrados-perfectos" class="level3">
-<h3 class="anchored" data-anchor-id="diferencia-de-cuadrados-y-trinomios-cuadrados-perfectos">Diferencia de cuadrados y trinomios cuadrados perfectos</h3>
-<p>La identidad del producto de binomios conjugados permite factorizar una diferencia de cuadrados:</p>
-<p><span class="math display">\[
-a^2-b^2=(a-b)(a+b).
-\]</span></p>
-<p>Así,</p>
-<p><span class="math display">\[
-25x^2-16y^2
-=(5x)^2-(4y)^2
-=(5x-4y)(5x+4y).
-\]</span></p>
-<p>La igualdad <span class="math inline">\(a^2+b^2=(a-b)(a+b)\)</span> no es una identidad. El producto del lado derecho es <span class="math inline">\(a^2-b^2\)</span>.</p>
-<p>Las identidades de los cuadrados de binomios también se utilizan en sentido inverso:</p>
-<p><span class="math display">\[
-a^2+2ab+b^2=(a+b)^2,
-\]</span></p>
-<p><span class="math display">\[
-a^2-2ab+b^2=(a-b)^2.
-\]</span></p>
-<p>Para reconocer un trinomio cuadrado perfecto, los términos extremos deben poder escribirse como <span class="math inline">\(u^2\)</span> y <span class="math inline">\(v^2\)</span>, y el término central debe ser <span class="math inline">\(2uv\)</span> o <span class="math inline">\(-2uv\)</span>.</p>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-9x^2-24x+16
-=(3x)^2-2(3x)(4)+4^2
-=(3x-4)^2.
-\]</span></p>
-</section>
-<section id="trinomios-sencillos" class="level3">
-<h3 class="anchored" data-anchor-id="trinomios-sencillos">Trinomios sencillos</h3>
-<p>Un trinomio cuadrático es mónico cuando el coeficiente de <span class="math inline">\(x^2\)</span> es <span class="math inline">\(1\)</span>. Para factorizar un trinomio mónico con coeficientes enteros,</p>
-<p><span class="math display">\[
-x^2+bx+c,
-\]</span></p>
-<p>se buscan enteros <span class="math inline">\(m\)</span> y <span class="math inline">\(n\)</span> tales que</p>
-<p><span class="math display">\[
-m+n=b,
-\qquad
-mn=c.
-\]</span></p>
-<p>Entonces</p>
-<p><span class="math display">\[
-x^2+bx+c=(x+m)(x+n).
-\]</span></p>
-<p>Por ejemplo, para <span class="math inline">\(x^2-x-12\)</span> se pueden tomar <span class="math inline">\(m=-4\)</span> y <span class="math inline">\(n=3\)</span>, porque</p>
-<p><span class="math display">\[
--4+3=-1,
-\qquad
-(-4)(3)=-12.
-\]</span></p>
-<p>Por tanto,</p>
-<p><span class="math display">\[
-x^2-x-12=(x-4)(x+3).
-\]</span></p>
-<p>Para factorizar un trinomio no mónico sencillo con coeficientes enteros</p>
-<p><span class="math display">\[
-ax^2+bx+c,
-\qquad a\ne0,
-\quad a\ne1,
-\]</span></p>
-<p>se puede aplicar el siguiente procedimiento:</p>
-<ol type="1">
-<li>Encontrar enteros <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> tales que <span class="math inline">\(r+s=b\)</span> y <span class="math inline">\(rs=ac\)</span>.</li>
-<li>Reescribir el término lineal como <span class="math inline">\(bx=rx+sx\)</span>.</li>
-<li>Agrupar los cuatro términos en dos pares y extraer el factor común de cada par.</li>
-<li>Extraer el factor binomial que aparece en ambos grupos.</li>
-</ol>
-<p>Por ejemplo, para <span class="math inline">\(6x^2+x-2\)</span> se pueden tomar <span class="math inline">\(r=4\)</span> y <span class="math inline">\(s=-3\)</span> porque su suma es <span class="math inline">\(1\)</span> y su producto es <span class="math inline">\(6(-2)=-12\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-6x^2+x-2
-&amp;=6x^2+4x-3x-2\\
-&amp;=2x(3x+2)-(3x+2)\\
-&amp;=(3x+2)(2x-1).
-\end{aligned}
-\]</span></p>
-<p>El orden de <span class="math inline">\(r\)</span> y <span class="math inline">\(s\)</span> no modifica la factorización. También puede escribirse</p>
-<p><span class="math display">\[
-\begin{aligned}
-6x^2+x-2
-&amp;=6x^2-3x+4x-2\\
-&amp;=3x(2x-1)+2(2x-1)\\
-&amp;=(2x-1)(3x+2).
-\end{aligned}
-\]</span></p>
-<p>Si no existe el par de enteros requerido, solo se concluye que este procedimiento no produce una factorización con coeficientes enteros.</p>
-</section>
-</section>
-<section id="fracciones-algebraicas-y-dominio" class="level2">
-<h2 class="anchored" data-anchor-id="fracciones-algebraicas-y-dominio">Fracciones algebraicas y dominio</h2>
-<p>Una fracción algebraica elemental tiene la forma</p>
-<p><span class="math display">\[
-\frac{p(x)}{q(x)},
-\]</span></p>
-<p>donde <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> son polinomios y <span class="math inline">\(q\)</span> no es el polinomio cero. Su dominio natural es</p>
-<p><span class="math display">\[
-D=\{x\in\mathbb R:q(x)\ne0\}.
-\]</span></p>
-<p>Los ceros del denominador se excluyen del dominio. Un cero del numerador es admisible siempre que el denominador sea distinto de cero; en ese caso, la fracción vale cero. Las restricciones se determinan a partir de la expresión original y se conservan después de simplificarla.</p>
-<p>La cancelación se aplica a factores multiplicativos completos. Si las expresiones involucradas están definidas, entonces</p>
-<p><span class="math display">\[
-\frac{a(x)c(x)}{b(x)c(x)}=\frac{a(x)}{b(x)},
-\qquad
-b(x)\ne0,
-\quad
-c(x)\ne0.
-\]</span></p>
-<p>No se cancelan términos de una suma. Por ejemplo,</p>
-<p><span class="math display">\[
-\frac{x^2+4x}{x}
-=\frac{x(x+4)}{x}
-=x+4,
-\qquad x\ne0,
-\]</span></p>
-<p>pero</p>
-<p><span class="math display">\[
-\frac{x^2+4}{x}
-=x+\frac4x,
-\qquad x\ne0;
-\]</span></p>
-<p>el numerador <span class="math inline">\(x^2+4\)</span> no contiene el factor <span class="math inline">\(x\)</span>.</p>
-</section>
-<section id="ejemplos" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-factorización-sucesiva" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-factorización-sucesiva">Ejemplo 1. Factorización sucesiva</h3>
-<p>En la expresión</p>
-<p><span class="math display">\[
-2x^3-18x
-\]</span></p>
-<p>se extrae primero el factor común y después se reconoce una diferencia de cuadrados:</p>
-<p><span class="math display">\[
-\begin{aligned}
-2x^3-18x
-&amp;=2x(x^2-9)\\
-&amp;=2x(x-3)(x+3).
-\end{aligned}
-\]</span></p>
-<p>La comprobación se obtiene al desarrollar el producto:</p>
-<p><span class="math display">\[
-2x(x-3)(x+3)
-=2x(x^2-9)
-=2x^3-18x.
-\]</span></p>
-</section>
-<section id="ejemplo-2.-simplificación-y-restricciones" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-simplificación-y-restricciones">Ejemplo 2. Simplificación y restricciones</h3>
-<p>Simplifiquemos</p>
-<p><span class="math display">\[
-\frac{x^2-9}{x^2-3x}.
-\]</span></p>
-<p>El denominador original se factoriza como <span class="math inline">\(x(x-3)\)</span>, por lo que</p>
-<p><span class="math display">\[
-x\ne0,
-\qquad
-x\ne3.
-\]</span></p>
-<p>Después se factorizan numerador y denominador:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\frac{x^2-9}{x^2-3x}
-&amp;=\frac{(x-3)(x+3)}{x(x-3)}\\
-&amp;=\frac{x+3}{x},
-\qquad x\notin\{0,3\}.
-\end{aligned}
-\]</span></p>
-<p>La expresión reducida está definida en <span class="math inline">\(x=3\)</span>, pero la fracción original no. La igualdad anterior se considera únicamente en el dominio de la expresión original.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>Suponer que <span class="math inline">\((a+b)^2=a^2+b^2\)</span> es una identidad y omitir el término central <span class="math inline">\(2ab\)</span>.</li>
-<li>Suponer que <span class="math inline">\(a^2+b^2=(a-b)(a+b)\)</span> es una identidad; el producto de binomios conjugados produce una diferencia de cuadrados.</li>
-<li>Detener la factorización después de extraer un factor común, aunque todavía aparezca una diferencia de cuadrados u otro patrón reconocible.</li>
-<li>Elegir los signos de un trinomio atendiendo solo al producto; también debe verificarse la suma.</li>
-<li>Cancelar términos de una suma en lugar de factores multiplicativos completos.</li>
-<li>Obtener las restricciones después de cancelar y reincorporar valores excluidos por el denominador original.</li>
-<li>Concluir que un trinomio no admite otra factorización porque no aparece el par de enteros buscado; esa búsqueda solo decide si funciona el procedimiento descrito.</li>
-<li>Verificar una igualdad para uno o varios valores y concluir que es una identidad; esas comprobaciones no constituyen una demostración, mientras que un solo contraejemplo basta para refutarla.</li>
+<li><strong>Mezclar partes reales e imaginarias.</strong> Se tiene <span class="math inline">\((3+2i)+(1+4i)=4+6i\)</span>.</li>
+<li><strong>Confundir la parte imaginaria con el término imaginario.</strong> En <span class="math inline">\(5-7i\)</span>, la parte imaginaria es el número real <span class="math inline">\(-7\)</span>.</li>
+<li><strong>Distribuir la resta solo a una componente.</strong> Se tiene <span class="math inline">\((5+2i)-(3+4i)=2-2i\)</span>.</li>
+<li><strong>Aplicar sin hipótesis las leyes de los radicales.</strong> El cálculo <span class="math inline">\(\sqrt{-1}\sqrt{-1}=\sqrt{(-1)(-1)}=1\)</span> es inválido. Al escribir <span class="math inline">\(\sqrt{-1}=i\)</span>, se obtiene <span class="math inline">\(i^2=-1\)</span>.</li>
+<li><strong>Intercambiar las coordenadas.</strong> El número <span class="math inline">\(4i\)</span> corresponde a <span class="math inline">\((0,4)\)</span>, mientras que <span class="math inline">\((4,0)\)</span> corresponde al número real <span class="math inline">\(4\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
 <p>Resuelva los siguientes ejercicios.</p>
 <ol type="1">
-<li><p>Factorice:</p>
+<li><p>Los puntos <span class="math inline">\(P=(-2,4)\)</span> y <span class="math inline">\(Q=(5,-1)\)</span> representan los números complejos <span class="math inline">\(z\)</span> y <span class="math inline">\(w\)</span>, respectivamente. Escriba <span class="math inline">\(z\)</span> y <span class="math inline">\(w\)</span> en forma cartesiana, calcule <span class="math inline">\(z+w\)</span> y represente el resultado.</p></li>
+<li><p>En el cálculo</p>
 <p><span class="math display">\[
-16x^2+24xy+9y^2.
-\]</span></p></li>
-<li><p>Factorice completamente:</p>
+(2-3i)-(-4+i)=(2-4)+(-3+1)i=-2-2i
+\]</span></p>
+<p>identifique el error, obtenga el resultado correcto y ubíquelo en el plano complejo.</p></li>
+<li><p>Determine el número complejo <span class="math inline">\(z\)</span> que satisface</p>
 <p><span class="math display">\[
-3x^3+12x^2+12x.
-\]</span></p></li>
-<li><p>Factorice:</p>
-<p><span class="math display">\[
-x^2-2x-15.
-\]</span></p></li>
-<li><p>Factorice:</p>
-<p><span class="math display">\[
-6x^2-7x-3.
-\]</span></p></li>
-<li><p>Simplifique e indique todas las restricciones de la expresión original:</p>
-<p><span class="math display">\[
-\frac{2x^2-8}{x^2+x-6}.
-\]</span></p></li>
+z+(-3+2i)=4-i.
+\]</span></p>
+<p>Represente <span class="math inline">\(z\)</span> y verifique el resultado mediante una suma.</p></li>
+<li><p>Proponga dos números complejos no reales cuya suma sea <span class="math inline">\(6\)</span>. Represente ambos números y su suma. ¿Qué condiciones deben cumplir sus partes reales e imaginarias?</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -665,44 +633,39 @@ x^2-2x-15.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Los términos extremos son cuadrados perfectos y el término central es <span class="math inline">\(2(4x)(3y)\)</span>:</p>
+<p><strong>1.</strong> Del punto <span class="math inline">\(P=(-2,4)\)</span> se obtiene <span class="math inline">\(z=-2+4i\)</span>, y de <span class="math inline">\(Q=(5,-1)\)</span> se obtiene <span class="math inline">\(w=5-i\)</span>. Por tanto,</p>
 <p><span class="math display">\[
-16x^2+24xy+9y^2
-=(4x+3y)^2.
-\]</span></p></li>
-<li><p>Se extrae el factor común y se factoriza el trinomio cuadrado perfecto:</p>
-<p><span class="math display">\[
-\begin{aligned}
-3x^3+12x^2+12x
-&amp;=3x(x^2+4x+4)\\
-&amp;=3x(x+2)^2.
-\end{aligned}
-\]</span></p></li>
-<li><p>Los números <span class="math inline">\(-5\)</span> y <span class="math inline">\(3\)</span> suman <span class="math inline">\(-2\)</span> y su producto es <span class="math inline">\(-15\)</span>. Por tanto,</p>
-<p><span class="math display">\[
-x^2-2x-15=(x-5)(x+3).
-\]</span></p></li>
-<li><p>Como <span class="math inline">\(6(-3)=-18\)</span>, se buscan dos enteros cuya suma sea <span class="math inline">\(-7\)</span> y cuyo producto sea <span class="math inline">\(-18\)</span>. Se eligen <span class="math inline">\(-9\)</span> y <span class="math inline">\(2\)</span>:</p>
+z+w=(-2+5)+(4-1)i=3+3i.
+\]</span></p>
+<p>La suma corresponde al punto <span class="math inline">\((3,3)\)</span>.</p>
+<p><strong>2.</strong> En la resta se cambian los signos de las dos componentes del segundo número. Por tanto,</p>
 <p><span class="math display">\[
 \begin{aligned}
-6x^2-7x-3
-&amp;=6x^2-9x+2x-3\\
-&amp;=3x(2x-3)+(2x-3)\\
-&amp;=(3x+1)(2x-3).
+(2-3i)-(-4+i)
+&amp;=(2-(-4))+(-3-1)i\\
+&amp;=6-4i.
 \end{aligned}
-\]</span></p></li>
-<li><p>El denominador original se anula en <span class="math inline">\(x=2\)</span> y <span class="math inline">\(x=-3\)</span>. Al factorizar,</p>
+\]</span></p>
+<p>El resultado se representa mediante el punto <span class="math inline">\((6,-4)\)</span>. El procedimiento propuesto trató incorrectamente la parte real <span class="math inline">\(-4\)</span> y no distribuyó el signo de la resta.</p>
+<p><strong>3.</strong> Al sumar a ambos miembros el opuesto de <span class="math inline">\(-3+2i\)</span>,</p>
 <p><span class="math display">\[
-\begin{aligned}
-\frac{2x^2-8}{x^2+x-6}
-&amp;=\frac{2(x^2-4)}{(x-2)(x+3)}\\
-&amp;=\frac{2(x-2)(x+2)}{(x-2)(x+3)}\\
-&amp;=\frac{2(x+2)}{x+3},
-\qquad x\notin\{2,-3\}.
-\end{aligned}
-\]</span></p></li>
-</ol>
+z=(4-i)-(-3+2i)=7-3i.
+\]</span></p>
+<p>El número corresponde al punto <span class="math inline">\((7,-3)\)</span>. La verificación es</p>
+<p><span class="math display">\[
+(7-3i)+(-3+2i)=4-i.
+\]</span></p>
+<p><strong>4.</strong> Si los números son <span class="math inline">\(a+bi\)</span> y <span class="math inline">\(c+di\)</span>, entonces su suma es <span class="math inline">\(6\)</span> exactamente cuando</p>
+<p><span class="math display">\[
+a+c=6
+\qquad\text{y}\qquad
+b+d=0.
+\]</span></p>
+<p>Además, para que ambos sean no reales se requiere <span class="math inline">\(b\ne0\)</span> y <span class="math inline">\(d\ne0\)</span>. Por ejemplo,</p>
+<p><span class="math display">\[
+(2+i)+(4-i)=6.
+\]</span></p>
+<p>Los puntos <span class="math inline">\((2,1)\)</span> y <span class="math inline">\((4,-1)\)</span> representan los sumandos, y <span class="math inline">\((6,0)\)</span> representa la suma.</p>
 </div>
 </div>
 </div>
@@ -710,52 +673,12 @@ x^2-2x-15=(x-5)(x+3).
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Desarrolle:</p>
-<ol type="a">
-<li><span class="math inline">\((x+6)^2\)</span>.<br>
-</li>
-<li><span class="math inline">\((2a-5b)^2\)</span>.<br>
-</li>
-<li><span class="math inline">\((4m+n)(4m-n)\)</span>.</li>
-</ol></li>
-<li><p>Factorice completamente:</p>
-<ol type="a">
-<li><span class="math inline">\(15x^3y-10x^2y^2\)</span>.<br>
-</li>
-<li><span class="math inline">\(36u^2-49v^2\)</span>.<br>
-</li>
-<li><span class="math inline">\(3x^3-27x\)</span>.</li>
-</ol></li>
-<li><p>Factorice:</p>
-<ol type="a">
-<li><span class="math inline">\(x^2-7x+12\)</span>.<br>
-</li>
-<li><span class="math inline">\(x^2+2x-24\)</span>.<br>
-</li>
-<li><span class="math inline">\(8x^2-2x-3\)</span>.</li>
-</ol></li>
-<li><p>Simplifique e indique todas las restricciones de la expresión original:</p>
-<ol type="a">
-<li><span class="math inline">\(\dfrac{x^2-16}{x^2+x-20}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\dfrac{3x^2-12x}{x^2-16}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\dfrac{x^2-6x+9}{x^2-9}\)</span>.<br>
-</li>
-<li><span class="math inline">\(\dfrac{2x^2+10x}{x^2+7x+10}\)</span>.</li>
-</ol></li>
-<li><p>Compare los dominios naturales de</p>
-<p><span class="math display">\[
-\frac{x^2-1}{x-1}
-\qquad\text{y}\qquad
-x+1.
-\]</span></p></li>
-<li><p>Determine, mediante una transformación algebraica, si la igualdad</p>
-<p><span class="math display">\[
-\frac{x^2+9}{x+3}=x+3
-\]</span></p>
-<p>es válida para todo <span class="math inline">\(x\ne-3\)</span>. Justifique su respuesta y, si es falsa, proporcione un contraejemplo.</p></li>
-<li><p>Construya una fracción algebraica cuya forma simplificada sea <span class="math inline">\(x-2\)</span> y cuyo dominio natural sea <span class="math inline">\(\mathbb R\setminus\{5\}\)</span>.</p></li>
+<li>Ubique en el plano complejo <span class="math inline">\(1+4i\)</span>, <span class="math inline">\(-3-3i\)</span>, <span class="math inline">\(-5i\)</span> y <span class="math inline">\(2\)</span>, e indique sus partes real e imaginaria.</li>
+<li>Escriba el número complejo con parte real <span class="math inline">\(-2\)</span> y parte imaginaria <span class="math inline">\(3\)</span>. Determine su opuesto y represente ambos.</li>
+<li>Calcule <span class="math inline">\((7-2i)+(-3+6i)\)</span> y <span class="math inline">\((7-2i)-(-3+6i)\)</span>.</li>
+<li>Determine los números reales <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tales que <span class="math inline">\((3x+1)+(2y-5)i=10-9i\)</span>.</li>
+<li>Encuentre <span class="math inline">\(w\in\mathbb C\)</span> tal que <span class="math inline">\((4-7i)+w=1+2i\)</span>.</li>
+<li>Exprese <span class="math inline">\(6+\sqrt{-25}\)</span> y <span class="math inline">\(6-\sqrt{-25}\)</span> en la forma cartesiana y calcule su suma.</li>
 </ol>
 
 
@@ -1171,13 +1094,13 @@ x+1.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-12-sesion-03.html" class="pagination-link" aria-label="Sesión 03. Potencias, radicales y expresiones equivalentes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></span>
+      <a href="../sesiones/2026-08-17-sesion-06.html" class="pagination-link" aria-label="Sesión 06. Inecuaciones lineales y valor absoluto como distancia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-14-sesion-05.html" class="pagination-link" aria-label="Sesión 05. Ecuaciones lineales y despeje de fórmulas">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
