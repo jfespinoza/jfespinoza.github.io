@@ -1,0 +1,269 @@
+---
+title: "Sesión 07. Números complejos: forma cartesiana, plano, suma y resta"
+date: 2026-08-18
+description: "Unidad imaginaria, forma cartesiana, igualdad, plano complejo y suma y resta de números complejos."
+---
+
+## De los números reales a los complejos
+
+La ampliación de un conjunto numérico permite resolver ecuaciones que no tienen solución en el conjunto anterior. Por ejemplo:
+
+| Ecuación | No tiene solución en | Tiene solución en |
+|---|---|---|
+| $x+5=2$ | $\mathbb N$ | $\mathbb Z$: $x=-3$ |
+| $3x=2$ | $\mathbb Z$ | $\mathbb Q$: $x=\dfrac23$ |
+| $x^2=2$ | $\mathbb Q$ | $\mathbb R$: $x=\pm\sqrt2$ |
+| $x^2+1=0$ | $\mathbb R$ | $\mathbb C$: $x=\pm i$ |
+
+La última ecuación no tiene solución real porque $x^2\ge0$ para todo $x\in\mathbb R$. Para resolverla se introduce un número $i$, llamado **unidad imaginaria**, que cumple
+
+$$
+i^2=-1.
+$$
+
+Su opuesto $-i$ también cumple la misma propiedad. Por tanto, $i$ y $-i$ satisfacen $x^2+1=0$.
+
+## Una referencia histórica
+
+En 1545, Girolamo Cardano estudió el problema de encontrar dos números cuya suma fuera $10$ y cuyo producto fuera $40$. El cálculo conduce a
+
+$$
+5+\sqrt{-15}
+\qquad\text{y}\qquad
+5-\sqrt{-15}.
+$$
+
+En el estudio de ciertas ecuaciones cúbicas, expresiones de este tipo aparecen en pasos intermedios aun cuando las soluciones buscadas sean reales. En 1572, Rafael Bombelli estableció reglas coherentes para operar con ellas. Este trabajo fue decisivo para la aceptación operativa de los números complejos, cuya formalización y representación geométrica se desarrollaron posteriormente.
+
+## Forma cartesiana
+
+Un **número complejo** se escribe en la forma
+
+$$
+z=a+bi,
+\qquad a,b\in\mathbb R.
+$$
+
+El conjunto de los números complejos es
+
+$$
+\mathbb C=\{a+bi:a,b\in\mathbb R\}.
+$$
+
+En $z=a+bi$, el número real $a$ es la **parte real** y el número real $b$ es la **parte imaginaria**:
+
+$$
+\operatorname{Re}(z)=a,
+\qquad
+\operatorname{Im}(z)=b.
+$$
+
+La parte imaginaria de $z$ es $b$, no $bi$. La escritura $a+bi$ se denomina **forma cartesiana**. Se simplifica la notación escribiendo, por ejemplo, $2+i$ en lugar de $2+1i$, $3-2i$ en lugar de $3+(-2)i$, $bi$ en lugar de $0+bi$ y $a$ en lugar de $a+0i$.
+
+Dos casos particulares son:
+
+- si $b=0$, entonces $z=a$ es real; por ello $\mathbb R\subseteq\mathbb C$;
+- si $a=0$ y $b\ne0$, entonces $z=bi$ es un **imaginario puro**.
+
+La cadena de inclusiones queda
+
+$$
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
+$$
+
+Dos números complejos son iguales si coinciden sus partes reales y sus partes imaginarias:
+
+$$
+a+bi=c+di
+\quad\Longleftrightarrow\quad
+a=c\ \text{ y }\ b=d.
+$$
+
+Para $d>0$, las soluciones de $x^2=-d$ son
+
+$$
+x=\pm\bigl(\sqrt d\bigr)i.
+$$
+
+La raíz cuadrada principal se denotará mediante la convención
+
+$$
+\sqrt{-d}=\bigl(\sqrt d\bigr)i.
+$$
+
+Antes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales establecidas para radicandos no negativos no se aplican directamente.
+
+## El plano complejo
+
+El número $z=a+bi$ se representa mediante el punto $(a,b)$ del plano. El eje horizontal es el **eje real** y el eje vertical es el **eje imaginario**. El origen representa al número $0$.
+
+Esta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:
+
+- los números reales se encuentran sobre el eje real;
+- los imaginarios puros se encuentran sobre el eje imaginario;
+- dos números complejos son iguales exactamente cuando corresponden al mismo punto.
+
+### Ejemplo 1. Ubicación en el plano
+
+| Número | Parte real | Parte imaginaria | Punto |
+|---|---:|---:|---|
+| $3+2i$ | $3$ | $2$ | $(3,2)$ |
+| $-4+i$ | $-4$ | $1$ | $(-4,1)$ |
+| $-2i$ | $0$ | $-2$ | $(0,-2)$ |
+| $-3$ | $-3$ | $0$ | $(-3,0)$ |
+
+Así, $-2i$ se ubica sobre el eje imaginario y $-3$ sobre el eje real.
+
+## Suma y resta
+
+La suma se realiza componente a componente:
+
+$$
+(a+bi)+(c+di)=(a+c)+(b+d)i.
+$$
+
+El opuesto de $z=a+bi$ es
+
+$$
+-z=-a-bi.
+$$
+
+En el plano, $-z$ es el punto simétrico de $z$ respecto del origen. La resta se define como la suma del opuesto:
+
+$$
+(a+bi)-(c+di)=(a-c)+(b-d)i.
+$$
+
+Estas definiciones extienden la suma y la resta de números reales. Geométricamente, la suma corresponde a la regla del paralelogramo aplicada a los vectores de posición asociados con $(a,b)$ y $(c,d)$.
+
+### Ejemplo 2. Igualdad de números complejos
+
+Determinar los números reales $x$ y $y$ tales que
+
+$$
+(2x-1)+(y+3)i=5-2i.
+$$
+
+La igualdad de las partes reales y de las partes imaginarias produce
+
+$$
+2x-1=5
+\qquad\text{y}\qquad
+y+3=-2.
+$$
+
+Por tanto, $x=3$ y $y=-5$. La sustitución verifica que
+
+$$
+(2\cdot3-1)+(-5+3)i=5-2i.
+$$
+
+### Ejemplo 3. Suma y resta
+
+Sean $z=4-3i$ y $w=-1+2i$. Entonces
+
+$$
+z+w=(4-1)+(-3+2)i=3-i
+$$
+
+y
+
+$$
+z-w=(4-(-1))+(-3-2)i=5-5i.
+$$
+
+El signo de la resta afecta a las dos componentes de $w$. La comprobación se obtiene al sumar de nuevo $w$:
+
+$$
+(z-w)+w=(5-5i)+(-1+2i)=4-3i=z.
+$$
+
+## Errores frecuentes
+
+- **Mezclar partes reales e imaginarias.** Se tiene $(3+2i)+(1+4i)=4+6i$.
+- **Confundir la parte imaginaria con el término imaginario.** En $5-7i$, la parte imaginaria es el número real $-7$.
+- **Distribuir la resta solo a una componente.** Se tiene $(5+2i)-(3+4i)=2-2i$.
+- **Aplicar sin hipótesis las leyes de los radicales.** El cálculo $\sqrt{-1}\sqrt{-1}=\sqrt{(-1)(-1)}=1$ es inválido. Al escribir $\sqrt{-1}=i$, se obtiene $i^2=-1$.
+- **Intercambiar las coordenadas.** El número $4i$ corresponde a $(0,4)$, mientras que $(4,0)$ corresponde al número real $4$.
+
+## Actividad
+
+Resuelva los siguientes ejercicios.
+
+1. Los puntos $P=(-2,4)$ y $Q=(5,-1)$ representan los números complejos $z$ y $w$, respectivamente. Escriba $z$ y $w$ en forma cartesiana, calcule $z+w$ y represente el resultado.
+2. En el cálculo
+
+   $$
+   (2-3i)-(-4+i)=(2-4)+(-3+1)i=-2-2i
+   $$
+
+   identifique el error, obtenga el resultado correcto y ubíquelo en el plano complejo.
+3. Determine el número complejo $z$ que satisface
+
+   $$
+   z+(-3+2i)=4-i.
+   $$
+
+   Represente $z$ y verifique el resultado mediante una suma.
+4. Proponga dos números complejos no reales cuya suma sea $6$. Represente ambos números y su suma. ¿Qué condiciones deben cumplir sus partes reales e imaginarias?
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Del punto $P=(-2,4)$ se obtiene $z=-2+4i$, y de $Q=(5,-1)$ se obtiene $w=5-i$. Por tanto,
+
+$$
+z+w=(-2+5)+(4-1)i=3+3i.
+$$
+
+La suma corresponde al punto $(3,3)$.
+
+**2.** En la resta se cambian los signos de las dos componentes del segundo número. Por tanto,
+
+$$
+\begin{aligned}
+(2-3i)-(-4+i)
+&=(2-(-4))+(-3-1)i\\
+&=6-4i.
+\end{aligned}
+$$
+
+El resultado se representa mediante el punto $(6,-4)$. El procedimiento propuesto trató incorrectamente la parte real $-4$ y no distribuyó el signo de la resta.
+
+**3.** Al sumar a ambos miembros el opuesto de $-3+2i$,
+
+$$
+z=(4-i)-(-3+2i)=7-3i.
+$$
+
+El número corresponde al punto $(7,-3)$. La verificación es
+
+$$
+(7-3i)+(-3+2i)=4-i.
+$$
+
+**4.** Si los números son $a+bi$ y $c+di$, entonces su suma es $6$ exactamente cuando
+
+$$
+a+c=6
+\qquad\text{y}\qquad
+b+d=0.
+$$
+
+Además, para que ambos sean no reales se requiere $b\ne0$ y $d\ne0$. Por ejemplo,
+
+$$
+(2+i)+(4-i)=6.
+$$
+
+Los puntos $(2,1)$ y $(4,-1)$ representan los sumandos, y $(6,0)$ representa la suma.
+
+:::
+
+## Ejercicios para practicar
+
+1. Ubique en el plano complejo $1+4i$, $-3-3i$, $-5i$ y $2$, e indique sus partes real e imaginaria.
+2. Escriba el número complejo con parte real $-2$ y parte imaginaria $3$. Determine su opuesto y represente ambos.
+3. Calcule $(7-2i)+(-3+6i)$ y $(7-2i)-(-3+6i)$.
+4. Determine los números reales $x$ y $y$ tales que $(3x+1)+(2y-5)i=10-9i$.
+5. Encuentre $w\in\mathbb C$ tal que $(4-7i)+w=1+2i$.
+6. Exprese $6+\sqrt{-25}$ y $6-\sqrt{-25}$ en la forma cartesiana y calcule su suma.
