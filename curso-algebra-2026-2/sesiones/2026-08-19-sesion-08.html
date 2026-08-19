@@ -409,10 +409,11 @@ window.Quarto = {
 
 <section id="multiplicación" class="level2">
 <h2 class="anchored" data-anchor-id="multiplicación">Multiplicación</h2>
-<p>La multiplicación de números complejos se efectúa como la de binomios: se aplica la propiedad distributiva, se sustituye <span class="math inline">\(i^2=-1\)</span> y se agrupan las partes real e imaginaria. Para <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\)</span>,</p>
+<p>La multiplicación de números complejos se efectúa como la de binomios, estudiada en la Sesión 04. Para <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\)</span>, con <span class="math inline">\(a,b,c,d\in\mathbb R\)</span>,</p>
 <p><span class="math display">\[
 (a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i.
 \]</span></p>
+<p>No es necesario memorizar la fórmula: en cada producto basta distribuir, sustituir <span class="math inline">\(i^2=-1\)</span> y agrupar las partes real e imaginaria.</p>
 <p>Esta operación extiende la multiplicación de números reales: si <span class="math inline">\(b=d=0\)</span>, el resultado es <span class="math inline">\(ac\)</span>. Además, la multiplicación en <span class="math inline">\(\mathbb C\)</span> es conmutativa, asociativa y distributiva respecto de la suma.</p>
 </section>
 <section id="potencias-de-la-unidad-imaginaria" class="level2">
@@ -446,7 +447,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>Como</p>
+<p>La descomposición siguiente usa las leyes de los exponentes estudiadas en la Sesión 03, aplicadas a la base no nula <span class="math inline">\(i\)</span> y a exponentes enteros no negativos. Como</p>
 <p><span class="math display">\[
 i^4=\bigl(i^2\bigr)^2=(-1)^2=1,
 \]</span></p>
@@ -468,16 +469,16 @@ i^n=i^{4q+r}=\bigl(i^4\bigr)^q i^r=i^r.
 <li><span class="math inline">\(z=\overline z\)</span> exactamente cuando <span class="math inline">\(z\)</span> es real;</li>
 <li><span class="math inline">\(z+\overline z=2a\)</span> es real.</li>
 </ul>
-<p>En particular, si <span class="math inline">\(z\)</span> no es real, entonces <span class="math inline">\(z\)</span> y <span class="math inline">\(\overline z\)</span> son dos números no reales cuya suma es real.</p>
-<p>El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados,</p>
+<p>En particular, si <span class="math inline">\(z\)</span> no es real, entonces <span class="math inline">\(z\)</span> y <span class="math inline">\(\overline z\)</span> son dos números no reales cuya suma es real; esta observación retoma el reactivo 4 de la actividad de la Sesión 07.</p>
+<p>El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados, producto notable estudiado en la Sesión 04,</p>
 <p><span class="math display">\[
-z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
+z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2-b^2i^2=a^2+b^2.
 \]</span></p>
 <p>La cantidad <span class="math inline">\(a^2+b^2\)</span> es real y no negativa, y vale <span class="math inline">\(0\)</span> exactamente cuando <span class="math inline">\(z=0\)</span>. Su interpretación geométrica se estudiará en la siguiente sesión. Esta identidad permite convertir en real el denominador de un cociente.</p>
 </section>
 <section id="división" class="level2">
 <h2 class="anchored" data-anchor-id="división">División</h2>
-<p>Sean <span class="math inline">\(z,w\in\mathbb C\)</span> con <span class="math inline">\(w\ne0\)</span>. El cociente <span class="math inline">\(\dfrac zw\)</span> es el número complejo <span class="math inline">\(q\)</span> que satisface <span class="math inline">\(qw=z\)</span>. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador:</p>
+<p>Sean <span class="math inline">\(z,w\in\mathbb C\)</span> con <span class="math inline">\(w\ne0\)</span>. El cociente <span class="math inline">\(\dfrac zw\)</span> es el número complejo <span class="math inline">\(q\)</span> que satisface <span class="math inline">\(qw=z\)</span>. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador, lo que produce una fracción equivalente como las estudiadas en la Sesión 04:</p>
 <p><span class="math display">\[
 \frac zw=\frac{z\,\overline w}{w\,\overline w}.
 \]</span></p>
@@ -487,6 +488,7 @@ z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
 =\frac{(a+bi)(c-di)}{(c+di)(c-di)}
 =\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}.
 \]</span></p>
+<p>No es necesario memorizar esta expresión general: se obtiene al multiplicar por el conjugado y simplificar con <span class="math inline">\(i^2=-1\)</span>.</p>
 <p>El denominador <span class="math inline">\(c^2+d^2\)</span> es un número real positivo porque <span class="math inline">\(c\)</span> y <span class="math inline">\(d\)</span> no pueden ser ambos cero. La división entre <span class="math inline">\(0\)</span> no está definida.</p>
 <p>Todo cociente puede verificarse mediante una multiplicación: si el resultado obtenido es <span class="math inline">\(q\)</span>, debe cumplirse <span class="math inline">\(qw=z\)</span>.</p>
 </section>
@@ -512,14 +514,15 @@ z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
 </section>
 <section id="ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano">Ejemplo 3. El producto de los números del problema de Cardano</h3>
-<p>Los números <span class="math inline">\(5+\bigl(\sqrt{15}\bigr)i\)</span> y <span class="math inline">\(5-\bigl(\sqrt{15}\bigr)i\)</span> considerados en la sesión anterior son conjugados entre sí. En esa sesión se verificó que su suma es <span class="math inline">\(10\)</span>; ahora se obtiene su producto:</p>
+<p>Los números <span class="math inline">\(5+\bigl(\sqrt{15}\bigr)i\)</span> y <span class="math inline">\(5-\bigl(\sqrt{15}\bigr)i\)</span> considerados en la Sesión 07 son conjugados entre sí. En esa sesión se verificó que su suma es <span class="math inline">\(10\)</span>; la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span> permite comprobar ahora la segunda condición del problema:</p>
 <p><span class="math display">\[
 \Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
 \Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
 =5^2+\bigl(\sqrt{15}\bigr)^2
+=25+15
 =40.
 \]</span></p>
-<p>Los dos números tienen suma <span class="math inline">\(10\)</span> y producto <span class="math inline">\(40\)</span>.</p>
+<p>Los dos números tienen suma <span class="math inline">\(10\)</span> y producto <span class="math inline">\(40\)</span>, por lo que satisfacen las dos condiciones del problema de Cardano.</p>
 </section>
 <section id="ejemplo-4.-división-y-verificación" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-4.-división-y-verificación">Ejemplo 4. División y verificación</h3>
@@ -545,9 +548,9 @@ z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li><strong>Multiplicar componente a componente.</strong> Se tiene <span class="math inline">\((2+3i)(4+5i)=-7+22i\)</span>, no <span class="math inline">\(8+15i\)</span>: el producto requiere aplicar la propiedad distributiva.</li>
-<li><strong>Tratar <span class="math inline">\(i^2\)</span> como <span class="math inline">\(1\)</span>.</strong> En <span class="math inline">\((3+i)(2+i)=6+3i+2i+i^2\)</span>, el resultado es <span class="math inline">\(5+5i\)</span>, no <span class="math inline">\(7+5i\)</span>.</li>
+<li><strong>Tratar <span class="math inline">\(i^2\)</span> como <span class="math inline">\(1\)</span>.</strong> En <span class="math inline">\((3+i)(2+i)=6+3i+2i+i^2\)</span>, la sustitución correcta es <span class="math inline">\(i^2=-1\)</span>; por tanto, el resultado es <span class="math inline">\(5+5i\)</span>, no <span class="math inline">\(7+5i\)</span>.</li>
 <li><strong>Conjugar cambiando los dos signos.</strong> El conjugado de <span class="math inline">\(-3+2i\)</span> es <span class="math inline">\(-3-2i\)</span>, no <span class="math inline">\(3-2i\)</span>: solo cambia el signo de la parte imaginaria.</li>
-<li><strong>Multiplicar radicales de radicandos negativos sin convertirlos.</strong> El cálculo <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6\)</span> es inválido. Con la convención de la sesión anterior, <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=-6\)</span>.</li>
+<li><strong>Multiplicar radicales de radicandos negativos sin convertirlos.</strong> El cálculo <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6\)</span> es inválido: la propiedad <span class="math inline">\(\sqrt a\,\sqrt b=\sqrt{ab}\)</span>, estudiada en la Sesión 03 para <span class="math inline">\(a,b\ge0\)</span>, no se puede aplicar cuando los radicandos son negativos. Con la convención de la Sesión 07, <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=6i^2=-6\)</span>.</li>
 <li><strong>Dividir componente a componente.</strong> Se tiene <span class="math inline">\(\dfrac{6+8i}{2+4i}=\dfrac{11}{5}-\dfrac{2}{5}i\)</span>, no <span class="math inline">\(3+2i\)</span>: el denominador se convierte en real mediante su conjugado.</li>
 </ul>
 </section>
@@ -616,7 +619,7 @@ a^2+b^2=25,
 <li>Escriba el conjugado de <span class="math inline">\(4-7i\)</span>, de <span class="math inline">\(-2i\)</span> y de <span class="math inline">\(6\)</span>. Calcule el producto de <span class="math inline">\(4-7i\)</span> por su conjugado.</li>
 <li>Calcule <span class="math inline">\(\dfrac{5-10i}{3+4i}\)</span> y exprese <span class="math inline">\(\dfrac1i\)</span> en forma cartesiana.</li>
 <li>Determine el número complejo <span class="math inline">\(z\)</span> que satisface <span class="math inline">\((2-i)z=5\)</span> y verifique el resultado mediante una multiplicación.</li>
-<li>Calcule el producto de <span class="math inline">\(6+\sqrt{-25}\)</span> por <span class="math inline">\(6-\sqrt{-25}\)</span> y compare el resultado con la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span>.</li>
+<li>Retome los números <span class="math inline">\(6+\sqrt{-25}\)</span> y <span class="math inline">\(6-\sqrt{-25}\)</span> del ejercicio 6 de la Sesión 07, calcule su producto y compárelo con la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span>.</li>
 </ol>
 
 
