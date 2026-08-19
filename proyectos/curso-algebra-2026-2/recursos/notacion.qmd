@@ -36,10 +36,10 @@ description: "Convenciones que se utilizarán a lo largo del curso."
 |---|---|
 | $a<b$, $a\le b$, $a>b$, $a\ge b$ | Relaciones de orden en $\mathbb R$: menor que, menor o igual que, mayor que y mayor o igual que, respectivamente. |
 | $a\ne b$ | $a$ es distinto de $b$. |
-| $a^n$ | Potencia de base $a$ y exponente $n$. |
+| $a^n$ | Potencia de base $a$ y exponente entero $n$; la base puede ser real o compleja, según el contexto. |
 | $a^0$, $a^{-n}$ | Si $a\ne0$ y $n$ es un entero positivo, $a^0=1$ y $a^{-n}=\dfrac{1}{a^n}$. |
 | $\lvert a\rvert$ | Valor absoluto de $a$; distancia de $a$ al cero en la recta real. En general, $\lvert x-y\rvert$ es la distancia entre $x$ y $y$. |
-| $\sqrt[n]{a}$ | En $\mathbb R$, para $n\ge2$ entero, denota la raíz $n$-ésima principal de $a$. Si $n$ es par, requiere $a\ge0$ y denota la raíz no negativa; si $n$ es impar, está definida para todo $a\in\mathbb R$. |
+| $\sqrt[n]{a}$ | En $\mathbb R$, para $n\ge2$ entero, denota la raíz $n$-ésima principal de $a$. Si $n$ es par, requiere $a\ge0$ y denota la raíz no negativa; si $n$ es impar, está definida para todo $a\in\mathbb R$. Para $\sqrt{-d}$, véase «Números complejos». |
 | $a^{p/q}$ | Si $p/q$ está en forma irreducible y $q\ge2$, entonces $a^{p/q}=\bigl(\sqrt[q]{a}\bigr)^p$ cuando la raíz real está definida; si $p<0$, además se requiere $a\ne0$. |
 | $a\pm b$ | Abrevia las dos expresiones $a+b$ y $a-b$. |
 | $0.1\overline{3}$ | La barra señala el período, es decir, el bloque de cifras que se repite: $0.1\overline{3}=0.1333\ldots$. |
@@ -73,7 +73,10 @@ Los símbolos $\infty$ y $-\infty$ no representan números reales; por ello, sie
 | $z=a+bi$ | Forma cartesiana de un número complejo, con $a,b\in\mathbb R$; corresponde al punto $(a,b)$ del plano complejo. En este contexto, $(a,b)$ es un par ordenado, no un intervalo. |
 | $\operatorname{Re}(z)$ | Parte real de $z=a+bi$: $\operatorname{Re}(z)=a$. |
 | $\operatorname{Im}(z)$ | Parte imaginaria de $z=a+bi$: $\operatorname{Im}(z)=b$. Es el número real $b$, no $bi$. |
+| $\overline z$ | Conjugado de $z=a+bi$: $\overline z=a-bi$; solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a $z$ y $\overline z$ son simétricos respecto del eje real. Además, $z\overline z=a^2+b^2\ge0$. |
 | $\sqrt{-d}$ | Para $d>0$, en este curso se adopta la convención $\sqrt{-d}=(\sqrt d)i$. Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos. |
+
+El significado de la barra superior depende del contexto: en $\overline z$ indica conjugación; en $0.1\overline{3}$, el período decimal.
 
 ## Letras de uso frecuente
 
