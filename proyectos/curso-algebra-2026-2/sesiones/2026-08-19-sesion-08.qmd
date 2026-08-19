@@ -6,11 +6,13 @@ description: "Multiplicación de números complejos, ciclo de las potencias de l
 
 ## Multiplicación
 
-La multiplicación de números complejos se efectúa como la de binomios: se aplica la propiedad distributiva, se sustituye $i^2=-1$ y se agrupan las partes real e imaginaria. Para $z=a+bi$ y $w=c+di$,
+La multiplicación de números complejos se efectúa como la de binomios, estudiada en la Sesión 04. Para $z=a+bi$ y $w=c+di$, con $a,b,c,d\in\mathbb R$,
 
 $$
 (a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i.
 $$
+
+No es necesario memorizar la fórmula: en cada producto basta distribuir, sustituir $i^2=-1$ y agrupar las partes real e imaginaria.
 
 Esta operación extiende la multiplicación de números reales: si $b=d=0$, el resultado es $ac$. Además, la multiplicación en $\mathbb C$ es conmutativa, asociativa y distributiva respecto de la suma.
 
@@ -22,7 +24,7 @@ Las potencias de $i$ con exponente entero no negativo forman un ciclo de longitu
 |---|---|---|---|---|---|---|---|---|
 | $i^n$ | $1$ | $i$ | $-1$ | $-i$ | $1$ | $i$ | $-1$ | $-i$ |
 
-Como
+La descomposición siguiente usa las leyes de los exponentes estudiadas en la Sesión 03, aplicadas a la base no nula $i$ y a exponentes enteros no negativos. Como
 
 $$
 i^4=\bigl(i^2\bigr)^2=(-1)^2=1,
@@ -50,19 +52,19 @@ Por ejemplo, $\overline{3+2i}=3-2i$, $\overline{-4i}=4i$ y $\overline 5=5$. En e
 - $z=\overline z$ exactamente cuando $z$ es real;
 - $z+\overline z=2a$ es real.
 
-En particular, si $z$ no es real, entonces $z$ y $\overline z$ son dos números no reales cuya suma es real.
+En particular, si $z$ no es real, entonces $z$ y $\overline z$ son dos números no reales cuya suma es real; esta observación retoma el reactivo 4 de la actividad de la Sesión 07.
 
-El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados,
+El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados, producto notable estudiado en la Sesión 04,
 
 $$
-z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
+z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2-b^2i^2=a^2+b^2.
 $$
 
 La cantidad $a^2+b^2$ es real y no negativa, y vale $0$ exactamente cuando $z=0$. Su interpretación geométrica se estudiará en la siguiente sesión. Esta identidad permite convertir en real el denominador de un cociente.
 
 ## División
 
-Sean $z,w\in\mathbb C$ con $w\ne0$. El cociente $\dfrac zw$ es el número complejo $q$ que satisface $qw=z$. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador:
+Sean $z,w\in\mathbb C$ con $w\ne0$. El cociente $\dfrac zw$ es el número complejo $q$ que satisface $qw=z$. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador, lo que produce una fracción equivalente como las estudiadas en la Sesión 04:
 
 $$
 \frac zw=\frac{z\,\overline w}{w\,\overline w}.
@@ -75,6 +77,8 @@ $$
 =\frac{(a+bi)(c-di)}{(c+di)(c-di)}
 =\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}.
 $$
+
+No es necesario memorizar esta expresión general: se obtiene al multiplicar por el conjugado y simplificar con $i^2=-1$.
 
 El denominador $c^2+d^2$ es un número real positivo porque $c$ y $d$ no pueden ser ambos cero. La división entre $0$ no está definida.
 
@@ -105,16 +109,17 @@ Como $15=4\cdot3+3$, el residuo es $3$; por tanto, $i^{15}=i^3=-i$. Como $2026=4
 
 ### Ejemplo 3. El producto de los números del problema de Cardano
 
-Los números $5+\bigl(\sqrt{15}\bigr)i$ y $5-\bigl(\sqrt{15}\bigr)i$ considerados en la sesión anterior son conjugados entre sí. En esa sesión se verificó que su suma es $10$; ahora se obtiene su producto:
+Los números $5+\bigl(\sqrt{15}\bigr)i$ y $5-\bigl(\sqrt{15}\bigr)i$ considerados en la Sesión 07 son conjugados entre sí. En esa sesión se verificó que su suma es $10$; la identidad $z\overline z=a^2+b^2$ permite comprobar ahora la segunda condición del problema:
 
 $$
 \Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
 \Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
 =5^2+\bigl(\sqrt{15}\bigr)^2
+=25+15
 =40.
 $$
 
-Los dos números tienen suma $10$ y producto $40$.
+Los dos números tienen suma $10$ y producto $40$, por lo que satisfacen las dos condiciones del problema de Cardano.
 
 ### Ejemplo 4. División y verificación
 
@@ -143,9 +148,9 @@ Se recupera el numerador original, de modo que el cociente es correcto.
 ## Errores frecuentes
 
 - **Multiplicar componente a componente.** Se tiene $(2+3i)(4+5i)=-7+22i$, no $8+15i$: el producto requiere aplicar la propiedad distributiva.
-- **Tratar $i^2$ como $1$.** En $(3+i)(2+i)=6+3i+2i+i^2$, el resultado es $5+5i$, no $7+5i$.
+- **Tratar $i^2$ como $1$.** En $(3+i)(2+i)=6+3i+2i+i^2$, la sustitución correcta es $i^2=-1$; por tanto, el resultado es $5+5i$, no $7+5i$.
 - **Conjugar cambiando los dos signos.** El conjugado de $-3+2i$ es $-3-2i$, no $3-2i$: solo cambia el signo de la parte imaginaria.
-- **Multiplicar radicales de radicandos negativos sin convertirlos.** El cálculo $\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6$ es inválido. Con la convención de la sesión anterior, $\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=-6$.
+- **Multiplicar radicales de radicandos negativos sin convertirlos.** El cálculo $\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6$ es inválido: la propiedad $\sqrt a\,\sqrt b=\sqrt{ab}$, estudiada en la Sesión 03 para $a,b\ge0$, no se puede aplicar cuando los radicandos son negativos. Con la convención de la Sesión 07, $\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=6i^2=-6$.
 - **Dividir componente a componente.** Se tiene $\dfrac{6+8i}{2+4i}=\dfrac{11}{5}-\dfrac{2}{5}i$, no $3+2i$: el denominador se convierte en real mediante su conjugado.
 
 ## Actividad
@@ -214,4 +219,4 @@ junto con $b\ne0$ para que $z$ no sea real. Por ejemplo, $z=3+4i$ cumple $3^2+4^
 3. Escriba el conjugado de $4-7i$, de $-2i$ y de $6$. Calcule el producto de $4-7i$ por su conjugado.
 4. Calcule $\dfrac{5-10i}{3+4i}$ y exprese $\dfrac1i$ en forma cartesiana.
 5. Determine el número complejo $z$ que satisface $(2-i)z=5$ y verifique el resultado mediante una multiplicación.
-6. Calcule el producto de $6+\sqrt{-25}$ por $6-\sqrt{-25}$ y compare el resultado con la identidad $z\overline z=a^2+b^2$.
+6. Retome los números $6+\sqrt{-25}$ y $6-\sqrt{-25}$ del ejercicio 6 de la Sesión 07, calcule su producto y compárelo con la identidad $z\overline z=a^2+b^2$.
