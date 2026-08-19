@@ -515,7 +515,7 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(a^n\)</span></td>
-<td>Potencia de base <span class="math inline">\(a\)</span> y exponente <span class="math inline">\(n\)</span>.</td>
+<td>Potencia de base <span class="math inline">\(a\)</span> y exponente entero <span class="math inline">\(n\)</span>; la base puede ser real o compleja, según el contexto.</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(a^0\)</span>, <span class="math inline">\(a^{-n}\)</span></td>
@@ -527,7 +527,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\sqrt[n]{a}\)</span></td>
-<td>En <span class="math inline">\(\mathbb R\)</span>, para <span class="math inline">\(n\ge2\)</span> entero, denota la raíz <span class="math inline">\(n\)</span>-ésima principal de <span class="math inline">\(a\)</span>. Si <span class="math inline">\(n\)</span> es par, requiere <span class="math inline">\(a\ge0\)</span> y denota la raíz no negativa; si <span class="math inline">\(n\)</span> es impar, está definida para todo <span class="math inline">\(a\in\mathbb R\)</span>.</td>
+<td>En <span class="math inline">\(\mathbb R\)</span>, para <span class="math inline">\(n\ge2\)</span> entero, denota la raíz <span class="math inline">\(n\)</span>-ésima principal de <span class="math inline">\(a\)</span>. Si <span class="math inline">\(n\)</span> es par, requiere <span class="math inline">\(a\ge0\)</span> y denota la raíz no negativa; si <span class="math inline">\(n\)</span> es impar, está definida para todo <span class="math inline">\(a\in\mathbb R\)</span>. Para <span class="math inline">\(\sqrt{-d}\)</span>, véase «Números complejos».</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(a^{p/q}\)</span></td>
@@ -638,11 +638,16 @@ window.Quarto = {
 <td>Parte imaginaria de <span class="math inline">\(z=a+bi\)</span>: <span class="math inline">\(\operatorname{Im}(z)=b\)</span>. Es el número real <span class="math inline">\(b\)</span>, no <span class="math inline">\(bi\)</span>.</td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\(\overline z\)</span></td>
+<td>Conjugado de <span class="math inline">\(z=a+bi\)</span>: <span class="math inline">\(\overline z=a-bi\)</span>; solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a <span class="math inline">\(z\)</span> y <span class="math inline">\(\overline z\)</span> son simétricos respecto del eje real. Además, <span class="math inline">\(z\overline z=a^2+b^2\ge0\)</span>.</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(\sqrt{-d}\)</span></td>
 <td>Para <span class="math inline">\(d&gt;0\)</span>, en este curso se adopta la convención <span class="math inline">\(\sqrt{-d}=(\sqrt d)i\)</span>. Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.</td>
 </tr>
 </tbody>
 </table>
+<p>El significado de la barra superior depende del contexto: en <span class="math inline">\(\overline z\)</span> indica conjugación; en <span class="math inline">\(0.1\overline{3}\)</span>, el período decimal.</p>
 </section>
 <section id="letras-de-uso-frecuente" class="level2">
 <h2 class="anchored" data-anchor-id="letras-de-uso-frecuente">Letras de uso frecuente</h2>
