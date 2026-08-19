@@ -1,0 +1,217 @@
+---
+title: "Sesión 08. Números complejos: multiplicación, división y conjugado"
+date: 2026-08-19
+description: "Multiplicación de números complejos, ciclo de las potencias de la unidad imaginaria, conjugado y división en forma cartesiana."
+---
+
+## Multiplicación
+
+La multiplicación de números complejos se efectúa como la de binomios: se aplica la propiedad distributiva, se sustituye $i^2=-1$ y se agrupan las partes real e imaginaria. Para $z=a+bi$ y $w=c+di$,
+
+$$
+(a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i.
+$$
+
+Esta operación extiende la multiplicación de números reales: si $b=d=0$, el resultado es $ac$. Además, la multiplicación en $\mathbb C$ es conmutativa, asociativa y distributiva respecto de la suma.
+
+## Potencias de la unidad imaginaria
+
+Las potencias de $i$ con exponente entero no negativo forman un ciclo de longitud cuatro:
+
+| $n$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ |
+|---|---|---|---|---|---|---|---|---|
+| $i^n$ | $1$ | $i$ | $-1$ | $-i$ | $1$ | $i$ | $-1$ | $-i$ |
+
+Como
+
+$$
+i^4=\bigl(i^2\bigr)^2=(-1)^2=1,
+$$
+
+si $n=4q+r$, donde $q$ es un entero no negativo y $r\in\{0,1,2,3\}$ es el residuo de dividir $n$ entre $4$, entonces
+
+$$
+i^n=i^{4q+r}=\bigl(i^4\bigr)^q i^r=i^r.
+$$
+
+Por tanto, el valor de $i^n$ depende únicamente del residuo de $n$ al dividirlo entre $4$.
+
+## El conjugado
+
+El **conjugado** de $z=a+bi$ es el número complejo
+
+$$
+\overline z=a-bi.
+$$
+
+Por ejemplo, $\overline{3+2i}=3-2i$, $\overline{-4i}=4i$ y $\overline 5=5$. En el plano complejo, $\overline z$ es el punto simétrico de $z$ respecto del eje real. Además:
+
+- $\overline{\overline z}=z$;
+- $z=\overline z$ exactamente cuando $z$ es real;
+- $z+\overline z=2a$ es real.
+
+En particular, si $z$ no es real, entonces $z$ y $\overline z$ son dos números no reales cuya suma es real.
+
+El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados,
+
+$$
+z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
+$$
+
+La cantidad $a^2+b^2$ es real y no negativa, y vale $0$ exactamente cuando $z=0$. Su interpretación geométrica se estudiará en la siguiente sesión. Esta identidad permite convertir en real el denominador de un cociente.
+
+## División
+
+Sean $z,w\in\mathbb C$ con $w\ne0$. El cociente $\dfrac zw$ es el número complejo $q$ que satisface $qw=z$. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador:
+
+$$
+\frac zw=\frac{z\,\overline w}{w\,\overline w}.
+$$
+
+Si $z=a+bi$ y $w=c+di\ne0$, entonces
+
+$$
+\frac{a+bi}{c+di}
+=\frac{(a+bi)(c-di)}{(c+di)(c-di)}
+=\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}.
+$$
+
+El denominador $c^2+d^2$ es un número real positivo porque $c$ y $d$ no pueden ser ambos cero. La división entre $0$ no está definida.
+
+Todo cociente puede verificarse mediante una multiplicación: si el resultado obtenido es $q$, debe cumplirse $qw=z$.
+
+## Ejemplos
+
+### Ejemplo 1. Multiplicación
+
+Calcular $(3+2i)(1+4i)$.
+
+Se distribuye y se sustituye $i^2=-1$:
+
+$$
+\begin{aligned}
+(3+2i)(1+4i)
+&=3+12i+2i+8i^2\\
+&=3+14i-8\\
+&=-5+14i.
+\end{aligned}
+$$
+
+### Ejemplo 2. Potencias de $i$
+
+Calcular $i^{15}$ e $i^{2026}$.
+
+Como $15=4\cdot3+3$, el residuo es $3$; por tanto, $i^{15}=i^3=-i$. Como $2026=4\cdot506+2$, el residuo es $2$; por tanto, $i^{2026}=i^2=-1$.
+
+### Ejemplo 3. El producto de los números del problema de Cardano
+
+Los números $5+\bigl(\sqrt{15}\bigr)i$ y $5-\bigl(\sqrt{15}\bigr)i$ considerados en la sesión anterior son conjugados entre sí. En esa sesión se verificó que su suma es $10$; ahora se obtiene su producto:
+
+$$
+\Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
+\Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
+=5^2+\bigl(\sqrt{15}\bigr)^2
+=40.
+$$
+
+Los dos números tienen suma $10$ y producto $40$.
+
+### Ejemplo 4. División y verificación
+
+Calcular $\dfrac{4+3i}{2-i}$ y verificar el resultado.
+
+El conjugado del denominador es $2+i$, y $(2-i)(2+i)=5$. Entonces
+
+$$
+\begin{aligned}
+\frac{4+3i}{2-i}
+&=\frac{(4+3i)(2+i)}{(2-i)(2+i)}\\
+&=\frac{8+4i+6i+3i^2}{5}\\
+&=\frac{5+10i}{5}\\
+&=1+2i.
+\end{aligned}
+$$
+
+La verificación consiste en multiplicar el resultado por el divisor:
+
+$$
+(1+2i)(2-i)=2-i+4i-2i^2=4+3i.
+$$
+
+Se recupera el numerador original, de modo que el cociente es correcto.
+
+## Errores frecuentes
+
+- **Multiplicar componente a componente.** Se tiene $(2+3i)(4+5i)=-7+22i$, no $8+15i$: el producto requiere aplicar la propiedad distributiva.
+- **Tratar $i^2$ como $1$.** En $(3+i)(2+i)=6+3i+2i+i^2$, el resultado es $5+5i$, no $7+5i$.
+- **Conjugar cambiando los dos signos.** El conjugado de $-3+2i$ es $-3-2i$, no $3-2i$: solo cambia el signo de la parte imaginaria.
+- **Multiplicar radicales de radicandos negativos sin convertirlos.** El cálculo $\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6$ es inválido. Con la convención de la sesión anterior, $\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=-6$.
+- **Dividir componente a componente.** Se tiene $\dfrac{6+8i}{2+4i}=\dfrac{11}{5}-\dfrac{2}{5}i$, no $3+2i$: el denominador se convierte en real mediante su conjugado.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+1. Calcule $(2-5i)(3+2i)$ y la potencia $i^{27}$.
+2. En el cálculo
+
+   $$
+   (4-i)(2+3i)=8+12i-2i-3i^2=8+10i-3=5+10i
+   $$
+
+   identifique el error y obtenga el resultado correcto.
+3. Calcule $\dfrac{7+i}{1-2i}$ y verifique el resultado mediante una multiplicación.
+4. Proponga un número complejo no real $z$ tal que $z\overline z=25$, y represente $z$ y $\overline z$ en el plano complejo. ¿Qué condiciones deben cumplir las partes real e imaginaria de $z$?
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Al distribuir y sustituir $i^2=-1$,
+
+$$
+(2-5i)(3+2i)=6+4i-15i-10i^2=16-11i.
+$$
+
+Para la potencia, $27=4\cdot6+3$, de modo que $i^{27}=i^3=-i$.
+
+**2.** El error está en el último paso: el término $-3i^2$ se sustituyó por $-3$, como si $i^2=1$. Puesto que $-3i^2=3$,
+
+$$
+(4-i)(2+3i)=8+12i-2i-3i^2=11+10i.
+$$
+
+**3.** El conjugado del denominador es $1+2i$, y $(1-2i)(1+2i)=5$. Entonces
+
+$$
+\begin{aligned}
+\frac{7+i}{1-2i}
+&=\frac{(7+i)(1+2i)}{(1-2i)(1+2i)}\\
+&=\frac{7+14i+i+2i^2}{5}\\
+&=\frac{5+15i}{5}\\
+&=1+3i.
+\end{aligned}
+$$
+
+La verificación es
+
+$$
+(1+3i)(1-2i)=1-2i+3i-6i^2=7+i.
+$$
+
+**4.** Si $z=a+bi$, entonces $z\overline z=a^2+b^2$. Por tanto, se requiere
+
+$$
+a^2+b^2=25,
+$$
+
+junto con $b\ne0$ para que $z$ no sea real. Por ejemplo, $z=3+4i$ cumple $3^2+4^2=25$ y su conjugado es $\overline z=3-4i$. Los puntos $(3,4)$ y $(3,-4)$ son simétricos respecto del eje real. También es válida la elección $z=5i$.
+
+:::
+
+## Ejercicios para practicar
+
+1. Calcule $(4+3i)(2-i)$ y $(1+i)(1-i)$.
+2. Calcule $i^{14}$, $i^{33}$ e $i^{100}$.
+3. Escriba el conjugado de $4-7i$, de $-2i$ y de $6$. Calcule el producto de $4-7i$ por su conjugado.
+4. Calcule $\dfrac{5-10i}{3+4i}$ y exprese $\dfrac1i$ en forma cartesiana.
+5. Determine el número complejo $z$ que satisface $(2-i)z=5$ y verifique el resultado mediante una multiplicación.
+6. Calcule el producto de $6+\sqrt{-25}$ por $6-\sqrt{-25}$ y compare el resultado con la identidad $z\overline z=a^2+b^2$.
