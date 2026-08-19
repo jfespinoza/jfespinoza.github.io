@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Operaciones, sistemas, inversas y determinantes.">
+<meta name="description" content="Multiplicación de números complejos, ciclo de las potencias de la unidad imaginaria, conjugado y división en forma cartesiana.">
 
-<title>Unidad 4. Matrices – Álgebra</title>
+<title>Sesión 08. Números complejos: multiplicación, división y conjugado – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../unidades/05-conceptos-algebra-lineal.html" rel="next">
-<link href="../unidades/03-sistemas-ecuaciones.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-18-sesion-07.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Unidad 4. Matrices – Álgebra">
-<meta property="og:description" content="Operaciones, sistemas, inversas y determinantes.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 08. Números complejos: multiplicación, división y conjugado – Álgebra">
+<meta property="og:description" content="Multiplicación de números complejos, ciclo de las potencias de la unidad imaginaria, conjugado y división en forma cartesiana.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-19-sesion-08.html"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -169,13 +197,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -218,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
+  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
   </div>
 </li>
       </ul>
@@ -257,16 +285,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 4. Matrices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
   </div>
 </li>
       </ul>
@@ -334,16 +362,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#multiplicación" id="toc-multiplicación" class="nav-link active" data-scroll-target="#multiplicación">Multiplicación</a></li>
+  <li><a href="#potencias-de-la-unidad-imaginaria" id="toc-potencias-de-la-unidad-imaginaria" class="nav-link" data-scroll-target="#potencias-de-la-unidad-imaginaria">Potencias de la unidad imaginaria</a></li>
+  <li><a href="#el-conjugado" id="toc-el-conjugado" class="nav-link" data-scroll-target="#el-conjugado">El conjugado</a></li>
+  <li><a href="#división" id="toc-división" class="nav-link" data-scroll-target="#división">División</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-multiplicación" id="toc-ejemplo-1.-multiplicación" class="nav-link" data-scroll-target="#ejemplo-1.-multiplicación">Ejemplo 1. Multiplicación</a></li>
+  <li><a href="#ejemplo-2.-potencias-de-i" id="toc-ejemplo-2.-potencias-de-i" class="nav-link" data-scroll-target="#ejemplo-2.-potencias-de-i">Ejemplo 2. Potencias de <span class="math inline">\(i\)</span></a></li>
+  <li><a href="#ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano" id="toc-ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano" class="nav-link" data-scroll-target="#ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano">Ejemplo 3. El producto de los números del problema de Cardano</a></li>
+  <li><a href="#ejemplo-4.-división-y-verificación" id="toc-ejemplo-4.-división-y-verificación" class="nav-link" data-scroll-target="#ejemplo-4.-división-y-verificación">Ejemplo 4. División y verificación</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-19-sesion-08.html"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 4. Matrices</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></h1>
 </div>
 
 
@@ -351,6 +392,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">19 de agosto de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -360,16 +407,217 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 15 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="multiplicación" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicación">Multiplicación</h2>
+<p>La multiplicación de números complejos se efectúa como la de binomios: se aplica la propiedad distributiva, se sustituye <span class="math inline">\(i^2=-1\)</span> y se agrupan las partes real e imaginaria. Para <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\)</span>,</p>
+<p><span class="math display">\[
+(a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i.
+\]</span></p>
+<p>Esta operación extiende la multiplicación de números reales: si <span class="math inline">\(b=d=0\)</span>, el resultado es <span class="math inline">\(ac\)</span>. Además, la multiplicación en <span class="math inline">\(\mathbb C\)</span> es conmutativa, asociativa y distributiva respecto de la suma.</p>
+</section>
+<section id="potencias-de-la-unidad-imaginaria" class="level2">
+<h2 class="anchored" data-anchor-id="potencias-de-la-unidad-imaginaria">Potencias de la unidad imaginaria</h2>
+<p>Las potencias de <span class="math inline">\(i\)</span> con exponente entero no negativo forman un ciclo de longitud cuatro:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(0\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+<th><span class="math inline">\(6\)</span></th>
+<th><span class="math inline">\(7\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(i^n\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(i\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(-i\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(i\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(-i\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Como</p>
+<p><span class="math display">\[
+i^4=\bigl(i^2\bigr)^2=(-1)^2=1,
+\]</span></p>
+<p>si <span class="math inline">\(n=4q+r\)</span>, donde <span class="math inline">\(q\)</span> es un entero no negativo y <span class="math inline">\(r\in\{0,1,2,3\}\)</span> es el residuo de dividir <span class="math inline">\(n\)</span> entre <span class="math inline">\(4\)</span>, entonces</p>
+<p><span class="math display">\[
+i^n=i^{4q+r}=\bigl(i^4\bigr)^q i^r=i^r.
+\]</span></p>
+<p>Por tanto, el valor de <span class="math inline">\(i^n\)</span> depende únicamente del residuo de <span class="math inline">\(n\)</span> al dividirlo entre <span class="math inline">\(4\)</span>.</p>
+</section>
+<section id="el-conjugado" class="level2">
+<h2 class="anchored" data-anchor-id="el-conjugado">El conjugado</h2>
+<p>El <strong>conjugado</strong> de <span class="math inline">\(z=a+bi\)</span> es el número complejo</p>
+<p><span class="math display">\[
+\overline z=a-bi.
+\]</span></p>
+<p>Por ejemplo, <span class="math inline">\(\overline{3+2i}=3-2i\)</span>, <span class="math inline">\(\overline{-4i}=4i\)</span> y <span class="math inline">\(\overline 5=5\)</span>. En el plano complejo, <span class="math inline">\(\overline z\)</span> es el punto simétrico de <span class="math inline">\(z\)</span> respecto del eje real. Además:</p>
+<ul>
+<li><span class="math inline">\(\overline{\overline z}=z\)</span>;</li>
+<li><span class="math inline">\(z=\overline z\)</span> exactamente cuando <span class="math inline">\(z\)</span> es real;</li>
+<li><span class="math inline">\(z+\overline z=2a\)</span> es real.</li>
+</ul>
+<p>En particular, si <span class="math inline">\(z\)</span> no es real, entonces <span class="math inline">\(z\)</span> y <span class="math inline">\(\overline z\)</span> son dos números no reales cuya suma es real.</p>
+<p>El producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados,</p>
+<p><span class="math display">\[
+z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.
+\]</span></p>
+<p>La cantidad <span class="math inline">\(a^2+b^2\)</span> es real y no negativa, y vale <span class="math inline">\(0\)</span> exactamente cuando <span class="math inline">\(z=0\)</span>. Su interpretación geométrica se estudiará en la siguiente sesión. Esta identidad permite convertir en real el denominador de un cociente.</p>
+</section>
+<section id="división" class="level2">
+<h2 class="anchored" data-anchor-id="división">División</h2>
+<p>Sean <span class="math inline">\(z,w\in\mathbb C\)</span> con <span class="math inline">\(w\ne0\)</span>. El cociente <span class="math inline">\(\dfrac zw\)</span> es el número complejo <span class="math inline">\(q\)</span> que satisface <span class="math inline">\(qw=z\)</span>. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador:</p>
+<p><span class="math display">\[
+\frac zw=\frac{z\,\overline w}{w\,\overline w}.
+\]</span></p>
+<p>Si <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\ne0\)</span>, entonces</p>
+<p><span class="math display">\[
+\frac{a+bi}{c+di}
+=\frac{(a+bi)(c-di)}{(c+di)(c-di)}
+=\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}.
+\]</span></p>
+<p>El denominador <span class="math inline">\(c^2+d^2\)</span> es un número real positivo porque <span class="math inline">\(c\)</span> y <span class="math inline">\(d\)</span> no pueden ser ambos cero. La división entre <span class="math inline">\(0\)</span> no está definida.</p>
+<p>Todo cociente puede verificarse mediante una multiplicación: si el resultado obtenido es <span class="math inline">\(q\)</span>, debe cumplirse <span class="math inline">\(qw=z\)</span>.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-multiplicación" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-multiplicación">Ejemplo 1. Multiplicación</h3>
+<p>Calcular <span class="math inline">\((3+2i)(1+4i)\)</span>.</p>
+<p>Se distribuye y se sustituye <span class="math inline">\(i^2=-1\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(3+2i)(1+4i)
+&amp;=3+12i+2i+8i^2\\
+&amp;=3+14i-8\\
+&amp;=-5+14i.
+\end{aligned}
+\]</span></p>
+</section>
+<section id="ejemplo-2.-potencias-de-i" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-potencias-de-i">Ejemplo 2. Potencias de <span class="math inline">\(i\)</span></h3>
+<p>Calcular <span class="math inline">\(i^{15}\)</span> e <span class="math inline">\(i^{2026}\)</span>.</p>
+<p>Como <span class="math inline">\(15=4\cdot3+3\)</span>, el residuo es <span class="math inline">\(3\)</span>; por tanto, <span class="math inline">\(i^{15}=i^3=-i\)</span>. Como <span class="math inline">\(2026=4\cdot506+2\)</span>, el residuo es <span class="math inline">\(2\)</span>; por tanto, <span class="math inline">\(i^{2026}=i^2=-1\)</span>.</p>
+</section>
+<section id="ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-el-producto-de-los-números-del-problema-de-cardano">Ejemplo 3. El producto de los números del problema de Cardano</h3>
+<p>Los números <span class="math inline">\(5+\bigl(\sqrt{15}\bigr)i\)</span> y <span class="math inline">\(5-\bigl(\sqrt{15}\bigr)i\)</span> considerados en la sesión anterior son conjugados entre sí. En esa sesión se verificó que su suma es <span class="math inline">\(10\)</span>; ahora se obtiene su producto:</p>
+<p><span class="math display">\[
+\Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
+\Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
+=5^2+\bigl(\sqrt{15}\bigr)^2
+=40.
+\]</span></p>
+<p>Los dos números tienen suma <span class="math inline">\(10\)</span> y producto <span class="math inline">\(40\)</span>.</p>
+</section>
+<section id="ejemplo-4.-división-y-verificación" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-4.-división-y-verificación">Ejemplo 4. División y verificación</h3>
+<p>Calcular <span class="math inline">\(\dfrac{4+3i}{2-i}\)</span> y verificar el resultado.</p>
+<p>El conjugado del denominador es <span class="math inline">\(2+i\)</span>, y <span class="math inline">\((2-i)(2+i)=5\)</span>. Entonces</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{4+3i}{2-i}
+&amp;=\frac{(4+3i)(2+i)}{(2-i)(2+i)}\\
+&amp;=\frac{8+4i+6i+3i^2}{5}\\
+&amp;=\frac{5+10i}{5}\\
+&amp;=1+2i.
+\end{aligned}
+\]</span></p>
+<p>La verificación consiste en multiplicar el resultado por el divisor:</p>
+<p><span class="math display">\[
+(1+2i)(2-i)=2-i+4i-2i^2=4+3i.
+\]</span></p>
+<p>Se recupera el numerador original, de modo que el cociente es correcto.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Multiplicar componente a componente.</strong> Se tiene <span class="math inline">\((2+3i)(4+5i)=-7+22i\)</span>, no <span class="math inline">\(8+15i\)</span>: el producto requiere aplicar la propiedad distributiva.</li>
+<li><strong>Tratar <span class="math inline">\(i^2\)</span> como <span class="math inline">\(1\)</span>.</strong> En <span class="math inline">\((3+i)(2+i)=6+3i+2i+i^2\)</span>, el resultado es <span class="math inline">\(5+5i\)</span>, no <span class="math inline">\(7+5i\)</span>.</li>
+<li><strong>Conjugar cambiando los dos signos.</strong> El conjugado de <span class="math inline">\(-3+2i\)</span> es <span class="math inline">\(-3-2i\)</span>, no <span class="math inline">\(3-2i\)</span>: solo cambia el signo de la parte imaginaria.</li>
+<li><strong>Multiplicar radicales de radicandos negativos sin convertirlos.</strong> El cálculo <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=\sqrt{36}=6\)</span> es inválido. Con la convención de la sesión anterior, <span class="math inline">\(\sqrt{-4}\,\sqrt{-9}=(2i)(3i)=-6\)</span>.</li>
+<li><strong>Dividir componente a componente.</strong> Se tiene <span class="math inline">\(\dfrac{6+8i}{2+4i}=\dfrac{11}{5}-\dfrac{2}{5}i\)</span>, no <span class="math inline">\(3+2i\)</span>: el denominador se convierte en real mediante su conjugado.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
-<li>Operaciones con matrices y sus propiedades.</li>
-<li>Representación matricial de un sistema de ecuaciones lineales.</li>
-<li>Matriz inversa en la resolución de sistemas.</li>
-<li>Determinantes y regla de Cramer.</li>
+<li><p>Calcule <span class="math inline">\((2-5i)(3+2i)\)</span> y la potencia <span class="math inline">\(i^{27}\)</span>.</p></li>
+<li><p>En el cálculo</p>
+<p><span class="math display">\[
+(4-i)(2+3i)=8+12i-2i-3i^2=8+10i-3=5+10i
+\]</span></p>
+<p>identifique el error y obtenga el resultado correcto.</p></li>
+<li><p>Calcule <span class="math inline">\(\dfrac{7+i}{1-2i}\)</span> y verifique el resultado mediante una multiplicación.</p></li>
+<li><p>Proponga un número complejo no real <span class="math inline">\(z\)</span> tal que <span class="math inline">\(z\overline z=25\)</span>, y represente <span class="math inline">\(z\)</span> y <span class="math inline">\(\overline z\)</span> en el plano complejo. ¿Qué condiciones deben cumplir las partes real e imaginaria de <span class="math inline">\(z\)</span>?</p></li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> Al distribuir y sustituir <span class="math inline">\(i^2=-1\)</span>,</p>
+<p><span class="math display">\[
+(2-5i)(3+2i)=6+4i-15i-10i^2=16-11i.
+\]</span></p>
+<p>Para la potencia, <span class="math inline">\(27=4\cdot6+3\)</span>, de modo que <span class="math inline">\(i^{27}=i^3=-i\)</span>.</p>
+<p><strong>2.</strong> El error está en el último paso: el término <span class="math inline">\(-3i^2\)</span> se sustituyó por <span class="math inline">\(-3\)</span>, como si <span class="math inline">\(i^2=1\)</span>. Puesto que <span class="math inline">\(-3i^2=3\)</span>,</p>
+<p><span class="math display">\[
+(4-i)(2+3i)=8+12i-2i-3i^2=11+10i.
+\]</span></p>
+<p><strong>3.</strong> El conjugado del denominador es <span class="math inline">\(1+2i\)</span>, y <span class="math inline">\((1-2i)(1+2i)=5\)</span>. Entonces</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{7+i}{1-2i}
+&amp;=\frac{(7+i)(1+2i)}{(1-2i)(1+2i)}\\
+&amp;=\frac{7+14i+i+2i^2}{5}\\
+&amp;=\frac{5+15i}{5}\\
+&amp;=1+3i.
+\end{aligned}
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+(1+3i)(1-2i)=1-2i+3i-6i^2=7+i.
+\]</span></p>
+<p><strong>4.</strong> Si <span class="math inline">\(z=a+bi\)</span>, entonces <span class="math inline">\(z\overline z=a^2+b^2\)</span>. Por tanto, se requiere</p>
+<p><span class="math display">\[
+a^2+b^2=25,
+\]</span></p>
+<p>junto con <span class="math inline">\(b\ne0\)</span> para que <span class="math inline">\(z\)</span> no sea real. Por ejemplo, <span class="math inline">\(z=3+4i\)</span> cumple <span class="math inline">\(3^2+4^2=25\)</span> y su conjugado es <span class="math inline">\(\overline z=3-4i\)</span>. Los puntos <span class="math inline">\((3,4)\)</span> y <span class="math inline">\((3,-4)\)</span> son simétricos respecto del eje real. También es válida la elección <span class="math inline">\(z=5i\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li>Calcule <span class="math inline">\((4+3i)(2-i)\)</span> y <span class="math inline">\((1+i)(1-i)\)</span>.</li>
+<li>Calcule <span class="math inline">\(i^{14}\)</span>, <span class="math inline">\(i^{33}\)</span> e <span class="math inline">\(i^{100}\)</span>.</li>
+<li>Escriba el conjugado de <span class="math inline">\(4-7i\)</span>, de <span class="math inline">\(-2i\)</span> y de <span class="math inline">\(6\)</span>. Calcule el producto de <span class="math inline">\(4-7i\)</span> por su conjugado.</li>
+<li>Calcule <span class="math inline">\(\dfrac{5-10i}{3+4i}\)</span> y exprese <span class="math inline">\(\dfrac1i\)</span> en forma cartesiana.</li>
+<li>Determine el número complejo <span class="math inline">\(z\)</span> que satisface <span class="math inline">\((2-i)z=5\)</span> y verifique el resultado mediante una multiplicación.</li>
+<li>Calcule el producto de <span class="math inline">\(6+\sqrt{-25}\)</span> por <span class="math inline">\(6-\sqrt{-25}\)</span> y compare el resultado con la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span>.</li>
+</ol>
 
 
 </section>
@@ -784,13 +1032,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span>
+      <a href="../sesiones/2026-08-18-sesion-07.html" class="pagination-link" aria-label="Sesión 07. Números complejos: forma cartesiana, plano, suma y resta">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
-        <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

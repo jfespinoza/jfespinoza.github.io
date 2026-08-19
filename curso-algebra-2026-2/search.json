@@ -1084,6 +1084,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-19-sesion-08.html",
+    "href": "sesiones/2026-08-19-sesion-08.html",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "",
+    "text": "Multiplicación\nLa multiplicación de números complejos se efectúa como la de binomios: se aplica la propiedad distributiva, se sustituye \\(i^2=-1\\) y se agrupan las partes real e imaginaria. Para \\(z=a+bi\\) y \\(w=c+di\\),\n\\[\n(a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i.\n\\]\nEsta operación extiende la multiplicación de números reales: si \\(b=d=0\\), el resultado es \\(ac\\). Además, la multiplicación en \\(\\mathbb C\\) es conmutativa, asociativa y distributiva respecto de la suma.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#potencias-de-la-unidad-imaginaria",
+    "href": "sesiones/2026-08-19-sesion-08.html#potencias-de-la-unidad-imaginaria",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "Potencias de la unidad imaginaria",
+    "text": "Potencias de la unidad imaginaria\nLas potencias de \\(i\\) con exponente entero no negativo forman un ciclo de longitud cuatro:\n\n\n\n\\(n\\)\n\\(0\\)\n\\(1\\)\n\\(2\\)\n\\(3\\)\n\\(4\\)\n\\(5\\)\n\\(6\\)\n\\(7\\)\n\n\n\n\n\\(i^n\\)\n\\(1\\)\n\\(i\\)\n\\(-1\\)\n\\(-i\\)\n\\(1\\)\n\\(i\\)\n\\(-1\\)\n\\(-i\\)\n\n\n\nComo\n\\[\ni^4=\\bigl(i^2\\bigr)^2=(-1)^2=1,\n\\]\nsi \\(n=4q+r\\), donde \\(q\\) es un entero no negativo y \\(r\\in\\{0,1,2,3\\}\\) es el residuo de dividir \\(n\\) entre \\(4\\), entonces\n\\[\ni^n=i^{4q+r}=\\bigl(i^4\\bigr)^q i^r=i^r.\n\\]\nPor tanto, el valor de \\(i^n\\) depende únicamente del residuo de \\(n\\) al dividirlo entre \\(4\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#el-conjugado",
+    "href": "sesiones/2026-08-19-sesion-08.html#el-conjugado",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "El conjugado",
+    "text": "El conjugado\nEl conjugado de \\(z=a+bi\\) es el número complejo\n\\[\n\\overline z=a-bi.\n\\]\nPor ejemplo, \\(\\overline{3+2i}=3-2i\\), \\(\\overline{-4i}=4i\\) y \\(\\overline 5=5\\). En el plano complejo, \\(\\overline z\\) es el punto simétrico de \\(z\\) respecto del eje real. Además:\n\n\\(\\overline{\\overline z}=z\\);\n\\(z=\\overline z\\) exactamente cuando \\(z\\) es real;\n\\(z+\\overline z=2a\\) es real.\n\nEn particular, si \\(z\\) no es real, entonces \\(z\\) y \\(\\overline z\\) son dos números no reales cuya suma es real.\nEl producto de un número complejo por su conjugado también es real. Mediante la diferencia de cuadrados,\n\\[\nz\\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2+b^2.\n\\]\nLa cantidad \\(a^2+b^2\\) es real y no negativa, y vale \\(0\\) exactamente cuando \\(z=0\\). Su interpretación geométrica se estudiará en la siguiente sesión. Esta identidad permite convertir en real el denominador de un cociente.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#división",
+    "href": "sesiones/2026-08-19-sesion-08.html#división",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "División",
+    "text": "División\nSean \\(z,w\\in\\mathbb C\\) con \\(w\\ne0\\). El cociente \\(\\dfrac zw\\) es el número complejo \\(q\\) que satisface \\(qw=z\\). Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador:\n\\[\n\\frac zw=\\frac{z\\,\\overline w}{w\\,\\overline w}.\n\\]\nSi \\(z=a+bi\\) y \\(w=c+di\\ne0\\), entonces\n\\[\n\\frac{a+bi}{c+di}\n=\\frac{(a+bi)(c-di)}{(c+di)(c-di)}\n=\\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}.\n\\]\nEl denominador \\(c^2+d^2\\) es un número real positivo porque \\(c\\) y \\(d\\) no pueden ser ambos cero. La división entre \\(0\\) no está definida.\nTodo cociente puede verificarse mediante una multiplicación: si el resultado obtenido es \\(q\\), debe cumplirse \\(qw=z\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#ejemplos",
+    "href": "sesiones/2026-08-19-sesion-08.html#ejemplos",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Multiplicación\nCalcular \\((3+2i)(1+4i)\\).\nSe distribuye y se sustituye \\(i^2=-1\\):\n\\[\n\\begin{aligned}\n(3+2i)(1+4i)\n&=3+12i+2i+8i^2\\\\\n&=3+14i-8\\\\\n&=-5+14i.\n\\end{aligned}\n\\]\n\n\nEjemplo 2. Potencias de \\(i\\)\nCalcular \\(i^{15}\\) e \\(i^{2026}\\).\nComo \\(15=4\\cdot3+3\\), el residuo es \\(3\\); por tanto, \\(i^{15}=i^3=-i\\). Como \\(2026=4\\cdot506+2\\), el residuo es \\(2\\); por tanto, \\(i^{2026}=i^2=-1\\).\n\n\nEjemplo 3. El producto de los números del problema de Cardano\nLos números \\(5+\\bigl(\\sqrt{15}\\bigr)i\\) y \\(5-\\bigl(\\sqrt{15}\\bigr)i\\) considerados en la sesión anterior son conjugados entre sí. En esa sesión se verificó que su suma es \\(10\\); ahora se obtiene su producto:\n\\[\n\\Bigl(5+\\bigl(\\sqrt{15}\\bigr)i\\Bigr)\n\\Bigl(5-\\bigl(\\sqrt{15}\\bigr)i\\Bigr)\n=5^2+\\bigl(\\sqrt{15}\\bigr)^2\n=40.\n\\]\nLos dos números tienen suma \\(10\\) y producto \\(40\\).\n\n\nEjemplo 4. División y verificación\nCalcular \\(\\dfrac{4+3i}{2-i}\\) y verificar el resultado.\nEl conjugado del denominador es \\(2+i\\), y \\((2-i)(2+i)=5\\). Entonces\n\\[\n\\begin{aligned}\n\\frac{4+3i}{2-i}\n&=\\frac{(4+3i)(2+i)}{(2-i)(2+i)}\\\\\n&=\\frac{8+4i+6i+3i^2}{5}\\\\\n&=\\frac{5+10i}{5}\\\\\n&=1+2i.\n\\end{aligned}\n\\]\nLa verificación consiste en multiplicar el resultado por el divisor:\n\\[\n(1+2i)(2-i)=2-i+4i-2i^2=4+3i.\n\\]\nSe recupera el numerador original, de modo que el cociente es correcto.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#errores-frecuentes",
+    "href": "sesiones/2026-08-19-sesion-08.html#errores-frecuentes",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nMultiplicar componente a componente. Se tiene \\((2+3i)(4+5i)=-7+22i\\), no \\(8+15i\\): el producto requiere aplicar la propiedad distributiva.\nTratar \\(i^2\\) como \\(1\\). En \\((3+i)(2+i)=6+3i+2i+i^2\\), el resultado es \\(5+5i\\), no \\(7+5i\\).\nConjugar cambiando los dos signos. El conjugado de \\(-3+2i\\) es \\(-3-2i\\), no \\(3-2i\\): solo cambia el signo de la parte imaginaria.\nMultiplicar radicales de radicandos negativos sin convertirlos. El cálculo \\(\\sqrt{-4}\\,\\sqrt{-9}=\\sqrt{36}=6\\) es inválido. Con la convención de la sesión anterior, \\(\\sqrt{-4}\\,\\sqrt{-9}=(2i)(3i)=-6\\).\nDividir componente a componente. Se tiene \\(\\dfrac{6+8i}{2+4i}=\\dfrac{11}{5}-\\dfrac{2}{5}i\\), no \\(3+2i\\): el denominador se convierte en real mediante su conjugado.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#actividad",
+    "href": "sesiones/2026-08-19-sesion-08.html#actividad",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\n\nCalcule \\((2-5i)(3+2i)\\) y la potencia \\(i^{27}\\).\nEn el cálculo\n\\[\n(4-i)(2+3i)=8+12i-2i-3i^2=8+10i-3=5+10i\n\\]\nidentifique el error y obtenga el resultado correcto.\nCalcule \\(\\dfrac{7+i}{1-2i}\\) y verifique el resultado mediante una multiplicación.\nProponga un número complejo no real \\(z\\) tal que \\(z\\overline z=25\\), y represente \\(z\\) y \\(\\overline z\\) en el plano complejo. ¿Qué condiciones deben cumplir las partes real e imaginaria de \\(z\\)?\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Al distribuir y sustituir \\(i^2=-1\\),\n\\[\n(2-5i)(3+2i)=6+4i-15i-10i^2=16-11i.\n\\]\nPara la potencia, \\(27=4\\cdot6+3\\), de modo que \\(i^{27}=i^3=-i\\).\n2. El error está en el último paso: el término \\(-3i^2\\) se sustituyó por \\(-3\\), como si \\(i^2=1\\). Puesto que \\(-3i^2=3\\),\n\\[\n(4-i)(2+3i)=8+12i-2i-3i^2=11+10i.\n\\]\n3. El conjugado del denominador es \\(1+2i\\), y \\((1-2i)(1+2i)=5\\). Entonces\n\\[\n\\begin{aligned}\n\\frac{7+i}{1-2i}\n&=\\frac{(7+i)(1+2i)}{(1-2i)(1+2i)}\\\\\n&=\\frac{7+14i+i+2i^2}{5}\\\\\n&=\\frac{5+15i}{5}\\\\\n&=1+3i.\n\\end{aligned}\n\\]\nLa verificación es\n\\[\n(1+3i)(1-2i)=1-2i+3i-6i^2=7+i.\n\\]\n4. Si \\(z=a+bi\\), entonces \\(z\\overline z=a^2+b^2\\). Por tanto, se requiere\n\\[\na^2+b^2=25,\n\\]\njunto con \\(b\\ne0\\) para que \\(z\\) no sea real. Por ejemplo, \\(z=3+4i\\) cumple \\(3^2+4^2=25\\) y su conjugado es \\(\\overline z=3-4i\\). Los puntos \\((3,4)\\) y \\((3,-4)\\) son simétricos respecto del eje real. También es válida la elección \\(z=5i\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-19-sesion-08.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-19-sesion-08.html#ejercicios-para-practicar",
+    "title": "Sesión 08. Números complejos: multiplicación, división y conjugado",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nCalcule \\((4+3i)(2-i)\\) y \\((1+i)(1-i)\\).\nCalcule \\(i^{14}\\), \\(i^{33}\\) e \\(i^{100}\\).\nEscriba el conjugado de \\(4-7i\\), de \\(-2i\\) y de \\(6\\). Calcule el producto de \\(4-7i\\) por su conjugado.\nCalcule \\(\\dfrac{5-10i}{3+4i}\\) y exprese \\(\\dfrac1i\\) en forma cartesiana.\nDetermine el número complejo \\(z\\) que satisface \\((2-i)z=5\\) y verifique el resultado mediante una multiplicación.\nCalcule el producto de \\(6+\\sqrt{-25}\\) por \\(6-\\sqrt{-25}\\) y compare el resultado con la identidad \\(z\\overline z=a^2+b^2\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Sesión 08. Números complejos: multiplicación, división y conjugado</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -1091,7 +1179,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1102,7 +1190,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1113,7 +1201,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1124,7 +1212,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1135,7 +1223,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1146,7 +1234,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1157,7 +1245,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1168,7 +1256,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1179,7 +1267,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1190,7 +1278,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1201,7 +1289,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1212,7 +1300,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1223,7 +1311,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1234,7 +1322,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente \\(n\\).\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\).\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1245,7 +1333,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1256,7 +1344,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1267,7 +1355,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1278,7 +1366,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1289,7 +1377,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1300,7 +1388,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
