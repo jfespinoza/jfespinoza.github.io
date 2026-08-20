@@ -463,7 +463,7 @@ i^n=i^{4q+r}=\bigl(i^4\bigr)^q i^r=i^r.
 <p><span class="math display">\[
 \overline z=a-bi.
 \]</span></p>
-<p>Por ejemplo, <span class="math inline">\(\overline{3+2i}=3-2i\)</span>, <span class="math inline">\(\overline{-4i}=4i\)</span> y <span class="math inline">\(\overline 5=5\)</span>. En el plano complejo, <span class="math inline">\(\overline z\)</span> es el punto simétrico de <span class="math inline">\(z\)</span> respecto del eje real. Además:</p>
+<p>La barra debe abarcar toda la expresión cuyo conjugado se desea obtener. Por ejemplo, <span class="math inline">\(\overline{3+2i}=3-2i\)</span>, <span class="math inline">\(\overline{-4i}=4i\)</span> y <span class="math inline">\(\overline 5=5\)</span>. En el plano complejo, <span class="math inline">\(\overline z\)</span> es el punto simétrico de <span class="math inline">\(z\)</span> respecto del eje real. Además:</p>
 <ul>
 <li><span class="math inline">\(\overline{\overline z}=z\)</span>;</li>
 <li><span class="math inline">\(z=\overline z\)</span> exactamente cuando <span class="math inline">\(z\)</span> es real;</li>
@@ -478,10 +478,15 @@ z\overline z=(a+bi)(a-bi)=a^2-(bi)^2=a^2-b^2i^2=a^2+b^2.
 </section>
 <section id="división" class="level2">
 <h2 class="anchored" data-anchor-id="división">División</h2>
-<p>Sean <span class="math inline">\(z,w\in\mathbb C\)</span> con <span class="math inline">\(w\ne0\)</span>. El cociente <span class="math inline">\(\dfrac zw\)</span> es el número complejo <span class="math inline">\(q\)</span> que satisface <span class="math inline">\(qw=z\)</span>. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador, lo que produce una fracción equivalente como las estudiadas en la Sesión 04:</p>
+<p>Sean <span class="math inline">\(z,w\in\mathbb C\)</span> con <span class="math inline">\(w\ne0\)</span>. El cociente <span class="math inline">\(\dfrac zw\)</span> es el número complejo <span class="math inline">\(q\)</span> que satisface <span class="math inline">\(qw=z\)</span>. Al multiplicar esta igualdad por el conjugado de <span class="math inline">\(w\)</span> se obtiene</p>
 <p><span class="math display">\[
-\frac zw=\frac{z\,\overline w}{w\,\overline w}.
+q\bigl(w\,\overline w\bigr)=z\,\overline w.
 \]</span></p>
+<p>Como <span class="math inline">\(w\,\overline w\)</span> es un número real positivo, se puede dividir entre él y obtener</p>
+<p><span class="math display">\[
+q=\frac{z\,\overline w}{w\,\overline w}=\frac zw.
+\]</span></p>
+<p>Esta derivación proporciona la regla de multiplicar el numerador y el denominador por el conjugado del denominador.</p>
 <p>Si <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\ne0\)</span>, entonces</p>
 <p><span class="math display">\[
 \frac{a+bi}{c+di}
