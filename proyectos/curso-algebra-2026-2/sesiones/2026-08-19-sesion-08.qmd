@@ -46,7 +46,7 @@ $$
 \overline z=a-bi.
 $$
 
-Por ejemplo, $\overline{3+2i}=3-2i$, $\overline{-4i}=4i$ y $\overline 5=5$. En el plano complejo, $\overline z$ es el punto simétrico de $z$ respecto del eje real. Además:
+La barra debe abarcar toda la expresión cuyo conjugado se desea obtener. Por ejemplo, $\overline{3+2i}=3-2i$, $\overline{-4i}=4i$ y $\overline 5=5$. En el plano complejo, $\overline z$ es el punto simétrico de $z$ respecto del eje real. Además:
 
 - $\overline{\overline z}=z$;
 - $z=\overline z$ exactamente cuando $z$ es real;
@@ -64,11 +64,19 @@ La cantidad $a^2+b^2$ es real y no negativa, y vale $0$ exactamente cuando $z=0$
 
 ## División
 
-Sean $z,w\in\mathbb C$ con $w\ne0$. El cociente $\dfrac zw$ es el número complejo $q$ que satisface $qw=z$. Para expresarlo en forma cartesiana se multiplican el numerador y el denominador por el conjugado del denominador, lo que produce una fracción equivalente como las estudiadas en la Sesión 04:
+Sean $z,w\in\mathbb C$ con $w\ne0$. El cociente $\dfrac zw$ es el número complejo $q$ que satisface $qw=z$. Al multiplicar esta igualdad por el conjugado de $w$ se obtiene
 
 $$
-\frac zw=\frac{z\,\overline w}{w\,\overline w}.
+q\bigl(w\,\overline w\bigr)=z\,\overline w.
 $$
+
+Como $w\,\overline w$ es un número real positivo, se puede dividir entre él y obtener
+
+$$
+q=\frac{z\,\overline w}{w\,\overline w}=\frac zw.
+$$
+
+Esta derivación proporciona la regla de multiplicar el numerador y el denominador por el conjugado del denominador.
 
 Si $z=a+bi$ y $w=c+di\ne0$, entonces
 
