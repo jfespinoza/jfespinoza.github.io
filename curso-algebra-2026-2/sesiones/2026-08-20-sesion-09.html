@@ -481,17 +481,43 @@ z\overline z=\lvert z\rvert^2.
 </section>
 <section id="forma-polar" class="level2">
 <h2 class="anchored" data-anchor-id="forma-polar">Forma polar</h2>
-<p>Sea <span class="math inline">\(z=a+bi\ne0\)</span>, con <span class="math inline">\(r=\lvert z\rvert\)</span> y <span class="math inline">\(\theta\)</span> un argumento de <span class="math inline">\(z\)</span>. Las proyecciones del punto sobre los ejes dan</p>
+<p>Sea <span class="math inline">\(z=a+bi\ne0\)</span>, con <span class="math inline">\(r=\lvert z\rvert\)</span> y <span class="math inline">\(\theta=\operatorname{Arg}z\)</span>. Para definir geométricamente el seno y el coseno, considérese primero el caso <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b&gt;0\)</span>, en el que <span class="math inline">\(\theta\)</span> es un ángulo agudo.</p>
+<figure style="max-width: 760px; margin: 1.5rem auto;" class="figure">
+<svg viewbox="0 0 760 420" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s09-geometria-title s09-geometria-desc" focusable="false" style="display: block; width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
+<title id="s09-geometria-title">
+Módulo, argumento y proyecciones de un número complejo
+</title>
+<desc id="s09-geometria-desc">Plano complejo con el número z igual a a más bi en el primer cuadrante. El segmento desde el origen hasta z tiene longitud r igual al módulo de z y forma un ángulo theta con el eje real. Sus proyecciones horizontal y vertical tienen longitudes a y b.</desc> <defs> <marker id="s09-flecha-eje" markerwidth="8" markerheight="8" refx="7" refy="4" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L8,4 L0,8 Z" fill="#495057"></path> </marker> <marker id="s09-flecha-vector" markerwidth="9" markerheight="9" refx="8" refy="4.5" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d6efd"></path> </marker> <marker id="s09-flecha-angulo" viewbox="0 0 10 10" markerwidth="10" markerheight="10" refx="9" refy="5" orient="auto" markerunits="userSpaceOnUse"> <path d="M0,0 L10,5 L0,10 Z" fill="#b83b0a"></path> </marker> </defs> <rect x="1" y="1" width="758" height="418" rx="12" fill="#ffffff" stroke="#ced4da" stroke-width="2"></rect> <g stroke="#e9ecef" stroke-width="1"> <line x1="190" y1="45" x2="190" y2="375"></line> <line x1="270" y1="45" x2="270" y2="375"></line> <line x1="350" y1="45" x2="350" y2="375"></line> <line x1="430" y1="45" x2="430" y2="375"></line> <line x1="510" y1="45" x2="510" y2="375"></line> <line x1="590" y1="45" x2="590" y2="375"></line> <line x1="670" y1="45" x2="670" y2="375"></line> <line x1="70" y1="260" x2="700" y2="260"></line> <line x1="70" y1="180" x2="700" y2="180"></line> <line x1="70" y1="100" x2="700" y2="100"></line> </g> <path d="M110 340 L540 340 L540 100 Z" fill="#dbeafe" fill-opacity="0.55"></path> <g stroke="#495057" stroke-width="2.2" fill="none"> <line x1="70" y1="340" x2="705" y2="340" marker-end="url(#s09-flecha-eje)"></line> <line x1="110" y1="382" x2="110" y2="38" marker-end="url(#s09-flecha-eje)"></line> </g> <g stroke="#6c757d" stroke-width="2" stroke-dasharray="7 6" fill="none"> <line x1="540" y1="100" x2="540" y2="340"></line> <line x1="110" y1="100" x2="540" y2="100"></line> </g> <line x1="110" y1="340" x2="540" y2="100" stroke="#0d6efd" stroke-width="4" marker-end="url(#s09-flecha-vector)"></line> <path d="M190 340 A80 80 0 0 0 180 301" fill="none" stroke="#b83b0a" stroke-width="4" marker-end="url(#s09-flecha-angulo)"></path> <path d="M523 340 L523 323 L540 323" fill="none" stroke="#6c757d" stroke-width="2"></path> <circle cx="540" cy="100" r="6" fill="#b02a37"></circle> <g fill="#212529" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24"> <text x="690" y="370" text-anchor="end">eje real</text> <text x="122" y="45">eje imaginario</text> <text x="91" y="363">0</text> <text x="321" y="365" font-style="italic">a</text> <text x="555" y="224" font-style="italic">b</text> <text x="557" y="91" font-style="italic">z = a + bi</text> <text x="300" y="190" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill" font-style="italic" transform="rotate(-29 300 190)">r = |z|</text> <text x="158" y="308" fill="#b83b0a" stroke="#ffffff" stroke-width="5" paint-order="stroke fill" font-style="italic">θ</text> </g>
+</svg>
+<figcaption style="text-align: center; color: #495057; font-size: 0.95rem; margin-top: 0.5rem;">
+Para <em>a</em> &gt; 0 y <em>b</em> &gt; 0, el módulo es la hipotenusa; <em>a</em> y <em>b</em> son las proyecciones sobre los ejes, y θ es un argumento de <em>z</em>.
+</figcaption>
+</figure>
+<p>El origen, el punto <span class="math inline">\(z\)</span> y su proyección <span class="math inline">\((a,0)\)</span> sobre el eje real forman un triángulo rectángulo. Respecto del ángulo <span class="math inline">\(\theta\)</span>, el cateto adyacente tiene longitud <span class="math inline">\(a\)</span>, el cateto opuesto tiene longitud <span class="math inline">\(b\)</span> y la hipotenusa tiene longitud <span class="math inline">\(r\)</span>. Por definición,</p>
+<p><span class="math display">\[
+\cos\theta=\frac{\text{cateto adyacente}}{\text{hipotenusa}}=\frac ar,
+\qquad
+\operatorname{sen}\theta=\frac{\text{cateto opuesto}}{\text{hipotenusa}}=\frac br.
+\]</span></p>
+<p>Por tanto,</p>
 <p><span class="math display">\[
 a=r\cos\theta,
 \qquad
-b=r\operatorname{sen}\theta,
+b=r\operatorname{sen}\theta.
 \]</span></p>
-<p>donde <span class="math inline">\(\cos\)</span> y <span class="math inline">\(\operatorname{sen}\)</span> son las funciones coseno y seno de sus cursos previos. Al sustituir en <span class="math inline">\(z=a+bi\)</span> se obtiene la <strong>forma polar</strong>:</p>
+<p>En los demás cuadrantes se forma el triángulo rectángulo con las longitudes <span class="math inline">\(\lvert a\rvert\)</span>, <span class="math inline">\(\lvert b\rvert\)</span> y <span class="math inline">\(r\)</span>. El ángulo agudo de ese triángulo es el <strong>ángulo de referencia</strong>; los signos del coseno y del seno se toman de los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Sobre los ejes, los valores se obtienen directamente de las coordenadas. De este modo, las fórmulas anteriores se conservan para cualquier <span class="math inline">\(z\ne0\)</span>.</p>
+<p>Al sustituir estas expresiones en <span class="math inline">\(z=a+bi\)</span> se obtiene la <strong>forma polar</strong>:</p>
 <p><span class="math display">\[
 z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr).
 \]</span></p>
-<p>La forma polar no es única: sirve cualquier argumento de <span class="math inline">\(z\)</span>. Se usará normalmente el argumento principal. Dos formas polares con módulo positivo representan el mismo número exactamente cuando tienen el mismo módulo y sus ángulos difieren en un múltiplo entero de <span class="math inline">\(2\pi\)</span>. Como <span class="math inline">\(0\)</span> no tiene argumento, se escribe simplemente como <span class="math inline">\(0\)</span> y no se le asigna una forma polar mediante esta definición.</p>
+<p>Una vuelta completa no cambia la semirrecta ni sus proyecciones. Por ello,</p>
+<p><span class="math display">\[
+\cos(\theta+2k\pi)=\cos\theta,
+\qquad
+\operatorname{sen}(\theta+2k\pi)=\operatorname{sen}\theta,
+\qquad k\in\mathbb Z.
+\]</span></p>
+<p>La forma polar no es única: sirve cualquier argumento de <span class="math inline">\(z\)</span>, aunque se usará normalmente el argumento principal. Dos formas polares con módulo positivo representan el mismo número exactamente cuando tienen el mismo módulo y sus ángulos difieren en un múltiplo entero de <span class="math inline">\(2\pi\)</span>. Como <span class="math inline">\(0\)</span> no tiene argumento, se escribe simplemente como <span class="math inline">\(0\)</span> y no se le asigna una forma polar mediante esta definición.</p>
 <p>Para las conversiones se usan los siguientes valores notables del intervalo <span class="math inline">\([0,\pi/2]\)</span>:</p>
 <table class="caption-top table">
 <colgroup>
@@ -531,7 +557,7 @@ z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr).
 </tr>
 </tbody>
 </table>
-<p>En los cuadrantes segundo, tercero y cuarto, el coseno y el seno se obtienen con el <strong>ángulo de referencia</strong> —el ángulo agudo entre la semirrecta y el eje real— y los signos del cuadrante. Los casos sobre los ejes se leen directamente de la tabla. Por ejemplo, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\cos\dfrac{\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\operatorname{sen}\dfrac{\pi}{3}=\dfrac{\sqrt3}{2}\)</span>.</p>
+<p>En los cuadrantes segundo, tercero y cuarto, el coseno y el seno se obtienen con el ángulo de referencia y los signos del cuadrante. Por ejemplo, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\cos\dfrac{\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\operatorname{sen}\dfrac{\pi}{3}=\dfrac{\sqrt3}{2}\)</span>.</p>
 <p>Las dos conversiones son:</p>
 <ul>
 <li><strong>de cartesiana a polar:</strong> calcular <span class="math inline">\(r=\sqrt{a^2+b^2}\)</span> y determinar <span class="math inline">\(\theta\)</span> mediante las dos condiciones <span class="math inline">\(\cos\theta=\dfrac ar\)</span> y <span class="math inline">\(\operatorname{sen}\theta=\dfrac br\)</span>, ubicando el cuadrante o el eje con los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>;</li>
@@ -596,7 +622,7 @@ z=4\biggl(\frac{\sqrt3}{2}+\frac12\,i\biggr)=2\sqrt3+2i.
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
 <li><p>Calcule el módulo y el argumento principal de <span class="math inline">\(z=-\sqrt3-i\)</span> y de <span class="math inline">\(w=2+2\sqrt3\,i\)</span>, y escriba ambos números en forma polar.</p></li>
 <li><p>En la conversión</p>
@@ -628,7 +654,11 @@ B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
 <p><span class="math display">\[
 \lvert z\rvert=\sqrt{(-\sqrt3)^2+(-1)^2}=2.
 \]</span></p>
-<p>Como <span class="math inline">\(\cos\theta=-\dfrac{\sqrt3}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac12\)</span>, el punto está en el tercer cuadrante y <span class="math inline">\(\operatorname{Arg}z=-\dfrac{5\pi}{6}\)</span>. Por tanto,</p>
+<p>Como <span class="math inline">\(\cos\theta=-\dfrac{\sqrt3}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac12\)</span>, el punto está en el tercer cuadrante. El ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{6}\)</span>, así que</p>
+<p><span class="math display">\[
+\operatorname{Arg}z=-\pi+\frac{\pi}{6}=-\frac{5\pi}{6}.
+\]</span></p>
+<p>Por tanto,</p>
 <p><span class="math display">\[
 z=2\Bigl(\cos\Bigl(-\frac{5\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\frac{5\pi}{6}\Bigr)\Bigr).
 \]</span></p>
