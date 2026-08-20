@@ -45,6 +45,7 @@ book:
         - sesiones/2026-08-17-sesion-06.qmd
         - sesiones/2026-08-18-sesion-07.qmd
         - sesiones/2026-08-19-sesion-08.qmd
+        - sesiones/2026-08-20-sesion-09.qmd
     - part: "Unidad 2. Polinomios y raíces"
       chapters:
         - unidades/02-polinomios-raices.qmd

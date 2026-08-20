@@ -1,0 +1,222 @@
+---
+title: "Sesión 09. Números complejos: módulo, argumento y forma polar"
+date: 2026-08-20
+description: "Módulo como distancia al origen, argumentos y argumento principal, forma polar y conversiones entre las formas cartesiana y polar."
+---
+
+## El módulo
+
+El **módulo** de $z=a+bi$ es el número real
+
+$$
+\lvert z\rvert=\sqrt{a^2+b^2}.
+$$
+
+Su significado es geométrico: bajo la correspondencia $z\longleftrightarrow(a,b)$ de la Sesión 07, el módulo es la **distancia del punto que representa a $z$ al origen** del plano complejo, obtenida por el teorema de Pitágoras en el triángulo rectángulo de catetos $\lvert a\rvert$ y $\lvert b\rvert$.
+
+Si $z=a$ es real, entonces $\lvert z\rvert=\sqrt{a^2}=\lvert a\rvert$: el módulo extiende al plano el valor absoluto estudiado en la Sesión 06. En ambos casos, las barras expresan una distancia al origen. Tres observaciones:
+
+- $\lvert z\rvert\ge0$ para todo $z$, y $\lvert z\rvert=0$ exactamente cuando $z=0$; en particular, $\lvert0\rvert=0$;
+- $\lvert\overline z\rvert=\lvert z\rvert$: la simetría respecto del eje real, estudiada en la Sesión 08, conserva la distancia al origen;
+- la identidad $z\overline z=a^2+b^2$ de la Sesión 08 dice precisamente que
+
+$$
+z\overline z=\lvert z\rvert^2.
+$$
+
+Esta es la interpretación geométrica anunciada en esa sesión: la ecuación $z\overline z=25$ describe la circunferencia con centro en el origen y radio $5$. El reactivo 4 de la actividad de la Sesión 08 añadió la condición de que $z$ no fuera real, por lo que excluyó los puntos $5$ y $-5$.
+
+## Argumentos y argumento principal
+
+Sea $z\ne0$. El punto que representa a $z$ determina una semirrecta que parte del origen. Un **argumento** de $z$ es un ángulo orientado desde el semieje real positivo hasta esa semirrecta: los ángulos positivos se miden en sentido contrario a las manecillas del reloj y los negativos, en sentido horario. Los ángulos se expresan en radianes: $\pi$ radianes equivalen a $180^\circ$.
+
+Un número no nulo tiene una infinidad de argumentos: si $\theta$ es uno de ellos, también lo son $\theta+2\pi$, $\theta-2\pi$ y, en general, $\theta+2k\pi$ con $k\in\mathbb Z$, pues una vuelta completa regresa a la misma semirrecta. Para trabajar con un representante único se elige el **argumento principal**, denotado $\operatorname{Arg}z$: el único argumento en el intervalo $(-\pi,\pi]$.
+
+El número $0$ es la excepción: no determina ninguna semirrecta y, por tanto, **no tiene argumento**, aunque su módulo sí está definido: $\lvert0\rvert=0$.
+
+La ubicación del punto determina el argumento principal:
+
+| Ubicación de $z\ne0$ | $\operatorname{Arg}z$ |
+|---|---|
+| Semieje real positivo | $0$ |
+| Primer cuadrante | entre $0$ y $\dfrac{\pi}{2}$ |
+| Semieje imaginario positivo | $\dfrac{\pi}{2}$ |
+| Segundo cuadrante | entre $\dfrac{\pi}{2}$ y $\pi$ |
+| Semieje real negativo | $\pi$ |
+| Tercer cuadrante | entre $-\pi$ y $-\dfrac{\pi}{2}$ |
+| Semieje imaginario negativo | $-\dfrac{\pi}{2}$ |
+| Cuarto cuadrante | entre $-\dfrac{\pi}{2}$ y $0$ |
+
+Debajo del eje real, el argumento principal es negativo: la convención $\operatorname{Arg}z\in(-\pi,\pi]$ representa esas direcciones mediante ángulos medidos en sentido horario desde el semieje real positivo.
+
+## Forma polar
+
+Sea $z=a+bi\ne0$, con $r=\lvert z\rvert$ y $\theta$ un argumento de $z$. Las proyecciones del punto sobre los ejes dan
+
+$$
+a=r\cos\theta,
+\qquad
+b=r\operatorname{sen}\theta,
+$$
+
+donde $\cos$ y $\operatorname{sen}$ son las funciones coseno y seno de sus cursos previos. Al sustituir en $z=a+bi$ se obtiene la **forma polar**:
+
+$$
+z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr).
+$$
+
+La forma polar no es única: sirve cualquier argumento de $z$. Se usará normalmente el argumento principal. Dos formas polares con módulo positivo representan el mismo número exactamente cuando tienen el mismo módulo y sus ángulos difieren en un múltiplo entero de $2\pi$. Como $0$ no tiene argumento, se escribe simplemente como $0$ y no se le asigna una forma polar mediante esta definición.
+
+Para las conversiones se usan los siguientes valores notables del intervalo $[0,\pi/2]$:
+
+| $\theta$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
+|---|---|---|---|---|---|
+| $\cos\theta$ | $1$ | $\dfrac{\sqrt3}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac12$ | $0$ |
+| $\operatorname{sen}\theta$ | $0$ | $\dfrac12$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{\sqrt3}{2}$ | $1$ |
+
+En los cuadrantes segundo, tercero y cuarto, el coseno y el seno se obtienen con el **ángulo de referencia** —el ángulo agudo entre la semirrecta y el eje real— y los signos del cuadrante. Los casos sobre los ejes se leen directamente de la tabla. Por ejemplo, $\cos\dfrac{2\pi}{3}=-\cos\dfrac{\pi}{3}=-\dfrac12$ y $\operatorname{sen}\dfrac{2\pi}{3}=\operatorname{sen}\dfrac{\pi}{3}=\dfrac{\sqrt3}{2}$.
+
+Las dos conversiones son:
+
+- **de cartesiana a polar:** calcular $r=\sqrt{a^2+b^2}$ y determinar $\theta$ mediante las dos condiciones $\cos\theta=\dfrac ar$ y $\operatorname{sen}\theta=\dfrac br$, ubicando el cuadrante o el eje con los signos de $a$ y $b$;
+- **de polar a cartesiana:** evaluar $a=r\cos\theta$ y $b=r\operatorname{sen}\theta$.
+
+## Ejemplos
+
+### Ejemplo 1. Módulo
+
+Calcular el módulo de $3+4i$, de $-2i$ y de $-7$.
+
+$$
+\lvert3+4i\rvert=\sqrt{3^2+4^2}=\sqrt{25}=5,
+\qquad
+\lvert-2i\rvert=\sqrt{0^2+(-2)^2}=2,
+\qquad
+\lvert-7\rvert=\sqrt{(-7)^2}=7.
+$$
+
+El tercero coincide con el valor absoluto de $-7$, como debe ser. La identidad de la Sesión 08 confirma el primero:
+
+$$
+(3+4i)(3-4i)=3^2+4^2=25=\lvert3+4i\rvert^2.
+$$
+
+### Ejemplo 2. Argumento principal sobre los ejes
+
+Determinar el argumento principal de $2$, $3i$, $-4$ y $-i$.
+
+Los cuatro puntos están sobre los ejes: $\operatorname{Arg}2=0$, $\operatorname{Arg}3i=\dfrac{\pi}{2}$, $\operatorname{Arg}(-4)=\pi$ y $\operatorname{Arg}(-i)=-\dfrac{\pi}{2}$. En el último caso la convención exige $-\dfrac{\pi}{2}$ y no $\dfrac{3\pi}{2}$, que está fuera de $(-\pi,\pi]$.
+
+### Ejemplo 3. De la forma cartesiana a la polar
+
+Escribir $z=-1+i$ en forma polar.
+
+El módulo es $r=\sqrt{(-1)^2+1^2}=\sqrt2$. El ángulo debe cumplir
+
+$$
+\cos\theta=-\frac{1}{\sqrt2}=-\frac{\sqrt2}{2}
+\qquad\text{y}\qquad
+\operatorname{sen}\theta=\frac{1}{\sqrt2}=\frac{\sqrt2}{2}.
+$$
+
+Como $a<0$ y $b>0$, el punto está en el segundo cuadrante; el ángulo de referencia es $\dfrac{\pi}{4}$, así que $\operatorname{Arg}z=\pi-\dfrac{\pi}{4}=\dfrac{3\pi}{4}$. Por tanto,
+
+$$
+-1+i=\sqrt2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr).
+$$
+
+### Ejemplo 4. De la forma polar a la cartesiana
+
+Escribir $z=4\Bigl(\cos\dfrac{\pi}{6}+i\operatorname{sen}\dfrac{\pi}{6}\Bigr)$ en forma cartesiana.
+
+Con los valores de referencia,
+
+$$
+z=4\biggl(\frac{\sqrt3}{2}+\frac12\,i\biggr)=2\sqrt3+2i.
+$$
+
+La verificación por módulo confirma el resultado: $\lvert2\sqrt3+2i\rvert=\sqrt{12+4}=\sqrt{16}=4$, que es el $r$ original.
+
+## Errores frecuentes
+
+- **Sumar las partes en lugar de aplicar la definición.** Se tiene $\lvert3+4i\rvert=5$, no $3+4=7$: el módulo es $\sqrt{a^2+b^2}$, no $a+b$.
+- **Confundir el módulo con su cuadrado.** Para $3+4i$, la cantidad $a^2+b^2=25$ es $\lvert z\rvert^2$; el módulo es $\sqrt{25}=5$, no $25$: no debe omitirse la raíz.
+- **Reportar el argumento principal fuera de $(-\pi,\pi]$.** Se tiene $\operatorname{Arg}(-i)=-\dfrac{\pi}{2}$, no $\dfrac{3\pi}{2}$: debajo del eje real, el argumento principal es negativo.
+- **Ignorar el cuadrante en la conversión.** Para $-1+i$, el argumento principal es $\dfrac{3\pi}{4}$, no $-\dfrac{\pi}{4}$: deben cumplirse a la vez las condiciones del coseno y del seno, y los signos de $a$ y $b$ ubican el cuadrante.
+- **Asignar argumento al cero.** Escribir $\operatorname{Arg}0=0$ es incorrecto: el $0$ no determina semirrecta alguna, así que no tiene argumento, aunque $\lvert0\rvert=0$.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera.
+
+1. Calcule el módulo y el argumento principal de $z=-\sqrt3-i$ y de $w=2+2\sqrt3\,i$, y escriba ambos números en forma polar.
+2. En la conversión
+
+   $$
+   1-i=\sqrt2\Bigl(\cos\frac{\pi}{4}+i\operatorname{sen}\frac{\pi}{4}\Bigr)
+   $$
+
+   identifique el error, corrija la forma polar e indique qué número representa en realidad la expresión de la derecha.
+3. Escriba $z=6\Bigl(\cos\dfrac{2\pi}{3}+i\operatorname{sen}\dfrac{2\pi}{3}\Bigr)$ en forma cartesiana y verifique que el módulo del resultado es $6$.
+4. Describa y represente los conjuntos
+
+   $$
+   A=\{z\in\mathbb C:\lvert z\rvert=3\}
+   \qquad\text{y}\qquad
+   B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
+   $$
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Para $z=-\sqrt3-i$,
+
+$$
+\lvert z\rvert=\sqrt{(-\sqrt3)^2+(-1)^2}=2.
+$$
+
+Como $\cos\theta=-\dfrac{\sqrt3}{2}$ y $\operatorname{sen}\theta=-\dfrac12$, el punto está en el tercer cuadrante y $\operatorname{Arg}z=-\dfrac{5\pi}{6}$. Por tanto,
+
+$$
+z=2\Bigl(\cos\Bigl(-\frac{5\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\frac{5\pi}{6}\Bigr)\Bigr).
+$$
+
+Para $w=2+2\sqrt3\,i$,
+
+$$
+\lvert w\rvert=\sqrt{2^2+(2\sqrt3)^2}=4.
+$$
+
+Como $\cos\theta=\dfrac12$ y $\operatorname{sen}\theta=\dfrac{\sqrt3}{2}$, el punto está en el primer cuadrante y $\operatorname{Arg}w=\dfrac{\pi}{3}$. Entonces
+
+$$
+w=4\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+$$
+
+**2.** El módulo $\sqrt2$ es correcto, pero el ángulo se tomó sin revisar los signos: la parte imaginaria de $1-i$ es negativa, mientras que $\operatorname{sen}\dfrac{\pi}{4}>0$. Las condiciones $\cos\theta=\dfrac{\sqrt2}{2}$ y $\operatorname{sen}\theta=-\dfrac{\sqrt2}{2}$ ubican el punto en el cuarto cuadrante: $\operatorname{Arg}(1-i)=-\dfrac{\pi}{4}$ y
+
+$$
+1-i=\sqrt2\Bigl(\cos\Bigl(-\frac{\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{4}\Bigr)\Bigr).
+$$
+
+La expresión propuesta vale $\sqrt2\Bigl(\dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}\,i\Bigr)=1+i$: representa el conjugado de $1-i$.
+
+**3.** Con el ángulo de referencia $\dfrac{\pi}{3}$ en el segundo cuadrante, $\cos\dfrac{2\pi}{3}=-\dfrac12$ y $\operatorname{sen}\dfrac{2\pi}{3}=\dfrac{\sqrt3}{2}$. Por tanto,
+
+$$
+z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
+$$
+
+La verificación: $\lvert-3+3\sqrt3\,i\rvert=\sqrt{9+27}=\sqrt{36}=6$.
+
+**4.** $A$ es la **circunferencia** con centro en el origen y radio $3$: todos los puntos cuya distancia al origen es $3$. $B$ consta de los puntos de la semirrecta de dirección $\dfrac{\pi}{4}$, con el origen excluido: sus elementos son los números $r\Bigl(\cos\dfrac{\pi}{4}+i\operatorname{sen}\dfrac{\pi}{4}\Bigr)$ con $r>0$. El origen se excluye porque $0$ no tiene argumento.
+
+:::
+
+## Ejercicios para practicar
+
+1. Calcule $\lvert-6\rvert$, $\lvert12-5i\rvert$ y $\lvert i\rvert$.
+2. Determine el argumento principal de $7$, $-7$, $4i$ y $-1-i$.
+3. Escriba $1+\sqrt3\,i$ y $-4$ en forma polar.
+4. Exprese $w=10\Bigl(\cos\Bigl(-\dfrac{\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\dfrac{\pi}{6}\Bigr)\Bigr)$ en forma cartesiana.
+5. Para $z=2-3i$, calcule $\lvert z\rvert$, $\lvert\overline z\rvert$ y $z\overline z$, y compruebe que $z\overline z=\lvert z\rvert^2$, como en la Sesión 08.
+6. Describa el conjunto $\{z\in\mathbb C:\lvert z\rvert=1\}$ y proponga tres de sus elementos: uno real, uno imaginario puro y uno que no sea de ninguno de esos dos tipos.
