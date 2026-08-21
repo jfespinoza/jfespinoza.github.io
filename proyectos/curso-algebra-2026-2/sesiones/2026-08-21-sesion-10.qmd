@@ -53,6 +53,7 @@ La suma $\theta+\varphi$ es un argumento del producto, pero no necesariamente su
 
 Si uno de los factores es $0$, el producto es $0$. La igualdad de módulos continúa siendo válida, pero no se aplica una regla de argumentos porque $0$ no tiene argumento.
 
+```{=html}
 <figure style="max-width: 960px; margin: 1.75rem auto;">
 <div role="region" aria-label="Gráfico desplazable del producto en forma polar" tabindex="0" style="max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 0.35rem;">
 <svg viewBox="0 0 960 580" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="s10-producto-title s10-producto-desc" focusable="false" style="display: block; width: 100%; min-width: 840px; height: auto;" xmlns="http://www.w3.org/2000/svg">
@@ -165,6 +166,7 @@ Si uno de los factores es $0$, el producto es $0$. La igualdad de módulos conti
 </div>
 <figcaption style="text-align: center; color: #475569; font-size: 0.95rem; margin-top: 0.65rem;">En una escala común, <em>z</em> tiene módulo 2 y argumento π/3, mientras que <em>w</em> tiene módulo 3 y argumento π/6. El producto multiplica las longitudes y encadena los giros: por eso <em>zw</em> tiene módulo 6 y argumento π/2.</figcaption>
 </figure>
+```
 
 ## División en forma polar
 
