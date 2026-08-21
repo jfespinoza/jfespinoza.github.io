@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Clases, asesorías, parciales, días inhábiles y reposiciones.">
+<meta name="description" content="Reglas del producto y del cociente en forma polar, argumentos módulo 2π, comparación con la forma cartesiana y lectura magnitud-fase.">
 
-<title>Calendario del curso – Álgebra</title>
+<title>Sesión 10. Números complejos: multiplicación y división en forma polar – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../curso/acceso-teams.html" rel="next">
-<link href="../curso/evaluacion-asistencia.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-20-sesion-09.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Calendario del curso – Álgebra">
-<meta property="og:description" content="Clases, asesorías, parciales, días inhábiles y reposiciones.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 10. Números complejos: multiplicación y división en forma polar – Álgebra">
+<meta property="og:description" content="Reglas del producto y del cociente en forma polar, argumentos módulo 2π, comparación con la forma cartesiana y lectura magnitud-fase.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/calendario.html"><span class="chapter-title">Calendario del curso</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-21-sesion-10.html"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -128,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Información del curso</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
@@ -157,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Calendario del curso</span></a>
+  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calendario del curso</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -169,13 +197,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -228,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
+  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
   </div>
 </li>
       </ul>
@@ -344,19 +372,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#fechas-principales" id="toc-fechas-principales" class="nav-link active" data-scroll-target="#fechas-principales">Fechas principales</a></li>
-  <li><a href="#asesorías-y-exámenes-parciales" id="toc-asesorías-y-exámenes-parciales" class="nav-link" data-scroll-target="#asesorías-y-exámenes-parciales">Asesorías y exámenes parciales</a></li>
-  <li><a href="#calendarización-semanal" id="toc-calendarización-semanal" class="nav-link" data-scroll-target="#calendarización-semanal">Calendarización semanal</a></li>
-  <li><a href="#semana-de-evaluación-ordinaria-y-reposiciones" id="toc-semana-de-evaluación-ordinaria-y-reposiciones" class="nav-link" data-scroll-target="#semana-de-evaluación-ordinaria-y-reposiciones">Semana de evaluación ordinaria y reposiciones</a></li>
+  <li><a href="#multiplicación-en-forma-polar" id="toc-multiplicación-en-forma-polar" class="nav-link active" data-scroll-target="#multiplicación-en-forma-polar">Multiplicación en forma polar</a></li>
+  <li><a href="#división-en-forma-polar" id="toc-división-en-forma-polar" class="nav-link" data-scroll-target="#división-en-forma-polar">División en forma polar</a></li>
+  <li><a href="#interpretación-geométrica-y-elección-de-forma" id="toc-interpretación-geométrica-y-elección-de-forma" class="nav-link" data-scroll-target="#interpretación-geométrica-y-elección-de-forma">Interpretación geométrica y elección de forma</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-producto-y-comparación-con-la-forma-cartesiana" id="toc-ejemplo-1.-producto-y-comparación-con-la-forma-cartesiana" class="nav-link" data-scroll-target="#ejemplo-1.-producto-y-comparación-con-la-forma-cartesiana">Ejemplo 1. Producto y comparación con la forma cartesiana</a></li>
+  <li><a href="#ejemplo-2.-división-y-verificación" id="toc-ejemplo-2.-división-y-verificación" class="nav-link" data-scroll-target="#ejemplo-2.-división-y-verificación">Ejemplo 2. División y verificación</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/calendario.html"><span class="chapter-title">Calendario del curso</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-21-sesion-10.html"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Calendario del curso</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></h1>
 </div>
 
 
@@ -364,6 +399,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">21 de agosto de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -373,223 +414,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="fechas-principales" class="level2">
-<h2 class="anchored" data-anchor-id="fechas-principales">Fechas principales</h2>
+<section id="multiplicación-en-forma-polar" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicación-en-forma-polar">Multiplicación en forma polar</h2>
+<p>La forma polar introducida en la Sesión 09 permite separar el efecto del producto sobre el módulo y sobre el argumento.</p>
+<p>Sean</p>
+<p><span class="math display">\[
+z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr),
+\qquad
+w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr),
+\]</span></p>
+<p>dos números complejos no nulos, donde <span class="math inline">\(r=\lvert z\rvert&gt;0\)</span> y <span class="math inline">\(s=\lvert w\rvert&gt;0\)</span>. Para obtener el producto se utilizan las identidades</p>
+<p><span class="math display">\[
+\cos(\theta+\varphi)=\cos\theta\cos\varphi-\operatorname{sen}\theta\operatorname{sen}\varphi,
+\]</span></p>
+<p><span class="math display">\[
+\operatorname{sen}(\theta+\varphi)=\operatorname{sen}\theta\cos\varphi+\cos\theta\operatorname{sen}\varphi.
+\]</span></p>
+<p>Al distribuir y sustituir <span class="math inline">\(i^2=-1\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+zw
+&amp;=rs\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)
+       \bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)\\
+&amp;=rs\bigl[(\cos\theta\cos\varphi-\operatorname{sen}\theta\operatorname{sen}\varphi)
+  +i(\operatorname{sen}\theta\cos\varphi+\cos\theta\operatorname{sen}\varphi)\bigr]\\
+&amp;=rs\bigl[\cos(\theta+\varphi)+i\operatorname{sen}(\theta+\varphi)\bigr].
+\end{aligned}
+\]</span></p>
+<p>Por tanto, <strong>al multiplicar números complejos no nulos en forma polar, los módulos se multiplican y los argumentos se suman módulo <span class="math inline">\(2\pi\)</span></strong>:</p>
+<p><span class="math display">\[
+\lvert zw\rvert=\lvert z\rvert\,\lvert w\rvert,
+\qquad
+\operatorname{Arg}(zw)\equiv\theta+\varphi\pmod{2\pi}.
+\]</span></p>
+<p>La suma <span class="math inline">\(\theta+\varphi\)</span> es un argumento del producto, pero no necesariamente su argumento principal. Para expresar <span class="math inline">\(\operatorname{Arg}(zw)\)</span> en el intervalo <span class="math inline">\((-\pi,\pi]\)</span>, se suma o se resta un múltiplo entero de <span class="math inline">\(2\pi\)</span> cuando sea necesario.</p>
+<p>Si uno de los factores es <span class="math inline">\(0\)</span>, el producto es <span class="math inline">\(0\)</span>. La igualdad de módulos continúa siendo válida, pero no se aplica una regla de argumentos porque <span class="math inline">\(0\)</span> no tiene argumento.</p>
+<figure style="max-width: 760px; margin: 1.5rem auto;" class="figure">
+<svg viewbox="0 0 760 420" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s10-producto-title s10-producto-desc" focusable="false" style="display: block; width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
+<title id="s10-producto-title">
+Multiplicación de números complejos en forma polar
+</title>
+<desc id="s10-producto-desc">Plano complejo con tres flechas desde el origen: z con módulo 2 y argumento pi sobre tres, w con módulo 3 y argumento pi sobre seis, y el producto zw con módulo 6 sobre el semieje imaginario positivo. Un arco marca el argumento de z y otro el giro correspondiente al argumento de w.</desc> <defs> <marker id="s10-flecha-eje" markerwidth="8" markerheight="8" refx="7" refy="4" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L8,4 L0,8 Z" fill="#495057"></path> </marker> <marker id="s10-flecha-vector" markerwidth="9" markerheight="9" refx="8" refy="4.5" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d6efd"></path> </marker> <marker id="s10-flecha-angulo" viewbox="0 0 10 10" markerwidth="10" markerheight="10" refx="9" refy="5" orient="auto" markerunits="userSpaceOnUse"> <path d="M0,0 L10,5 L0,10 Z" fill="#b83b0a"></path> </marker> </defs> <rect x="1" y="1" width="758" height="418" rx="12" fill="#ffffff" stroke="#ced4da" stroke-width="2"></rect> <g stroke="#e9ecef" stroke-width="1"> <line x1="230" y1="45" x2="230" y2="375"></line> <line x1="320" y1="45" x2="320" y2="375"></line> <line x1="410" y1="45" x2="410" y2="375"></line> <line x1="500" y1="45" x2="500" y2="375"></line> <line x1="590" y1="45" x2="590" y2="375"></line> <line x1="680" y1="45" x2="680" y2="375"></line> <line x1="70" y1="250" x2="700" y2="250"></line> <line x1="70" y1="160" x2="700" y2="160"></line> <line x1="70" y1="70" x2="700" y2="70"></line> </g> <g stroke="#495057" stroke-width="2.2" fill="none"> <line x1="70" y1="340" x2="705" y2="340" marker-end="url(#s10-flecha-eje)"></line> <line x1="140" y1="382" x2="140" y2="38" marker-end="url(#s10-flecha-eje)"></line> </g> <path d="M195 340 A55 55 0 0 0 167.5 292.4" fill="none" stroke="#b83b0a" stroke-width="4" marker-end="url(#s10-flecha-angulo)"></path> <path d="M182.5 266.4 A85 85 0 0 0 140 255" fill="none" stroke="#b83b0a" stroke-width="4" stroke-dasharray="8 5" marker-end="url(#s10-flecha-angulo)"></path> <line x1="140" y1="340" x2="185" y2="262.1" stroke="#0d6efd" stroke-width="3" marker-end="url(#s10-flecha-vector)"></line> <line x1="140" y1="340" x2="256.9" y2="272.5" stroke="#0d6efd" stroke-width="3" marker-end="url(#s10-flecha-vector)"></line> <line x1="140" y1="340" x2="140" y2="70" stroke="#0d6efd" stroke-width="4.5" marker-end="url(#s10-flecha-vector)"></line> <circle cx="140" cy="70" r="6" fill="#b02a37"></circle> <g fill="#212529" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24"> <text x="690" y="370" text-anchor="end">eje real</text> <text x="152" y="45">eje imaginario</text> <text x="121" y="363">0</text> <text x="193" y="247" font-style="italic" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill">z</text> <text x="266" y="264" font-style="italic" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill">w</text> <text x="156" y="78" font-style="italic" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill">zw</text> <text x="203" y="322" fill="#b83b0a" stroke="#ffffff" stroke-width="5" paint-order="stroke fill" font-style="italic">θ</text> <text x="196" y="230" fill="#b83b0a" stroke="#ffffff" stroke-width="5" paint-order="stroke fill" font-style="italic">φ</text> </g>
+</svg>
+<figcaption style="text-align: center; color: #495057; font-size: 0.95rem; margin-top: 0.5rem;">
+Si <em>z</em> tiene módulo 2 y argumento π/3, y <em>w</em> tiene módulo 3 y argumento π/6, entonces <em>zw</em> tiene módulo 6 y argumento π/2. El segundo ángulo representa el giro que se agrega al argumento de <em>z</em>.
+</figcaption>
+</figure>
+</section>
+<section id="división-en-forma-polar" class="level2">
+<h2 class="anchored" data-anchor-id="división-en-forma-polar">División en forma polar</h2>
+<p>Sea <span class="math inline">\(w\ne0\)</span>. Si además <span class="math inline">\(z\ne0\)</span>, escribimos</p>
+<p><span class="math display">\[
+z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr),
+\qquad
+w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr),
+\]</span></p>
+<p>con <span class="math inline">\(r,s&gt;0\)</span>. Entonces</p>
+<p><span class="math display">\[
+\frac zw=\frac rs\bigl[\cos(\theta-\varphi)+i\operatorname{sen}(\theta-\varphi)\bigr].
+\]</span></p>
+<p>En efecto, al multiplicar la expresión de la derecha por <span class="math inline">\(w\)</span>, los módulos producen <span class="math inline">\(\dfrac rs\,s=r\)</span> y los argumentos producen <span class="math inline">\((\theta-\varphi)+\varphi=\theta\)</span>; por tanto, se recupera <span class="math inline">\(z\)</span>.</p>
+<p>Así, <strong>al dividir en forma polar, los módulos se dividen y al argumento del dividendo se le resta el argumento del divisor</strong>:</p>
+<p><span class="math display">\[
+\left\lvert\frac zw\right\rvert=\frac{\lvert z\rvert}{\lvert w\rvert},
+\qquad
+\operatorname{Arg}\left(\frac zw\right)\equiv\theta-\varphi\pmod{2\pi}.
+\]</span></p>
+<p>La condición <span class="math inline">\(w\ne0\)</span> es indispensable. Si <span class="math inline">\(z=0\)</span> y <span class="math inline">\(w\ne0\)</span>, el cociente es <span class="math inline">\(0\)</span>; no se aplica la regla de los argumentos porque <span class="math inline">\(0\)</span> no tiene argumento.</p>
+</section>
+<section id="interpretación-geométrica-y-elección-de-forma" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-geométrica-y-elección-de-forma">Interpretación geométrica y elección de forma</h2>
+<p>Multiplicar por un número complejo no nulo de módulo <span class="math inline">\(s\)</span> y argumento <span class="math inline">\(\varphi\)</span> produce dos efectos: multiplica las distancias al origen por <span class="math inline">\(s\)</span> y gira las direcciones un ángulo <span class="math inline">\(\varphi\)</span>. Si <span class="math inline">\(s=1\)</span>, la distancia se conserva y el efecto es una rotación alrededor del origen.</p>
+<p>En una descripción magnitud-fase, el módulo representa la magnitud y el argumento representa la fase. La regla del producto indica que las magnitudes se multiplican y las fases se suman; la del cociente indica que las magnitudes se dividen y las fases se restan.</p>
+<p>La representación más eficiente depende de la operación, de la forma en que se proporcionan los números y de la forma solicitada para el resultado. Cuando ambos números ya están en forma polar, el producto y el cociente suelen calcularse directamente en esa forma; para sumar o restar suele convenir la forma cartesiana. Si los datos ya están en forma cartesiana y el producto es sencillo, convertirlos a forma polar puede añadir trabajo innecesario. No existe una regla que permita sumar por separado los módulos y los argumentos.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-producto-y-comparación-con-la-forma-cartesiana" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-producto-y-comparación-con-la-forma-cartesiana">Ejemplo 1. Producto y comparación con la forma cartesiana</h3>
+<p>Calcular <span class="math inline">\(zw\)</span> para</p>
+<p><span class="math display">\[
+z=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr),
+\qquad
+w=3\Bigl(\cos\frac{\pi}{6}+i\operatorname{sen}\frac{\pi}{6}\Bigr).
+\]</span></p>
+<p>En forma polar,</p>
+<p><span class="math display">\[
+zw=6\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=6i.
+\]</span></p>
+<p>En forma cartesiana, <span class="math inline">\(z=1+\sqrt3\,i\)</span> y <span class="math inline">\(w=\dfrac{3\sqrt3}{2}+\dfrac32i\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+\begin{aligned}
+zw
+&amp;=(1+\sqrt3\,i)\left(\frac{3\sqrt3}{2}+\frac32i\right)\\
+&amp;=\frac{3\sqrt3}{2}+\frac32i+\frac92i-\frac{3\sqrt3}{2}\\
+&amp;=6i.
+\end{aligned}
+\]</span></p>
+<p>Las dos formas producen el mismo resultado, pero la forma polar requiere menos operaciones.</p>
+</section>
+<section id="ejemplo-2.-división-y-verificación" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-división-y-verificación">Ejemplo 2. División y verificación</h3>
+<p>Calcular <span class="math inline">\(\dfrac zw\)</span> para</p>
+<p><span class="math display">\[
+z=6\Bigl(\cos\frac{5\pi}{6}+i\operatorname{sen}\frac{5\pi}{6}\Bigr),
+\qquad
+w=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+\]</span></p>
+<p>Los módulos se dividen y los argumentos se restan:</p>
+<p><span class="math display">\[
+\frac zw
+=2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)
+=2i.
+\]</span></p>
+<p>Para verificar, se multiplica el resultado por el divisor. El producto tiene módulo <span class="math inline">\(2\cdot3=6\)</span> y argumento <span class="math inline">\(\dfrac{\pi}{2}+\dfrac{\pi}{3}=\dfrac{5\pi}{6}\)</span>, por lo que se recupera <span class="math inline">\(z\)</span>.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Inicio de clases:</strong> lunes 10 de agosto de 2026.</li>
-<li><strong>Último día lectivo:</strong> viernes 27 de noviembre de 2026.</li>
-<li><strong>Límite de bajas voluntarias:</strong> miércoles 23 de septiembre de 2026.</li>
-<li><strong>Semana de evaluación ordinaria:</strong> lunes 30 de noviembre al viernes 4 de diciembre de 2026; en este curso se destinará a exámenes de reposición.</li>
+<li><strong>Multiplicar los argumentos.</strong> En un producto, los argumentos se suman; no se multiplican.</li>
+<li><strong>Sumar los módulos.</strong> En un producto, los módulos se multiplican. Por ejemplo, si los módulos son <span class="math inline">\(2\)</span> y <span class="math inline">\(3\)</span>, el módulo del producto es <span class="math inline">\(6\)</span>, no <span class="math inline">\(5\)</span>.</li>
+<li><strong>Invertir la resta en un cociente.</strong> Si <span class="math inline">\(\theta\)</span> es un argumento de <span class="math inline">\(z\)</span> y <span class="math inline">\(\varphi\)</span> es un argumento de <span class="math inline">\(w\)</span>, en <span class="math inline">\(\dfrac{z}{w}\)</span> se calcula <span class="math inline">\(\theta-\varphi\)</span>: se resta el argumento del divisor al del dividendo.</li>
+<li><strong>Confundir un argumento con el argumento principal.</strong> El ángulo <span class="math inline">\(\dfrac{5\pi}{4}\)</span> puede ser un argumento, pero el representante principal de esa dirección es <span class="math inline">\(-\dfrac{3\pi}{4}\)</span>.</li>
+<li><strong>Aplicar las reglas a una suma.</strong> Si <span class="math inline">\(z=1\)</span> y <span class="math inline">\(w=i\)</span>, entonces <span class="math inline">\(z+w=1+i\)</span> tiene módulo <span class="math inline">\(\sqrt2\)</span> y argumento principal <span class="math inline">\(\dfrac{\pi}{4}\)</span>; no se obtienen sumando por separado los módulos y los argumentos.</li>
 </ul>
 </section>
-<section id="asesorías-y-exámenes-parciales" class="level2">
-<h2 class="anchored" data-anchor-id="asesorías-y-exámenes-parciales">Asesorías y exámenes parciales</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Evaluación</th>
-<th>Asesoría grupal presencial</th>
-<th>Examen parcial</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Parcial 1</td>
-<td>Jueves 27 de agosto</td>
-<td>Viernes 28 de agosto</td>
-</tr>
-<tr class="even">
-<td>Parcial 2</td>
-<td>Jueves 17 de septiembre</td>
-<td>Viernes 18 de septiembre</td>
-</tr>
-<tr class="odd">
-<td>Parcial 3</td>
-<td>Jueves 15 de octubre</td>
-<td>Viernes 16 de octubre</td>
-</tr>
-<tr class="even">
-<td>Parcial 4</td>
-<td>Jueves 5 de noviembre</td>
-<td>Viernes 6 de noviembre</td>
-</tr>
-<tr class="odd">
-<td>Parcial 5</td>
-<td>Jueves 26 de noviembre</td>
-<td>Viernes 27 de noviembre</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="calendarización-semanal" class="level2">
-<h2 class="anchored" data-anchor-id="calendarización-semanal">Calendarización semanal</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">Semana</th>
-<th>Lunes</th>
-<th>Martes</th>
-<th>Miércoles</th>
-<th>Jueves</th>
-<th>Viernes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td>10 ago · Clase</td>
-<td>11 ago · Clase</td>
-<td>12 ago · Clase</td>
-<td>13 ago · Clase</td>
-<td>14 ago · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td>17 ago · Clase</td>
-<td>18 ago · Clase</td>
-<td>19 ago · Clase</td>
-<td>20 ago · Clase</td>
-<td>21 ago · Clase</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td>24 ago · Clase</td>
-<td>25 ago · Clase</td>
-<td>26 ago · Clase</td>
-<td><strong>27 ago · Asesoría P1</strong></td>
-<td><strong>28 ago · Parcial 1</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td>31 ago · Clase</td>
-<td>1 sep · Clase</td>
-<td>2 sep · Clase</td>
-<td>3 sep · Clase</td>
-<td>4 sep · Clase</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td>7 sep · Clase</td>
-<td>8 sep · Clase</td>
-<td>9 sep · Clase</td>
-<td>10 sep · Clase</td>
-<td>11 sep · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td>14 sep · Clase</td>
-<td>15 sep · Clase</td>
-<td><strong>16 sep · Inhábil</strong></td>
-<td><strong>17 sep · Asesoría P2</strong></td>
-<td><strong>18 sep · Parcial 2</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">7</td>
-<td>21 sep · Clase</td>
-<td>22 sep · Clase</td>
-<td><strong>23 sep · Clase y límite de bajas</strong></td>
-<td>24 sep · Clase</td>
-<td>25 sep · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td>28 sep · Clase</td>
-<td>29 sep · Clase</td>
-<td>30 sep · Clase</td>
-<td>1 oct · Clase</td>
-<td>2 oct · Clase</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">9</td>
-<td>5 oct · Clase</td>
-<td>6 oct · Clase</td>
-<td>7 oct · Clase</td>
-<td>8 oct · Clase</td>
-<td>9 oct · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td>12 oct · Clase</td>
-<td>13 oct · Clase</td>
-<td>14 oct · Clase</td>
-<td><strong>15 oct · Asesoría P3</strong></td>
-<td><strong>16 oct · Parcial 3</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11</td>
-<td>19 oct · Clase</td>
-<td>20 oct · Clase</td>
-<td>21 oct · Clase</td>
-<td>22 oct · Clase</td>
-<td>23 oct · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">12</td>
-<td>26 oct · Clase</td>
-<td>27 oct · Clase</td>
-<td>28 oct · Clase</td>
-<td>29 oct · Clase</td>
-<td>30 oct · Clase</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">13</td>
-<td><strong>2 nov · Inhábil</strong></td>
-<td>3 nov · Clase</td>
-<td>4 nov · Clase</td>
-<td><strong>5 nov · Asesoría P4</strong></td>
-<td><strong>6 nov · Parcial 4</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">14</td>
-<td>9 nov · Clase</td>
-<td>10 nov · Clase</td>
-<td>11 nov · Clase</td>
-<td>12 nov · Clase</td>
-<td>13 nov · Clase</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">15</td>
-<td><strong>16 nov · Inhábil</strong></td>
-<td>17 nov · Clase</td>
-<td>18 nov · Clase</td>
-<td>19 nov · Clase</td>
-<td>20 nov · Clase</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">16</td>
-<td>23 nov · Clase</td>
-<td>24 nov · Clase</td>
-<td>25 nov · Clase</td>
-<td><strong>26 nov · Asesoría P5</strong></td>
-<td><strong>27 nov · Parcial 5</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="semana-de-evaluación-ordinaria-y-reposiciones" class="level2">
-<h2 class="anchored" data-anchor-id="semana-de-evaluación-ordinaria-y-reposiciones">Semana de evaluación ordinaria y reposiciones</h2>
-<p>El Calendario Escolar identifica el periodo del <strong>30 de noviembre al 4 de diciembre</strong> como semana de evaluación ordinaria. En este curso se utilizará para exámenes de reposición; la asignación de cada examen se comunicará oportunamente.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Posibles ajustes">
-<div class="callout-header d-flex align-content-center">
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
+<ol type="1">
+<li><p>Sean</p>
+<p><span class="math display">\[
+z=5\Bigl(\cos\frac{\pi}{4}+i\operatorname{sen}\frac{\pi}{4}\Bigr),
+\qquad
+w=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+\]</span></p>
+<p>Calcule <span class="math inline">\(zw\)</span> y <span class="math inline">\(\dfrac zw\)</span> en forma polar, utilizando argumentos principales.</p></li>
+<li><p>En el cálculo</p>
+<p><span class="math display">\[
+z=3\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr),
+\qquad
+w=2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr),
+\]</span></p>
+<p>se concluye que <span class="math inline">\(\operatorname{Arg}(zw)=\dfrac{4\pi}{3}\)</span>. Identifique el error y reporte la forma polar del producto con argumento principal.</p></li>
+<li><p>Sean <span class="math inline">\(u=1+i\)</span> y <span class="math inline">\(v=1-i\)</span>. Decida si conviene multiplicarlos directamente en forma cartesiana o convertirlos primero a forma polar. Justifique la elección y calcule <span class="math inline">\(uv\)</span>.</p></li>
+<li><p>Sean</p>
+<p><span class="math display">\[
+z=4\Bigl(\cos\frac{\pi}{6}+i\operatorname{sen}\frac{\pi}{6}\Bigr),
+\qquad
+w=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+\]</span></p>
+<p>Decida qué forma conviene para calcular <span class="math inline">\(zw\)</span> y cuál para calcular <span class="math inline">\(z+w\)</span>. Justifique la elección y efectúe ambos cálculos.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Posibles ajustes
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>El calendario podrá modificarse si se emiten disposiciones institucionales posteriores o se presenta una contingencia. Cualquier cambio se comunicará por los medios del curso.</p>
+<p><strong>1.</strong> Para el producto,</p>
+<p><span class="math display">\[
+zw=10\Bigl(\cos\frac{7\pi}{12}+i\operatorname{sen}\frac{7\pi}{12}\Bigr).
+\]</span></p>
+<p>Para el cociente,</p>
+<p><span class="math display">\[
+\frac zw=\frac52\Bigl(\cos\Bigl(-\frac{\pi}{12}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{12}\Bigr)\Bigr).
+\]</span></p>
+<p>Los dos ángulos pertenecen a <span class="math inline">\((-\pi,\pi]\)</span>.</p>
+<p><strong>2.</strong> La suma de argumentos <span class="math inline">\(\dfrac{4\pi}{3}\)</span> es correcta, pero no pertenece al intervalo principal. Como <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span>,</p>
+<p><span class="math display">\[
+zw=6\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr).
+\]</span></p>
+<p><strong>3.</strong> Conviene la forma cartesiana porque los dos números ya están expresados en ella y el producto es una diferencia de cuadrados:</p>
+<p><span class="math display">\[
+uv=(1+i)(1-i)=1-i^2=2.
+\]</span></p>
+<p>Convertir primero a forma polar también conduce al resultado, pero añade pasos innecesarios en este caso.</p>
+<p><strong>4.</strong> Para <span class="math inline">\(zw\)</span> conviene conservar la forma polar, pues basta multiplicar los módulos <span class="math inline">\(4\cdot2\)</span> y sumar los argumentos <span class="math inline">\(\dfrac{\pi}{6}+\dfrac{\pi}{3}\)</span>:</p>
+<p><span class="math display">\[
+zw=8\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=8i.
+\]</span></p>
+<p>Para <span class="math inline">\(z+w\)</span> no existe una regla que permita sumar por separado módulos y argumentos; por ello se convierten ambos números a forma cartesiana y se suman sus partes reales e imaginarias. Como <span class="math inline">\(z=2\sqrt3+2i\)</span> y <span class="math inline">\(w=1+\sqrt3\,i\)</span>,</p>
+<p><span class="math display">\[
+z+w=(2\sqrt3+1)+(2+\sqrt3)i.
+\]</span></p>
 </div>
 </div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li>Calcule <span class="math inline">\(zw\)</span> en forma polar para <span class="math inline">\(z=3\Bigl(\cos\dfrac{\pi}{5}+i\operatorname{sen}\dfrac{\pi}{5}\Bigr)\)</span> y <span class="math inline">\(w=2\Bigl(\cos\dfrac{\pi}{10}+i\operatorname{sen}\dfrac{\pi}{10}\Bigr)\)</span>.</li>
+<li>Calcule <span class="math inline">\(\dfrac zw\)</span> para <span class="math inline">\(z=8\Bigl(\cos\dfrac{5\pi}{6}+i\operatorname{sen}\dfrac{5\pi}{6}\Bigr)\)</span> y <span class="math inline">\(w=4\Bigl(\cos\dfrac{\pi}{3}+i\operatorname{sen}\dfrac{\pi}{3}\Bigr)\)</span>, y exprese el resultado en forma cartesiana.</li>
+<li>Calcule el producto de <span class="math inline">\(z=5\Bigl(\cos\dfrac{2\pi}{3}+i\operatorname{sen}\dfrac{2\pi}{3}\Bigr)\)</span> por <span class="math inline">\(w=\cos\dfrac{\pi}{2}+i\operatorname{sen}\dfrac{\pi}{2}\)</span> y reporte el argumento principal.</li>
+<li>Calcule <span class="math inline">\(\dfrac zw\)</span> para <span class="math inline">\(z=2\Bigl(\cos\bigl(-\dfrac{3\pi}{4}\bigr)+i\operatorname{sen}\bigl(-\dfrac{3\pi}{4}\bigr)\Bigr)\)</span> y <span class="math inline">\(w=\cos\dfrac{\pi}{2}+i\operatorname{sen}\dfrac{\pi}{2}\)</span>; reporte el argumento principal y exprese el resultado en forma cartesiana.</li>
+<li>Escriba <span class="math inline">\(-1+i\)</span> y <span class="math inline">\(1+\sqrt3\,i\)</span> en forma polar y calcule su producto en forma polar, con el argumento principal.</li>
+<li>Escriba <span class="math inline">\(1+i\)</span> y <span class="math inline">\(\sqrt3-i\)</span> en forma polar, calcule su producto en forma polar y confirme el resultado mediante un cálculo cartesiano.</li>
+<li>Determine el factor de escala y exprese en <span class="math inline">\((-\pi,\pi]\)</span> el ángulo de giro que producen las multiplicaciones por <span class="math inline">\(-1\)</span>, por <span class="math inline">\(-i\)</span> y por <span class="math inline">\(2i\)</span>. Compruebe cada resultado con un número complejo de su elección.</li>
+</ol>
 
 
 </section>
@@ -1004,13 +1034,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../curso/evaluacion-asistencia.html" class="pagination-link" aria-label="Evaluación y asistencia">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Evaluación y asistencia</span></span>
+      <a href="../sesiones/2026-08-20-sesion-09.html" class="pagination-link" aria-label="Sesión 09. Números complejos: módulo, argumento y forma polar">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../curso/acceso-teams.html" class="pagination-link" aria-label="Acceso temporal a Teams">
-        <span class="nav-page-text"><span class="chapter-title">Acceso temporal a Teams</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
