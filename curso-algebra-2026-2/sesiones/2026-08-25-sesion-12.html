@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Módulo como distancia al origen, argumentos y argumento principal, forma polar y conversiones entre las formas cartesiana y polar.">
+<meta name="description" content="Raíces n-ésimas de un número complejo: fórmula a partir de la forma polar, distribución de las n raíces en una circunferencia, raíces de la unidad y el caso z = 0.">
 
-<title>Sesión 09. Números complejos: módulo, argumento y forma polar – Álgebra</title>
+<title>Sesión 12. Números complejos: raíces n-ésimas – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-21-sesion-10.html" rel="next">
-<link href="../sesiones/2026-08-19-sesion-08.html" rel="prev">
+<link href="../unidades/02-polinomios-raices.html" rel="next">
+<link href="../sesiones/2026-08-24-sesion-11.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 09. Números complejos: módulo, argumento y forma polar – Álgebra">
-<meta property="og:description" content="Módulo como distancia al origen, argumentos y argumento principal, forma polar y conversiones entre las formas cartesiana y polar.">
+<meta property="og:title" content="Sesión 12. Números complejos: raíces n-ésimas – Álgebra">
+<meta property="og:description" content="Raíces n-ésimas de un número complejo: fórmula a partir de la forma polar, distribución de las n raíces en una circunferencia, raíces de la unidad y el caso z = 0.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-20-sesion-09.html"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-25-sesion-12.html"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -251,7 +251,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -266,7 +266,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
+  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
   </div>
 </li>
       </ul>
@@ -382,15 +382,19 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#el-módulo" id="toc-el-módulo" class="nav-link active" data-scroll-target="#el-módulo">El módulo</a></li>
-  <li><a href="#argumentos-y-argumento-principal" id="toc-argumentos-y-argumento-principal" class="nav-link" data-scroll-target="#argumentos-y-argumento-principal">Argumentos y argumento principal</a></li>
-  <li><a href="#forma-polar" id="toc-forma-polar" class="nav-link" data-scroll-target="#forma-polar">Forma polar</a></li>
+  <li><a href="#de-las-potencias-a-las-raíces" id="toc-de-las-potencias-a-las-raíces" class="nav-link active" data-scroll-target="#de-las-potencias-a-las-raíces">De las potencias a las raíces</a></li>
+  <li><a href="#la-fórmula-de-las-raíces-n-ésimas" id="toc-la-fórmula-de-las-raíces-n-ésimas" class="nav-link" data-scroll-target="#la-fórmula-de-las-raíces-n-ésimas">La fórmula de las raíces n-ésimas</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento-para-calcular-las-raíces" id="toc-procedimiento-para-calcular-las-raíces" class="nav-link" data-scroll-target="#procedimiento-para-calcular-las-raíces">Procedimiento para calcular las raíces</a></li>
+  </ul></li>
+  <li><a href="#distribución-angular-y-raíces-de-la-unidad" id="toc-distribución-angular-y-raíces-de-la-unidad" class="nav-link" data-scroll-target="#distribución-angular-y-raíces-de-la-unidad">Distribución angular y raíces de la unidad</a>
+  <ul class="collapse">
+  <li><a href="#raíces-de-la-unidad" id="toc-raíces-de-la-unidad" class="nav-link" data-scroll-target="#raíces-de-la-unidad">Raíces de la unidad</a></li>
+  </ul></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-módulo" id="toc-ejemplo-1.-módulo" class="nav-link" data-scroll-target="#ejemplo-1.-módulo">Ejemplo 1. Módulo</a></li>
-  <li><a href="#ejemplo-2.-argumento-principal-sobre-los-ejes" id="toc-ejemplo-2.-argumento-principal-sobre-los-ejes" class="nav-link" data-scroll-target="#ejemplo-2.-argumento-principal-sobre-los-ejes">Ejemplo 2. Argumento principal sobre los ejes</a></li>
-  <li><a href="#ejemplo-3.-de-la-forma-cartesiana-a-la-polar" id="toc-ejemplo-3.-de-la-forma-cartesiana-a-la-polar" class="nav-link" data-scroll-target="#ejemplo-3.-de-la-forma-cartesiana-a-la-polar">Ejemplo 3. De la forma cartesiana a la polar</a></li>
-  <li><a href="#ejemplo-4.-de-la-forma-polar-a-la-cartesiana" id="toc-ejemplo-4.-de-la-forma-polar-a-la-cartesiana" class="nav-link" data-scroll-target="#ejemplo-4.-de-la-forma-polar-a-la-cartesiana">Ejemplo 4. De la forma polar a la cartesiana</a></li>
+  <li><a href="#ejemplo-1.-las-raíces-cúbicas-de-8" id="toc-ejemplo-1.-las-raíces-cúbicas-de-8" class="nav-link" data-scroll-target="#ejemplo-1.-las-raíces-cúbicas-de-8">Ejemplo 1. Las raíces cúbicas de 8</a></li>
+  <li><a href="#ejemplo-2.-las-raíces-cuartas-de-16" id="toc-ejemplo-2.-las-raíces-cuartas-de-16" class="nav-link" data-scroll-target="#ejemplo-2.-las-raíces-cuartas-de-16">Ejemplo 2. Las raíces cuartas de −16</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -401,9 +405,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-20-sesion-09.html"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-25-sesion-12.html"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></h1>
 </div>
 
 
@@ -414,7 +418,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20 de agosto de 2026</p>
+      <p class="date">25 de agosto de 2026</p>
     </div>
   </div>
   
@@ -426,232 +430,218 @@ window.Quarto = {
 </header>
 
 
-<section id="el-módulo" class="level2">
-<h2 class="anchored" data-anchor-id="el-módulo">El módulo</h2>
-<p>El <strong>módulo</strong> de <span class="math inline">\(z=a+bi\)</span> es el número real</p>
+<section id="de-las-potencias-a-las-raíces" class="level2">
+<h2 class="anchored" data-anchor-id="de-las-potencias-a-las-raíces">De las potencias a las raíces</h2>
+<p>El teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a> calcula potencias: de <span class="math inline">\(z\)</span> se obtiene <span class="math inline">\(z^n\)</span>. Esta sesión invierte la pregunta: dados un número complejo <span class="math inline">\(z\)</span> y un entero <span class="math inline">\(n\ge2\)</span>, se buscan <strong>todos</strong> los números <span class="math inline">\(w\)</span> tales que</p>
 <p><span class="math display">\[
-\lvert z\rvert=\sqrt{a^2+b^2}.
+w^n=z.
 \]</span></p>
-<p>Su significado es geométrico: bajo la correspondencia <span class="math inline">\(z\longleftrightarrow(a,b)\)</span> de la Sesión 07, el módulo es la <strong>distancia del punto que representa a <span class="math inline">\(z\)</span> al origen</strong> del plano complejo, obtenida por el teorema de Pitágoras en el triángulo rectángulo de catetos <span class="math inline">\(\lvert a\rvert\)</span> y <span class="math inline">\(\lvert b\rvert\)</span>.</p>
-<p>Si <span class="math inline">\(z=a\)</span> es real, entonces <span class="math inline">\(\lvert z\rvert=\sqrt{a^2}=\lvert a\rvert\)</span>: el módulo extiende al plano el valor absoluto estudiado en la Sesión 06. En ambos casos, las barras expresan una distancia al origen. Tres observaciones:</p>
-<ul>
-<li><span class="math inline">\(\lvert z\rvert\ge0\)</span> para todo <span class="math inline">\(z\)</span>, y <span class="math inline">\(\lvert z\rvert=0\)</span> exactamente cuando <span class="math inline">\(z=0\)</span>; en particular, <span class="math inline">\(\lvert0\rvert=0\)</span>;</li>
-<li><span class="math inline">\(\lvert\overline z\rvert=\lvert z\rvert\)</span>: la simetría respecto del eje real, estudiada en la Sesión 08, conserva la distancia al origen;</li>
-<li>la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span> de la Sesión 08 dice precisamente que</li>
-</ul>
+<p>Cada solución se llama <strong>raíz <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(z\)</span></strong>.</p>
+<p>En los números reales la pregunta ya tiene una respuesta parcial, escrita con radicales: <span class="math inline">\(\sqrt[3]{8}=2\)</span> y <span class="math inline">\(\sqrt{16}=4\)</span>. Cuando está definido en <span class="math inline">\(\mathbb R\)</span>, el radical <span class="math inline">\(\sqrt[n]{a}\)</span> denota un solo valor real; si <span class="math inline">\(n\)</span> es par y <span class="math inline">\(a\ge0\)</span>, se toma la raíz no negativa. Lo que se amplía es la ecuación: en <span class="math inline">\(\mathbb C\)</span>, <span class="math inline">\(w^n=z\)</span> puede tener más soluciones que la que nombra el radical. La primera señal apareció en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>: para <span class="math inline">\(d&gt;0\)</span>, la ecuación <span class="math inline">\(x^2=-d\)</span> no tiene soluciones reales y tiene exactamente dos soluciones complejas, <span class="math inline">\(\pm\bigl(\sqrt d\bigr)i\)</span>. El resultado de esta sesión generaliza ese fenómeno: si <span class="math inline">\(z\ne0\)</span>, la ecuación <span class="math inline">\(w^n=z\)</span> tiene <strong>exactamente <span class="math inline">\(n\)</span> soluciones distintas</strong> en <span class="math inline">\(\mathbb C\)</span>, y su disposición en el plano complejo es notablemente regular.</p>
+</section>
+<section id="la-fórmula-de-las-raíces-n-ésimas" class="level2">
+<h2 class="anchored" data-anchor-id="la-fórmula-de-las-raíces-n-ésimas">La fórmula de las raíces n-ésimas</h2>
+<p>Sea <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span> un número complejo no nulo, con <span class="math inline">\(r=\lvert z\rvert&gt;0\)</span>, y búsquese <span class="math inline">\(w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)\)</span>, con <span class="math inline">\(s&gt;0\)</span>, tal que <span class="math inline">\(w^n=z\)</span>. Por el teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a>,</p>
 <p><span class="math display">\[
-z\overline z=\lvert z\rvert^2.
+w^n=s^n\bigl(\cos(n\varphi)+i\operatorname{sen}(n\varphi)\bigr).
 \]</span></p>
-<p>Esta es la interpretación geométrica anunciada en esa sesión: la ecuación <span class="math inline">\(z\overline z=25\)</span> describe la circunferencia con centro en el origen y radio <span class="math inline">\(5\)</span>. El reactivo 4 de la actividad de la Sesión 08 añadió la condición de que <span class="math inline">\(z\)</span> no fuera real, por lo que excluyó los puntos <span class="math inline">\(5\)</span> y <span class="math inline">\(-5\)</span>.</p>
+<p>Dos números complejos no nulos en forma polar son iguales exactamente cuando sus módulos coinciden y sus argumentos difieren en un múltiplo entero de <span class="math inline">\(2\pi\)</span>, es decir, cuando sus argumentos son congruentes módulo <span class="math inline">\(2\pi\)</span>, con la escritura introducida en la <a href="../sesiones/2026-08-21-sesion-10.html">Sesión 10</a>. La ecuación <span class="math inline">\(w^n=z\)</span> equivale entonces al par de condiciones</p>
+<p><span class="math display">\[
+s^n=r,
+\qquad
+n\varphi\equiv\theta\pmod{2\pi}.
+\]</span></p>
+<p>La primera es una ecuación entre números reales positivos y tiene una única solución, <span class="math inline">\(s=\sqrt[n]{r}\)</span>: la raíz <span class="math inline">\(n\)</span>-ésima real. La segunda dice que <span class="math inline">\(n\varphi=\theta+2k\pi\)</span> para algún entero <span class="math inline">\(k\)</span>, de donde</p>
+<p><span class="math display">\[
+\varphi=\frac{\theta+2k\pi}{n},
+\qquad
+k\in\mathbb Z.
+\]</span></p>
+<p>Dos valores de <span class="math inline">\(k\)</span> producen la misma raíz exactamente cuando sus ángulos difieren en un múltiplo de <span class="math inline">\(2\pi\)</span>, y eso ocurre cuando la diferencia de esos valores es un múltiplo de <span class="math inline">\(n\)</span>. Por ello basta tomar <span class="math inline">\(k=0,1,\ldots,n-1\)</span>: esos <span class="math inline">\(n\)</span> valores producen raíces distintas entre sí, y cualquier otro entero repite una de ellas.</p>
+<p><strong>Raíces <span class="math inline">\(n\)</span>-ésimas.</strong> Si <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\ne0\)</span> y <span class="math inline">\(n\ge2\)</span> es un entero, la ecuación <span class="math inline">\(w^n=z\)</span> tiene exactamente <span class="math inline">\(n\)</span> soluciones distintas:</p>
+<p><span class="math display">\[
+w_k=\sqrt[n]{r}\,\Bigl(\cos\frac{\theta+2k\pi}{n}+i\operatorname{sen}\frac{\theta+2k\pi}{n}\Bigr),
+\qquad
+k=0,1,\ldots,n-1.
+\]</span></p>
+<p>Si <span class="math inline">\(z=0\)</span>, la situación es distinta: de <span class="math inline">\(\lvert w\rvert^n=\lvert w^n\rvert=0\)</span> se sigue <span class="math inline">\(\lvert w\rvert=0\)</span>, así que la única raíz <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(0\)</span> es <span class="math inline">\(0\)</span>. Hay una sola raíz distinta; cuando en la Unidad 2 se cuenten las raíces de un polinomio con multiplicidad, esta raíz única se contará <span class="math inline">\(n\)</span> veces.</p>
+<section id="procedimiento-para-calcular-las-raíces" class="level3">
+<h3 class="anchored" data-anchor-id="procedimiento-para-calcular-las-raíces">Procedimiento para calcular las raíces</h3>
+<ol type="1">
+<li>Si <span class="math inline">\(z=0\)</span>, la única raíz <span class="math inline">\(n\)</span>-ésima es <span class="math inline">\(0\)</span>. Si <span class="math inline">\(z\ne0\)</span>, continuar.</li>
+<li>Escribir <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span>, con <span class="math inline">\(r&gt;0\)</span>, mediante las relaciones de la <a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>.</li>
+<li>Calcular el módulo común <span class="math inline">\(\sqrt[n]{r}\)</span> y los <span class="math inline">\(n\)</span> ángulos <span class="math inline">\(\dfrac{\theta+2k\pi}{n}\)</span> para <span class="math inline">\(k=0,1,\ldots,n-1\)</span>.</li>
+<li>Si se solicitan argumentos principales, ajustar con múltiplos de <span class="math inline">\(2\pi\)</span> los ángulos que queden fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</li>
+<li>Conservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia <span class="math inline">\(n\)</span> con el teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a>.</li>
+</ol>
 </section>
-<section id="argumentos-y-argumento-principal" class="level2">
-<h2 class="anchored" data-anchor-id="argumentos-y-argumento-principal">Argumentos y argumento principal</h2>
-<p>Sea <span class="math inline">\(z\ne0\)</span>. El punto que representa a <span class="math inline">\(z\)</span> determina una semirrecta que parte del origen. Un <strong>argumento</strong> de <span class="math inline">\(z\)</span> es un ángulo orientado desde el semieje real positivo hasta esa semirrecta: los ángulos positivos se miden en sentido contrario a las manecillas del reloj y los negativos, en sentido horario. Los ángulos se expresan en radianes: <span class="math inline">\(\pi\)</span> radianes equivalen a <span class="math inline">\(180^\circ\)</span>.</p>
-<p>Un número no nulo tiene una infinidad de argumentos: si <span class="math inline">\(\theta\)</span> es uno de ellos, también lo son <span class="math inline">\(\theta+2\pi\)</span>, <span class="math inline">\(\theta-2\pi\)</span> y, en general, <span class="math inline">\(\theta+2k\pi\)</span> con <span class="math inline">\(k\in\mathbb Z\)</span>, pues una vuelta completa regresa a la misma semirrecta. Para trabajar con un representante único se elige el <strong>argumento principal</strong>, denotado <span class="math inline">\(\operatorname{Arg}z\)</span>: el único argumento en el intervalo <span class="math inline">\((-\pi,\pi]\)</span>.</p>
-<p>El número <span class="math inline">\(0\)</span> es la excepción: no determina ninguna semirrecta y, por tanto, <strong>no tiene argumento</strong>, aunque su módulo sí está definido: <span class="math inline">\(\lvert0\rvert=0\)</span>.</p>
-<p>La ubicación del punto determina el argumento principal:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Ubicación de <span class="math inline">\(z\ne0\)</span></th>
-<th><span class="math inline">\(\operatorname{Arg}z\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Semieje real positivo</td>
-<td><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td>Primer cuadrante</td>
-<td>entre <span class="math inline">\(0\)</span> y <span class="math inline">\(\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje imaginario positivo</td>
-<td><span class="math inline">\(\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Segundo cuadrante</td>
-<td>entre <span class="math inline">\(\dfrac{\pi}{2}\)</span> y <span class="math inline">\(\pi\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje real negativo</td>
-<td><span class="math inline">\(\pi\)</span></td>
-</tr>
-<tr class="even">
-<td>Tercer cuadrante</td>
-<td>entre <span class="math inline">\(-\pi\)</span> y <span class="math inline">\(-\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje imaginario negativo</td>
-<td><span class="math inline">\(-\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Cuarto cuadrante</td>
-<td>entre <span class="math inline">\(-\dfrac{\pi}{2}\)</span> y <span class="math inline">\(0\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Debajo del eje real, el argumento principal es negativo: la convención <span class="math inline">\(\operatorname{Arg}z\in(-\pi,\pi]\)</span> representa esas direcciones mediante ángulos medidos en sentido horario desde el semieje real positivo.</p>
 </section>
-<section id="forma-polar" class="level2">
-<h2 class="anchored" data-anchor-id="forma-polar">Forma polar</h2>
-<p>Sea <span class="math inline">\(z=a+bi\ne0\)</span>, con <span class="math inline">\(r=\lvert z\rvert\)</span> y <span class="math inline">\(\theta=\operatorname{Arg}z\)</span>. Para definir geométricamente el seno y el coseno, considérese primero el caso <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b&gt;0\)</span>, en el que <span class="math inline">\(\theta\)</span> es un ángulo agudo.</p>
-<figure style="max-width: 760px; margin: 1.5rem auto;" class="figure">
-<svg viewbox="0 0 760 420" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s09-geometria-title s09-geometria-desc" focusable="false" style="display: block; width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
-<title id="s09-geometria-title">
-Módulo, argumento y proyecciones de un número complejo
-</title>
-<desc id="s09-geometria-desc">Plano complejo con el número z igual a a más bi en el primer cuadrante. El segmento desde el origen hasta z tiene longitud r igual al módulo de z y forma un ángulo theta con el eje real. Sus proyecciones horizontal y vertical tienen longitudes a y b.</desc> <defs> <marker id="s09-flecha-eje" markerwidth="8" markerheight="8" refx="7" refy="4" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L8,4 L0,8 Z" fill="#495057"></path> </marker> <marker id="s09-flecha-vector" markerwidth="9" markerheight="9" refx="8" refy="4.5" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d6efd"></path> </marker> <marker id="s09-flecha-angulo" viewbox="0 0 10 10" markerwidth="10" markerheight="10" refx="9" refy="5" orient="auto" markerunits="userSpaceOnUse"> <path d="M0,0 L10,5 L0,10 Z" fill="#b83b0a"></path> </marker> </defs> <rect x="1" y="1" width="758" height="418" rx="12" fill="#ffffff" stroke="#ced4da" stroke-width="2"></rect> <g stroke="#e9ecef" stroke-width="1"> <line x1="190" y1="45" x2="190" y2="375"></line> <line x1="270" y1="45" x2="270" y2="375"></line> <line x1="350" y1="45" x2="350" y2="375"></line> <line x1="430" y1="45" x2="430" y2="375"></line> <line x1="510" y1="45" x2="510" y2="375"></line> <line x1="590" y1="45" x2="590" y2="375"></line> <line x1="670" y1="45" x2="670" y2="375"></line> <line x1="70" y1="260" x2="700" y2="260"></line> <line x1="70" y1="180" x2="700" y2="180"></line> <line x1="70" y1="100" x2="700" y2="100"></line> </g> <path d="M110 340 L540 340 L540 100 Z" fill="#dbeafe" fill-opacity="0.55"></path> <g stroke="#495057" stroke-width="2.2" fill="none"> <line x1="70" y1="340" x2="705" y2="340" marker-end="url(#s09-flecha-eje)"></line> <line x1="110" y1="382" x2="110" y2="38" marker-end="url(#s09-flecha-eje)"></line> </g> <g stroke="#6c757d" stroke-width="2" stroke-dasharray="7 6" fill="none"> <line x1="540" y1="100" x2="540" y2="340"></line> <line x1="110" y1="100" x2="540" y2="100"></line> </g> <line x1="110" y1="340" x2="540" y2="100" stroke="#0d6efd" stroke-width="4" marker-end="url(#s09-flecha-vector)"></line> <path d="M190 340 A80 80 0 0 0 180 301" fill="none" stroke="#b83b0a" stroke-width="4" marker-end="url(#s09-flecha-angulo)"></path> <path d="M523 340 L523 323 L540 323" fill="none" stroke="#6c757d" stroke-width="2"></path> <circle cx="540" cy="100" r="6" fill="#b02a37"></circle> <g fill="#212529" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24"> <text x="690" y="370" text-anchor="end">eje real</text> <text x="122" y="45">eje imaginario</text> <text x="91" y="363">0</text> <text x="321" y="365" font-style="italic">a</text> <text x="555" y="224" font-style="italic">b</text> <text x="557" y="91" font-style="italic">z = a + bi</text> <text x="300" y="190" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill" font-style="italic" transform="rotate(-29 300 190)">r = |z|</text> <text x="158" y="308" fill="#b83b0a" stroke="#ffffff" stroke-width="5" paint-order="stroke fill" font-style="italic">θ</text> </g>
+<section id="distribución-angular-y-raíces-de-la-unidad" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-angular-y-raíces-de-la-unidad">Distribución angular y raíces de la unidad</h2>
+<p>Si <span class="math inline">\(z\ne0\)</span>, las <span class="math inline">\(n\)</span> raíces comparten el módulo <span class="math inline">\(\sqrt[n]{r}\)</span>: todas están sobre la circunferencia de radio <span class="math inline">\(\sqrt[n]{r}\)</span> centrada en el origen. Al pasar de <span class="math inline">\(k\)</span> a <span class="math inline">\(k+1\)</span>, el ángulo aumenta exactamente <span class="math inline">\(\dfrac{2\pi}{n}\)</span>: las raíces están <strong>igualmente espaciadas</strong>, y al recorrer las <span class="math inline">\(n\)</span> se completa una vuelta, pues <span class="math inline">\(n\cdot\dfrac{2\pi}{n}=2\pi\)</span>. Para <span class="math inline">\(n\ge3\)</span> son los vértices de un polígono regular de <span class="math inline">\(n\)</span> lados inscrito en esa circunferencia; para <span class="math inline">\(n=2\)</span> son dos puntos diametralmente opuestos, es decir, <span class="math inline">\(w_1=-w_0\)</span>.</p>
+<p>La figura muestra el caso de las raíces cúbicas de <span class="math inline">\(8\)</span>, que el Ejemplo 1 calcula en detalle: módulo común <span class="math inline">\(\sqrt[3]{8}=2\)</span> y separación constante de <span class="math inline">\(\dfrac{2\pi}{3}\)</span>.</p>
+<figure style="max-width: 960px; margin: 1.75rem auto;" class="figure">
+<div role="region" aria-label="Gráfico desplazable de las raíces cúbicas de un número complejo" tabindex="0" style="max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 0.35rem;">
+<svg viewbox="0 0 960 580" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s12-raices-title s12-raices-desc" focusable="false" style="display: block; width: 100%; min-width: 740px; height: auto;" xmlns="http://www.w3.org/2000/svg">
+  <title id="s12-raices-title">Raíces cúbicas de un número complejo en forma polar</title>
+  <desc id="s12-raices-desc">Infografía con un plano complejo y una interpretación algebraica. Las tres raíces cúbicas de ocho comparten el módulo dos y sus argumentos se separan dos tercios de pi: la raíz real dos y el par conjugado menos uno más raíz de tres i y menos uno menos raíz de tres i forman un triángulo equilátero inscrito en la circunferencia de radio dos. Arcos ámbar muestran el giro constante entre raíces consecutivas.</desc>
+  <defs>
+    <filter id="s12-sombra" x="-15%" y="-15%" width="130%" height="140%">
+      <fedropshadow dx="0" dy="7" stddeviation="10" flood-color="#0f172a" flood-opacity="0.10"></fedropshadow>
+    </filter>
+    <marker id="s12-eje" viewbox="0 0 10 10" markerwidth="9" markerheight="9" refx="10" refy="5" orient="auto" markerunits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"></path>
+    </marker>
+    <marker id="s12-w0" viewbox="0 0 10 10" markerwidth="13" markerheight="13" refx="10" refy="5" orient="auto" markerunits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#7c3aed"></path>
+    </marker>
+    <marker id="s12-w" viewbox="0 0 10 10" markerwidth="12" markerheight="12" refx="10" refy="5" orient="auto" markerunits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"></path>
+    </marker>
+    <marker id="s12-arco" viewbox="0 0 10 10" markerwidth="9" markerheight="9" refx="10" refy="5" orient="auto" markerunits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#b45309"></path>
+    </marker>
+  </defs>
+
+  <rect x="8" y="8" width="944" height="564" rx="26" fill="#f8fafc" stroke="#dbe4ee" stroke-width="2" filter="url(#s12-sombra)"></rect>
+  <text x="40" y="48" fill="#0f172a" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Raíces cúbicas de 8</text>
+  <text x="40" y="73" fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">Tres raíces, un módulo común y giros de 2π/3</text>
+
+  <rect x="36" y="96" width="552" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"></rect>
+  <rect x="610" y="96" width="314" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"></rect>
+
+  <!-- Guías con escala común: 80 px por unidad de módulo. Circunferencia |w| = 1 (tenue) y |w| = 2 (punteada), donde viven las tres raíces. -->
+  <circle cx="330" cy="310" r="80" fill="none" stroke="#dbe4ee" stroke-width="1.4" stroke-dasharray="4 7"></circle>
+  <circle cx="330" cy="310" r="160" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="1 7" stroke-linecap="round"></circle>
+
+  <!-- Triángulo equilátero que une las tres raíces. -->
+  <polyline points="490,310 250,171.436 250,448.564 490,310" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 6"></polyline>
+
+  <g fill="none" stroke="#64748b" stroke-width="1.7">
+    <line x1="140" y1="310" x2="560" y2="310" marker-end="url(#s12-eje)"></line>
+    <line x1="330" y1="478" x2="330" y2="134" marker-end="url(#s12-eje)"></line>
+  </g>
+  <g fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <text x="556" y="334" text-anchor="end">Re</text>
+    <text x="345" y="145">Im</text>
+    <text x="340" y="334">0</text>
+  </g>
+
+  <!-- Cada raíz está a 2π/3 de la siguiente: arcos entre direcciones consecutivas (radios crecientes para no encimarse); tres arcos completan la vuelta. -->
+  <g fill="none" stroke="#b45309" stroke-width="3">
+    <path d="M388 310A58 58 0 0 0 301 259.771" marker-end="url(#s12-arco)"></path>
+    <path d="M292 244.182A76 76 0 0 0 292 375.818" marker-end="url(#s12-arco)"></path>
+    <path d="M283 391.406A94 94 0 0 0 424 310" marker-end="url(#s12-arco)"></path>
+  </g>
+  <g fill="#b45309" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-style="italic" font-weight="650" paint-order="stroke fill" stroke="#ffffff" stroke-width="5">
+    <text x="367" y="245.914" text-anchor="middle">2π/3</text>
+    <text x="386" y="406.995" text-anchor="middle">2π/3</text>
+  </g>
+
+  <!-- Vectores exactos: w0 = 2; w1 = −1+√3 i; w2 = −1−√3 i (80 px por unidad). -->
+  <line x1="330" y1="310" x2="250" y2="171.436" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s12-w)"></line>
+  <line x1="330" y1="310" x2="250" y2="448.564" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s12-w)"></line>
+  <line x1="330" y1="310" x2="490" y2="310" stroke="#7c3aed" stroke-width="4.5" stroke-linecap="round" marker-end="url(#s12-w0)"></line>
+  <circle cx="330" cy="310" r="5" fill="#0f172a"></circle>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" paint-order="stroke fill" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">
+    <text x="500" y="303" fill="#7c3aed">w₀ = 2</text>
+    <text x="172" y="158" fill="#2563eb">w₁ = −1 + √3 i</text>
+    <text x="172" y="480" fill="#2563eb">w₂ = −1 − √3 i</text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <circle cx="116" cy="493" r="5" fill="#7c3aed"></circle>
+    <text x="130" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">w₀</tspan><tspan> = 2, raíz real</tspan></text>
+    <circle cx="290" cy="493" r="5" fill="#b45309"></circle>
+    <text x="304" y="498" fill="#334155">giro 2π/3</text>
+    <circle cx="408" cy="493" r="5" fill="#2563eb"></circle>
+    <text x="422" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">w₁, w₂</tspan><tspan> conjugadas</tspan></text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <text x="636" y="131" fill="#0f172a" font-size="19" font-weight="700">Interpretación algebraica</text>
+    <text x="636" y="153" fill="#64748b" font-size="16">Un solo módulo; tres direcciones.</text>
+
+    <rect x="634" y="174" width="266" height="52" rx="12" fill="#eff6ff"></rect>
+    <circle cx="655" cy="200" r="6" fill="#2563eb"></circle>
+    <text x="674" y="197" fill="#1e3a8a" font-size="16" font-style="italic" font-weight="700">z = 8</text>
+    <text x="674" y="215" fill="#334155" font-size="16">|z| = 8   ·   Arg z = 0</text>
+
+    <rect x="634" y="240" width="266" height="86" rx="14" fill="#f8fafc" stroke="#dbe4ee"></rect>
+    <text x="652" y="264" fill="#64748b" font-size="16" font-weight="750" letter-spacing="1.2">MÓDULO COMÚN</text>
+    <text x="652" y="293" fill="#0f172a" font-size="22" font-weight="700">∛8 = 2</text>
+    <text x="652" y="312" fill="#64748b" font-size="16">las tres raíces cumplen |w| = 2</text>
+
+    <rect x="634" y="340" width="266" height="86" rx="14" fill="#f5f3ff" stroke="#ddd6fe"></rect>
+    <text x="652" y="364" fill="#6d28d9" font-size="16" font-weight="750" letter-spacing="1.2">ÁNGULOS</text>
+    <text x="652" y="393" fill="#0f172a" font-size="22" font-weight="700">(0 + 2kπ)/3</text>
+    <text x="652" y="412" fill="#475569" font-size="16">k = 0, 1, 2:   0,  2π/3,  −2π/3</text>
+
+    <text x="767" y="470" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">w₀ = 2,   w₁ = −1 + √3 i,</text>
+    <text x="767" y="493" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">w₂ = −1 − √3 i:   cada wₖ³ = 8</text>
+  </g>
 </svg>
-<figcaption style="text-align: center; color: #495057; font-size: 0.95rem; margin-top: 0.5rem;">
-Para <em>a</em> &gt; 0 y <em>b</em> &gt; 0, el módulo es la hipotenusa; <em>a</em> y <em>b</em> son las proyecciones sobre los ejes, y θ es un argumento de <em>z</em>.
-</figcaption>
+</div>
+<figcaption style="text-align: center; color: #475569; font-size: 0.95rem; margin-top: 0.65rem;">Las tres raíces cúbicas de 8 comparten el módulo ∛8 = 2 y sus argumentos se separan 2π/3: forman un triángulo equilátero inscrito en la circunferencia |<em>w</em>| = 2. La raíz real es <em>w</em>₀ = 2; las otras dos son conjugadas. En el panel derecho, el módulo común y el reparto de los ángulos.</figcaption>
 </figure>
-<p>El origen, el punto <span class="math inline">\(z\)</span> y su proyección <span class="math inline">\((a,0)\)</span> sobre el eje real forman un triángulo rectángulo. Respecto del ángulo <span class="math inline">\(\theta\)</span>, el cateto adyacente tiene longitud <span class="math inline">\(a\)</span>, el cateto opuesto tiene longitud <span class="math inline">\(b\)</span> y la hipotenusa tiene longitud <span class="math inline">\(r\)</span>. Por definición,</p>
+<section id="raíces-de-la-unidad" class="level3">
+<h3 class="anchored" data-anchor-id="raíces-de-la-unidad">Raíces de la unidad</h3>
+<p>Las raíces <span class="math inline">\(n\)</span>-ésimas de <span class="math inline">\(1\)</span> se llaman <strong>raíces <span class="math inline">\(n\)</span>-ésimas de la unidad</strong>. Como <span class="math inline">\(1\)</span> tiene módulo <span class="math inline">\(1\)</span> y argumento <span class="math inline">\(0\)</span>, la fórmula da</p>
 <p><span class="math display">\[
-\cos\theta=\frac{\text{cateto adyacente}}{\text{hipotenusa}}=\frac ar,
+w_k=\cos\frac{2k\pi}{n}+i\operatorname{sen}\frac{2k\pi}{n},
 \qquad
-\operatorname{sen}\theta=\frac{\text{cateto opuesto}}{\text{hipotenusa}}=\frac br.
+k=0,1,\ldots,n-1:
 \]</span></p>
-<p>Por tanto,</p>
-<p><span class="math display">\[
-a=r\cos\theta,
-\qquad
-b=r\operatorname{sen}\theta.
-\]</span></p>
-<p>En los demás cuadrantes se forma el triángulo rectángulo con las longitudes <span class="math inline">\(\lvert a\rvert\)</span>, <span class="math inline">\(\lvert b\rvert\)</span> y <span class="math inline">\(r\)</span>. El ángulo agudo de ese triángulo es el <strong>ángulo de referencia</strong>; los signos del coseno y del seno se toman de los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Sobre los ejes, los valores se obtienen directamente de las coordenadas. De este modo, las fórmulas anteriores se conservan para cualquier <span class="math inline">\(z\ne0\)</span>.</p>
-<p>Al sustituir estas expresiones en <span class="math inline">\(z=a+bi\)</span> se obtiene la <strong>forma polar</strong>:</p>
-<p><span class="math display">\[
-z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr).
-\]</span></p>
-<p>Una vuelta completa no cambia la semirrecta ni sus proyecciones. Por ello,</p>
-<p><span class="math display">\[
-\cos(\theta+2k\pi)=\cos\theta,
-\qquad
-\operatorname{sen}(\theta+2k\pi)=\operatorname{sen}\theta,
-\qquad k\in\mathbb Z.
-\]</span></p>
-<p>La forma polar no es única: sirve cualquier argumento de <span class="math inline">\(z\)</span>, aunque se usará normalmente el argumento principal. Dos formas polares con módulo positivo representan el mismo número exactamente cuando tienen el mismo módulo y sus ángulos difieren en un múltiplo entero de <span class="math inline">\(2\pi\)</span>. Como <span class="math inline">\(0\)</span> no tiene argumento, se escribe simplemente como <span class="math inline">\(0\)</span> y no se le asigna una forma polar mediante esta definición.</p>
-<p>Para las conversiones se usan los siguientes valores notables del intervalo <span class="math inline">\([0,\pi/2]\)</span>:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\theta\)</span></th>
-<th><span class="math inline">\(0\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{6}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{4}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{3}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{2}\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\cos\theta\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt3}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt2}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac12\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\operatorname{sen}\theta\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\(\dfrac12\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt2}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt3}{2}\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>En los cuadrantes segundo, tercero y cuarto, el coseno y el seno se obtienen con el ángulo de referencia y los signos del cuadrante. Por ejemplo, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\cos\dfrac{\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\operatorname{sen}\dfrac{\pi}{3}=\dfrac{\sqrt3}{2}\)</span>.</p>
-<p>Las dos conversiones son:</p>
-<ul>
-<li><strong>de cartesiana a polar:</strong> calcular <span class="math inline">\(r=\sqrt{a^2+b^2}\)</span> y determinar <span class="math inline">\(\theta\)</span> mediante las dos condiciones <span class="math inline">\(\cos\theta=\dfrac ar\)</span> y <span class="math inline">\(\operatorname{sen}\theta=\dfrac br\)</span>, ubicando el cuadrante o el eje con los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>;</li>
-<li><strong>de polar a cartesiana:</strong> evaluar <span class="math inline">\(a=r\cos\theta\)</span> y <span class="math inline">\(b=r\operatorname{sen}\theta\)</span>.</li>
-</ul>
+<p>son <span class="math inline">\(n\)</span> puntos igualmente espaciados sobre la circunferencia de radio <span class="math inline">\(1\)</span>, empezando en <span class="math inline">\(w_0=1\)</span>. Para <span class="math inline">\(n=4\)</span> resultan <span class="math inline">\(1\)</span>, <span class="math inline">\(i\)</span>, <span class="math inline">\(-1\)</span> y <span class="math inline">\(-i\)</span>: exactamente el ciclo de las potencias de <span class="math inline">\(i\)</span> estudiado en la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p>
+<p>Las raíces de la unidad explican por qué <strong>una raíz fija permite obtener todas las demás</strong>. Multiplicar por un número de módulo <span class="math inline">\(1\)</span> es una rotación pura, como se vio en la <a href="../sesiones/2026-08-21-sesion-10.html">Sesión 10</a>: conserva el módulo y suma el argumento. Si <span class="math inline">\(z\ne0\)</span> y <span class="math inline">\(w_0\)</span> es una raíz <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(z\)</span>, al multiplicarla por las <span class="math inline">\(n\)</span> raíces de la unidad se obtienen <span class="math inline">\(n\)</span> números con el mismo módulo que <span class="math inline">\(w_0\)</span> y argumentos desplazados en <span class="math inline">\(\dfrac{2k\pi}{n}\)</span>: precisamente las <span class="math inline">\(n\)</span> raíces de <span class="math inline">\(z\)</span>. En símbolos, si <span class="math inline">\(u^n=1\)</span> y <span class="math inline">\(w_0^n=z\)</span>, entonces <span class="math inline">\((w_0u)^n=w_0^nu^n=z\cdot1=z\)</span>.</p>
+</section>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-módulo" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-módulo">Ejemplo 1. Módulo</h3>
-<p>Calcular el módulo de <span class="math inline">\(3+4i\)</span>, de <span class="math inline">\(-2i\)</span> y de <span class="math inline">\(-7\)</span>.</p>
+<section id="ejemplo-1.-las-raíces-cúbicas-de-8" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-las-raíces-cúbicas-de-8">Ejemplo 1. Las raíces cúbicas de 8</h3>
+<p>Determinar todas las soluciones de <span class="math inline">\(w^3=8\)</span>.</p>
+<p>El número <span class="math inline">\(8\)</span> es real positivo: <span class="math inline">\(r=8\)</span> y <span class="math inline">\(\theta=0\)</span>. El módulo común es <span class="math inline">\(\sqrt[3]{8}=2\)</span> y los ángulos son <span class="math inline">\(\dfrac{0+2k\pi}{3}\)</span> para <span class="math inline">\(k=0,1,2\)</span>, es decir, <span class="math inline">\(0\)</span>, <span class="math inline">\(\dfrac{2\pi}{3}\)</span> y <span class="math inline">\(\dfrac{4\pi}{3}\)</span>. El tercero no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>; su forma principal es <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span>. Las tres raíces son</p>
 <p><span class="math display">\[
-\lvert3+4i\rvert=\sqrt{3^2+4^2}=\sqrt{25}=5,
+w_0=2,
 \qquad
-\lvert-2i\rvert=\sqrt{0^2+(-2)^2}=2,
+w_1=2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)=-1+\sqrt3\,i,
 \qquad
-\lvert-7\rvert=\sqrt{(-7)^2}=7.
+w_2=2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)=-1-\sqrt3\,i.
 \]</span></p>
-<p>El tercero coincide con el valor absoluto de <span class="math inline">\(-7\)</span>, como debe ser. La identidad de la Sesión 08 confirma el primero:</p>
-<p><span class="math display">\[
-(3+4i)(3-4i)=3^2+4^2=25=\lvert3+4i\rvert^2.
-\]</span></p>
+<p>Solo una es real —el valor del radical, <span class="math inline">\(\sqrt[3]{8}=2\)</span>— y las otras dos son conjugadas entre sí. Como verificación, por De Moivre <span class="math inline">\(w_1^3\)</span> tiene módulo <span class="math inline">\(2^3=8\)</span> y argumento <span class="math inline">\(3\cdot\dfrac{2\pi}{3}=2\pi\equiv0\pmod{2\pi}\)</span>, así que <span class="math inline">\(w_1^3=8\)</span>.</p>
 </section>
-<section id="ejemplo-2.-argumento-principal-sobre-los-ejes" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-argumento-principal-sobre-los-ejes">Ejemplo 2. Argumento principal sobre los ejes</h3>
-<p>Determinar el argumento principal de <span class="math inline">\(2\)</span>, <span class="math inline">\(3i\)</span>, <span class="math inline">\(-4\)</span> y <span class="math inline">\(-i\)</span>.</p>
-<p>Los cuatro puntos están sobre los ejes: <span class="math inline">\(\operatorname{Arg}2=0\)</span>, <span class="math inline">\(\operatorname{Arg}3i=\dfrac{\pi}{2}\)</span>, <span class="math inline">\(\operatorname{Arg}(-4)=\pi\)</span> y <span class="math inline">\(\operatorname{Arg}(-i)=-\dfrac{\pi}{2}\)</span>. En el último caso la convención exige <span class="math inline">\(-\dfrac{\pi}{2}\)</span> y no <span class="math inline">\(\dfrac{3\pi}{2}\)</span>, que está fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</p>
-</section>
-<section id="ejemplo-3.-de-la-forma-cartesiana-a-la-polar" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-de-la-forma-cartesiana-a-la-polar">Ejemplo 3. De la forma cartesiana a la polar</h3>
-<p>Escribir <span class="math inline">\(z=-1+i\)</span> en forma polar.</p>
-<p>El módulo es <span class="math inline">\(r=\sqrt{(-1)^2+1^2}=\sqrt2\)</span>. El ángulo debe cumplir</p>
+<section id="ejemplo-2.-las-raíces-cuartas-de-16" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-las-raíces-cuartas-de-16">Ejemplo 2. Las raíces cuartas de −16</h3>
+<p>Determinar todas las soluciones de <span class="math inline">\(w^4=-16\)</span> y reportarlas con argumento principal.</p>
+<p>Como <span class="math inline">\(-16\)</span> es real negativo, las relaciones de la <a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a> dan <span class="math inline">\(r=16\)</span> y <span class="math inline">\(\theta=\operatorname{Arg}(-16)=\pi\)</span>. El módulo común es <span class="math inline">\(\sqrt[4]{16}=2\)</span>, pues <span class="math inline">\(2^4=16\)</span>, y los ángulos son <span class="math inline">\(\dfrac{\pi+2k\pi}{4}\)</span> para <span class="math inline">\(k=0,1,2,3\)</span>: <span class="math inline">\(\dfrac{\pi}{4}\)</span>, <span class="math inline">\(\dfrac{3\pi}{4}\)</span>, <span class="math inline">\(\dfrac{5\pi}{4}\)</span> y <span class="math inline">\(\dfrac{7\pi}{4}\)</span>. Los dos últimos no pertenecen a <span class="math inline">\((-\pi,\pi]\)</span>; sus formas principales son <span class="math inline">\(\dfrac{5\pi}{4}-2\pi=-\dfrac{3\pi}{4}\)</span> y <span class="math inline">\(\dfrac{7\pi}{4}-2\pi=-\dfrac{\pi}{4}\)</span>. Con <span class="math inline">\(\cos\dfrac{\pi}{4}=\operatorname{sen}\dfrac{\pi}{4}=\dfrac{\sqrt2}{2}\)</span>, las cuatro raíces son</p>
 <p><span class="math display">\[
-\cos\theta=-\frac{1}{\sqrt2}=-\frac{\sqrt2}{2}
-\qquad\text{y}\qquad
-\operatorname{sen}\theta=\frac{1}{\sqrt2}=\frac{\sqrt2}{2}.
+w_0=\sqrt2+\sqrt2\,i,
+\qquad
+w_1=-\sqrt2+\sqrt2\,i,
+\qquad
+w_2=-\sqrt2-\sqrt2\,i,
+\qquad
+w_3=\sqrt2-\sqrt2\,i.
 \]</span></p>
-<p>Como <span class="math inline">\(a&lt;0\)</span> y <span class="math inline">\(b&gt;0\)</span>, el punto está en el segundo cuadrante; el ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{4}\)</span>, así que <span class="math inline">\(\operatorname{Arg}z=\pi-\dfrac{\pi}{4}=\dfrac{3\pi}{4}\)</span>. Por tanto,</p>
-<p><span class="math display">\[
--1+i=\sqrt2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr).
-\]</span></p>
-</section>
-<section id="ejemplo-4.-de-la-forma-polar-a-la-cartesiana" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-de-la-forma-polar-a-la-cartesiana">Ejemplo 4. De la forma polar a la cartesiana</h3>
-<p>Escribir <span class="math inline">\(z=4\Bigl(\cos\dfrac{\pi}{6}+i\operatorname{sen}\dfrac{\pi}{6}\Bigr)\)</span> en forma cartesiana.</p>
-<p>Con los valores de referencia,</p>
-<p><span class="math display">\[
-z=4\biggl(\frac{\sqrt3}{2}+\frac12\,i\biggr)=2\sqrt3+2i.
-\]</span></p>
-<p>La verificación por módulo confirma el resultado: <span class="math inline">\(\lvert2\sqrt3+2i\rvert=\sqrt{12+4}=\sqrt{16}=4\)</span>, que es el <span class="math inline">\(r\)</span> original.</p>
+<p>La ecuación <span class="math inline">\(w^4=-16\)</span> no tiene soluciones reales —ninguna cuarta potencia de un número real es negativa—, pero tiene cuatro soluciones complejas, que forman un cuadrado con dos pares de conjugadas. Como verificación, <span class="math inline">\(w_0\)</span> tiene módulo <span class="math inline">\(2\)</span> y argumento <span class="math inline">\(\dfrac{\pi}{4}\)</span>; por De Moivre, <span class="math inline">\(w_0^4\)</span> tiene módulo <span class="math inline">\(2^4=16\)</span> y argumento <span class="math inline">\(4\cdot\dfrac{\pi}{4}=\pi\)</span>, así que <span class="math inline">\(w_0^4=16\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-16\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Sumar las partes en lugar de aplicar la definición.</strong> Se tiene <span class="math inline">\(\lvert3+4i\rvert=5\)</span>, no <span class="math inline">\(3+4=7\)</span>: el módulo es <span class="math inline">\(\sqrt{a^2+b^2}\)</span>, no <span class="math inline">\(a+b\)</span>.</li>
-<li><strong>Confundir el módulo con su cuadrado.</strong> Para <span class="math inline">\(3+4i\)</span>, la cantidad <span class="math inline">\(a^2+b^2=25\)</span> es <span class="math inline">\(\lvert z\rvert^2\)</span>; el módulo es <span class="math inline">\(\sqrt{25}=5\)</span>, no <span class="math inline">\(25\)</span>: no debe omitirse la raíz.</li>
-<li><strong>Reportar el argumento principal fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</strong> Se tiene <span class="math inline">\(\operatorname{Arg}(-i)=-\dfrac{\pi}{2}\)</span>, no <span class="math inline">\(\dfrac{3\pi}{2}\)</span>: debajo del eje real, el argumento principal es negativo.</li>
-<li><strong>Ignorar el cuadrante en la conversión.</strong> Para <span class="math inline">\(-1+i\)</span>, el argumento principal es <span class="math inline">\(\dfrac{3\pi}{4}\)</span>, no <span class="math inline">\(-\dfrac{\pi}{4}\)</span>: deben cumplirse a la vez las condiciones del coseno y del seno, y los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> ubican el cuadrante.</li>
-<li><strong>Asignar argumento al cero.</strong> Escribir <span class="math inline">\(\operatorname{Arg}0=0\)</span> es incorrecto: el <span class="math inline">\(0\)</span> no determina semirrecta alguna, así que no tiene argumento, aunque <span class="math inline">\(\lvert0\rvert=0\)</span>.</li>
+<li><strong>Tomar el radical real como la única raíz.</strong> El radical denota un solo número: <span class="math inline">\(\sqrt[3]{8}=2\)</span>. Pero la ecuación <span class="math inline">\(w^3=8\)</span> tiene tres soluciones en <span class="math inline">\(\mathbb C\)</span>: <span class="math inline">\(2\)</span>, <span class="math inline">\(-1+\sqrt3\,i\)</span> y <span class="math inline">\(-1-\sqrt3\,i\)</span>. En este ejemplo, el radical nombra una de las raíces; en general, si <span class="math inline">\(z\ne0\)</span>, la ecuación <span class="math inline">\(w^n=z\)</span> tiene <span class="math inline">\(n\)</span> raíces complejas distintas.</li>
+<li><strong>Dividir el módulo entre <span class="math inline">\(n\)</span>.</strong> El módulo común de las raíces cúbicas de <span class="math inline">\(8\)</span> es <span class="math inline">\(\sqrt[3]{8}=2\)</span>, no <span class="math inline">\(\dfrac83\)</span>: el módulo de cada raíz es la raíz <span class="math inline">\(n\)</span>-ésima real de <span class="math inline">\(r=\lvert z\rvert\)</span>, no <span class="math inline">\(\dfrac{r}{n}\)</span>.</li>
+<li><strong>Sumar las vueltas después de dividir.</strong> Para las raíces cuadradas de <span class="math inline">\(2i\)</span>, con <span class="math inline">\(\theta=\dfrac{\pi}{2}\)</span> y <span class="math inline">\(n=2\)</span>, los ángulos correctos son <span class="math inline">\(\dfrac{\pi/2+2k\pi}{2}=\dfrac{\pi}{4}+k\pi\)</span>, que dan las dos raíces <span class="math inline">\(1+i\)</span> y <span class="math inline">\(-1-i\)</span>. Escribir <span class="math inline">\(\dfrac{\pi}{4}+2k\pi\)</span> repite la raíz <span class="math inline">\(1+i\)</span> y pierde la otra: las vueltas <span class="math inline">\(2k\pi\)</span> se suman al argumento de <span class="math inline">\(z\)</span> <strong>antes</strong> de dividir entre <span class="math inline">\(n\)</span>.</li>
+<li><strong>Reportar los ángulos sin ajustar al principal.</strong> Para las raíces cúbicas de <span class="math inline">\(8\)</span>, el ángulo <span class="math inline">\(\dfrac{4\pi}{3}\)</span> del valor <span class="math inline">\(k=2\)</span> es un argumento válido de <span class="math inline">\(w_2\)</span>, pero no es el principal, pues <span class="math inline">\(\dfrac{4\pi}{3}\notin(-\pi,\pi]\)</span>; el argumento principal es <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span> (<a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>).</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
 <p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
-<li><p>Calcule el módulo y el argumento principal de <span class="math inline">\(z=-\sqrt3-i\)</span> y de <span class="math inline">\(w=2+2\sqrt3\,i\)</span>, y escriba ambos números en forma polar.</p></li>
-<li><p>En la conversión</p>
-<p><span class="math display">\[
-1-i=\sqrt2\Bigl(\cos\frac{\pi}{4}+i\operatorname{sen}\frac{\pi}{4}\Bigr)
-\]</span></p>
-<p>identifique el error, corrija la forma polar e indique qué número representa en realidad la expresión de la derecha.</p></li>
-<li><p>Escriba <span class="math inline">\(z=6\Bigl(\cos\dfrac{2\pi}{3}+i\operatorname{sen}\dfrac{2\pi}{3}\Bigr)\)</span> en forma cartesiana y verifique que el módulo del resultado es <span class="math inline">\(6\)</span>.</p></li>
-<li><p>Describa y represente los conjuntos</p>
-<p><span class="math display">\[
-A=\{z\in\mathbb C:\lvert z\rvert=3\}
-\qquad\text{y}\qquad
-B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
-\]</span></p></li>
+<li>Determine las cuatro raíces cuartas de <span class="math inline">\(16\)</span>: repórtelas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.</li>
+<li>En el cálculo de las raíces cúbicas de <span class="math inline">\(-27\)</span> se concluye que «la única raíz cúbica de <span class="math inline">\(-27\)</span> es <span class="math inline">\(\sqrt[3]{-27}=-3\)</span>». Identifique el error y determine las tres raíces cúbicas de <span class="math inline">\(-27\)</span>, en forma polar con argumento principal y en forma cartesiana.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -665,37 +655,26 @@ B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> Para <span class="math inline">\(z=-\sqrt3-i\)</span>,</p>
+<p><strong>1.</strong> Para <span class="math inline">\(z=16\)</span>: <span class="math inline">\(r=16\)</span> y <span class="math inline">\(\theta=0\)</span>. El módulo común es <span class="math inline">\(\sqrt[4]{16}=2\)</span> y los ángulos son <span class="math inline">\(\dfrac{0+2k\pi}{4}=\dfrac{k\pi}{2}\)</span> para <span class="math inline">\(k=0,1,2,3\)</span>: <span class="math inline">\(0\)</span>, <span class="math inline">\(\dfrac{\pi}{2}\)</span>, <span class="math inline">\(\pi\)</span> y <span class="math inline">\(\dfrac{3\pi}{2}\)</span>. El último no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>; su forma principal es <span class="math inline">\(\dfrac{3\pi}{2}-2\pi=-\dfrac{\pi}{2}\)</span>. Las cuatro raíces son</p>
 <p><span class="math display">\[
-\lvert z\rvert=\sqrt{(-\sqrt3)^2+(-1)^2}=2.
+w_0=2,
+\qquad
+w_1=2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=2i,
+\qquad
+w_2=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-2,
+\qquad
+w_3=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)=-2i.
 \]</span></p>
-<p>Como <span class="math inline">\(\cos\theta=-\dfrac{\sqrt3}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac12\)</span>, el punto está en el tercer cuadrante. El ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{6}\)</span>, así que</p>
+<p>En el plano complejo, los cuatro puntos están sobre la circunferencia de radio <span class="math inline">\(2\)</span> y sobre los ejes: <span class="math inline">\(2\)</span> y <span class="math inline">\(-2\)</span> en el eje real, <span class="math inline">\(2i\)</span> y <span class="math inline">\(-2i\)</span> en el imaginario. Forman un cuadrado; dos raíces son reales y dos son imaginarias puras.</p>
+<p><strong>2.</strong> El valor <span class="math inline">\(\sqrt[3]{-27}=-3\)</span> es correcto como raíz cúbica <strong>real</strong> —en efecto, <span class="math inline">\((-3)^3=-27\)</span>—, pero el error está en concluir que es la única solución: en <span class="math inline">\(\mathbb C\)</span>, la ecuación <span class="math inline">\(w^3=-27\)</span>, con <span class="math inline">\(-27\ne0\)</span>, tiene tres raíces distintas. Para <span class="math inline">\(z=-27\)</span>: <span class="math inline">\(r=27\)</span>, <span class="math inline">\(\theta=\pi\)</span>, módulo común <span class="math inline">\(\sqrt[3]{27}=3\)</span> y ángulos <span class="math inline">\(\dfrac{\pi+2k\pi}{3}\)</span> para <span class="math inline">\(k=0,1,2\)</span>: <span class="math inline">\(\dfrac{\pi}{3}\)</span>, <span class="math inline">\(\pi\)</span> y <span class="math inline">\(\dfrac{5\pi}{3}\)</span>, cuya forma principal es <span class="math inline">\(\dfrac{5\pi}{3}-2\pi=-\dfrac{\pi}{3}\)</span>. Las tres raíces son</p>
 <p><span class="math display">\[
-\operatorname{Arg}z=-\pi+\frac{\pi}{6}=-\frac{5\pi}{6}.
+w_0=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)=\frac32+\frac{3\sqrt3}{2}\,i,
+\qquad
+w_1=3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-3,
+\qquad
+w_2=3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)=\frac32-\frac{3\sqrt3}{2}\,i.
 \]</span></p>
-<p>Por tanto,</p>
-<p><span class="math display">\[
-z=2\Bigl(\cos\Bigl(-\frac{5\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\frac{5\pi}{6}\Bigr)\Bigr).
-\]</span></p>
-<p>Para <span class="math inline">\(w=2+2\sqrt3\,i\)</span>,</p>
-<p><span class="math display">\[
-\lvert w\rvert=\sqrt{2^2+(2\sqrt3)^2}=4.
-\]</span></p>
-<p>Como <span class="math inline">\(\cos\theta=\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\theta=\dfrac{\sqrt3}{2}\)</span>, el punto está en el primer cuadrante y <span class="math inline">\(\operatorname{Arg}w=\dfrac{\pi}{3}\)</span>. Entonces</p>
-<p><span class="math display">\[
-w=4\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
-\]</span></p>
-<p><strong>2.</strong> El módulo <span class="math inline">\(\sqrt2\)</span> es correcto, pero el ángulo se tomó sin revisar los signos: la parte imaginaria de <span class="math inline">\(1-i\)</span> es negativa, mientras que <span class="math inline">\(\operatorname{sen}\dfrac{\pi}{4}&gt;0\)</span>. Las condiciones <span class="math inline">\(\cos\theta=\dfrac{\sqrt2}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac{\sqrt2}{2}\)</span> ubican el punto en el cuarto cuadrante: <span class="math inline">\(\operatorname{Arg}(1-i)=-\dfrac{\pi}{4}\)</span> y</p>
-<p><span class="math display">\[
-1-i=\sqrt2\Bigl(\cos\Bigl(-\frac{\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{4}\Bigr)\Bigr).
-\]</span></p>
-<p>La expresión propuesta vale <span class="math inline">\(\sqrt2\Bigl(\dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}\,i\Bigr)=1+i\)</span>: representa el conjugado de <span class="math inline">\(1-i\)</span>.</p>
-<p><strong>3.</strong> Con el ángulo de referencia <span class="math inline">\(\dfrac{\pi}{3}\)</span> en el segundo cuadrante, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\dfrac{\sqrt3}{2}\)</span>. Por tanto,</p>
-<p><span class="math display">\[
-z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
-\]</span></p>
-<p>La verificación: <span class="math inline">\(\lvert-3+3\sqrt3\,i\rvert=\sqrt{9+27}=\sqrt{36}=6\)</span>.</p>
-<p><strong>4.</strong> <span class="math inline">\(A\)</span> es la <strong>circunferencia</strong> con centro en el origen y radio <span class="math inline">\(3\)</span>: todos los puntos cuya distancia al origen es <span class="math inline">\(3\)</span>. <span class="math inline">\(B\)</span> consta de los puntos de la semirrecta de dirección <span class="math inline">\(\dfrac{\pi}{4}\)</span>, con el origen excluido: sus elementos son los números <span class="math inline">\(r\Bigl(\cos\dfrac{\pi}{4}+i\operatorname{sen}\dfrac{\pi}{4}\Bigr)\)</span> con <span class="math inline">\(r&gt;0\)</span>. El origen se excluye porque <span class="math inline">\(0\)</span> no tiene argumento.</p>
+<p>La raíz real es una de las tres. Como verificación, por De Moivre <span class="math inline">\(w_0^3\)</span> tiene módulo <span class="math inline">\(3^3=27\)</span> y argumento <span class="math inline">\(3\cdot\dfrac{\pi}{3}=\pi\)</span>, así que <span class="math inline">\(w_0^3=27\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-27\)</span>.</p>
 </div>
 </div>
 </div>
@@ -703,12 +682,12 @@ z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li>Calcule <span class="math inline">\(\lvert-6\rvert\)</span>, <span class="math inline">\(\lvert12-5i\rvert\)</span> y <span class="math inline">\(\lvert i\rvert\)</span>.</li>
-<li>Determine el argumento principal de <span class="math inline">\(7\)</span>, <span class="math inline">\(-7\)</span>, <span class="math inline">\(4i\)</span> y <span class="math inline">\(-1-i\)</span>.</li>
-<li>Escriba <span class="math inline">\(1+\sqrt3\,i\)</span> y <span class="math inline">\(-4\)</span> en forma polar.</li>
-<li>Exprese <span class="math inline">\(w=10\Bigl(\cos\Bigl(-\dfrac{\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\dfrac{\pi}{6}\Bigr)\Bigr)\)</span> en forma cartesiana.</li>
-<li>Para <span class="math inline">\(z=2-3i\)</span>, calcule <span class="math inline">\(\lvert z\rvert\)</span>, <span class="math inline">\(\lvert\overline z\rvert\)</span> y <span class="math inline">\(z\overline z\)</span>, y compruebe que <span class="math inline">\(z\overline z=\lvert z\rvert^2\)</span>, como en la Sesión 08.</li>
-<li>Describa el conjunto <span class="math inline">\(\{z\in\mathbb C:\lvert z\rvert=1\}\)</span> y proponga tres de sus elementos: uno real, uno imaginario puro y uno que no sea de ninguno de esos dos tipos.</li>
+<li>Determine las tres raíces cúbicas de <span class="math inline">\(27\)</span>, en forma polar con argumento principal y en forma cartesiana.</li>
+<li>Determine las cuatro raíces cuartas de <span class="math inline">\(-1\)</span>, repórtelas con argumento principal y ubíquelas en el plano complejo.</li>
+<li>Determine las dos raíces cuadradas de <span class="math inline">\(-4i\)</span> en forma cartesiana y verifique una de ellas elevándola al cuadrado.</li>
+<li>Determine las seis raíces sextas de la unidad, repórtelas con argumento principal y señale cuáles son reales.</li>
+<li>Verifique que <span class="math inline">\(1+2i\)</span> es una raíz cuadrada de <span class="math inline">\(-3+4i\)</span> y, sin recurrir a la forma polar, obtenga la otra raíz cuadrada. Explique por qué en este caso conviene la vía cartesiana y no la fórmula polar.</li>
+<li>Determine las dos raíces cuadradas de <span class="math inline">\(2+2\sqrt3\,i\)</span>, en forma polar y en forma cartesiana; verifique una de ellas elevando al cuadrado su forma cartesiana y explique por qué las dos raíces son opuestas.</li>
 </ol>
 
 
@@ -1124,13 +1103,13 @@ z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-19-sesion-08.html" class="pagination-link" aria-label="Sesión 08. Números complejos: multiplicación, división y conjugado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></span>
+      <a href="../sesiones/2026-08-24-sesion-11.html" class="pagination-link" aria-label="Sesión 11. Números complejos: potencias enteras y teorema de De Moivre">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-21-sesion-10.html" class="pagination-link" aria-label="Sesión 10. Números complejos: multiplicación y división en forma polar">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

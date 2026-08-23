@@ -1436,6 +1436,83 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-25-sesion-12.html",
+    "href": "sesiones/2026-08-25-sesion-12.html",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "",
+    "text": "De las potencias a las raíces\nEl teorema de De Moivre de la Sesión 11 calcula potencias: de \\(z\\) se obtiene \\(z^n\\). Esta sesión invierte la pregunta: dados un número complejo \\(z\\) y un entero \\(n\\ge2\\), se buscan todos los números \\(w\\) tales que\n\\[\nw^n=z.\n\\]\nCada solución se llama raíz \\(n\\)-ésima de \\(z\\).\nEn los números reales la pregunta ya tiene una respuesta parcial, escrita con radicales: \\(\\sqrt[3]{8}=2\\) y \\(\\sqrt{16}=4\\). Cuando está definido en \\(\\mathbb R\\), el radical \\(\\sqrt[n]{a}\\) denota un solo valor real; si \\(n\\) es par y \\(a\\ge0\\), se toma la raíz no negativa. Lo que se amplía es la ecuación: en \\(\\mathbb C\\), \\(w^n=z\\) puede tener más soluciones que la que nombra el radical. La primera señal apareció en la Sesión 07: para \\(d&gt;0\\), la ecuación \\(x^2=-d\\) no tiene soluciones reales y tiene exactamente dos soluciones complejas, \\(\\pm\\bigl(\\sqrt d\\bigr)i\\). El resultado de esta sesión generaliza ese fenómeno: si \\(z\\ne0\\), la ecuación \\(w^n=z\\) tiene exactamente \\(n\\) soluciones distintas en \\(\\mathbb C\\), y su disposición en el plano complejo es notablemente regular.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#la-fórmula-de-las-raíces-n-ésimas",
+    "href": "sesiones/2026-08-25-sesion-12.html#la-fórmula-de-las-raíces-n-ésimas",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "La fórmula de las raíces n-ésimas",
+    "text": "La fórmula de las raíces n-ésimas\nSea \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\) un número complejo no nulo, con \\(r=\\lvert z\\rvert&gt;0\\), y búsquese \\(w=s\\bigl(\\cos\\varphi+i\\operatorname{sen}\\varphi\\bigr)\\), con \\(s&gt;0\\), tal que \\(w^n=z\\). Por el teorema de De Moivre de la Sesión 11,\n\\[\nw^n=s^n\\bigl(\\cos(n\\varphi)+i\\operatorname{sen}(n\\varphi)\\bigr).\n\\]\nDos números complejos no nulos en forma polar son iguales exactamente cuando sus módulos coinciden y sus argumentos difieren en un múltiplo entero de \\(2\\pi\\), es decir, cuando sus argumentos son congruentes módulo \\(2\\pi\\), con la escritura introducida en la Sesión 10. La ecuación \\(w^n=z\\) equivale entonces al par de condiciones\n\\[\ns^n=r,\n\\qquad\nn\\varphi\\equiv\\theta\\pmod{2\\pi}.\n\\]\nLa primera es una ecuación entre números reales positivos y tiene una única solución, \\(s=\\sqrt[n]{r}\\): la raíz \\(n\\)-ésima real. La segunda dice que \\(n\\varphi=\\theta+2k\\pi\\) para algún entero \\(k\\), de donde\n\\[\n\\varphi=\\frac{\\theta+2k\\pi}{n},\n\\qquad\nk\\in\\mathbb Z.\n\\]\nDos valores de \\(k\\) producen la misma raíz exactamente cuando sus ángulos difieren en un múltiplo de \\(2\\pi\\), y eso ocurre cuando la diferencia de esos valores es un múltiplo de \\(n\\). Por ello basta tomar \\(k=0,1,\\ldots,n-1\\): esos \\(n\\) valores producen raíces distintas entre sí, y cualquier otro entero repite una de ellas.\nRaíces \\(n\\)-ésimas. Si \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\ne0\\) y \\(n\\ge2\\) es un entero, la ecuación \\(w^n=z\\) tiene exactamente \\(n\\) soluciones distintas:\n\\[\nw_k=\\sqrt[n]{r}\\,\\Bigl(\\cos\\frac{\\theta+2k\\pi}{n}+i\\operatorname{sen}\\frac{\\theta+2k\\pi}{n}\\Bigr),\n\\qquad\nk=0,1,\\ldots,n-1.\n\\]\nSi \\(z=0\\), la situación es distinta: de \\(\\lvert w\\rvert^n=\\lvert w^n\\rvert=0\\) se sigue \\(\\lvert w\\rvert=0\\), así que la única raíz \\(n\\)-ésima de \\(0\\) es \\(0\\). Hay una sola raíz distinta; cuando en la Unidad 2 se cuenten las raíces de un polinomio con multiplicidad, esta raíz única se contará \\(n\\) veces.\n\nProcedimiento para calcular las raíces\n\nSi \\(z=0\\), la única raíz \\(n\\)-ésima es \\(0\\). Si \\(z\\ne0\\), continuar.\nEscribir \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\), con \\(r&gt;0\\), mediante las relaciones de la Sesión 09.\nCalcular el módulo común \\(\\sqrt[n]{r}\\) y los \\(n\\) ángulos \\(\\dfrac{\\theta+2k\\pi}{n}\\) para \\(k=0,1,\\ldots,n-1\\).\nSi se solicitan argumentos principales, ajustar con múltiplos de \\(2\\pi\\) los ángulos que queden fuera de \\((-\\pi,\\pi]\\).\nConservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia \\(n\\) con el teorema de De Moivre de la Sesión 11.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#distribución-angular-y-raíces-de-la-unidad",
+    "href": "sesiones/2026-08-25-sesion-12.html#distribución-angular-y-raíces-de-la-unidad",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "Distribución angular y raíces de la unidad",
+    "text": "Distribución angular y raíces de la unidad\nSi \\(z\\ne0\\), las \\(n\\) raíces comparten el módulo \\(\\sqrt[n]{r}\\): todas están sobre la circunferencia de radio \\(\\sqrt[n]{r}\\) centrada en el origen. Al pasar de \\(k\\) a \\(k+1\\), el ángulo aumenta exactamente \\(\\dfrac{2\\pi}{n}\\): las raíces están igualmente espaciadas, y al recorrer las \\(n\\) se completa una vuelta, pues \\(n\\cdot\\dfrac{2\\pi}{n}=2\\pi\\). Para \\(n\\ge3\\) son los vértices de un polígono regular de \\(n\\) lados inscrito en esa circunferencia; para \\(n=2\\) son dos puntos diametralmente opuestos, es decir, \\(w_1=-w_0\\).\nLa figura muestra el caso de las raíces cúbicas de \\(8\\), que el Ejemplo 1 calcula en detalle: módulo común \\(\\sqrt[3]{8}=2\\) y separación constante de \\(\\dfrac{2\\pi}{3}\\).\n\n\n\n  Raíces cúbicas de un número complejo en forma polar\n  Infografía con un plano complejo y una interpretación algebraica. Las tres raíces cúbicas de ocho comparten el módulo dos y sus argumentos se separan dos tercios de pi: la raíz real dos y el par conjugado menos uno más raíz de tres i y menos uno menos raíz de tres i forman un triángulo equilátero inscrito en la circunferencia de radio dos. Arcos ámbar muestran el giro constante entre raíces consecutivas.\n  \n    \n      \n    \n    \n      \n    \n    \n      \n    \n    \n      \n    \n    \n      \n    \n  \n\n  \n  Raíces cúbicas de 8\n  Tres raíces, un módulo común y giros de 2π/3\n\n  \n  \n\n  \n  \n  \n\n  \n  \n\n  \n    \n    \n  \n  \n    Re\n    Im\n    0\n  \n\n  \n  \n    \n    \n    \n  \n  \n    2π/3\n    2π/3\n  \n\n  \n  \n  \n  \n  \n  \n    w₀ = 2\n    w₁ = −1 + √3 i\n    w₂ = −1 − √3 i\n  \n\n  \n    \n    w₀ = 2, raíz real\n    \n    giro 2π/3\n    \n    w₁, w₂ conjugadas\n  \n\n  \n    Interpretación algebraica\n    Un solo módulo; tres direcciones.\n\n    \n    \n    z = 8\n    |z| = 8   ·   Arg z = 0\n\n    \n    MÓDULO COMÚN\n    ∛8 = 2\n    las tres raíces cumplen |w| = 2\n\n    \n    ÁNGULOS\n    (0 + 2kπ)/3\n    k = 0, 1, 2:   0,  2π/3,  −2π/3\n\n    w₀ = 2,   w₁ = −1 + √3 i,\n    w₂ = −1 − √3 i:   cada wₖ³ = 8\n  \n\n\nLas tres raíces cúbicas de 8 comparten el módulo ∛8 = 2 y sus argumentos se separan 2π/3: forman un triángulo equilátero inscrito en la circunferencia |w| = 2. La raíz real es w₀ = 2; las otras dos son conjugadas. En el panel derecho, el módulo común y el reparto de los ángulos.\n\n\nRaíces de la unidad\nLas raíces \\(n\\)-ésimas de \\(1\\) se llaman raíces \\(n\\)-ésimas de la unidad. Como \\(1\\) tiene módulo \\(1\\) y argumento \\(0\\), la fórmula da\n\\[\nw_k=\\cos\\frac{2k\\pi}{n}+i\\operatorname{sen}\\frac{2k\\pi}{n},\n\\qquad\nk=0,1,\\ldots,n-1:\n\\]\nson \\(n\\) puntos igualmente espaciados sobre la circunferencia de radio \\(1\\), empezando en \\(w_0=1\\). Para \\(n=4\\) resultan \\(1\\), \\(i\\), \\(-1\\) y \\(-i\\): exactamente el ciclo de las potencias de \\(i\\) estudiado en la Sesión 08.\nLas raíces de la unidad explican por qué una raíz fija permite obtener todas las demás. Multiplicar por un número de módulo \\(1\\) es una rotación pura, como se vio en la Sesión 10: conserva el módulo y suma el argumento. Si \\(z\\ne0\\) y \\(w_0\\) es una raíz \\(n\\)-ésima de \\(z\\), al multiplicarla por las \\(n\\) raíces de la unidad se obtienen \\(n\\) números con el mismo módulo que \\(w_0\\) y argumentos desplazados en \\(\\dfrac{2k\\pi}{n}\\): precisamente las \\(n\\) raíces de \\(z\\). En símbolos, si \\(u^n=1\\) y \\(w_0^n=z\\), entonces \\((w_0u)^n=w_0^nu^n=z\\cdot1=z\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#ejemplos",
+    "href": "sesiones/2026-08-25-sesion-12.html#ejemplos",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Las raíces cúbicas de 8\nDeterminar todas las soluciones de \\(w^3=8\\).\nEl número \\(8\\) es real positivo: \\(r=8\\) y \\(\\theta=0\\). El módulo común es \\(\\sqrt[3]{8}=2\\) y los ángulos son \\(\\dfrac{0+2k\\pi}{3}\\) para \\(k=0,1,2\\), es decir, \\(0\\), \\(\\dfrac{2\\pi}{3}\\) y \\(\\dfrac{4\\pi}{3}\\). El tercero no pertenece a \\((-\\pi,\\pi]\\); su forma principal es \\(\\dfrac{4\\pi}{3}-2\\pi=-\\dfrac{2\\pi}{3}\\). Las tres raíces son\n\\[\nw_0=2,\n\\qquad\nw_1=2\\Bigl(\\cos\\frac{2\\pi}{3}+i\\operatorname{sen}\\frac{2\\pi}{3}\\Bigr)=-1+\\sqrt3\\,i,\n\\qquad\nw_2=2\\Bigl(\\cos\\Bigl(-\\frac{2\\pi}{3}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{2\\pi}{3}\\Bigr)\\Bigr)=-1-\\sqrt3\\,i.\n\\]\nSolo una es real —el valor del radical, \\(\\sqrt[3]{8}=2\\)— y las otras dos son conjugadas entre sí. Como verificación, por De Moivre \\(w_1^3\\) tiene módulo \\(2^3=8\\) y argumento \\(3\\cdot\\dfrac{2\\pi}{3}=2\\pi\\equiv0\\pmod{2\\pi}\\), así que \\(w_1^3=8\\).\n\n\nEjemplo 2. Las raíces cuartas de −16\nDeterminar todas las soluciones de \\(w^4=-16\\) y reportarlas con argumento principal.\nComo \\(-16\\) es real negativo, las relaciones de la Sesión 09 dan \\(r=16\\) y \\(\\theta=\\operatorname{Arg}(-16)=\\pi\\). El módulo común es \\(\\sqrt[4]{16}=2\\), pues \\(2^4=16\\), y los ángulos son \\(\\dfrac{\\pi+2k\\pi}{4}\\) para \\(k=0,1,2,3\\): \\(\\dfrac{\\pi}{4}\\), \\(\\dfrac{3\\pi}{4}\\), \\(\\dfrac{5\\pi}{4}\\) y \\(\\dfrac{7\\pi}{4}\\). Los dos últimos no pertenecen a \\((-\\pi,\\pi]\\); sus formas principales son \\(\\dfrac{5\\pi}{4}-2\\pi=-\\dfrac{3\\pi}{4}\\) y \\(\\dfrac{7\\pi}{4}-2\\pi=-\\dfrac{\\pi}{4}\\). Con \\(\\cos\\dfrac{\\pi}{4}=\\operatorname{sen}\\dfrac{\\pi}{4}=\\dfrac{\\sqrt2}{2}\\), las cuatro raíces son\n\\[\nw_0=\\sqrt2+\\sqrt2\\,i,\n\\qquad\nw_1=-\\sqrt2+\\sqrt2\\,i,\n\\qquad\nw_2=-\\sqrt2-\\sqrt2\\,i,\n\\qquad\nw_3=\\sqrt2-\\sqrt2\\,i.\n\\]\nLa ecuación \\(w^4=-16\\) no tiene soluciones reales —ninguna cuarta potencia de un número real es negativa—, pero tiene cuatro soluciones complejas, que forman un cuadrado con dos pares de conjugadas. Como verificación, \\(w_0\\) tiene módulo \\(2\\) y argumento \\(\\dfrac{\\pi}{4}\\); por De Moivre, \\(w_0^4\\) tiene módulo \\(2^4=16\\) y argumento \\(4\\cdot\\dfrac{\\pi}{4}=\\pi\\), así que \\(w_0^4=16\\bigl(\\cos\\pi+i\\operatorname{sen}\\pi\\bigr)=-16\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#errores-frecuentes",
+    "href": "sesiones/2026-08-25-sesion-12.html#errores-frecuentes",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nTomar el radical real como la única raíz. El radical denota un solo número: \\(\\sqrt[3]{8}=2\\). Pero la ecuación \\(w^3=8\\) tiene tres soluciones en \\(\\mathbb C\\): \\(2\\), \\(-1+\\sqrt3\\,i\\) y \\(-1-\\sqrt3\\,i\\). En este ejemplo, el radical nombra una de las raíces; en general, si \\(z\\ne0\\), la ecuación \\(w^n=z\\) tiene \\(n\\) raíces complejas distintas.\nDividir el módulo entre \\(n\\). El módulo común de las raíces cúbicas de \\(8\\) es \\(\\sqrt[3]{8}=2\\), no \\(\\dfrac83\\): el módulo de cada raíz es la raíz \\(n\\)-ésima real de \\(r=\\lvert z\\rvert\\), no \\(\\dfrac{r}{n}\\).\nSumar las vueltas después de dividir. Para las raíces cuadradas de \\(2i\\), con \\(\\theta=\\dfrac{\\pi}{2}\\) y \\(n=2\\), los ángulos correctos son \\(\\dfrac{\\pi/2+2k\\pi}{2}=\\dfrac{\\pi}{4}+k\\pi\\), que dan las dos raíces \\(1+i\\) y \\(-1-i\\). Escribir \\(\\dfrac{\\pi}{4}+2k\\pi\\) repite la raíz \\(1+i\\) y pierde la otra: las vueltas \\(2k\\pi\\) se suman al argumento de \\(z\\) antes de dividir entre \\(n\\).\nReportar los ángulos sin ajustar al principal. Para las raíces cúbicas de \\(8\\), el ángulo \\(\\dfrac{4\\pi}{3}\\) del valor \\(k=2\\) es un argumento válido de \\(w_2\\), pero no es el principal, pues \\(\\dfrac{4\\pi}{3}\\notin(-\\pi,\\pi]\\); el argumento principal es \\(\\dfrac{4\\pi}{3}-2\\pi=-\\dfrac{2\\pi}{3}\\) (Sesión 09).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#actividad",
+    "href": "sesiones/2026-08-25-sesion-12.html#actividad",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\n\nDetermine las cuatro raíces cuartas de \\(16\\): repórtelas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.\nEn el cálculo de las raíces cúbicas de \\(-27\\) se concluye que «la única raíz cúbica de \\(-27\\) es \\(\\sqrt[3]{-27}=-3\\)». Identifique el error y determine las tres raíces cúbicas de \\(-27\\), en forma polar con argumento principal y en forma cartesiana.\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Para \\(z=16\\): \\(r=16\\) y \\(\\theta=0\\). El módulo común es \\(\\sqrt[4]{16}=2\\) y los ángulos son \\(\\dfrac{0+2k\\pi}{4}=\\dfrac{k\\pi}{2}\\) para \\(k=0,1,2,3\\): \\(0\\), \\(\\dfrac{\\pi}{2}\\), \\(\\pi\\) y \\(\\dfrac{3\\pi}{2}\\). El último no pertenece a \\((-\\pi,\\pi]\\); su forma principal es \\(\\dfrac{3\\pi}{2}-2\\pi=-\\dfrac{\\pi}{2}\\). Las cuatro raíces son\n\\[\nw_0=2,\n\\qquad\nw_1=2\\Bigl(\\cos\\frac{\\pi}{2}+i\\operatorname{sen}\\frac{\\pi}{2}\\Bigr)=2i,\n\\qquad\nw_2=2\\bigl(\\cos\\pi+i\\operatorname{sen}\\pi\\bigr)=-2,\n\\qquad\nw_3=2\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{2}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{2}\\Bigr)\\Bigr)=-2i.\n\\]\nEn el plano complejo, los cuatro puntos están sobre la circunferencia de radio \\(2\\) y sobre los ejes: \\(2\\) y \\(-2\\) en el eje real, \\(2i\\) y \\(-2i\\) en el imaginario. Forman un cuadrado; dos raíces son reales y dos son imaginarias puras.\n2. El valor \\(\\sqrt[3]{-27}=-3\\) es correcto como raíz cúbica real —en efecto, \\((-3)^3=-27\\)—, pero el error está en concluir que es la única solución: en \\(\\mathbb C\\), la ecuación \\(w^3=-27\\), con \\(-27\\ne0\\), tiene tres raíces distintas. Para \\(z=-27\\): \\(r=27\\), \\(\\theta=\\pi\\), módulo común \\(\\sqrt[3]{27}=3\\) y ángulos \\(\\dfrac{\\pi+2k\\pi}{3}\\) para \\(k=0,1,2\\): \\(\\dfrac{\\pi}{3}\\), \\(\\pi\\) y \\(\\dfrac{5\\pi}{3}\\), cuya forma principal es \\(\\dfrac{5\\pi}{3}-2\\pi=-\\dfrac{\\pi}{3}\\). Las tres raíces son\n\\[\nw_0=3\\Bigl(\\cos\\frac{\\pi}{3}+i\\operatorname{sen}\\frac{\\pi}{3}\\Bigr)=\\frac32+\\frac{3\\sqrt3}{2}\\,i,\n\\qquad\nw_1=3\\bigl(\\cos\\pi+i\\operatorname{sen}\\pi\\bigr)=-3,\n\\qquad\nw_2=3\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{3}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{3}\\Bigr)\\Bigr)=\\frac32-\\frac{3\\sqrt3}{2}\\,i.\n\\]\nLa raíz real es una de las tres. Como verificación, por De Moivre \\(w_0^3\\) tiene módulo \\(3^3=27\\) y argumento \\(3\\cdot\\dfrac{\\pi}{3}=\\pi\\), así que \\(w_0^3=27\\bigl(\\cos\\pi+i\\operatorname{sen}\\pi\\bigr)=-27\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-25-sesion-12.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-25-sesion-12.html#ejercicios-para-practicar",
+    "title": "Sesión 12. Números complejos: raíces n-ésimas",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nDetermine las tres raíces cúbicas de \\(27\\), en forma polar con argumento principal y en forma cartesiana.\nDetermine las cuatro raíces cuartas de \\(-1\\), repórtelas con argumento principal y ubíquelas en el plano complejo.\nDetermine las dos raíces cuadradas de \\(-4i\\) en forma cartesiana y verifique una de ellas elevándola al cuadrado.\nDetermine las seis raíces sextas de la unidad, repórtelas con argumento principal y señale cuáles son reales.\nVerifique que \\(1+2i\\) es una raíz cuadrada de \\(-3+4i\\) y, sin recurrir a la forma polar, obtenga la otra raíz cuadrada. Explique por qué en este caso conviene la vía cartesiana y no la fórmula polar.\nDetermine las dos raíces cuadradas de \\(2+2\\sqrt3\\,i\\), en forma polar y en forma cartesiana; verifique una de ellas elevando al cuadrado su forma cartesiana y explique por qué las dos raíces son opuestas.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Sesión 12. Números complejos: raíces n-ésimas</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -1443,7 +1520,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1454,7 +1531,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1465,7 +1542,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1476,7 +1553,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1487,7 +1564,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1498,7 +1575,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1509,7 +1586,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1520,7 +1597,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1531,7 +1608,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1542,7 +1619,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1553,7 +1630,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1564,7 +1641,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1575,7 +1652,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1586,7 +1663,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1597,7 +1674,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1608,7 +1685,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1619,7 +1696,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1630,7 +1707,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1641,7 +1718,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1652,7 +1729,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
