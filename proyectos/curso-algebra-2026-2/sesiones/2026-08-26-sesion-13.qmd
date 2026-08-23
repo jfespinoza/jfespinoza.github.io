@@ -1,5 +1,5 @@
 ---
-title: "Sesión 13. Taller integrador de números reales y complejos"
+title: "Sesión 13. Práctica integradora de números reales y complejos"
 date: 2026-08-26
 description: "Selección y justificación de representaciones y procedimientos en problemas mixtos con expresiones reales, ecuaciones, inecuaciones y números complejos."
 ---
@@ -49,7 +49,8 @@ $$
 \qquad x\ne3,\\
 &\iff x+3=8,
 \qquad x\ne3,\\
-&\iff x=5.
+&\iff x=5,
+\qquad x\ne3.
 \end{aligned}
 $$
 
@@ -74,7 +75,7 @@ $$
 
 En el último paso se invirtió el sentido de la desigualdad al dividir entre $-6$. El conjunto solución es $S=[1,\infty)$. El valor de frontera $x=1$ produce la igualdad $1\le1$, mientras que $x=0$ no satisface la inecuación.
 
-### Ejemplo 2. Elección de forma en un cálculo complejo
+### Ejemplo 2. Elección de forma polar o cartesiana en cálculo de complejos
 
 Sean
 
