@@ -1,7 +1,7 @@
 ---
 title: "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre"
 date: 2026-08-24
-description: "Teorema de De Moivre para exponentes enteros, potencias con exponente cero o negativo bajo la condición z ≠ 0 y lectura geométrica de módulo y argumento."
+description: "Teorema de De Moivre para exponentes enteros, potencias con exponente cero o negativo bajo la condición z ≠ 0 e interpretación geométrica de módulo y argumento."
 ---
 
 ## El teorema de De Moivre
@@ -75,7 +75,7 @@ $$
 
 Para $n\ge1$, si $z=0$, entonces $z^n=0$, aunque ese caso queda fuera de la fórmula polar porque $0$ no tiene argumento. En este contexto no se asigna valor a $0^0$. Las potencias negativas requieren un recíproco y, por tanto, excluyen $z=0$.
 
-## Lectura geométrica
+## Interpretación geométrica
 
 Para $n\ge1$, calcular $z^n$ equivale a partir de $1$ y multiplicar por $z$ un total de $n$ veces: el módulo se eleva a la potencia $n$ y el argumento acumula $n$ veces el ángulo $\theta$. En símbolos,
 
@@ -211,6 +211,17 @@ La figura ubica en el plano complejo de la [Sesión 07](2026-08-18-sesion-07.qmd
 </figure>
 ```
 
+### Valores notables de seno y coseno
+
+La siguiente tabla reúne los valores exactos de los ángulos notables del intervalo $\left[0,\dfrac{\pi}{2}\right]$ que se usarán para convertir resultados de la forma polar a la forma cartesiana:
+
+| $\theta$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
+|---|---|---|---|---|---|
+| $\cos\theta$ | $1$ | $\dfrac{\sqrt3}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac12$ | $0$ |
+| $\operatorname{sen}\theta$ | $0$ | $\dfrac12$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{\sqrt3}{2}$ | $1$ |
+
+Para otros ángulos, se utilizan el ángulo de referencia y los signos correspondientes al cuadrante, como en la [Sesión 09](2026-08-20-sesion-09.qmd).
+
 ## Ejemplos
 
 ### Ejemplo 1. Potencia por De Moivre y comparación con la forma cartesiana
@@ -271,7 +282,7 @@ Como verificación, $z^{-2}z^2$ tiene módulo $\dfrac14\cdot4=1$ y argumento $-\
 - **Distribuir la potencia sobre la forma cartesiana.** Se tiene $(1+i)^2=1+2i+i^2=2i$; no se calcula $1^2+i^2=0$. La potencia de una suma no es la suma de las potencias.
 - **Reportar $n\theta$ como argumento principal sin ajustarlo.** En $(1+i)^{10}$, el ángulo $\dfrac{5\pi}{2}$ es un argumento del resultado, pero el argumento principal es $\dfrac{5\pi}{2}-2\pi=\dfrac{\pi}{2}$.
 - **Convertir el exponente negativo en un signo del módulo.** El número $\Bigl(2\Bigl(\cos\dfrac{\pi}{3}+i\operatorname{sen}\dfrac{\pi}{3}\Bigr)\Bigr)^{-2}$ tiene módulo $2^{-2}=\dfrac14$, no $-4$: si $z\ne0$, el módulo de $z^n$ es $r^n>0$.
-- **Omitir la condición para exponentes negativos.** La expresión $z^{-n}=1/z^n$ requiere $z\ne0$; el cero no tiene recíproco.
+- **Omitir la condición para exponentes negativos.** La expresión $z^{-n}=1/z^n$ requiere $z\ne0$; el cero no tiene recíproco. Por ejemplo, la potencia $0^{-2}$ no está definida, pues exigiría calcular $1/0^2$.
 
 ## Actividad
 
