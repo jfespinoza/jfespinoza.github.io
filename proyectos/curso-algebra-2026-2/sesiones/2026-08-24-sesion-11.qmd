@@ -1,0 +1,342 @@
+---
+title: "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre"
+date: 2026-08-24
+description: "Teorema de De Moivre para exponentes enteros, potencias con exponente cero o negativo bajo la condición z ≠ 0 y lectura geométrica de módulo y argumento."
+---
+
+## El teorema de De Moivre
+
+La regla del producto de la [Sesión 10](2026-08-21-sesion-10.qmd) responde qué ocurre al multiplicar dos números complejos en forma polar: los módulos se multiplican y los argumentos se suman. Esta sesión la aplica repetidamente a un mismo factor para calcular potencias.
+
+Sea
+
+$$
+z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)
+$$
+
+un número complejo no nulo, con $r=\lvert z\rvert>0$. Por la regla del producto,
+
+$$
+\begin{aligned}
+z^2
+&=r\cdot r\bigl[\cos(\theta+\theta)+i\operatorname{sen}(\theta+\theta)\bigr]
+=r^2\bigl(\cos2\theta+i\operatorname{sen}2\theta\bigr),\\
+z^3
+&=r^2\cdot r\bigl[\cos(2\theta+\theta)+i\operatorname{sen}(2\theta+\theta)\bigr]
+=r^3\bigl(\cos3\theta+i\operatorname{sen}3\theta\bigr).
+\end{aligned}
+$$
+
+Cada multiplicación adicional por $z$ multiplica el módulo por $r$ y suma $\theta$ al argumento; si la fórmula vale para un exponente, una multiplicación más la extiende al siguiente. Por ello vale para todo exponente entero positivo.
+
+**Teorema de De Moivre.** Si $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$ y $n$ es un entero positivo, entonces
+
+$$
+z^n=r^n\bigl(\cos(n\theta)+i\operatorname{sen}(n\theta)\bigr).
+$$
+
+En particular, con $r=1$ se obtiene la identidad que da nombre al teorema:
+
+$$
+\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)^n=\cos(n\theta)+i\operatorname{sen}(n\theta).
+$$
+
+Como en el producto, $n\theta$ es un argumento de $z^n$, pero no necesariamente su argumento principal. Para reportar $\operatorname{Arg}(z^n)$ se suma o se resta el múltiplo entero de $2\pi$ necesario para llevar $n\theta$ al intervalo $(-\pi,\pi]$; con la escritura introducida en la [Sesión 10](2026-08-21-sesion-10.qmd),
+
+$$
+\operatorname{Arg}(z^n)\equiv n\theta\pmod{2\pi}.
+$$
+
+### Procedimiento para calcular una potencia
+
+1. Si $z=0$ y $n\ge1$, concluir que $z^n=0$. Si $n\le0$, la base debe ser distinta de $0$.
+2. Para $z\ne0$, escribir la base como $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$, con $r>0$.
+3. Calcular $r^n$ y $n\theta$.
+4. Si se solicita el argumento principal, ajustar $n\theta$ al intervalo $(-\pi,\pi]$ mediante un múltiplo de $2\pi$.
+5. Conservar la forma polar o convertir el resultado a forma cartesiana, según lo solicitado.
+
+## Exponentes cero y negativos
+
+Para los exponentes que no son positivos se adopta la convención usual, válida cuando $z\ne0$: $z^0=1$ y, para $n$ entero positivo, $z^{-n}=\dfrac{1}{z^n}$.
+
+El caso básico es el recíproco. Al escribir $1=1\cdot\bigl(\cos0+i\operatorname{sen}0\bigr)$, la regla del cociente de la [Sesión 10](2026-08-21-sesion-10.qmd) da
+
+$$
+z^{-1}=\frac1z=\frac1r\bigl(\cos(-\theta)+i\operatorname{sen}(-\theta)\bigr):
+$$
+
+el módulo se invierte y el argumento cambia de signo. Al elevar el recíproco a la potencia $n$ resulta $z^{-n}=r^{-n}\bigl(\cos(-n\theta)+i\operatorname{sen}(-n\theta)\bigr)$, que es la misma fórmula del teorema con el exponente $-n$. En resumen:
+
+**Para todo entero $n$ —positivo, cero o negativo— y todo $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\ne0$,**
+
+$$
+z^n=r^n\bigl(\cos(n\theta)+i\operatorname{sen}(n\theta)\bigr).
+$$
+
+Para $n\ge1$, si $z=0$, entonces $z^n=0$, aunque ese caso queda fuera de la fórmula polar porque $0$ no tiene argumento. En este contexto no se asigna valor a $0^0$. Las potencias negativas requieren un recíproco y, por tanto, excluyen $z=0$.
+
+## Lectura geométrica
+
+Para $n\ge1$, calcular $z^n$ equivale a partir de $1$ y multiplicar por $z$ un total de $n$ veces: el módulo se eleva a la potencia $n$ y el argumento acumula $n$ veces el ángulo $\theta$. En símbolos,
+
+$$
+\lvert z^n\rvert=\lvert z\rvert^n,
+\qquad
+\operatorname{Arg}(z^n)\equiv n\theta\pmod{2\pi}.
+$$
+
+- Si $\lvert z\rvert=1$, todas las potencias tienen módulo $1$: permanecen sobre la circunferencia de radio $1$ y el efecto es una rotación repetida. El ciclo de las potencias de $i$ estudiado en la [Sesión 08](2026-08-19-sesion-08.qmd) es exactamente este caso: como $i=\cos\dfrac{\pi}{2}+i\operatorname{sen}\dfrac{\pi}{2}$, la potencia $i^n$ gira $n$ cuartos de vuelta; cuatro cuartos completan una vuelta de $2\pi$, por eso $i^4=1$ y el ciclo se repite.
+- Si $\lvert z\rvert>1$, los módulos $r,r^2,r^3,\ldots$ crecen y las potencias se alejan del origen; sus direcciones avanzan en incrementos de $\theta$ módulo $2\pi$.
+- Si $0<\lvert z\rvert<1$, los módulos decrecen y las potencias se acercan al origen, mientras las direcciones avanzan con el mismo incremento angular.
+
+Para un exponente negativo se trabaja con el recíproco: la escala se invierte y el signo del giro cambia.
+
+La figura ubica en el plano complejo de la [Sesión 07](2026-08-18-sesion-07.qmd) las primeras potencias de $z=1+i$, cuyo módulo es $\sqrt2$ y cuyo argumento principal es $\dfrac{\pi}{4}$: cada paso gira $\dfrac{\pi}{4}$ y multiplica la distancia al origen por $\sqrt2$.
+
+```{=html}
+<figure style="max-width: 960px; margin: 1.75rem auto;">
+<div role="region" aria-label="Gráfico desplazable de las potencias de un número complejo" tabindex="0" style="max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 0.35rem;">
+<svg viewBox="0 0 960 580" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="s11-potencias-title s11-potencias-desc" focusable="false" style="display: block; width: 100%; min-width: 740px; height: auto;" xmlns="http://www.w3.org/2000/svg">
+  <title id="s11-potencias-title">Potencias enteras de un número complejo en forma polar</title>
+  <desc id="s11-potencias-desc">Infografía con un plano complejo y una lectura algebraica. Las potencias de z igual a uno más i giran pi sobre cuatro en cada paso y multiplican la distancia al origen por raíz de dos: z al cuadrado es dos i, z al cubo es menos dos más dos i y z a la cuarta es menos cuatro. Una trayectoria punteada une las puntas y arcos ámbar muestran el giro constante.</desc>
+  <defs>
+    <filter id="s11-sombra" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="s11-eje" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+    <marker id="s11-uno" viewBox="0 0 10 10" markerWidth="11" markerHeight="11" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+    <marker id="s11-z" viewBox="0 0 10 10" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+    <marker id="s11-z4" viewBox="0 0 10 10" markerWidth="13" markerHeight="13" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="s11-arco" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <rect x="8" y="8" width="944" height="564" rx="26" fill="#f8fafc" stroke="#dbe4ee" stroke-width="2" filter="url(#s11-sombra)"/>
+  <text x="40" y="48" fill="#0f172a" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Potencias en forma polar</text>
+  <text x="40" y="73" fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">Un mismo giro repetido y una longitud que se eleva</text>
+
+  <rect x="36" y="96" width="552" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="610" y="96" width="314" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Guías polares con una escala común: 45 px por unidad de módulo (radios 1, 2 y 4). -->
+  <g fill="none" stroke="#dbe4ee" stroke-width="1.4" stroke-dasharray="4 7">
+    <path d="M375 350A45 45 0 0 0 285 350"/>
+    <path d="M420 350A90 90 0 0 0 240 350"/>
+    <path d="M510 350A180 180 0 0 0 150 350"/>
+  </g>
+
+  <!-- Trayectoria poligonal que une 1, z, z², z³ y z⁴. -->
+  <polyline points="375,350 375,305 330,260 240,260 150,350" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 6"/>
+
+  <g fill="none" stroke="#64748b" stroke-width="1.7">
+    <line x1="110" y1="350" x2="575" y2="350" marker-end="url(#s11-eje)"/>
+    <line x1="330" y1="470" x2="330" y2="140" marker-end="url(#s11-eje)"/>
+  </g>
+  <g fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <text x="570" y="374" text-anchor="end">Re</text>
+    <text x="345" y="151">Im</text>
+    <text x="313" y="373">0</text>
+  </g>
+
+  <!-- Cada paso gira π/4: arcos entre direcciones consecutivas (radios crecientes para no encimarse). -->
+  <g fill="none" stroke="#b45309" stroke-width="3">
+    <path d="M388 350A58 58 0 0 0 371.012 308.988" marker-end="url(#s11-arco)"/>
+    <path d="M383.74 296.26A76 76 0 0 0 330 274" marker-end="url(#s11-arco)"/>
+    <path d="M330 256A94 94 0 0 0 263.532 283.532" marker-end="url(#s11-arco)"/>
+    <path d="M250.804 270.804A112 112 0 0 0 218 350" marker-end="url(#s11-arco)"/>
+  </g>
+  <g fill="#b45309" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-style="italic" font-weight="650">
+    <text x="398" y="332">π/4</text>
+    <text x="200" y="306">π/4</text>
+  </g>
+
+  <!-- Vectores exactos: 1=(1,0); z=(1,1); z²=(0,2); z³=(−2,2); z⁴=(−4,0). -->
+  <line x1="330" y1="350" x2="375" y2="350" stroke="#64748b" stroke-width="3" stroke-linecap="round" marker-end="url(#s11-uno)"/>
+  <line x1="330" y1="350" x2="375" y2="305" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s11-z)"/>
+  <line x1="330" y1="350" x2="330" y2="260" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s11-z)"/>
+  <line x1="330" y1="350" x2="240" y2="260" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s11-z)"/>
+  <line x1="330" y1="350" x2="150" y2="350" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" marker-end="url(#s11-z4)"/>
+  <circle cx="330" cy="350" r="5" fill="#0f172a"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" paint-order="stroke fill" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">
+    <text x="362" y="342" fill="#64748b">1</text>
+    <text x="383" y="300" fill="#2563eb" font-style="italic">z</text>
+    <text x="338" y="262" fill="#2563eb" font-style="italic">z²</text>
+    <text x="222" y="252" fill="#2563eb" font-style="italic">z³</text>
+    <text x="140" y="336" fill="#7c3aed" font-style="italic">z⁴</text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <circle cx="116" cy="493" r="5" fill="#2563eb"/>
+    <text x="130" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">z</tspan><tspan> = 1 + i</tspan></text>
+    <circle cx="240" cy="493" r="5" fill="#b45309"/>
+    <text x="254" y="498" fill="#334155">giro π/4 por paso</text>
+    <circle cx="430" cy="493" r="5" fill="#7c3aed"/>
+    <text x="444" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">z⁴</tspan><tspan> = −4</tspan></text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <text x="636" y="131" fill="#0f172a" font-size="19" font-weight="700">Lectura algebraica</text>
+    <text x="636" y="153" fill="#64748b" font-size="16">El giro se repite; la longitud se eleva.</text>
+
+    <rect x="634" y="174" width="266" height="52" rx="12" fill="#eff6ff"/>
+    <circle cx="655" cy="200" r="6" fill="#2563eb"/>
+    <text x="674" y="197" fill="#1e3a8a" font-size="16" font-style="italic" font-weight="700">z</text>
+    <text x="674" y="215" fill="#334155" font-size="16">|z| = √2   ·   Arg z = π/4</text>
+
+    <rect x="634" y="240" width="266" height="86" rx="14" fill="#f8fafc" stroke="#dbe4ee"/>
+    <text x="652" y="264" fill="#64748b" font-size="16" font-weight="750" letter-spacing="1.2">MÓDULO</text>
+    <text x="652" y="293" fill="#0f172a" font-size="22" font-weight="700">|zⁿ| = (√2)ⁿ</text>
+    <text x="652" y="312" fill="#64748b" font-size="16">1, √2, 2, 2√2, 4, …</text>
+
+    <rect x="634" y="340" width="266" height="86" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+    <text x="652" y="364" fill="#6d28d9" font-size="16" font-weight="750" letter-spacing="1.2">ARGUMENTO</text>
+    <text x="652" y="393" fill="#0f172a" font-size="22" font-weight="700">n · π/4</text>
+    <text x="652" y="412" fill="#475569" font-size="16">El giro se acumula n veces.</text>
+
+    <text x="767" y="470" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">z⁴ = 4(cos π + i sen π)</text>
+    <text x="767" y="493" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">= −4</text>
+  </g>
+</svg>
+</div>
+<figcaption style="text-align: center; color: #475569; font-size: 0.95rem; margin-top: 0.65rem;">Las potencias de <em>z</em> = 1 + <em>i</em> giran π/4 en cada paso y multiplican la distancia al origen por √2: <em>z</em>² = 2<em>i</em>, <em>z</em>³ = −2 + 2<em>i</em> y <em>z</em>⁴ = −4. En el panel derecho, el módulo se eleva a la <em>n</em> y el argumento se acumula <em>n</em> veces.</figcaption>
+</figure>
+```
+
+## Ejemplos
+
+### Ejemplo 1. Potencia por De Moivre y comparación con la forma cartesiana
+
+Calcular $z^3$ para
+
+$$
+z=2\Bigl(\cos\frac{\pi}{6}+i\operatorname{sen}\frac{\pi}{6}\Bigr).
+$$
+
+Por el teorema de De Moivre, el módulo es $2^3=8$ y el argumento es $3\cdot\dfrac{\pi}{6}=\dfrac{\pi}{2}$, que ya pertenece a $(-\pi,\pi]$:
+
+$$
+z^3=8\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=8i.
+$$
+
+Como $z=\sqrt3+i$, el resultado también puede verificarse en forma cartesiana; De Moivre evita desarrollar dos productos sucesivos.
+
+### Ejemplo 2. Ajuste al argumento principal
+
+Calcular $(1+i)^{10}$.
+
+Primero se escribe la base en forma polar con las relaciones de la [Sesión 09](2026-08-20-sesion-09.qmd): $\lvert1+i\rvert=\sqrt{1^2+1^2}=\sqrt2$ y, por estar en el primer cuadrante con partes real e imaginaria iguales, $\operatorname{Arg}(1+i)=\dfrac{\pi}{4}$. El teorema de De Moivre da
+
+$$
+(1+i)^{10}=(\sqrt2)^{10}\Bigl(\cos\frac{10\pi}{4}+i\operatorname{sen}\frac{10\pi}{4}\Bigr).
+$$
+
+El módulo es $(\sqrt2)^{10}=2^5=32$. El ángulo $\dfrac{10\pi}{4}=\dfrac{5\pi}{2}$ no pertenece a $(-\pi,\pi]$; al restar $2\pi$ se obtiene el argumento principal $\dfrac{\pi}{2}$. Por tanto,
+
+$$
+(1+i)^{10}=32\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=32i.
+$$
+
+El cálculo cartesiano conduce al mismo resultado, pero requiere más desarrollo algebraico.
+
+### Ejemplo 3. Exponente negativo
+
+Calcular $z^{-2}$ para
+
+$$
+z=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+$$
+
+Como $z\ne0$, la fórmula aplica con $n=-2$: el módulo es $2^{-2}=\dfrac14$ y el argumento es $-2\cdot\dfrac{\pi}{3}=-\dfrac{2\pi}{3}$, que ya pertenece a $(-\pi,\pi]$:
+
+$$
+z^{-2}=\frac14\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)
+=\frac14\Bigl(-\frac12-\frac{\sqrt3}{2}\,i\Bigr)
+=-\frac18-\frac{\sqrt3}{8}\,i.
+$$
+
+Como verificación, $z^{-2}z^2$ tiene módulo $\dfrac14\cdot4=1$ y argumento $-\dfrac{2\pi}{3}+\dfrac{2\pi}{3}=0$; por tanto, vale $1$.
+
+## Errores frecuentes
+
+- **Multiplicar el módulo por el exponente.** El módulo se eleva a la potencia; no se multiplica por $n$. Para $z=2\Bigl(\cos\dfrac{\pi}{6}+i\operatorname{sen}\dfrac{\pi}{6}\Bigr)$, el módulo de $z^3$ es $2^3=8$, no $2\cdot3=6$.
+- **Distribuir la potencia sobre la forma cartesiana.** Se tiene $(1+i)^2=1+2i+i^2=2i$; no se calcula $1^2+i^2=0$. La potencia de una suma no es la suma de las potencias.
+- **Reportar $n\theta$ como argumento principal sin ajustarlo.** En $(1+i)^{10}$, el ángulo $\dfrac{5\pi}{2}$ es un argumento del resultado, pero el argumento principal es $\dfrac{5\pi}{2}-2\pi=\dfrac{\pi}{2}$.
+- **Convertir el exponente negativo en un signo del módulo.** El número $\Bigl(2\Bigl(\cos\dfrac{\pi}{3}+i\operatorname{sen}\dfrac{\pi}{3}\Bigr)\Bigr)^{-2}$ tiene módulo $2^{-2}=\dfrac14$, no $-4$: si $z\ne0$, el módulo de $z^n$ es $r^n>0$.
+- **Omitir la condición para exponentes negativos.** La expresión $z^{-n}=1/z^n$ requiere $z\ne0$; el cero no tiene recíproco.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+1. Sea
+
+   $$
+   z=2\Bigl(\cos\frac{\pi}{8}+i\operatorname{sen}\frac{\pi}{8}\Bigr).
+   $$
+
+   Calcule $z^4$ en forma polar, con argumento principal, y exprese el resultado en forma cartesiana.
+2. En el cálculo de
+
+   $$
+   \Bigl(\sqrt2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr)\Bigr)^{2}
+   $$
+
+   se concluye que el argumento principal del resultado es $\dfrac{3\pi}{2}$. Identifique el error, reporte la forma polar correcta con argumento principal y verifique el resultado elevando al cuadrado la forma cartesiana de la base.
+3. Sea
+
+   $$
+   z=2\Bigl(\cos\frac{\pi}{4}+i\operatorname{sen}\frac{\pi}{4}\Bigr).
+   $$
+
+   Calcule $z^{-3}$ en forma polar y en forma cartesiana, y explique por qué la fórmula utilizada exige $z\ne0$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** El módulo es $2^4=16$ y el argumento es $4\cdot\dfrac{\pi}{8}=\dfrac{\pi}{2}$, que pertenece a $(-\pi,\pi]$:
+
+$$
+z^4=16\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=16i.
+$$
+
+**2.** El ángulo $2\cdot\dfrac{3\pi}{4}=\dfrac{3\pi}{2}$ sí es un argumento del resultado, pero no pertenece al intervalo principal. Como $\dfrac{3\pi}{2}-2\pi=-\dfrac{\pi}{2}$,
+
+$$
+\Bigl(\sqrt2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr)\Bigr)^{2}
+=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)
+=-2i.
+$$
+
+Para verificar, la base en forma cartesiana es $\sqrt2\Bigl(-\dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}\,i\Bigr)=-1+i$, y
+
+$$
+(-1+i)^2=1-2i+i^2=-2i.
+$$
+
+**3.** El módulo es $2^{-3}=\dfrac18$ y el argumento es $-3\cdot\dfrac{\pi}{4}=-\dfrac{3\pi}{4}$, que pertenece a $(-\pi,\pi]$:
+
+$$
+z^{-3}=\frac18\Bigl(\cos\Bigl(-\frac{3\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\frac{3\pi}{4}\Bigr)\Bigr)
+=\frac18\Bigl(-\frac{\sqrt2}{2}-\frac{\sqrt2}{2}\,i\Bigr)
+=-\frac{\sqrt2}{16}-\frac{\sqrt2}{16}\,i.
+$$
+
+La fórmula exige $z\ne0$ porque $z^{-3}=\dfrac{1}{z^3}$ es un recíproco y el $0$ no tiene recíproco; además, $0$ no tiene argumento.
+
+:::
+
+## Ejercicios para practicar
+
+1. Calcule $z^3$ en forma polar y en forma cartesiana para $z=2\Bigl(\cos\dfrac{\pi}{9}+i\operatorname{sen}\dfrac{\pi}{9}\Bigr)$.
+2. Calcule $\Bigl(3\Bigl(\cos\dfrac{5\pi}{6}+i\operatorname{sen}\dfrac{5\pi}{6}\Bigr)\Bigr)^{2}$; reporte el argumento principal y exprese el resultado en forma cartesiana.
+3. Escriba $\sqrt3+i$ en forma polar y calcule $(\sqrt3+i)^6$.
+4. Calcule $z^{-2}$ para $z=\sqrt2\Bigl(\cos\Bigl(-\dfrac{\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\dfrac{\pi}{4}\Bigr)\Bigr)$; reporte el argumento principal y exprese el resultado en forma cartesiana.
+5. Decida qué forma conviene para calcular $(3+4i)^2$ y cuál para calcular $(1+i)^{12}$. Justifique cada elección y efectúe ambos cálculos.
