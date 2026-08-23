@@ -1513,6 +1513,83 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-26-sesion-13.html",
+    "href": "sesiones/2026-08-26-sesion-13.html",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "",
+    "text": "Selección del procedimiento\nEn un problema mixto, la operación y la forma de los datos determinan el procedimiento. Antes de calcular se identifican las restricciones de la expresión original y la forma en que debe escribirse el resultado. Después se comprueba que las transformaciones conservaron el problema planteado.\nLas operaciones con números reales se revisaron en las Sesiones 02 a 06. La forma cartesiana y la forma polar de los números complejos, junto con sus operaciones, potencias y raíces, se desarrollaron en las Sesiones 07 a 12.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#selección-del-procedimiento",
+    "href": "sesiones/2026-08-26-sesion-13.html#selección-del-procedimiento",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "",
+    "text": "Estructura del problema\nProcedimiento adecuado\n\n\n\n\nExpresión con productos notables o fracciones algebraicas\nFactorizar antes de cancelar y conservar las restricciones de la expresión original.\n\n\nEcuación lineal o despeje de una fórmula\nAplicar operaciones equivalentes y comprobar por sustitución.\n\n\nInecuación lineal\nAplicar propiedades de orden; al multiplicar o dividir por un número negativo, invertir el sentido de la desigualdad.\n\n\nSuma o resta de números complejos\nUsar la forma cartesiana y operar las partes reales e imaginarias por separado.\n\n\nProducto o cociente de números complejos\nUsar la forma cartesiana cuando el desarrollo sea breve; usar la forma polar cuando los módulos y argumentos sean conocidos o fáciles de obtener. En un cociente, el divisor debe ser distinto de cero.\n\n\nPotencia de un número complejo\nUsar un desarrollo cartesiano si el exponente es pequeño; para exponentes mayores, usar la forma polar y el teorema de De Moivre. Los exponentes negativos requieren una base distinta de cero.\n\n\nRaíces \\(n\\)-ésimas de un número complejo\nSi el número es \\(0\\), su única raíz distinta es \\(0\\). Si es distinto de \\(0\\), usar la forma polar y calcular las \\(n\\) raíces. Si se piden argumentos principales, escribirlos en \\((-\\pi,\\pi]\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#comprobación-de-resultados",
+    "href": "sesiones/2026-08-26-sesion-13.html#comprobación-de-resultados",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "Comprobación de resultados",
+    "text": "Comprobación de resultados\nLa comprobación depende del tipo de problema:\n\nEn una simplificación, se conserva el dominio de la expresión original y se justifica algebraicamente la equivalencia; comparar ambas expresiones en un valor permitido sirve como comprobación puntual.\nEn una ecuación, se sustituye cada solución en la ecuación original.\nEn una inecuación, el conjunto solución se obtiene mediante transformaciones equivalentes; revisar la frontera y valores situados dentro y fuera del intervalo sirve como comprobación puntual.\nEn un producto o cociente de números complejos, se puede repetir el cálculo en la otra forma o invertir la operación.\nEn una potencia o una raíz, se aplica el teorema de De Moivre o se eleva una raíz a la potencia correspondiente.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#ejemplos",
+    "href": "sesiones/2026-08-26-sesion-13.html#ejemplos",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Restricciones y propiedades de orden\n(a) Resolver\n\\[\n\\frac{x^2-9}{x-3}=8.\n\\]\nLa expresión original exige \\(x\\ne3\\). Después se factoriza la diferencia de cuadrados y se cancela el factor común dentro de ese dominio:\n\\[\n\\begin{aligned}\n\\frac{x^2-9}{x-3}=8\n&\\iff \\frac{(x-3)(x+3)}{x-3}=8,\n\\qquad x\\ne3,\\\\\n&\\iff x+3=8,\n\\qquad x\\ne3,\\\\\n&\\iff x=5.\n\\end{aligned}\n\\]\nEl valor \\(x=5\\) satisface la restricción y, en la ecuación original,\n\\[\n\\frac{5^2-9}{5-3}=\\frac{16}{2}=8.\n\\]\nPor tanto, el conjunto solución es \\(S=\\{5\\}\\).\n(b) Resolver la inecuación \\(4-3(2x-1)\\le1\\).\n\\[\n\\begin{aligned}\n4-3(2x-1)&\\le1,\\\\\n7-6x&\\le1,\\\\\n-6x&\\le-6,\\\\\nx&\\ge1.\n\\end{aligned}\n\\]\nEn el último paso se invirtió el sentido de la desigualdad al dividir entre \\(-6\\). El conjunto solución es \\(S=[1,\\infty)\\). El valor de frontera \\(x=1\\) produce la igualdad \\(1\\le1\\), mientras que \\(x=0\\) no satisface la inecuación.\n\n\nEjemplo 2. Elección de forma en un cálculo complejo\nSean\n\\[\nz=1+\\sqrt3\\,i,\n\\qquad\nw=1-i.\n\\]\nCalcular \\(z+w\\), \\(w^2\\) y \\(zw^2\\), y escribir el argumento principal de \\(zw^2\\).\nLa suma se efectúa en forma cartesiana:\n\\[\nz+w=(1+1)+(\\sqrt3-1)i\n=2+(\\sqrt3-1)i.\n\\]\nPara el cuadrado de \\(w\\), el desarrollo cartesiano es breve:\n\\[\nw^2=(1-i)^2=1-2i+i^2=-2i.\n\\]\nPara el producto \\(zw^2\\), la forma polar permite usar ángulos notables. Se tiene\n\\[\n\\begin{aligned}\nz\n&=2\\Bigl(\\cos\\frac{\\pi}{3}+i\\operatorname{sen}\\frac{\\pi}{3}\\Bigr),\\\\\nw^2\n&=2\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{2}\\Bigr)\n+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{2}\\Bigr)\\Bigr).\n\\end{aligned}\n\\]\nPor la regla del producto,\n\\[\n\\begin{aligned}\nzw^2\n&=4\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{6}\\Bigr)\n+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{6}\\Bigr)\\Bigr)\\\\\n&=4\\Bigl(\\frac{\\sqrt3}{2}-\\frac12 i\\Bigr)\\\\\n&=2\\sqrt3-2i.\n\\end{aligned}\n\\]\nComo \\(-\\dfrac{\\pi}{6}\\in(-\\pi,\\pi]\\), se obtiene\n\\[\n\\operatorname{Arg}(zw^2)=-\\frac{\\pi}{6}.\n\\]\nLa comprobación cartesiana conduce al mismo resultado:\n\\[\nz(-2i)=(1+\\sqrt3\\,i)(-2i)=2\\sqrt3-2i.\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#errores-frecuentes",
+    "href": "sesiones/2026-08-26-sesion-13.html#errores-frecuentes",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nCancelar términos en lugar de factores. En \\(\\dfrac{x^2-9}{x-3}\\) no se cancelan los términos que contienen \\(x\\); primero se factoriza \\(x^2-9=(x-3)(x+3)\\).\nPerder una restricción después de simplificar. Aunque \\(\\dfrac{x^2-9}{x-3}\\) se simplifique a \\(x+3\\), la expresión original sigue excluyendo \\(x=3\\).\nConservar el sentido de una inecuación al dividir entre un número negativo. De \\(-6x\\le-6\\) se obtiene \\(x\\ge1\\), no \\(x\\le1\\).\nAplicar al módulo de una suma la regla del producto. En general, \\(\\lvert z+w\\rvert\\) no es igual a \\(\\lvert z\\rvert+\\lvert w\\rvert\\); la suma se calcula por componentes.\nUsar la forma polar aunque complique el cálculo. Para \\((1-i)^2\\), el desarrollo cartesiano es más corto que convertir la base a forma polar. La representación se elige a partir de la estructura concreta del problema.\nEscribir una sola raíz de una ecuación compleja. Si \\(a\\ne0\\) y \\(n\\ge2\\) es un entero, la ecuación \\(u^n=a\\) tiene \\(n\\) raíces complejas distintas. El radical real, cuando existe, nombra solo una de ellas.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#actividad",
+    "href": "sesiones/2026-08-26-sesion-13.html#actividad",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\nEn cada inciso, escriba una oración que justifique la representación o el procedimiento elegido.\n\nResuelva la inecuación\n\\[\n\\frac{x^2-9}{x-3}\\le6,\n\\]\nconservando la restricción de la expresión original y escribiendo el conjunto solución como intervalo.\nSean \\(z=-1+i\\) y \\(w=\\sqrt3+i\\). Calcule \\(z+w\\) y \\(zw\\). Escriba el producto en forma polar con argumento principal y en forma cartesiana.\nCalcule \\((1-i)^8\\). Después determine las tres raíces cúbicas de \\(-8\\), escríbalas con argumento principal y ubíquelas en el plano complejo.\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. La expresión original exige \\(x\\ne3\\). Al factorizar y cancelar dentro de ese dominio,\n\\[\n\\begin{aligned}\n\\frac{x^2-9}{x-3}\\le6\n&\\iff x+3\\le6,\n\\qquad x\\ne3,\\\\\n&\\iff x\\le3,\n\\qquad x\\ne3.\n\\end{aligned}\n\\]\nPor tanto, \\(S=(-\\infty,3)\\). Se eligió la factorización porque permite simplificar la fracción sin perder la restricción; después se aplicaron las propiedades de orden. Como comprobación, \\(x=2\\) satisface la inecuación original, mientras que \\(x=3\\) no pertenece a su dominio.\n2. La suma se calcula en forma cartesiana porque se operan por separado las componentes:\n\\[\nz+w=(\\sqrt3-1)+2i.\n\\]\nPara el producto se usa la forma polar porque ambos números tienen módulos y argumentos notables:\n\\[\n\\begin{aligned}\n\\lvert z\\rvert&=\\sqrt2,\n&\\operatorname{Arg}z&=\\frac{3\\pi}{4},\\\\\n\\lvert w\\rvert&=2,\n&\\operatorname{Arg}w&=\\frac{\\pi}{6}.\n\\end{aligned}\n\\]\nAsí,\n\\[\n\\begin{aligned}\nzw\n&=2\\sqrt2\\Bigl(\\cos\\frac{11\\pi}{12}\n+i\\operatorname{sen}\\frac{11\\pi}{12}\\Bigr),\\\\\n\\operatorname{Arg}(zw)\n&=\\frac{3\\pi}{4}+\\frac{\\pi}{6}\n=\\frac{11\\pi}{12}.\n\\end{aligned}\n\\]\nEl desarrollo cartesiano proporciona la otra forma y comprueba el resultado:\n\\[\n\\begin{aligned}\nzw\n&=(-1+i)(\\sqrt3+i)\\\\\n&=(-\\sqrt3-1)+(\\sqrt3-1)i.\n\\end{aligned}\n\\]\n3. Para la potencia se usa la forma polar porque el exponente es alto. Como \\(\\lvert1-i\\rvert=\\sqrt2\\) y \\(\\operatorname{Arg}(1-i)=-\\dfrac{\\pi}{4}\\), el teorema de De Moivre da\n\\[\n\\begin{aligned}\n(1-i)^8\n&=(\\sqrt2)^8\\Bigl(\\cos(-2\\pi)+i\\operatorname{sen}(-2\\pi)\\Bigr)\\\\\n&=16.\n\\end{aligned}\n\\]\nPara las raíces cúbicas se usa la fórmula de la Sesión 12. El número \\(-8\\) tiene módulo \\(8\\) y argumento principal \\(\\pi\\); por tanto, el módulo común es \\(2\\) y los ángulos son\n\\[\n\\frac{\\pi+2k\\pi}{3},\n\\qquad\nk=0,1,2.\n\\]\nAl escribirlos con argumento principal se obtienen \\(\\dfrac{\\pi}{3}\\), \\(\\pi\\) y \\(-\\dfrac{\\pi}{3}\\). Las raíces son\n\\[\n\\begin{aligned}\nu_0\n&=2\\Bigl(\\cos\\frac{\\pi}{3}+i\\operatorname{sen}\\frac{\\pi}{3}\\Bigr)\\\\\n&=1+\\sqrt3\\,i,\\\\\nu_1\n&=2\\bigl(\\cos\\pi+i\\operatorname{sen}\\pi\\bigr)\\\\\n&=-2,\\\\\nu_2\n&=2\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{3}\\Bigr)\n+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{3}\\Bigr)\\Bigr)\\\\\n&=1-\\sqrt3\\,i.\n\\end{aligned}\n\\]\nLas tres raíces corresponden a los puntos \\((1,\\sqrt3)\\), \\((-2,0)\\) y \\((1,-\\sqrt3)\\). Están sobre la circunferencia de radio \\(2\\), y las raíces consecutivas están separadas angularmente \\(\\dfrac{2\\pi}{3}\\), módulo \\(2\\pi\\); por ello forman un triángulo equilátero. La comprobación mediante De Moivre muestra que cada \\(u_k^3\\) tiene módulo \\(8\\) y argumento congruente con \\(\\pi\\) módulo \\(2\\pi\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-26-sesion-13.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-26-sesion-13.html#ejercicios-para-practicar",
+    "title": "Sesión 13. Taller integrador de números reales y complejos",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nSimplifique \\(\\dfrac{x^2-16}{x-4}\\), conserve la restricción de la expresión original y resuelva \\(\\dfrac{x^2-16}{x-4}&gt;7\\).\nResuelva \\(5-2(3x+1)\\ge9\\) y escriba el conjunto solución como intervalo. Compruebe un valor de frontera y un valor exterior.\nCalcule \\((2-i)+(3+2i)\\) y \\((2-i)(3+2i)\\). Explique por qué la forma cartesiana resulta adecuada en ambos cálculos.\nEscriba \\(z=-2-2i\\) en forma polar y calcule \\(z^5\\). Escriba el argumento principal y la forma cartesiana del resultado.\nDetermine las cuatro raíces cuartas de \\(81\\), escríbalas con argumento principal y señale cuáles son reales.\nAnalice la afirmación: para calcular \\((1+i)+(1+i)^6\\) debe convertirse toda la expresión a forma polar. Elija una representación para cada operación, efectúe el cálculo y escriba el resultado en forma cartesiana.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Sesión 13. Taller integrador de números reales y complejos</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -1520,7 +1597,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1531,7 +1608,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1542,7 +1619,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1553,7 +1630,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1564,7 +1641,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1575,7 +1652,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1586,7 +1663,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1597,7 +1674,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1608,7 +1685,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1619,7 +1696,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1630,7 +1707,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1641,7 +1718,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1652,7 +1729,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1663,7 +1740,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1674,7 +1751,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1685,7 +1762,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1696,7 +1773,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1707,7 +1784,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1718,7 +1795,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1729,7 +1806,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
