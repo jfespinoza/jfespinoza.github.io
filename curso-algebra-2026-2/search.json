@@ -1348,6 +1348,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-08-24-sesion-11.html",
+    "href": "sesiones/2026-08-24-sesion-11.html",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "",
+    "text": "El teorema de De Moivre\nLa regla del producto de la Sesión 10 responde qué ocurre al multiplicar dos números complejos en forma polar: los módulos se multiplican y los argumentos se suman. Esta sesión la aplica repetidamente a un mismo factor para calcular potencias.\nSea\n\\[\nz=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\n\\]\nun número complejo no nulo, con \\(r=\\lvert z\\rvert&gt;0\\). Por la regla del producto,\n\\[\n\\begin{aligned}\nz^2\n&=r\\cdot r\\bigl[\\cos(\\theta+\\theta)+i\\operatorname{sen}(\\theta+\\theta)\\bigr]\n=r^2\\bigl(\\cos2\\theta+i\\operatorname{sen}2\\theta\\bigr),\\\\\nz^3\n&=r^2\\cdot r\\bigl[\\cos(2\\theta+\\theta)+i\\operatorname{sen}(2\\theta+\\theta)\\bigr]\n=r^3\\bigl(\\cos3\\theta+i\\operatorname{sen}3\\theta\\bigr).\n\\end{aligned}\n\\]\nCada multiplicación adicional por \\(z\\) multiplica el módulo por \\(r\\) y suma \\(\\theta\\) al argumento; si la fórmula vale para un exponente, una multiplicación más la extiende al siguiente. Por ello vale para todo exponente entero positivo.\nTeorema de De Moivre. Si \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\) y \\(n\\) es un entero positivo, entonces\n\\[\nz^n=r^n\\bigl(\\cos(n\\theta)+i\\operatorname{sen}(n\\theta)\\bigr).\n\\]\nEn particular, con \\(r=1\\) se obtiene la identidad que da nombre al teorema:\n\\[\n\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)^n=\\cos(n\\theta)+i\\operatorname{sen}(n\\theta).\n\\]\nComo en el producto, \\(n\\theta\\) es un argumento de \\(z^n\\), pero no necesariamente su argumento principal. Para reportar \\(\\operatorname{Arg}(z^n)\\) se suma o se resta el múltiplo entero de \\(2\\pi\\) necesario para llevar \\(n\\theta\\) al intervalo \\((-\\pi,\\pi]\\); con la escritura introducida en la Sesión 10,\n\\[\n\\operatorname{Arg}(z^n)\\equiv n\\theta\\pmod{2\\pi}.\n\\]",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#el-teorema-de-de-moivre",
+    "href": "sesiones/2026-08-24-sesion-11.html#el-teorema-de-de-moivre",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "",
+    "text": "Procedimiento para calcular una potencia\n\nSi \\(z=0\\) y \\(n\\ge1\\), concluir que \\(z^n=0\\). Si \\(n\\le0\\), la base debe ser distinta de \\(0\\).\nPara \\(z\\ne0\\), escribir la base como \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\), con \\(r&gt;0\\).\nCalcular \\(r^n\\) y \\(n\\theta\\).\nSi se solicita el argumento principal, ajustar \\(n\\theta\\) al intervalo \\((-\\pi,\\pi]\\) mediante un múltiplo de \\(2\\pi\\).\nConservar la forma polar o convertir el resultado a forma cartesiana, según lo solicitado.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#exponentes-cero-y-negativos",
+    "href": "sesiones/2026-08-24-sesion-11.html#exponentes-cero-y-negativos",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Exponentes cero y negativos",
+    "text": "Exponentes cero y negativos\nPara los exponentes que no son positivos se adopta la convención usual, válida cuando \\(z\\ne0\\): \\(z^0=1\\) y, para \\(n\\) entero positivo, \\(z^{-n}=\\dfrac{1}{z^n}\\).\nEl caso básico es el recíproco. Al escribir \\(1=1\\cdot\\bigl(\\cos0+i\\operatorname{sen}0\\bigr)\\), la regla del cociente de la Sesión 10 da\n\\[\nz^{-1}=\\frac1z=\\frac1r\\bigl(\\cos(-\\theta)+i\\operatorname{sen}(-\\theta)\\bigr):\n\\]\nel módulo se invierte y el argumento cambia de signo. Al elevar el recíproco a la potencia \\(n\\) resulta \\(z^{-n}=r^{-n}\\bigl(\\cos(-n\\theta)+i\\operatorname{sen}(-n\\theta)\\bigr)\\), que es la misma fórmula del teorema con el exponente \\(-n\\). En resumen:\nPara todo entero \\(n\\) —positivo, cero o negativo— y todo \\(z=r\\bigl(\\cos\\theta+i\\operatorname{sen}\\theta\\bigr)\\ne0\\),\n\\[\nz^n=r^n\\bigl(\\cos(n\\theta)+i\\operatorname{sen}(n\\theta)\\bigr).\n\\]\nPara \\(n\\ge1\\), si \\(z=0\\), entonces \\(z^n=0\\), aunque ese caso queda fuera de la fórmula polar porque \\(0\\) no tiene argumento. En este contexto no se asigna valor a \\(0^0\\). Las potencias negativas requieren un recíproco y, por tanto, excluyen \\(z=0\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#lectura-geométrica",
+    "href": "sesiones/2026-08-24-sesion-11.html#lectura-geométrica",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Lectura geométrica",
+    "text": "Lectura geométrica\nPara \\(n\\ge1\\), calcular \\(z^n\\) equivale a partir de \\(1\\) y multiplicar por \\(z\\) un total de \\(n\\) veces: el módulo se eleva a la potencia \\(n\\) y el argumento acumula \\(n\\) veces el ángulo \\(\\theta\\). En símbolos,\n\\[\n\\lvert z^n\\rvert=\\lvert z\\rvert^n,\n\\qquad\n\\operatorname{Arg}(z^n)\\equiv n\\theta\\pmod{2\\pi}.\n\\]\n\nSi \\(\\lvert z\\rvert=1\\), todas las potencias tienen módulo \\(1\\): permanecen sobre la circunferencia de radio \\(1\\) y el efecto es una rotación repetida. El ciclo de las potencias de \\(i\\) estudiado en la Sesión 08 es exactamente este caso: como \\(i=\\cos\\dfrac{\\pi}{2}+i\\operatorname{sen}\\dfrac{\\pi}{2}\\), la potencia \\(i^n\\) gira \\(n\\) cuartos de vuelta; cuatro cuartos completan una vuelta de \\(2\\pi\\), por eso \\(i^4=1\\) y el ciclo se repite.\nSi \\(\\lvert z\\rvert&gt;1\\), los módulos \\(r,r^2,r^3,\\ldots\\) crecen y las potencias se alejan del origen; sus direcciones avanzan en incrementos de \\(\\theta\\) módulo \\(2\\pi\\).\nSi \\(0&lt;\\lvert z\\rvert&lt;1\\), los módulos decrecen y las potencias se acercan al origen, mientras las direcciones avanzan con el mismo incremento angular.\n\nPara un exponente negativo se trabaja con el recíproco: la escala se invierte y el signo del giro cambia.\nLa figura ubica en el plano complejo de la Sesión 07 las primeras potencias de \\(z=1+i\\), cuyo módulo es \\(\\sqrt2\\) y cuyo argumento principal es \\(\\dfrac{\\pi}{4}\\): cada paso gira \\(\\dfrac{\\pi}{4}\\) y multiplica la distancia al origen por \\(\\sqrt2\\).\n\n\n\n  Potencias enteras de un número complejo en forma polar\n  Infografía con un plano complejo y una lectura algebraica. Las potencias de z igual a uno más i giran pi sobre cuatro en cada paso y multiplican la distancia al origen por raíz de dos: z al cuadrado es dos i, z al cubo es menos dos más dos i y z a la cuarta es menos cuatro. Una trayectoria punteada une las puntas y arcos ámbar muestran el giro constante.\n  \n    \n      \n    \n    \n      \n    \n    \n      \n    \n    \n      \n    \n    \n      \n    \n    \n      \n    \n  \n\n  \n  Potencias en forma polar\n  Un mismo giro repetido y una longitud que se eleva\n\n  \n  \n\n  \n  \n    \n    \n    \n  \n\n  \n  \n\n  \n    \n    \n  \n  \n    Re\n    Im\n    0\n  \n\n  \n  \n    \n    \n    \n    \n  \n  \n    π/4\n    π/4\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n    1\n    z\n    z²\n    z³\n    z⁴\n  \n\n  \n    \n    z = 1 + i\n    \n    giro π/4 por paso\n    \n    z⁴ = −4\n  \n\n  \n    Lectura algebraica\n    El giro se repite; la longitud se eleva.\n\n    \n    \n    z\n    |z| = √2   ·   Arg z = π/4\n\n    \n    MÓDULO\n    |zⁿ| = (√2)ⁿ\n    1, √2, 2, 2√2, 4, …\n\n    \n    ARGUMENTO\n    n · π/4\n    El giro se acumula n veces.\n\n    z⁴ = 4(cos π + i sen π)\n    = −4\n  \n\n\nLas potencias de z = 1 + i giran π/4 en cada paso y multiplican la distancia al origen por √2: z² = 2i, z³ = −2 + 2i y z⁴ = −4. En el panel derecho, el módulo se eleva a la n y el argumento se acumula n veces.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#ejemplos",
+    "href": "sesiones/2026-08-24-sesion-11.html#ejemplos",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Potencia por De Moivre y comparación con la forma cartesiana\nCalcular \\(z^3\\) para\n\\[\nz=2\\Bigl(\\cos\\frac{\\pi}{6}+i\\operatorname{sen}\\frac{\\pi}{6}\\Bigr).\n\\]\nPor el teorema de De Moivre, el módulo es \\(2^3=8\\) y el argumento es \\(3\\cdot\\dfrac{\\pi}{6}=\\dfrac{\\pi}{2}\\), que ya pertenece a \\((-\\pi,\\pi]\\):\n\\[\nz^3=8\\Bigl(\\cos\\frac{\\pi}{2}+i\\operatorname{sen}\\frac{\\pi}{2}\\Bigr)=8i.\n\\]\nComo \\(z=\\sqrt3+i\\), el resultado también puede verificarse en forma cartesiana; De Moivre evita desarrollar dos productos sucesivos.\n\n\nEjemplo 2. Ajuste al argumento principal\nCalcular \\((1+i)^{10}\\).\nPrimero se escribe la base en forma polar con las relaciones de la Sesión 09: \\(\\lvert1+i\\rvert=\\sqrt{1^2+1^2}=\\sqrt2\\) y, por estar en el primer cuadrante con partes real e imaginaria iguales, \\(\\operatorname{Arg}(1+i)=\\dfrac{\\pi}{4}\\). El teorema de De Moivre da\n\\[\n(1+i)^{10}=(\\sqrt2)^{10}\\Bigl(\\cos\\frac{10\\pi}{4}+i\\operatorname{sen}\\frac{10\\pi}{4}\\Bigr).\n\\]\nEl módulo es \\((\\sqrt2)^{10}=2^5=32\\). El ángulo \\(\\dfrac{10\\pi}{4}=\\dfrac{5\\pi}{2}\\) no pertenece a \\((-\\pi,\\pi]\\); al restar \\(2\\pi\\) se obtiene el argumento principal \\(\\dfrac{\\pi}{2}\\). Por tanto,\n\\[\n(1+i)^{10}=32\\Bigl(\\cos\\frac{\\pi}{2}+i\\operatorname{sen}\\frac{\\pi}{2}\\Bigr)=32i.\n\\]\nEl cálculo cartesiano conduce al mismo resultado, pero requiere más desarrollo algebraico.\n\n\nEjemplo 3. Exponente negativo\nCalcular \\(z^{-2}\\) para\n\\[\nz=2\\Bigl(\\cos\\frac{\\pi}{3}+i\\operatorname{sen}\\frac{\\pi}{3}\\Bigr).\n\\]\nComo \\(z\\ne0\\), la fórmula aplica con \\(n=-2\\): el módulo es \\(2^{-2}=\\dfrac14\\) y el argumento es \\(-2\\cdot\\dfrac{\\pi}{3}=-\\dfrac{2\\pi}{3}\\), que ya pertenece a \\((-\\pi,\\pi]\\):\n\\[\nz^{-2}=\\frac14\\Bigl(\\cos\\Bigl(-\\frac{2\\pi}{3}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{2\\pi}{3}\\Bigr)\\Bigr)\n=\\frac14\\Bigl(-\\frac12-\\frac{\\sqrt3}{2}\\,i\\Bigr)\n=-\\frac18-\\frac{\\sqrt3}{8}\\,i.\n\\]\nComo verificación, \\(z^{-2}z^2\\) tiene módulo \\(\\dfrac14\\cdot4=1\\) y argumento \\(-\\dfrac{2\\pi}{3}+\\dfrac{2\\pi}{3}=0\\); por tanto, vale \\(1\\).",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#errores-frecuentes",
+    "href": "sesiones/2026-08-24-sesion-11.html#errores-frecuentes",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nMultiplicar el módulo por el exponente. El módulo se eleva a la potencia; no se multiplica por \\(n\\). Para \\(z=2\\Bigl(\\cos\\dfrac{\\pi}{6}+i\\operatorname{sen}\\dfrac{\\pi}{6}\\Bigr)\\), el módulo de \\(z^3\\) es \\(2^3=8\\), no \\(2\\cdot3=6\\).\nDistribuir la potencia sobre la forma cartesiana. Se tiene \\((1+i)^2=1+2i+i^2=2i\\); no se calcula \\(1^2+i^2=0\\). La potencia de una suma no es la suma de las potencias.\nReportar \\(n\\theta\\) como argumento principal sin ajustarlo. En \\((1+i)^{10}\\), el ángulo \\(\\dfrac{5\\pi}{2}\\) es un argumento del resultado, pero el argumento principal es \\(\\dfrac{5\\pi}{2}-2\\pi=\\dfrac{\\pi}{2}\\).\nConvertir el exponente negativo en un signo del módulo. El número \\(\\Bigl(2\\Bigl(\\cos\\dfrac{\\pi}{3}+i\\operatorname{sen}\\dfrac{\\pi}{3}\\Bigr)\\Bigr)^{-2}\\) tiene módulo \\(2^{-2}=\\dfrac14\\), no \\(-4\\): si \\(z\\ne0\\), el módulo de \\(z^n\\) es \\(r^n&gt;0\\).\nOmitir la condición para exponentes negativos. La expresión \\(z^{-n}=1/z^n\\) requiere \\(z\\ne0\\); el cero no tiene recíproco.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#actividad",
+    "href": "sesiones/2026-08-24-sesion-11.html#actividad",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.\n\nSea\n\\[\nz=2\\Bigl(\\cos\\frac{\\pi}{8}+i\\operatorname{sen}\\frac{\\pi}{8}\\Bigr).\n\\]\nCalcule \\(z^4\\) en forma polar, con argumento principal, y exprese el resultado en forma cartesiana.\nEn el cálculo de\n\\[\n\\Bigl(\\sqrt2\\Bigl(\\cos\\frac{3\\pi}{4}+i\\operatorname{sen}\\frac{3\\pi}{4}\\Bigr)\\Bigr)^{2}\n\\]\nse concluye que el argumento principal del resultado es \\(\\dfrac{3\\pi}{2}\\). Identifique el error, reporte la forma polar correcta con argumento principal y verifique el resultado elevando al cuadrado la forma cartesiana de la base.\nSea\n\\[\nz=2\\Bigl(\\cos\\frac{\\pi}{4}+i\\operatorname{sen}\\frac{\\pi}{4}\\Bigr).\n\\]\nCalcule \\(z^{-3}\\) en forma polar y en forma cartesiana, y explique por qué la fórmula utilizada exige \\(z\\ne0\\).\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. El módulo es \\(2^4=16\\) y el argumento es \\(4\\cdot\\dfrac{\\pi}{8}=\\dfrac{\\pi}{2}\\), que pertenece a \\((-\\pi,\\pi]\\):\n\\[\nz^4=16\\Bigl(\\cos\\frac{\\pi}{2}+i\\operatorname{sen}\\frac{\\pi}{2}\\Bigr)=16i.\n\\]\n2. El ángulo \\(2\\cdot\\dfrac{3\\pi}{4}=\\dfrac{3\\pi}{2}\\) sí es un argumento del resultado, pero no pertenece al intervalo principal. Como \\(\\dfrac{3\\pi}{2}-2\\pi=-\\dfrac{\\pi}{2}\\),\n\\[\n\\Bigl(\\sqrt2\\Bigl(\\cos\\frac{3\\pi}{4}+i\\operatorname{sen}\\frac{3\\pi}{4}\\Bigr)\\Bigr)^{2}\n=2\\Bigl(\\cos\\Bigl(-\\frac{\\pi}{2}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{\\pi}{2}\\Bigr)\\Bigr)\n=-2i.\n\\]\nPara verificar, la base en forma cartesiana es \\(\\sqrt2\\Bigl(-\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt2}{2}\\,i\\Bigr)=-1+i\\), y\n\\[\n(-1+i)^2=1-2i+i^2=-2i.\n\\]\n3. El módulo es \\(2^{-3}=\\dfrac18\\) y el argumento es \\(-3\\cdot\\dfrac{\\pi}{4}=-\\dfrac{3\\pi}{4}\\), que pertenece a \\((-\\pi,\\pi]\\):\n\\[\nz^{-3}=\\frac18\\Bigl(\\cos\\Bigl(-\\frac{3\\pi}{4}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\frac{3\\pi}{4}\\Bigr)\\Bigr)\n=\\frac18\\Bigl(-\\frac{\\sqrt2}{2}-\\frac{\\sqrt2}{2}\\,i\\Bigr)\n=-\\frac{\\sqrt2}{16}-\\frac{\\sqrt2}{16}\\,i.\n\\]\nLa fórmula exige \\(z\\ne0\\) porque \\(z^{-3}=\\dfrac{1}{z^3}\\) es un recíproco y el \\(0\\) no tiene recíproco; además, \\(0\\) no tiene argumento.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-08-24-sesion-11.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-08-24-sesion-11.html#ejercicios-para-practicar",
+    "title": "Sesión 11. Números complejos: potencias enteras y teorema de De Moivre",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nCalcule \\(z^3\\) en forma polar y en forma cartesiana para \\(z=2\\Bigl(\\cos\\dfrac{\\pi}{9}+i\\operatorname{sen}\\dfrac{\\pi}{9}\\Bigr)\\).\nCalcule \\(\\Bigl(3\\Bigl(\\cos\\dfrac{5\\pi}{6}+i\\operatorname{sen}\\dfrac{5\\pi}{6}\\Bigr)\\Bigr)^{2}\\); reporte el argumento principal y exprese el resultado en forma cartesiana.\nEscriba \\(\\sqrt3+i\\) en forma polar y calcule \\((\\sqrt3+i)^6\\).\nCalcule \\(z^{-2}\\) para \\(z=\\sqrt2\\Bigl(\\cos\\Bigl(-\\dfrac{\\pi}{4}\\Bigr)+i\\operatorname{sen}\\Bigl(-\\dfrac{\\pi}{4}\\Bigr)\\Bigr)\\); reporte el argumento principal y exprese el resultado en forma cartesiana.\nDecida qué forma conviene para calcular \\((3+4i)^2\\) y cuál para calcular \\((1+i)^{12}\\). Justifique cada elección y efectúe ambos cálculos.",
+    "crumbs": [
+      "Unidad 1. Números reales y complejos",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span>"
+    ]
+  },
+  {
     "objectID": "unidades/02-polinomios-raices.html",
     "href": "unidades/02-polinomios-raices.html",
     "title": "Unidad 2. Polinomios y raíces",
@@ -1355,7 +1443,7 @@
     "text": "Contenidos\nDuración prevista: 20 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1366,7 +1454,7 @@
     "text": "Resolución algebraica de ecuaciones de segundo y tercer grado.\nPolinomios de grado \\(n\\) en una variable y su representación gráfica.\nRaíces reales y complejas.\nConstrucción de un polinomio a partir de sus raíces.\nRelación entre el grado de un polinomio y su número de raíces.\nCoeficientes, raíces, división sintética, factores, residuos y multiplicidad.\nRegla de Descartes para la separación de raíces.\nMétodo de bisección para aproximar raíces.",
     "crumbs": [
       "Unidad 2. Polinomios y raíces",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 2. Polinomios y raíces</span>"
     ]
   },
   {
@@ -1377,7 +1465,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1388,7 +1476,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1399,7 +1487,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1410,7 +1498,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1421,7 +1509,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1432,7 +1520,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1443,7 +1531,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1454,7 +1542,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1465,7 +1553,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1476,7 +1564,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1487,7 +1575,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1498,7 +1586,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1509,7 +1597,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1520,7 +1608,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1531,7 +1619,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1542,7 +1630,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1553,7 +1641,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1564,7 +1652,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
