@@ -382,19 +382,19 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#de-las-potencias-a-las-raíces" id="toc-de-las-potencias-a-las-raíces" class="nav-link active" data-scroll-target="#de-las-potencias-a-las-raíces">De las potencias a las raíces</a></li>
-  <li><a href="#la-fórmula-de-las-raíces-n-ésimas" id="toc-la-fórmula-de-las-raíces-n-ésimas" class="nav-link" data-scroll-target="#la-fórmula-de-las-raíces-n-ésimas">La fórmula de las raíces n-ésimas</a>
+  <li><a href="#raíces-n-ésimas-de-números-complejos" id="toc-raíces-n-ésimas-de-números-complejos" class="nav-link active" data-scroll-target="#raíces-n-ésimas-de-números-complejos">Raíces n-ésimas de números complejos</a></li>
+  <li><a href="#fórmula-para-el-cálculo-de-las-raíces-n-ésimas" id="toc-fórmula-para-el-cálculo-de-las-raíces-n-ésimas" class="nav-link" data-scroll-target="#fórmula-para-el-cálculo-de-las-raíces-n-ésimas">Fórmula para el cálculo de las raíces n-ésimas</a>
   <ul class="collapse">
   <li><a href="#procedimiento-para-calcular-las-raíces" id="toc-procedimiento-para-calcular-las-raíces" class="nav-link" data-scroll-target="#procedimiento-para-calcular-las-raíces">Procedimiento para calcular las raíces</a></li>
   </ul></li>
-  <li><a href="#distribución-angular-y-raíces-de-la-unidad" id="toc-distribución-angular-y-raíces-de-la-unidad" class="nav-link" data-scroll-target="#distribución-angular-y-raíces-de-la-unidad">Distribución angular y raíces de la unidad</a>
+  <li><a href="#representación-geométrica" id="toc-representación-geométrica" class="nav-link" data-scroll-target="#representación-geométrica">Representación geométrica</a>
   <ul class="collapse">
   <li><a href="#raíces-de-la-unidad" id="toc-raíces-de-la-unidad" class="nav-link" data-scroll-target="#raíces-de-la-unidad">Raíces de la unidad</a></li>
   </ul></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-las-raíces-cúbicas-de-8" id="toc-ejemplo-1.-las-raíces-cúbicas-de-8" class="nav-link" data-scroll-target="#ejemplo-1.-las-raíces-cúbicas-de-8">Ejemplo 1. Las raíces cúbicas de 8</a></li>
-  <li><a href="#ejemplo-2.-las-raíces-cuartas-de-16" id="toc-ejemplo-2.-las-raíces-cuartas-de-16" class="nav-link" data-scroll-target="#ejemplo-2.-las-raíces-cuartas-de-16">Ejemplo 2. Las raíces cuartas de −16</a></li>
+  <li><a href="#ejemplo-1.-raíces-cúbicas-de-8" id="toc-ejemplo-1.-raíces-cúbicas-de-8" class="nav-link" data-scroll-target="#ejemplo-1.-raíces-cúbicas-de-8">Ejemplo 1. Raíces cúbicas de 8</a></li>
+  <li><a href="#ejemplo-2.-raíces-cuartas-de-16" id="toc-ejemplo-2.-raíces-cuartas-de-16" class="nav-link" data-scroll-target="#ejemplo-2.-raíces-cuartas-de-16">Ejemplo 2. Raíces cuartas de −16</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -430,8 +430,8 @@ window.Quarto = {
 </header>
 
 
-<section id="de-las-potencias-a-las-raíces" class="level2">
-<h2 class="anchored" data-anchor-id="de-las-potencias-a-las-raíces">De las potencias a las raíces</h2>
+<section id="raíces-n-ésimas-de-números-complejos" class="level2">
+<h2 class="anchored" data-anchor-id="raíces-n-ésimas-de-números-complejos">Raíces n-ésimas de números complejos</h2>
 <p>El teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a> calcula potencias: de <span class="math inline">\(z\)</span> se obtiene <span class="math inline">\(z^n\)</span>. Esta sesión invierte la pregunta: dados un número complejo <span class="math inline">\(z\)</span> y un entero <span class="math inline">\(n\ge2\)</span>, se buscan <strong>todos</strong> los números <span class="math inline">\(w\)</span> tales que</p>
 <p><span class="math display">\[
 w^n=z.
@@ -439,8 +439,8 @@ w^n=z.
 <p>Cada solución se llama <strong>raíz <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(z\)</span></strong>.</p>
 <p>En los números reales la pregunta ya tiene una respuesta parcial, escrita con radicales: <span class="math inline">\(\sqrt[3]{8}=2\)</span> y <span class="math inline">\(\sqrt{16}=4\)</span>. Cuando está definido en <span class="math inline">\(\mathbb R\)</span>, el radical <span class="math inline">\(\sqrt[n]{a}\)</span> denota un solo valor real; si <span class="math inline">\(n\)</span> es par y <span class="math inline">\(a\ge0\)</span>, se toma la raíz no negativa. Lo que se amplía es la ecuación: en <span class="math inline">\(\mathbb C\)</span>, <span class="math inline">\(w^n=z\)</span> puede tener más soluciones que la que nombra el radical. La primera señal apareció en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>: para <span class="math inline">\(d&gt;0\)</span>, la ecuación <span class="math inline">\(x^2=-d\)</span> no tiene soluciones reales y tiene exactamente dos soluciones complejas, <span class="math inline">\(\pm\bigl(\sqrt d\bigr)i\)</span>. El resultado de esta sesión generaliza ese fenómeno: si <span class="math inline">\(z\ne0\)</span>, la ecuación <span class="math inline">\(w^n=z\)</span> tiene <strong>exactamente <span class="math inline">\(n\)</span> soluciones distintas</strong> en <span class="math inline">\(\mathbb C\)</span>, y su disposición en el plano complejo es notablemente regular.</p>
 </section>
-<section id="la-fórmula-de-las-raíces-n-ésimas" class="level2">
-<h2 class="anchored" data-anchor-id="la-fórmula-de-las-raíces-n-ésimas">La fórmula de las raíces n-ésimas</h2>
+<section id="fórmula-para-el-cálculo-de-las-raíces-n-ésimas" class="level2">
+<h2 class="anchored" data-anchor-id="fórmula-para-el-cálculo-de-las-raíces-n-ésimas">Fórmula para el cálculo de las raíces n-ésimas</h2>
 <p>Sea <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span> un número complejo no nulo, con <span class="math inline">\(r=\lvert z\rvert&gt;0\)</span>, y búsquese <span class="math inline">\(w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)\)</span>, con <span class="math inline">\(s&gt;0\)</span>, tal que <span class="math inline">\(w^n=z\)</span>. Por el teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a>,</p>
 <p><span class="math display">\[
 w^n=s^n\bigl(\cos(n\varphi)+i\operatorname{sen}(n\varphi)\bigr).
@@ -476,8 +476,8 @@ k=0,1,\ldots,n-1.
 </ol>
 </section>
 </section>
-<section id="distribución-angular-y-raíces-de-la-unidad" class="level2">
-<h2 class="anchored" data-anchor-id="distribución-angular-y-raíces-de-la-unidad">Distribución angular y raíces de la unidad</h2>
+<section id="representación-geométrica" class="level2">
+<h2 class="anchored" data-anchor-id="representación-geométrica">Representación geométrica</h2>
 <p>Si <span class="math inline">\(z\ne0\)</span>, las <span class="math inline">\(n\)</span> raíces comparten el módulo <span class="math inline">\(\sqrt[n]{r}\)</span>: todas están sobre la circunferencia de radio <span class="math inline">\(\sqrt[n]{r}\)</span> centrada en el origen. Al pasar de <span class="math inline">\(k\)</span> a <span class="math inline">\(k+1\)</span>, el ángulo aumenta exactamente <span class="math inline">\(\dfrac{2\pi}{n}\)</span>: las raíces están <strong>igualmente espaciadas</strong>, y al recorrer las <span class="math inline">\(n\)</span> se completa una vuelta, pues <span class="math inline">\(n\cdot\dfrac{2\pi}{n}=2\pi\)</span>. Para <span class="math inline">\(n\ge3\)</span> son los vértices de un polígono regular de <span class="math inline">\(n\)</span> lados inscrito en esa circunferencia; para <span class="math inline">\(n=2\)</span> son dos puntos diametralmente opuestos, es decir, <span class="math inline">\(w_1=-w_0\)</span>.</p>
 <p>La figura muestra el caso de las raíces cúbicas de <span class="math inline">\(8\)</span>, que el Ejemplo 1 calcula en detalle: módulo común <span class="math inline">\(\sqrt[3]{8}=2\)</span> y separación constante de <span class="math inline">\(\dfrac{2\pi}{3}\)</span>.</p>
 <figure style="max-width: 960px; margin: 1.75rem auto;" class="figure">
@@ -598,31 +598,32 @@ k=0,1,\ldots,n-1:
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-las-raíces-cúbicas-de-8" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-las-raíces-cúbicas-de-8">Ejemplo 1. Las raíces cúbicas de 8</h3>
+<section id="ejemplo-1.-raíces-cúbicas-de-8" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-raíces-cúbicas-de-8">Ejemplo 1. Raíces cúbicas de 8</h3>
 <p>Determinar todas las soluciones de <span class="math inline">\(w^3=8\)</span>.</p>
 <p>El número <span class="math inline">\(8\)</span> es real positivo: <span class="math inline">\(r=8\)</span> y <span class="math inline">\(\theta=0\)</span>. El módulo común es <span class="math inline">\(\sqrt[3]{8}=2\)</span> y los ángulos son <span class="math inline">\(\dfrac{0+2k\pi}{3}\)</span> para <span class="math inline">\(k=0,1,2\)</span>, es decir, <span class="math inline">\(0\)</span>, <span class="math inline">\(\dfrac{2\pi}{3}\)</span> y <span class="math inline">\(\dfrac{4\pi}{3}\)</span>. El tercero no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>; su forma principal es <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span>. Las tres raíces son</p>
 <p><span class="math display">\[
-w_0=2,
-\qquad
-w_1=2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)=-1+\sqrt3\,i,
-\qquad
-w_2=2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)=-1-\sqrt3\,i.
+\begin{aligned}
+w_0 &amp;= 2,\\
+w_1 &amp;= 2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)\\
+    &amp;= -1+\sqrt3\,i,\\
+w_2 &amp;= 2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)\\
+    &amp;= -1-\sqrt3\,i.
+\end{aligned}
 \]</span></p>
 <p>Solo una es real —el valor del radical, <span class="math inline">\(\sqrt[3]{8}=2\)</span>— y las otras dos son conjugadas entre sí. Como verificación, por De Moivre <span class="math inline">\(w_1^3\)</span> tiene módulo <span class="math inline">\(2^3=8\)</span> y argumento <span class="math inline">\(3\cdot\dfrac{2\pi}{3}=2\pi\equiv0\pmod{2\pi}\)</span>, así que <span class="math inline">\(w_1^3=8\)</span>.</p>
 </section>
-<section id="ejemplo-2.-las-raíces-cuartas-de-16" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-las-raíces-cuartas-de-16">Ejemplo 2. Las raíces cuartas de −16</h3>
-<p>Determinar todas las soluciones de <span class="math inline">\(w^4=-16\)</span> y reportarlas con argumento principal.</p>
+<section id="ejemplo-2.-raíces-cuartas-de-16" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-raíces-cuartas-de-16">Ejemplo 2. Raíces cuartas de −16</h3>
+<p>Determinar todas las soluciones de <span class="math inline">\(w^4=-16\)</span> y escribirlas con argumento principal.</p>
 <p>Como <span class="math inline">\(-16\)</span> es real negativo, las relaciones de la <a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a> dan <span class="math inline">\(r=16\)</span> y <span class="math inline">\(\theta=\operatorname{Arg}(-16)=\pi\)</span>. El módulo común es <span class="math inline">\(\sqrt[4]{16}=2\)</span>, pues <span class="math inline">\(2^4=16\)</span>, y los ángulos son <span class="math inline">\(\dfrac{\pi+2k\pi}{4}\)</span> para <span class="math inline">\(k=0,1,2,3\)</span>: <span class="math inline">\(\dfrac{\pi}{4}\)</span>, <span class="math inline">\(\dfrac{3\pi}{4}\)</span>, <span class="math inline">\(\dfrac{5\pi}{4}\)</span> y <span class="math inline">\(\dfrac{7\pi}{4}\)</span>. Los dos últimos no pertenecen a <span class="math inline">\((-\pi,\pi]\)</span>; sus formas principales son <span class="math inline">\(\dfrac{5\pi}{4}-2\pi=-\dfrac{3\pi}{4}\)</span> y <span class="math inline">\(\dfrac{7\pi}{4}-2\pi=-\dfrac{\pi}{4}\)</span>. Con <span class="math inline">\(\cos\dfrac{\pi}{4}=\operatorname{sen}\dfrac{\pi}{4}=\dfrac{\sqrt2}{2}\)</span>, las cuatro raíces son</p>
 <p><span class="math display">\[
-w_0=\sqrt2+\sqrt2\,i,
-\qquad
-w_1=-\sqrt2+\sqrt2\,i,
-\qquad
-w_2=-\sqrt2-\sqrt2\,i,
-\qquad
-w_3=\sqrt2-\sqrt2\,i.
+\begin{aligned}
+w_0 &amp;= \sqrt2+\sqrt2\,i,\\
+w_1 &amp;= -\sqrt2+\sqrt2\,i,\\
+w_2 &amp;= -\sqrt2-\sqrt2\,i,\\
+w_3 &amp;= \sqrt2-\sqrt2\,i.
+\end{aligned}
 \]</span></p>
 <p>La ecuación <span class="math inline">\(w^4=-16\)</span> no tiene soluciones reales —ninguna cuarta potencia de un número real es negativa—, pero tiene cuatro soluciones complejas, que forman un cuadrado con dos pares de conjugadas. Como verificación, <span class="math inline">\(w_0\)</span> tiene módulo <span class="math inline">\(2\)</span> y argumento <span class="math inline">\(\dfrac{\pi}{4}\)</span>; por De Moivre, <span class="math inline">\(w_0^4\)</span> tiene módulo <span class="math inline">\(2^4=16\)</span> y argumento <span class="math inline">\(4\cdot\dfrac{\pi}{4}=\pi\)</span>, así que <span class="math inline">\(w_0^4=16\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-16\)</span>.</p>
 </section>
@@ -631,17 +632,18 @@ w_3=\sqrt2-\sqrt2\,i.
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li><strong>Tomar el radical real como la única raíz.</strong> El radical denota un solo número: <span class="math inline">\(\sqrt[3]{8}=2\)</span>. Pero la ecuación <span class="math inline">\(w^3=8\)</span> tiene tres soluciones en <span class="math inline">\(\mathbb C\)</span>: <span class="math inline">\(2\)</span>, <span class="math inline">\(-1+\sqrt3\,i\)</span> y <span class="math inline">\(-1-\sqrt3\,i\)</span>. En este ejemplo, el radical nombra una de las raíces; en general, si <span class="math inline">\(z\ne0\)</span>, la ecuación <span class="math inline">\(w^n=z\)</span> tiene <span class="math inline">\(n\)</span> raíces complejas distintas.</li>
+<li><strong>Escribir <span class="math inline">\(\sqrt{16}=\pm4\)</span>.</strong> El radical real denota la raíz principal no negativa: <span class="math inline">\(\sqrt{16}=4\)</span>. En cambio, la ecuación <span class="math inline">\(w^2=16\)</span> tiene dos soluciones: <span class="math inline">\(w=4\)</span> y <span class="math inline">\(w=-4\)</span>.</li>
 <li><strong>Dividir el módulo entre <span class="math inline">\(n\)</span>.</strong> El módulo común de las raíces cúbicas de <span class="math inline">\(8\)</span> es <span class="math inline">\(\sqrt[3]{8}=2\)</span>, no <span class="math inline">\(\dfrac83\)</span>: el módulo de cada raíz es la raíz <span class="math inline">\(n\)</span>-ésima real de <span class="math inline">\(r=\lvert z\rvert\)</span>, no <span class="math inline">\(\dfrac{r}{n}\)</span>.</li>
 <li><strong>Sumar las vueltas después de dividir.</strong> Para las raíces cuadradas de <span class="math inline">\(2i\)</span>, con <span class="math inline">\(\theta=\dfrac{\pi}{2}\)</span> y <span class="math inline">\(n=2\)</span>, los ángulos correctos son <span class="math inline">\(\dfrac{\pi/2+2k\pi}{2}=\dfrac{\pi}{4}+k\pi\)</span>, que dan las dos raíces <span class="math inline">\(1+i\)</span> y <span class="math inline">\(-1-i\)</span>. Escribir <span class="math inline">\(\dfrac{\pi}{4}+2k\pi\)</span> repite la raíz <span class="math inline">\(1+i\)</span> y pierde la otra: las vueltas <span class="math inline">\(2k\pi\)</span> se suman al argumento de <span class="math inline">\(z\)</span> <strong>antes</strong> de dividir entre <span class="math inline">\(n\)</span>.</li>
-<li><strong>Reportar los ángulos sin ajustar al principal.</strong> Para las raíces cúbicas de <span class="math inline">\(8\)</span>, el ángulo <span class="math inline">\(\dfrac{4\pi}{3}\)</span> del valor <span class="math inline">\(k=2\)</span> es un argumento válido de <span class="math inline">\(w_2\)</span>, pero no es el principal, pues <span class="math inline">\(\dfrac{4\pi}{3}\notin(-\pi,\pi]\)</span>; el argumento principal es <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span> (<a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>).</li>
+<li><strong>Escribir los ángulos sin ajustarlos al principal.</strong> Para las raíces cúbicas de <span class="math inline">\(8\)</span>, el ángulo <span class="math inline">\(\dfrac{4\pi}{3}\)</span> del valor <span class="math inline">\(k=2\)</span> es un argumento válido de <span class="math inline">\(w_2\)</span>, pero no es el principal, pues <span class="math inline">\(\dfrac{4\pi}{3}\notin(-\pi,\pi]\)</span>; el argumento principal es <span class="math inline">\(\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}\)</span> (<a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>).</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
 <p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
-<li>Determine las cuatro raíces cuartas de <span class="math inline">\(16\)</span>: repórtelas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.</li>
-<li>En el cálculo de las raíces cúbicas de <span class="math inline">\(-27\)</span> se concluye que «la única raíz cúbica de <span class="math inline">\(-27\)</span> es <span class="math inline">\(\sqrt[3]{-27}=-3\)</span>». Identifique el error y determine las tres raíces cúbicas de <span class="math inline">\(-27\)</span>, en forma polar con argumento principal y en forma cartesiana.</li>
+<li>Determine las cuatro raíces cuartas de <span class="math inline">\(16\)</span>: escríbalas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.</li>
+<li>En el cálculo de las raíces cúbicas de <span class="math inline">\(-27\)</span> se afirma que la única raíz cúbica es <span class="math inline">\(\sqrt[3]{-27}=-3\)</span>. Identifique el error y determine las tres raíces cúbicas de <span class="math inline">\(-27\)</span>, en forma polar con argumento principal y en forma cartesiana.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -657,22 +659,27 @@ w_3=\sqrt2-\sqrt2\,i.
 <div class="callout-body-container callout-body">
 <p><strong>1.</strong> Para <span class="math inline">\(z=16\)</span>: <span class="math inline">\(r=16\)</span> y <span class="math inline">\(\theta=0\)</span>. El módulo común es <span class="math inline">\(\sqrt[4]{16}=2\)</span> y los ángulos son <span class="math inline">\(\dfrac{0+2k\pi}{4}=\dfrac{k\pi}{2}\)</span> para <span class="math inline">\(k=0,1,2,3\)</span>: <span class="math inline">\(0\)</span>, <span class="math inline">\(\dfrac{\pi}{2}\)</span>, <span class="math inline">\(\pi\)</span> y <span class="math inline">\(\dfrac{3\pi}{2}\)</span>. El último no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>; su forma principal es <span class="math inline">\(\dfrac{3\pi}{2}-2\pi=-\dfrac{\pi}{2}\)</span>. Las cuatro raíces son</p>
 <p><span class="math display">\[
-w_0=2,
-\qquad
-w_1=2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=2i,
-\qquad
-w_2=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-2,
-\qquad
-w_3=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)=-2i.
+\begin{aligned}
+w_0 &amp;= 2,\\
+w_1 &amp;= 2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)\\
+    &amp;= 2i,\\
+w_2 &amp;= 2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
+    &amp;= -2,\\
+w_3 &amp;= 2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)\\
+    &amp;= -2i.
+\end{aligned}
 \]</span></p>
 <p>En el plano complejo, los cuatro puntos están sobre la circunferencia de radio <span class="math inline">\(2\)</span> y sobre los ejes: <span class="math inline">\(2\)</span> y <span class="math inline">\(-2\)</span> en el eje real, <span class="math inline">\(2i\)</span> y <span class="math inline">\(-2i\)</span> en el imaginario. Forman un cuadrado; dos raíces son reales y dos son imaginarias puras.</p>
 <p><strong>2.</strong> El valor <span class="math inline">\(\sqrt[3]{-27}=-3\)</span> es correcto como raíz cúbica <strong>real</strong> —en efecto, <span class="math inline">\((-3)^3=-27\)</span>—, pero el error está en concluir que es la única solución: en <span class="math inline">\(\mathbb C\)</span>, la ecuación <span class="math inline">\(w^3=-27\)</span>, con <span class="math inline">\(-27\ne0\)</span>, tiene tres raíces distintas. Para <span class="math inline">\(z=-27\)</span>: <span class="math inline">\(r=27\)</span>, <span class="math inline">\(\theta=\pi\)</span>, módulo común <span class="math inline">\(\sqrt[3]{27}=3\)</span> y ángulos <span class="math inline">\(\dfrac{\pi+2k\pi}{3}\)</span> para <span class="math inline">\(k=0,1,2\)</span>: <span class="math inline">\(\dfrac{\pi}{3}\)</span>, <span class="math inline">\(\pi\)</span> y <span class="math inline">\(\dfrac{5\pi}{3}\)</span>, cuya forma principal es <span class="math inline">\(\dfrac{5\pi}{3}-2\pi=-\dfrac{\pi}{3}\)</span>. Las tres raíces son</p>
 <p><span class="math display">\[
-w_0=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)=\frac32+\frac{3\sqrt3}{2}\,i,
-\qquad
-w_1=3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-3,
-\qquad
-w_2=3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)=\frac32-\frac{3\sqrt3}{2}\,i.
+\begin{aligned}
+w_0 &amp;= 3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)\\
+    &amp;= \frac32+\frac{3\sqrt3}{2}\,i,\\
+w_1 &amp;= 3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
+    &amp;= -3,\\
+w_2 &amp;= 3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)\\
+    &amp;= \frac32-\frac{3\sqrt3}{2}\,i.
+\end{aligned}
 \]</span></p>
 <p>La raíz real es una de las tres. Como verificación, por De Moivre <span class="math inline">\(w_0^3\)</span> tiene módulo <span class="math inline">\(3^3=27\)</span> y argumento <span class="math inline">\(3\cdot\dfrac{\pi}{3}=\pi\)</span>, así que <span class="math inline">\(w_0^3=27\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-27\)</span>.</p>
 </div>
@@ -683,9 +690,9 @@ w_2=3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
 <li>Determine las tres raíces cúbicas de <span class="math inline">\(27\)</span>, en forma polar con argumento principal y en forma cartesiana.</li>
-<li>Determine las cuatro raíces cuartas de <span class="math inline">\(-1\)</span>, repórtelas con argumento principal y ubíquelas en el plano complejo.</li>
+<li>Determine las cuatro raíces cuartas de <span class="math inline">\(-1\)</span>, escríbalas con argumento principal y ubíquelas en el plano complejo.</li>
 <li>Determine las dos raíces cuadradas de <span class="math inline">\(-4i\)</span> en forma cartesiana y verifique una de ellas elevándola al cuadrado.</li>
-<li>Determine las seis raíces sextas de la unidad, repórtelas con argumento principal y señale cuáles son reales.</li>
+<li>Determine las seis raíces sextas de la unidad, escríbalas con argumento principal y señale cuáles son reales.</li>
 <li>Verifique que <span class="math inline">\(1+2i\)</span> es una raíz cuadrada de <span class="math inline">\(-3+4i\)</span> y, sin recurrir a la forma polar, obtenga la otra raíz cuadrada. Explique por qué en este caso conviene la vía cartesiana y no la fórmula polar.</li>
 <li>Determine las dos raíces cuadradas de <span class="math inline">\(2+2\sqrt3\,i\)</span>, en forma polar y en forma cartesiana; verifique una de ellas elevando al cuadrado su forma cartesiana y explique por qué las dos raíces son opuestas.</li>
 </ol>
