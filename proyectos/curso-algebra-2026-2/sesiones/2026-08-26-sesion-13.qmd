@@ -1,0 +1,267 @@
+---
+title: "Sesión 13. Taller integrador de números reales y complejos"
+date: 2026-08-26
+description: "Selección y justificación de representaciones y procedimientos en problemas mixtos con expresiones reales, ecuaciones, inecuaciones y números complejos."
+---
+
+## Selección del procedimiento
+
+En un problema mixto, la operación y la forma de los datos determinan el procedimiento. Antes de calcular se identifican las restricciones de la expresión original y la forma en que debe escribirse el resultado. Después se comprueba que las transformaciones conservaron el problema planteado.
+
+| Estructura del problema | Procedimiento adecuado |
+|---|---|
+| Expresión con productos notables o fracciones algebraicas | Factorizar antes de cancelar y conservar las restricciones de la expresión original. |
+| Ecuación lineal o despeje de una fórmula | Aplicar operaciones equivalentes y comprobar por sustitución. |
+| Inecuación lineal | Aplicar propiedades de orden; al multiplicar o dividir por un número negativo, invertir el sentido de la desigualdad. |
+| Suma o resta de números complejos | Usar la forma cartesiana y operar las partes reales e imaginarias por separado. |
+| Producto o cociente de números complejos | Usar la forma cartesiana cuando el desarrollo sea breve; usar la forma polar cuando los módulos y argumentos sean conocidos o fáciles de obtener. En un cociente, el divisor debe ser distinto de cero. |
+| Potencia de un número complejo | Usar un desarrollo cartesiano si el exponente es pequeño; para exponentes mayores, usar la forma polar y el teorema de De Moivre. Los exponentes negativos requieren una base distinta de cero. |
+| Raíces $n$-ésimas de un número complejo | Si el número es $0$, su única raíz distinta es $0$. Si es distinto de $0$, usar la forma polar y calcular las $n$ raíces. Si se piden argumentos principales, escribirlos en $(-\pi,\pi]$. |
+
+Las operaciones con números reales se revisaron en las [Sesiones 02 a 06](2026-08-11-sesion-02.qmd). La forma cartesiana y la forma polar de los números complejos, junto con sus operaciones, potencias y raíces, se desarrollaron en las [Sesiones 07 a 12](2026-08-18-sesion-07.qmd).
+
+## Comprobación de resultados
+
+La comprobación depende del tipo de problema:
+
+- En una simplificación, se conserva el dominio de la expresión original y se justifica algebraicamente la equivalencia; comparar ambas expresiones en un valor permitido sirve como comprobación puntual.
+- En una ecuación, se sustituye cada solución en la ecuación original.
+- En una inecuación, el conjunto solución se obtiene mediante transformaciones equivalentes; revisar la frontera y valores situados dentro y fuera del intervalo sirve como comprobación puntual.
+- En un producto o cociente de números complejos, se puede repetir el cálculo en la otra forma o invertir la operación.
+- En una potencia o una raíz, se aplica el teorema de De Moivre o se eleva una raíz a la potencia correspondiente.
+
+## Ejemplos
+
+### Ejemplo 1. Restricciones y propiedades de orden
+
+**(a)** Resolver
+
+$$
+\frac{x^2-9}{x-3}=8.
+$$
+
+La expresión original exige $x\ne3$. Después se factoriza la diferencia de cuadrados y se cancela el factor común dentro de ese dominio:
+
+$$
+\begin{aligned}
+\frac{x^2-9}{x-3}=8
+&\iff \frac{(x-3)(x+3)}{x-3}=8,
+\qquad x\ne3,\\
+&\iff x+3=8,
+\qquad x\ne3,\\
+&\iff x=5.
+\end{aligned}
+$$
+
+El valor $x=5$ satisface la restricción y, en la ecuación original,
+
+$$
+\frac{5^2-9}{5-3}=\frac{16}{2}=8.
+$$
+
+Por tanto, el conjunto solución es $S=\{5\}$.
+
+**(b)** Resolver la inecuación $4-3(2x-1)\le1$.
+
+$$
+\begin{aligned}
+4-3(2x-1)&\le1,\\
+7-6x&\le1,\\
+-6x&\le-6,\\
+x&\ge1.
+\end{aligned}
+$$
+
+En el último paso se invirtió el sentido de la desigualdad al dividir entre $-6$. El conjunto solución es $S=[1,\infty)$. El valor de frontera $x=1$ produce la igualdad $1\le1$, mientras que $x=0$ no satisface la inecuación.
+
+### Ejemplo 2. Elección de forma en un cálculo complejo
+
+Sean
+
+$$
+z=1+\sqrt3\,i,
+\qquad
+w=1-i.
+$$
+
+Calcular $z+w$, $w^2$ y $zw^2$, y escribir el argumento principal de $zw^2$.
+
+La suma se efectúa en forma cartesiana:
+
+$$
+z+w=(1+1)+(\sqrt3-1)i
+=2+(\sqrt3-1)i.
+$$
+
+Para el cuadrado de $w$, el desarrollo cartesiano es breve:
+
+$$
+w^2=(1-i)^2=1-2i+i^2=-2i.
+$$
+
+Para el producto $zw^2$, la forma polar permite usar ángulos notables. Se tiene
+
+$$
+\begin{aligned}
+z
+&=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr),\\
+w^2
+&=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)
++i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr).
+\end{aligned}
+$$
+
+Por la regla del producto,
+
+$$
+\begin{aligned}
+zw^2
+&=4\Bigl(\cos\Bigl(-\frac{\pi}{6}\Bigr)
++i\operatorname{sen}\Bigl(-\frac{\pi}{6}\Bigr)\Bigr)\\
+&=4\Bigl(\frac{\sqrt3}{2}-\frac12 i\Bigr)\\
+&=2\sqrt3-2i.
+\end{aligned}
+$$
+
+Como $-\dfrac{\pi}{6}\in(-\pi,\pi]$, se obtiene
+
+$$
+\operatorname{Arg}(zw^2)=-\frac{\pi}{6}.
+$$
+
+La comprobación cartesiana conduce al mismo resultado:
+
+$$
+z(-2i)=(1+\sqrt3\,i)(-2i)=2\sqrt3-2i.
+$$
+
+## Errores frecuentes
+
+- **Cancelar términos en lugar de factores.** En $\dfrac{x^2-9}{x-3}$ no se cancelan los términos que contienen $x$; primero se factoriza $x^2-9=(x-3)(x+3)$.
+- **Perder una restricción después de simplificar.** Aunque $\dfrac{x^2-9}{x-3}$ se simplifique a $x+3$, la expresión original sigue excluyendo $x=3$.
+- **Conservar el sentido de una inecuación al dividir entre un número negativo.** De $-6x\le-6$ se obtiene $x\ge1$, no $x\le1$.
+- **Aplicar al módulo de una suma la regla del producto.** En general, $\lvert z+w\rvert$ no es igual a $\lvert z\rvert+\lvert w\rvert$; la suma se calcula por componentes.
+- **Usar la forma polar aunque complique el cálculo.** Para $(1-i)^2$, el desarrollo cartesiano es más corto que convertir la base a forma polar. La representación se elige a partir de la estructura concreta del problema.
+- **Escribir una sola raíz de una ecuación compleja.** Si $a\ne0$ y $n\ge2$ es un entero, la ecuación $u^n=a$ tiene $n$ raíces complejas distintas. El radical real, cuando existe, nombra solo una de ellas.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+En cada inciso, escriba una oración que justifique la representación o el procedimiento elegido.
+
+1. Resuelva la inecuación
+
+   $$
+   \frac{x^2-9}{x-3}\le6,
+   $$
+
+   conservando la restricción de la expresión original y escribiendo el conjunto solución como intervalo.
+
+2. Sean $z=-1+i$ y $w=\sqrt3+i$. Calcule $z+w$ y $zw$. Escriba el producto en forma polar con argumento principal y en forma cartesiana.
+
+3. Calcule $(1-i)^8$. Después determine las tres raíces cúbicas de $-8$, escríbalas con argumento principal y ubíquelas en el plano complejo.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** La expresión original exige $x\ne3$. Al factorizar y cancelar dentro de ese dominio,
+
+$$
+\begin{aligned}
+\frac{x^2-9}{x-3}\le6
+&\iff x+3\le6,
+\qquad x\ne3,\\
+&\iff x\le3,
+\qquad x\ne3.
+\end{aligned}
+$$
+
+Por tanto, $S=(-\infty,3)$. Se eligió la factorización porque permite simplificar la fracción sin perder la restricción; después se aplicaron las propiedades de orden. Como comprobación, $x=2$ satisface la inecuación original, mientras que $x=3$ no pertenece a su dominio.
+
+**2.** La suma se calcula en forma cartesiana porque se operan por separado las componentes:
+
+$$
+z+w=(\sqrt3-1)+2i.
+$$
+
+Para el producto se usa la forma polar porque ambos números tienen módulos y argumentos notables:
+
+$$
+\begin{aligned}
+\lvert z\rvert&=\sqrt2,
+&\operatorname{Arg}z&=\frac{3\pi}{4},\\
+\lvert w\rvert&=2,
+&\operatorname{Arg}w&=\frac{\pi}{6}.
+\end{aligned}
+$$
+
+Así,
+
+$$
+\begin{aligned}
+zw
+&=2\sqrt2\Bigl(\cos\frac{11\pi}{12}
++i\operatorname{sen}\frac{11\pi}{12}\Bigr),\\
+\operatorname{Arg}(zw)
+&=\frac{3\pi}{4}+\frac{\pi}{6}
+=\frac{11\pi}{12}.
+\end{aligned}
+$$
+
+El desarrollo cartesiano proporciona la otra forma y comprueba el resultado:
+
+$$
+\begin{aligned}
+zw
+&=(-1+i)(\sqrt3+i)\\
+&=(-\sqrt3-1)+(\sqrt3-1)i.
+\end{aligned}
+$$
+
+**3.** Para la potencia se usa la forma polar porque el exponente es alto. Como $\lvert1-i\rvert=\sqrt2$ y $\operatorname{Arg}(1-i)=-\dfrac{\pi}{4}$, el teorema de De Moivre da
+
+$$
+\begin{aligned}
+(1-i)^8
+&=(\sqrt2)^8\Bigl(\cos(-2\pi)+i\operatorname{sen}(-2\pi)\Bigr)\\
+&=16.
+\end{aligned}
+$$
+
+Para las raíces cúbicas se usa la fórmula de la [Sesión 12](2026-08-25-sesion-12.qmd). El número $-8$ tiene módulo $8$ y argumento principal $\pi$; por tanto, el módulo común es $2$ y los ángulos son
+
+$$
+\frac{\pi+2k\pi}{3},
+\qquad
+k=0,1,2.
+$$
+
+Al escribirlos con argumento principal se obtienen $\dfrac{\pi}{3}$, $\pi$ y $-\dfrac{\pi}{3}$. Las raíces son
+
+$$
+\begin{aligned}
+u_0
+&=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)\\
+&=1+\sqrt3\,i,\\
+u_1
+&=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
+&=-2,\\
+u_2
+&=2\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)
++i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)\\
+&=1-\sqrt3\,i.
+\end{aligned}
+$$
+
+Las tres raíces corresponden a los puntos $(1,\sqrt3)$, $(-2,0)$ y $(1,-\sqrt3)$. Están sobre la circunferencia de radio $2$, y las raíces consecutivas están separadas angularmente $\dfrac{2\pi}{3}$, módulo $2\pi$; por ello forman un triángulo equilátero. La comprobación mediante De Moivre muestra que cada $u_k^3$ tiene módulo $8$ y argumento congruente con $\pi$ módulo $2\pi$.
+
+:::
+
+## Ejercicios para practicar
+
+1. Simplifique $\dfrac{x^2-16}{x-4}$, conserve la restricción de la expresión original y resuelva $\dfrac{x^2-16}{x-4}>7$.
+2. Resuelva $5-2(3x+1)\ge9$ y escriba el conjunto solución como intervalo. Compruebe un valor de frontera y un valor exterior.
+3. Calcule $(2-i)+(3+2i)$ y $(2-i)(3+2i)$. Explique por qué la forma cartesiana resulta adecuada en ambos cálculos.
+4. Escriba $z=-2-2i$ en forma polar y calcule $z^5$. Escriba el argumento principal y la forma cartesiana del resultado.
+5. Determine las cuatro raíces cuartas de $81$, escríbalas con argumento principal y señale cuáles son reales.
+6. Analice la afirmación: para calcular $(1+i)+(1+i)^6$ debe convertirse toda la expresión a forma polar. Elija una representación para cada operación, efectúe el cálculo y escriba el resultado en forma cartesiana.
