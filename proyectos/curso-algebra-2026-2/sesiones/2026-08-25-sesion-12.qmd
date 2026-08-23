@@ -4,7 +4,7 @@ date: 2026-08-25
 description: "Raíces n-ésimas de un número complejo: fórmula a partir de la forma polar, distribución de las n raíces en una circunferencia, raíces de la unidad y el caso z = 0."
 ---
 
-## De las potencias a las raíces
+## Raíces n-ésimas de números complejos
 
 El teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd) calcula potencias: de $z$ se obtiene $z^n$. Esta sesión invierte la pregunta: dados un número complejo $z$ y un entero $n\ge2$, se buscan **todos** los números $w$ tales que
 
@@ -16,7 +16,7 @@ Cada solución se llama **raíz $n$-ésima de $z$**.
 
 En los números reales la pregunta ya tiene una respuesta parcial, escrita con radicales: $\sqrt[3]{8}=2$ y $\sqrt{16}=4$. Cuando está definido en $\mathbb R$, el radical $\sqrt[n]{a}$ denota un solo valor real; si $n$ es par y $a\ge0$, se toma la raíz no negativa. Lo que se amplía es la ecuación: en $\mathbb C$, $w^n=z$ puede tener más soluciones que la que nombra el radical. La primera señal apareció en la [Sesión 07](2026-08-18-sesion-07.qmd): para $d>0$, la ecuación $x^2=-d$ no tiene soluciones reales y tiene exactamente dos soluciones complejas, $\pm\bigl(\sqrt d\bigr)i$. El resultado de esta sesión generaliza ese fenómeno: si $z\ne0$, la ecuación $w^n=z$ tiene **exactamente $n$ soluciones distintas** en $\mathbb C$, y su disposición en el plano complejo es notablemente regular.
 
-## La fórmula de las raíces n-ésimas
+## Fórmula para el cálculo de las raíces n-ésimas
 
 Sea $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$ un número complejo no nulo, con $r=\lvert z\rvert>0$, y búsquese $w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)$, con $s>0$, tal que $w^n=z$. Por el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd),
 
@@ -60,7 +60,7 @@ Si $z=0$, la situación es distinta: de $\lvert w\rvert^n=\lvert w^n\rvert=0$ se
 4. Si se solicitan argumentos principales, ajustar con múltiplos de $2\pi$ los ángulos que queden fuera de $(-\pi,\pi]$.
 5. Conservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia $n$ con el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd).
 
-## Distribución angular y raíces de la unidad
+## Representación geométrica
 
 Si $z\ne0$, las $n$ raíces comparten el módulo $\sqrt[n]{r}$: todas están sobre la circunferencia de radio $\sqrt[n]{r}$ centrada en el origen. Al pasar de $k$ a $k+1$, el ángulo aumenta exactamente $\dfrac{2\pi}{n}$: las raíces están **igualmente espaciadas**, y al recorrer las $n$ se completa una vuelta, pues $n\cdot\dfrac{2\pi}{n}=2\pi$. Para $n\ge3$ son los vértices de un polígono regular de $n$ lados inscrito en esa circunferencia; para $n=2$ son dos puntos diametralmente opuestos, es decir, $w_1=-w_0$.
 
@@ -189,36 +189,37 @@ Las raíces de la unidad explican por qué **una raíz fija permite obtener toda
 
 ## Ejemplos
 
-### Ejemplo 1. Las raíces cúbicas de 8
+### Ejemplo 1. Raíces cúbicas de 8
 
 Determinar todas las soluciones de $w^3=8$.
 
 El número $8$ es real positivo: $r=8$ y $\theta=0$. El módulo común es $\sqrt[3]{8}=2$ y los ángulos son $\dfrac{0+2k\pi}{3}$ para $k=0,1,2$, es decir, $0$, $\dfrac{2\pi}{3}$ y $\dfrac{4\pi}{3}$. El tercero no pertenece a $(-\pi,\pi]$; su forma principal es $\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}$. Las tres raíces son
 
 $$
-w_0=2,
-\qquad
-w_1=2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)=-1+\sqrt3\,i,
-\qquad
-w_2=2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)=-1-\sqrt3\,i.
+\begin{aligned}
+w_0 &= 2,\\
+w_1 &= 2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)\\
+    &= -1+\sqrt3\,i,\\
+w_2 &= 2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)\\
+    &= -1-\sqrt3\,i.
+\end{aligned}
 $$
 
 Solo una es real —el valor del radical, $\sqrt[3]{8}=2$— y las otras dos son conjugadas entre sí. Como verificación, por De Moivre $w_1^3$ tiene módulo $2^3=8$ y argumento $3\cdot\dfrac{2\pi}{3}=2\pi\equiv0\pmod{2\pi}$, así que $w_1^3=8$.
 
-### Ejemplo 2. Las raíces cuartas de −16
+### Ejemplo 2. Raíces cuartas de −16
 
-Determinar todas las soluciones de $w^4=-16$ y reportarlas con argumento principal.
+Determinar todas las soluciones de $w^4=-16$ y escribirlas con argumento principal.
 
 Como $-16$ es real negativo, las relaciones de la [Sesión 09](2026-08-20-sesion-09.qmd) dan $r=16$ y $\theta=\operatorname{Arg}(-16)=\pi$. El módulo común es $\sqrt[4]{16}=2$, pues $2^4=16$, y los ángulos son $\dfrac{\pi+2k\pi}{4}$ para $k=0,1,2,3$: $\dfrac{\pi}{4}$, $\dfrac{3\pi}{4}$, $\dfrac{5\pi}{4}$ y $\dfrac{7\pi}{4}$. Los dos últimos no pertenecen a $(-\pi,\pi]$; sus formas principales son $\dfrac{5\pi}{4}-2\pi=-\dfrac{3\pi}{4}$ y $\dfrac{7\pi}{4}-2\pi=-\dfrac{\pi}{4}$. Con $\cos\dfrac{\pi}{4}=\operatorname{sen}\dfrac{\pi}{4}=\dfrac{\sqrt2}{2}$, las cuatro raíces son
 
 $$
-w_0=\sqrt2+\sqrt2\,i,
-\qquad
-w_1=-\sqrt2+\sqrt2\,i,
-\qquad
-w_2=-\sqrt2-\sqrt2\,i,
-\qquad
-w_3=\sqrt2-\sqrt2\,i.
+\begin{aligned}
+w_0 &= \sqrt2+\sqrt2\,i,\\
+w_1 &= -\sqrt2+\sqrt2\,i,\\
+w_2 &= -\sqrt2-\sqrt2\,i,\\
+w_3 &= \sqrt2-\sqrt2\,i.
+\end{aligned}
 $$
 
 La ecuación $w^4=-16$ no tiene soluciones reales —ninguna cuarta potencia de un número real es negativa—, pero tiene cuatro soluciones complejas, que forman un cuadrado con dos pares de conjugadas. Como verificación, $w_0$ tiene módulo $2$ y argumento $\dfrac{\pi}{4}$; por De Moivre, $w_0^4$ tiene módulo $2^4=16$ y argumento $4\cdot\dfrac{\pi}{4}=\pi$, así que $w_0^4=16\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-16$.
@@ -226,29 +227,32 @@ La ecuación $w^4=-16$ no tiene soluciones reales —ninguna cuarta potencia de 
 ## Errores frecuentes
 
 - **Tomar el radical real como la única raíz.** El radical denota un solo número: $\sqrt[3]{8}=2$. Pero la ecuación $w^3=8$ tiene tres soluciones en $\mathbb C$: $2$, $-1+\sqrt3\,i$ y $-1-\sqrt3\,i$. En este ejemplo, el radical nombra una de las raíces; en general, si $z\ne0$, la ecuación $w^n=z$ tiene $n$ raíces complejas distintas.
+- **Escribir $\sqrt{16}=\pm4$.** El radical real denota la raíz principal no negativa: $\sqrt{16}=4$. En cambio, la ecuación $w^2=16$ tiene dos soluciones: $w=4$ y $w=-4$.
 - **Dividir el módulo entre $n$.** El módulo común de las raíces cúbicas de $8$ es $\sqrt[3]{8}=2$, no $\dfrac83$: el módulo de cada raíz es la raíz $n$-ésima real de $r=\lvert z\rvert$, no $\dfrac{r}{n}$.
 - **Sumar las vueltas después de dividir.** Para las raíces cuadradas de $2i$, con $\theta=\dfrac{\pi}{2}$ y $n=2$, los ángulos correctos son $\dfrac{\pi/2+2k\pi}{2}=\dfrac{\pi}{4}+k\pi$, que dan las dos raíces $1+i$ y $-1-i$. Escribir $\dfrac{\pi}{4}+2k\pi$ repite la raíz $1+i$ y pierde la otra: las vueltas $2k\pi$ se suman al argumento de $z$ **antes** de dividir entre $n$.
-- **Reportar los ángulos sin ajustar al principal.** Para las raíces cúbicas de $8$, el ángulo $\dfrac{4\pi}{3}$ del valor $k=2$ es un argumento válido de $w_2$, pero no es el principal, pues $\dfrac{4\pi}{3}\notin(-\pi,\pi]$; el argumento principal es $\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}$ ([Sesión 09](2026-08-20-sesion-09.qmd)).
+- **Escribir los ángulos sin ajustarlos al principal.** Para las raíces cúbicas de $8$, el ángulo $\dfrac{4\pi}{3}$ del valor $k=2$ es un argumento válido de $w_2$, pero no es el principal, pues $\dfrac{4\pi}{3}\notin(-\pi,\pi]$; el argumento principal es $\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}$ ([Sesión 09](2026-08-20-sesion-09.qmd)).
 
 ## Actividad
 
 Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
 
-1. Determine las cuatro raíces cuartas de $16$: repórtelas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.
-2. En el cálculo de las raíces cúbicas de $-27$ se concluye que «la única raíz cúbica de $-27$ es $\sqrt[3]{-27}=-3$». Identifique el error y determine las tres raíces cúbicas de $-27$, en forma polar con argumento principal y en forma cartesiana.
+1. Determine las cuatro raíces cuartas de $16$: escríbalas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.
+2. En el cálculo de las raíces cúbicas de $-27$ se afirma que la única raíz cúbica es $\sqrt[3]{-27}=-3$. Identifique el error y determine las tres raíces cúbicas de $-27$, en forma polar con argumento principal y en forma cartesiana.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
 **1.** Para $z=16$: $r=16$ y $\theta=0$. El módulo común es $\sqrt[4]{16}=2$ y los ángulos son $\dfrac{0+2k\pi}{4}=\dfrac{k\pi}{2}$ para $k=0,1,2,3$: $0$, $\dfrac{\pi}{2}$, $\pi$ y $\dfrac{3\pi}{2}$. El último no pertenece a $(-\pi,\pi]$; su forma principal es $\dfrac{3\pi}{2}-2\pi=-\dfrac{\pi}{2}$. Las cuatro raíces son
 
 $$
-w_0=2,
-\qquad
-w_1=2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=2i,
-\qquad
-w_2=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-2,
-\qquad
-w_3=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)=-2i.
+\begin{aligned}
+w_0 &= 2,\\
+w_1 &= 2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)\\
+    &= 2i,\\
+w_2 &= 2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
+    &= -2,\\
+w_3 &= 2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)\\
+    &= -2i.
+\end{aligned}
 $$
 
 En el plano complejo, los cuatro puntos están sobre la circunferencia de radio $2$ y sobre los ejes: $2$ y $-2$ en el eje real, $2i$ y $-2i$ en el imaginario. Forman un cuadrado; dos raíces son reales y dos son imaginarias puras.
@@ -256,11 +260,14 @@ En el plano complejo, los cuatro puntos están sobre la circunferencia de radio 
 **2.** El valor $\sqrt[3]{-27}=-3$ es correcto como raíz cúbica **real** —en efecto, $(-3)^3=-27$—, pero el error está en concluir que es la única solución: en $\mathbb C$, la ecuación $w^3=-27$, con $-27\ne0$, tiene tres raíces distintas. Para $z=-27$: $r=27$, $\theta=\pi$, módulo común $\sqrt[3]{27}=3$ y ángulos $\dfrac{\pi+2k\pi}{3}$ para $k=0,1,2$: $\dfrac{\pi}{3}$, $\pi$ y $\dfrac{5\pi}{3}$, cuya forma principal es $\dfrac{5\pi}{3}-2\pi=-\dfrac{\pi}{3}$. Las tres raíces son
 
 $$
-w_0=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)=\frac32+\frac{3\sqrt3}{2}\,i,
-\qquad
-w_1=3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-3,
-\qquad
-w_2=3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)=\frac32-\frac{3\sqrt3}{2}\,i.
+\begin{aligned}
+w_0 &= 3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)\\
+    &= \frac32+\frac{3\sqrt3}{2}\,i,\\
+w_1 &= 3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
+    &= -3,\\
+w_2 &= 3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)\\
+    &= \frac32-\frac{3\sqrt3}{2}\,i.
+\end{aligned}
 $$
 
 La raíz real es una de las tres. Como verificación, por De Moivre $w_0^3$ tiene módulo $3^3=27$ y argumento $3\cdot\dfrac{\pi}{3}=\pi$, así que $w_0^3=27\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-27$.
@@ -270,8 +277,8 @@ La raíz real es una de las tres. Como verificación, por De Moivre $w_0^3$ tien
 ## Ejercicios para practicar
 
 1. Determine las tres raíces cúbicas de $27$, en forma polar con argumento principal y en forma cartesiana.
-2. Determine las cuatro raíces cuartas de $-1$, repórtelas con argumento principal y ubíquelas en el plano complejo.
+2. Determine las cuatro raíces cuartas de $-1$, escríbalas con argumento principal y ubíquelas en el plano complejo.
 3. Determine las dos raíces cuadradas de $-4i$ en forma cartesiana y verifique una de ellas elevándola al cuadrado.
-4. Determine las seis raíces sextas de la unidad, repórtelas con argumento principal y señale cuáles son reales.
+4. Determine las seis raíces sextas de la unidad, escríbalas con argumento principal y señale cuáles son reales.
 5. Verifique que $1+2i$ es una raíz cuadrada de $-3+4i$ y, sin recurrir a la forma polar, obtenga la otra raíz cuadrada. Explique por qué en este caso conviene la vía cartesiana y no la fórmula polar.
 6. Determine las dos raíces cuadradas de $2+2\sqrt3\,i$, en forma polar y en forma cartesiana; verifique una de ellas elevando al cuadrado su forma cartesiana y explique por qué las dos raíces son opuestas.
