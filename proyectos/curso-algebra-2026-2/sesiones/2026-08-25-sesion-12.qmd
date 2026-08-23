@@ -1,0 +1,277 @@
+---
+title: "Sesión 12. Números complejos: raíces n-ésimas"
+date: 2026-08-25
+description: "Raíces n-ésimas de un número complejo: fórmula a partir de la forma polar, distribución de las n raíces en una circunferencia, raíces de la unidad y el caso z = 0."
+---
+
+## De las potencias a las raíces
+
+El teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd) calcula potencias: de $z$ se obtiene $z^n$. Esta sesión invierte la pregunta: dados un número complejo $z$ y un entero $n\ge2$, se buscan **todos** los números $w$ tales que
+
+$$
+w^n=z.
+$$
+
+Cada solución se llama **raíz $n$-ésima de $z$**.
+
+En los números reales la pregunta ya tiene una respuesta parcial, escrita con radicales: $\sqrt[3]{8}=2$ y $\sqrt{16}=4$. Cuando está definido en $\mathbb R$, el radical $\sqrt[n]{a}$ denota un solo valor real; si $n$ es par y $a\ge0$, se toma la raíz no negativa. Lo que se amplía es la ecuación: en $\mathbb C$, $w^n=z$ puede tener más soluciones que la que nombra el radical. La primera señal apareció en la [Sesión 07](2026-08-18-sesion-07.qmd): para $d>0$, la ecuación $x^2=-d$ no tiene soluciones reales y tiene exactamente dos soluciones complejas, $\pm\bigl(\sqrt d\bigr)i$. El resultado de esta sesión generaliza ese fenómeno: si $z\ne0$, la ecuación $w^n=z$ tiene **exactamente $n$ soluciones distintas** en $\mathbb C$, y su disposición en el plano complejo es notablemente regular.
+
+## La fórmula de las raíces n-ésimas
+
+Sea $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$ un número complejo no nulo, con $r=\lvert z\rvert>0$, y búsquese $w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)$, con $s>0$, tal que $w^n=z$. Por el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd),
+
+$$
+w^n=s^n\bigl(\cos(n\varphi)+i\operatorname{sen}(n\varphi)\bigr).
+$$
+
+Dos números complejos no nulos en forma polar son iguales exactamente cuando sus módulos coinciden y sus argumentos difieren en un múltiplo entero de $2\pi$, es decir, cuando sus argumentos son congruentes módulo $2\pi$, con la escritura introducida en la [Sesión 10](2026-08-21-sesion-10.qmd). La ecuación $w^n=z$ equivale entonces al par de condiciones
+
+$$
+s^n=r,
+\qquad
+n\varphi\equiv\theta\pmod{2\pi}.
+$$
+
+La primera es una ecuación entre números reales positivos y tiene una única solución, $s=\sqrt[n]{r}$: la raíz $n$-ésima real. La segunda dice que $n\varphi=\theta+2k\pi$ para algún entero $k$, de donde
+
+$$
+\varphi=\frac{\theta+2k\pi}{n},
+\qquad
+k\in\mathbb Z.
+$$
+
+Dos valores de $k$ producen la misma raíz exactamente cuando sus ángulos difieren en un múltiplo de $2\pi$, y eso ocurre cuando la diferencia de esos valores es un múltiplo de $n$. Por ello basta tomar $k=0,1,\ldots,n-1$: esos $n$ valores producen raíces distintas entre sí, y cualquier otro entero repite una de ellas.
+
+**Raíces $n$-ésimas.** Si $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\ne0$ y $n\ge2$ es un entero, la ecuación $w^n=z$ tiene exactamente $n$ soluciones distintas:
+
+$$
+w_k=\sqrt[n]{r}\,\Bigl(\cos\frac{\theta+2k\pi}{n}+i\operatorname{sen}\frac{\theta+2k\pi}{n}\Bigr),
+\qquad
+k=0,1,\ldots,n-1.
+$$
+
+Si $z=0$, la situación es distinta: de $\lvert w\rvert^n=\lvert w^n\rvert=0$ se sigue $\lvert w\rvert=0$, así que la única raíz $n$-ésima de $0$ es $0$. Hay una sola raíz distinta; cuando en la Unidad 2 se cuenten las raíces de un polinomio con multiplicidad, esta raíz única se contará $n$ veces.
+
+### Procedimiento para calcular las raíces
+
+1. Si $z=0$, la única raíz $n$-ésima es $0$. Si $z\ne0$, continuar.
+2. Escribir $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$, con $r>0$, mediante las relaciones de la [Sesión 09](2026-08-20-sesion-09.qmd).
+3. Calcular el módulo común $\sqrt[n]{r}$ y los $n$ ángulos $\dfrac{\theta+2k\pi}{n}$ para $k=0,1,\ldots,n-1$.
+4. Si se solicitan argumentos principales, ajustar con múltiplos de $2\pi$ los ángulos que queden fuera de $(-\pi,\pi]$.
+5. Conservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia $n$ con el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd).
+
+## Distribución angular y raíces de la unidad
+
+Si $z\ne0$, las $n$ raíces comparten el módulo $\sqrt[n]{r}$: todas están sobre la circunferencia de radio $\sqrt[n]{r}$ centrada en el origen. Al pasar de $k$ a $k+1$, el ángulo aumenta exactamente $\dfrac{2\pi}{n}$: las raíces están **igualmente espaciadas**, y al recorrer las $n$ se completa una vuelta, pues $n\cdot\dfrac{2\pi}{n}=2\pi$. Para $n\ge3$ son los vértices de un polígono regular de $n$ lados inscrito en esa circunferencia; para $n=2$ son dos puntos diametralmente opuestos, es decir, $w_1=-w_0$.
+
+La figura muestra el caso de las raíces cúbicas de $8$, que el Ejemplo 1 calcula en detalle: módulo común $\sqrt[3]{8}=2$ y separación constante de $\dfrac{2\pi}{3}$.
+
+```{=html}
+<figure style="max-width: 960px; margin: 1.75rem auto;">
+<div role="region" aria-label="Gráfico desplazable de las raíces cúbicas de un número complejo" tabindex="0" style="max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 0.35rem;">
+<svg viewBox="0 0 960 580" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="s12-raices-title s12-raices-desc" focusable="false" style="display: block; width: 100%; min-width: 740px; height: auto;" xmlns="http://www.w3.org/2000/svg">
+  <title id="s12-raices-title">Raíces cúbicas de un número complejo en forma polar</title>
+  <desc id="s12-raices-desc">Infografía con un plano complejo y una interpretación algebraica. Las tres raíces cúbicas de ocho comparten el módulo dos y sus argumentos se separan dos tercios de pi: la raíz real dos y el par conjugado menos uno más raíz de tres i y menos uno menos raíz de tres i forman un triángulo equilátero inscrito en la circunferencia de radio dos. Arcos ámbar muestran el giro constante entre raíces consecutivas.</desc>
+  <defs>
+    <filter id="s12-sombra" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="s12-eje" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+    <marker id="s12-w0" viewBox="0 0 10 10" markerWidth="13" markerHeight="13" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="s12-w" viewBox="0 0 10 10" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+    <marker id="s12-arco" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L10 5L0 10Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <rect x="8" y="8" width="944" height="564" rx="26" fill="#f8fafc" stroke="#dbe4ee" stroke-width="2" filter="url(#s12-sombra)"/>
+  <text x="40" y="48" fill="#0f172a" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="25" font-weight="700">Raíces cúbicas de 8</text>
+  <text x="40" y="73" fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">Tres raíces, un módulo común y giros de 2π/3</text>
+
+  <rect x="36" y="96" width="552" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="610" y="96" width="314" height="426" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Guías con escala común: 80 px por unidad de módulo. Circunferencia |w| = 1 (tenue) y |w| = 2 (punteada), donde viven las tres raíces. -->
+  <circle cx="330" cy="310" r="80" fill="none" stroke="#dbe4ee" stroke-width="1.4" stroke-dasharray="4 7"/>
+  <circle cx="330" cy="310" r="160" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="1 7" stroke-linecap="round"/>
+
+  <!-- Triángulo equilátero que une las tres raíces. -->
+  <polyline points="490,310 250,171.436 250,448.564 490,310" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 6"/>
+
+  <g fill="none" stroke="#64748b" stroke-width="1.7">
+    <line x1="140" y1="310" x2="560" y2="310" marker-end="url(#s12-eje)"/>
+    <line x1="330" y1="478" x2="330" y2="134" marker-end="url(#s12-eje)"/>
+  </g>
+  <g fill="#64748b" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <text x="556" y="334" text-anchor="end">Re</text>
+    <text x="345" y="145">Im</text>
+    <text x="340" y="334">0</text>
+  </g>
+
+  <!-- Cada raíz está a 2π/3 de la siguiente: arcos entre direcciones consecutivas (radios crecientes para no encimarse); tres arcos completan la vuelta. -->
+  <g fill="none" stroke="#b45309" stroke-width="3">
+    <path d="M388 310A58 58 0 0 0 301 259.771" marker-end="url(#s12-arco)"/>
+    <path d="M292 244.182A76 76 0 0 0 292 375.818" marker-end="url(#s12-arco)"/>
+    <path d="M283 391.406A94 94 0 0 0 424 310" marker-end="url(#s12-arco)"/>
+  </g>
+  <g fill="#b45309" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-style="italic" font-weight="650" paint-order="stroke fill" stroke="#ffffff" stroke-width="5">
+    <text x="367" y="245.914" text-anchor="middle">2π/3</text>
+    <text x="386" y="406.995" text-anchor="middle">2π/3</text>
+  </g>
+
+  <!-- Vectores exactos: w0 = 2; w1 = −1+√3 i; w2 = −1−√3 i (80 px por unidad). -->
+  <line x1="330" y1="310" x2="250" y2="171.436" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s12-w)"/>
+  <line x1="330" y1="310" x2="250" y2="448.564" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#s12-w)"/>
+  <line x1="330" y1="310" x2="490" y2="310" stroke="#7c3aed" stroke-width="4.5" stroke-linecap="round" marker-end="url(#s12-w0)"/>
+  <circle cx="330" cy="310" r="5" fill="#0f172a"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" paint-order="stroke fill" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">
+    <text x="500" y="303" fill="#7c3aed">w₀ = 2</text>
+    <text x="172" y="158" fill="#2563eb">w₁ = −1 + √3 i</text>
+    <text x="172" y="480" fill="#2563eb">w₂ = −1 − √3 i</text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16">
+    <circle cx="116" cy="493" r="5" fill="#7c3aed"/>
+    <text x="130" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">w₀</tspan><tspan> = 2, raíz real</tspan></text>
+    <circle cx="290" cy="493" r="5" fill="#b45309"/>
+    <text x="304" y="498" fill="#334155">giro 2π/3</text>
+    <circle cx="408" cy="493" r="5" fill="#2563eb"/>
+    <text x="422" y="498" fill="#334155"><tspan font-style="italic" font-weight="700">w₁, w₂</tspan><tspan> conjugadas</tspan></text>
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <text x="636" y="131" fill="#0f172a" font-size="19" font-weight="700">Interpretación algebraica</text>
+    <text x="636" y="153" fill="#64748b" font-size="16">Un solo módulo; tres direcciones.</text>
+
+    <rect x="634" y="174" width="266" height="52" rx="12" fill="#eff6ff"/>
+    <circle cx="655" cy="200" r="6" fill="#2563eb"/>
+    <text x="674" y="197" fill="#1e3a8a" font-size="16" font-style="italic" font-weight="700">z = 8</text>
+    <text x="674" y="215" fill="#334155" font-size="16">|z| = 8   ·   Arg z = 0</text>
+
+    <rect x="634" y="240" width="266" height="86" rx="14" fill="#f8fafc" stroke="#dbe4ee"/>
+    <text x="652" y="264" fill="#64748b" font-size="16" font-weight="750" letter-spacing="1.2">MÓDULO COMÚN</text>
+    <text x="652" y="293" fill="#0f172a" font-size="22" font-weight="700">∛8 = 2</text>
+    <text x="652" y="312" fill="#64748b" font-size="16">las tres raíces cumplen |w| = 2</text>
+
+    <rect x="634" y="340" width="266" height="86" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+    <text x="652" y="364" fill="#6d28d9" font-size="16" font-weight="750" letter-spacing="1.2">ÁNGULOS</text>
+    <text x="652" y="393" fill="#0f172a" font-size="22" font-weight="700">(0 + 2kπ)/3</text>
+    <text x="652" y="412" fill="#475569" font-size="16">k = 0, 1, 2:   0,  2π/3,  −2π/3</text>
+
+    <text x="767" y="470" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">w₀ = 2,   w₁ = −1 + √3 i,</text>
+    <text x="767" y="493" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="750">w₂ = −1 − √3 i:   cada wₖ³ = 8</text>
+  </g>
+</svg>
+</div>
+<figcaption style="text-align: center; color: #475569; font-size: 0.95rem; margin-top: 0.65rem;">Las tres raíces cúbicas de 8 comparten el módulo ∛8 = 2 y sus argumentos se separan 2π/3: forman un triángulo equilátero inscrito en la circunferencia |<em>w</em>| = 2. La raíz real es <em>w</em>₀ = 2; las otras dos son conjugadas. En el panel derecho, el módulo común y el reparto de los ángulos.</figcaption>
+</figure>
+```
+
+### Raíces de la unidad
+
+Las raíces $n$-ésimas de $1$ se llaman **raíces $n$-ésimas de la unidad**. Como $1$ tiene módulo $1$ y argumento $0$, la fórmula da
+
+$$
+w_k=\cos\frac{2k\pi}{n}+i\operatorname{sen}\frac{2k\pi}{n},
+\qquad
+k=0,1,\ldots,n-1:
+$$
+
+son $n$ puntos igualmente espaciados sobre la circunferencia de radio $1$, empezando en $w_0=1$. Para $n=4$ resultan $1$, $i$, $-1$ y $-i$: exactamente el ciclo de las potencias de $i$ estudiado en la [Sesión 08](2026-08-19-sesion-08.qmd).
+
+Las raíces de la unidad explican por qué **una raíz fija permite obtener todas las demás**. Multiplicar por un número de módulo $1$ es una rotación pura, como se vio en la [Sesión 10](2026-08-21-sesion-10.qmd): conserva el módulo y suma el argumento. Si $z\ne0$ y $w_0$ es una raíz $n$-ésima de $z$, al multiplicarla por las $n$ raíces de la unidad se obtienen $n$ números con el mismo módulo que $w_0$ y argumentos desplazados en $\dfrac{2k\pi}{n}$: precisamente las $n$ raíces de $z$. En símbolos, si $u^n=1$ y $w_0^n=z$, entonces $(w_0u)^n=w_0^nu^n=z\cdot1=z$.
+
+## Ejemplos
+
+### Ejemplo 1. Las raíces cúbicas de 8
+
+Determinar todas las soluciones de $w^3=8$.
+
+El número $8$ es real positivo: $r=8$ y $\theta=0$. El módulo común es $\sqrt[3]{8}=2$ y los ángulos son $\dfrac{0+2k\pi}{3}$ para $k=0,1,2$, es decir, $0$, $\dfrac{2\pi}{3}$ y $\dfrac{4\pi}{3}$. El tercero no pertenece a $(-\pi,\pi]$; su forma principal es $\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}$. Las tres raíces son
+
+$$
+w_0=2,
+\qquad
+w_1=2\Bigl(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\Bigr)=-1+\sqrt3\,i,
+\qquad
+w_2=2\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)=-1-\sqrt3\,i.
+$$
+
+Solo una es real —el valor del radical, $\sqrt[3]{8}=2$— y las otras dos son conjugadas entre sí. Como verificación, por De Moivre $w_1^3$ tiene módulo $2^3=8$ y argumento $3\cdot\dfrac{2\pi}{3}=2\pi\equiv0\pmod{2\pi}$, así que $w_1^3=8$.
+
+### Ejemplo 2. Las raíces cuartas de −16
+
+Determinar todas las soluciones de $w^4=-16$ y reportarlas con argumento principal.
+
+Como $-16$ es real negativo, las relaciones de la [Sesión 09](2026-08-20-sesion-09.qmd) dan $r=16$ y $\theta=\operatorname{Arg}(-16)=\pi$. El módulo común es $\sqrt[4]{16}=2$, pues $2^4=16$, y los ángulos son $\dfrac{\pi+2k\pi}{4}$ para $k=0,1,2,3$: $\dfrac{\pi}{4}$, $\dfrac{3\pi}{4}$, $\dfrac{5\pi}{4}$ y $\dfrac{7\pi}{4}$. Los dos últimos no pertenecen a $(-\pi,\pi]$; sus formas principales son $\dfrac{5\pi}{4}-2\pi=-\dfrac{3\pi}{4}$ y $\dfrac{7\pi}{4}-2\pi=-\dfrac{\pi}{4}$. Con $\cos\dfrac{\pi}{4}=\operatorname{sen}\dfrac{\pi}{4}=\dfrac{\sqrt2}{2}$, las cuatro raíces son
+
+$$
+w_0=\sqrt2+\sqrt2\,i,
+\qquad
+w_1=-\sqrt2+\sqrt2\,i,
+\qquad
+w_2=-\sqrt2-\sqrt2\,i,
+\qquad
+w_3=\sqrt2-\sqrt2\,i.
+$$
+
+La ecuación $w^4=-16$ no tiene soluciones reales —ninguna cuarta potencia de un número real es negativa—, pero tiene cuatro soluciones complejas, que forman un cuadrado con dos pares de conjugadas. Como verificación, $w_0$ tiene módulo $2$ y argumento $\dfrac{\pi}{4}$; por De Moivre, $w_0^4$ tiene módulo $2^4=16$ y argumento $4\cdot\dfrac{\pi}{4}=\pi$, así que $w_0^4=16\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-16$.
+
+## Errores frecuentes
+
+- **Tomar el radical real como la única raíz.** El radical denota un solo número: $\sqrt[3]{8}=2$. Pero la ecuación $w^3=8$ tiene tres soluciones en $\mathbb C$: $2$, $-1+\sqrt3\,i$ y $-1-\sqrt3\,i$. En este ejemplo, el radical nombra una de las raíces; en general, si $z\ne0$, la ecuación $w^n=z$ tiene $n$ raíces complejas distintas.
+- **Dividir el módulo entre $n$.** El módulo común de las raíces cúbicas de $8$ es $\sqrt[3]{8}=2$, no $\dfrac83$: el módulo de cada raíz es la raíz $n$-ésima real de $r=\lvert z\rvert$, no $\dfrac{r}{n}$.
+- **Sumar las vueltas después de dividir.** Para las raíces cuadradas de $2i$, con $\theta=\dfrac{\pi}{2}$ y $n=2$, los ángulos correctos son $\dfrac{\pi/2+2k\pi}{2}=\dfrac{\pi}{4}+k\pi$, que dan las dos raíces $1+i$ y $-1-i$. Escribir $\dfrac{\pi}{4}+2k\pi$ repite la raíz $1+i$ y pierde la otra: las vueltas $2k\pi$ se suman al argumento de $z$ **antes** de dividir entre $n$.
+- **Reportar los ángulos sin ajustar al principal.** Para las raíces cúbicas de $8$, el ángulo $\dfrac{4\pi}{3}$ del valor $k=2$ es un argumento válido de $w_2$, pero no es el principal, pues $\dfrac{4\pi}{3}\notin(-\pi,\pi]$; el argumento principal es $\dfrac{4\pi}{3}-2\pi=-\dfrac{2\pi}{3}$ ([Sesión 09](2026-08-20-sesion-09.qmd)).
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
+
+1. Determine las cuatro raíces cuartas de $16$: repórtelas en forma polar con argumento principal, exprese cada una en forma cartesiana y ubíquelas en el plano complejo.
+2. En el cálculo de las raíces cúbicas de $-27$ se concluye que «la única raíz cúbica de $-27$ es $\sqrt[3]{-27}=-3$». Identifique el error y determine las tres raíces cúbicas de $-27$, en forma polar con argumento principal y en forma cartesiana.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Para $z=16$: $r=16$ y $\theta=0$. El módulo común es $\sqrt[4]{16}=2$ y los ángulos son $\dfrac{0+2k\pi}{4}=\dfrac{k\pi}{2}$ para $k=0,1,2,3$: $0$, $\dfrac{\pi}{2}$, $\pi$ y $\dfrac{3\pi}{2}$. El último no pertenece a $(-\pi,\pi]$; su forma principal es $\dfrac{3\pi}{2}-2\pi=-\dfrac{\pi}{2}$. Las cuatro raíces son
+
+$$
+w_0=2,
+\qquad
+w_1=2\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=2i,
+\qquad
+w_2=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-2,
+\qquad
+w_3=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr)=-2i.
+$$
+
+En el plano complejo, los cuatro puntos están sobre la circunferencia de radio $2$ y sobre los ejes: $2$ y $-2$ en el eje real, $2i$ y $-2i$ en el imaginario. Forman un cuadrado; dos raíces son reales y dos son imaginarias puras.
+
+**2.** El valor $\sqrt[3]{-27}=-3$ es correcto como raíz cúbica **real** —en efecto, $(-3)^3=-27$—, pero el error está en concluir que es la única solución: en $\mathbb C$, la ecuación $w^3=-27$, con $-27\ne0$, tiene tres raíces distintas. Para $z=-27$: $r=27$, $\theta=\pi$, módulo común $\sqrt[3]{27}=3$ y ángulos $\dfrac{\pi+2k\pi}{3}$ para $k=0,1,2$: $\dfrac{\pi}{3}$, $\pi$ y $\dfrac{5\pi}{3}$, cuya forma principal es $\dfrac{5\pi}{3}-2\pi=-\dfrac{\pi}{3}$. Las tres raíces son
+
+$$
+w_0=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)=\frac32+\frac{3\sqrt3}{2}\,i,
+\qquad
+w_1=3\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-3,
+\qquad
+w_2=3\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)=\frac32-\frac{3\sqrt3}{2}\,i.
+$$
+
+La raíz real es una de las tres. Como verificación, por De Moivre $w_0^3$ tiene módulo $3^3=27$ y argumento $3\cdot\dfrac{\pi}{3}=\pi$, así que $w_0^3=27\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)=-27$.
+
+:::
+
+## Ejercicios para practicar
+
+1. Determine las tres raíces cúbicas de $27$, en forma polar con argumento principal y en forma cartesiana.
+2. Determine las cuatro raíces cuartas de $-1$, repórtelas con argumento principal y ubíquelas en el plano complejo.
+3. Determine las dos raíces cuadradas de $-4i$ en forma cartesiana y verifique una de ellas elevándola al cuadrado.
+4. Determine las seis raíces sextas de la unidad, repórtelas con argumento principal y señale cuáles son reales.
+5. Verifique que $1+2i$ es una raíz cuadrada de $-3+4i$ y, sin recurrir a la forma polar, obtenga la otra raíz cuadrada. Explique por qué en este caso conviene la vía cartesiana y no la fórmula polar.
+6. Determine las dos raíces cuadradas de $2+2\sqrt3\,i$, en forma polar y en forma cartesiana; verifique una de ellas elevando al cuadrado su forma cartesiana y explique por qué las dos raíces son opuestas.
