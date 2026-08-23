@@ -16,7 +16,16 @@ z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr),
 w=s\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr),
 $$
 
-dos números complejos no nulos, donde $r=\lvert z\rvert>0$ y $s=\lvert w\rvert>0$. Para obtener el producto se utilizan las identidades
+dos números complejos no nulos, donde $r=\lvert z\rvert>0$ y $s=\lvert w\rvert>0$.
+
+Antes de aplicar la regla, debe comprobarse que cada expresión esté en forma polar estándar: el factor exterior es el módulo y, por tanto, es positivo para un número no nulo; además, el mismo ángulo debe aparecer en el coseno y en el seno. Si una expresión tiene un factor exterior negativo, primero se reescribe con módulo positivo. Para $r>0$,
+
+$$
+-r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)
+=r\bigl(\cos(\theta+\pi)+i\operatorname{sen}(\theta+\pi)\bigr).
+$$
+
+Para obtener el producto se utilizan las identidades
 
 $$
 \cos(\theta+\varphi)=\cos\theta\cos\varphi-\operatorname{sen}\theta\operatorname{sen}\varphi,
@@ -49,7 +58,15 @@ $$
 
 La escritura $\alpha\equiv\beta\pmod{2\pi}$ significa que $\alpha-\beta=2k\pi$ para algún $k\in\mathbb Z$; es decir, ambos ángulos determinan la misma dirección.
 
-La suma $\theta+\varphi$ es un argumento del producto, pero no necesariamente su argumento principal. Para expresar $\operatorname{Arg}(zw)$ en el intervalo $(-\pi,\pi]$, se suma o se resta un múltiplo entero de $2\pi$ cuando sea necesario.
+La congruencia no es una igualdad de números reales: por ejemplo, $5\pi/4\ne-3\pi/4$, pero $5\pi/4\equiv-3\pi/4\pmod{2\pi}$. Sus cosenos y senos coinciden, de modo que representan la misma dirección.
+
+La suma $\theta+\varphi$ es un argumento del producto, pero no necesariamente su argumento principal. Si $\alpha=\theta+\varphi$, se elige el único $k\in\mathbb Z$ para el cual
+
+$$
+-\pi<\alpha-2k\pi\leq\pi.
+$$
+
+Entonces $\operatorname{Arg}(zw)=\alpha-2k\pi$. En términos operativos, se resta $2\pi$ mientras el ángulo sea mayor que $\pi$ y se suma $2\pi$ mientras sea menor o igual que $-\pi$; si ya pertenece a $(-\pi,\pi]$, no se modifica.
 
 Si uno de los factores es $0$, el producto es $0$. La igualdad de módulos continúa siendo válida, pero no se aplica una regla de argumentos porque $0$ no tiene argumento.
 
@@ -194,7 +211,11 @@ $$
 \operatorname{Arg}\left(\frac zw\right)\equiv\theta-\varphi\pmod{2\pi}.
 $$
 
+Para obtener el argumento principal del cociente, se aplica a $\theta-\varphi$ el mismo ajuste por múltiplos de $2\pi$ descrito para el producto.
+
 La condición $w\ne0$ es indispensable. Si $z=0$ y $w\ne0$, el cociente es $0$; no se aplica la regla de los argumentos porque $0$ no tiene argumento.
+
+El módulo $r/s$ puede conservarse como una fracción positiva exacta. Por ejemplo, $\dfrac52$ es un módulo válido y no necesita convertirse a una aproximación decimal.
 
 ## Interpretación geométrica y elección de forma
 
@@ -217,6 +238,13 @@ w=3\Bigl(\cos\frac{\pi}{6}+i\operatorname{sen}\frac{\pi}{6}\Bigr).
 $$
 
 En forma polar,
+
+$$
+\frac{\pi}{3}+\frac{\pi}{6}
+=\frac{2\pi}{6}+\frac{\pi}{6}
+=\frac{3\pi}{6}
+=\frac{\pi}{2}.
+$$
 
 $$
 zw=6\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=6i.
@@ -245,7 +273,15 @@ z=2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr),
 w=4\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr).
 $$
 
-Los módulos producen $2\cdot4=8$ y la suma de argumentos es $\dfrac{3\pi}{4}+\dfrac{\pi}{2}=\dfrac{5\pi}{4}$. Este ángulo no pertenece a $(-\pi,\pi]$; al restar $2\pi$ se obtiene el argumento principal $-\dfrac{3\pi}{4}$. Por tanto,
+Los módulos producen $2\cdot4=8$ y la suma de argumentos es
+
+$$
+\frac{3\pi}{4}+\frac{\pi}{2}
+=\frac{3\pi}{4}+\frac{2\pi}{4}
+=\frac{5\pi}{4}.
+$$
+
+Este ángulo no pertenece a $(-\pi,\pi]$; al restar $2\pi$ se obtiene el argumento principal $-\dfrac{3\pi}{4}$. Por tanto,
 
 $$
 zw
@@ -263,7 +299,16 @@ z=6\Bigl(\cos\frac{5\pi}{6}+i\operatorname{sen}\frac{5\pi}{6}\Bigr),
 w=3\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
 $$
 
-Los módulos se dividen y los argumentos se restan:
+Los módulos se dividen y los argumentos se restan. Para los argumentos,
+
+$$
+\frac{5\pi}{6}-\frac{\pi}{3}
+=\frac{5\pi}{6}-\frac{2\pi}{6}
+=\frac{3\pi}{6}
+=\frac{\pi}{2}.
+$$
+
+Por tanto,
 
 $$
 \frac zw
