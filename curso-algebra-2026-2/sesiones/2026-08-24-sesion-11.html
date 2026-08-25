@@ -467,12 +467,13 @@ z^n=r^n\bigl(\cos(n\theta)+i\operatorname{sen}(n\theta)\bigr).
 <p><span class="math display">\[
 \operatorname{Arg}(z^n)\equiv n\theta\pmod{2\pi}.
 \]</span></p>
+<p>Sumar o restar un múltiplo entero de <span class="math inline">\(2\pi\)</span> al argumento no modifica el número complejo, porque el seno y el coseno tienen periodo <span class="math inline">\(2\pi\)</span>.</p>
 <section id="procedimiento-para-calcular-una-potencia" class="level3">
 <h3 class="anchored" data-anchor-id="procedimiento-para-calcular-una-potencia">Procedimiento para calcular una potencia</h3>
 <ol type="1">
 <li>Si <span class="math inline">\(z=0\)</span> y <span class="math inline">\(n\ge1\)</span>, concluir que <span class="math inline">\(z^n=0\)</span>. Si <span class="math inline">\(n\le0\)</span>, la base debe ser distinta de <span class="math inline">\(0\)</span>.</li>
 <li>Para <span class="math inline">\(z\ne0\)</span>, escribir la base como <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span>, con <span class="math inline">\(r&gt;0\)</span>.</li>
-<li>Calcular <span class="math inline">\(r^n\)</span> y <span class="math inline">\(n\theta\)</span>.</li>
+<li>Elevar el módulo a la potencia <span class="math inline">\(n\)</span> y multiplicar el argumento por <span class="math inline">\(n\)</span>: <span class="math inline">\(r\mapsto r^n\)</span> y <span class="math inline">\(\theta\mapsto n\theta\)</span>.</li>
 <li>Si se solicita el argumento principal, ajustar <span class="math inline">\(n\theta\)</span> al intervalo <span class="math inline">\((-\pi,\pi]\)</span> mediante un múltiplo de <span class="math inline">\(2\pi\)</span>.</li>
 <li>Conservar la forma polar o convertir el resultado a forma cartesiana, según lo solicitado.</li>
 </ol>
@@ -687,7 +688,13 @@ z^3=8\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=8i.
 <p><span class="math display">\[
 (1+i)^{10}=(\sqrt2)^{10}\Bigl(\cos\frac{10\pi}{4}+i\operatorname{sen}\frac{10\pi}{4}\Bigr).
 \]</span></p>
-<p>El módulo es <span class="math inline">\((\sqrt2)^{10}=2^5=32\)</span>. El ángulo <span class="math inline">\(\dfrac{10\pi}{4}=\dfrac{5\pi}{2}\)</span> no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>; al restar <span class="math inline">\(2\pi\)</span> se obtiene el argumento principal <span class="math inline">\(\dfrac{\pi}{2}\)</span>. Por tanto,</p>
+<p>El módulo es <span class="math inline">\((\sqrt2)^{10}=2^5=32\)</span>. El ángulo <span class="math inline">\(\dfrac{10\pi}{4}=\dfrac{5\pi}{2}\)</span> no pertenece a <span class="math inline">\((-\pi,\pi]\)</span>. Al restar una vuelta completa y escribir las fracciones con el mismo denominador,</p>
+<p><span class="math display">\[
+\frac{5\pi}{2}-2\pi
+=\frac{5\pi}{2}-\frac{4\pi}{2}
+=\frac{\pi}{2},
+\]</span></p>
+<p>se obtiene el argumento principal <span class="math inline">\(\dfrac{\pi}{2}\)</span>. Por tanto,</p>
 <p><span class="math display">\[
 (1+i)^{10}=32\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=32i.
 \]</span></p>
@@ -699,7 +706,8 @@ z^3=8\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=8i.
 <p><span class="math display">\[
 z=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
 \]</span></p>
-<p>Como <span class="math inline">\(z\ne0\)</span>, la fórmula aplica con <span class="math inline">\(n=-2\)</span>: el módulo es <span class="math inline">\(2^{-2}=\dfrac14\)</span> y el argumento es <span class="math inline">\(-2\cdot\dfrac{\pi}{3}=-\dfrac{2\pi}{3}\)</span>, que ya pertenece a <span class="math inline">\((-\pi,\pi]\)</span>:</p>
+<p>Como <span class="math inline">\(z\ne0\)</span>, la fórmula aplica con <span class="math inline">\(n=-2\)</span>: el módulo es <span class="math inline">\(2^{-2}=\dfrac14\)</span> y el argumento es <span class="math inline">\(-2\cdot\dfrac{\pi}{3}=-\dfrac{2\pi}{3}\)</span>, que ya pertenece a <span class="math inline">\((-\pi,\pi]\)</span>.</p>
+<p>Para convertir a forma cartesiana, <span class="math inline">\(-\dfrac{2\pi}{3}\)</span> tiene el mismo lado terminal que <span class="math inline">\(\dfrac{4\pi}{3}\)</span>: está en el tercer cuadrante y su ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{3}\)</span>. Por ello, tanto el coseno como el seno son negativos.</p>
 <p><span class="math display">\[
 z^{-2}=\frac14\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)
 =\frac14\Bigl(-\frac12-\frac{\sqrt3}{2}\,i\Bigr)
