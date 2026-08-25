@@ -47,11 +47,13 @@ $$
 \operatorname{Arg}(z^n)\equiv n\theta\pmod{2\pi}.
 $$
 
+Sumar o restar un múltiplo entero de $2\pi$ al argumento no modifica el número complejo, porque el seno y el coseno tienen periodo $2\pi$.
+
 ### Procedimiento para calcular una potencia
 
 1. Si $z=0$ y $n\ge1$, concluir que $z^n=0$. Si $n\le0$, la base debe ser distinta de $0$.
 2. Para $z\ne0$, escribir la base como $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$, con $r>0$.
-3. Calcular $r^n$ y $n\theta$.
+3. Elevar el módulo a la potencia $n$ y multiplicar el argumento por $n$: $r\mapsto r^n$ y $\theta\mapsto n\theta$.
 4. Si se solicita el argumento principal, ajustar $n\theta$ al intervalo $(-\pi,\pi]$ mediante un múltiplo de $2\pi$.
 5. Conservar la forma polar o convertir el resultado a forma cartesiana, según lo solicitado.
 
@@ -250,7 +252,15 @@ $$
 (1+i)^{10}=(\sqrt2)^{10}\Bigl(\cos\frac{10\pi}{4}+i\operatorname{sen}\frac{10\pi}{4}\Bigr).
 $$
 
-El módulo es $(\sqrt2)^{10}=2^5=32$. El ángulo $\dfrac{10\pi}{4}=\dfrac{5\pi}{2}$ no pertenece a $(-\pi,\pi]$; al restar $2\pi$ se obtiene el argumento principal $\dfrac{\pi}{2}$. Por tanto,
+El módulo es $(\sqrt2)^{10}=2^5=32$. El ángulo $\dfrac{10\pi}{4}=\dfrac{5\pi}{2}$ no pertenece a $(-\pi,\pi]$. Al restar una vuelta completa y escribir las fracciones con el mismo denominador,
+
+$$
+\frac{5\pi}{2}-2\pi
+=\frac{5\pi}{2}-\frac{4\pi}{2}
+=\frac{\pi}{2},
+$$
+
+se obtiene el argumento principal $\dfrac{\pi}{2}$. Por tanto,
 
 $$
 (1+i)^{10}=32\Bigl(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\Bigr)=32i.
@@ -266,7 +276,9 @@ $$
 z=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
 $$
 
-Como $z\ne0$, la fórmula aplica con $n=-2$: el módulo es $2^{-2}=\dfrac14$ y el argumento es $-2\cdot\dfrac{\pi}{3}=-\dfrac{2\pi}{3}$, que ya pertenece a $(-\pi,\pi]$:
+Como $z\ne0$, la fórmula aplica con $n=-2$: el módulo es $2^{-2}=\dfrac14$ y el argumento es $-2\cdot\dfrac{\pi}{3}=-\dfrac{2\pi}{3}$, que ya pertenece a $(-\pi,\pi]$.
+
+Para convertir a forma cartesiana, $-\dfrac{2\pi}{3}$ tiene el mismo lado terminal que $\dfrac{4\pi}{3}$: está en el tercer cuadrante y su ángulo de referencia es $\dfrac{\pi}{3}$. Por ello, tanto el coseno como el seno son negativos.
 
 $$
 z^{-2}=\frac14\Bigl(\cos\Bigl(-\frac{2\pi}{3}\Bigr)+i\operatorname{sen}\Bigl(-\frac{2\pi}{3}\Bigr)\Bigr)
@@ -351,3 +363,4 @@ La fórmula exige $z\ne0$ porque $z^{-3}=\dfrac{1}{z^3}$ es un recíproco y el $
 3. Escriba $\sqrt3+i$ en forma polar y calcule $(\sqrt3+i)^6$.
 4. Calcule $z^{-2}$ para $z=\sqrt2\Bigl(\cos\Bigl(-\dfrac{\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\dfrac{\pi}{4}\Bigr)\Bigr)$; reporte el argumento principal y exprese el resultado en forma cartesiana.
 5. Decida qué forma conviene para calcular $(3+4i)^2$ y cuál para calcular $(1+i)^{12}$. Justifique cada elección y efectúe ambos cálculos.
+
