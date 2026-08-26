@@ -469,15 +469,21 @@ w_k=\sqrt[n]{r}\,\Bigl(\cos\frac{\theta+2k\pi}{n}+i\operatorname{sen}\frac{\thet
 \qquad
 k=0,1,\ldots,n-1.
 \]</span></p>
+<p>En esta expresión, <span class="math inline">\(\sqrt[n]{r}\)</span> determina el módulo común de las raíces; <span class="math inline">\(\theta\)</span> es un argumento del número original <span class="math inline">\(z\)</span>; y <span class="math inline">\(2k\pi\)</span> recorre sus argumentos equivalentes antes de dividirlos entre <span class="math inline">\(n\)</span>. El factor <span class="math inline">\(2\pi\)</span> representa una vuelta completa y no depende de <span class="math inline">\(n\)</span> ni de <span class="math inline">\(k\)</span>: es el producto <span class="math inline">\(2k\pi\)</span> el que cambia al sustituir <span class="math inline">\(k=0,1,\ldots,n-1\)</span>.</p>
 <p>Si <span class="math inline">\(z=0\)</span>, la situación es distinta: de <span class="math inline">\(\lvert w\rvert^n=\lvert w^n\rvert=0\)</span> se sigue <span class="math inline">\(\lvert w\rvert=0\)</span>, así que la única raíz <span class="math inline">\(n\)</span>-ésima de <span class="math inline">\(0\)</span> es <span class="math inline">\(0\)</span>. Hay una sola raíz distinta; cuando en la Unidad 2 se cuenten las raíces de un polinomio con multiplicidad, esta raíz única se contará <span class="math inline">\(n\)</span> veces.</p>
 <section id="procedimiento-para-calcular-las-raíces" class="level3">
 <h3 class="anchored" data-anchor-id="procedimiento-para-calcular-las-raíces">Procedimiento para calcular las raíces</h3>
 <ol type="1">
-<li>Si <span class="math inline">\(z=0\)</span>, la única raíz <span class="math inline">\(n\)</span>-ésima es <span class="math inline">\(0\)</span>. Si <span class="math inline">\(z\ne0\)</span>, continuar.</li>
-<li>Escribir <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span>, con <span class="math inline">\(r&gt;0\)</span>, mediante las relaciones de la <a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>.</li>
-<li>Calcular el módulo común <span class="math inline">\(\sqrt[n]{r}\)</span> y los <span class="math inline">\(n\)</span> ángulos <span class="math inline">\(\dfrac{\theta+2k\pi}{n}\)</span> para <span class="math inline">\(k=0,1,\ldots,n-1\)</span>.</li>
-<li>Si se solicitan argumentos principales, ajustar con múltiplos de <span class="math inline">\(2\pi\)</span> los ángulos que queden fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</li>
-<li>Conservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia <span class="math inline">\(n\)</span> con el teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a>.</li>
+<li><p>Si <span class="math inline">\(z=0\)</span>, la única raíz <span class="math inline">\(n\)</span>-ésima es <span class="math inline">\(0\)</span>. Si <span class="math inline">\(z\ne0\)</span>, continuar.</p></li>
+<li><p>Escribir <span class="math inline">\(z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)\)</span>, con <span class="math inline">\(r&gt;0\)</span>, mediante las relaciones de la <a href="../sesiones/2026-08-20-sesion-09.html">Sesión 09</a>.</p></li>
+<li><p>Calcular el módulo común <span class="math inline">\(\sqrt[n]{r}\)</span> y los <span class="math inline">\(n\)</span> ángulos <span class="math inline">\(\dfrac{\theta+2k\pi}{n}\)</span> para <span class="math inline">\(k=0,1,\ldots,n-1\)</span>.</p></li>
+<li><p>Si se solicitan argumentos principales, ajustar con múltiplos de <span class="math inline">\(2\pi\)</span> los ángulos que queden fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</p></li>
+<li><p>Conservar la forma polar o convertir a forma cartesiana, según se solicite. Para convertir <span class="math inline">\(\rho\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)\)</span>, se evalúan el coseno y el seno y se distribuye el módulo:</p>
+<p><span class="math display">\[
+\rho\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)
+=\rho\cos\varphi+i\rho\operatorname{sen}\varphi.
+\]</span></p>
+<p>Cuando sea necesario, el ángulo de referencia permite obtener los valores absolutos; el cuadrante determina los signos y, si el lado terminal está sobre un eje, los valores se leen directamente. Una raíz puede verificarse elevándola a la potencia <span class="math inline">\(n\)</span> con el teorema de De Moivre de la <a href="../sesiones/2026-08-24-sesion-11.html">Sesión 11</a>.</p></li>
 </ol>
 </section>
 </section>
