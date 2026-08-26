@@ -1,268 +1,419 @@
 ---
-title: "Sesión 13. Práctica integradora de números reales y complejos"
+title: "Sesión 13. Práctica integradora de la Unidad 1"
 date: 2026-08-26
-description: "Selección y justificación de representaciones y procedimientos en problemas mixtos con expresiones reales, ecuaciones, inecuaciones y números complejos."
+description: "Práctica autogestiva con ejercicios de dificultad gradual sobre números reales, expresiones algebraicas, ecuaciones, inecuaciones y números complejos."
 ---
 
-## Selección del procedimiento
+## Indicaciones de trabajo
 
-En un problema mixto, la operación y la forma de los datos determinan el procedimiento. Antes de calcular se identifican las restricciones de la expresión original y la forma en que debe escribirse el resultado. Después se comprueba que las transformaciones conservaron el problema planteado.
+1. Comience con el nivel 1 y avance en orden, sin esperar una explicación general.
+2. Escriba los procedimientos, las restricciones y las comprobaciones que correspondan.
+3. Si no sabe cómo comenzar un reactivo, márquelo y continúe con el siguiente.
+4. Abra las soluciones de un nivel únicamente después de intentar todos sus reactivos. Corrija su trabajo antes de continuar.
+5. Marque cada reactivo como **resuelto**, **requiere revisión** o **necesito apoyo para iniciar**.
+6. Al concluir el tiempo asignado a un nivel, avance al siguiente aunque queden reactivos pendientes.
 
-| Estructura del problema | Procedimiento adecuado |
-|---|---|
-| Expresión con productos notables o fracciones algebraicas | Factorizar antes de cancelar y conservar las restricciones de la expresión original. |
-| Ecuación lineal o despeje de una fórmula | Aplicar operaciones equivalentes y comprobar por sustitución. |
-| Inecuación lineal | Aplicar propiedades de orden; al multiplicar o dividir por un número negativo, invertir el sentido de la desigualdad. |
-| Suma o resta de números complejos | Usar la forma cartesiana y operar las partes reales e imaginarias por separado. |
-| Producto o cociente de números complejos | Usar la forma cartesiana cuando el desarrollo sea breve; usar la forma polar cuando los módulos y argumentos sean conocidos o fáciles de obtener. En un cociente, el divisor debe ser distinto de cero. |
-| Potencia de un número complejo | Usar un desarrollo cartesiano si el exponente es pequeño; para exponentes mayores, usar la forma polar y el teorema de De Moivre. Los exponentes negativos requieren una base distinta de cero. |
-| Raíces $n$-ésimas de un número complejo | Si el número es $0$, su única raíz distinta es $0$. Si es distinto de $0$, usar la forma polar y calcular las $n$ raíces. Si se piden argumentos principales, escribirlos en $(-\pi,\pi]$. |
+| Tramo de trabajo | Tiempo |
+|---|---:|
+| Indicaciones | 2 min |
+| Nivel 1, incluida la autocorrección | 16 min |
+| Nivel 2, incluida la autocorrección | 15 min |
+| Nivel 3, incluida la autocorrección | 11 min |
+| Problema integrador y consulta de su solución | 7 min |
+| Registro de cierre | 4 min |
 
-Las operaciones con números reales se revisaron en las [Sesiones 02 a 06](2026-08-11-sesion-02.qmd). La forma cartesiana y la forma polar de los números complejos, junto con sus operaciones, potencias y raíces, se desarrollaron en las [Sesiones 07 a 12](2026-08-18-sesion-07.qmd).
+## Nivel 1. Números reales y expresiones
 
-## Comprobación de resultados
+1. Clasifique cada número en el conjunto más específico al que pertenece:
 
-La comprobación depende del tipo de problema:
+   $$
+   -5,
+   \qquad
+   \frac73,
+   \qquad
+   \sqrt2,
+   \qquad
+   \sqrt{16}.
+   $$
 
-- En una simplificación, se conserva el dominio de la expresión original y se justifica algebraicamente la equivalencia; comparar ambas expresiones en un valor permitido sirve como comprobación puntual.
-- En una ecuación, se sustituye cada solución en la ecuación original.
-- En una inecuación, el conjunto solución se obtiene mediante transformaciones equivalentes; revisar la frontera y valores situados dentro y fuera del intervalo sirve como comprobación puntual.
-- En un producto o cociente de números complejos, se puede repetir el cálculo en la otra forma o invertir la operación.
-- En una potencia o una raíz, se aplica el teorema de De Moivre o se eleva una raíz a la potencia correspondiente.
+   Después, escriba como intervalo el conjunto
 
-## Ejemplos
+   $$
+   \{x\in\mathbb R:-2<x\le3\}.
+   $$
 
-### Ejemplo 1. Restricciones y propiedades de orden
+2. Evalúe o simplifique:
 
-**(a)** Resolver
+   $$
+   -2^2,
+   \qquad
+   (-2)^2,
+   \qquad
+   3^{-2},
+   \qquad
+   \sqrt{72}.
+   $$
+
+3. Factorice y simplifique; conserve la restricción de la expresión original:
+
+   $$
+   \frac{x^2-9}{x-3}.
+   $$
+
+4. Resuelva y compruebe la ecuación
+
+   $$
+   \frac{x-1}{2}+1=4.
+   $$
+
+   Después, despeje $h$ en la fórmula
+
+   $$
+   A=\frac{bh}{2}
+   $$
+
+   e indique la restricción necesaria.
+
+5. Resuelva y escriba cada conjunto solución como intervalo:
+
+   a. $-3x+2\ge11$.
+
+   b. $\lvert x-2\rvert<3$.
+
+::: {.callout-note collapse="true" title="Soluciones del nivel 1"}
+
+**1.** Se tiene
 
 $$
-\frac{x^2-9}{x-3}=8.
-$$
-
-La expresión original exige $x\ne3$. Después se factoriza la diferencia de cuadrados y se cancela el factor común dentro de ese dominio:
-
-$$
-\begin{aligned}
-\frac{x^2-9}{x-3}=8
-&\iff \frac{(x-3)(x+3)}{x-3}=8,
-\qquad x\ne3,\\
-&\iff x+3=8,
-\qquad x\ne3,\\
-&\iff x=5,
-\qquad x\ne3.
-\end{aligned}
-$$
-
-El valor $x=5$ satisface la restricción y, en la ecuación original,
-
-$$
-\frac{5^2-9}{5-3}=\frac{16}{2}=8.
-$$
-
-Por tanto, el conjunto solución es $S=\{5\}$.
-
-**(b)** Resolver la inecuación $4-3(2x-1)\le1$.
-
-$$
-\begin{aligned}
-4-3(2x-1)&\le1,\\
-7-6x&\le1,\\
--6x&\le-6,\\
-x&\ge1.
-\end{aligned}
-$$
-
-En el último paso se invirtió el sentido de la desigualdad al dividir entre $-6$. El conjunto solución es $S=[1,\infty)$. El valor de frontera $x=1$ produce la igualdad $1\le1$, mientras que $x=0$ no satisface la inecuación.
-
-### Ejemplo 2. Elección de forma polar o cartesiana en cálculo de complejos
-
-Sean
-
-$$
-z=1+\sqrt3\,i,
+-5\in\mathbb Z,
 \qquad
-w=1-i.
+\frac73\in\mathbb Q,
+\qquad
+\sqrt2\in\mathbb R\setminus\mathbb Q,
+\qquad
+\sqrt{16}=4\in\mathbb N.
 $$
 
-Calcular $z+w$, $w^2$ y $zw^2$, y escribir el argumento principal de $zw^2$.
+El intervalo es $(-2,3]$.
 
-La suma se efectúa en forma cartesiana:
-
-$$
-z+w=(1+1)+(\sqrt3-1)i
-=2+(\sqrt3-1)i.
-$$
-
-Para el cuadrado de $w$, el desarrollo cartesiano es breve:
+**2.** La potencia se calcula antes de aplicar el signo exterior y un exponente negativo indica un recíproco:
 
 $$
-w^2=(1-i)^2=1-2i+i^2=-2i.
+-2^2=-4,
+\qquad
+(-2)^2=4,
+\qquad
+3^{-2}=\frac1{3^2}=\frac19.
 $$
 
-Para el producto $zw^2$, la forma polar permite usar ángulos notables. Se tiene
+Además,
 
 $$
-\begin{aligned}
-z
-&=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr),\\
-w^2
-&=2\Bigl(\cos\Bigl(-\frac{\pi}{2}\Bigr)
-+i\operatorname{sen}\Bigl(-\frac{\pi}{2}\Bigr)\Bigr).
-\end{aligned}
+\sqrt{72}=\sqrt{36\cdot2}=6\sqrt2.
 $$
 
-Por la regla del producto,
+**3.** La diferencia de cuadrados permite factorizar el numerador:
 
 $$
-\begin{aligned}
-zw^2
-&=4\Bigl(\cos\Bigl(-\frac{\pi}{6}\Bigr)
-+i\operatorname{sen}\Bigl(-\frac{\pi}{6}\Bigr)\Bigr)\\
-&=4\Bigl(\frac{\sqrt3}{2}-\frac12 i\Bigr)\\
-&=2\sqrt3-2i.
-\end{aligned}
-$$
-
-Como $-\dfrac{\pi}{6}\in(-\pi,\pi]$, se obtiene
-
-$$
-\operatorname{Arg}(zw^2)=-\frac{\pi}{6}.
-$$
-
-La comprobación cartesiana conduce al mismo resultado:
-
-$$
-z(-2i)=(1+\sqrt3\,i)(-2i)=2\sqrt3-2i.
-$$
-
-## Errores frecuentes
-
-- **Cancelar términos en lugar de factores.** En $\dfrac{x^2-9}{x-3}$ no se cancelan los términos que contienen $x$; primero se factoriza $x^2-9=(x-3)(x+3)$.
-- **Perder una restricción después de simplificar.** Aunque $\dfrac{x^2-9}{x-3}$ se simplifique a $x+3$, la expresión original sigue excluyendo $x=3$.
-- **Conservar el sentido de una inecuación al dividir entre un número negativo.** De $-6x\le-6$ se obtiene $x\ge1$, no $x\le1$.
-- **Aplicar al módulo de una suma la regla del producto.** En general, $\lvert z+w\rvert$ no es igual a $\lvert z\rvert+\lvert w\rvert$; la suma se calcula por componentes.
-- **Usar la forma polar aunque complique el cálculo.** Para $(1-i)^2$, el desarrollo cartesiano es más corto que convertir la base a forma polar. La representación se elige a partir de la estructura concreta del problema.
-- **Escribir una sola raíz de una ecuación compleja.** Si $a\ne0$ y $n\ge2$ es un entero, la ecuación $u^n=a$ tiene $n$ raíces complejas distintas. El radical real, cuando existe, nombra solo una de ellas.
-
-## Actividad
-
-Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
-
-En cada inciso, escriba una oración que justifique la representación o el procedimiento elegido.
-
-1. Resuelva la inecuación
-
-   $$
-   \frac{x^2-9}{x-3}\le6,
-   $$
-
-   conservando la restricción de la expresión original y escribiendo el conjunto solución como intervalo.
-
-2. Sean $z=-1+i$ y $w=\sqrt3+i$. Calcule $z+w$ y $zw$. Escriba el producto en forma polar con argumento principal y en forma cartesiana.
-
-3. Calcule $(1-i)^8$. Después determine las tres raíces cúbicas de $-8$, escríbalas con argumento principal y ubíquelas en el plano complejo.
-
-::: {.callout-note collapse="true" title="Soluciones de la actividad"}
-
-**1.** La expresión original exige $x\ne3$. Al factorizar y cancelar dentro de ese dominio,
-
-$$
-\begin{aligned}
-\frac{x^2-9}{x-3}\le6
-&\iff x+3\le6,
-\qquad x\ne3,\\
-&\iff x\le3,
+\frac{x^2-9}{x-3}
+=\frac{(x-3)(x+3)}{x-3}
+=x+3,
 \qquad x\ne3.
-\end{aligned}
 $$
 
-Por tanto, $S=(-\infty,3)$. Se eligió la factorización porque permite simplificar la fracción sin perder la restricción; después se aplicaron las propiedades de orden. Como comprobación, $x=2$ satisface la inecuación original, mientras que $x=3$ no pertenece a su dominio.
+La restricción $x\ne3$ se conserva porque pertenece al dominio de la expresión original.
 
-**2.** La suma se calcula en forma cartesiana porque se operan por separado las componentes:
-
-$$
-z+w=(\sqrt3-1)+2i.
-$$
-
-Para el producto se usa la forma polar porque ambos números tienen módulos y argumentos notables:
+**4.** Para la ecuación,
 
 $$
-\begin{aligned}
-\lvert z\rvert&=\sqrt2,
-&\operatorname{Arg}z&=\frac{3\pi}{4},\\
-\lvert w\rvert&=2,
-&\operatorname{Arg}w&=\frac{\pi}{6}.
-\end{aligned}
+\frac{x-1}{2}+1=4
+\iff
+\frac{x-1}{2}=3
+\iff
+x=7.
 $$
 
-Así,
+La sustitución da $\dfrac{7-1}{2}+1=4$, de modo que $S=\{7\}$. En la fórmula,
+
+$$
+A=\frac{bh}{2}
+\iff
+2A=bh
+\iff
+h=\frac{2A}{b},
+\qquad b\ne0.
+$$
+
+**5.** En el primer inciso,
+
+$$
+-3x+2\ge11
+\iff
+-3x\ge9
+\iff
+x\le-3.
+$$
+
+Al dividir entre $-3$ se invierte el sentido de la desigualdad. Por tanto, $S=(-\infty,-3]$. Para el segundo inciso,
+
+$$
+\lvert x-2\rvert<3
+\iff
+-3<x-2<3
+\iff
+-1<x<5,
+$$
+
+de modo que $S=(-1,5)$.
+
+:::
+
+## Nivel 2. Números complejos
+
+6. Calcule:
+
+   a. $(3-2i)+(-1+5i)$.
+
+   b. $(1+i)(2-i)$.
+
+7. Calcule:
+
+   a. $i^{27}$.
+
+   b. $\dfrac{3+i}{1-i}$.
+
+   Verifique el cociente mediante una multiplicación.
+
+8. Para $z=-\sqrt3+i$, determine $\overline z$, $\lvert z\rvert$ y $\operatorname{Arg}z$. Después, escriba $z$ en forma polar con argumento principal.
+
+9. Sean
+
+   $$
+   z=2\left(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\right),
+   \qquad
+   w=3\left(\cos\left(-\frac{\pi}{6}\right)+i\operatorname{sen}\left(-\frac{\pi}{6}\right)\right).
+   $$
+
+   Calcule $zw$ en forma polar con argumento principal y en forma cartesiana.
+
+::: {.callout-note collapse="true" title="Soluciones del nivel 2"}
+
+**6.** La suma se efectúa por componentes:
+
+$$
+(3-2i)+(-1+5i)=2+3i.
+$$
+
+Para el producto se usa la propiedad distributiva y $i^2=-1$:
+
+$$
+(1+i)(2-i)=2-i+2i-i^2=3+i.
+$$
+
+**7.** Como $27=4\cdot6+3$ y las potencias de $i$ se repiten con periodo $4$,
+
+$$
+i^{27}=i^3=-i.
+$$
+
+Para dividir, se multiplica numerador y denominador por el conjugado del denominador:
+
+$$
+\frac{3+i}{1-i}
+=\frac{(3+i)(1+i)}{(1-i)(1+i)}
+=\frac{2+4i}{2}
+=1+2i.
+$$
+
+La multiplicación
+
+$$
+(1+2i)(1-i)=3+i
+$$
+
+verifica el resultado.
+
+**8.** Se obtiene
+
+$$
+\overline z=-\sqrt3-i,
+\qquad
+\lvert z\rvert=\sqrt{(-\sqrt3)^2+1^2}=2.
+$$
+
+El punto $(-\sqrt3,1)$ está en el segundo cuadrante y su ángulo de referencia es $\dfrac{\pi}{6}$. Por tanto,
+
+$$
+\operatorname{Arg}z=\pi-\frac{\pi}{6}=\frac{5\pi}{6}
+$$
+
+y
+
+$$
+z=2\left(\cos\frac{5\pi}{6}+i\operatorname{sen}\frac{5\pi}{6}\right).
+$$
+
+**9.** En forma polar, los módulos se multiplican y los argumentos se suman:
 
 $$
 \begin{aligned}
 zw
-&=2\sqrt2\Bigl(\cos\frac{11\pi}{12}
-+i\operatorname{sen}\frac{11\pi}{12}\Bigr),\\
-\operatorname{Arg}(zw)
-&=\frac{3\pi}{4}+\frac{\pi}{6}
-=\frac{11\pi}{12}.
+&=6\left(\cos\left(\frac{2\pi}{3}-\frac{\pi}{6}\right)
++i\operatorname{sen}\left(\frac{2\pi}{3}-\frac{\pi}{6}\right)\right)\\
+&=6\left(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\right)\\
+&=6i.
 \end{aligned}
 $$
 
-El desarrollo cartesiano proporciona la otra forma y comprueba el resultado:
+El ángulo $\dfrac{\pi}{2}$ ya pertenece a $(-\pi,\pi]$.
+
+:::
+
+## Nivel 3. Potencias y raíces
+
+10. Escriba $1-i$ en forma polar y calcule:
+
+    a. $(1-i)^6$.
+
+    b. $(1-i)^{-2}$.
+
+    En ambos casos, reporte el argumento principal y la forma cartesiana del resultado.
+
+11. Determine todas las soluciones de
+
+    $$
+    u^3=8i.
+    $$
+
+    Escríbalas en forma polar con argumento principal y en forma cartesiana.
+
+::: {.callout-note collapse="true" title="Soluciones del nivel 3"}
+
+**10.** El número $1-i$ tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$:
+
+$$
+1-i
+=\sqrt2\left(\cos\left(-\frac{\pi}{4}\right)
++i\operatorname{sen}\left(-\frac{\pi}{4}\right)\right).
+$$
+
+Por De Moivre,
 
 $$
 \begin{aligned}
-zw
-&=(-1+i)(\sqrt3+i)\\
-&=(-\sqrt3-1)+(\sqrt3-1)i.
+(1-i)^6
+&=8\left(\cos\left(-\frac{3\pi}{2}\right)
++i\operatorname{sen}\left(-\frac{3\pi}{2}\right)\right)\\
+&=8\left(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\right)\\
+&=8i.
 \end{aligned}
 $$
 
-**3.** Para la potencia se usa la forma polar porque el exponente es alto. Como $\lvert1-i\rvert=\sqrt2$ y $\operatorname{Arg}(1-i)=-\dfrac{\pi}{4}$, el teorema de De Moivre da
+El argumento principal es $\dfrac{\pi}{2}$. Para el exponente negativo,
 
 $$
 \begin{aligned}
-(1-i)^8
-&=(\sqrt2)^8\Bigl(\cos(-2\pi)+i\operatorname{sen}(-2\pi)\Bigr)\\
-&=16.
+(1-i)^{-2}
+&=\frac12\left(\cos\frac{\pi}{2}+i\operatorname{sen}\frac{\pi}{2}\right)\\
+&=\frac12i.
 \end{aligned}
 $$
 
-Para las raíces cúbicas se usa la fórmula de la [Sesión 12](2026-08-25-sesion-12.qmd). El número $-8$ tiene módulo $8$ y argumento principal $\pi$; por tanto, el módulo común es $2$ y los ángulos son
+También en este caso el argumento principal es $\dfrac{\pi}{2}$. El exponente negativo es válido porque $1-i\ne0$.
+
+**11.** El número $8i$ tiene módulo $8$ y argumento principal $\dfrac{\pi}{2}$. Las raíces tienen módulo $2$ y argumentos
 
 $$
-\frac{\pi+2k\pi}{3},
+\frac{\pi/2+2k\pi}{3},
 \qquad
 k=0,1,2.
 $$
 
-Al escribirlos con argumento principal se obtienen $\dfrac{\pi}{3}$, $\pi$ y $-\dfrac{\pi}{3}$. Las raíces son
+Al expresarlos en $(-\pi,\pi]$, se obtienen $\dfrac{\pi}{6}$, $\dfrac{5\pi}{6}$ y $-\dfrac{\pi}{2}$. Por tanto,
 
 $$
 \begin{aligned}
 u_0
-&=2\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr)\\
-&=1+\sqrt3\,i,\\
+&=2\left(\cos\frac{\pi}{6}+i\operatorname{sen}\frac{\pi}{6}\right)
+=\sqrt3+i,\\
 u_1
-&=2\bigl(\cos\pi+i\operatorname{sen}\pi\bigr)\\
-&=-2,\\
+&=2\left(\cos\frac{5\pi}{6}+i\operatorname{sen}\frac{5\pi}{6}\right)
+=-\sqrt3+i,\\
 u_2
-&=2\Bigl(\cos\Bigl(-\frac{\pi}{3}\Bigr)
-+i\operatorname{sen}\Bigl(-\frac{\pi}{3}\Bigr)\Bigr)\\
-&=1-\sqrt3\,i.
+&=2\left(\cos\left(-\frac{\pi}{2}\right)+i\operatorname{sen}\left(-\frac{\pi}{2}\right)\right)
+=-2i.
 \end{aligned}
 $$
 
-Las tres raíces corresponden a los puntos $(1,\sqrt3)$, $(-2,0)$ y $(1,-\sqrt3)$. Están sobre la circunferencia de radio $2$, y las raíces consecutivas están separadas angularmente $\dfrac{2\pi}{3}$, módulo $2\pi$; por ello forman un triángulo equilátero. La comprobación mediante De Moivre muestra que cada $u_k^3$ tiene módulo $8$ y argumento congruente con $\pi$ módulo $2\pi$.
+Cada una satisface $u_k^3=8i$ por el teorema de De Moivre.
 
 :::
 
-## Ejercicios para practicar
+## Problema integrador
 
-1. Simplifique $\dfrac{x^2-16}{x-4}$, conserve la restricción de la expresión original y resuelva $\dfrac{x^2-16}{x-4}>7$.
-2. Resuelva $5-2(3x+1)\ge9$ y escriba el conjunto solución como intervalo. Compruebe un valor de frontera y un valor exterior.
-3. Calcule $(2-i)+(3+2i)$ y $(2-i)(3+2i)$. Explique por qué la forma cartesiana resulta adecuada en ambos cálculos.
-4. Escriba $z=-2-2i$ en forma polar y calcule $z^5$. Escriba el argumento principal y la forma cartesiana del resultado.
-5. Determine las cuatro raíces cuartas de $81$, escríbalas con argumento principal y señale cuáles son reales.
-6. Analice la afirmación: para calcular $(1+i)+(1+i)^6$ debe convertirse toda la expresión a forma polar. Elija una representación para cada operación, efectúe el cálculo y escriba el resultado en forma cartesiana.
+Elija uno de los dos problemas y justifique el procedimiento empleado.
+
+### Opción A. Expresión racional e inecuación
+
+Resuelva, conservando la restricción de la expresión original:
+
+$$
+\frac{x^2-16}{x-4}\ge9.
+$$
+
+### Opción B. Elección de representación compleja
+
+Calcule de la forma más eficiente:
+
+$$
+\left(\frac{-1+\sqrt3\,i}{1-i}\right)^6.
+$$
+
+::: {.callout-note collapse="true" title="Soluciones del problema integrador"}
+
+**Opción A.** La expresión original exige $x\ne4$. Dentro de ese dominio,
+
+$$
+\frac{x^2-16}{x-4}
+=\frac{(x-4)(x+4)}{x-4}
+=x+4,
+\qquad x\ne4.
+$$
+
+Por tanto,
+
+$$
+x+4\ge9
+\iff
+x\ge5.
+$$
+
+La restricción queda satisfecha automáticamente y el conjunto solución es $S=[5,\infty)$.
+
+**Opción B.** El numerador tiene módulo $2$ y argumento principal $\dfrac{2\pi}{3}$; el denominador tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$. El cociente tiene módulo $\sqrt2$ y argumento
+
+$$
+\frac{2\pi}{3}-\left(-\frac{\pi}{4}\right)
+=\frac{11\pi}{12}.
+$$
+
+Por De Moivre,
+
+$$
+\begin{aligned}
+\left(\frac{-1+\sqrt3\,i}{1-i}\right)^6
+&=8\left(\cos\frac{11\pi}{2}+i\operatorname{sen}\frac{11\pi}{2}\right)\\
+&=8\left(\cos\left(-\frac{\pi}{2}\right)+i\operatorname{sen}\left(-\frac{\pi}{2}\right)\right)\\
+&=-8i.
+\end{aligned}
+$$
+
+:::
+
+## Registro de cierre
+
+Anote un reactivo que ya pueda resolver sin ayuda y, en cada categoría en la que lo necesite, un reactivo que todavía requiera revisión:
+
+- números reales, expresiones, ecuaciones o inecuaciones;
+- operaciones con complejos en forma cartesiana;
+- forma polar, potencias o raíces.
