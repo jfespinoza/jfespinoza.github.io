@@ -1,28 +1,10 @@
 ---
-title: "Sesión 13. Práctica integradora de la Unidad 1"
+title: "Sesión 13. Práctica integradora de números reales y complejos"
 date: 2026-08-26
-description: "Práctica autogestiva con ejercicios de dificultad gradual sobre números reales, expresiones algebraicas, ecuaciones, inecuaciones y números complejos."
+description: "Ejercicios de repaso sobre números reales, expresiones algebraicas, ecuaciones, inecuaciones y números complejos en forma cartesiana y polar."
 ---
 
-## Indicaciones de trabajo
-
-1. Comience con el nivel 1 y avance en orden, sin esperar una explicación general.
-2. Escriba los procedimientos, las restricciones y las comprobaciones que correspondan.
-3. Si no sabe cómo comenzar un reactivo, márquelo y continúe con el siguiente.
-4. Abra las soluciones de un nivel únicamente después de intentar todos sus reactivos. Corrija su trabajo antes de continuar.
-5. Marque cada reactivo como **resuelto**, **requiere revisión** o **necesito apoyo para iniciar**.
-6. Al concluir el tiempo asignado a un nivel, avance al siguiente aunque queden reactivos pendientes.
-
-| Tramo de trabajo | Tiempo |
-|---|---:|
-| Indicaciones | 2 min |
-| Nivel 1, incluida la autocorrección | 16 min |
-| Nivel 2, incluida la autocorrección | 15 min |
-| Nivel 3, incluida la autocorrección | 11 min |
-| Problema integrador y consulta de su solución | 7 min |
-| Registro de cierre | 4 min |
-
-## Nivel 1. Números reales y expresiones
+## Números reales y expresiones algebraicas
 
 1. Clasifique cada número en el conjunto más específico al que pertenece:
 
@@ -80,7 +62,13 @@ description: "Práctica autogestiva con ejercicios de dificultad gradual sobre n
 
    b. $\lvert x-2\rvert<3$.
 
-::: {.callout-note collapse="true" title="Soluciones del nivel 1"}
+6. Resuelva, conservando la restricción de la expresión original:
+
+   $$
+   \frac{x^2-16}{x-4}\ge9.
+   $$
+
+::: {.callout-note collapse="true" title="Soluciones de los ejercicios 1 a 6"}
 
 **1.** Se tiene
 
@@ -166,17 +154,36 @@ $$
 
 de modo que $S=(-1,5)$.
 
+**6.** La expresión original exige $x\ne4$. Dentro de ese dominio,
+
+$$
+\frac{x^2-16}{x-4}
+=\frac{(x-4)(x+4)}{x-4}
+=x+4,
+\qquad x\ne4.
+$$
+
+Por tanto,
+
+$$
+x+4\ge9
+\iff
+x\ge5.
+$$
+
+La restricción queda satisfecha automáticamente y el conjunto solución es $S=[5,\infty)$.
+
 :::
 
-## Nivel 2. Números complejos
+## Números complejos
 
-6. Calcule:
+7. Calcule:
 
    a. $(3-2i)+(-1+5i)$.
 
    b. $(1+i)(2-i)$.
 
-7. Calcule:
+8. Calcule:
 
    a. $i^{27}$.
 
@@ -184,9 +191,9 @@ de modo que $S=(-1,5)$.
 
    Verifique el cociente mediante una multiplicación.
 
-8. Para $z=-\sqrt3+i$, determine $\overline z$, $\lvert z\rvert$ y $\operatorname{Arg}z$. Después, escriba $z$ en forma polar con argumento principal.
+9. Para $z=-\sqrt3+i$, determine $\overline z$, $\lvert z\rvert$ y $\operatorname{Arg}z$. Después, escriba $z$ en forma polar con argumento principal.
 
-9. Sean
+10. Sean
 
    $$
    z=2\left(\cos\frac{2\pi}{3}+i\operatorname{sen}\frac{2\pi}{3}\right),
@@ -196,9 +203,9 @@ de modo que $S=(-1,5)$.
 
    Calcule $zw$ en forma polar con argumento principal y en forma cartesiana.
 
-::: {.callout-note collapse="true" title="Soluciones del nivel 2"}
+::: {.callout-note collapse="true" title="Soluciones de los ejercicios 7 a 10"}
 
-**6.** La suma se efectúa por componentes:
+**7.** La suma se efectúa por componentes:
 
 $$
 (3-2i)+(-1+5i)=2+3i.
@@ -210,7 +217,7 @@ $$
 (1+i)(2-i)=2-i+2i-i^2=3+i.
 $$
 
-**7.** Como $27=4\cdot6+3$ y las potencias de $i$ se repiten con periodo $4$,
+**8.** Como $27=4\cdot6+3$ y las potencias de $i$ se repiten con periodo $4$,
 
 $$
 i^{27}=i^3=-i.
@@ -233,7 +240,7 @@ $$
 
 verifica el resultado.
 
-**8.** Se obtiene
+**9.** Se obtiene
 
 $$
 \overline z=-\sqrt3-i,
@@ -253,7 +260,7 @@ $$
 z=2\left(\cos\frac{5\pi}{6}+i\operatorname{sen}\frac{5\pi}{6}\right).
 $$
 
-**9.** En forma polar, los módulos se multiplican y los argumentos se suman:
+**10.** En forma polar, los módulos se multiplican y los argumentos se suman:
 
 $$
 \begin{aligned}
@@ -269,17 +276,17 @@ El ángulo $\dfrac{\pi}{2}$ ya pertenece a $(-\pi,\pi]$.
 
 :::
 
-## Nivel 3. Potencias y raíces
+## Potencias y raíces de números complejos
 
-10. Escriba $1-i$ en forma polar y calcule:
+11. Escriba $1-i$ en forma polar y calcule:
 
     a. $(1-i)^6$.
 
     b. $(1-i)^{-2}$.
 
-    En ambos casos, reporte el argumento principal y la forma cartesiana del resultado.
+    En ambos casos, escriba el argumento principal y la forma cartesiana del resultado.
 
-11. Determine todas las soluciones de
+12. Determine todas las soluciones de
 
     $$
     u^3=8i.
@@ -287,9 +294,15 @@ El ángulo $\dfrac{\pi}{2}$ ya pertenece a $(-\pi,\pi]$.
 
     Escríbalas en forma polar con argumento principal y en forma cartesiana.
 
-::: {.callout-note collapse="true" title="Soluciones del nivel 3"}
+13. Calcule
 
-**10.** El número $1-i$ tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$:
+    $$
+    \left(\frac{-1+\sqrt3\,i}{1-i}\right)^6.
+    $$
+
+::: {.callout-note collapse="true" title="Soluciones de los ejercicios 11 a 13"}
+
+**11.** El número $1-i$ tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$:
 
 $$
 1-i
@@ -321,7 +334,7 @@ $$
 
 También en este caso el argumento principal es $\dfrac{\pi}{2}$. El exponente negativo es válido porque $1-i\ne0$.
 
-**11.** El número $8i$ tiene módulo $8$ y argumento principal $\dfrac{\pi}{2}$. Las raíces tienen módulo $2$ y argumentos
+**12.** El número $8i$ tiene módulo $8$ y argumento principal $\dfrac{\pi}{2}$. Las raíces tienen módulo $2$ y argumentos
 
 $$
 \frac{\pi/2+2k\pi}{3},
@@ -347,50 +360,7 @@ $$
 
 Cada una satisface $u_k^3=8i$ por el teorema de De Moivre.
 
-:::
-
-## Problema integrador
-
-Elija uno de los dos problemas y justifique el procedimiento empleado.
-
-### Opción A. Expresión racional e inecuación
-
-Resuelva, conservando la restricción de la expresión original:
-
-$$
-\frac{x^2-16}{x-4}\ge9.
-$$
-
-### Opción B. Elección de representación compleja
-
-Calcule de la forma más eficiente:
-
-$$
-\left(\frac{-1+\sqrt3\,i}{1-i}\right)^6.
-$$
-
-::: {.callout-note collapse="true" title="Soluciones del problema integrador"}
-
-**Opción A.** La expresión original exige $x\ne4$. Dentro de ese dominio,
-
-$$
-\frac{x^2-16}{x-4}
-=\frac{(x-4)(x+4)}{x-4}
-=x+4,
-\qquad x\ne4.
-$$
-
-Por tanto,
-
-$$
-x+4\ge9
-\iff
-x\ge5.
-$$
-
-La restricción queda satisfecha automáticamente y el conjunto solución es $S=[5,\infty)$.
-
-**Opción B.** El numerador tiene módulo $2$ y argumento principal $\dfrac{2\pi}{3}$; el denominador tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$. El cociente tiene módulo $\sqrt2$ y argumento
+**13.** El numerador tiene módulo $2$ y argumento principal $\dfrac{2\pi}{3}$; el denominador tiene módulo $\sqrt2$ y argumento principal $-\dfrac{\pi}{4}$. El cociente tiene módulo $\sqrt2$ y argumento
 
 $$
 \frac{2\pi}{3}-\left(-\frac{\pi}{4}\right)
@@ -409,11 +379,3 @@ $$
 $$
 
 :::
-
-## Registro de cierre
-
-Anote un reactivo que ya pueda resolver sin ayuda y, en cada categoría en la que lo necesite, un reactivo que todavía requiera revisión:
-
-- números reales, expresiones, ecuaciones o inecuaciones;
-- operaciones con complejos en forma cartesiana;
-- forma polar, potencias o raíces.
