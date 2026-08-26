@@ -50,6 +50,8 @@ w_k=\sqrt[n]{r}\,\Bigl(\cos\frac{\theta+2k\pi}{n}+i\operatorname{sen}\frac{\thet
 k=0,1,\ldots,n-1.
 $$
 
+En esta expresión, $\sqrt[n]{r}$ determina el módulo común de las raíces; $\theta$ es un argumento del número original $z$; y $2k\pi$ recorre sus argumentos equivalentes antes de dividirlos entre $n$. El factor $2\pi$ representa una vuelta completa y no depende de $n$ ni de $k$: es el producto $2k\pi$ el que cambia al sustituir $k=0,1,\ldots,n-1$.
+
 Si $z=0$, la situación es distinta: de $\lvert w\rvert^n=\lvert w^n\rvert=0$ se sigue $\lvert w\rvert=0$, así que la única raíz $n$-ésima de $0$ es $0$. Hay una sola raíz distinta; cuando en la Unidad 2 se cuenten las raíces de un polinomio con multiplicidad, esta raíz única se contará $n$ veces.
 
 ### Procedimiento para calcular las raíces
@@ -58,7 +60,14 @@ Si $z=0$, la situación es distinta: de $\lvert w\rvert^n=\lvert w^n\rvert=0$ se
 2. Escribir $z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr)$, con $r>0$, mediante las relaciones de la [Sesión 09](2026-08-20-sesion-09.qmd).
 3. Calcular el módulo común $\sqrt[n]{r}$ y los $n$ ángulos $\dfrac{\theta+2k\pi}{n}$ para $k=0,1,\ldots,n-1$.
 4. Si se solicitan argumentos principales, ajustar con múltiplos de $2\pi$ los ángulos que queden fuera de $(-\pi,\pi]$.
-5. Conservar la forma polar o convertir a forma cartesiana, según se solicite. Una raíz puede verificarse elevándola a la potencia $n$ con el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd).
+5. Conservar la forma polar o convertir a forma cartesiana, según se solicite. Para convertir $\rho\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)$, se evalúan el coseno y el seno y se distribuye el módulo:
+
+   $$
+   \rho\bigl(\cos\varphi+i\operatorname{sen}\varphi\bigr)
+   =\rho\cos\varphi+i\rho\operatorname{sen}\varphi.
+   $$
+
+   Cuando sea necesario, el ángulo de referencia permite obtener los valores absolutos; el cuadrante determina los signos y, si el lado terminal está sobre un eje, los valores se leen directamente. Una raíz puede verificarse elevándola a la potencia $n$ con el teorema de De Moivre de la [Sesión 11](2026-08-24-sesion-11.qmd).
 
 ## Representación geométrica
 
