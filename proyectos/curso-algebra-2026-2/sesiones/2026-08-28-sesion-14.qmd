@@ -1,0 +1,17 @@
+---
+title: "Sesión 14. Examen parcial 1: números reales y complejos"
+date: 2026-08-28
+description: "Exámenes aplicados a los grupos IMA y LTE en el primer parcial de la Unidad 1."
+---
+
+## Exámenes aplicados
+
+Los siguientes documentos corresponden a las versiones aplicadas el 28 de agosto de 2026. En cada PDF, las respuestas correctas están señaladas en color rojo.
+
+### IMA — Ingeniería en Materiales
+
+[Consultar el examen aplicado al grupo IMA, con respuestas correctas (PDF)](../examenes/parcial-1/IMA-Examen-respuestas.pdf){.btn .btn-primary target="_blank"}
+
+### LTE — Ingeniería en Tecnología Electrónica
+
+[Consultar el examen aplicado al grupo LTE, con respuestas correctas (PDF)](../examenes/parcial-1/LTE-Examen-respuestas.pdf){.btn .btn-primary target="_blank"}
