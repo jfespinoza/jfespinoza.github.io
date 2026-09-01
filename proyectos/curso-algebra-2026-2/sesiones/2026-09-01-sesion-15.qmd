@@ -1,0 +1,321 @@
+---
+title: "Sesión 15. Polinomios: estructura, operaciones y evaluación"
+date: 2026-09-01
+description: "Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner."
+---
+
+## Polinomios en una variable
+
+Las expresiones $x^2-9$, $x^2+bx+c$ y $ax+b$ estudiadas en la [Unidad 1](../unidades/01-reales-complejos.qmd) comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.
+
+Un **polinomio en la variable $x$ con coeficientes reales** es una suma finita de la forma
+
+$$
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
+$$
+
+donde $n\in\mathbb N$ y $a_0,a_1,\ldots,a_n\in\mathbb R$. Si $p(x)\ne0$, se elige $n$ de modo que $a_n\ne0$. Los números $a_k$ son los **coeficientes**; cada término no nulo $a_kx^k$ tiene grado $k$, y $a_0$ es el **término independiente**. Como $0\in\mathbb N$ según la convención adoptada en la [Sesión 02](2026-08-11-sesion-02.qmd), la definición incluye los polinomios constantes.
+
+En la forma polinómica, toda potencia de $x$ tiene un exponente entero no negativo. Por ello, una expresión que contiene $x^{-1}$ o $x^{1/2}$ no es un polinomio en $x$. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,
+
+$$
+\frac12x^3-\sqrt2\,x+1
+$$
+
+sí es un polinomio, mientras que $x^2+\dfrac1x$ y $\sqrt{x}-1$ no lo son.
+
+### Forma ordenada e igualdad
+
+Dos términos son **semejantes** cuando contienen la misma potencia de $x$. Un polinomio está en **forma ordenada** cuando sus términos semejantes se han reunido y las potencias se escriben en orden decreciente. Si una potencia no aparece, su coeficiente es $0$.
+
+Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de $x$. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo,
+
+$$
+(x-1)^2=x^2-2x+1.
+$$
+
+### Grado y coeficiente principal
+
+Si $p(x)$ no es el polinomio cero, su **grado**, denotado $\operatorname{gr}(p)$, es el mayor exponente cuyo coeficiente es distinto de cero. El coeficiente de esa potencia es el **coeficiente principal**. Un polinomio es **mónico** cuando su coeficiente principal es $1$.
+
+Un polinomio constante distinto de cero tiene grado $0$. El **polinomio cero** tiene todos sus coeficientes iguales a cero y, en este curso, su grado no está definido.
+
+| Expresión | ¿Es polinomio? | Forma ordenada | Grado | Coeficiente principal |
+|---|:---:|---|---:|---:|
+| $7x-3x^4+1$ | Sí | $-3x^4+7x+1$ | $4$ | $-3$ |
+| $\sqrt2\,x^2-x$ | Sí | $\sqrt2\,x^2-x$ | $2$ | $\sqrt2$ |
+| $x^2+\dfrac1x$ | No | — | — | — |
+| $\sqrt{x}-1$ | No | — | — | — |
+| $(2x+1)^2-4x^2$ | Sí | $4x+1$ | $1$ | $4$ |
+| $-6$ | Sí | $-6$ | $0$ | $-6$ |
+| $0$ | Sí | $0$ | no está definido | — |
+
+El grado se determina después de simplificar. Aunque $(2x+1)^2-4x^2$ contiene términos cuadráticos antes de reunir términos semejantes, estos se cancelan:
+
+$$
+(2x+1)^2-4x^2=4x^2+4x+1-4x^2=4x+1.
+$$
+
+## Suma, resta y producto
+
+Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva, se usa $x^mx^n=x^{m+n}$ y después se reúnen términos semejantes.
+
+Sean
+
+$$
+p(x)=x^2-2x+3,
+\qquad
+q(x)=2x-1.
+$$
+
+Entonces
+
+$$
+\begin{aligned}
+p(x)+q(x)&=x^2+2,\\
+p(x)-q(x)&=x^2-4x+4,
+\end{aligned}
+$$
+
+y
+
+$$
+\begin{aligned}
+p(x)q(x)
+&=(x^2-2x+3)(2x-1)\\
+&=2x^3-x^2-4x^2+2x+6x-3\\
+&=2x^3-5x^2+8x-3.
+\end{aligned}
+$$
+
+Si $p(x)$ y $q(x)$ son polinomios distintos de cero, se cumplen las siguientes reglas:
+
+- $\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)$. El coeficiente principal y el término independiente del producto son, respectivamente, los productos de los coeficientes principales y de los términos independientes de los factores.
+- Si $p(x)+q(x)$ no es el polinomio cero, entonces
+
+  $$
+  \operatorname{gr}(p+q)\le \max\{\operatorname{gr}(p),\operatorname{gr}(q)\}.
+  $$
+
+  Cuando los grados son distintos, se obtiene la igualdad. Si son iguales, los términos principales pueden cancelarse y el grado puede disminuir.
+
+Por ejemplo,
+
+$$
+(x^3+x)+(-x^3+2)=x+2.
+$$
+
+Los dos sumandos tienen grado $3$, pero la suma tiene grado $1$. Si la suma fuera el polinomio cero, su grado no estaría definido.
+
+## Evaluación de un polinomio
+
+Si $c$ es un número real o complejo, $p(c)$ es el número que resulta de sustituir $x$ por $c$ y efectuar las operaciones. Si
+
+$$
+p(x)=2x^3-x+4,
+$$
+
+entonces
+
+$$
+p(-1)=2(-1)^3-(-1)+4=3,
+\qquad
+p(0)=4.
+$$
+
+En general, $p(0)=a_0$. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis.
+
+### Evaluación directa
+
+La evaluación directa consiste en calcular las potencias de $c$, multiplicarlas por sus coeficientes y sumar los resultados. Para
+
+$$
+r(x)=2x^4-3x^3+5x-7,
+$$
+
+se obtiene
+
+$$
+r(3)=2(3)^4-3(3)^3+5(3)-7=162-81+15-7=89.
+$$
+
+### Esquema de Horner
+
+La forma anidada de un polinomio es
+
+$$
+a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+=\Bigl(\bigl((a_nx+a_{n-1})x+a_{n-2}\bigr)x+\cdots+a_1\Bigr)x+a_0.
+$$
+
+Para evaluar en $x=c$, se baja el coeficiente principal y se repite la operación **multiplicar por $c$ y sumar el coeficiente siguiente**. Deben escribirse los coeficientes nulos de las potencias ausentes.
+
+En $r(x)=2x^4-3x^3+5x-7$, el coeficiente de $x^2$ es $0$. La evaluación en $c=3$ queda:
+
+|  | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
+|---|---:|---:|---:|---:|---:|
+| Coeficientes | $2$ | $-3$ | $0$ | $5$ | $-7$ |
+| Productos por $3$ |  | $6$ | $9$ | $27$ | $96$ |
+| Sumas | $2$ | $3$ | $9$ | $32$ | $\mathbf{89}$ |
+
+El último número es $r(3)=89$, el mismo valor obtenido por evaluación directa. En forma recursiva, si
+
+$$
+b_n=a_n,
+\qquad
+b_k=a_k+c\,b_{k+1}
+\quad (k=n-1,n-2,\ldots,0),
+$$
+
+entonces $b_0=p(c)$. El esquema requiere una multiplicación y una suma por cada coeficiente que sigue al principal y evita calcular por separado las potencias de $c$.
+
+## Errores frecuentes
+
+- El grado no se lee antes de ordenar y simplificar. En $(2x+1)^2-4x^2$, los términos cuadráticos se cancelan y el resultado tiene grado $1$.
+- Los términos no semejantes no se combinan: la fórmula $x^2+x=x^3$ no es una identidad.
+- Al restar polinomios se cambia el signo de todos los términos del sustraendo.
+- La regla $\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)$ corresponde al producto, no a la suma.
+- En el esquema de Horner se escribe un coeficiente $0$ por cada potencia ausente y se multiplica por el valor de sustitución con su signo.
+
+## Actividad
+
+1. Resuelva los siguientes problemas sobre estructura y grado.
+
+   a. Simplifique
+
+      $$
+      s(x)=(x+2)(x-2)-x(x+1)+5x
+      $$
+
+      y determine su grado, coeficiente principal y término independiente.
+
+   b. Construya dos polinomios de grado $4$ cuya suma tenga grado $2$. Explique qué coeficientes deben cancelarse.
+
+2. Sean
+
+   $$
+   p(x)=3x^3-2x^2+x-5,
+   \qquad
+   q(x)=-3x^3+x^2+4.
+   $$
+
+   a. Calcule $p(x)+q(x)$ y $p(x)-q(x)$, e indique el grado de cada resultado.
+
+   b. Sin desarrollar completamente $p(x)q(x)$, determine su grado, su coeficiente principal, su término independiente y el coeficiente de $x^2$.
+
+3. Sea
+
+   $$
+   r(x)=x^4-2x^3+3x-5.
+   $$
+
+   a. Calcule $r(-1)$ por evaluación directa. Después, explique por qué el renglón $1,-2,3,-5$ no sirve para aplicar Horner, escriba el renglón correcto y confirme el resultado con el esquema.
+
+   b. Calcule $r(i)$ usando las potencias de $i$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** En el primer inciso,
+
+$$
+\begin{aligned}
+s(x)
+&=(x^2-4)-(x^2+x)+5x\\
+&=4x-4.
+\end{aligned}
+$$
+
+Por tanto, $s(x)$ tiene grado $1$, coeficiente principal $4$ y término independiente $-4$.
+
+Para el segundo inciso hay muchas respuestas posibles. Por ejemplo,
+
+$$
+p(x)=x^4+2x^3+x^2,
+\qquad
+q(x)=-x^4-2x^3+3x+1.
+$$
+
+Ambos polinomios tienen grado $4$, pero
+
+$$
+p(x)+q(x)=x^2+3x+1
+$$
+
+tiene grado $2$. Los coeficientes de $x^4$ y $x^3$ se cancelan, mientras que el coeficiente de $x^2$ permanece distinto de cero.
+
+**2.** Al reunir términos semejantes,
+
+$$
+p(x)+q(x)=-x^2+x-1,
+$$
+
+de grado $2$. Al cambiar el signo de todos los términos de $q(x)$,
+
+$$
+p(x)-q(x)=6x^3-3x^2+x-9,
+$$
+
+de grado $3$.
+
+El producto tiene grado $3+3=6$, coeficiente principal $3(-3)=-9$ y término independiente $(-5)(4)=-20$. Para obtener un término de grado $2$, los grados de los factores deben sumar $2$. Por tanto, su coeficiente es
+
+$$
+(-2)(4)+(1)(0)+(-5)(1)=-13.
+$$
+
+**3.** Por evaluación directa,
+
+$$
+r(-1)=(-1)^4-2(-1)^3+3(-1)-5=1+2-3-5=-5.
+$$
+
+El renglón $1,-2,3,-5$ omite el coeficiente $0$ de $x^2$ y corresponde a otro polinomio. El esquema correcto para $c=-1$ es:
+
+|  | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
+|---|---:|---:|---:|---:|---:|
+| Coeficientes | $1$ | $-2$ | $0$ | $3$ | $-5$ |
+| Productos por $-1$ |  | $-1$ | $3$ | $-3$ | $0$ |
+| Sumas | $1$ | $-3$ | $3$ | $0$ | $\mathbf{-5}$ |
+
+El esquema confirma que $r(-1)=-5$. Finalmente, como $i^4=1$ e $i^3=-i$,
+
+$$
+r(i)=i^4-2i^3+3i-5=1+2i+3i-5=-4+5i.
+$$
+
+:::
+
+## Ejercicios para practicar
+
+1. Decida cuáles expresiones son polinomios. Para cada polinomio, escriba su forma ordenada e indique grado, coeficiente principal y término independiente:
+
+   $$
+   2x^3-7,
+   \qquad
+   \frac{1}{x^2}+1,
+   \qquad
+   x^2(x-1),
+   \qquad
+   \sqrt3\,x^2-\sqrt{2x},
+   \qquad
+   (x-3)^2-(x+3)^2,
+   \qquad
+   \pi.
+   $$
+
+2. Sean $p(x)=x^2-2x+3$ y $q(x)=2x^2+x-1$. Calcule $p(x)+q(x)$, $p(x)-q(x)$ y $p(x)q(x)$; indique el grado de cada resultado y verifique el producto evaluando en $x=1$.
+
+3. Proponga dos polinomios de grado $3$ cuya suma tenga grado $1$. Explique por qué el producto de dos polinomios de grado $3$ con coeficientes reales siempre tiene grado $6$.
+
+4. Sea $p(x)=3x^4-5x^2+2x-8$. Calcule $p(2)$, $p(-3)$ y $p(0.5)$ mediante el esquema de Horner; verifique uno de los valores por evaluación directa.
+
+5. Un sensor entrega un voltaje $V$, en voltios, y la temperatura estimada, en grados Celsius, está dada por
+
+   $$
+   T(V)=2V^3-5V^2+20V+15,
+   \qquad 0\le V\le3.
+   $$
+
+   Calcule $T(1.5)$ y $T(2.5)$ mediante el esquema de Horner.
+
+6. Para evaluar $p(x)=x^3-4x+1$ en $x=-2$, se usó el renglón de coeficientes $1,-4,1$ y se multiplicó por $2$. Identifique los dos errores y calcule el valor correcto de $p(-2)$.

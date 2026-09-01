@@ -54,6 +54,7 @@ book:
     - part: "Unidad 2. Polinomios y raíces"
       chapters:
         - unidades/02-polinomios-raices.qmd
+        - sesiones/2026-09-01-sesion-15.qmd
     - part: "Unidad 3. Sistemas de ecuaciones lineales"
       chapters:
         - unidades/03-sistemas-ecuaciones.qmd
