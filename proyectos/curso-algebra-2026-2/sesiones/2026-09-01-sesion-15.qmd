@@ -1,12 +1,12 @@
 ---
 title: "Sesión 15. Polinomios: estructura, operaciones y evaluación"
 date: 2026-09-01
-description: "Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner."
+description: "Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa."
 ---
 
 ## Polinomios en una variable
 
-Las expresiones $x^2-9$, $x^2+bx+c$ y $ax+b$ estudiadas en la [Unidad 1](../unidades/01-reales-complejos.qmd) comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.
+Las expresiones $x^2-9$, $x^2+bx+c$ y $ax+b$ estudiadas en las [Sesiones 04](2026-08-13-sesion-04.qmd) y [05](2026-08-14-sesion-05.qmd) de la [Unidad 1](../unidades/01-reales-complejos.qmd) comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.
 
 Un **polinomio en la variable $x$ con coeficientes reales** es una suma finita de la forma
 
@@ -16,7 +16,7 @@ $$
 
 donde $n\in\mathbb N$ y $a_0,a_1,\ldots,a_n\in\mathbb R$. Si $p(x)\ne0$, se elige $n$ de modo que $a_n\ne0$. Los números $a_k$ son los **coeficientes**; cada término no nulo $a_kx^k$ tiene grado $k$, y $a_0$ es el **término independiente**. Como $0\in\mathbb N$ según la convención adoptada en la [Sesión 02](2026-08-11-sesion-02.qmd), la definición incluye los polinomios constantes.
 
-En la forma polinómica, toda potencia de $x$ tiene un exponente entero no negativo. Por ello, una expresión que contiene $x^{-1}$ o $x^{1/2}$ no es un polinomio en $x$. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,
+En la forma polinómica, toda potencia de $x$ tiene un exponente entero no negativo. Por ello, una expresión que contiene $x^{-1}$ o $x^{1/2}$ no es un polinomio en $x$; véanse las leyes de los exponentes de la [Sesión 03](2026-08-12-sesion-03.qmd). Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,
 
 $$
 \frac12x^3-\sqrt2\,x+1
@@ -28,7 +28,7 @@ sí es un polinomio, mientras que $x^2+\dfrac1x$ y $\sqrt{x}-1$ no lo son.
 
 Dos términos son **semejantes** cuando contienen la misma potencia de $x$. Un polinomio está en **forma ordenada** cuando sus términos semejantes se han reunido y las potencias se escriben en orden decreciente. Si una potencia no aparece, su coeficiente es $0$.
 
-Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de $x$. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo,
+Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de $x$. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo, el producto notable estudiado en la [Sesión 04](2026-08-13-sesion-04.qmd) da
 
 $$
 (x-1)^2=x^2-2x+1.
@@ -58,7 +58,7 @@ $$
 
 ## Suma, resta y producto
 
-Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva, se usa $x^mx^n=x^{m+n}$ y después se reúnen términos semejantes.
+Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva de la [Sesión 04](2026-08-13-sesion-04.qmd), se usa $x^mx^n=x^{m+n}$ de la [Sesión 03](2026-08-12-sesion-03.qmd) y después se reúnen términos semejantes.
 
 Sean
 
@@ -123,7 +123,7 @@ p(-1)=2(-1)^3-(-1)+4=3,
 p(0)=4.
 $$
 
-En general, $p(0)=a_0$. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis.
+En general, $p(0)=a_0$. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis, como se estableció en la [Sesión 03](2026-08-12-sesion-03.qmd).
 
 ### Evaluación directa
 
@@ -139,43 +139,13 @@ $$
 r(3)=2(3)^4-3(3)^3+5(3)-7=162-81+15-7=89.
 $$
 
-### Esquema de Horner
-
-La forma anidada de un polinomio es
-
-$$
-a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
-=\Bigl(\bigl((a_nx+a_{n-1})x+a_{n-2}\bigr)x+\cdots+a_1\Bigr)x+a_0.
-$$
-
-Para evaluar en $x=c$, se baja el coeficiente principal y se repite la operación **multiplicar por $c$ y sumar el coeficiente siguiente**. Deben escribirse los coeficientes nulos de las potencias ausentes.
-
-En $r(x)=2x^4-3x^3+5x-7$, el coeficiente de $x^2$ es $0$. La evaluación en $c=3$ queda:
-
-|  | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
-|---|---:|---:|---:|---:|---:|
-| Coeficientes | $2$ | $-3$ | $0$ | $5$ | $-7$ |
-| Productos por $3$ |  | $6$ | $9$ | $27$ | $96$ |
-| Sumas | $2$ | $3$ | $9$ | $32$ | $\mathbf{89}$ |
-
-El último número es $r(3)=89$, el mismo valor obtenido por evaluación directa. En forma recursiva, si
-
-$$
-b_n=a_n,
-\qquad
-b_k=a_k+c\,b_{k+1}
-\quad (k=n-1,n-2,\ldots,0),
-$$
-
-entonces $b_0=p(c)$. El esquema requiere una multiplicación y una suma por cada coeficiente que sigue al principal y evita calcular por separado las potencias de $c$.
-
 ## Errores frecuentes
 
 - El grado no se lee antes de ordenar y simplificar. En $(2x+1)^2-4x^2$, los términos cuadráticos se cancelan y el resultado tiene grado $1$.
 - Los términos no semejantes no se combinan: la fórmula $x^2+x=x^3$ no es una identidad.
 - Al restar polinomios se cambia el signo de todos los términos del sustraendo.
 - La regla $\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)$ corresponde al producto, no a la suma.
-- En el esquema de Horner se escribe un coeficiente $0$ por cada potencia ausente y se multiplica por el valor de sustitución con su signo.
+- Al evaluar en un número negativo, omitir los paréntesis puede cambiar el resultado. Para $p(x)=x^2-3x$, escribir $p(-2)=-2^2-3(-2)=2$ es incorrecto; el valor correcto es $p(-2)=(-2)^2-3(-2)=10$.
 
 ## Actividad
 
@@ -209,9 +179,9 @@ entonces $b_0=p(c)$. El esquema requiere una multiplicación y una suma por cada
    r(x)=x^4-2x^3+3x-5.
    $$
 
-   a. Calcule $r(-1)$ por evaluación directa. Después, explique por qué el renglón $1,-2,3,-5$ no sirve para aplicar Horner, escriba el renglón correcto y confirme el resultado con el esquema.
+   a. Calcule $r(-1)$ por evaluación directa y justifique el signo de cada término.
 
-   b. Calcule $r(i)$ usando las potencias de $i$.
+   b. Calcule $r(i)$ usando las potencias de $i$ estudiadas en la [Sesión 08](2026-08-19-sesion-08.qmd).
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
@@ -269,15 +239,7 @@ $$
 r(-1)=(-1)^4-2(-1)^3+3(-1)-5=1+2-3-5=-5.
 $$
 
-El renglón $1,-2,3,-5$ omite el coeficiente $0$ de $x^2$ y corresponde a otro polinomio. El esquema correcto para $c=-1$ es:
-
-|  | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
-|---|---:|---:|---:|---:|---:|
-| Coeficientes | $1$ | $-2$ | $0$ | $3$ | $-5$ |
-| Productos por $-1$ |  | $-1$ | $3$ | $-3$ | $0$ |
-| Sumas | $1$ | $-3$ | $3$ | $0$ | $\mathbf{-5}$ |
-
-El esquema confirma que $r(-1)=-5$. Finalmente, como $i^4=1$ e $i^3=-i$,
+Los signos se obtienen de $(-1)^4=1$ y $(-1)^3=-1$. Finalmente, como $i^4=1$ e $i^3=-i$,
 
 $$
 r(i)=i^4-2i^3+3i-5=1+2i+3i-5=-4+5i.
@@ -307,7 +269,7 @@ $$
 
 3. Proponga dos polinomios de grado $3$ cuya suma tenga grado $1$. Explique por qué el producto de dos polinomios de grado $3$ con coeficientes reales siempre tiene grado $6$.
 
-4. Sea $p(x)=3x^4-5x^2+2x-8$. Calcule $p(2)$, $p(-3)$ y $p(0.5)$ mediante el esquema de Horner; verifique uno de los valores por evaluación directa.
+4. Sea $p(x)=3x^4-5x^2+2x-8$. Calcule $p(2)$, $p(-3)$ y $p(0.5)$ por evaluación directa.
 
 5. Un sensor entrega un voltaje $V$, en voltios, y la temperatura estimada, en grados Celsius, está dada por
 
@@ -316,6 +278,12 @@ $$
    \qquad 0\le V\le3.
    $$
 
-   Calcule $T(1.5)$ y $T(2.5)$ mediante el esquema de Horner.
+   Calcule $T(1.5)$ y $T(2.5)$ por evaluación directa.
 
-6. Para evaluar $p(x)=x^3-4x+1$ en $x=-2$, se usó el renglón de coeficientes $1,-4,1$ y se multiplicó por $2$. Identifique los dos errores y calcule el valor correcto de $p(-2)$.
+6. Para evaluar $p(x)=x^4-3x^2+2$ en $x=-2$, se escribió
+
+   $$
+   p(-2)=-2^4-3(-2)^2+2=-26.
+   $$
+
+   Identifique el error y calcule el valor correcto.
