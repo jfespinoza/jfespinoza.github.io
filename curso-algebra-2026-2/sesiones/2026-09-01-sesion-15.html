@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner.">
+<meta name="description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa.">
 
 <title>Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra</title>
 <style>
@@ -108,7 +108,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra">
-<meta property="og:description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner.">
+<meta property="og:description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -406,7 +406,6 @@ window.Quarto = {
   <li><a href="#evaluación-de-un-polinomio" id="toc-evaluación-de-un-polinomio" class="nav-link" data-scroll-target="#evaluación-de-un-polinomio">Evaluación de un polinomio</a>
   <ul class="collapse">
   <li><a href="#evaluación-directa" id="toc-evaluación-directa" class="nav-link" data-scroll-target="#evaluación-directa">Evaluación directa</a></li>
-  <li><a href="#esquema-de-horner" id="toc-esquema-de-horner" class="nav-link" data-scroll-target="#esquema-de-horner">Esquema de Horner</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -444,13 +443,13 @@ window.Quarto = {
 
 <section id="polinomios-en-una-variable" class="level2">
 <h2 class="anchored" data-anchor-id="polinomios-en-una-variable">Polinomios en una variable</h2>
-<p>Las expresiones <span class="math inline">\(x^2-9\)</span>, <span class="math inline">\(x^2+bx+c\)</span> y <span class="math inline">\(ax+b\)</span> estudiadas en la <a href="../unidades/01-reales-complejos.html">Unidad 1</a> comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.</p>
+<p>Las expresiones <span class="math inline">\(x^2-9\)</span>, <span class="math inline">\(x^2+bx+c\)</span> y <span class="math inline">\(ax+b\)</span> estudiadas en las <a href="../sesiones/2026-08-13-sesion-04.html">Sesiones 04</a> y <a href="../sesiones/2026-08-14-sesion-05.html">05</a> de la <a href="../unidades/01-reales-complejos.html">Unidad 1</a> comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.</p>
 <p>Un <strong>polinomio en la variable <span class="math inline">\(x\)</span> con coeficientes reales</strong> es una suma finita de la forma</p>
 <p><span class="math display">\[
 p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
 \]</span></p>
 <p>donde <span class="math inline">\(n\in\mathbb N\)</span> y <span class="math inline">\(a_0,a_1,\ldots,a_n\in\mathbb R\)</span>. Si <span class="math inline">\(p(x)\ne0\)</span>, se elige <span class="math inline">\(n\)</span> de modo que <span class="math inline">\(a_n\ne0\)</span>. Los números <span class="math inline">\(a_k\)</span> son los <strong>coeficientes</strong>; cada término no nulo <span class="math inline">\(a_kx^k\)</span> tiene grado <span class="math inline">\(k\)</span>, y <span class="math inline">\(a_0\)</span> es el <strong>término independiente</strong>. Como <span class="math inline">\(0\in\mathbb N\)</span> según la convención adoptada en la <a href="../sesiones/2026-08-11-sesion-02.html">Sesión 02</a>, la definición incluye los polinomios constantes.</p>
-<p>En la forma polinómica, toda potencia de <span class="math inline">\(x\)</span> tiene un exponente entero no negativo. Por ello, una expresión que contiene <span class="math inline">\(x^{-1}\)</span> o <span class="math inline">\(x^{1/2}\)</span> no es un polinomio en <span class="math inline">\(x\)</span>. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,</p>
+<p>En la forma polinómica, toda potencia de <span class="math inline">\(x\)</span> tiene un exponente entero no negativo. Por ello, una expresión que contiene <span class="math inline">\(x^{-1}\)</span> o <span class="math inline">\(x^{1/2}\)</span> no es un polinomio en <span class="math inline">\(x\)</span>; véanse las leyes de los exponentes de la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a>. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,</p>
 <p><span class="math display">\[
 \frac12x^3-\sqrt2\,x+1
 \]</span></p>
@@ -458,7 +457,7 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
 <section id="forma-ordenada-e-igualdad" class="level3">
 <h3 class="anchored" data-anchor-id="forma-ordenada-e-igualdad">Forma ordenada e igualdad</h3>
 <p>Dos términos son <strong>semejantes</strong> cuando contienen la misma potencia de <span class="math inline">\(x\)</span>. Un polinomio está en <strong>forma ordenada</strong> cuando sus términos semejantes se han reunido y las potencias se escriben en orden decreciente. Si una potencia no aparece, su coeficiente es <span class="math inline">\(0\)</span>.</p>
-<p>Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de <span class="math inline">\(x\)</span>. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo,</p>
+<p>Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de <span class="math inline">\(x\)</span>. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo, el producto notable estudiado en la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a> da</p>
 <p><span class="math display">\[
 (x-1)^2=x^2-2x+1.
 \]</span></p>
@@ -544,7 +543,7 @@ p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
 </section>
 <section id="suma-resta-y-producto" class="level2">
 <h2 class="anchored" data-anchor-id="suma-resta-y-producto">Suma, resta y producto</h2>
-<p>Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva, se usa <span class="math inline">\(x^mx^n=x^{m+n}\)</span> y después se reúnen términos semejantes.</p>
+<p>Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva de la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>, se usa <span class="math inline">\(x^mx^n=x^{m+n}\)</span> de la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a> y después se reúnen términos semejantes.</p>
 <p>Sean</p>
 <p><span class="math display">\[
 p(x)=x^2-2x+3,
@@ -594,7 +593,7 @@ p(-1)=2(-1)^3-(-1)+4=3,
 \qquad
 p(0)=4.
 \]</span></p>
-<p>En general, <span class="math inline">\(p(0)=a_0\)</span>. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis.</p>
+<p>En general, <span class="math inline">\(p(0)=a_0\)</span>. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis, como se estableció en la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a>.</p>
 <section id="evaluación-directa" class="level3">
 <h3 class="anchored" data-anchor-id="evaluación-directa">Evaluación directa</h3>
 <p>La evaluación directa consiste en calcular las potencias de <span class="math inline">\(c\)</span>, multiplicarlas por sus coeficientes y sumar los resultados. Para</p>
@@ -606,62 +605,6 @@ r(x)=2x^4-3x^3+5x-7,
 r(3)=2(3)^4-3(3)^3+5(3)-7=162-81+15-7=89.
 \]</span></p>
 </section>
-<section id="esquema-de-horner" class="level3">
-<h3 class="anchored" data-anchor-id="esquema-de-horner">Esquema de Horner</h3>
-<p>La forma anidada de un polinomio es</p>
-<p><span class="math display">\[
-a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
-=\Bigl(\bigl((a_nx+a_{n-1})x+a_{n-2}\bigr)x+\cdots+a_1\Bigr)x+a_0.
-\]</span></p>
-<p>Para evaluar en <span class="math inline">\(x=c\)</span>, se baja el coeficiente principal y se repite la operación <strong>multiplicar por <span class="math inline">\(c\)</span> y sumar el coeficiente siguiente</strong>. Deben escribirse los coeficientes nulos de las potencias ausentes.</p>
-<p>En <span class="math inline">\(r(x)=2x^4-3x^3+5x-7\)</span>, el coeficiente de <span class="math inline">\(x^2\)</span> es <span class="math inline">\(0\)</span>. La evaluación en <span class="math inline">\(c=3\)</span> queda:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: right;"><span class="math inline">\(x^4\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: right;">término independiente</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Coeficientes</td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(5\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-7\)</span></td>
-</tr>
-<tr class="even">
-<td>Productos por <span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"><span class="math inline">\(6\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(9\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(27\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(96\)</span></td>
-</tr>
-<tr class="odd">
-<td>Sumas</td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(9\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(32\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(\mathbf{89}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>El último número es <span class="math inline">\(r(3)=89\)</span>, el mismo valor obtenido por evaluación directa. En forma recursiva, si</p>
-<p><span class="math display">\[
-b_n=a_n,
-\qquad
-b_k=a_k+c\,b_{k+1}
-\quad (k=n-1,n-2,\ldots,0),
-\]</span></p>
-<p>entonces <span class="math inline">\(b_0=p(c)\)</span>. El esquema requiere una multiplicación y una suma por cada coeficiente que sigue al principal y evita calcular por separado las potencias de <span class="math inline">\(c\)</span>.</p>
-</section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
@@ -670,7 +613,7 @@ b_k=a_k+c\,b_{k+1}
 <li>Los términos no semejantes no se combinan: la fórmula <span class="math inline">\(x^2+x=x^3\)</span> no es una identidad.</li>
 <li>Al restar polinomios se cambia el signo de todos los términos del sustraendo.</li>
 <li>La regla <span class="math inline">\(\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)\)</span> corresponde al producto, no a la suma.</li>
-<li>En el esquema de Horner se escribe un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente y se multiplica por el valor de sustitución con su signo.</li>
+<li>Al evaluar en un número negativo, omitir los paréntesis puede cambiar el resultado. Para <span class="math inline">\(p(x)=x^2-3x\)</span>, escribir <span class="math inline">\(p(-2)=-2^2-3(-2)=2\)</span> es incorrecto; el valor correcto es <span class="math inline">\(p(-2)=(-2)^2-3(-2)=10\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -700,8 +643,8 @@ q(x)=-3x^3+x^2+4.
 r(x)=x^4-2x^3+3x-5.
 \]</span></p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(r(-1)\)</span> por evaluación directa. Después, explique por qué el renglón <span class="math inline">\(1,-2,3,-5\)</span> no sirve para aplicar Horner, escriba el renglón correcto y confirme el resultado con el esquema.</p></li>
-<li><p>Calcule <span class="math inline">\(r(i)\)</span> usando las potencias de <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Calcule <span class="math inline">\(r(-1)\)</span> por evaluación directa y justifique el signo de cada término.</p></li>
+<li><p>Calcule <span class="math inline">\(r(i)\)</span> usando las potencias de <span class="math inline">\(i\)</span> estudiadas en la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p></li>
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
@@ -753,46 +696,7 @@ p(x)-q(x)=6x^3-3x^2+x-9,
 <p><span class="math display">\[
 r(-1)=(-1)^4-2(-1)^3+3(-1)-5=1+2-3-5=-5.
 \]</span></p>
-<p>El renglón <span class="math inline">\(1,-2,3,-5\)</span> omite el coeficiente <span class="math inline">\(0\)</span> de <span class="math inline">\(x^2\)</span> y corresponde a otro polinomio. El esquema correcto para <span class="math inline">\(c=-1\)</span> es:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: right;"><span class="math inline">\(x^4\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: right;">término independiente</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Coeficientes</td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-5\)</span></td>
-</tr>
-<tr class="even">
-<td>Productos por <span class="math inline">\(-1\)</span></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="odd">
-<td>Sumas</td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(\mathbf{-5}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>El esquema confirma que <span class="math inline">\(r(-1)=-5\)</span>. Finalmente, como <span class="math inline">\(i^4=1\)</span> e <span class="math inline">\(i^3=-i\)</span>,</p>
+<p>Los signos se obtienen de <span class="math inline">\((-1)^4=1\)</span> y <span class="math inline">\((-1)^3=-1\)</span>. Finalmente, como <span class="math inline">\(i^4=1\)</span> e <span class="math inline">\(i^3=-i\)</span>,</p>
 <p><span class="math display">\[
 r(i)=i^4-2i^3+3i-5=1+2i+3i-5=-4+5i.
 \]</span></p>
@@ -819,14 +723,18 @@ x^2(x-1),
 \]</span></p></li>
 <li><p>Sean <span class="math inline">\(p(x)=x^2-2x+3\)</span> y <span class="math inline">\(q(x)=2x^2+x-1\)</span>. Calcule <span class="math inline">\(p(x)+q(x)\)</span>, <span class="math inline">\(p(x)-q(x)\)</span> y <span class="math inline">\(p(x)q(x)\)</span>; indique el grado de cada resultado y verifique el producto evaluando en <span class="math inline">\(x=1\)</span>.</p></li>
 <li><p>Proponga dos polinomios de grado <span class="math inline">\(3\)</span> cuya suma tenga grado <span class="math inline">\(1\)</span>. Explique por qué el producto de dos polinomios de grado <span class="math inline">\(3\)</span> con coeficientes reales siempre tiene grado <span class="math inline">\(6\)</span>.</p></li>
-<li><p>Sea <span class="math inline">\(p(x)=3x^4-5x^2+2x-8\)</span>. Calcule <span class="math inline">\(p(2)\)</span>, <span class="math inline">\(p(-3)\)</span> y <span class="math inline">\(p(0.5)\)</span> mediante el esquema de Horner; verifique uno de los valores por evaluación directa.</p></li>
+<li><p>Sea <span class="math inline">\(p(x)=3x^4-5x^2+2x-8\)</span>. Calcule <span class="math inline">\(p(2)\)</span>, <span class="math inline">\(p(-3)\)</span> y <span class="math inline">\(p(0.5)\)</span> por evaluación directa.</p></li>
 <li><p>Un sensor entrega un voltaje <span class="math inline">\(V\)</span>, en voltios, y la temperatura estimada, en grados Celsius, está dada por</p>
 <p><span class="math display">\[
 T(V)=2V^3-5V^2+20V+15,
 \qquad 0\le V\le3.
 \]</span></p>
-<p>Calcule <span class="math inline">\(T(1.5)\)</span> y <span class="math inline">\(T(2.5)\)</span> mediante el esquema de Horner.</p></li>
-<li><p>Para evaluar <span class="math inline">\(p(x)=x^3-4x+1\)</span> en <span class="math inline">\(x=-2\)</span>, se usó el renglón de coeficientes <span class="math inline">\(1,-4,1\)</span> y se multiplicó por <span class="math inline">\(2\)</span>. Identifique los dos errores y calcule el valor correcto de <span class="math inline">\(p(-2)\)</span>.</p></li>
+<p>Calcule <span class="math inline">\(T(1.5)\)</span> y <span class="math inline">\(T(2.5)\)</span> por evaluación directa.</p></li>
+<li><p>Para evaluar <span class="math inline">\(p(x)=x^4-3x^2+2\)</span> en <span class="math inline">\(x=-2\)</span>, se escribió</p>
+<p><span class="math display">\[
+p(-2)=-2^4-3(-2)^2+2=-26.
+\]</span></p>
+<p>Identifique el error y calcule el valor correcto.</p></li>
 </ol>
 
 
