@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Modelación, tipos de solución y eliminación.">
+<meta name="description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner.">
 
-<title>Unidad 3. Sistemas de ecuaciones lineales – Álgebra</title>
+<title>Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../unidades/04-matrices.html" rel="next">
-<link href="../sesiones/2026-09-01-sesion-15.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../unidades/02-polinomios-raices.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Unidad 3. Sistemas de ecuaciones lineales – Álgebra">
-<meta property="og:description" content="Modelación, tipos de solución y eliminación.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra">
+<meta property="og:description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa y mediante el esquema de Horner.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-01-sesion-15.html"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -255,13 +283,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -269,23 +297,23 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
   </div>
 </li>
       </ul>
@@ -369,16 +397,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#polinomios-en-una-variable" id="toc-polinomios-en-una-variable" class="nav-link active" data-scroll-target="#polinomios-en-una-variable">Polinomios en una variable</a>
+  <ul class="collapse">
+  <li><a href="#forma-ordenada-e-igualdad" id="toc-forma-ordenada-e-igualdad" class="nav-link" data-scroll-target="#forma-ordenada-e-igualdad">Forma ordenada e igualdad</a></li>
+  <li><a href="#grado-y-coeficiente-principal" id="toc-grado-y-coeficiente-principal" class="nav-link" data-scroll-target="#grado-y-coeficiente-principal">Grado y coeficiente principal</a></li>
+  </ul></li>
+  <li><a href="#suma-resta-y-producto" id="toc-suma-resta-y-producto" class="nav-link" data-scroll-target="#suma-resta-y-producto">Suma, resta y producto</a></li>
+  <li><a href="#evaluación-de-un-polinomio" id="toc-evaluación-de-un-polinomio" class="nav-link" data-scroll-target="#evaluación-de-un-polinomio">Evaluación de un polinomio</a>
+  <ul class="collapse">
+  <li><a href="#evaluación-directa" id="toc-evaluación-directa" class="nav-link" data-scroll-target="#evaluación-directa">Evaluación directa</a></li>
+  <li><a href="#esquema-de-horner" id="toc-esquema-de-horner" class="nav-link" data-scroll-target="#esquema-de-horner">Esquema de Horner</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-01-sesion-15.html"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></h1>
 </div>
 
 
@@ -386,6 +427,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -395,15 +442,392 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 10 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="polinomios-en-una-variable" class="level2">
+<h2 class="anchored" data-anchor-id="polinomios-en-una-variable">Polinomios en una variable</h2>
+<p>Las expresiones <span class="math inline">\(x^2-9\)</span>, <span class="math inline">\(x^2+bx+c\)</span> y <span class="math inline">\(ax+b\)</span> estudiadas en la <a href="../unidades/01-reales-complejos.html">Unidad 1</a> comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.</p>
+<p>Un <strong>polinomio en la variable <span class="math inline">\(x\)</span> con coeficientes reales</strong> es una suma finita de la forma</p>
+<p><span class="math display">\[
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
+\]</span></p>
+<p>donde <span class="math inline">\(n\in\mathbb N\)</span> y <span class="math inline">\(a_0,a_1,\ldots,a_n\in\mathbb R\)</span>. Si <span class="math inline">\(p(x)\ne0\)</span>, se elige <span class="math inline">\(n\)</span> de modo que <span class="math inline">\(a_n\ne0\)</span>. Los números <span class="math inline">\(a_k\)</span> son los <strong>coeficientes</strong>; cada término no nulo <span class="math inline">\(a_kx^k\)</span> tiene grado <span class="math inline">\(k\)</span>, y <span class="math inline">\(a_0\)</span> es el <strong>término independiente</strong>. Como <span class="math inline">\(0\in\mathbb N\)</span> según la convención adoptada en la <a href="../sesiones/2026-08-11-sesion-02.html">Sesión 02</a>, la definición incluye los polinomios constantes.</p>
+<p>En la forma polinómica, toda potencia de <span class="math inline">\(x\)</span> tiene un exponente entero no negativo. Por ello, una expresión que contiene <span class="math inline">\(x^{-1}\)</span> o <span class="math inline">\(x^{1/2}\)</span> no es un polinomio en <span class="math inline">\(x\)</span>. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,</p>
+<p><span class="math display">\[
+\frac12x^3-\sqrt2\,x+1
+\]</span></p>
+<p>sí es un polinomio, mientras que <span class="math inline">\(x^2+\dfrac1x\)</span> y <span class="math inline">\(\sqrt{x}-1\)</span> no lo son.</p>
+<section id="forma-ordenada-e-igualdad" class="level3">
+<h3 class="anchored" data-anchor-id="forma-ordenada-e-igualdad">Forma ordenada e igualdad</h3>
+<p>Dos términos son <strong>semejantes</strong> cuando contienen la misma potencia de <span class="math inline">\(x\)</span>. Un polinomio está en <strong>forma ordenada</strong> cuando sus términos semejantes se han reunido y las potencias se escriben en orden decreciente. Si una potencia no aparece, su coeficiente es <span class="math inline">\(0\)</span>.</p>
+<p>Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de <span class="math inline">\(x\)</span>. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo,</p>
+<p><span class="math display">\[
+(x-1)^2=x^2-2x+1.
+\]</span></p>
+</section>
+<section id="grado-y-coeficiente-principal" class="level3">
+<h3 class="anchored" data-anchor-id="grado-y-coeficiente-principal">Grado y coeficiente principal</h3>
+<p>Si <span class="math inline">\(p(x)\)</span> no es el polinomio cero, su <strong>grado</strong>, denotado <span class="math inline">\(\operatorname{gr}(p)\)</span>, es el mayor exponente cuyo coeficiente es distinto de cero. El coeficiente de esa potencia es el <strong>coeficiente principal</strong>. Un polinomio es <strong>mónico</strong> cuando su coeficiente principal es <span class="math inline">\(1\)</span>.</p>
+<p>Un polinomio constante distinto de cero tiene grado <span class="math inline">\(0\)</span>. El <strong>polinomio cero</strong> tiene todos sus coeficientes iguales a cero y, en este curso, su grado no está definido.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Expresión</th>
+<th style="text-align: center;">¿Es polinomio?</th>
+<th>Forma ordenada</th>
+<th style="text-align: right;">Grado</th>
+<th style="text-align: right;">Coeficiente principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(7x-3x^4+1\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(-3x^4+7x+1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sqrt2\,x^2-x\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(\sqrt2\,x^2-x\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\sqrt2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x^2+\dfrac1x\)</span></td>
+<td style="text-align: center;">No</td>
+<td>—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sqrt{x}-1\)</span></td>
+<td style="text-align: center;">No</td>
+<td>—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\((2x+1)^2-4x^2\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(4x+1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-6\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(-6\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-6\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;">no está definido</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>El grado se determina después de simplificar. Aunque <span class="math inline">\((2x+1)^2-4x^2\)</span> contiene términos cuadráticos antes de reunir términos semejantes, estos se cancelan:</p>
+<p><span class="math display">\[
+(2x+1)^2-4x^2=4x^2+4x+1-4x^2=4x+1.
+\]</span></p>
+</section>
+</section>
+<section id="suma-resta-y-producto" class="level2">
+<h2 class="anchored" data-anchor-id="suma-resta-y-producto">Suma, resta y producto</h2>
+<p>Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva, se usa <span class="math inline">\(x^mx^n=x^{m+n}\)</span> y después se reúnen términos semejantes.</p>
+<p>Sean</p>
+<p><span class="math display">\[
+p(x)=x^2-2x+3,
+\qquad
+q(x)=2x-1.
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)+q(x)&amp;=x^2+2,\\
+p(x)-q(x)&amp;=x^2-4x+4,
+\end{aligned}
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)q(x)
+&amp;=(x^2-2x+3)(2x-1)\\
+&amp;=2x^3-x^2-4x^2+2x+6x-3\\
+&amp;=2x^3-5x^2+8x-3.
+\end{aligned}
+\]</span></p>
+<p>Si <span class="math inline">\(p(x)\)</span> y <span class="math inline">\(q(x)\)</span> son polinomios distintos de cero, se cumplen las siguientes reglas:</p>
+<ul>
+<li><p><span class="math inline">\(\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)\)</span>. El coeficiente principal y el término independiente del producto son, respectivamente, los productos de los coeficientes principales y de los términos independientes de los factores.</p></li>
+<li><p>Si <span class="math inline">\(p(x)+q(x)\)</span> no es el polinomio cero, entonces</p>
+<p><span class="math display">\[
+\operatorname{gr}(p+q)\le \max\{\operatorname{gr}(p),\operatorname{gr}(q)\}.
+\]</span></p>
+<p>Cuando los grados son distintos, se obtiene la igualdad. Si son iguales, los términos principales pueden cancelarse y el grado puede disminuir.</p></li>
+</ul>
+<p>Por ejemplo,</p>
+<p><span class="math display">\[
+(x^3+x)+(-x^3+2)=x+2.
+\]</span></p>
+<p>Los dos sumandos tienen grado <span class="math inline">\(3\)</span>, pero la suma tiene grado <span class="math inline">\(1\)</span>. Si la suma fuera el polinomio cero, su grado no estaría definido.</p>
+</section>
+<section id="evaluación-de-un-polinomio" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación-de-un-polinomio">Evaluación de un polinomio</h2>
+<p>Si <span class="math inline">\(c\)</span> es un número real o complejo, <span class="math inline">\(p(c)\)</span> es el número que resulta de sustituir <span class="math inline">\(x\)</span> por <span class="math inline">\(c\)</span> y efectuar las operaciones. Si</p>
+<p><span class="math display">\[
+p(x)=2x^3-x+4,
+\]</span></p>
+<p>entonces</p>
+<p><span class="math display">\[
+p(-1)=2(-1)^3-(-1)+4=3,
+\qquad
+p(0)=4.
+\]</span></p>
+<p>En general, <span class="math inline">\(p(0)=a_0\)</span>. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis.</p>
+<section id="evaluación-directa" class="level3">
+<h3 class="anchored" data-anchor-id="evaluación-directa">Evaluación directa</h3>
+<p>La evaluación directa consiste en calcular las potencias de <span class="math inline">\(c\)</span>, multiplicarlas por sus coeficientes y sumar los resultados. Para</p>
+<p><span class="math display">\[
+r(x)=2x^4-3x^3+5x-7,
+\]</span></p>
+<p>se obtiene</p>
+<p><span class="math display">\[
+r(3)=2(3)^4-3(3)^3+5(3)-7=162-81+15-7=89.
+\]</span></p>
+</section>
+<section id="esquema-de-horner" class="level3">
+<h3 class="anchored" data-anchor-id="esquema-de-horner">Esquema de Horner</h3>
+<p>La forma anidada de un polinomio es</p>
+<p><span class="math display">\[
+a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+=\Bigl(\bigl((a_nx+a_{n-1})x+a_{n-2}\bigr)x+\cdots+a_1\Bigr)x+a_0.
+\]</span></p>
+<p>Para evaluar en <span class="math inline">\(x=c\)</span>, se baja el coeficiente principal y se repite la operación <strong>multiplicar por <span class="math inline">\(c\)</span> y sumar el coeficiente siguiente</strong>. Deben escribirse los coeficientes nulos de las potencias ausentes.</p>
+<p>En <span class="math inline">\(r(x)=2x^4-3x^3+5x-7\)</span>, el coeficiente de <span class="math inline">\(x^2\)</span> es <span class="math inline">\(0\)</span>. La evaluación en <span class="math inline">\(c=3\)</span> queda:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;"><span class="math inline">\(x^4\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;">término independiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coeficientes</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-7\)</span></td>
+</tr>
+<tr class="even">
+<td>Productos por <span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(6\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(9\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(27\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(96\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sumas</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(9\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(32\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\mathbf{89}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El último número es <span class="math inline">\(r(3)=89\)</span>, el mismo valor obtenido por evaluación directa. En forma recursiva, si</p>
+<p><span class="math display">\[
+b_n=a_n,
+\qquad
+b_k=a_k+c\,b_{k+1}
+\quad (k=n-1,n-2,\ldots,0),
+\]</span></p>
+<p>entonces <span class="math inline">\(b_0=p(c)\)</span>. El esquema requiere una multiplicación y una suma por cada coeficiente que sigue al principal y evita calcular por separado las potencias de <span class="math inline">\(c\)</span>.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>El grado no se lee antes de ordenar y simplificar. En <span class="math inline">\((2x+1)^2-4x^2\)</span>, los términos cuadráticos se cancelan y el resultado tiene grado <span class="math inline">\(1\)</span>.</li>
+<li>Los términos no semejantes no se combinan: la fórmula <span class="math inline">\(x^2+x=x^3\)</span> no es una identidad.</li>
+<li>Al restar polinomios se cambia el signo de todos los términos del sustraendo.</li>
+<li>La regla <span class="math inline">\(\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)\)</span> corresponde al producto, no a la suma.</li>
+<li>En el esquema de Horner se escribe un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente y se multiplica por el valor de sustitución con su signo.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
 <ol type="1">
-<li>Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.</li>
-<li>Métodos de Gauss y Gauss-Jordan.</li>
-<li>Sistemas consistentes e inconsistentes.</li>
+<li><p>Resuelva los siguientes problemas sobre estructura y grado.</p>
+<ol type="a">
+<li><p>Simplifique</p>
+<p><span class="math display">\[
+s(x)=(x+2)(x-2)-x(x+1)+5x
+\]</span></p>
+<p>y determine su grado, coeficiente principal y término independiente.</p></li>
+<li><p>Construya dos polinomios de grado <span class="math inline">\(4\)</span> cuya suma tenga grado <span class="math inline">\(2\)</span>. Explique qué coeficientes deben cancelarse.</p></li>
+</ol></li>
+<li><p>Sean</p>
+<p><span class="math display">\[
+p(x)=3x^3-2x^2+x-5,
+\qquad
+q(x)=-3x^3+x^2+4.
+\]</span></p>
+<ol type="a">
+<li><p>Calcule <span class="math inline">\(p(x)+q(x)\)</span> y <span class="math inline">\(p(x)-q(x)\)</span>, e indique el grado de cada resultado.</p></li>
+<li><p>Sin desarrollar completamente <span class="math inline">\(p(x)q(x)\)</span>, determine su grado, su coeficiente principal, su término independiente y el coeficiente de <span class="math inline">\(x^2\)</span>.</p></li>
+</ol></li>
+<li><p>Sea</p>
+<p><span class="math display">\[
+r(x)=x^4-2x^3+3x-5.
+\]</span></p>
+<ol type="a">
+<li><p>Calcule <span class="math inline">\(r(-1)\)</span> por evaluación directa. Después, explique por qué el renglón <span class="math inline">\(1,-2,3,-5\)</span> no sirve para aplicar Horner, escriba el renglón correcto y confirme el resultado con el esquema.</p></li>
+<li><p>Calcule <span class="math inline">\(r(i)\)</span> usando las potencias de <span class="math inline">\(i\)</span>.</p></li>
+</ol></li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> En el primer inciso,</p>
+<p><span class="math display">\[
+\begin{aligned}
+s(x)
+&amp;=(x^2-4)-(x^2+x)+5x\\
+&amp;=4x-4.
+\end{aligned}
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(s(x)\)</span> tiene grado <span class="math inline">\(1\)</span>, coeficiente principal <span class="math inline">\(4\)</span> y término independiente <span class="math inline">\(-4\)</span>.</p>
+<p>Para el segundo inciso hay muchas respuestas posibles. Por ejemplo,</p>
+<p><span class="math display">\[
+p(x)=x^4+2x^3+x^2,
+\qquad
+q(x)=-x^4-2x^3+3x+1.
+\]</span></p>
+<p>Ambos polinomios tienen grado <span class="math inline">\(4\)</span>, pero</p>
+<p><span class="math display">\[
+p(x)+q(x)=x^2+3x+1
+\]</span></p>
+<p>tiene grado <span class="math inline">\(2\)</span>. Los coeficientes de <span class="math inline">\(x^4\)</span> y <span class="math inline">\(x^3\)</span> se cancelan, mientras que el coeficiente de <span class="math inline">\(x^2\)</span> permanece distinto de cero.</p>
+<p><strong>2.</strong> Al reunir términos semejantes,</p>
+<p><span class="math display">\[
+p(x)+q(x)=-x^2+x-1,
+\]</span></p>
+<p>de grado <span class="math inline">\(2\)</span>. Al cambiar el signo de todos los términos de <span class="math inline">\(q(x)\)</span>,</p>
+<p><span class="math display">\[
+p(x)-q(x)=6x^3-3x^2+x-9,
+\]</span></p>
+<p>de grado <span class="math inline">\(3\)</span>.</p>
+<p>El producto tiene grado <span class="math inline">\(3+3=6\)</span>, coeficiente principal <span class="math inline">\(3(-3)=-9\)</span> y término independiente <span class="math inline">\((-5)(4)=-20\)</span>. Para obtener un término de grado <span class="math inline">\(2\)</span>, los grados de los factores deben sumar <span class="math inline">\(2\)</span>. Por tanto, su coeficiente es</p>
+<p><span class="math display">\[
+(-2)(4)+(1)(0)+(-5)(1)=-13.
+\]</span></p>
+<p><strong>3.</strong> Por evaluación directa,</p>
+<p><span class="math display">\[
+r(-1)=(-1)^4-2(-1)^3+3(-1)-5=1+2-3-5=-5.
+\]</span></p>
+<p>El renglón <span class="math inline">\(1,-2,3,-5\)</span> omite el coeficiente <span class="math inline">\(0\)</span> de <span class="math inline">\(x^2\)</span> y corresponde a otro polinomio. El esquema correcto para <span class="math inline">\(c=-1\)</span> es:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;"><span class="math inline">\(x^4\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;">término independiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coeficientes</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-5\)</span></td>
+</tr>
+<tr class="even">
+<td>Productos por <span class="math inline">\(-1\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sumas</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\mathbf{-5}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El esquema confirma que <span class="math inline">\(r(-1)=-5\)</span>. Finalmente, como <span class="math inline">\(i^4=1\)</span> e <span class="math inline">\(i^3=-i\)</span>,</p>
+<p><span class="math display">\[
+r(i)=i^4-2i^3+3i-5=1+2i+3i-5=-4+5i.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Decida cuáles expresiones son polinomios. Para cada polinomio, escriba su forma ordenada e indique grado, coeficiente principal y término independiente:</p>
+<p><span class="math display">\[
+2x^3-7,
+\qquad
+\frac{1}{x^2}+1,
+\qquad
+x^2(x-1),
+\qquad
+\sqrt3\,x^2-\sqrt{2x},
+\qquad
+(x-3)^2-(x+3)^2,
+\qquad
+\pi.
+\]</span></p></li>
+<li><p>Sean <span class="math inline">\(p(x)=x^2-2x+3\)</span> y <span class="math inline">\(q(x)=2x^2+x-1\)</span>. Calcule <span class="math inline">\(p(x)+q(x)\)</span>, <span class="math inline">\(p(x)-q(x)\)</span> y <span class="math inline">\(p(x)q(x)\)</span>; indique el grado de cada resultado y verifique el producto evaluando en <span class="math inline">\(x=1\)</span>.</p></li>
+<li><p>Proponga dos polinomios de grado <span class="math inline">\(3\)</span> cuya suma tenga grado <span class="math inline">\(1\)</span>. Explique por qué el producto de dos polinomios de grado <span class="math inline">\(3\)</span> con coeficientes reales siempre tiene grado <span class="math inline">\(6\)</span>.</p></li>
+<li><p>Sea <span class="math inline">\(p(x)=3x^4-5x^2+2x-8\)</span>. Calcule <span class="math inline">\(p(2)\)</span>, <span class="math inline">\(p(-3)\)</span> y <span class="math inline">\(p(0.5)\)</span> mediante el esquema de Horner; verifique uno de los valores por evaluación directa.</p></li>
+<li><p>Un sensor entrega un voltaje <span class="math inline">\(V\)</span>, en voltios, y la temperatura estimada, en grados Celsius, está dada por</p>
+<p><span class="math display">\[
+T(V)=2V^3-5V^2+20V+15,
+\qquad 0\le V\le3.
+\]</span></p>
+<p>Calcule <span class="math inline">\(T(1.5)\)</span> y <span class="math inline">\(T(2.5)\)</span> mediante el esquema de Horner.</p></li>
+<li><p>Para evaluar <span class="math inline">\(p(x)=x^3-4x+1\)</span> en <span class="math inline">\(x=-2\)</span>, se usó el renglón de coeficientes <span class="math inline">\(1,-4,1\)</span> y se multiplicó por <span class="math inline">\(2\)</span>. Identifique los dos errores y calcule el valor correcto de <span class="math inline">\(p(-2)\)</span>.</p></li>
+</ol>
 
 
 </section>
@@ -818,13 +1242,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-09-01-sesion-15.html" class="pagination-link" aria-label="Sesión 15. Polinomios: estructura, operaciones y evaluación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></span>
+      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
-        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
