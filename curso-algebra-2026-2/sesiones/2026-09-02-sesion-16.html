@@ -455,7 +455,7 @@ a,b,c\in\mathbb R,
 \qquad
 a\ne0.
 \]</span></p>
-<p>La condición <span class="math inline">\(a\ne0\)</span> garantiza que el polinomio del miembro izquierdo tenga grado <span class="math inline">\(2\)</span>, de acuerdo con la <a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a>. Los números que satisfacen la ecuación se llaman <strong>raíces</strong> de la ecuación o del polinomio <span class="math inline">\(p(x)=ax^2+bx+c\)</span>. En esta sesión las raíces se buscan en <span class="math inline">\(\mathbb C\)</span>; cuando el dominio se restrinja a <span class="math inline">\(\mathbb R\)</span>, se indicará expresamente.</p>
+<p>La condición <span class="math inline">\(a\ne0\)</span> garantiza que el polinomio del miembro izquierdo tenga grado <span class="math inline">\(2\)</span>, de acuerdo con la <a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a>. Los números que satisfacen la ecuación se llaman <strong>raíces</strong> de la ecuación o del polinomio <span class="math inline">\(p(x)=ax^2+bx+c\)</span>, y el conjunto de todas ellas se denota <span class="math inline">\(S\)</span>. En esta sesión las raíces se buscan en <span class="math inline">\(\mathbb C\)</span>; cuando el dominio se restrinja a <span class="math inline">\(\mathbb R\)</span>, se indicará expresamente.</p>
 <p>Antes de factorizar o de aplicar la fórmula general, todos los términos deben reunirse en un miembro y el otro debe quedar igual a cero. Por ejemplo,</p>
 <p><span class="math display">\[
 3x^2=12x
@@ -513,7 +513,7 @@ x=r_1\ \text{ o }\ x=r_2.
 </section>
 <section id="origen-de-la-fórmula-general" class="level2">
 <h2 class="anchored" data-anchor-id="origen-de-la-fórmula-general">Origen de la fórmula general</h2>
-<p>El producto notable</p>
+<p>El producto notable de la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a></p>
 <p><span class="math display">\[
 (x+h)^2=x^2+2hx+h^2
 \]</span></p>
@@ -544,6 +544,17 @@ x^2+\frac ba x+\frac{b^2}{4a^2}
 \boxed{x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}}.
 \]</span></p>
 <p>El símbolo <span class="math inline">\(\pm\)</span> representa dos elecciones, una con el signo <span class="math inline">\(+\)</span> y otra con el signo <span class="math inline">\(-\)</span>. Cuando el discriminante es cero, ambas coinciden. El denominador <span class="math inline">\(2a\)</span> divide a todo el numerador.</p>
+<p>En la ecuación <span class="math inline">\(x^2+6x-7=0\)</span>, se pasa el término independiente al miembro derecho y se suma <span class="math inline">\(9\)</span> a ambos miembros:</p>
+<p><span class="math display">\[
+x^2+6x=7
+\quad\Longleftrightarrow\quad
+x^2+6x+9=7+9
+\quad\Longleftrightarrow\quad
+(x+3)^2=16
+\quad\Longleftrightarrow\quad
+x=-3\pm4.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(S=\{-7,1\}\)</span>. La fórmula general produce el mismo resultado: <span class="math inline">\(b^2-4ac=64\)</span> y <span class="math inline">\(x=\dfrac{-6\pm8}{2}\)</span>.</p>
 <p>Completar el cuadrado explica el origen de la fórmula; no es necesario repetir esa derivación en cada ecuación. En los cálculos ordinarios se elige entre una factorización visible y la fórmula general.</p>
 </section>
 <section id="discriminante-y-naturaleza-de-las-raíces" class="level2">
@@ -575,12 +586,12 @@ x^2+\frac ba x+\frac{b^2}{4a^2}
 </tr>
 </tbody>
 </table>
-<p>Si <span class="math inline">\(\Delta&lt;0\)</span>, se usa <span class="math inline">\(\sqrt{-d}=\sqrt d\,i\)</span> para <span class="math inline">\(d&gt;0\)</span>, como en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>. Las raíces pueden escribirse como</p>
+<p>Si <span class="math inline">\(\Delta&lt;0\)</span>, se usa <span class="math inline">\(\sqrt{-d}=(\sqrt d)i\)</span> para <span class="math inline">\(d&gt;0\)</span>, como en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>. Las raíces pueden escribirse como</p>
 <p><span class="math display">\[
 x=-\frac b{2a}\pm\frac{\sqrt{-\Delta}}{2a}i.
 \]</span></p>
 <p>Tienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p>
-<p>El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando no es evidente, o cuando <span class="math inline">\(\Delta&lt;0\)</span>, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.</p>
+<p>El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> son enteros y <span class="math inline">\(\Delta\)</span> es un cuadrado perfecto no negativo, <span class="math inline">\(\sqrt\Delta\)</span> es entero y las raíces son racionales; esto indica que puede buscarse una factorización en factores lineales con coeficientes racionales, como en la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>. Bajo esta misma hipótesis, si <span class="math inline">\(\Delta&gt;0\)</span> no es un cuadrado perfecto, las raíces son irracionales; si <span class="math inline">\(\Delta&lt;0\)</span>, son complejas no reales. En estos dos últimos casos, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -613,7 +624,7 @@ S=\{-3,4\}.
 <p><span class="math display">\[
 \Delta=(-4)^2-4(2)(-1)=24&gt;0.
 \]</span></p>
-<p>Como <span class="math inline">\(24\)</span> no es un cuadrado perfecto, se aplica la fórmula general y se simplifica el radical:</p>
+<p>Como <span class="math inline">\(24\)</span> no es un cuadrado perfecto, se aplica la fórmula general y se simplifica el radical, con <span class="math inline">\(\sqrt{24}=\sqrt{4\cdot6}=2\sqrt6\)</span> como en la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 x
@@ -623,6 +634,12 @@ x
 \end{aligned}
 \]</span></p>
 <p>Las dos raíces son reales, distintas e irracionales.</p>
+<p>Para comprobar <span class="math inline">\(x=1+\dfrac{\sqrt6}{2}\)</span>, se usa <span class="math inline">\(x^2=\dfrac52+\sqrt6\)</span>:</p>
+<p><span class="math display">\[
+2x^2-4x-1
+=5+2\sqrt6-4-2\sqrt6-1
+=0.
+\]</span></p>
 <p>Para <span class="math inline">\(x^2-4x+13=0\)</span>,</p>
 <p><span class="math display">\[
 \Delta=(-4)^2-4(1)(13)=-36&lt;0.
@@ -639,15 +656,17 @@ x=\frac{4\pm\sqrt{-36}}2
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Aplicar la propiedad del producto cero sin igualar a cero.</strong> De <span class="math inline">\((x-1)(x+2)=10\)</span> no se sigue que un factor sea cero. Primero se desarrolla y se obtiene <span class="math inline">\(x^2+x-12=0\)</span>; después se factoriza como <span class="math inline">\((x+4)(x-3)=0\)</span>.</li>
-<li><strong>Dividir entre la incógnita.</strong> En <span class="math inline">\(3x^2=12x\)</span>, dividir entre <span class="math inline">\(x\)</span> pierde la solución <span class="math inline">\(x=0\)</span>.</li>
-<li><strong>Olvidar el signo de <span class="math inline">\(-b\)</span>.</strong> Si <span class="math inline">\(b=-5\)</span>, el numerador de la fórmula comienza con <span class="math inline">\(-b=5\)</span>.</li>
-<li><strong>Dividir solo una parte del numerador entre <span class="math inline">\(2a\)</span>.</strong> En <span class="math inline">\(2x^2-4x-1=0\)</span>, el denominador es <span class="math inline">\(4\)</span> y divide tanto al <span class="math inline">\(4\)</span> como al radical.</li>
-<li><strong>Afirmar que no hay soluciones cuando <span class="math inline">\(\Delta&lt;0\)</span>.</strong> No hay raíces reales, pero sí dos raíces complejas conjugadas.</li>
+<li><strong>Aplicar la propiedad del producto cero sin igualar a cero.</strong> De <span class="math inline">\((x-1)(x+2)=10\)</span> no se sigue que un factor sea cero. Igualar cada factor a <span class="math inline">\(10\)</span> produciría <span class="math inline">\(x=11\)</span> y <span class="math inline">\(x=8\)</span>, pero para <span class="math inline">\(x=8\)</span> el producto vale <span class="math inline">\(7\cdot10=70\)</span>. Primero se obtiene <span class="math inline">\((x+4)(x-3)=0\)</span>, cuyo conjunto solución es <span class="math inline">\(S=\{-4,3\}\)</span>.</li>
+<li><strong>Dividir entre la incógnita.</strong> En <span class="math inline">\(3x^2=12x\)</span>, dividir entre <span class="math inline">\(x\)</span> produce solamente <span class="math inline">\(x=4\)</span> y pierde <span class="math inline">\(x=0\)</span>; el conjunto solución correcto es <span class="math inline">\(S=\{0,4\}\)</span>.</li>
+<li><strong>Olvidar el signo de <span class="math inline">\(-b\)</span>.</strong> Para <span class="math inline">\(x^2-5x+6=0\)</span>, se tiene <span class="math inline">\(b=-5\)</span> y el numerador comienza con <span class="math inline">\(-b=5\)</span>: las raíces son <span class="math inline">\(3\)</span> y <span class="math inline">\(2\)</span>. Usar <span class="math inline">\(-5\)</span> produciría <span class="math inline">\(-2\)</span> y <span class="math inline">\(-3\)</span>; al sustituir <span class="math inline">\(x=-2\)</span>, el miembro izquierdo vale <span class="math inline">\(20\)</span>, no <span class="math inline">\(0\)</span>.</li>
+<li><strong>Usar <span class="math inline">\(2\)</span> en lugar de <span class="math inline">\(2a\)</span> en el denominador.</strong> En <span class="math inline">\(2x^2-4x-1=0\)</span>, el denominador es <span class="math inline">\(2a=4\)</span> y divide tanto al <span class="math inline">\(4\)</span> como al radical. Escribir <span class="math inline">\(2\pm\sqrt6\)</span> en vez de <span class="math inline">\(1\pm\dfrac{\sqrt6}{2}\)</span> no produce raíces de la ecuación.</li>
+<li><strong>Afirmar que no hay soluciones cuando <span class="math inline">\(\Delta&lt;0\)</span>.</strong> La ecuación <span class="math inline">\(x^2-4x+13=0\)</span> no tiene raíces reales, pero su conjunto solución en <span class="math inline">\(\mathbb C\)</span> es <span class="math inline">\(S=\{2+3i,2-3i\}\)</span>.</li>
+<li><strong>Calcular mal el discriminante cuando <span class="math inline">\(c&lt;0\)</span>.</strong> Para <span class="math inline">\(2x^2-4x-1=0\)</span>, <span class="math inline">\(\Delta=(-4)^2-4(2)(-1)=16+8=24\)</span>, no <span class="math inline">\(16-8=8\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
 <li><p>Para cada ecuación, calcule el discriminante, anticipe la naturaleza de las raíces, elija entre factorización y fórmula general, justifique su elección y resuelva. Compruebe una de las raíces obtenidas.</p>
 <ol type="a">
@@ -751,13 +770,14 @@ x^2-2x-4=0,
 \qquad
 4x^2+4x+5=0.
 \]</span></p></li>
-<li><p>Para <span class="math inline">\(k\in\mathbb R\)</span>, determine los valores de <span class="math inline">\(k\)</span> para los cuales <span class="math inline">\(x^2+kx+9=0\)</span> tiene una raíz doble. Determine también para qué valores de <span class="math inline">\(k\)</span> sus raíces no son reales.</p></li>
+<li><p>Para <span class="math inline">\(k\in\mathbb R\)</span>, determine los valores de <span class="math inline">\(k\)</span> para los cuales <span class="math inline">\(x^2+kx+9=0\)</span> tiene una raíz doble. Determine también para qué valores de <span class="math inline">\(k\)</span> sus raíces no son reales y escriba la respuesta como intervalo, como en la <a href="../sesiones/2026-08-17-sesion-06.html">Sesión 06</a>.</p></li>
 <li><p>La altura de un objeto, en metros, está dada por</p>
 <p><span class="math display">\[
 h(t)=20t-5t^2,
 \qquad 0\le t\le4,
 \]</span></p>
 <p>donde <span class="math inline">\(t\)</span> se mide en segundos. Determine en qué instantes la altura es de <span class="math inline">\(15\)</span> metros y compruebe que ambas respuestas pertenecen al intervalo indicado.</p></li>
+<li><p>Verifique que <span class="math inline">\(2+i\)</span> es raíz de <span class="math inline">\(x^2-4x+5=0\)</span> mediante el producto de la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>. Sin resolver la ecuación, indique cuál es la otra raíz y justifique la respuesta con el discriminante.</p></li>
 </ol>
 
 
