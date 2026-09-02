@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Unidades, horas y aprendizajes previstos en el programa oficial.">
+<meta name="description" content="Resolución de ecuaciones cuadráticas con coeficientes reales mediante factorización y fórmula general; discriminante y naturaleza de las raíces.">
 
-<title>Contenidos y resultados de aprendizaje – Álgebra</title>
+<title>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../curso/evaluacion-asistencia.html" rel="next">
-<link href="../curso/metodologia.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-01-sesion-15.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Contenidos y resultados de aprendizaje – Álgebra">
-<meta property="og:description" content="Unidades, horas y aprendizajes previstos en el programa oficial.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante – Álgebra">
+<meta property="og:description" content="Resolución de ecuaciones cuadráticas con coeficientes reales mediante factorización y fórmula general; discriminante y naturaleza de las raíces.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/contenidos.html"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-02-sesion-16.html"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -128,13 +156,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Información del curso</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
@@ -147,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
+  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,13 +283,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -274,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
+  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
   </div>
 </li>
       </ul>
@@ -374,18 +402,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#resultados-de-aprendizaje" id="toc-resultados-de-aprendizaje" class="nav-link active" data-scroll-target="#resultados-de-aprendizaje">Resultados de aprendizaje</a></li>
-  <li><a href="#distribución-oficial-de-contenidos" id="toc-distribución-oficial-de-contenidos" class="nav-link" data-scroll-target="#distribución-oficial-de-contenidos">Distribución oficial de contenidos</a></li>
-  <li><a href="#relación-entre-las-unidades" id="toc-relación-entre-las-unidades" class="nav-link" data-scroll-target="#relación-entre-las-unidades">Relación entre las unidades</a></li>
+  <li><a href="#ecuaciones-cuadráticas" id="toc-ecuaciones-cuadráticas" class="nav-link active" data-scroll-target="#ecuaciones-cuadráticas">Ecuaciones cuadráticas</a></li>
+  <li><a href="#resolución-por-factorización" id="toc-resolución-por-factorización" class="nav-link" data-scroll-target="#resolución-por-factorización">Resolución por factorización</a></li>
+  <li><a href="#origen-de-la-fórmula-general" id="toc-origen-de-la-fórmula-general" class="nav-link" data-scroll-target="#origen-de-la-fórmula-general">Origen de la fórmula general</a></li>
+  <li><a href="#discriminante-y-naturaleza-de-las-raíces" id="toc-discriminante-y-naturaleza-de-las-raíces" class="nav-link" data-scroll-target="#discriminante-y-naturaleza-de-las-raíces">Discriminante y naturaleza de las raíces</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-factorización" id="toc-ejemplo-1.-factorización" class="nav-link" data-scroll-target="#ejemplo-1.-factorización">Ejemplo 1. Factorización</a></li>
+  <li><a href="#ejemplo-2.-discriminantes-positivo-y-negativo" id="toc-ejemplo-2.-discriminantes-positivo-y-negativo" class="nav-link" data-scroll-target="#ejemplo-2.-discriminantes-positivo-y-negativo">Ejemplo 2. Discriminantes positivo y negativo</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/contenidos.html"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-02-sesion-16.html"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></h1>
 </div>
 
 
@@ -393,6 +430,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -402,73 +445,320 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="resultados-de-aprendizaje" class="level2">
-<h2 class="anchored" data-anchor-id="resultados-de-aprendizaje">Resultados de aprendizaje</h2>
-<p>Al concluir el curso, se espera que el estudiante pueda:</p>
-<ol type="1">
-<li>realizar operaciones algebraicas con números reales, números complejos y expresiones algebraicas;</li>
-<li>resolver ecuaciones e inecuaciones lineales mediante propiedades y técnicas algebraicas;</li>
-<li>utilizar matrices para representar y resolver sistemas de ecuaciones lineales por los métodos de Gauss, Gauss-Jordan, regla de Cramer y matriz inversa; y</li>
-<li>relacionar las herramientas estudiadas con situaciones de modelación y toma de decisiones.</li>
-</ol>
+<section id="ecuaciones-cuadráticas" class="level2">
+<h2 class="anchored" data-anchor-id="ecuaciones-cuadráticas">Ecuaciones cuadráticas</h2>
+<p>Una <strong>ecuación cuadrática</strong> en la variable <span class="math inline">\(x\)</span> es una ecuación que puede escribirse en la forma</p>
+<p><span class="math display">\[
+ax^2+bx+c=0,
+\qquad
+a,b,c\in\mathbb R,
+\qquad
+a\ne0.
+\]</span></p>
+<p>La condición <span class="math inline">\(a\ne0\)</span> garantiza que el polinomio del miembro izquierdo tenga grado <span class="math inline">\(2\)</span>, de acuerdo con la <a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a>. Los números que satisfacen la ecuación se llaman <strong>raíces</strong> de la ecuación o del polinomio <span class="math inline">\(p(x)=ax^2+bx+c\)</span>. En esta sesión las raíces se buscan en <span class="math inline">\(\mathbb C\)</span>; cuando el dominio se restrinja a <span class="math inline">\(\mathbb R\)</span>, se indicará expresamente.</p>
+<p>Antes de factorizar o de aplicar la fórmula general, todos los términos deben reunirse en un miembro y el otro debe quedar igual a cero. Por ejemplo,</p>
+<p><span class="math display">\[
+3x^2=12x
+\quad\Longleftrightarrow\quad
+3x^2-12x=0.
+\]</span></p>
+<p>Las operaciones equivalentes estudiadas en la <a href="../sesiones/2026-08-14-sesion-05.html">Sesión 05</a> permiten realizar esta transformación. No se debe dividir entre una expresión que dependa de <span class="math inline">\(x\)</span> sin justificar que es distinta de cero. Si puede anularse, ese caso debe analizarse por separado para no perder soluciones.</p>
 </section>
-<section id="distribución-oficial-de-contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="distribución-oficial-de-contenidos">Distribución oficial de contenidos</h2>
+<section id="resolución-por-factorización" class="level2">
+<h2 class="anchored" data-anchor-id="resolución-por-factorización">Resolución por factorización</h2>
+<p>La <strong>propiedad del producto cero</strong> establece que, para números reales o complejos, <span class="math inline">\(uv=0\)</span> si y solo si <span class="math inline">\(u=0\)</span> o <span class="math inline">\(v=0\)</span>. Por ello, si</p>
+<p><span class="math display">\[
+ax^2+bx+c=a(x-r_1)(x-r_2),
+\]</span></p>
+<p>entonces</p>
+<p><span class="math display">\[
+ax^2+bx+c=0
+\quad\Longleftrightarrow\quad
+x=r_1\ \text{ o }\ x=r_2.
+\]</span></p>
+<p>Las técnicas de factorización de la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a> permiten reconocer varios casos:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 27%">
-<col style="width: 36%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Unidad</th>
-<th>Contenido</th>
-<th style="text-align: right;">Horas</th>
+<th>Forma</th>
+<th>Factorización</th>
+<th>Raíces</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
-<td>Números reales y complejos</td>
-<td style="text-align: right;">15</td>
+<td><span class="math inline">\(ax^2+bx=0\)</span></td>
+<td><span class="math inline">\(x(ax+b)=0\)</span></td>
+<td><span class="math inline">\(0\)</span> y <span class="math inline">\(-\dfrac ba\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
-<td>Polinomios y raíces</td>
-<td style="text-align: right;">20</td>
+<td><span class="math inline">\(x^2-k=0\)</span>, <span class="math inline">\(k&gt;0\)</span></td>
+<td><span class="math inline">\((x-\sqrt{k})(x+\sqrt{k})=0\)</span></td>
+<td><span class="math inline">\(\pm\sqrt{k}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
-<td>Sistemas de ecuaciones lineales</td>
-<td style="text-align: right;">10</td>
+<td><span class="math inline">\(x^2+bx+c=0\)</span></td>
+<td><span class="math inline">\((x+m)(x+n)=0\)</span>, si <span class="math inline">\(m+n=b\)</span> y <span class="math inline">\(mn=c\)</span></td>
+<td><span class="math inline">\(-m\)</span> y <span class="math inline">\(-n\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td>Matrices</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td>Conceptos básicos del álgebra lineal y su relación con los sistemas de ecuaciones lineales</td>
-<td style="text-align: right;">5</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td>Transformaciones lineales en el plano</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"></td>
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>80</strong></td>
+<td><span class="math inline">\(x^2+2hx+h^2=0\)</span></td>
+<td><span class="math inline">\((x+h)^2=0\)</span></td>
+<td><span class="math inline">\(-h\)</span>, raíz doble</td>
 </tr>
 </tbody>
 </table>
+<p>Una raíz <strong>doble</strong> aparece dos veces como factor, aunque el conjunto solución la contenga una sola vez. Por ejemplo, <span class="math inline">\((x-3)^2=0\)</span> tiene <span class="math inline">\(S=\{3\}\)</span> y la raíz <span class="math inline">\(3\)</span> tiene multiplicidad <span class="math inline">\(2\)</span>.</p>
+<p>La factorización suele ser el procedimiento más breve cuando los factores se reconocen de inmediato. Cuando no es así, la fórmula general resuelve cualquier ecuación cuadrática.</p>
 </section>
-<section id="relación-entre-las-unidades" class="level2">
-<h2 class="anchored" data-anchor-id="relación-entre-las-unidades">Relación entre las unidades</h2>
-<p>Las unidades no son compartimentos aislados. Las propiedades de los números y de las operaciones sostienen el trabajo con polinomios; las ecuaciones conducen a sistemas; los sistemas se representan mediante matrices; y esa representación permite introducir combinaciones y transformaciones lineales. Durante el curso se recuperarán conceptos anteriores cada vez que resulten necesarios.</p>
+<section id="origen-de-la-fórmula-general" class="level2">
+<h2 class="anchored" data-anchor-id="origen-de-la-fórmula-general">Origen de la fórmula general</h2>
+<p>El producto notable</p>
+<p><span class="math display">\[
+(x+h)^2=x^2+2hx+h^2
+\]</span></p>
+<p>permite transformar una ecuación cuadrática en otra de la forma <span class="math inline">\((x+h)^2=k\)</span>. Al aplicarlo a la ecuación general se obtiene una fórmula para todas las cuadráticas.</p>
+<p>Sea <span class="math inline">\(ax^2+bx+c=0\)</span>, con <span class="math inline">\(a\ne0\)</span>. Se divide entre <span class="math inline">\(a\)</span> y se pasa el término independiente al miembro derecho:</p>
+<p><span class="math display">\[
+x^2+\frac ba x=-\frac ca.
+\]</span></p>
+<p>Para completar el cuadrado se suma <span class="math inline">\(\dfrac{b^2}{4a^2}\)</span> a ambos miembros:</p>
+<p><span class="math display">\[
+\begin{aligned}
+x^2+\frac ba x+\frac{b^2}{4a^2}
+&amp;=\frac{b^2}{4a^2}-\frac ca,\\
+\left(x+\frac b{2a}\right)^2
+&amp;=\frac{b^2-4ac}{4a^2}.
+\end{aligned}
+\]</span></p>
+<p>Al multiplicar la última igualdad por <span class="math inline">\(4a^2\)</span> se obtiene</p>
+<p><span class="math display">\[
+(2ax+b)^2=b^2-4ac.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+2ax+b=\pm\sqrt{b^2-4ac}.
+\]</span></p>
+<p>Al despejar <span class="math inline">\(x\)</span> se obtiene la <strong>fórmula general</strong>:</p>
+<p><span class="math display">\[
+\boxed{x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}}.
+\]</span></p>
+<p>El símbolo <span class="math inline">\(\pm\)</span> representa dos elecciones, una con el signo <span class="math inline">\(+\)</span> y otra con el signo <span class="math inline">\(-\)</span>. Cuando el discriminante es cero, ambas coinciden. El denominador <span class="math inline">\(2a\)</span> divide a todo el numerador.</p>
+<p>Completar el cuadrado explica el origen de la fórmula; no es necesario repetir esa derivación en cada ecuación. En los cálculos ordinarios se elige entre una factorización visible y la fórmula general.</p>
+</section>
+<section id="discriminante-y-naturaleza-de-las-raíces" class="level2">
+<h2 class="anchored" data-anchor-id="discriminante-y-naturaleza-de-las-raíces">Discriminante y naturaleza de las raíces</h2>
+<p>El número</p>
+<p><span class="math display">\[
+\Delta=b^2-4ac
+\]</span></p>
+<p>se llama <strong>discriminante</strong>. Su signo permite anticipar la naturaleza de las raíces antes de calcularlas:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Valor de <span class="math inline">\(\Delta\)</span></th>
+<th>Naturaleza de las raíces</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Delta&gt;0\)</span></td>
+<td>Dos raíces reales distintas</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Delta=0\)</span></td>
+<td>Una raíz real doble, <span class="math inline">\(x=-\dfrac b{2a}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Delta&lt;0\)</span></td>
+<td>Dos raíces complejas no reales y conjugadas</td>
+</tr>
+</tbody>
+</table>
+<p>Si <span class="math inline">\(\Delta&lt;0\)</span>, se usa <span class="math inline">\(\sqrt{-d}=\sqrt d\,i\)</span> para <span class="math inline">\(d&gt;0\)</span>, como en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>. Las raíces pueden escribirse como</p>
+<p><span class="math display">\[
+x=-\frac b{2a}\pm\frac{\sqrt{-\Delta}}{2a}i.
+\]</span></p>
+<p>Tienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p>
+<p>El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando no es evidente, o cuando <span class="math inline">\(\Delta&lt;0\)</span>, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-factorización" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-factorización">Ejemplo 1. Factorización</h3>
+<p>Resolver las ecuaciones siguientes.</p>
+<p><strong>a.</strong> <span class="math inline">\(x^2-x-12=0\)</span>.</p>
+<p>Se buscan dos enteros cuya suma sea <span class="math inline">\(-1\)</span> y cuyo producto sea <span class="math inline">\(-12\)</span>: <span class="math inline">\(-4\)</span> y <span class="math inline">\(3\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+x^2-x-12=(x-4)(x+3)=0,
+\]</span></p>
+<p>de donde</p>
+<p><span class="math display">\[
+x=4\quad\text{o}\quad x=-3,
+\qquad
+S=\{-3,4\}.
+\]</span></p>
+<p><strong>b.</strong> <span class="math inline">\(3x^2=12x\)</span>.</p>
+<p>Primero se iguala a cero y después se extrae el factor común:</p>
+<p><span class="math display">\[
+3x^2-12x=0
+\quad\Longleftrightarrow\quad
+3x(x-4)=0.
+\]</span></p>
+<p>Así, <span class="math inline">\(S=\{0,4\}\)</span>. Dividir desde el inicio entre <span class="math inline">\(x\)</span> habría eliminado la raíz <span class="math inline">\(x=0\)</span>.</p>
+</section>
+<section id="ejemplo-2.-discriminantes-positivo-y-negativo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-discriminantes-positivo-y-negativo">Ejemplo 2. Discriminantes positivo y negativo</h3>
+<p>Para <span class="math inline">\(2x^2-4x-1=0\)</span>,</p>
+<p><span class="math display">\[
+\Delta=(-4)^2-4(2)(-1)=24&gt;0.
+\]</span></p>
+<p>Como <span class="math inline">\(24\)</span> no es un cuadrado perfecto, se aplica la fórmula general y se simplifica el radical:</p>
+<p><span class="math display">\[
+\begin{aligned}
+x
+&amp;=\frac{4\pm\sqrt{24}}4\\
+&amp;=\frac{4\pm2\sqrt6}{4}\\
+&amp;=1\pm\frac{\sqrt6}{2}.
+\end{aligned}
+\]</span></p>
+<p>Las dos raíces son reales, distintas e irracionales.</p>
+<p>Para <span class="math inline">\(x^2-4x+13=0\)</span>,</p>
+<p><span class="math display">\[
+\Delta=(-4)^2-4(1)(13)=-36&lt;0.
+\]</span></p>
+<p>La fórmula general da</p>
+<p><span class="math display">\[
+x=\frac{4\pm\sqrt{-36}}2
+=\frac{4\pm6i}{2}
+=2\pm3i.
+\]</span></p>
+<p>Las raíces <span class="math inline">\(2+3i\)</span> y <span class="math inline">\(2-3i\)</span> son conjugadas.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Aplicar la propiedad del producto cero sin igualar a cero.</strong> De <span class="math inline">\((x-1)(x+2)=10\)</span> no se sigue que un factor sea cero. Primero se desarrolla y se obtiene <span class="math inline">\(x^2+x-12=0\)</span>; después se factoriza como <span class="math inline">\((x+4)(x-3)=0\)</span>.</li>
+<li><strong>Dividir entre la incógnita.</strong> En <span class="math inline">\(3x^2=12x\)</span>, dividir entre <span class="math inline">\(x\)</span> pierde la solución <span class="math inline">\(x=0\)</span>.</li>
+<li><strong>Olvidar el signo de <span class="math inline">\(-b\)</span>.</strong> Si <span class="math inline">\(b=-5\)</span>, el numerador de la fórmula comienza con <span class="math inline">\(-b=5\)</span>.</li>
+<li><strong>Dividir solo una parte del numerador entre <span class="math inline">\(2a\)</span>.</strong> En <span class="math inline">\(2x^2-4x-1=0\)</span>, el denominador es <span class="math inline">\(4\)</span> y divide tanto al <span class="math inline">\(4\)</span> como al radical.</li>
+<li><strong>Afirmar que no hay soluciones cuando <span class="math inline">\(\Delta&lt;0\)</span>.</strong> No hay raíces reales, pero sí dos raíces complejas conjugadas.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<ol type="1">
+<li><p>Para cada ecuación, calcule el discriminante, anticipe la naturaleza de las raíces, elija entre factorización y fórmula general, justifique su elección y resuelva. Compruebe una de las raíces obtenidas.</p>
+<ol type="a">
+<li><p><span class="math inline">\(x^2+2x-15=0\)</span>.</p></li>
+<li><p><span class="math inline">\(4x^2-12x+9=0\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2-6x+10=0\)</span>.</p></li>
+</ol></li>
+<li><p>Para resolver <span class="math inline">\(2x^2-5x+3=0\)</span>, se escribió</p>
+<p><span class="math display">\[
+x=\frac{5\pm\sqrt{25-24}}{2}
+\]</span></p>
+<p>y se concluyó que las raíces eran <span class="math inline">\(3\)</span> y <span class="math inline">\(2\)</span>. Identifique el error, obtenga las raíces correctas y compruébelas.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> a. El discriminante es</p>
+<p><span class="math display">\[
+\Delta=2^2-4(1)(-15)=64&gt;0,
+\]</span></p>
+<p>por lo que hay dos raíces reales distintas. La factorización es visible:</p>
+<p><span class="math display">\[
+x^2+2x-15=(x+5)(x-3),
+\]</span></p>
+<p>por lo que <span class="math inline">\(S=\{-5,3\}\)</span>. Para <span class="math inline">\(x=3\)</span>, <span class="math inline">\(9+6-15=0\)</span>.</p>
+<ol start="2" type="a">
+<li>Se obtiene</li>
+</ol>
+<p><span class="math display">\[
+\Delta=(-12)^2-4(4)(9)=0,
+\]</span></p>
+<p>así que hay una raíz real doble. Conviene reconocer el trinomio cuadrado perfecto:</p>
+<p><span class="math display">\[
+4x^2-12x+9=(2x-3)^2,
+\]</span></p>
+<p>de donde <span class="math inline">\(S=\left\{\dfrac32\right\}\)</span>. La comprobación es</p>
+<p><span class="math display">\[
+4\left(\frac32\right)^2-12\left(\frac32\right)+9
+=9-18+9=0.
+\]</span></p>
+<ol start="3" type="a">
+<li>El discriminante es</li>
+</ol>
+<p><span class="math display">\[
+\Delta=(-6)^2-4(1)(10)=-4&lt;0,
+\]</span></p>
+<p>por lo que hay dos raíces complejas conjugadas y corresponde usar la fórmula general:</p>
+<p><span class="math display">\[
+x=\frac{6\pm\sqrt{-4}}2=3\pm i.
+\]</span></p>
+<p>Así, <span class="math inline">\(S=\{3+i,3-i\}\)</span>. Para <span class="math inline">\(x=3+i\)</span>,</p>
+<p><span class="math display">\[
+(3+i)^2-6(3+i)+10
+=8+6i-18-6i+10=0.
+\]</span></p>
+<p><strong>2.</strong> El denominador de la fórmula es <span class="math inline">\(2a=4\)</span>, no <span class="math inline">\(2\)</span>. El cálculo correcto es</p>
+<p><span class="math display">\[
+x=\frac{5\pm\sqrt{25-24}}4
+=\frac{5\pm1}{4},
+\]</span></p>
+<p>de donde <span class="math inline">\(S=\left\{1,\dfrac32\right\}\)</span>. Al sustituir,</p>
+<p><span class="math display">\[
+2(1)^2-5(1)+3=0
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+2\left(\frac32\right)^2-5\left(\frac32\right)+3
+=\frac92-\frac{15}{2}+3=0.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Resuelva por factorización:</p>
+<p><span class="math display">\[
+x^2-8x+15=0,
+\qquad
+2x^2+7x=0,
+\qquad
+9x^2-25=0,
+\qquad
+6x^2-7x-3=0.
+\]</span></p></li>
+<li><p>Resuelva con la fórmula general y simplifique los radicales:</p>
+<p><span class="math display">\[
+x^2-2x-4=0,
+\qquad
+3x^2-2x-2=0,
+\qquad
+4x^2+4x+5=0.
+\]</span></p></li>
+<li><p>Para <span class="math inline">\(k\in\mathbb R\)</span>, determine los valores de <span class="math inline">\(k\)</span> para los cuales <span class="math inline">\(x^2+kx+9=0\)</span> tiene una raíz doble. Determine también para qué valores de <span class="math inline">\(k\)</span> sus raíces no son reales.</p></li>
+<li><p>La altura de un objeto, en metros, está dada por</p>
+<p><span class="math display">\[
+h(t)=20t-5t^2,
+\qquad 0\le t\le4,
+\]</span></p>
+<p>donde <span class="math inline">\(t\)</span> se mide en segundos. Determine en qué instantes la altura es de <span class="math inline">\(15\)</span> metros y compruebe que ambas respuestas pertenecen al intervalo indicado.</p></li>
+</ol>
 
 
 </section>
@@ -883,13 +1173,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../curso/metodologia.html" class="pagination-link" aria-label="Forma de trabajo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Forma de trabajo</span></span>
+      <a href="../sesiones/2026-09-01-sesion-15.html" class="pagination-link" aria-label="Sesión 15. Polinomios: estructura, operaciones y evaluación">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../curso/evaluacion-asistencia.html" class="pagination-link" aria-label="Evaluación y asistencia">
-        <span class="nav-page-text"><span class="chapter-title">Evaluación y asistencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

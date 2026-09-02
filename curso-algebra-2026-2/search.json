@@ -1678,6 +1678,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-02-sesion-16.html",
+    "href": "sesiones/2026-09-02-sesion-16.html",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "",
+    "text": "Ecuaciones cuadráticas\nUna ecuación cuadrática en la variable \\(x\\) es una ecuación que puede escribirse en la forma\n\\[\nax^2+bx+c=0,\n\\qquad\na,b,c\\in\\mathbb R,\n\\qquad\na\\ne0.\n\\]\nLa condición \\(a\\ne0\\) garantiza que el polinomio del miembro izquierdo tenga grado \\(2\\), de acuerdo con la Sesión 15. Los números que satisfacen la ecuación se llaman raíces de la ecuación o del polinomio \\(p(x)=ax^2+bx+c\\). En esta sesión las raíces se buscan en \\(\\mathbb C\\); cuando el dominio se restrinja a \\(\\mathbb R\\), se indicará expresamente.\nAntes de factorizar o de aplicar la fórmula general, todos los términos deben reunirse en un miembro y el otro debe quedar igual a cero. Por ejemplo,\n\\[\n3x^2=12x\n\\quad\\Longleftrightarrow\\quad\n3x^2-12x=0.\n\\]\nLas operaciones equivalentes estudiadas en la Sesión 05 permiten realizar esta transformación. No se debe dividir entre una expresión que dependa de \\(x\\) sin justificar que es distinta de cero. Si puede anularse, ese caso debe analizarse por separado para no perder soluciones.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#resolución-por-factorización",
+    "href": "sesiones/2026-09-02-sesion-16.html#resolución-por-factorización",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Resolución por factorización",
+    "text": "Resolución por factorización\nLa propiedad del producto cero establece que, para números reales o complejos, \\(uv=0\\) si y solo si \\(u=0\\) o \\(v=0\\). Por ello, si\n\\[\nax^2+bx+c=a(x-r_1)(x-r_2),\n\\]\nentonces\n\\[\nax^2+bx+c=0\n\\quad\\Longleftrightarrow\\quad\nx=r_1\\ \\text{ o }\\ x=r_2.\n\\]\nLas técnicas de factorización de la Sesión 04 permiten reconocer varios casos:\n\n\n\nForma\nFactorización\nRaíces\n\n\n\n\n\\(ax^2+bx=0\\)\n\\(x(ax+b)=0\\)\n\\(0\\) y \\(-\\dfrac ba\\)\n\n\n\\(x^2-k=0\\), \\(k&gt;0\\)\n\\((x-\\sqrt{k})(x+\\sqrt{k})=0\\)\n\\(\\pm\\sqrt{k}\\)\n\n\n\\(x^2+bx+c=0\\)\n\\((x+m)(x+n)=0\\), si \\(m+n=b\\) y \\(mn=c\\)\n\\(-m\\) y \\(-n\\)\n\n\n\\(x^2+2hx+h^2=0\\)\n\\((x+h)^2=0\\)\n\\(-h\\), raíz doble\n\n\n\nUna raíz doble aparece dos veces como factor, aunque el conjunto solución la contenga una sola vez. Por ejemplo, \\((x-3)^2=0\\) tiene \\(S=\\{3\\}\\) y la raíz \\(3\\) tiene multiplicidad \\(2\\).\nLa factorización suele ser el procedimiento más breve cuando los factores se reconocen de inmediato. Cuando no es así, la fórmula general resuelve cualquier ecuación cuadrática.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#origen-de-la-fórmula-general",
+    "href": "sesiones/2026-09-02-sesion-16.html#origen-de-la-fórmula-general",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Origen de la fórmula general",
+    "text": "Origen de la fórmula general\nEl producto notable\n\\[\n(x+h)^2=x^2+2hx+h^2\n\\]\npermite transformar una ecuación cuadrática en otra de la forma \\((x+h)^2=k\\). Al aplicarlo a la ecuación general se obtiene una fórmula para todas las cuadráticas.\nSea \\(ax^2+bx+c=0\\), con \\(a\\ne0\\). Se divide entre \\(a\\) y se pasa el término independiente al miembro derecho:\n\\[\nx^2+\\frac ba x=-\\frac ca.\n\\]\nPara completar el cuadrado se suma \\(\\dfrac{b^2}{4a^2}\\) a ambos miembros:\n\\[\n\\begin{aligned}\nx^2+\\frac ba x+\\frac{b^2}{4a^2}\n&=\\frac{b^2}{4a^2}-\\frac ca,\\\\\n\\left(x+\\frac b{2a}\\right)^2\n&=\\frac{b^2-4ac}{4a^2}.\n\\end{aligned}\n\\]\nAl multiplicar la última igualdad por \\(4a^2\\) se obtiene\n\\[\n(2ax+b)^2=b^2-4ac.\n\\]\nPor tanto,\n\\[\n2ax+b=\\pm\\sqrt{b^2-4ac}.\n\\]\nAl despejar \\(x\\) se obtiene la fórmula general:\n\\[\n\\boxed{x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}}.\n\\]\nEl símbolo \\(\\pm\\) representa dos elecciones, una con el signo \\(+\\) y otra con el signo \\(-\\). Cuando el discriminante es cero, ambas coinciden. El denominador \\(2a\\) divide a todo el numerador.\nCompletar el cuadrado explica el origen de la fórmula; no es necesario repetir esa derivación en cada ecuación. En los cálculos ordinarios se elige entre una factorización visible y la fórmula general.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#discriminante-y-naturaleza-de-las-raíces",
+    "href": "sesiones/2026-09-02-sesion-16.html#discriminante-y-naturaleza-de-las-raíces",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Discriminante y naturaleza de las raíces",
+    "text": "Discriminante y naturaleza de las raíces\nEl número\n\\[\n\\Delta=b^2-4ac\n\\]\nse llama discriminante. Su signo permite anticipar la naturaleza de las raíces antes de calcularlas:\n\n\n\nValor de \\(\\Delta\\)\nNaturaleza de las raíces\n\n\n\n\n\\(\\Delta&gt;0\\)\nDos raíces reales distintas\n\n\n\\(\\Delta=0\\)\nUna raíz real doble, \\(x=-\\dfrac b{2a}\\)\n\n\n\\(\\Delta&lt;0\\)\nDos raíces complejas no reales y conjugadas\n\n\n\nSi \\(\\Delta&lt;0\\), se usa \\(\\sqrt{-d}=\\sqrt d\\,i\\) para \\(d&gt;0\\), como en la Sesión 07. Las raíces pueden escribirse como\n\\[\nx=-\\frac b{2a}\\pm\\frac{\\sqrt{-\\Delta}}{2a}i.\n\\]\nTienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la Sesión 08.\nEl discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando no es evidente, o cuando \\(\\Delta&lt;0\\), la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#ejemplos",
+    "href": "sesiones/2026-09-02-sesion-16.html#ejemplos",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Factorización\nResolver las ecuaciones siguientes.\na. \\(x^2-x-12=0\\).\nSe buscan dos enteros cuya suma sea \\(-1\\) y cuyo producto sea \\(-12\\): \\(-4\\) y \\(3\\). Por tanto,\n\\[\nx^2-x-12=(x-4)(x+3)=0,\n\\]\nde donde\n\\[\nx=4\\quad\\text{o}\\quad x=-3,\n\\qquad\nS=\\{-3,4\\}.\n\\]\nb. \\(3x^2=12x\\).\nPrimero se iguala a cero y después se extrae el factor común:\n\\[\n3x^2-12x=0\n\\quad\\Longleftrightarrow\\quad\n3x(x-4)=0.\n\\]\nAsí, \\(S=\\{0,4\\}\\). Dividir desde el inicio entre \\(x\\) habría eliminado la raíz \\(x=0\\).\n\n\nEjemplo 2. Discriminantes positivo y negativo\nPara \\(2x^2-4x-1=0\\),\n\\[\n\\Delta=(-4)^2-4(2)(-1)=24&gt;0.\n\\]\nComo \\(24\\) no es un cuadrado perfecto, se aplica la fórmula general y se simplifica el radical:\n\\[\n\\begin{aligned}\nx\n&=\\frac{4\\pm\\sqrt{24}}4\\\\\n&=\\frac{4\\pm2\\sqrt6}{4}\\\\\n&=1\\pm\\frac{\\sqrt6}{2}.\n\\end{aligned}\n\\]\nLas dos raíces son reales, distintas e irracionales.\nPara \\(x^2-4x+13=0\\),\n\\[\n\\Delta=(-4)^2-4(1)(13)=-36&lt;0.\n\\]\nLa fórmula general da\n\\[\nx=\\frac{4\\pm\\sqrt{-36}}2\n=\\frac{4\\pm6i}{2}\n=2\\pm3i.\n\\]\nLas raíces \\(2+3i\\) y \\(2-3i\\) son conjugadas.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#errores-frecuentes",
+    "href": "sesiones/2026-09-02-sesion-16.html#errores-frecuentes",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAplicar la propiedad del producto cero sin igualar a cero. De \\((x-1)(x+2)=10\\) no se sigue que un factor sea cero. Primero se desarrolla y se obtiene \\(x^2+x-12=0\\); después se factoriza como \\((x+4)(x-3)=0\\).\nDividir entre la incógnita. En \\(3x^2=12x\\), dividir entre \\(x\\) pierde la solución \\(x=0\\).\nOlvidar el signo de \\(-b\\). Si \\(b=-5\\), el numerador de la fórmula comienza con \\(-b=5\\).\nDividir solo una parte del numerador entre \\(2a\\). En \\(2x^2-4x-1=0\\), el denominador es \\(4\\) y divide tanto al \\(4\\) como al radical.\nAfirmar que no hay soluciones cuando \\(\\Delta&lt;0\\). No hay raíces reales, pero sí dos raíces complejas conjugadas.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#actividad",
+    "href": "sesiones/2026-09-02-sesion-16.html#actividad",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Actividad",
+    "text": "Actividad\n\nPara cada ecuación, calcule el discriminante, anticipe la naturaleza de las raíces, elija entre factorización y fórmula general, justifique su elección y resuelva. Compruebe una de las raíces obtenidas.\n\n\\(x^2+2x-15=0\\).\n\\(4x^2-12x+9=0\\).\n\\(x^2-6x+10=0\\).\n\nPara resolver \\(2x^2-5x+3=0\\), se escribió\n\\[\nx=\\frac{5\\pm\\sqrt{25-24}}{2}\n\\]\ny se concluyó que las raíces eran \\(3\\) y \\(2\\). Identifique el error, obtenga las raíces correctas y compruébelas.\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. El discriminante es\n\\[\n\\Delta=2^2-4(1)(-15)=64&gt;0,\n\\]\npor lo que hay dos raíces reales distintas. La factorización es visible:\n\\[\nx^2+2x-15=(x+5)(x-3),\n\\]\npor lo que \\(S=\\{-5,3\\}\\). Para \\(x=3\\), \\(9+6-15=0\\).\n\nSe obtiene\n\n\\[\n\\Delta=(-12)^2-4(4)(9)=0,\n\\]\nasí que hay una raíz real doble. Conviene reconocer el trinomio cuadrado perfecto:\n\\[\n4x^2-12x+9=(2x-3)^2,\n\\]\nde donde \\(S=\\left\\{\\dfrac32\\right\\}\\). La comprobación es\n\\[\n4\\left(\\frac32\\right)^2-12\\left(\\frac32\\right)+9\n=9-18+9=0.\n\\]\n\nEl discriminante es\n\n\\[\n\\Delta=(-6)^2-4(1)(10)=-4&lt;0,\n\\]\npor lo que hay dos raíces complejas conjugadas y corresponde usar la fórmula general:\n\\[\nx=\\frac{6\\pm\\sqrt{-4}}2=3\\pm i.\n\\]\nAsí, \\(S=\\{3+i,3-i\\}\\). Para \\(x=3+i\\),\n\\[\n(3+i)^2-6(3+i)+10\n=8+6i-18-6i+10=0.\n\\]\n2. El denominador de la fórmula es \\(2a=4\\), no \\(2\\). El cálculo correcto es\n\\[\nx=\\frac{5\\pm\\sqrt{25-24}}4\n=\\frac{5\\pm1}{4},\n\\]\nde donde \\(S=\\left\\{1,\\dfrac32\\right\\}\\). Al sustituir,\n\\[\n2(1)^2-5(1)+3=0\n\\]\ny\n\\[\n2\\left(\\frac32\\right)^2-5\\left(\\frac32\\right)+3\n=\\frac92-\\frac{15}{2}+3=0.\n\\]",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-02-sesion-16.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-02-sesion-16.html#ejercicios-para-practicar",
+    "title": "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nResuelva por factorización:\n\\[\nx^2-8x+15=0,\n\\qquad\n2x^2+7x=0,\n\\qquad\n9x^2-25=0,\n\\qquad\n6x^2-7x-3=0.\n\\]\nResuelva con la fórmula general y simplifique los radicales:\n\\[\nx^2-2x-4=0,\n\\qquad\n3x^2-2x-2=0,\n\\qquad\n4x^2+4x+5=0.\n\\]\nPara \\(k\\in\\mathbb R\\), determine los valores de \\(k\\) para los cuales \\(x^2+kx+9=0\\) tiene una raíz doble. Determine también para qué valores de \\(k\\) sus raíces no son reales.\nLa altura de un objeto, en metros, está dada por\n\\[\nh(t)=20t-5t^2,\n\\qquad 0\\le t\\le4,\n\\]\ndonde \\(t\\) se mide en segundos. Determine en qué instantes la altura es de \\(15\\) metros y compruebe que ambas respuestas pertenecen al intervalo indicado.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span>"
+    ]
+  },
+  {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
     "title": "Unidad 3. Sistemas de ecuaciones lineales",
@@ -1685,7 +1773,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1696,7 +1784,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1707,7 +1795,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1718,7 +1806,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1729,7 +1817,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1740,7 +1828,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1751,7 +1839,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1762,7 +1850,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1773,7 +1861,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1784,7 +1872,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1795,7 +1883,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1806,7 +1894,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1817,7 +1905,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1828,7 +1916,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1839,7 +1927,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1850,7 +1938,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1861,7 +1949,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1872,7 +1960,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
