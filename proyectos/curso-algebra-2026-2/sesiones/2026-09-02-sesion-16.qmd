@@ -1,0 +1,341 @@
+---
+title: "Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante"
+date: 2026-09-02
+description: "Resolución de ecuaciones cuadráticas con coeficientes reales mediante factorización y fórmula general; discriminante y naturaleza de las raíces."
+---
+
+## Ecuaciones cuadráticas
+
+Una **ecuación cuadrática** en la variable $x$ es una ecuación que puede escribirse en la forma
+
+$$
+ax^2+bx+c=0,
+\qquad
+a,b,c\in\mathbb R,
+\qquad
+a\ne0.
+$$
+
+La condición $a\ne0$ garantiza que el polinomio del miembro izquierdo tenga grado $2$, de acuerdo con la [Sesión 15](2026-09-01-sesion-15.qmd). Los números que satisfacen la ecuación se llaman **raíces** de la ecuación o del polinomio $p(x)=ax^2+bx+c$. En esta sesión las raíces se buscan en $\mathbb C$; cuando el dominio se restrinja a $\mathbb R$, se indicará expresamente.
+
+Antes de factorizar o de aplicar la fórmula general, todos los términos deben reunirse en un miembro y el otro debe quedar igual a cero. Por ejemplo,
+
+$$
+3x^2=12x
+\quad\Longleftrightarrow\quad
+3x^2-12x=0.
+$$
+
+Las operaciones equivalentes estudiadas en la [Sesión 05](2026-08-14-sesion-05.qmd) permiten realizar esta transformación. No se debe dividir entre una expresión que dependa de $x$ sin justificar que es distinta de cero. Si puede anularse, ese caso debe analizarse por separado para no perder soluciones.
+
+## Resolución por factorización
+
+La **propiedad del producto cero** establece que, para números reales o complejos, $uv=0$ si y solo si $u=0$ o $v=0$. Por ello, si
+
+$$
+ax^2+bx+c=a(x-r_1)(x-r_2),
+$$
+
+entonces
+
+$$
+ax^2+bx+c=0
+\quad\Longleftrightarrow\quad
+x=r_1\ \text{ o }\ x=r_2.
+$$
+
+Las técnicas de factorización de la [Sesión 04](2026-08-13-sesion-04.qmd) permiten reconocer varios casos:
+
+| Forma | Factorización | Raíces |
+|---|---|---|
+| $ax^2+bx=0$ | $x(ax+b)=0$ | $0$ y $-\dfrac ba$ |
+| $x^2-k=0$, $k>0$ | $(x-\sqrt{k})(x+\sqrt{k})=0$ | $\pm\sqrt{k}$ |
+| $x^2+bx+c=0$ | $(x+m)(x+n)=0$, si $m+n=b$ y $mn=c$ | $-m$ y $-n$ |
+| $x^2+2hx+h^2=0$ | $(x+h)^2=0$ | $-h$, raíz doble |
+
+Una raíz **doble** aparece dos veces como factor, aunque el conjunto solución la contenga una sola vez. Por ejemplo, $(x-3)^2=0$ tiene $S=\{3\}$ y la raíz $3$ tiene multiplicidad $2$.
+
+La factorización suele ser el procedimiento más breve cuando los factores se reconocen de inmediato. Cuando no es así, la fórmula general resuelve cualquier ecuación cuadrática.
+
+## Origen de la fórmula general
+
+El producto notable
+
+$$
+(x+h)^2=x^2+2hx+h^2
+$$
+
+permite transformar una ecuación cuadrática en otra de la forma $(x+h)^2=k$. Al aplicarlo a la ecuación general se obtiene una fórmula para todas las cuadráticas.
+
+Sea $ax^2+bx+c=0$, con $a\ne0$. Se divide entre $a$ y se pasa el término independiente al miembro derecho:
+
+$$
+x^2+\frac ba x=-\frac ca.
+$$
+
+Para completar el cuadrado se suma $\dfrac{b^2}{4a^2}$ a ambos miembros:
+
+$$
+\begin{aligned}
+x^2+\frac ba x+\frac{b^2}{4a^2}
+&=\frac{b^2}{4a^2}-\frac ca,\\
+\left(x+\frac b{2a}\right)^2
+&=\frac{b^2-4ac}{4a^2}.
+\end{aligned}
+$$
+
+Al multiplicar la última igualdad por $4a^2$ se obtiene
+
+$$
+(2ax+b)^2=b^2-4ac.
+$$
+
+Por tanto,
+
+$$
+2ax+b=\pm\sqrt{b^2-4ac}.
+$$
+
+Al despejar $x$ se obtiene la **fórmula general**:
+
+$$
+\boxed{x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}}.
+$$
+
+El símbolo $\pm$ representa dos elecciones, una con el signo $+$ y otra con el signo $-$. Cuando el discriminante es cero, ambas coinciden. El denominador $2a$ divide a todo el numerador.
+
+Completar el cuadrado explica el origen de la fórmula; no es necesario repetir esa derivación en cada ecuación. En los cálculos ordinarios se elige entre una factorización visible y la fórmula general.
+
+## Discriminante y naturaleza de las raíces
+
+El número
+
+$$
+\Delta=b^2-4ac
+$$
+
+se llama **discriminante**. Su signo permite anticipar la naturaleza de las raíces antes de calcularlas:
+
+| Valor de $\Delta$ | Naturaleza de las raíces |
+|---|---|
+| $\Delta>0$ | Dos raíces reales distintas |
+| $\Delta=0$ | Una raíz real doble, $x=-\dfrac b{2a}$ |
+| $\Delta<0$ | Dos raíces complejas no reales y conjugadas |
+
+Si $\Delta<0$, se usa $\sqrt{-d}=\sqrt d\,i$ para $d>0$, como en la [Sesión 07](2026-08-18-sesion-07.qmd). Las raíces pueden escribirse como
+
+$$
+x=-\frac b{2a}\pm\frac{\sqrt{-\Delta}}{2a}i.
+$$
+
+Tienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la [Sesión 08](2026-08-19-sesion-08.qmd).
+
+El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando no es evidente, o cuando $\Delta<0$, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.
+
+## Ejemplos
+
+### Ejemplo 1. Factorización
+
+Resolver las ecuaciones siguientes.
+
+**a.** $x^2-x-12=0$.
+
+Se buscan dos enteros cuya suma sea $-1$ y cuyo producto sea $-12$: $-4$ y $3$. Por tanto,
+
+$$
+x^2-x-12=(x-4)(x+3)=0,
+$$
+
+de donde
+
+$$
+x=4\quad\text{o}\quad x=-3,
+\qquad
+S=\{-3,4\}.
+$$
+
+**b.** $3x^2=12x$.
+
+Primero se iguala a cero y después se extrae el factor común:
+
+$$
+3x^2-12x=0
+\quad\Longleftrightarrow\quad
+3x(x-4)=0.
+$$
+
+Así, $S=\{0,4\}$. Dividir desde el inicio entre $x$ habría eliminado la raíz $x=0$.
+
+### Ejemplo 2. Discriminantes positivo y negativo
+
+Para $2x^2-4x-1=0$,
+
+$$
+\Delta=(-4)^2-4(2)(-1)=24>0.
+$$
+
+Como $24$ no es un cuadrado perfecto, se aplica la fórmula general y se simplifica el radical:
+
+$$
+\begin{aligned}
+x
+&=\frac{4\pm\sqrt{24}}4\\
+&=\frac{4\pm2\sqrt6}{4}\\
+&=1\pm\frac{\sqrt6}{2}.
+\end{aligned}
+$$
+
+Las dos raíces son reales, distintas e irracionales.
+
+Para $x^2-4x+13=0$,
+
+$$
+\Delta=(-4)^2-4(1)(13)=-36<0.
+$$
+
+La fórmula general da
+
+$$
+x=\frac{4\pm\sqrt{-36}}2
+=\frac{4\pm6i}{2}
+=2\pm3i.
+$$
+
+Las raíces $2+3i$ y $2-3i$ son conjugadas.
+
+## Errores frecuentes
+
+- **Aplicar la propiedad del producto cero sin igualar a cero.** De $(x-1)(x+2)=10$ no se sigue que un factor sea cero. Primero se desarrolla y se obtiene $x^2+x-12=0$; después se factoriza como $(x+4)(x-3)=0$.
+- **Dividir entre la incógnita.** En $3x^2=12x$, dividir entre $x$ pierde la solución $x=0$.
+- **Olvidar el signo de $-b$.** Si $b=-5$, el numerador de la fórmula comienza con $-b=5$.
+- **Dividir solo una parte del numerador entre $2a$.** En $2x^2-4x-1=0$, el denominador es $4$ y divide tanto al $4$ como al radical.
+- **Afirmar que no hay soluciones cuando $\Delta<0$.** No hay raíces reales, pero sí dos raíces complejas conjugadas.
+
+## Actividad
+
+1. Para cada ecuación, calcule el discriminante, anticipe la naturaleza de las raíces, elija entre factorización y fórmula general, justifique su elección y resuelva. Compruebe una de las raíces obtenidas.
+
+   a. $x^2+2x-15=0$.
+
+   b. $4x^2-12x+9=0$.
+
+   c. $x^2-6x+10=0$.
+
+2. Para resolver $2x^2-5x+3=0$, se escribió
+
+   $$
+   x=\frac{5\pm\sqrt{25-24}}{2}
+   $$
+
+   y se concluyó que las raíces eran $3$ y $2$. Identifique el error, obtenga las raíces correctas y compruébelas.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** a. El discriminante es
+
+$$
+\Delta=2^2-4(1)(-15)=64>0,
+$$
+
+por lo que hay dos raíces reales distintas. La factorización es visible:
+
+$$
+x^2+2x-15=(x+5)(x-3),
+$$
+
+por lo que $S=\{-5,3\}$. Para $x=3$, $9+6-15=0$.
+
+b. Se obtiene
+
+$$
+\Delta=(-12)^2-4(4)(9)=0,
+$$
+
+así que hay una raíz real doble. Conviene reconocer el trinomio cuadrado perfecto:
+
+$$
+4x^2-12x+9=(2x-3)^2,
+$$
+
+de donde $S=\left\{\dfrac32\right\}$. La comprobación es
+
+$$
+4\left(\frac32\right)^2-12\left(\frac32\right)+9
+=9-18+9=0.
+$$
+
+c. El discriminante es
+
+$$
+\Delta=(-6)^2-4(1)(10)=-4<0,
+$$
+
+por lo que hay dos raíces complejas conjugadas y corresponde usar la fórmula general:
+
+$$
+x=\frac{6\pm\sqrt{-4}}2=3\pm i.
+$$
+
+Así, $S=\{3+i,3-i\}$. Para $x=3+i$,
+
+$$
+(3+i)^2-6(3+i)+10
+=8+6i-18-6i+10=0.
+$$
+
+**2.** El denominador de la fórmula es $2a=4$, no $2$. El cálculo correcto es
+
+$$
+x=\frac{5\pm\sqrt{25-24}}4
+=\frac{5\pm1}{4},
+$$
+
+de donde $S=\left\{1,\dfrac32\right\}$. Al sustituir,
+
+$$
+2(1)^2-5(1)+3=0
+$$
+
+y
+
+$$
+2\left(\frac32\right)^2-5\left(\frac32\right)+3
+=\frac92-\frac{15}{2}+3=0.
+$$
+
+:::
+
+## Ejercicios para practicar
+
+1. Resuelva por factorización:
+
+   $$
+   x^2-8x+15=0,
+   \qquad
+   2x^2+7x=0,
+   \qquad
+   9x^2-25=0,
+   \qquad
+   6x^2-7x-3=0.
+   $$
+
+2. Resuelva con la fórmula general y simplifique los radicales:
+
+   $$
+   x^2-2x-4=0,
+   \qquad
+   3x^2-2x-2=0,
+   \qquad
+   4x^2+4x+5=0.
+   $$
+
+3. Para $k\in\mathbb R$, determine los valores de $k$ para los cuales $x^2+kx+9=0$ tiene una raíz doble. Determine también para qué valores de $k$ sus raíces no son reales.
+
+4. La altura de un objeto, en metros, está dada por
+
+   $$
+   h(t)=20t-5t^2,
+   \qquad 0\le t\le4,
+   $$
+
+   donde $t$ se mide en segundos. Determine en qué instantes la altura es de $15$ metros y compruebe que ambas respuestas pertenecen al intervalo indicado.
