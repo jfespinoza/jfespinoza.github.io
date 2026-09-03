@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Relación entre los ceros reales y las intersecciones con el eje horizontal, comportamiento extremo, signo por intervalos y uso exploratorio de la gráfica digital.">
+<meta name="description" content="División de polinomios, teoremas del residuo y del factor, y regla de Ruffini para dividir entre x-c.">
 
-<title>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo – Álgebra</title>
+<title>Sesión 17. Teoremas del residuo y del factor; regla de Ruffini – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo – Álgebra">
-<meta property="og:description" content="Relación entre los ceros reales y las intersecciones con el eje horizontal, comportamiento extremo, signo por intervalos y uso exploratorio de la gráfica digital.">
+<meta property="og:title" content="Sesión 17. Teoremas del residuo y del factor; regla de Ruffini – Álgebra">
+<meta property="og:description" content="División de polinomios, teoremas del residuo y del factor, y regla de Ruffini para dividir entre x-c.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-03-sesion-17.html"><span class="chapter-title">Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-03-sesion-17.html"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -307,7 +307,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span></a>
+  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a>
   </div>
 </li>
       </ul>
@@ -407,11 +407,16 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#gráfica-y-ceros-de-un-polinomio" id="toc-gráfica-y-ceros-de-un-polinomio" class="nav-link active" data-scroll-target="#gráfica-y-ceros-de-un-polinomio">Gráfica y ceros de un polinomio</a></li>
-  <li><a href="#comportamiento-en-los-extremos" id="toc-comportamiento-en-los-extremos" class="nav-link" data-scroll-target="#comportamiento-en-los-extremos">Comportamiento en los extremos</a></li>
-  <li><a href="#signo-entre-raíces-consecutivas" id="toc-signo-entre-raíces-consecutivas" class="nav-link" data-scroll-target="#signo-entre-raíces-consecutivas">Signo entre raíces consecutivas</a></li>
-  <li><a href="#ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico" id="toc-ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico" class="nav-link" data-scroll-target="#ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico">Ejemplo. Bosquejo de la gráfica de un polinomio cúbico</a></li>
-  <li><a href="#exploración-gráfica-y-comprobación-algebraica" id="toc-exploración-gráfica-y-comprobación-algebraica" class="nav-link" data-scroll-target="#exploración-gráfica-y-comprobación-algebraica">Exploración gráfica y comprobación algebraica</a></li>
+  <li><a href="#división-de-polinomios" id="toc-división-de-polinomios" class="nav-link active" data-scroll-target="#división-de-polinomios">División de polinomios</a>
+  <ul class="collapse">
+  <li><a href="#un-ejemplo-de-división-larga" id="toc-un-ejemplo-de-división-larga" class="nav-link" data-scroll-target="#un-ejemplo-de-división-larga">Un ejemplo de división larga</a></li>
+  </ul></li>
+  <li><a href="#teorema-del-residuo" id="toc-teorema-del-residuo" class="nav-link" data-scroll-target="#teorema-del-residuo">Teorema del residuo</a></li>
+  <li><a href="#teorema-del-factor" id="toc-teorema-del-factor" class="nav-link" data-scroll-target="#teorema-del-factor">Teorema del factor</a></li>
+  <li><a href="#regla-de-ruffini" id="toc-regla-de-ruffini" class="nav-link" data-scroll-target="#regla-de-ruffini">Regla de Ruffini</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo">Ejemplo</a></li>
+  </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -421,9 +426,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-03-sesion-17.html"><span class="chapter-title">Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-03-sesion-17.html"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></h1>
 </div>
 
 
@@ -446,268 +451,169 @@ window.Quarto = {
 </header>
 
 
-<section id="gráfica-y-ceros-de-un-polinomio" class="level2">
-<h2 class="anchored" data-anchor-id="gráfica-y-ceros-de-un-polinomio">Gráfica y ceros de un polinomio</h2>
-<p>Sea</p>
+<section id="división-de-polinomios" class="level2">
+<h2 class="anchored" data-anchor-id="división-de-polinomios">División de polinomios</h2>
+<p>La <a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a> introdujo la estructura y la evaluación directa de los polinomios, y la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a> relacionó las raíces con ecuaciones polinómicas. La división de polinomios permite conectar ambas ideas mediante cocientes y residuos.</p>
+<p>Sean <span class="math inline">\(p(x)\)</span> y <span class="math inline">\(d(x)\)</span> polinomios con coeficientes reales, con <span class="math inline">\(d(x)\ne 0\)</span>. Existen polinomios únicos <span class="math inline">\(q(x)\)</span> y <span class="math inline">\(r(x)\)</span> tales que</p>
 <p><span class="math display">\[
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
-\qquad
-n\ge 1,
-\qquad
-a_n\ne0,
+p(x)=d(x)q(x)+r(x),
 \]</span></p>
-<p>un polinomio no constante con coeficientes reales. Su <strong>gráfica</strong> es el conjunto de puntos <span class="math inline">\((x,p(x))\)</span> del plano, es decir, la curva de ecuación <span class="math inline">\(y=p(x)\)</span>. Una tabla de valores permite obtener puntos de la curva mediante la evaluación estudiada en la <a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a>, pero una tabla breve no muestra por sí sola su comportamiento completo.</p>
-<p>Un número real <span class="math inline">\(r\)</span> es un <strong>cero</strong> o una <strong>raíz real</strong> de <span class="math inline">\(p\)</span> si <span class="math inline">\(p(r)=0\)</span>, como en la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>. Por tanto,</p>
+<p>donde <span class="math inline">\(r(x)=0\)</span> o</p>
 <p><span class="math display">\[
-p(r)=0
+\operatorname{gr}(r)&lt;\operatorname{gr}(d).
+\]</span></p>
+<p>El polinomio <span class="math inline">\(p(x)\)</span> es el <strong>dividendo</strong>, <span class="math inline">\(d(x)\)</span> es el <strong>divisor</strong>, <span class="math inline">\(q(x)\)</span> es el <strong>cociente</strong> y <span class="math inline">\(r(x)\)</span> es el <strong>residuo</strong>. Si <span class="math inline">\(r(x)=0\)</span>, la división es exacta y <span class="math inline">\(d(x)\)</span> es un factor de <span class="math inline">\(p(x)\)</span>.</p>
+<section id="un-ejemplo-de-división-larga" class="level3">
+<h3 class="anchored" data-anchor-id="un-ejemplo-de-división-larga">Un ejemplo de división larga</h3>
+<p>Dividamos</p>
+<p><span class="math display">\[
+p(x)=x^3+2x^2-x+3
+\]</span></p>
+<p>entre <span class="math inline">\(d(x)=x^2+1\)</span>.</p>
+<p>El primer término del cociente se obtiene al dividir los términos principales:</p>
+<p><span class="math display">\[
+\frac{x^3}{x^2}=x.
+\]</span></p>
+<p>Se resta <span class="math inline">\(x(x^2+1)=x^3+x\)</span> del dividendo:</p>
+<p><span class="math display">\[
+x^3+2x^2-x+3-(x^3+x)=2x^2-2x+3.
+\]</span></p>
+<p>El siguiente término del cociente es <span class="math inline">\(2x^2/x^2=2\)</span>. Al restar <span class="math inline">\(2(x^2+1)=2x^2+2\)</span>, queda</p>
+<p><span class="math display">\[
+-2x+1.
+\]</span></p>
+<p>Como este residuo tiene grado <span class="math inline">\(1\)</span>, menor que el grado <span class="math inline">\(2\)</span> del divisor, la división termina:</p>
+<p><span class="math display">\[
+q(x)=x+2,
+\qquad
+r(x)=-2x+1.
+\]</span></p>
+<p>La verificación recupera el dividendo:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x^2+1)(x+2)+(-2x+1)
+&amp;=x^3+2x^2+x+2-2x+1\\
+&amp;=x^3+2x^2-x+3.
+\end{aligned}
+\]</span></p>
+</section>
+</section>
+<section id="teorema-del-residuo" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-del-residuo">Teorema del residuo</h2>
+<p>Sea <span class="math inline">\(c\in\mathbb R\)</span>. Cuando el divisor es <span class="math inline">\(x-c\)</span>, el residuo es cero o es un polinomio constante. La identidad de la división tiene la forma</p>
+<p><span class="math display">\[
+p(x)=(x-c)q(x)+r.
+\]</span></p>
+<p>Al sustituir <span class="math inline">\(x=c\)</span> se obtiene</p>
+<p><span class="math display">\[
+p(c)=(c-c)q(c)+r=r.
+\]</span></p>
+<p>En consecuencia:</p>
+<blockquote class="blockquote">
+<p><strong>Teorema del residuo.</strong> El residuo de dividir <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> es <span class="math inline">\(p(c)\)</span>.</p>
+</blockquote>
+<p>Este resultado permite conocer el residuo sin efectuar la división completa.</p>
+</section>
+<section id="teorema-del-factor" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-del-factor">Teorema del factor</h2>
+<p>La división entre <span class="math inline">\(x-c\)</span> es exacta precisamente cuando su residuo es cero. Como el residuo es <span class="math inline">\(p(c)\)</span>, se obtiene la equivalencia</p>
+<p><span class="math display">\[
+p(c)=0
 \quad\Longleftrightarrow\quad
-(r,0)\text{ pertenece a la gráfica de }p.
+x-c\text{ es factor de }p(x).
 \]</span></p>
-<p>Las raíces reales son exactamente las abscisas de los puntos donde la gráfica corta o toca el eje horizontal. Las raíces complejas no reales no aparecen como intersecciones en una gráfica real. Por ejemplo, <span class="math inline">\(x^2+1\)</span> tiene las raíces <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span>, pero <span class="math inline">\(x^2+1&gt;0\)</span> para todo <span class="math inline">\(x\in\mathbb R\)</span>, de modo que su gráfica no toca el eje horizontal.</p>
-<p>La intersección con el eje vertical se obtiene al tomar <span class="math inline">\(x=0\)</span>:</p>
+<p>Por tanto:</p>
+<blockquote class="blockquote">
+<p><strong>Teorema del factor.</strong> El número <span class="math inline">\(c\)</span> es una raíz de <span class="math inline">\(p(x)\)</span> si y solo si <span class="math inline">\(x-c\)</span> es un factor de <span class="math inline">\(p(x)\)</span>.</p>
+</blockquote>
+<p>Si <span class="math inline">\(p(x)\)</span> tiene grado <span class="math inline">\(n\ge 1\)</span> y <span class="math inline">\(c\)</span> es una raíz, entonces</p>
 <p><span class="math display">\[
-p(0)=a_0.
+p(x)=(x-c)q(x),
 \]</span></p>
-<p>Por ello, la gráfica corta el eje vertical en <span class="math inline">\((0,a_0)\)</span>. Este punto no representa una raíz, salvo cuando <span class="math inline">\(a_0=0\)</span>.</p>
-<p>Una gráfica digital puede sugerir la posición de una raíz, pero debe comprobarse algebraicamente que <span class="math inline">\(p(r)=0\)</span>, ya sea por evaluación o mediante una factorización.</p>
+<p>donde <span class="math inline">\(q(x)\)</span> tiene grado <span class="math inline">\(n-1\)</span>. Una raíz conocida permite así reducir en una unidad el grado del problema.</p>
+<p>Por ejemplo, para</p>
+<p><span class="math display">\[
+p(x)=2x^3-5x^2+3
+\]</span></p>
+<p>se tiene</p>
+<p><span class="math display">\[
+p(1)=2-5+3=0,
+\qquad
+p(2)=16-20+3=-1.
+\]</span></p>
+<p>Entonces <span class="math inline">\(x-1\)</span> es factor de <span class="math inline">\(p(x)\)</span>, mientras que <span class="math inline">\(x-2\)</span> no lo es. Además, el residuo de la división entre <span class="math inline">\(x-2\)</span> es <span class="math inline">\(-1\)</span>.</p>
 </section>
-<section id="comportamiento-en-los-extremos" class="level2">
-<h2 class="anchored" data-anchor-id="comportamiento-en-los-extremos">Comportamiento en los extremos</h2>
-<p>El <strong>comportamiento en los extremos</strong> describe lo que ocurre con <span class="math inline">\(p(x)\)</span> cuando <span class="math inline">\(x\)</span> toma valores positivos o negativos de gran valor absoluto. Lo determina el término principal <span class="math inline">\(a_nx^n\)</span>. Para <span class="math inline">\(x\ne0\)</span> puede escribirse</p>
+<section id="regla-de-ruffini" class="level2">
+<h2 class="anchored" data-anchor-id="regla-de-ruffini">Regla de Ruffini</h2>
+<p>La <strong>regla de Ruffini</strong> abrevia la división entre <span class="math inline">\(x-c\)</span>. Utiliza únicamente los coeficientes de <span class="math inline">\(p(x)\)</span>.</p>
+<ol type="1">
+<li>Ordenar el polinomio y escribir un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente.</li>
+<li>Identificar el número <span class="math inline">\(c\)</span> del divisor <span class="math inline">\(x-c\)</span> y conservar su signo.</li>
+<li>Bajar el coeficiente principal.</li>
+<li>Multiplicar el último número obtenido por <span class="math inline">\(c\)</span> y sumar el resultado al coeficiente siguiente.</li>
+<li>Repetir hasta llegar al término independiente.</li>
+</ol>
+<p>Los números finales, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con <span class="math inline">\(p(c)\)</span>.</p>
+<section id="ejemplo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<p>Dividamos</p>
 <p><span class="math display">\[
-p(x)=x^n\left(a_n+\frac{a_{n-1}}{x}+\frac{a_{n-2}}{x^2}+\cdots+\frac{a_0}{x^n}\right).
+p(x)=2x^3-5x^2+3
 \]</span></p>
-<p>Cuando <span class="math inline">\(\lvert x\rvert\)</span> crece, los términos fraccionarios del paréntesis se acercan a <span class="math inline">\(0\)</span>. En consecuencia, lejos del origen, el signo y el crecimiento de <span class="math inline">\(p(x)\)</span> siguen los de <span class="math inline">\(a_nx^n\)</span>.</p>
+<p>entre <span class="math inline">\(x-1\)</span>. Debe incluirse el coeficiente <span class="math inline">\(0\)</span> del término en <span class="math inline">\(x\)</span>:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Grado</th>
-<th style="text-align: right;">Coeficiente principal</th>
-<th>Extremo izquierdo</th>
-<th>Extremo derecho</th>
+<th>Renglón</th>
+<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;">término independiente</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Par</td>
-<td style="text-align: right;"><span class="math inline">\(a_n&gt;0\)</span></td>
-<td>La gráfica sube</td>
-<td>La gráfica sube</td>
-</tr>
-<tr class="even">
-<td>Par</td>
-<td style="text-align: right;"><span class="math inline">\(a_n&lt;0\)</span></td>
-<td>La gráfica baja</td>
-<td>La gráfica baja</td>
-</tr>
-<tr class="odd">
-<td>Impar</td>
-<td style="text-align: right;"><span class="math inline">\(a_n&gt;0\)</span></td>
-<td>La gráfica baja</td>
-<td>La gráfica sube</td>
-</tr>
-<tr class="even">
-<td>Impar</td>
-<td style="text-align: right;"><span class="math inline">\(a_n&lt;0\)</span></td>
-<td>La gráfica sube</td>
-<td>La gráfica baja</td>
-</tr>
-</tbody>
-</table>
-<p>Aquí, subir significa que los valores de <span class="math inline">\(p(x)\)</span> crecen sin cota superior, y bajar, que decrecen sin cota inferior. El polinomio debe ordenarse y simplificarse antes de identificar el término principal. En</p>
-<p><span class="math display">\[
-5x-2x^3+1,
-\]</span></p>
-<p>el término principal es <span class="math inline">\(-2x^3\)</span>; por tanto, la gráfica sube a la izquierda y baja a la derecha.</p>
-<p>Todo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: los extremos de su gráfica tienen comportamientos opuestos y, por continuidad, la gráfica debe cruzar el eje horizontal. En grado par, ambos extremos apuntan hacia el mismo lado y puede no haber raíces reales.</p>
-</section>
-<section id="signo-entre-raíces-consecutivas" class="level2">
-<h2 class="anchored" data-anchor-id="signo-entre-raíces-consecutivas">Signo entre raíces consecutivas</h2>
-<p>Las gráficas de los polinomios son continuas: no tienen saltos ni interrupciones. Si un polinomio no tiene raíces en un intervalo abierto, conserva el mismo signo en todo ese intervalo. De otro modo, la gráfica tendría que pasar de un lado del eje horizontal al otro y cruzarlo en algún punto intermedio.</p>
-<p>Las raíces reales dividen la recta en intervalos. El signo de <span class="math inline">\(p(x)\)</span> en cada uno puede determinarse de dos maneras:</p>
-<ul>
-<li><strong>Valor de prueba:</strong> se elige cualquier número del intervalo y se evalúa el polinomio.</li>
-<li><strong>Signo de los factores:</strong> si el polinomio está factorizado, se determina el signo de cada factor y después el signo del producto.</li>
-</ul>
-<p>El signo no se alterna automáticamente al pasar por cada raíz. Por ejemplo, <span class="math inline">\((x-1)^2\)</span> es positivo a ambos lados de <span class="math inline">\(1\)</span>; su gráfica toca el eje horizontal en ese punto y no lo cruza.</p>
-</section>
-<section id="ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico">Ejemplo. Bosquejo de la gráfica de un polinomio cúbico</h2>
-<p>Considérese</p>
-<p><span class="math display">\[
-p(x)=x^3-4x.
-\]</span></p>
-<p>El término principal es <span class="math inline">\(x^3\)</span>, de grado impar y coeficiente positivo: la gráfica baja a la izquierda y sube a la derecha. Además,</p>
-<p><span class="math display">\[
-p(0)=0,
-\]</span></p>
-<p>por lo que la intersección con el eje vertical es el origen. Al factorizar,</p>
-<p><span class="math display">\[
-p(x)=x(x^2-4)=x(x-2)(x+2).
-\]</span></p>
-<p>Las raíces reales son <span class="math inline">\(-2\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(2\)</span>. Para determinar el signo se elige un valor de prueba en cada intervalo:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 26%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Intervalo</th>
-<th style="text-align: right;">Valor de prueba</th>
-<th style="text-align: right;">Valor de <span class="math inline">\(p(x)\)</span></th>
-<th style="text-align: center;">Signo</th>
-<th>Posición de la gráfica</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\((-\infty,-2)\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(p(-3)=-15\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td>Debajo del eje</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\((-2,0)\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(p(-1)=3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td>Encima del eje</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\((0,2)\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(p(1)=-3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td>Debajo del eje</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\((2,\infty)\)</span></td>
+<td>Coeficientes</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(p(3)=15\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td>Encima del eje</td>
+</tr>
+<tr class="even">
+<td>Productos por <span class="math inline">\(c=1\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sumas</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\mathbf{0}\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Con estos datos se obtiene el siguiente bosquejo.</p>
-<figure style="max-width: 780px; margin: 1.5rem auto;" class="figure">
-  <div role="region" aria-label="Gráfica desplazable de y igual a x al cubo menos cuatro x" tabindex="0" style="max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; padding-bottom:0.25rem;">
-    <svg viewbox="0 0 700 480" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s17-title s17-desc" focusable="false" style="display:block; min-width:620px; height:auto;" xmlns="http://www.w3.org/2000/svg">
-      <title id="s17-title">Bosquejo de la gráfica de y igual a x al cubo menos cuatro x</title>
-      <desc id="s17-desc">La curva baja hacia la izquierda, cruza el eje horizontal en menos dos, cero y dos, y sube hacia la derecha. Está debajo del eje antes de menos dos y entre cero y dos; está encima del eje entre menos dos y cero y después de dos.</desc>
-      <defs>
-        <marker id="s17-axis-arrow" viewbox="0 0 10 10" refx="8" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"></path>
-        </marker>
-        <filter id="s17-shadow" x="-10%" y="-10%" width="120%" height="125%">
-          <fedropshadow dx="0" dy="5" stddeviation="7" flood-color="#0f172a" flood-opacity="0.12"></fedropshadow>
-        </filter>
-      </defs>
-      <rect x="12" y="12" width="676" height="456" rx="22" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#s17-shadow)"></rect>
-      <text x="350" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="23" font-weight="700" fill="#0f172a">y = x³ − 4x</text>
-      <text x="350" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#64748b">Raíces, signo y comportamiento extremo</text>
-      <rect x="66" y="91" width="568" height="340" rx="14" fill="#ffffff" stroke="#e2e8f0"></rect>
-      <g stroke="#e2e8f0" stroke-width="1">
-        <line x1="90" y1="130" x2="610" y2="130"></line>
-        <line x1="90" y1="190" x2="610" y2="190"></line>
-        <line x1="90" y1="310" x2="610" y2="310"></line>
-        <line x1="90" y1="370" x2="610" y2="370"></line>
-        <line x1="170" y1="100" x2="170" y2="420"></line>
-        <line x1="250" y1="100" x2="250" y2="420"></line>
-        <line x1="410" y1="100" x2="410" y2="420"></line>
-        <line x1="490" y1="100" x2="490" y2="420"></line>
-      </g>
-      <g stroke="#475569" stroke-width="2" marker-end="url(#s17-axis-arrow)">
-        <line x1="78" y1="250" x2="622" y2="250"></line>
-        <line x1="330" y1="422" x2="330" y2="96"></line>
-      </g>
-      <g font-family="system-ui, sans-serif" font-size="14" fill="#475569">
-        <text x="628" y="244">x</text>
-        <text x="342" y="104">y</text>
-        <text x="90" y="270" text-anchor="middle">−3</text>
-        <text x="170" y="270" text-anchor="middle">−2</text>
-        <text x="250" y="270" text-anchor="middle">−1</text>
-        <text x="342" y="270">0</text>
-        <text x="410" y="270" text-anchor="middle">1</text>
-        <text x="490" y="270" text-anchor="middle">2</text>
-        <text x="570" y="270" text-anchor="middle">3</text>
-      </g>
-      <path d="M 90 400 C 250 -60, 410 560, 570 100" fill="none" stroke="#1d4ed8" stroke-width="4.5" stroke-linecap="round"></path>
-      <g fill="#7c3aed" stroke="#ffffff" stroke-width="2.5">
-        <circle cx="170" cy="250" r="7"></circle>
-        <circle cx="330" cy="250" r="7"></circle>
-        <circle cx="490" cy="250" r="7"></circle>
-      </g>
-      <g font-family="system-ui, sans-serif" font-size="14" font-weight="650">
-        <text x="138" y="397" fill="#b45309">p(x) &lt; 0</text>
-        <text x="224" y="177" fill="#0369a1">p(x) &gt; 0</text>
-        <text x="386" y="338" fill="#b45309">p(x) &lt; 0</text>
-        <text x="505" y="139" fill="#0369a1">p(x) &gt; 0</text>
-      </g>
-    </svg>
-  </div>
-  <figcaption style="text-align:center; color:#475569; margin-top:0.5rem;">Bosquejo construido con las raíces, el signo por intervalos y el término principal.</figcaption>
-</figure>
-<p>El bosquejo debe respetar las intersecciones, los signos y el comportamiento en los extremos. No determina por sí solo la ubicación exacta de los puntos máximos o mínimos que puedan aparecer entre las raíces.</p>
-<p>La tabla de signos permite además resolver una inecuación no lineal. En este ejemplo,</p>
+<p>El cociente es</p>
 <p><span class="math display">\[
-p(x)&gt;0
-\quad\Longleftrightarrow\quad
-x\in(-2,0)\cup(2,\infty).
+q(x)=2x^2-3x-3
 \]</span></p>
+<p>y el residuo es <span class="math inline">\(0\)</span>. La tabla confirma simultáneamente que <span class="math inline">\(p(1)=0\)</span> y que <span class="math inline">\(x-1\)</span> es factor:</p>
+<p><span class="math display">\[
+2x^3-5x^2+3=(x-1)(2x^2-3x-3).
+\]</span></p>
+<p>La regla se usa en esta forma únicamente cuando el divisor es <span class="math inline">\(x-c\)</span>. Si el divisor es <span class="math inline">\(x+2\)</span>, debe escribirse como <span class="math inline">\(x-(-2)\)</span> y utilizar <span class="math inline">\(c=-2\)</span>.</p>
 </section>
-<section id="exploración-gráfica-y-comprobación-algebraica" class="level2">
-<h2 class="anchored" data-anchor-id="exploración-gráfica-y-comprobación-algebraica">Exploración gráfica y comprobación algebraica</h2>
-<p>Una herramienta gráfica permite cambiar la ventana, acercar la curva y obtener coordenadas aproximadas. Es útil para contrastar un bosquejo y detectar posibles errores, pero la imagen depende de la ventana y de la resolución de la pantalla.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>La gráfica digital permite</th>
-<th>El álgebra permite</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Estimar dónde se encuentran las intersecciones</td>
-<td>Comprobar exactamente que <span class="math inline">\(p(r)=0\)</span></td>
-</tr>
-<tr class="even">
-<td>Observar la forma de la curva en una ventana</td>
-<td>Analizar raíces que quedan fuera de la ventana</td>
-</tr>
-<tr class="odd">
-<td>Formular conjeturas sobre el signo</td>
-<td>Justificar el signo mediante evaluación o factorización</td>
-</tr>
-<tr class="even">
-<td>Ver únicamente las raíces reales visibles</td>
-<td>Determinar también raíces complejas no reales</td>
-</tr>
-</tbody>
-</table>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-x^2-51x+50=(x-1)(x-50).
-\]</span></p>
-<p>Las raíces son <span class="math inline">\(1\)</span> y <span class="math inline">\(50\)</span>. En una ventana como <span class="math inline">\(-10\le x\le10\)</span> solo puede verse la primera. La ausencia de una intersección en la pantalla no demuestra que no exista otra raíz real.</p>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>Un polinomio no tiene raíces reales si y solo si su gráfica completa no corta ni toca el eje horizontal; la ausencia de intersecciones en una ventana gráfica no basta para concluirlo.</li>
-<li>El valor <span class="math inline">\(a_0\)</span> no es, en general, una raíz; una raíz es una abscisa <span class="math inline">\(r\)</span> que satisface <span class="math inline">\(p(r)=0\)</span>.</li>
-<li>El término principal se identifica después de ordenar y simplificar el polinomio.</li>
-<li>El signo no se alterna automáticamente en todas las raíces. Debe determinarse en cada intervalo.</li>
-<li>Una coordenada obtenida de la pantalla es aproximada. Para afirmar que <span class="math inline">\(r\)</span> es una raíz exacta, se comprueba que <span class="math inline">\(p(r)=0\)</span>.</li>
+<li><strong>Omitir coeficientes cero.</strong> Para <span class="math inline">\(x^3-8\)</span> se debe usar el renglón <span class="math inline">\(1,0,0,-8\)</span>; escribir solamente <span class="math inline">\(1,-8\)</span> cambia el polinomio.</li>
+<li><strong>Cambiar incorrectamente el signo de <span class="math inline">\(c\)</span>.</strong> Al dividir entre <span class="math inline">\(x+2=x-(-2)\)</span>, en la tabla se coloca <span class="math inline">\(c=-2\)</span>.</li>
+<li><strong>Incluir el residuo en el cociente.</strong> El último número de la tabla es el residuo; los anteriores determinan un cociente de grado una unidad menor.</li>
+<li><strong>Concluir que hay un factor cuando el residuo no es cero.</strong> Si <span class="math inline">\(p(c)\ne0\)</span>, entonces <span class="math inline">\(x-c\)</span> no es factor de <span class="math inline">\(p(x)\)</span>.</li>
+<li><strong>No verificar el resultado.</strong> Siempre debe cumplirse <span class="math inline">\(p(x)=(x-c)q(x)+p(c)\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -715,15 +621,14 @@ x^2-51x+50=(x-1)(x-50).
 <ol type="1">
 <li><p>Sea</p>
 <p><span class="math display">\[
-q(x)=(x+1)^2(x-2).
+p(x)=x^3-x^2-5x+2.
 \]</span></p>
-<ol type="a">
-<li><p>Determine las raíces reales y la intersección con el eje vertical.</p></li>
-<li><p>Describa el comportamiento en los extremos.</p></li>
-<li><p>Construya una tabla de signos en los intervalos determinados por las raíces.</p></li>
-<li><p>Trace un bosquejo, contrástelo con una gráfica digital e indique en cuál raíz la gráfica toca el eje horizontal y en cuál lo cruza. Justifique ambas afirmaciones mediante el signo por intervalos.</p></li>
-<li><p>Resuelva la inecuación <span class="math inline">\(q(x)\ge0\)</span>.</p></li>
-</ol></li>
+<p>Divida <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x+2\)</span> mediante Ruffini. Escriba el cociente y el residuo, decida si <span class="math inline">\(x+2\)</span> es factor y verifique la identidad de la división.</p></li>
+<li><p>Sea</p>
+<p><span class="math display">\[
+s(x)=2x^4-3x^2+5x-1.
+\]</span></p>
+<p>Divida <span class="math inline">\(s(x)\)</span> entre <span class="math inline">\(x-1\)</span> mediante Ruffini. Interprete el último número de la tabla como residuo y como valor de <span class="math inline">\(s(1)\)</span>.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -737,46 +642,87 @@ q(x)=(x+1)^2(x-2).
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> Las raíces son <span class="math inline">\(-1\)</span> y <span class="math inline">\(2\)</span>; la primera es doble porque el factor <span class="math inline">\((x+1)\)</span> aparece elevado al cuadrado. Además,</p>
-<p><span class="math display">\[
-q(0)=(1)^2(-2)=-2,
-\]</span></p>
-<p>así que la intersección con el eje vertical es <span class="math inline">\((0,-2)\)</span>. El término principal es <span class="math inline">\(x^3\)</span>: la gráfica baja a la izquierda y sube a la derecha.</p>
+<p><strong>1.</strong> Como <span class="math inline">\(x+2=x-(-2)\)</span>, se usa <span class="math inline">\(c=-2\)</span>:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Intervalo</th>
-<th style="text-align: center;">Signo de <span class="math inline">\((x+1)^2\)</span></th>
-<th style="text-align: center;">Signo de <span class="math inline">\(x-2\)</span></th>
-<th style="text-align: center;">Signo de <span class="math inline">\(q(x)\)</span></th>
+<th>Renglón</th>
+<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;">término independiente</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\((-\infty,-1)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td>Coeficientes</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\((-1,2)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td>Productos por <span class="math inline">\(c=-2\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(6\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\((2,\infty)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td>Sumas</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\mathbf{0}\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>El signo es negativo a ambos lados de <span class="math inline">\(-1\)</span>, por lo que la gráfica toca el eje en <span class="math inline">\((-1,0)\)</span> sin cruzarlo. Al pasar por <span class="math inline">\(x=2\)</span>, el signo cambia de negativo a positivo y la gráfica cruza el eje horizontal. Por tanto,</p>
+<p>El cociente es <span class="math inline">\(x^2-3x+1\)</span> y el residuo es <span class="math inline">\(0\)</span>. Por tanto, <span class="math inline">\(-2\)</span> es raíz y <span class="math inline">\(x+2\)</span> es factor. La verificación es</p>
 <p><span class="math display">\[
-q(x)\ge0
-\quad\Longleftrightarrow\quad
-x\in\{-1\}\cup[2,\infty).
+(x+2)(x^2-3x+1)=x^3-x^2-5x+2.
+\]</span></p>
+<p><strong>2.</strong> El renglón de coeficientes debe incluir el coeficiente cero de <span class="math inline">\(x^3\)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Renglón</th>
+<th style="text-align: right;"><span class="math inline">\(x^4\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: right;">término independiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coeficientes</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
+</tr>
+<tr class="even">
+<td>Productos por <span class="math inline">\(c=1\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sumas</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(-1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\mathbf{3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El cociente es <span class="math inline">\(2x^3+2x^2-x+4\)</span> y el residuo es <span class="math inline">\(3\)</span>. Por el teorema del residuo, <span class="math inline">\(s(1)=3\)</span>; como este valor no es cero, <span class="math inline">\(x-1\)</span> no es factor. En efecto,</p>
+<p><span class="math display">\[
+s(x)=(x-1)(2x^3+2x^2-x+4)+3.
 \]</span></p>
 </div>
 </div>
@@ -785,37 +731,19 @@ x\in\{-1\}\cup[2,\infty).
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Para cada polinomio, determine las raíces reales, la intersección con el eje vertical, el comportamiento en los extremos y el signo por intervalos. Trace después un bosquejo y contrástelo con una gráfica digital, atendiendo a las intersecciones, el signo por intervalos y el comportamiento en los extremos.</p>
+<li><p>Sin efectuar la división, determine mediante el teorema del residuo los residuos de <span class="math inline">\(x^5-2x+1\)</span> entre <span class="math inline">\(x-1\)</span> y entre <span class="math inline">\(x+1\)</span>. Decida cuál divisor es factor.</p></li>
+<li><p>Use Ruffini para obtener el cociente y el residuo:</p>
 <ol type="a">
-<li><p><span class="math inline">\(p(x)=x^3-9x\)</span>.</p></li>
-<li><p><span class="math inline">\(p(x)=-x(x-2)(x+3)\)</span>.</p></li>
-<li><p><span class="math inline">\(p(x)=(x-1)^2(x+2)\)</span>.</p></li>
+<li><p><span class="math inline">\((x^4-2x^3+x-1)\div(x-1)\)</span>.</p></li>
+<li><p><span class="math inline">\((x^3+1)\div(x+1)\)</span>.</p></li>
 </ol></li>
-<li><p>Resuelva mediante una tabla de signos:</p>
+<li><p>Determine el valor de <span class="math inline">\(k\)</span> para el cual <span class="math inline">\(x+2\)</span> es factor de <span class="math inline">\(x^3+kx^2-4x-12\)</span>. Obtenga después el cociente mediante Ruffini.</p></li>
+<li><p>Un estudiante dividió <span class="math inline">\(x^3-8\)</span> entre <span class="math inline">\(x-2\)</span> usando únicamente los coeficientes <span class="math inline">\(1,-8\)</span> y obtuvo residuo <span class="math inline">\(-6\)</span>. Identifique el error, corrija la tabla y verifique el resultado mediante el teorema del factor.</p></li>
+<li><p>Explique por qué la identidad</p>
 <p><span class="math display">\[
-x(x-1)(x+4)&gt;0.
-\]</span></p></li>
-<li><p>Sea</p>
-<p><span class="math display">\[
-p(x)=(x+1)(x-2)(x-3).
+p(x)=(x-c)q(x)+r
 \]</span></p>
-<p>Desarróllelo, determine <span class="math inline">\(p(0)\)</span> y trace un bosquejo que muestre las intersecciones, el signo por intervalos y el comportamiento en los extremos.</p></li>
-<li><p>Grafique <span class="math inline">\(x^2-61x+60\)</span> en dos intervalos horizontales: <span class="math inline">\(-10\le x\le10\)</span> y <span class="math inline">\(0\le x\le65\)</span>. Explique qué información se pierde en el primero y compruebe algebraicamente las intersecciones.</p></li>
-<li><p>Un programa gráfico muestra una intersección cercana a <span class="math inline">\(x=2\)</span> para</p>
-<p><span class="math display">\[
-p(x)=x^3-4x-1.
-\]</span></p>
-<p>Calcule <span class="math inline">\(p(2)\)</span>, determine si <span class="math inline">\(2\)</span> es una raíz exacta e interprete la intersección aproximada mostrada por el programa.</p></li>
-<li><p>Sin calcular raíces, describa el comportamiento en los extremos de las gráficas siguientes:</p>
-<p><span class="math display">\[
--3x^4+x,
-\qquad
-2x^5-x^3,
-\qquad
-7-x^2,
-\qquad
-5x-2x^3+1.
-\]</span></p></li>
+<p>implica que <span class="math inline">\(r=p(c)\)</span> y por qué <span class="math inline">\(r=0\)</span> equivale a que <span class="math inline">\(x-c\)</span> sea factor de <span class="math inline">\(p(x)\)</span>.</p></li>
 </ol>
 
 
