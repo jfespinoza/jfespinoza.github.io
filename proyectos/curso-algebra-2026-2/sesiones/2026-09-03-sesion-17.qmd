@@ -140,7 +140,7 @@ En el esquema convencional, el número $c$ se coloca a la izquierda de la barra 
 
 Los números de la última fila, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con $p(c)$.
 
-### Ejemplo
+### Ejemplo con $c=1$
 
 Dividamos
 
@@ -182,13 +182,63 @@ $$
 
 El esquema organiza, columna por columna, las operaciones necesarias para que coincidan los coeficientes en la identidad $p(x)=(x-c)q(x)+r$. Por eso los números anteriores al último forman el cociente y el último es $r=p(c)$.
 
-La regla se usa en esta forma únicamente cuando el divisor es $x-c$. Si el divisor es $x+2$, debe escribirse como $x-(-2)$ y utilizar $c=-2$.
+### Ejemplo con $c=-2$
+
+Dividamos el mismo polinomio
+
+$$
+p(x)=2x^3-5x^2+3
+$$
+
+entre $x+2$. Primero se escribe
+
+$$
+x+2=x-(-2),
+$$
+
+de modo que el número colocado a la izquierda del esquema es $c=-2$. El coeficiente $0$ del término en $x$ debe conservarse:
+
+$$
+\begin{array}{r|rrrr}
+-2 & 2 & -5 & 0 & 3\\
+   &   & -4 & 18 & -36\\
+\hline
+   & 2 & -9 & 18 & \mathbf{-33}
+\end{array}
+$$
+
+Se completa de izquierda a derecha:
+
+1. Se baja el coeficiente principal: $2$.
+2. Se multiplica $2(-2)=-4$ y se escribe el resultado debajo de $-5$; después se suma: $-5+(-4)=-9$.
+3. Se multiplica $(-9)(-2)=18$ y se escribe debajo de $0$; después se suma: $0+18=18$.
+4. Se multiplica $18(-2)=-36$ y se escribe debajo de $3$; después se suma: $3+(-36)=-33$.
+
+Los tres primeros números de la última fila forman el cociente
+
+$$
+q(x)=2x^2-9x+18,
+$$
+
+y el último número es el residuo $-33$. Por tanto,
+
+$$
+2x^3-5x^2+3=(x+2)(2x^2-9x+18)-33.
+$$
+
+El residuo coincide con
+
+$$
+p(-2)=2(-2)^3-5(-2)^2+3=-33.
+$$
+
+Como $p(-2)\ne0$, el divisor $x+2$ no es factor de $p(x)$.
 
 ## Errores frecuentes
 
 - **Omitir coeficientes cero.** Para $x^3-8$ se debe usar el renglón $1,0,0,-8$; escribir solamente $1,-8$ cambia el polinomio.
-- **Cambiar incorrectamente el signo de $c$.** Al dividir entre $x+2=x-(-2)$, en la tabla se coloca $c=-2$.
-- **Incluir el residuo en el cociente.** El último número de la tabla es el residuo; los anteriores determinan un cociente de grado una unidad menor.
+- **Cambiar incorrectamente el signo de $c$.** Al dividir entre $x+2=x-(-2)$, en el esquema se coloca $c=-2$.
+- **Incluir el residuo en el cociente.** El último número del esquema es el residuo; los anteriores determinan un cociente de grado una unidad menor.
 - **Concluir que hay un factor cuando el residuo no es cero.** Si $p(c)\ne0$, entonces $x-c$ no es factor de $p(x)$.
 - **No verificar el resultado.** Siempre debe cumplirse $p(x)=(x-c)q(x)+p(c)$.
 
@@ -210,7 +260,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    s(x)=2x^4-3x^2+5x-1.
    $$
 
-   Divida $s(x)$ entre $x-1$ mediante Ruffini. Interprete el último número de la tabla como residuo y como valor de $s(1)$.
+   Divida $s(x)$ entre $x-2$ mediante Ruffini. Interprete el último número del esquema como residuo y como valor de $s(2)$.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
@@ -233,23 +283,23 @@ $$
 (x+2)(x^2-3x+1)=x^3-x^2-5x+2.
 $$
 
-**2.** El renglón de coeficientes debe incluir el coeficiente cero de $x^3$:
+**2.** El renglón de coeficientes debe incluir el coeficiente cero de $x^3$. Como el divisor es $x-2$, se usa $c=2$:
 
 $$
 \begin{array}{r|rrrrr}
-1 & 2 & 0 & -3 & 5 & -1\\
-  &   & 2 & 2 & -1 & 4\\
+2 & 2 & 0 & -3 & 5 & -1\\
+  &   & 4 & 8 & 10 & 30\\
 \hline
-  & 2 & 2 & -1 & 4 & \mathbf{3}
+  & 2 & 4 & 5 & 15 & \mathbf{29}
 \end{array}
 $$
 
-Se baja $2$; luego se repite la operación multiplicar por $1$ y sumar: $0+2=2$, $-3+2=-1$, $5+(-1)=4$ y $-1+4=3$.
+Se baja $2$; luego $2(2)=4$ y $0+4=4$; después $4(2)=8$ y $-3+8=5$; a continuación, $5(2)=10$ y $5+10=15$; por último, $15(2)=30$ y $-1+30=29$.
 
-El cociente es $2x^3+2x^2-x+4$ y el residuo es $3$. Por el teorema del residuo, $s(1)=3$; como este valor no es cero, $x-1$ no es factor. En efecto,
+El cociente es $2x^3+4x^2+5x+15$ y el residuo es $29$. Por el teorema del residuo, $s(2)=29$; como este valor no es cero, $x-2$ no es factor. En efecto,
 
 $$
-s(x)=(x-1)(2x^3+2x^2-x+4)+3.
+s(x)=(x-2)(2x^3+4x^2+5x+15)+29.
 $$
 
 :::
@@ -266,7 +316,7 @@ $$
 
 3. Determine el valor de $k$ para el cual $x+2$ es factor de $x^3+kx^2-4x-12$. Obtenga después el cociente mediante Ruffini.
 
-4. Un estudiante dividió $x^3-8$ entre $x-2$ usando únicamente los coeficientes $1,-8$ y obtuvo residuo $-6$. Identifique el error, corrija la tabla y verifique el resultado mediante el teorema del factor.
+4. Un estudiante dividió $x^3-8$ entre $x-2$ usando únicamente los coeficientes $1,-8$ y obtuvo residuo $-6$. Identifique el error, corrija el esquema y verifique el resultado mediante el teorema del factor.
 
 5. Explique por qué la identidad
 
