@@ -1,296 +1,249 @@
 ---
-title: "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo"
+title: "Sesión 17. Teoremas del residuo y del factor; regla de Ruffini"
 date: 2026-09-03
-description: "Relación entre los ceros reales y las intersecciones con el eje horizontal, comportamiento extremo, signo por intervalos y uso exploratorio de la gráfica digital."
+description: "División de polinomios, teoremas del residuo y del factor, y regla de Ruffini para dividir entre x-c."
 ---
 
-## Gráfica y ceros de un polinomio
+## División de polinomios
 
-Sea
+La [Sesión 15](2026-09-01-sesion-15.qmd) introdujo la estructura y la evaluación directa de los polinomios, y la [Sesión 16](2026-09-02-sesion-16.qmd) relacionó las raíces con ecuaciones polinómicas. La división de polinomios permite conectar ambas ideas mediante cocientes y residuos.
+
+Sean $p(x)$ y $d(x)$ polinomios con coeficientes reales, con $d(x)\ne 0$. Existen polinomios únicos $q(x)$ y $r(x)$ tales que
 
 $$
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
+p(x)=d(x)q(x)+r(x),
+$$
+
+donde $r(x)=0$ o
+
+$$
+\operatorname{gr}(r)<\operatorname{gr}(d).
+$$
+
+El polinomio $p(x)$ es el **dividendo**, $d(x)$ es el **divisor**, $q(x)$ es el **cociente** y $r(x)$ es el **residuo**. Si $r(x)=0$, la división es exacta y $d(x)$ es un factor de $p(x)$.
+
+### Un ejemplo de división larga
+
+Dividamos
+
+$$
+p(x)=x^3+2x^2-x+3
+$$
+
+entre $d(x)=x^2+1$.
+
+El primer término del cociente se obtiene al dividir los términos principales:
+
+$$
+\frac{x^3}{x^2}=x.
+$$
+
+Se resta $x(x^2+1)=x^3+x$ del dividendo:
+
+$$
+x^3+2x^2-x+3-(x^3+x)=2x^2-2x+3.
+$$
+
+El siguiente término del cociente es $2x^2/x^2=2$. Al restar $2(x^2+1)=2x^2+2$, queda
+
+$$
+-2x+1.
+$$
+
+Como este residuo tiene grado $1$, menor que el grado $2$ del divisor, la división termina:
+
+$$
+q(x)=x+2,
 \qquad
-n\ge 1,
+r(x)=-2x+1.
+$$
+
+La verificación recupera el dividendo:
+
+$$
+\begin{aligned}
+(x^2+1)(x+2)+(-2x+1)
+&=x^3+2x^2+x+2-2x+1\\
+&=x^3+2x^2-x+3.
+\end{aligned}
+$$
+
+## Teorema del residuo
+
+Sea $c\in\mathbb R$. Cuando el divisor es $x-c$, el residuo es cero o es un polinomio constante. La identidad de la división tiene la forma
+
+$$
+p(x)=(x-c)q(x)+r.
+$$
+
+Al sustituir $x=c$ se obtiene
+
+$$
+p(c)=(c-c)q(c)+r=r.
+$$
+
+En consecuencia:
+
+> **Teorema del residuo.** El residuo de dividir $p(x)$ entre $x-c$ es $p(c)$.
+
+Este resultado permite conocer el residuo sin efectuar la división completa.
+
+## Teorema del factor
+
+La división entre $x-c$ es exacta precisamente cuando su residuo es cero. Como el residuo es $p(c)$, se obtiene la equivalencia
+
+$$
+p(c)=0
+\quad\Longleftrightarrow\quad
+x-c\text{ es factor de }p(x).
+$$
+
+Por tanto:
+
+> **Teorema del factor.** El número $c$ es una raíz de $p(x)$ si y solo si $x-c$ es un factor de $p(x)$.
+
+Si $p(x)$ tiene grado $n\ge 1$ y $c$ es una raíz, entonces
+
+$$
+p(x)=(x-c)q(x),
+$$
+
+donde $q(x)$ tiene grado $n-1$. Una raíz conocida permite así reducir en una unidad el grado del problema.
+
+Por ejemplo, para
+
+$$
+p(x)=2x^3-5x^2+3
+$$
+
+se tiene
+
+$$
+p(1)=2-5+3=0,
 \qquad
-a_n\ne0,
+p(2)=16-20+3=-1.
 $$
 
-un polinomio no constante con coeficientes reales. Su **gráfica** es el conjunto de puntos $(x,p(x))$ del plano, es decir, la curva de ecuación $y=p(x)$. Una tabla de valores permite obtener puntos de la curva mediante la evaluación estudiada en la [Sesión 15](2026-09-01-sesion-15.qmd), pero una tabla breve no muestra por sí sola su comportamiento completo.
+Entonces $x-1$ es factor de $p(x)$, mientras que $x-2$ no lo es. Además, el residuo de la división entre $x-2$ es $-1$.
 
-Un número real $r$ es un **cero** o una **raíz real** de $p$ si $p(r)=0$, como en la [Sesión 16](2026-09-02-sesion-16.qmd). Por tanto,
+## Regla de Ruffini
 
-$$
-p(r)=0
-\quad\Longleftrightarrow\quad
-(r,0)\text{ pertenece a la gráfica de }p.
-$$
+La **regla de Ruffini** abrevia la división entre $x-c$. Utiliza únicamente los coeficientes de $p(x)$.
 
-Las raíces reales son exactamente las abscisas de los puntos donde la gráfica corta o toca el eje horizontal. Las raíces complejas no reales no aparecen como intersecciones en una gráfica real. Por ejemplo, $x^2+1$ tiene las raíces $i$ y $-i$, pero $x^2+1>0$ para todo $x\in\mathbb R$, de modo que su gráfica no toca el eje horizontal.
+1. Ordenar el polinomio y escribir un coeficiente $0$ por cada potencia ausente.
+2. Identificar el número $c$ del divisor $x-c$ y conservar su signo.
+3. Bajar el coeficiente principal.
+4. Multiplicar el último número obtenido por $c$ y sumar el resultado al coeficiente siguiente.
+5. Repetir hasta llegar al término independiente.
 
-La intersección con el eje vertical se obtiene al tomar $x=0$:
+Los números finales, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con $p(c)$.
 
-$$
-p(0)=a_0.
-$$
+### Ejemplo
 
-Por ello, la gráfica corta el eje vertical en $(0,a_0)$. Este punto no representa una raíz, salvo cuando $a_0=0$.
-
-Una gráfica digital puede sugerir la posición de una raíz, pero debe comprobarse algebraicamente que $p(r)=0$, ya sea por evaluación o mediante una factorización.
-
-## Comportamiento en los extremos
-
-El **comportamiento en los extremos** describe lo que ocurre con $p(x)$ cuando $x$ toma valores positivos o negativos de gran valor absoluto. Lo determina el término principal $a_nx^n$. Para $x\ne0$ puede escribirse
+Dividamos
 
 $$
-p(x)=x^n\left(a_n+\frac{a_{n-1}}{x}+\frac{a_{n-2}}{x^2}+\cdots+\frac{a_0}{x^n}\right).
+p(x)=2x^3-5x^2+3
 $$
 
-Cuando $\lvert x\rvert$ crece, los términos fraccionarios del paréntesis se acercan a $0$. En consecuencia, lejos del origen, el signo y el crecimiento de $p(x)$ siguen los de $a_nx^n$.
+entre $x-1$. Debe incluirse el coeficiente $0$ del término en $x$:
 
-| Grado | Coeficiente principal | Extremo izquierdo | Extremo derecho |
-|---|---:|---|---|
-| Par | $a_n>0$ | La gráfica sube | La gráfica sube |
-| Par | $a_n<0$ | La gráfica baja | La gráfica baja |
-| Impar | $a_n>0$ | La gráfica baja | La gráfica sube |
-| Impar | $a_n<0$ | La gráfica sube | La gráfica baja |
+| Renglón | $x^3$ | $x^2$ | $x$ | término independiente |
+|---|---:|---:|---:|---:|
+| Coeficientes | $2$ | $-5$ | $0$ | $3$ |
+| Productos por $c=1$ |  | $2$ | $-3$ | $-3$ |
+| Sumas | $2$ | $-3$ | $-3$ | $\mathbf{0}$ |
 
-Aquí, subir significa que los valores de $p(x)$ crecen sin cota superior, y bajar, que decrecen sin cota inferior. El polinomio debe ordenarse y simplificarse antes de identificar el término principal. En
-
-$$
-5x-2x^3+1,
-$$
-
-el término principal es $-2x^3$; por tanto, la gráfica sube a la izquierda y baja a la derecha.
-
-Todo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: los extremos de su gráfica tienen comportamientos opuestos y, por continuidad, la gráfica debe cruzar el eje horizontal. En grado par, ambos extremos apuntan hacia el mismo lado y puede no haber raíces reales.
-
-## Signo entre raíces consecutivas
-
-Las gráficas de los polinomios son continuas: no tienen saltos ni interrupciones. Si un polinomio no tiene raíces en un intervalo abierto, conserva el mismo signo en todo ese intervalo. De otro modo, la gráfica tendría que pasar de un lado del eje horizontal al otro y cruzarlo en algún punto intermedio.
-
-Las raíces reales dividen la recta en intervalos. El signo de $p(x)$ en cada uno puede determinarse de dos maneras:
-
-- **Valor de prueba:** se elige cualquier número del intervalo y se evalúa el polinomio.
-- **Signo de los factores:** si el polinomio está factorizado, se determina el signo de cada factor y después el signo del producto.
-
-El signo no se alterna automáticamente al pasar por cada raíz. Por ejemplo, $(x-1)^2$ es positivo a ambos lados de $1$; su gráfica toca el eje horizontal en ese punto y no lo cruza.
-
-## Ejemplo. Bosquejo de la gráfica de un polinomio cúbico
-
-Considérese
+El cociente es
 
 $$
-p(x)=x^3-4x.
+q(x)=2x^2-3x-3
 $$
 
-El término principal es $x^3$, de grado impar y coeficiente positivo: la gráfica baja a la izquierda y sube a la derecha. Además,
+y el residuo es $0$. La tabla confirma simultáneamente que $p(1)=0$ y que $x-1$ es factor:
 
 $$
-p(0)=0,
+2x^3-5x^2+3=(x-1)(2x^2-3x-3).
 $$
 
-por lo que la intersección con el eje vertical es el origen. Al factorizar,
-
-$$
-p(x)=x(x^2-4)=x(x-2)(x+2).
-$$
-
-Las raíces reales son $-2$, $0$ y $2$. Para determinar el signo se elige un valor de prueba en cada intervalo:
-
-| Intervalo | Valor de prueba | Valor de $p(x)$ | Signo | Posición de la gráfica |
-|---|---:|---:|:---:|---|
-| $(-\infty,-2)$ | $-3$ | $p(-3)=-15$ | $-$ | Debajo del eje |
-| $(-2,0)$ | $-1$ | $p(-1)=3$ | $+$ | Encima del eje |
-| $(0,2)$ | $1$ | $p(1)=-3$ | $-$ | Debajo del eje |
-| $(2,\infty)$ | $3$ | $p(3)=15$ | $+$ | Encima del eje |
-
-Con estos datos se obtiene el siguiente bosquejo.
-
-```{=html}
-<figure style="max-width: 780px; margin: 1.5rem auto;">
-  <div role="region" aria-label="Gráfica desplazable de y igual a x al cubo menos cuatro x" tabindex="0" style="max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; padding-bottom:0.25rem;">
-    <svg viewBox="0 0 700 480" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="s17-title s17-desc" focusable="false" style="display:block; min-width:620px; height:auto;" xmlns="http://www.w3.org/2000/svg">
-      <title id="s17-title">Bosquejo de la gráfica de y igual a x al cubo menos cuatro x</title>
-      <desc id="s17-desc">La curva baja hacia la izquierda, cruza el eje horizontal en menos dos, cero y dos, y sube hacia la derecha. Está debajo del eje antes de menos dos y entre cero y dos; está encima del eje entre menos dos y cero y después de dos.</desc>
-      <defs>
-        <marker id="s17-axis-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-          <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
-        </marker>
-        <filter id="s17-shadow" x="-10%" y="-10%" width="120%" height="125%">
-          <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.12"/>
-        </filter>
-      </defs>
-      <rect x="12" y="12" width="676" height="456" rx="22" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#s17-shadow)"/>
-      <text x="350" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="23" font-weight="700" fill="#0f172a">y = x³ − 4x</text>
-      <text x="350" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#64748b">Raíces, signo y comportamiento extremo</text>
-      <rect x="66" y="91" width="568" height="340" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
-      <g stroke="#e2e8f0" stroke-width="1">
-        <line x1="90" y1="130" x2="610" y2="130"/>
-        <line x1="90" y1="190" x2="610" y2="190"/>
-        <line x1="90" y1="310" x2="610" y2="310"/>
-        <line x1="90" y1="370" x2="610" y2="370"/>
-        <line x1="170" y1="100" x2="170" y2="420"/>
-        <line x1="250" y1="100" x2="250" y2="420"/>
-        <line x1="410" y1="100" x2="410" y2="420"/>
-        <line x1="490" y1="100" x2="490" y2="420"/>
-      </g>
-      <g stroke="#475569" stroke-width="2" marker-end="url(#s17-axis-arrow)">
-        <line x1="78" y1="250" x2="622" y2="250"/>
-        <line x1="330" y1="422" x2="330" y2="96"/>
-      </g>
-      <g font-family="system-ui, sans-serif" font-size="14" fill="#475569">
-        <text x="628" y="244">x</text>
-        <text x="342" y="104">y</text>
-        <text x="90" y="270" text-anchor="middle">−3</text>
-        <text x="170" y="270" text-anchor="middle">−2</text>
-        <text x="250" y="270" text-anchor="middle">−1</text>
-        <text x="342" y="270">0</text>
-        <text x="410" y="270" text-anchor="middle">1</text>
-        <text x="490" y="270" text-anchor="middle">2</text>
-        <text x="570" y="270" text-anchor="middle">3</text>
-      </g>
-      <path d="M 90 400 C 250 -60, 410 560, 570 100" fill="none" stroke="#1d4ed8" stroke-width="4.5" stroke-linecap="round"/>
-      <g fill="#7c3aed" stroke="#ffffff" stroke-width="2.5">
-        <circle cx="170" cy="250" r="7"/>
-        <circle cx="330" cy="250" r="7"/>
-        <circle cx="490" cy="250" r="7"/>
-      </g>
-      <g font-family="system-ui, sans-serif" font-size="14" font-weight="650">
-        <text x="138" y="397" fill="#b45309">p(x) &lt; 0</text>
-        <text x="224" y="177" fill="#0369a1">p(x) &gt; 0</text>
-        <text x="386" y="338" fill="#b45309">p(x) &lt; 0</text>
-        <text x="505" y="139" fill="#0369a1">p(x) &gt; 0</text>
-      </g>
-    </svg>
-  </div>
-  <figcaption style="text-align:center; color:#475569; margin-top:0.5rem;">Bosquejo construido con las raíces, el signo por intervalos y el término principal.</figcaption>
-</figure>
-```
-
-El bosquejo debe respetar las intersecciones, los signos y el comportamiento en los extremos. No determina por sí solo la ubicación exacta de los puntos máximos o mínimos que puedan aparecer entre las raíces.
-
-La tabla de signos permite además resolver una inecuación no lineal. En este ejemplo,
-
-$$
-p(x)>0
-\quad\Longleftrightarrow\quad
-x\in(-2,0)\cup(2,\infty).
-$$
-
-## Exploración gráfica y comprobación algebraica
-
-Una herramienta gráfica permite cambiar la ventana, acercar la curva y obtener coordenadas aproximadas. Es útil para contrastar un bosquejo y detectar posibles errores, pero la imagen depende de la ventana y de la resolución de la pantalla.
-
-| La gráfica digital permite | El álgebra permite |
-|---|---|
-| Estimar dónde se encuentran las intersecciones | Comprobar exactamente que $p(r)=0$ |
-| Observar la forma de la curva en una ventana | Analizar raíces que quedan fuera de la ventana |
-| Formular conjeturas sobre el signo | Justificar el signo mediante evaluación o factorización |
-| Ver únicamente las raíces reales visibles | Determinar también raíces complejas no reales |
-
-Por ejemplo,
-
-$$
-x^2-51x+50=(x-1)(x-50).
-$$
-
-Las raíces son $1$ y $50$. En una ventana como $-10\le x\le10$ solo puede verse la primera. La ausencia de una intersección en la pantalla no demuestra que no exista otra raíz real.
+La regla se usa en esta forma únicamente cuando el divisor es $x-c$. Si el divisor es $x+2$, debe escribirse como $x-(-2)$ y utilizar $c=-2$.
 
 ## Errores frecuentes
 
-- Un polinomio no tiene raíces reales si y solo si su gráfica completa no corta ni toca el eje horizontal; la ausencia de intersecciones en una ventana gráfica no basta para concluirlo.
-- El valor $a_0$ no es, en general, una raíz; una raíz es una abscisa $r$ que satisface $p(r)=0$.
-- El término principal se identifica después de ordenar y simplificar el polinomio.
-- El signo no se alterna automáticamente en todas las raíces. Debe determinarse en cada intervalo.
-- Una coordenada obtenida de la pantalla es aproximada. Para afirmar que $r$ es una raíz exacta, se comprueba que $p(r)=0$.
+- **Omitir coeficientes cero.** Para $x^3-8$ se debe usar el renglón $1,0,0,-8$; escribir solamente $1,-8$ cambia el polinomio.
+- **Cambiar incorrectamente el signo de $c$.** Al dividir entre $x+2=x-(-2)$, en la tabla se coloca $c=-2$.
+- **Incluir el residuo en el cociente.** El último número de la tabla es el residuo; los anteriores determinan un cociente de grado una unidad menor.
+- **Concluir que hay un factor cuando el residuo no es cero.** Si $p(c)\ne0$, entonces $x-c$ no es factor de $p(x)$.
+- **No verificar el resultado.** Siempre debe cumplirse $p(x)=(x-c)q(x)+p(c)$.
 
 ## Actividad
 
 1. Sea
 
    $$
-   q(x)=(x+1)^2(x-2).
+   p(x)=x^3-x^2-5x+2.
    $$
 
-   a. Determine las raíces reales y la intersección con el eje vertical.
+   Divida $p(x)$ entre $x+2$ mediante Ruffini. Escriba el cociente y el residuo, decida si $x+2$ es factor y verifique la identidad de la división.
 
-   b. Describa el comportamiento en los extremos.
+2. Sea
 
-   c. Construya una tabla de signos en los intervalos determinados por las raíces.
+   $$
+   s(x)=2x^4-3x^2+5x-1.
+   $$
 
-   d. Trace un bosquejo, contrástelo con una gráfica digital e indique en cuál raíz la gráfica toca el eje horizontal y en cuál lo cruza. Justifique ambas afirmaciones mediante el signo por intervalos.
-
-   e. Resuelva la inecuación $q(x)\ge0$.
+   Divida $s(x)$ entre $x-1$ mediante Ruffini. Interprete el último número de la tabla como residuo y como valor de $s(1)$.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
-**1.** Las raíces son $-1$ y $2$; la primera es doble porque el factor $(x+1)$ aparece elevado al cuadrado. Además,
+**1.** Como $x+2=x-(-2)$, se usa $c=-2$:
+
+| Renglón | $x^3$ | $x^2$ | $x$ | término independiente |
+|---|---:|---:|---:|---:|
+| Coeficientes | $1$ | $-1$ | $-5$ | $2$ |
+| Productos por $c=-2$ |  | $-2$ | $6$ | $-2$ |
+| Sumas | $1$ | $-3$ | $1$ | $\mathbf{0}$ |
+
+El cociente es $x^2-3x+1$ y el residuo es $0$. Por tanto, $-2$ es raíz y $x+2$ es factor. La verificación es
 
 $$
-q(0)=(1)^2(-2)=-2,
+(x+2)(x^2-3x+1)=x^3-x^2-5x+2.
 $$
 
-así que la intersección con el eje vertical es $(0,-2)$. El término principal es $x^3$: la gráfica baja a la izquierda y sube a la derecha.
+**2.** El renglón de coeficientes debe incluir el coeficiente cero de $x^3$:
 
-| Intervalo | Signo de $(x+1)^2$ | Signo de $x-2$ | Signo de $q(x)$ |
-|---|:---:|:---:|:---:|
-| $(-\infty,-1)$ | $+$ | $-$ | $-$ |
-| $(-1,2)$ | $+$ | $-$ | $-$ |
-| $(2,\infty)$ | $+$ | $+$ | $+$ |
+| Renglón | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
+|---|---:|---:|---:|---:|---:|
+| Coeficientes | $2$ | $0$ | $-3$ | $5$ | $-1$ |
+| Productos por $c=1$ |  | $2$ | $2$ | $-1$ | $4$ |
+| Sumas | $2$ | $2$ | $-1$ | $4$ | $\mathbf{3}$ |
 
-El signo es negativo a ambos lados de $-1$, por lo que la gráfica toca el eje en $(-1,0)$ sin cruzarlo. Al pasar por $x=2$, el signo cambia de negativo a positivo y la gráfica cruza el eje horizontal. Por tanto,
+El cociente es $2x^3+2x^2-x+4$ y el residuo es $3$. Por el teorema del residuo, $s(1)=3$; como este valor no es cero, $x-1$ no es factor. En efecto,
 
 $$
-q(x)\ge0
-\quad\Longleftrightarrow\quad
-x\in\{-1\}\cup[2,\infty).
+s(x)=(x-1)(2x^3+2x^2-x+4)+3.
 $$
 
 :::
 
 ## Ejercicios para practicar
 
-1. Para cada polinomio, determine las raíces reales, la intersección con el eje vertical, el comportamiento en los extremos y el signo por intervalos. Trace después un bosquejo y contrástelo con una gráfica digital, atendiendo a las intersecciones, el signo por intervalos y el comportamiento en los extremos.
+1. Sin efectuar la división, determine mediante el teorema del residuo los residuos de $x^5-2x+1$ entre $x-1$ y entre $x+1$. Decida cuál divisor es factor.
 
-   a. $p(x)=x^3-9x$.
+2. Use Ruffini para obtener el cociente y el residuo:
 
-   b. $p(x)=-x(x-2)(x+3)$.
+   a. $(x^4-2x^3+x-1)\div(x-1)$.
 
-   c. $p(x)=(x-1)^2(x+2)$.
+   b. $(x^3+1)\div(x+1)$.
 
-2. Resuelva mediante una tabla de signos:
+3. Determine el valor de $k$ para el cual $x+2$ es factor de $x^3+kx^2-4x-12$. Obtenga después el cociente mediante Ruffini.
 
-   $$
-   x(x-1)(x+4)>0.
-   $$
+4. Un estudiante dividió $x^3-8$ entre $x-2$ usando únicamente los coeficientes $1,-8$ y obtuvo residuo $-6$. Identifique el error, corrija la tabla y verifique el resultado mediante el teorema del factor.
 
-3. Sea
+5. Explique por qué la identidad
 
    $$
-   p(x)=(x+1)(x-2)(x-3).
+   p(x)=(x-c)q(x)+r
    $$
 
-   Desarróllelo, determine $p(0)$ y trace un bosquejo que muestre las intersecciones, el signo por intervalos y el comportamiento en los extremos.
-
-4. Grafique $x^2-61x+60$ en dos intervalos horizontales: $-10\le x\le10$ y $0\le x\le65$. Explique qué información se pierde en el primero y compruebe algebraicamente las intersecciones.
-
-5. Un programa gráfico muestra una intersección cercana a $x=2$ para
-
-   $$
-   p(x)=x^3-4x-1.
-   $$
-
-   Calcule $p(2)$, determine si $2$ es una raíz exacta e interprete la intersección aproximada mostrada por el programa.
-
-6. Sin calcular raíces, describa el comportamiento en los extremos de las gráficas siguientes:
-
-   $$
-   -3x^4+x,
-   \qquad
-   2x^5-x^3,
-   \qquad
-   7-x^2,
-   \qquad
-   5x-2x^3+1.
-   $$
+   implica que $r=p(c)$ y por qué $r=0$ equivale a que $x-c$ sea factor de $p(x)$.
