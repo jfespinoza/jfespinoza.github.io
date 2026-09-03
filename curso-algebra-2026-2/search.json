@@ -1766,6 +1766,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-03-sesion-17.html",
+    "href": "sesiones/2026-09-03-sesion-17.html",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "",
+    "text": "Gráfica y ceros de un polinomio\nSea\n\\[\np(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0,\n\\qquad\nn\\ge 1,\n\\qquad\na_n\\ne0,\n\\]\nun polinomio no constante con coeficientes reales. Su gráfica es el conjunto de puntos \\((x,p(x))\\) del plano, es decir, la curva de ecuación \\(y=p(x)\\). Una tabla de valores permite obtener puntos de la curva mediante la evaluación estudiada en la Sesión 15, pero una tabla breve no muestra por sí sola su comportamiento completo.\nUn número real \\(r\\) es un cero o una raíz real de \\(p\\) si \\(p(r)=0\\), como en la Sesión 16. Por tanto,\n\\[\np(r)=0\n\\quad\\Longleftrightarrow\\quad\n(r,0)\\text{ pertenece a la gráfica de }p.\n\\]\nLas raíces reales son exactamente las abscisas de los puntos donde la gráfica corta o toca el eje horizontal. Las raíces complejas no reales no aparecen como intersecciones en una gráfica real. Por ejemplo, \\(x^2+1\\) tiene las raíces \\(i\\) y \\(-i\\), pero \\(x^2+1&gt;0\\) para todo \\(x\\in\\mathbb R\\), de modo que su gráfica no toca el eje horizontal.\nLa intersección con el eje vertical se obtiene al tomar \\(x=0\\):\n\\[\np(0)=a_0.\n\\]\nPor ello, la gráfica corta el eje vertical en \\((0,a_0)\\). Este punto no representa una raíz, salvo cuando \\(a_0=0\\).\nUna gráfica digital puede sugerir la posición de una raíz, pero debe comprobarse algebraicamente que \\(p(r)=0\\), ya sea por evaluación o mediante una factorización.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#comportamiento-en-los-extremos",
+    "href": "sesiones/2026-09-03-sesion-17.html#comportamiento-en-los-extremos",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Comportamiento en los extremos",
+    "text": "Comportamiento en los extremos\nEl comportamiento en los extremos describe lo que ocurre con \\(p(x)\\) cuando \\(x\\) toma valores positivos o negativos de gran valor absoluto. Lo determina el término principal \\(a_nx^n\\). Para \\(x\\ne0\\) puede escribirse\n\\[\np(x)=x^n\\left(a_n+\\frac{a_{n-1}}{x}+\\frac{a_{n-2}}{x^2}+\\cdots+\\frac{a_0}{x^n}\\right).\n\\]\nCuando \\(\\lvert x\\rvert\\) crece, los términos fraccionarios del paréntesis se acercan a \\(0\\). En consecuencia, lejos del origen, el signo y el crecimiento de \\(p(x)\\) siguen los de \\(a_nx^n\\).\n\n\n\nGrado\nCoeficiente principal\nExtremo izquierdo\nExtremo derecho\n\n\n\n\nPar\n\\(a_n&gt;0\\)\nLa gráfica sube\nLa gráfica sube\n\n\nPar\n\\(a_n&lt;0\\)\nLa gráfica baja\nLa gráfica baja\n\n\nImpar\n\\(a_n&gt;0\\)\nLa gráfica baja\nLa gráfica sube\n\n\nImpar\n\\(a_n&lt;0\\)\nLa gráfica sube\nLa gráfica baja\n\n\n\nAquí, subir significa que los valores de \\(p(x)\\) crecen sin cota superior, y bajar, que decrecen sin cota inferior. El polinomio debe ordenarse y simplificarse antes de identificar el término principal. En\n\\[\n5x-2x^3+1,\n\\]\nel término principal es \\(-2x^3\\); por tanto, la gráfica sube a la izquierda y baja a la derecha.\nTodo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: los extremos de su gráfica tienen comportamientos opuestos y, por continuidad, la gráfica debe cruzar el eje horizontal. En grado par, ambos extremos apuntan hacia el mismo lado y puede no haber raíces reales.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#signo-entre-raíces-consecutivas",
+    "href": "sesiones/2026-09-03-sesion-17.html#signo-entre-raíces-consecutivas",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Signo entre raíces consecutivas",
+    "text": "Signo entre raíces consecutivas\nLas gráficas de los polinomios son continuas: no tienen saltos ni interrupciones. Si un polinomio no tiene raíces en un intervalo abierto, conserva el mismo signo en todo ese intervalo. De otro modo, la gráfica tendría que pasar de un lado del eje horizontal al otro y cruzarlo en algún punto intermedio.\nLas raíces reales dividen la recta en intervalos. El signo de \\(p(x)\\) en cada uno puede determinarse de dos maneras:\n\nValor de prueba: se elige cualquier número del intervalo y se evalúa el polinomio.\nSigno de los factores: si el polinomio está factorizado, se determina el signo de cada factor y después el signo del producto.\n\nEl signo no se alterna automáticamente al pasar por cada raíz. Por ejemplo, \\((x-1)^2\\) es positivo a ambos lados de \\(1\\); su gráfica toca el eje horizontal en ese punto y no lo cruza.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico",
+    "href": "sesiones/2026-09-03-sesion-17.html#ejemplo.-bosquejo-de-la-gráfica-de-un-polinomio-cúbico",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Ejemplo. Bosquejo de la gráfica de un polinomio cúbico",
+    "text": "Ejemplo. Bosquejo de la gráfica de un polinomio cúbico\nConsidérese\n\\[\np(x)=x^3-4x.\n\\]\nEl término principal es \\(x^3\\), de grado impar y coeficiente positivo: la gráfica baja a la izquierda y sube a la derecha. Además,\n\\[\np(0)=0,\n\\]\npor lo que la intersección con el eje vertical es el origen. Al factorizar,\n\\[\np(x)=x(x^2-4)=x(x-2)(x+2).\n\\]\nLas raíces reales son \\(-2\\), \\(0\\) y \\(2\\). Para determinar el signo se elige un valor de prueba en cada intervalo:\n\n\n\n\n\n\n\n\n\n\nIntervalo\nValor de prueba\nValor de \\(p(x)\\)\nSigno\nPosición de la gráfica\n\n\n\n\n\\((-\\infty,-2)\\)\n\\(-3\\)\n\\(p(-3)=-15\\)\n\\(-\\)\nDebajo del eje\n\n\n\\((-2,0)\\)\n\\(-1\\)\n\\(p(-1)=3\\)\n\\(+\\)\nEncima del eje\n\n\n\\((0,2)\\)\n\\(1\\)\n\\(p(1)=-3\\)\n\\(-\\)\nDebajo del eje\n\n\n\\((2,\\infty)\\)\n\\(3\\)\n\\(p(3)=15\\)\n\\(+\\)\nEncima del eje\n\n\n\nCon estos datos se obtiene el siguiente bosquejo.\n\n  \n    \n      Bosquejo de la gráfica de y igual a x al cubo menos cuatro x\n      La curva baja hacia la izquierda, cruza el eje horizontal en menos dos, cero y dos, y sube hacia la derecha. Está debajo del eje antes de menos dos y entre cero y dos; está encima del eje entre menos dos y cero y después de dos.\n      \n        \n          \n        \n        \n          \n        \n      \n      \n      y = x³ − 4x\n      Raíces, signo y comportamiento extremo\n      \n      \n        \n        \n        \n        \n        \n        \n        \n        \n      \n      \n        \n        \n      \n      \n        x\n        y\n        −3\n        −2\n        −1\n        0\n        1\n        2\n        3\n      \n      \n      \n        \n        \n        \n      \n      \n        p(x) &lt; 0\n        p(x) &gt; 0\n        p(x) &lt; 0\n        p(x) &gt; 0\n      \n    \n  \n  Bosquejo construido con las raíces, el signo por intervalos y el término principal.\n\nEl bosquejo debe respetar las intersecciones, los signos y el comportamiento en los extremos. No determina por sí solo la ubicación exacta de los puntos máximos o mínimos que puedan aparecer entre las raíces.\nLa tabla de signos permite además resolver una inecuación no lineal. En este ejemplo,\n\\[\np(x)&gt;0\n\\quad\\Longleftrightarrow\\quad\nx\\in(-2,0)\\cup(2,\\infty).\n\\]",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#exploración-gráfica-y-comprobación-algebraica",
+    "href": "sesiones/2026-09-03-sesion-17.html#exploración-gráfica-y-comprobación-algebraica",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Exploración gráfica y comprobación algebraica",
+    "text": "Exploración gráfica y comprobación algebraica\nUna herramienta gráfica permite cambiar la ventana, acercar la curva y obtener coordenadas aproximadas. Es útil para contrastar un bosquejo y detectar posibles errores, pero la imagen depende de la ventana y de la resolución de la pantalla.\n\n\n\n\n\n\n\nLa gráfica digital permite\nEl álgebra permite\n\n\n\n\nEstimar dónde se encuentran las intersecciones\nComprobar exactamente que \\(p(r)=0\\)\n\n\nObservar la forma de la curva en una ventana\nAnalizar raíces que quedan fuera de la ventana\n\n\nFormular conjeturas sobre el signo\nJustificar el signo mediante evaluación o factorización\n\n\nVer únicamente las raíces reales visibles\nDeterminar también raíces complejas no reales\n\n\n\nPor ejemplo,\n\\[\nx^2-51x+50=(x-1)(x-50).\n\\]\nLas raíces son \\(1\\) y \\(50\\). En una ventana como \\(-10\\le x\\le10\\) solo puede verse la primera. La ausencia de una intersección en la pantalla no demuestra que no exista otra raíz real.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#errores-frecuentes",
+    "href": "sesiones/2026-09-03-sesion-17.html#errores-frecuentes",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nUn polinomio no tiene raíces reales si y solo si su gráfica completa no corta ni toca el eje horizontal; la ausencia de intersecciones en una ventana gráfica no basta para concluirlo.\nEl valor \\(a_0\\) no es, en general, una raíz; una raíz es una abscisa \\(r\\) que satisface \\(p(r)=0\\).\nEl término principal se identifica después de ordenar y simplificar el polinomio.\nEl signo no se alterna automáticamente en todas las raíces. Debe determinarse en cada intervalo.\nUna coordenada obtenida de la pantalla es aproximada. Para afirmar que \\(r\\) es una raíz exacta, se comprueba que \\(p(r)=0\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#actividad",
+    "href": "sesiones/2026-09-03-sesion-17.html#actividad",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Actividad",
+    "text": "Actividad\n\nSea\n\\[\nq(x)=(x+1)^2(x-2).\n\\]\n\nDetermine las raíces reales y la intersección con el eje vertical.\nDescriba el comportamiento en los extremos.\nConstruya una tabla de signos en los intervalos determinados por las raíces.\nTrace un bosquejo, contrástelo con una gráfica digital e indique en cuál raíz la gráfica toca el eje horizontal y en cuál lo cruza. Justifique ambas afirmaciones mediante el signo por intervalos.\nResuelva la inecuación \\(q(x)\\ge0\\).\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Las raíces son \\(-1\\) y \\(2\\); la primera es doble porque el factor \\((x+1)\\) aparece elevado al cuadrado. Además,\n\\[\nq(0)=(1)^2(-2)=-2,\n\\]\nasí que la intersección con el eje vertical es \\((0,-2)\\). El término principal es \\(x^3\\): la gráfica baja a la izquierda y sube a la derecha.\n\n\n\nIntervalo\nSigno de \\((x+1)^2\\)\nSigno de \\(x-2\\)\nSigno de \\(q(x)\\)\n\n\n\n\n\\((-\\infty,-1)\\)\n\\(+\\)\n\\(-\\)\n\\(-\\)\n\n\n\\((-1,2)\\)\n\\(+\\)\n\\(-\\)\n\\(-\\)\n\n\n\\((2,\\infty)\\)\n\\(+\\)\n\\(+\\)\n\\(+\\)\n\n\n\nEl signo es negativo a ambos lados de \\(-1\\), por lo que la gráfica toca el eje en \\((-1,0)\\) sin cruzarlo. Al pasar por \\(x=2\\), el signo cambia de negativo a positivo y la gráfica cruza el eje horizontal. Por tanto,\n\\[\nq(x)\\ge0\n\\quad\\Longleftrightarrow\\quad\nx\\in\\{-1\\}\\cup[2,\\infty).\n\\]",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-03-sesion-17.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-03-sesion-17.html#ejercicios-para-practicar",
+    "title": "Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nPara cada polinomio, determine las raíces reales, la intersección con el eje vertical, el comportamiento en los extremos y el signo por intervalos. Trace después un bosquejo y contrástelo con una gráfica digital, atendiendo a las intersecciones, el signo por intervalos y el comportamiento en los extremos.\n\n\\(p(x)=x^3-9x\\).\n\\(p(x)=-x(x-2)(x+3)\\).\n\\(p(x)=(x-1)^2(x+2)\\).\n\nResuelva mediante una tabla de signos:\n\\[\nx(x-1)(x+4)&gt;0.\n\\]\nSea\n\\[\np(x)=(x+1)(x-2)(x-3).\n\\]\nDesarróllelo, determine \\(p(0)\\) y trace un bosquejo que muestre las intersecciones, el signo por intervalos y el comportamiento en los extremos.\nGrafique \\(x^2-61x+60\\) en dos intervalos horizontales: \\(-10\\le x\\le10\\) y \\(0\\le x\\le65\\). Explique qué información se pierde en el primero y compruebe algebraicamente las intersecciones.\nUn programa gráfico muestra una intersección cercana a \\(x=2\\) para\n\\[\np(x)=x^3-4x-1.\n\\]\nCalcule \\(p(2)\\), determine si \\(2\\) es una raíz exacta e interprete la intersección aproximada mostrada por el programa.\nSin calcular raíces, describa el comportamiento en los extremos de las gráficas siguientes:\n\\[\n-3x^4+x,\n\\qquad\n2x^5-x^3,\n\\qquad\n7-x^2,\n\\qquad\n5x-2x^3+1.\n\\]",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Sesión 17. Gráfica de un polinomio: ceros, signo y comportamiento extremo</span>"
+    ]
+  },
+  {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
     "title": "Unidad 3. Sistemas de ecuaciones lineales",
@@ -1773,7 +1861,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1784,7 +1872,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1795,7 +1883,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1806,7 +1894,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1817,7 +1905,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1828,7 +1916,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1839,7 +1927,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1850,7 +1938,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -1861,7 +1949,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1872,7 +1960,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1883,7 +1971,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1894,7 +1982,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1905,7 +1993,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1916,7 +2004,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1927,7 +2015,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -1938,7 +2026,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1949,7 +2037,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -1960,7 +2048,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
