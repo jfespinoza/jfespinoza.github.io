@@ -415,7 +415,8 @@ window.Quarto = {
   <li><a href="#teorema-del-factor" id="toc-teorema-del-factor" class="nav-link" data-scroll-target="#teorema-del-factor">Teorema del factor</a></li>
   <li><a href="#regla-de-ruffini" id="toc-regla-de-ruffini" class="nav-link" data-scroll-target="#regla-de-ruffini">Regla de Ruffini</a>
   <ul class="collapse">
-  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo">Ejemplo</a></li>
+  <li><a href="#ejemplo-con-c1" id="toc-ejemplo-con-c1" class="nav-link" data-scroll-target="#ejemplo-con-c1">Ejemplo con <span class="math inline">\(c=1\)</span></a></li>
+  <li><a href="#ejemplo-con-c-2" id="toc-ejemplo-con-c-2" class="nav-link" data-scroll-target="#ejemplo-con-c-2">Ejemplo con <span class="math inline">\(c=-2\)</span></a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -555,8 +556,8 @@ p(2)=16-20+3=-1.
 </ol>
 <p>En el esquema convencional, el número <span class="math inline">\(c\)</span> se coloca a la izquierda de la barra vertical. En la fila superior se escriben los coeficientes de <span class="math inline">\(p(x)\)</span>; en la fila intermedia aparecen los productos por <span class="math inline">\(c\)</span>; debajo de la línea se anotan las sumas. El espacio inicial de la fila de productos es intencional: antes de bajar el coeficiente principal todavía no hay nada que multiplicar.</p>
 <p>Los números de la última fila, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con <span class="math inline">\(p(c)\)</span>.</p>
-<section id="ejemplo" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<section id="ejemplo-con-c1" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-con-c1">Ejemplo con <span class="math inline">\(c=1\)</span></h3>
 <p>Dividamos</p>
 <p><span class="math display">\[
 p(x)=2x^3-5x^2+3
@@ -587,15 +588,54 @@ q(x)=2x^2-3x-3
 2x^3-5x^2+3=(x-1)(2x^2-3x-3).
 \]</span></p>
 <p>El esquema organiza, columna por columna, las operaciones necesarias para que coincidan los coeficientes en la identidad <span class="math inline">\(p(x)=(x-c)q(x)+r\)</span>. Por eso los números anteriores al último forman el cociente y el último es <span class="math inline">\(r=p(c)\)</span>.</p>
-<p>La regla se usa en esta forma únicamente cuando el divisor es <span class="math inline">\(x-c\)</span>. Si el divisor es <span class="math inline">\(x+2\)</span>, debe escribirse como <span class="math inline">\(x-(-2)\)</span> y utilizar <span class="math inline">\(c=-2\)</span>.</p>
+</section>
+<section id="ejemplo-con-c-2" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-con-c-2">Ejemplo con <span class="math inline">\(c=-2\)</span></h3>
+<p>Dividamos el mismo polinomio</p>
+<p><span class="math display">\[
+p(x)=2x^3-5x^2+3
+\]</span></p>
+<p>entre <span class="math inline">\(x+2\)</span>. Primero se escribe</p>
+<p><span class="math display">\[
+x+2=x-(-2),
+\]</span></p>
+<p>de modo que el número colocado a la izquierda del esquema es <span class="math inline">\(c=-2\)</span>. El coeficiente <span class="math inline">\(0\)</span> del término en <span class="math inline">\(x\)</span> debe conservarse:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+-2 &amp; 2 &amp; -5 &amp; 0 &amp; 3\\
+   &amp;   &amp; -4 &amp; 18 &amp; -36\\
+\hline
+   &amp; 2 &amp; -9 &amp; 18 &amp; \mathbf{-33}
+\end{array}
+\]</span></p>
+<p>Se completa de izquierda a derecha:</p>
+<ol type="1">
+<li>Se baja el coeficiente principal: <span class="math inline">\(2\)</span>.</li>
+<li>Se multiplica <span class="math inline">\(2(-2)=-4\)</span> y se escribe el resultado debajo de <span class="math inline">\(-5\)</span>; después se suma: <span class="math inline">\(-5+(-4)=-9\)</span>.</li>
+<li>Se multiplica <span class="math inline">\((-9)(-2)=18\)</span> y se escribe debajo de <span class="math inline">\(0\)</span>; después se suma: <span class="math inline">\(0+18=18\)</span>.</li>
+<li>Se multiplica <span class="math inline">\(18(-2)=-36\)</span> y se escribe debajo de <span class="math inline">\(3\)</span>; después se suma: <span class="math inline">\(3+(-36)=-33\)</span>.</li>
+</ol>
+<p>Los tres primeros números de la última fila forman el cociente</p>
+<p><span class="math display">\[
+q(x)=2x^2-9x+18,
+\]</span></p>
+<p>y el último número es el residuo <span class="math inline">\(-33\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+2x^3-5x^2+3=(x+2)(2x^2-9x+18)-33.
+\]</span></p>
+<p>El residuo coincide con</p>
+<p><span class="math display">\[
+p(-2)=2(-2)^3-5(-2)^2+3=-33.
+\]</span></p>
+<p>Como <span class="math inline">\(p(-2)\ne0\)</span>, el divisor <span class="math inline">\(x+2\)</span> no es factor de <span class="math inline">\(p(x)\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li><strong>Omitir coeficientes cero.</strong> Para <span class="math inline">\(x^3-8\)</span> se debe usar el renglón <span class="math inline">\(1,0,0,-8\)</span>; escribir solamente <span class="math inline">\(1,-8\)</span> cambia el polinomio.</li>
-<li><strong>Cambiar incorrectamente el signo de <span class="math inline">\(c\)</span>.</strong> Al dividir entre <span class="math inline">\(x+2=x-(-2)\)</span>, en la tabla se coloca <span class="math inline">\(c=-2\)</span>.</li>
-<li><strong>Incluir el residuo en el cociente.</strong> El último número de la tabla es el residuo; los anteriores determinan un cociente de grado una unidad menor.</li>
+<li><strong>Cambiar incorrectamente el signo de <span class="math inline">\(c\)</span>.</strong> Al dividir entre <span class="math inline">\(x+2=x-(-2)\)</span>, en el esquema se coloca <span class="math inline">\(c=-2\)</span>.</li>
+<li><strong>Incluir el residuo en el cociente.</strong> El último número del esquema es el residuo; los anteriores determinan un cociente de grado una unidad menor.</li>
 <li><strong>Concluir que hay un factor cuando el residuo no es cero.</strong> Si <span class="math inline">\(p(c)\ne0\)</span>, entonces <span class="math inline">\(x-c\)</span> no es factor de <span class="math inline">\(p(x)\)</span>.</li>
 <li><strong>No verificar el resultado.</strong> Siempre debe cumplirse <span class="math inline">\(p(x)=(x-c)q(x)+p(c)\)</span>.</li>
 </ul>
@@ -613,7 +653,7 @@ p(x)=x^3-x^2-5x+2.
 <p><span class="math display">\[
 s(x)=2x^4-3x^2+5x-1.
 \]</span></p>
-<p>Divida <span class="math inline">\(s(x)\)</span> entre <span class="math inline">\(x-1\)</span> mediante Ruffini. Interprete el último número de la tabla como residuo y como valor de <span class="math inline">\(s(1)\)</span>.</p></li>
+<p>Divida <span class="math inline">\(s(x)\)</span> entre <span class="math inline">\(x-2\)</span> mediante Ruffini. Interprete el último número del esquema como residuo y como valor de <span class="math inline">\(s(2)\)</span>.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -641,19 +681,19 @@ s(x)=2x^4-3x^2+5x-1.
 <p><span class="math display">\[
 (x+2)(x^2-3x+1)=x^3-x^2-5x+2.
 \]</span></p>
-<p><strong>2.</strong> El renglón de coeficientes debe incluir el coeficiente cero de <span class="math inline">\(x^3\)</span>:</p>
+<p><strong>2.</strong> El renglón de coeficientes debe incluir el coeficiente cero de <span class="math inline">\(x^3\)</span>. Como el divisor es <span class="math inline">\(x-2\)</span>, se usa <span class="math inline">\(c=2\)</span>:</p>
 <p><span class="math display">\[
 \begin{array}{r|rrrrr}
-1 &amp; 2 &amp; 0 &amp; -3 &amp; 5 &amp; -1\\
-  &amp;   &amp; 2 &amp; 2 &amp; -1 &amp; 4\\
+2 &amp; 2 &amp; 0 &amp; -3 &amp; 5 &amp; -1\\
+  &amp;   &amp; 4 &amp; 8 &amp; 10 &amp; 30\\
 \hline
-  &amp; 2 &amp; 2 &amp; -1 &amp; 4 &amp; \mathbf{3}
+  &amp; 2 &amp; 4 &amp; 5 &amp; 15 &amp; \mathbf{29}
 \end{array}
 \]</span></p>
-<p>Se baja <span class="math inline">\(2\)</span>; luego se repite la operación multiplicar por <span class="math inline">\(1\)</span> y sumar: <span class="math inline">\(0+2=2\)</span>, <span class="math inline">\(-3+2=-1\)</span>, <span class="math inline">\(5+(-1)=4\)</span> y <span class="math inline">\(-1+4=3\)</span>.</p>
-<p>El cociente es <span class="math inline">\(2x^3+2x^2-x+4\)</span> y el residuo es <span class="math inline">\(3\)</span>. Por el teorema del residuo, <span class="math inline">\(s(1)=3\)</span>; como este valor no es cero, <span class="math inline">\(x-1\)</span> no es factor. En efecto,</p>
+<p>Se baja <span class="math inline">\(2\)</span>; luego <span class="math inline">\(2(2)=4\)</span> y <span class="math inline">\(0+4=4\)</span>; después <span class="math inline">\(4(2)=8\)</span> y <span class="math inline">\(-3+8=5\)</span>; a continuación, <span class="math inline">\(5(2)=10\)</span> y <span class="math inline">\(5+10=15\)</span>; por último, <span class="math inline">\(15(2)=30\)</span> y <span class="math inline">\(-1+30=29\)</span>.</p>
+<p>El cociente es <span class="math inline">\(2x^3+4x^2+5x+15\)</span> y el residuo es <span class="math inline">\(29\)</span>. Por el teorema del residuo, <span class="math inline">\(s(2)=29\)</span>; como este valor no es cero, <span class="math inline">\(x-2\)</span> no es factor. En efecto,</p>
 <p><span class="math display">\[
-s(x)=(x-1)(2x^3+2x^2-x+4)+3.
+s(x)=(x-2)(2x^3+4x^2+5x+15)+29.
 \]</span></p>
 </div>
 </div>
@@ -669,7 +709,7 @@ s(x)=(x-1)(2x^3+2x^2-x+4)+3.
 <li><p><span class="math inline">\((x^3+1)\div(x+1)\)</span>.</p></li>
 </ol></li>
 <li><p>Determine el valor de <span class="math inline">\(k\)</span> para el cual <span class="math inline">\(x+2\)</span> es factor de <span class="math inline">\(x^3+kx^2-4x-12\)</span>. Obtenga después el cociente mediante Ruffini.</p></li>
-<li><p>Un estudiante dividió <span class="math inline">\(x^3-8\)</span> entre <span class="math inline">\(x-2\)</span> usando únicamente los coeficientes <span class="math inline">\(1,-8\)</span> y obtuvo residuo <span class="math inline">\(-6\)</span>. Identifique el error, corrija la tabla y verifique el resultado mediante el teorema del factor.</p></li>
+<li><p>Un estudiante dividió <span class="math inline">\(x^3-8\)</span> entre <span class="math inline">\(x-2\)</span> usando únicamente los coeficientes <span class="math inline">\(1,-8\)</span> y obtuvo residuo <span class="math inline">\(-6\)</span>. Identifique el error, corrija el esquema y verifique el resultado mediante el teorema del factor.</p></li>
 <li><p>Explique por qué la identidad</p>
 <p><span class="math display">\[
 p(x)=(x-c)q(x)+r
