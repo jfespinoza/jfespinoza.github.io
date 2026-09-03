@@ -73,6 +73,15 @@ $$
 x^2+\frac ba x=-\frac ca.
 $$
 
+El término que se agrega para completar el cuadrado no es arbitrario. Para cualquier número $u$,
+
+$$
+x^2+ux+\left(\frac u2\right)^2
+=\left(x+\frac u2\right)^2,
+$$
+
+porque el término lineal del miembro derecho es $2x\left(\dfrac u2\right)=ux$. Por tanto, se toma la mitad del coeficiente de $x$ y se eleva al cuadrado. En este caso, $u=\dfrac ba$, de modo que la mitad es $\dfrac b{2a}$ y su cuadrado es $\dfrac{b^2}{4a^2}$.
+
 Para completar el cuadrado se suma $\dfrac{b^2}{4a^2}$ a ambos miembros:
 
 $$
@@ -136,6 +145,13 @@ se llama **discriminante**. Su signo permite anticipar la naturaleza de las raí
 | $\Delta=0$ | Una raíz real doble, $x=-\dfrac b{2a}$ |
 | $\Delta<0$ | Dos raíces complejas no reales y conjugadas |
 
+Cuando $\Delta=0$, las elecciones $+\sqrt\Delta$ y $-\sqrt\Delta$ producen el mismo número. Hay una sola raíz distinta, pero aparece dos veces en la factorización:
+
+$$
+ax^2+bx+c
+=a\left(x+\frac b{2a}\right)^2.
+$$
+
 Si $\Delta<0$, se usa $\sqrt{-d}=(\sqrt d)i$ para $d>0$, como en la [Sesión 07](2026-08-18-sesion-07.qmd). Las raíces pueden escribirse como
 
 $$
@@ -144,7 +160,9 @@ $$
 
 Tienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la [Sesión 08](2026-08-19-sesion-08.qmd).
 
-El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando $a$, $b$ y $c$ son enteros y $\Delta$ es un cuadrado perfecto no negativo, $\sqrt\Delta$ es entero y las raíces son racionales; esto indica que puede buscarse una factorización en factores lineales con coeficientes racionales, como en la [Sesión 04](2026-08-13-sesion-04.qmd). Bajo esta misma hipótesis, si $\Delta>0$ no es un cuadrado perfecto, las raíces son irracionales; si $\Delta<0$, son complejas no reales. En estos dos últimos casos, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.
+El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando $a$, $b$ y $c$ son enteros y $\Delta$ es un cuadrado perfecto no negativo, $\sqrt\Delta$ es entero y las raíces son racionales; esto indica que puede buscarse una factorización en factores lineales con coeficientes racionales, como en la [Sesión 04](2026-08-13-sesion-04.qmd). Si $a$, $b$ y $c$ son enteros, $\Delta>0$ y $\Delta$ no es un cuadrado perfecto, las raíces son irracionales; si $\Delta<0$, son complejas no reales. En estos dos últimos casos, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.
+
+Al aplicar la fórmula general, primero se escribe la ecuación en la forma $ax^2+bx+c=0$ y se identifican $a$, $b$ y $c$ con sus signos. Después se calcula $\Delta$ por separado y se sustituye en $x=\dfrac{-b\pm\sqrt\Delta}{2a}$. Una vez efectuada la sustitución, no debe quedar ninguna $x$ en el miembro derecho.
 
 ## Ejemplos
 
@@ -232,7 +250,7 @@ Las raíces $2+3i$ y $2-3i$ son conjugadas.
 - **Olvidar el signo de $-b$.** Para $x^2-5x+6=0$, se tiene $b=-5$ y el numerador comienza con $-b=5$: las raíces son $3$ y $2$. Usar $-5$ produciría $-2$ y $-3$; al sustituir $x=-2$, el miembro izquierdo vale $20$, no $0$.
 - **Usar $2$ en lugar de $2a$ en el denominador.** En $2x^2-4x-1=0$, el denominador es $2a=4$ y divide tanto al $4$ como al radical. Escribir $2\pm\sqrt6$ en vez de $1\pm\dfrac{\sqrt6}{2}$ no produce raíces de la ecuación.
 - **Afirmar que no hay soluciones cuando $\Delta<0$.** La ecuación $x^2-4x+13=0$ no tiene raíces reales, pero su conjunto solución en $\mathbb C$ es $S=\{2+3i,2-3i\}$.
-- **Calcular mal el discriminante cuando $c<0$.** Para $2x^2-4x-1=0$, $\Delta=(-4)^2-4(2)(-1)=16+8=24$, no $16-8=8$.
+- **Calcular mal el discriminante cuando $b$ o $c$ son negativos.** Los paréntesis son indispensables: si $b=-4$, entonces $b^2=(-4)^2=16$, mientras que $-4^2=-(4^2)=-16$. Para $2x^2-4x-1=0$, $\Delta=(-4)^2-4(2)(-1)=16+8=24$, no $16-8=8$.
 
 ## Actividad
 
@@ -366,3 +384,4 @@ $$
    donde $t$ se mide en segundos. Determine en qué instantes la altura es de $15$ metros y compruebe que ambas respuestas pertenecen al intervalo indicado.
 
 5. Verifique que $2+i$ es raíz de $x^2-4x+5=0$ mediante el producto de la [Sesión 08](2026-08-19-sesion-08.qmd). Sin resolver la ecuación, indique cuál es la otra raíz y justifique la respuesta con el discriminante.
+
