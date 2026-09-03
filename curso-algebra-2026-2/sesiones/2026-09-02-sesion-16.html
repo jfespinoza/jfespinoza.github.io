@@ -522,6 +522,12 @@ x=r_1\ \text{ o }\ x=r_2.
 <p><span class="math display">\[
 x^2+\frac ba x=-\frac ca.
 \]</span></p>
+<p>El término que se agrega para completar el cuadrado no es arbitrario. Para cualquier número <span class="math inline">\(u\)</span>,</p>
+<p><span class="math display">\[
+x^2+ux+\left(\frac u2\right)^2
+=\left(x+\frac u2\right)^2,
+\]</span></p>
+<p>porque el término lineal del miembro derecho es <span class="math inline">\(2x\left(\dfrac u2\right)=ux\)</span>. Por tanto, se toma la mitad del coeficiente de <span class="math inline">\(x\)</span> y se eleva al cuadrado. En este caso, <span class="math inline">\(u=\dfrac ba\)</span>, de modo que la mitad es <span class="math inline">\(\dfrac b{2a}\)</span> y su cuadrado es <span class="math inline">\(\dfrac{b^2}{4a^2}\)</span>.</p>
 <p>Para completar el cuadrado se suma <span class="math inline">\(\dfrac{b^2}{4a^2}\)</span> a ambos miembros:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -586,12 +592,18 @@ x=-3\pm4.
 </tr>
 </tbody>
 </table>
+<p>Cuando <span class="math inline">\(\Delta=0\)</span>, las elecciones <span class="math inline">\(+\sqrt\Delta\)</span> y <span class="math inline">\(-\sqrt\Delta\)</span> producen el mismo número. Hay una sola raíz distinta, pero aparece dos veces en la factorización:</p>
+<p><span class="math display">\[
+ax^2+bx+c
+=a\left(x+\frac b{2a}\right)^2.
+\]</span></p>
 <p>Si <span class="math inline">\(\Delta&lt;0\)</span>, se usa <span class="math inline">\(\sqrt{-d}=(\sqrt d)i\)</span> para <span class="math inline">\(d&gt;0\)</span>, como en la <a href="../sesiones/2026-08-18-sesion-07.html">Sesión 07</a>. Las raíces pueden escribirse como</p>
 <p><span class="math display">\[
 x=-\frac b{2a}\pm\frac{\sqrt{-\Delta}}{2a}i.
 \]</span></p>
 <p>Tienen la misma parte real y partes imaginarias opuestas; por eso son conjugadas en el sentido de la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p>
-<p>El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> son enteros y <span class="math inline">\(\Delta\)</span> es un cuadrado perfecto no negativo, <span class="math inline">\(\sqrt\Delta\)</span> es entero y las raíces son racionales; esto indica que puede buscarse una factorización en factores lineales con coeficientes racionales, como en la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>. Bajo esta misma hipótesis, si <span class="math inline">\(\Delta&gt;0\)</span> no es un cuadrado perfecto, las raíces son irracionales; si <span class="math inline">\(\Delta&lt;0\)</span>, son complejas no reales. En estos dos últimos casos, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.</p>
+<p>El discriminante también orienta la elección del procedimiento. Si la factorización es visible, conviene usarla. Cuando <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> son enteros y <span class="math inline">\(\Delta\)</span> es un cuadrado perfecto no negativo, <span class="math inline">\(\sqrt\Delta\)</span> es entero y las raíces son racionales; esto indica que puede buscarse una factorización en factores lineales con coeficientes racionales, como en la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>. Si <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> son enteros, <span class="math inline">\(\Delta&gt;0\)</span> y <span class="math inline">\(\Delta\)</span> no es un cuadrado perfecto, las raíces son irracionales; si <span class="math inline">\(\Delta&lt;0\)</span>, son complejas no reales. En estos dos últimos casos, la fórmula general suele ser más directa. Cualquiera que sea el procedimiento, las raíces pueden comprobarse por sustitución en la ecuación original.</p>
+<p>Al aplicar la fórmula general, primero se escribe la ecuación en la forma <span class="math inline">\(ax^2+bx+c=0\)</span> y se identifican <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> con sus signos. Después se calcula <span class="math inline">\(\Delta\)</span> por separado y se sustituye en <span class="math inline">\(x=\dfrac{-b\pm\sqrt\Delta}{2a}\)</span>. Una vez efectuada la sustitución, no debe quedar ninguna <span class="math inline">\(x\)</span> en el miembro derecho.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -661,7 +673,7 @@ x=\frac{4\pm\sqrt{-36}}2
 <li><strong>Olvidar el signo de <span class="math inline">\(-b\)</span>.</strong> Para <span class="math inline">\(x^2-5x+6=0\)</span>, se tiene <span class="math inline">\(b=-5\)</span> y el numerador comienza con <span class="math inline">\(-b=5\)</span>: las raíces son <span class="math inline">\(3\)</span> y <span class="math inline">\(2\)</span>. Usar <span class="math inline">\(-5\)</span> produciría <span class="math inline">\(-2\)</span> y <span class="math inline">\(-3\)</span>; al sustituir <span class="math inline">\(x=-2\)</span>, el miembro izquierdo vale <span class="math inline">\(20\)</span>, no <span class="math inline">\(0\)</span>.</li>
 <li><strong>Usar <span class="math inline">\(2\)</span> en lugar de <span class="math inline">\(2a\)</span> en el denominador.</strong> En <span class="math inline">\(2x^2-4x-1=0\)</span>, el denominador es <span class="math inline">\(2a=4\)</span> y divide tanto al <span class="math inline">\(4\)</span> como al radical. Escribir <span class="math inline">\(2\pm\sqrt6\)</span> en vez de <span class="math inline">\(1\pm\dfrac{\sqrt6}{2}\)</span> no produce raíces de la ecuación.</li>
 <li><strong>Afirmar que no hay soluciones cuando <span class="math inline">\(\Delta&lt;0\)</span>.</strong> La ecuación <span class="math inline">\(x^2-4x+13=0\)</span> no tiene raíces reales, pero su conjunto solución en <span class="math inline">\(\mathbb C\)</span> es <span class="math inline">\(S=\{2+3i,2-3i\}\)</span>.</li>
-<li><strong>Calcular mal el discriminante cuando <span class="math inline">\(c&lt;0\)</span>.</strong> Para <span class="math inline">\(2x^2-4x-1=0\)</span>, <span class="math inline">\(\Delta=(-4)^2-4(2)(-1)=16+8=24\)</span>, no <span class="math inline">\(16-8=8\)</span>.</li>
+<li><strong>Calcular mal el discriminante cuando <span class="math inline">\(b\)</span> o <span class="math inline">\(c\)</span> son negativos.</strong> Los paréntesis son indispensables: si <span class="math inline">\(b=-4\)</span>, entonces <span class="math inline">\(b^2=(-4)^2=16\)</span>, mientras que <span class="math inline">\(-4^2=-(4^2)=-16\)</span>. Para <span class="math inline">\(2x^2-4x-1=0\)</span>, <span class="math inline">\(\Delta=(-4)^2-4(2)(-1)=16+8=24\)</span>, no <span class="math inline">\(16-8=8\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
