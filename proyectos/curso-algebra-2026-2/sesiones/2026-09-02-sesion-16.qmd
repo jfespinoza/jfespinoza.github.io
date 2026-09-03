@@ -384,4 +384,3 @@ $$
    donde $t$ se mide en segundos. Determine en qué instantes la altura es de $15$ metros y compruebe que ambas respuestas pertenecen al intervalo indicado.
 
 5. Verifique que $2+i$ es raíz de $x^2-4x+5=0$ mediante el producto de la [Sesión 08](2026-08-19-sesion-08.qmd). Sin resolver la ecuación, indique cuál es la otra raíz y justifique la respuesta con el discriminante.
-
