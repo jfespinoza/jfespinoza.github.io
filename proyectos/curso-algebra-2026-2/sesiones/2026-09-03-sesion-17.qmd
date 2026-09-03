@@ -136,7 +136,9 @@ La **regla de Ruffini** abrevia la división entre $x-c$. Utiliza únicamente lo
 4. Multiplicar el último número obtenido por $c$ y sumar el resultado al coeficiente siguiente.
 5. Repetir hasta llegar al término independiente.
 
-Los números finales, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con $p(c)$.
+En el esquema convencional, el número $c$ se coloca a la izquierda de la barra vertical. En la fila superior se escriben los coeficientes de $p(x)$; en la fila intermedia aparecen los productos por $c$; debajo de la línea se anotan las sumas. El espacio inicial de la fila de productos es intencional: antes de bajar el coeficiente principal todavía no hay nada que multiplicar.
+
+Los números de la última fila, salvo el último, son los coeficientes del cociente. El último es el residuo y coincide con $p(c)$.
 
 ### Ejemplo
 
@@ -148,11 +150,23 @@ $$
 
 entre $x-1$. Debe incluirse el coeficiente $0$ del término en $x$:
 
-| Renglón | $x^3$ | $x^2$ | $x$ | término independiente |
-|---|---:|---:|---:|---:|
-| Coeficientes | $2$ | $-5$ | $0$ | $3$ |
-| Productos por $c=1$ |  | $2$ | $-3$ | $-3$ |
-| Sumas | $2$ | $-3$ | $-3$ | $\mathbf{0}$ |
+El esquema de Ruffini se escribe así:
+
+$$
+\begin{array}{r|rrrr}
+1 & 2 & -5 & 0 & 3\\
+  &   & 2 & -3 & -3\\
+\hline
+  & 2 & -3 & -3 & \mathbf{0}
+\end{array}
+$$
+
+Se completa de izquierda a derecha:
+
+1. Se baja el coeficiente principal: $2$.
+2. Se multiplica $2(1)=2$ y se escribe el resultado debajo de $-5$; después se suma: $-5+2=-3$.
+3. Se multiplica $(-3)(1)=-3$ y se escribe debajo de $0$; después se suma: $0+(-3)=-3$.
+4. Se multiplica $(-3)(1)=-3$ y se escribe debajo de $3$; después se suma: $3+(-3)=0$.
 
 El cociente es
 
@@ -160,11 +174,13 @@ $$
 q(x)=2x^2-3x-3
 $$
 
-y el residuo es $0$. La tabla confirma simultáneamente que $p(1)=0$ y que $x-1$ es factor:
+y el residuo es $0$. El esquema confirma simultáneamente que $p(1)=0$ y que $x-1$ es factor:
 
 $$
 2x^3-5x^2+3=(x-1)(2x^2-3x-3).
 $$
+
+El esquema organiza, columna por columna, las operaciones necesarias para que coincidan los coeficientes en la identidad $p(x)=(x-c)q(x)+r$. Por eso los números anteriores al último forman el cociente y el último es $r=p(c)$.
 
 La regla se usa en esta forma únicamente cuando el divisor es $x-c$. Si el divisor es $x+2$, debe escribirse como $x-(-2)$ y utilizar $c=-2$.
 
@@ -177,6 +193,8 @@ La regla se usa en esta forma únicamente cuando el divisor es $x-c$. Si el divi
 - **No verificar el resultado.** Siempre debe cumplirse $p(x)=(x-c)q(x)+p(c)$.
 
 ## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
 
 1. Sea
 
@@ -198,11 +216,16 @@ La regla se usa en esta forma únicamente cuando el divisor es $x-c$. Si el divi
 
 **1.** Como $x+2=x-(-2)$, se usa $c=-2$:
 
-| Renglón | $x^3$ | $x^2$ | $x$ | término independiente |
-|---|---:|---:|---:|---:|
-| Coeficientes | $1$ | $-1$ | $-5$ | $2$ |
-| Productos por $c=-2$ |  | $-2$ | $6$ | $-2$ |
-| Sumas | $1$ | $-3$ | $1$ | $\mathbf{0}$ |
+$$
+\begin{array}{r|rrrr}
+-2 & 1 & -1 & -5 & 2\\
+   &   & -2 & 6 & -2\\
+\hline
+   & 1 & -3 & 1 & \mathbf{0}
+\end{array}
+$$
+
+Se baja $1$; luego $1(-2)=-2$ y $-1+(-2)=-3$; después $(-3)(-2)=6$ y $-5+6=1$; por último, $1(-2)=-2$ y $2+(-2)=0$.
 
 El cociente es $x^2-3x+1$ y el residuo es $0$. Por tanto, $-2$ es raíz y $x+2$ es factor. La verificación es
 
@@ -212,11 +235,16 @@ $$
 
 **2.** El renglón de coeficientes debe incluir el coeficiente cero de $x^3$:
 
-| Renglón | $x^4$ | $x^3$ | $x^2$ | $x$ | término independiente |
-|---|---:|---:|---:|---:|---:|
-| Coeficientes | $2$ | $0$ | $-3$ | $5$ | $-1$ |
-| Productos por $c=1$ |  | $2$ | $2$ | $-1$ | $4$ |
-| Sumas | $2$ | $2$ | $-1$ | $4$ | $\mathbf{3}$ |
+$$
+\begin{array}{r|rrrrr}
+1 & 2 & 0 & -3 & 5 & -1\\
+  &   & 2 & 2 & -1 & 4\\
+\hline
+  & 2 & 2 & -1 & 4 & \mathbf{3}
+\end{array}
+$$
+
+Se baja $2$; luego se repite la operación multiplicar por $1$ y sumar: $0+2=2$, $-3+2=-1$, $5+(-1)=4$ y $-1+4=3$.
 
 El cociente es $2x^3+2x^2-x+4$ y el residuo es $3$. Por el teorema del residuo, $s(1)=3$; como este valor no es cero, $x-1$ no es factor. En efecto,
 
