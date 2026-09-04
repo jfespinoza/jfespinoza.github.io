@@ -14,13 +14,15 @@ $$
 p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
 $$
 
-un polinomio con coeficientes enteros, donde $a_n\ne0$ y $a_0\ne0$. Si el número racional $\dfrac rs$, escrito en forma irreducible con $s>0$, es raíz de $p(x)$, entonces
+un polinomio con coeficientes enteros, donde $a_n\ne0$ y $a_0\ne0$. Si el número racional $\dfrac rs$, escrito en forma irreducible con $s>0$ como en la [Sesión 02](2026-08-11-sesion-02.qmd), es raíz de $p(x)$, entonces
 
 $$
 r\mid a_0
 \qquad\text{y}\qquad
 s\mid a_n.
 $$
+
+La notación $r\mid a_0$ significa que $r$ divide a $a_0$; de manera análoga, $s\mid a_n$ significa que $s$ divide a $a_n$. Los términos **coeficiente principal** y **término independiente** se usan en el sentido habitual.
 
 Por tanto, toda raíz racional debe pertenecer a la lista
 
@@ -34,14 +36,14 @@ $$
 
 Cada fracción se simplifica y las repeticiones se eliminan. Los números restantes son los **candidatos a raíz racional**.
 
-El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de $x^2-2$ son $\pm1$ y $\pm2$; ninguno anula el polinomio. Se concluye que $x^2-2$ no tiene raíces racionales, no que carezca de raíces.
+El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de $x^2-2$ son $\pm1$ y $\pm2$; ninguno anula el polinomio. Se concluye que $x^2-2$ no tiene raíces racionales, no que carezca de raíces: $\sqrt2$ y $-\sqrt2$ son irracionales.
 
 Dos casos se simplifican antes de formar la lista:
 
 - Si $p(x)$ es mónico, entonces $a_n=1$ y todos los candidatos son enteros que dividen a $a_0$.
-- Si $a_0=0$, primero se extrae la mayor potencia posible de $x$. Así, $x^3-4x=x(x^2-4)$ y $0$ es una raíz antes de aplicar el teorema al factor $x^2-4$.
+- Si $a_0=0$, primero se extrae la mayor potencia posible de $x$ como factor común, según la [Sesión 04](2026-08-13-sesion-04.qmd). Así, $x^3-4x=x(x^2-4)$ y $0$ es una raíz antes de aplicar el teorema al factor $x^2-4$.
 
-Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces; por ejemplo,
+Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces, como se estableció en la [Sesión 05](2026-08-14-sesion-05.qmd); por ejemplo,
 
 $$
 x^3-\frac12x^2-2x+1=0
@@ -58,7 +60,7 @@ Para buscar raíces racionales y reducir el grado:
 1. Ordene el polinomio y compruebe que sus coeficientes sean enteros. Si falta alguna potencia, conserve su coeficiente $0$ para aplicar Ruffini.
 2. Escriba los divisores positivos de $|a_0|$ y de $|a_n|$.
 3. Forme los cocientes $\pm\dfrac rs$, simplifíquelos y elimine repeticiones.
-4. Pruebe candidatos mediante evaluación directa o Ruffini. Conviene comenzar con $1$ y $-1$; se tiene que $p(1)$ es la suma de los coeficientes.
+4. Pruebe candidatos mediante evaluación directa ([Sesión 15](2026-09-01-sesion-15.qmd)) o Ruffini. Comience con $1$ y $-1$: $p(1)$ es la suma de los coeficientes y $p(-1)$ es la suma que resulta al cambiar de signo los coeficientes de las potencias impares. Continúe con los demás enteros, de menor a mayor valor absoluto, y deje las fracciones al final. Si todos los coeficientes no nulos tienen el mismo signo, ningún candidato positivo puede ser raíz.
 5. Cuando un candidato $c$ produzca residuo cero, escriba
 
    $$
@@ -67,8 +69,15 @@ Para buscar raíces racionales y reducir el grado:
 
    donde $q(x)$ es el cociente obtenido mediante Ruffini. Este cociente, de grado una unidad menor que $p(x)$, es el **polinomio reducido**.
 
-Una factorización parcial debe verificarse desarrollando el producto o comprobando la identidad de la división.
-Se llama parcial porque el polinomio reducido todavía puede admitir una factorización adicional.
+Si se buscan todas las raíces racionales, la búsqueda continúa en $q(x)$. Por la propiedad del producto cero de la [Sesión 16](2026-09-02-sesion-16.qmd), para todo número $t\ne c$ se cumple
+
+$$
+p(t)=0 \quad\Longleftrightarrow\quad q(t)=0.
+$$
+
+Por tanto, las raíces racionales aún no encontradas se buscan en el polinomio reducido. Un candidato $t\ne c$ que ya falló en $p(x)$ no necesita probarse otra vez: de $p(t)=(t-c)q(t)\ne0$ se sigue que $q(t)\ne0$.
+
+En esta sesión basta obtener una reducción de grado. La factorización es **parcial** mientras el polinomio reducido permanezca sin descomponer por completo. Debe verificarse desarrollando el producto o comprobando la identidad de la división.
 
 ## Ejemplos
 
@@ -173,15 +182,18 @@ $$
 
 El producto recupera el polinomio original y confirma la factorización.
 
+Para cerrar la búsqueda de raíces racionales, se prueba el único candidato original pendiente en el cociente $q(x)=2x^2-4$ de $p(x)$: $q\!\left(-\frac12\right)=2\left(\frac14\right)-4=-\frac72\ne0$. Como los demás candidatos ya fueron descartados, $\dfrac12$ es la única raíz racional de $f(x)$.
+
 ## Errores frecuentes
 
-- **Intercambiar numerador y denominador.** El numerador divide al término independiente y el denominador divide al coeficiente principal. Para $3x^2-5x-2$, los candidatos son $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$.
-- **Confundir candidato con raíz.** Pertenecer a la lista solo autoriza a probar el número. Es necesario obtener $p(c)=0$ para afirmar que $c$ es raíz.
-- **Repetir fracciones equivalentes.** Si aparecen $\dfrac12$, $\dfrac24$ y $\dfrac36$, se conserva únicamente $\dfrac12$ y después se agrega su opuesto.
-- **Perder el signo al usar Ruffini.** Para probar el factor $x+2=x-(-2)$ se coloca $c=-2$ a la izquierda del esquema.
-- **Olvidar los coeficientes cero.** El renglón de $4x^3+3x-9$ es $4,0,3,-9$.
+- **Intercambiar los divisores.** Para $p(x)=3x^2-5x-2$, la lista correcta es $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$. La lista invertida, $\pm1$, $\pm3$, $\pm\dfrac12$ y $\pm\dfrac32$, omite las dos raíces: $p(2)=0$ y $p\!\left(-\dfrac13\right)=0$.
+- **Olvidar los candidatos negativos.** En $p(x)=x^3+2x^2+3x+6$, los candidatos positivos dan valores distintos de cero, pero $p(-2)=-8+8-6+6=0$. Probar solo los positivos llevaría a una conclusión falsa.
+- **Aplicar el teorema antes de obtener coeficientes enteros.** En $x^2-\dfrac14=0$ no se puede usar directamente la regla del caso mónico. Al multiplicar por $4$ se obtiene $4x^2-1=0$, cuyos candidatos incluyen las raíces $\pm\dfrac12$.
+- **Concluir que no hay raíces.** Los candidatos $\pm1$ y $\pm3$ de $x^2-3$ fallan. La conclusión correcta es que no hay raíces racionales; la ecuación sí tiene las raíces irracionales $\pm\sqrt3$.
 
 ## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.
 
 1. Sea $p(x)=x^3+2x^2-5x-6$.
 
@@ -228,13 +240,26 @@ $$
 
 Al desarrollar el producto se obtiene $x^3+2x^2-5x-6$, como se requería.
 
+La actividad solicita una reducción de grado; por eso el factor $x^2+x-6$ queda sin descomponer. Para encontrar todas las raíces racionales se continuaría con ese polinomio reducido.
+
 **2.** Al multiplicar la ecuación por $3$ se obtiene
 
 $$
 3x^3+x^2+x-2=0.
 $$
 
-Los candidatos son $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$. Al probarlos se encuentra que $c=\dfrac23$ es raíz. Ruffini da
+Los candidatos son $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$. Se prueban en orden:
+
+$$
+\begin{aligned}
+p(1)&=3, & p(-1)&=-5,\\
+p(2)&=28, & p(-2)&=-24,\\
+p\!\left(\frac13\right)&=-\frac{13}{9},
+& p\!\left(-\frac13\right)&=-\frac73.
+\end{aligned}
+$$
+
+Ninguno de esos valores es raíz. Para $c=\dfrac23$, Ruffini da
 
 $$
 \begin{array}{r|rrrr}
@@ -258,6 +283,8 @@ $$
 x^3+\frac13x^2+\frac13x-\frac23
 =\left(x-\frac23\right)(x^2+x+1).
 $$
+
+El polinomio reducido es mónico y sus únicos candidatos racionales son $\pm1$; como sus valores son $3$ y $1$, no tiene raíces racionales. Por tanto, $\dfrac23$ es la única raíz racional de la ecuación.
 
 **3.** El estudiante consideró los posibles numeradores, pero omitió los denominadores que dividen al coeficiente principal $4$. Los divisores positivos de $9$ son $1,3,9$ y los de $4$ son $1,2,4$. La lista completa, sin repeticiones, es
 
