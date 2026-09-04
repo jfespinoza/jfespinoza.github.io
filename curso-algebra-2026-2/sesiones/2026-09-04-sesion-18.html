@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-14a58b5dd5c609a643f01857f0a7e872.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-420afcd2114ee7a52897809e7ae302c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -460,12 +460,13 @@ window.Quarto = {
 <p><span class="math display">\[
 p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
 \]</span></p>
-<p>un polinomio con coeficientes enteros, donde <span class="math inline">\(a_n\ne0\)</span> y <span class="math inline">\(a_0\ne0\)</span>. Si el número racional <span class="math inline">\(\dfrac rs\)</span>, escrito en forma irreducible con <span class="math inline">\(s&gt;0\)</span>, es raíz de <span class="math inline">\(p(x)\)</span>, entonces</p>
+<p>un polinomio con coeficientes enteros, donde <span class="math inline">\(a_n\ne0\)</span> y <span class="math inline">\(a_0\ne0\)</span>. Si el número racional <span class="math inline">\(\dfrac rs\)</span>, escrito en forma irreducible con <span class="math inline">\(s&gt;0\)</span> como en la <a href="../sesiones/2026-08-11-sesion-02.html">Sesión 02</a>, es raíz de <span class="math inline">\(p(x)\)</span>, entonces</p>
 <p><span class="math display">\[
 r\mid a_0
 \qquad\text{y}\qquad
 s\mid a_n.
 \]</span></p>
+<p>La notación <span class="math inline">\(r\mid a_0\)</span> significa que <span class="math inline">\(r\)</span> divide a <span class="math inline">\(a_0\)</span>; de manera análoga, <span class="math inline">\(s\mid a_n\)</span> significa que <span class="math inline">\(s\)</span> divide a <span class="math inline">\(a_n\)</span>. Los términos <strong>coeficiente principal</strong> y <strong>término independiente</strong> se usan en el sentido habitual.</p>
 <p>Por tanto, toda raíz racional debe pertenecer a la lista</p>
 <p><span class="math display">\[
 \pm\frac rs,
@@ -475,13 +476,13 @@ r\text{ divisor positivo de }|a_0|,
 s\text{ divisor positivo de }|a_n|.
 \]</span></p>
 <p>Cada fracción se simplifica y las repeticiones se eliminan. Los números restantes son los <strong>candidatos a raíz racional</strong>.</p>
-<p>El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de <span class="math inline">\(x^2-2\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>; ninguno anula el polinomio. Se concluye que <span class="math inline">\(x^2-2\)</span> no tiene raíces racionales, no que carezca de raíces.</p>
+<p>El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de <span class="math inline">\(x^2-2\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>; ninguno anula el polinomio. Se concluye que <span class="math inline">\(x^2-2\)</span> no tiene raíces racionales, no que carezca de raíces: <span class="math inline">\(\sqrt2\)</span> y <span class="math inline">\(-\sqrt2\)</span> son irracionales.</p>
 <p>Dos casos se simplifican antes de formar la lista:</p>
 <ul>
 <li>Si <span class="math inline">\(p(x)\)</span> es mónico, entonces <span class="math inline">\(a_n=1\)</span> y todos los candidatos son enteros que dividen a <span class="math inline">\(a_0\)</span>.</li>
-<li>Si <span class="math inline">\(a_0=0\)</span>, primero se extrae la mayor potencia posible de <span class="math inline">\(x\)</span>. Así, <span class="math inline">\(x^3-4x=x(x^2-4)\)</span> y <span class="math inline">\(0\)</span> es una raíz antes de aplicar el teorema al factor <span class="math inline">\(x^2-4\)</span>.</li>
+<li>Si <span class="math inline">\(a_0=0\)</span>, primero se extrae la mayor potencia posible de <span class="math inline">\(x\)</span> como factor común, según la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>. Así, <span class="math inline">\(x^3-4x=x(x^2-4)\)</span> y <span class="math inline">\(0\)</span> es una raíz antes de aplicar el teorema al factor <span class="math inline">\(x^2-4\)</span>.</li>
 </ul>
-<p>Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces; por ejemplo,</p>
+<p>Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces, como se estableció en la <a href="../sesiones/2026-08-14-sesion-05.html">Sesión 05</a>; por ejemplo,</p>
 <p><span class="math display">\[
 x^3-\frac12x^2-2x+1=0
 \quad\Longleftrightarrow\quad
@@ -496,14 +497,19 @@ x^3-\frac12x^2-2x+1=0
 <li><p>Ordene el polinomio y compruebe que sus coeficientes sean enteros. Si falta alguna potencia, conserve su coeficiente <span class="math inline">\(0\)</span> para aplicar Ruffini.</p></li>
 <li><p>Escriba los divisores positivos de <span class="math inline">\(|a_0|\)</span> y de <span class="math inline">\(|a_n|\)</span>.</p></li>
 <li><p>Forme los cocientes <span class="math inline">\(\pm\dfrac rs\)</span>, simplifíquelos y elimine repeticiones.</p></li>
-<li><p>Pruebe candidatos mediante evaluación directa o Ruffini. Conviene comenzar con <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>; se tiene que <span class="math inline">\(p(1)\)</span> es la suma de los coeficientes.</p></li>
+<li><p>Pruebe candidatos mediante evaluación directa (<a href="../sesiones/2026-09-01-sesion-15.html">Sesión 15</a>) o Ruffini. Comience con <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>: <span class="math inline">\(p(1)\)</span> es la suma de los coeficientes y <span class="math inline">\(p(-1)\)</span> es la suma que resulta al cambiar de signo los coeficientes de las potencias impares. Continúe con los demás enteros, de menor a mayor valor absoluto, y deje las fracciones al final. Si todos los coeficientes no nulos tienen el mismo signo, ningún candidato positivo puede ser raíz.</p></li>
 <li><p>Cuando un candidato <span class="math inline">\(c\)</span> produzca residuo cero, escriba</p>
 <p><span class="math display">\[
 p(x)=(x-c)q(x),
 \]</span></p>
 <p>donde <span class="math inline">\(q(x)\)</span> es el cociente obtenido mediante Ruffini. Este cociente, de grado una unidad menor que <span class="math inline">\(p(x)\)</span>, es el <strong>polinomio reducido</strong>.</p></li>
 </ol>
-<p>Una factorización parcial debe verificarse desarrollando el producto o comprobando la identidad de la división. Se llama parcial porque el polinomio reducido todavía puede admitir una factorización adicional.</p>
+<p>Si se buscan todas las raíces racionales, la búsqueda continúa en <span class="math inline">\(q(x)\)</span>. Por la propiedad del producto cero de la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>, para todo número <span class="math inline">\(t\ne c\)</span> se cumple</p>
+<p><span class="math display">\[
+p(t)=0 \quad\Longleftrightarrow\quad q(t)=0.
+\]</span></p>
+<p>Por tanto, las raíces racionales aún no encontradas se buscan en el polinomio reducido. Un candidato <span class="math inline">\(t\ne c\)</span> que ya falló en <span class="math inline">\(p(x)\)</span> no necesita probarse otra vez: de <span class="math inline">\(p(t)=(t-c)q(t)\ne0\)</span> se sigue que <span class="math inline">\(q(t)\ne0\)</span>.</p>
+<p>En esta sesión basta obtener una reducción de grado. La factorización es <strong>parcial</strong> mientras el polinomio reducido permanezca sin descomponer por completo. Debe verificarse desarrollando el producto o comprobando la identidad de la división.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -582,20 +588,21 @@ p(x)=\left(x-\frac12\right)(2x^2-4).
 f(x)=\left(x-\frac12\right)(x^2-2).
 \]</span></p>
 <p>El producto recupera el polinomio original y confirma la factorización.</p>
+<p>Para cerrar la búsqueda de raíces racionales, se prueba el único candidato original pendiente en el cociente <span class="math inline">\(q(x)=2x^2-4\)</span> de <span class="math inline">\(p(x)\)</span>: <span class="math inline">\(q\!\left(-\frac12\right)=2\left(\frac14\right)-4=-\frac72\ne0\)</span>. Como los demás candidatos ya fueron descartados, <span class="math inline">\(\dfrac12\)</span> es la única raíz racional de <span class="math inline">\(f(x)\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Intercambiar numerador y denominador.</strong> El numerador divide al término independiente y el denominador divide al coeficiente principal. Para <span class="math inline">\(3x^2-5x-2\)</span>, los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>.</li>
-<li><strong>Confundir candidato con raíz.</strong> Pertenecer a la lista solo autoriza a probar el número. Es necesario obtener <span class="math inline">\(p(c)=0\)</span> para afirmar que <span class="math inline">\(c\)</span> es raíz.</li>
-<li><strong>Repetir fracciones equivalentes.</strong> Si aparecen <span class="math inline">\(\dfrac12\)</span>, <span class="math inline">\(\dfrac24\)</span> y <span class="math inline">\(\dfrac36\)</span>, se conserva únicamente <span class="math inline">\(\dfrac12\)</span> y después se agrega su opuesto.</li>
-<li><strong>Perder el signo al usar Ruffini.</strong> Para probar el factor <span class="math inline">\(x+2=x-(-2)\)</span> se coloca <span class="math inline">\(c=-2\)</span> a la izquierda del esquema.</li>
-<li><strong>Olvidar los coeficientes cero.</strong> El renglón de <span class="math inline">\(4x^3+3x-9\)</span> es <span class="math inline">\(4,0,3,-9\)</span>.</li>
+<li><strong>Intercambiar los divisores.</strong> Para <span class="math inline">\(p(x)=3x^2-5x-2\)</span>, la lista correcta es <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>. La lista invertida, <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm3\)</span>, <span class="math inline">\(\pm\dfrac12\)</span> y <span class="math inline">\(\pm\dfrac32\)</span>, omite las dos raíces: <span class="math inline">\(p(2)=0\)</span> y <span class="math inline">\(p\!\left(-\dfrac13\right)=0\)</span>.</li>
+<li><strong>Olvidar los candidatos negativos.</strong> En <span class="math inline">\(p(x)=x^3+2x^2+3x+6\)</span>, los candidatos positivos dan valores distintos de cero, pero <span class="math inline">\(p(-2)=-8+8-6+6=0\)</span>. Probar solo los positivos llevaría a una conclusión falsa.</li>
+<li><strong>Aplicar el teorema antes de obtener coeficientes enteros.</strong> En <span class="math inline">\(x^2-\dfrac14=0\)</span> no se puede usar directamente la regla del caso mónico. Al multiplicar por <span class="math inline">\(4\)</span> se obtiene <span class="math inline">\(4x^2-1=0\)</span>, cuyos candidatos incluyen las raíces <span class="math inline">\(\pm\dfrac12\)</span>.</li>
+<li><strong>Concluir que no hay raíces.</strong> Los candidatos <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm3\)</span> de <span class="math inline">\(x^2-3\)</span> fallan. La conclusión correcta es que no hay raíces racionales; la ecuación sí tiene las raíces irracionales <span class="math inline">\(\pm\sqrt3\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
 <ol type="1">
 <li><p>Sea <span class="math inline">\(p(x)=x^3+2x^2-5x-6\)</span>.</p>
 <ol type="a">
@@ -640,11 +647,21 @@ x^3+\frac13x^2+\frac13x-\frac23=0.
 p(x)=(x+1)(x^2+x-6).
 \]</span></p>
 <p>Al desarrollar el producto se obtiene <span class="math inline">\(x^3+2x^2-5x-6\)</span>, como se requería.</p>
+<p>La actividad solicita una reducción de grado; por eso el factor <span class="math inline">\(x^2+x-6\)</span> queda sin descomponer. Para encontrar todas las raíces racionales se continuaría con ese polinomio reducido.</p>
 <p><strong>2.</strong> Al multiplicar la ecuación por <span class="math inline">\(3\)</span> se obtiene</p>
 <p><span class="math display">\[
 3x^3+x^2+x-2=0.
 \]</span></p>
-<p>Los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>. Al probarlos se encuentra que <span class="math inline">\(c=\dfrac23\)</span> es raíz. Ruffini da</p>
+<p>Los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>. Se prueban en orden:</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(1)&amp;=3, &amp; p(-1)&amp;=-5,\\
+p(2)&amp;=28, &amp; p(-2)&amp;=-24,\\
+p\!\left(\frac13\right)&amp;=-\frac{13}{9},
+&amp; p\!\left(-\frac13\right)&amp;=-\frac73.
+\end{aligned}
+\]</span></p>
+<p>Ninguno de esos valores es raíz. Para <span class="math inline">\(c=\dfrac23\)</span>, Ruffini da</p>
 <p><span class="math display">\[
 \begin{array}{r|rrrr}
 \frac23 &amp; 3 &amp; 1 &amp; 1 &amp; -2\\
@@ -663,6 +680,7 @@ p(x)=(x+1)(x^2+x-6).
 x^3+\frac13x^2+\frac13x-\frac23
 =\left(x-\frac23\right)(x^2+x+1).
 \]</span></p>
+<p>El polinomio reducido es mónico y sus únicos candidatos racionales son <span class="math inline">\(\pm1\)</span>; como sus valores son <span class="math inline">\(3\)</span> y <span class="math inline">\(1\)</span>, no tiene raíces racionales. Por tanto, <span class="math inline">\(\dfrac23\)</span> es la única raíz racional de la ecuación.</p>
 <p><strong>3.</strong> El estudiante consideró los posibles numeradores, pero omitió los denominadores que dividen al coeficiente principal <span class="math inline">\(4\)</span>. Los divisores positivos de <span class="math inline">\(9\)</span> son <span class="math inline">\(1,3,9\)</span> y los de <span class="math inline">\(4\)</span> son <span class="math inline">\(1,2,4\)</span>. La lista completa, sin repeticiones, es</p>
 <p><span class="math display">\[
 \pm1,\quad \pm3,\quad \pm9,
