@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ecuaciones, raíces, factorización y aproximación.">
+<meta name="description" content="Generación y prueba de candidatos racionales mediante evaluación directa y regla de Ruffini; reducción del grado y factorización parcial.">
 
-<title>Unidad 2. Polinomios y raíces – Álgebra</title>
+<title>Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-09-01-sesion-15.html" rel="next">
-<link href="../sesiones/2026-08-28-sesion-14.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-03-sesion-17.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Unidad 2. Polinomios y raíces – Álgebra">
-<meta property="og:description" content="Ecuaciones, raíces, factorización y aproximación.">
+<meta property="og:title" content="Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado – Álgebra">
+<meta property="og:description" content="Generación y prueba de candidatos racionales mediante evaluación directa y regla de Ruffini; reducción del grado y factorización parcial.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-04-sesion-18.html"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -292,7 +292,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -312,7 +312,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
+  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
   </div>
 </li>
       </ul>
@@ -412,16 +412,25 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#candidatos-a-raíz-racional" id="toc-candidatos-a-raíz-racional" class="nav-link active" data-scroll-target="#candidatos-a-raíz-racional">Candidatos a raíz racional</a></li>
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-coeficiente-principal-distinto-de-uno" id="toc-ejemplo-1.-coeficiente-principal-distinto-de-uno" class="nav-link" data-scroll-target="#ejemplo-1.-coeficiente-principal-distinto-de-uno">Ejemplo 1. Coeficiente principal distinto de uno</a></li>
+  <li><a href="#ejemplo-2.-coeficientes-racionales" id="toc-ejemplo-2.-coeficientes-racionales" class="nav-link" data-scroll-target="#ejemplo-2.-coeficientes-racionales">Ejemplo 2. Coeficientes racionales</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-04-sesion-18.html"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></h1>
 </div>
 
 
@@ -429,6 +438,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">4 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -438,20 +453,241 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 20 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="candidatos-a-raíz-racional" class="level2">
+<h2 class="anchored" data-anchor-id="candidatos-a-raíz-racional">Candidatos a raíz racional</h2>
+<p>En la <a href="../sesiones/2026-09-03-sesion-17.html">Sesión 17</a> se estableció que un número <span class="math inline">\(c\)</span> es raíz de un polinomio <span class="math inline">\(p(x)\)</span> si y solo si <span class="math inline">\(x-c\)</span> es factor de <span class="math inline">\(p(x)\)</span>. La regla de Ruffini permite probar un valor de <span class="math inline">\(c\)</span> y, si el residuo es cero, obtener al mismo tiempo el cociente. Falta decidir qué valores racionales conviene probar.</p>
+<p><strong>Teorema de la raíz racional.</strong> Sea</p>
+<p><span class="math display">\[
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+\]</span></p>
+<p>un polinomio con coeficientes enteros, donde <span class="math inline">\(a_n\ne0\)</span> y <span class="math inline">\(a_0\ne0\)</span>. Si el número racional <span class="math inline">\(\dfrac rs\)</span>, escrito en forma irreducible con <span class="math inline">\(s&gt;0\)</span>, es raíz de <span class="math inline">\(p(x)\)</span>, entonces</p>
+<p><span class="math display">\[
+r\mid a_0
+\qquad\text{y}\qquad
+s\mid a_n.
+\]</span></p>
+<p>Por tanto, toda raíz racional debe pertenecer a la lista</p>
+<p><span class="math display">\[
+\pm\frac rs,
+\qquad
+r\text{ divisor positivo de }|a_0|,
+\qquad
+s\text{ divisor positivo de }|a_n|.
+\]</span></p>
+<p>Cada fracción se simplifica y las repeticiones se eliminan. Los números restantes son los <strong>candidatos a raíz racional</strong>.</p>
+<p>El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de <span class="math inline">\(x^2-2\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>; ninguno anula el polinomio. Se concluye que <span class="math inline">\(x^2-2\)</span> no tiene raíces racionales, no que carezca de raíces.</p>
+<p>Dos casos se simplifican antes de formar la lista:</p>
+<ul>
+<li>Si <span class="math inline">\(p(x)\)</span> es mónico, entonces <span class="math inline">\(a_n=1\)</span> y todos los candidatos son enteros que dividen a <span class="math inline">\(a_0\)</span>.</li>
+<li>Si <span class="math inline">\(a_0=0\)</span>, primero se extrae la mayor potencia posible de <span class="math inline">\(x\)</span>. Así, <span class="math inline">\(x^3-4x=x(x^2-4)\)</span> y <span class="math inline">\(0\)</span> es una raíz antes de aplicar el teorema al factor <span class="math inline">\(x^2-4\)</span>.</li>
+</ul>
+<p>Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces; por ejemplo,</p>
+<p><span class="math display">\[
+x^3-\frac12x^2-2x+1=0
+\quad\Longleftrightarrow\quad
+2x^3-x^2-4x+2=0.
+\]</span></p>
+<p>El teorema se aplica al polinomio con coeficientes enteros de la ecuación equivalente.</p>
+</section>
+<section id="procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento">Procedimiento</h2>
+<p>Para buscar raíces racionales y reducir el grado:</p>
 <ol type="1">
-<li>Resolución algebraica de ecuaciones de segundo y tercer grado.</li>
-<li>Polinomios de grado <span class="math inline">\(n\)</span> en una variable y su representación gráfica.</li>
-<li>Raíces reales y complejas.</li>
-<li>Construcción de un polinomio a partir de sus raíces.</li>
-<li>Relación entre el grado de un polinomio y su número de raíces.</li>
-<li>Coeficientes, raíces, división sintética, factores, residuos y multiplicidad.</li>
-<li>Regla de Descartes para la separación de raíces.</li>
-<li>Método de bisección para aproximar raíces.</li>
+<li><p>Ordene el polinomio y compruebe que sus coeficientes sean enteros. Si falta alguna potencia, conserve su coeficiente <span class="math inline">\(0\)</span> para aplicar Ruffini.</p></li>
+<li><p>Escriba los divisores positivos de <span class="math inline">\(|a_0|\)</span> y de <span class="math inline">\(|a_n|\)</span>.</p></li>
+<li><p>Forme los cocientes <span class="math inline">\(\pm\dfrac rs\)</span>, simplifíquelos y elimine repeticiones.</p></li>
+<li><p>Pruebe candidatos mediante evaluación directa o Ruffini. Conviene comenzar con <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>; se tiene que <span class="math inline">\(p(1)\)</span> es la suma de los coeficientes.</p></li>
+<li><p>Cuando un candidato <span class="math inline">\(c\)</span> produzca residuo cero, escriba</p>
+<p><span class="math display">\[
+p(x)=(x-c)q(x),
+\]</span></p>
+<p>donde <span class="math inline">\(q(x)\)</span> es el cociente obtenido mediante Ruffini. Este cociente, de grado una unidad menor que <span class="math inline">\(p(x)\)</span>, es el <strong>polinomio reducido</strong>.</p></li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<p>Una factorización parcial debe verificarse desarrollando el producto o comprobando la identidad de la división. Se llama parcial porque el polinomio reducido todavía puede admitir una factorización adicional.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-coeficiente-principal-distinto-de-uno" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-coeficiente-principal-distinto-de-uno">Ejemplo 1. Coeficiente principal distinto de uno</h3>
+<p>Obtenga una raíz racional y una factorización parcial de</p>
+<p><span class="math display">\[
+p(x)=2x^3-3x^2-3x+2.
+\]</span></p>
+<p>Los divisores positivos del término independiente son <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>; los del coeficiente principal también son <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. Los cocientes posibles, una vez simplificados, producen la lista</p>
+<p><span class="math display">\[
+\pm1,\qquad \pm2,\qquad \pm\frac12.
+\]</span></p>
+<p>Primero se prueba <span class="math inline">\(1\)</span>:</p>
+<p><span class="math display">\[
+p(1)=2-3-3+2=-2\ne0.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(1\)</span> es candidato, pero no es raíz. Para <span class="math inline">\(c=-1\)</span> se usa Ruffini:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+-1 &amp; 2 &amp; -3 &amp; -3 &amp; 2\\
+   &amp;   &amp; -2 &amp; 5 &amp; -2\\
+\hline
+   &amp; 2 &amp; -5 &amp; 2 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El residuo es cero, así que <span class="math inline">\(-1\)</span> es raíz y el cociente es <span class="math inline">\(q(x)=2x^2-5x+2\)</span>. Se obtiene la factorización parcial</p>
+<p><span class="math display">\[
+2x^3-3x^2-3x+2=(x+1)(2x^2-5x+2).
+\]</span></p>
+<p>La verificación es inmediata:</p>
+<p><span class="math display">\[
+(x+1)(2x^2-5x+2)
+=2x^3-3x^2-3x+2.
+\]</span></p>
+</section>
+<section id="ejemplo-2.-coeficientes-racionales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-coeficientes-racionales">Ejemplo 2. Coeficientes racionales</h3>
+<p>Obtenga una raíz racional y una factorización parcial de</p>
+<p><span class="math display">\[
+f(x)=x^3-\frac12x^2-2x+1.
+\]</span></p>
+<p>Se eliminan los denominadores y se trabaja con</p>
+<p><span class="math display">\[
+p(x)=2f(x)=2x^3-x^2-4x+2.
+\]</span></p>
+<p>Como <span class="math inline">\(p(x)=0\)</span> y <span class="math inline">\(f(x)=0\)</span> tienen las mismas raíces, basta estudiar <span class="math inline">\(p(x)\)</span>. Sus candidatos son</p>
+<p><span class="math display">\[
+\pm1,\qquad \pm2,\qquad \pm\frac12.
+\]</span></p>
+<p>La evaluación directa descarta los enteros:</p>
+<p><span class="math display">\[
+p(1)=-1,
+\qquad
+p(-1)=3,
+\qquad
+p(2)=6,
+\qquad
+p(-2)=-10.
+\]</span></p>
+<p>Para <span class="math inline">\(c=\dfrac12\)</span>, Ruffini da</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+\frac12 &amp; 2 &amp; -1 &amp; -4 &amp; 2\\
+        &amp;   &amp; 1 &amp; 0 &amp; -2\\
+\hline
+        &amp; 2 &amp; 0 &amp; -4 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>Así, <span class="math inline">\(\dfrac12\)</span> es raíz y</p>
+<p><span class="math display">\[
+p(x)=\left(x-\frac12\right)(2x^2-4).
+\]</span></p>
+<p>Como <span class="math inline">\(f(x)=\dfrac12p(x)\)</span>, la factorización correspondiente al polinomio original es</p>
+<p><span class="math display">\[
+f(x)=\left(x-\frac12\right)(x^2-2).
+\]</span></p>
+<p>El producto recupera el polinomio original y confirma la factorización.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Intercambiar numerador y denominador.</strong> El numerador divide al término independiente y el denominador divide al coeficiente principal. Para <span class="math inline">\(3x^2-5x-2\)</span>, los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>.</li>
+<li><strong>Confundir candidato con raíz.</strong> Pertenecer a la lista solo autoriza a probar el número. Es necesario obtener <span class="math inline">\(p(c)=0\)</span> para afirmar que <span class="math inline">\(c\)</span> es raíz.</li>
+<li><strong>Repetir fracciones equivalentes.</strong> Si aparecen <span class="math inline">\(\dfrac12\)</span>, <span class="math inline">\(\dfrac24\)</span> y <span class="math inline">\(\dfrac36\)</span>, se conserva únicamente <span class="math inline">\(\dfrac12\)</span> y después se agrega su opuesto.</li>
+<li><strong>Perder el signo al usar Ruffini.</strong> Para probar el factor <span class="math inline">\(x+2=x-(-2)\)</span> se coloca <span class="math inline">\(c=-2\)</span> a la izquierda del esquema.</li>
+<li><strong>Olvidar los coeficientes cero.</strong> El renglón de <span class="math inline">\(4x^3+3x-9\)</span> es <span class="math inline">\(4,0,3,-9\)</span>.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<ol type="1">
+<li><p>Sea <span class="math inline">\(p(x)=x^3+2x^2-5x-6\)</span>.</p>
+<ol type="a">
+<li><p>Escriba la lista completa de candidatos a raíz racional.</p></li>
+<li><p>Pruebe primero <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Cuando encuentre una raíz, use Ruffini para obtener el polinomio reducido.</p></li>
+<li><p>Escriba y verifique una factorización parcial de <span class="math inline">\(p(x)\)</span>.</p></li>
+</ol></li>
+<li><p>Considere la ecuación</p>
+<p><span class="math display">\[
+x^3+\frac13x^2+\frac13x-\frac23=0.
+\]</span></p>
+<p>Elimine los denominadores, liste los candidatos y use Ruffini para encontrar una raíz racional y una factorización parcial del miembro izquierdo.</p></li>
+<li><p>Un estudiante afirmó que los únicos candidatos de <span class="math inline">\(4x^3+3x-9\)</span> son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm3\)</span> y <span class="math inline">\(\pm9\)</span> porque todos dividen al término independiente. Explique el error y escriba la lista completa sin probar los candidatos.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> Como el polinomio es mónico y su término independiente es <span class="math inline">\(-6\)</span>, los candidatos son</p>
+<p><span class="math display">\[
+\pm1,\qquad \pm2,\qquad \pm3,\qquad \pm6.
+\]</span></p>
+<p>Se tiene <span class="math inline">\(p(1)=1+2-5-6=-8\)</span> y <span class="math inline">\(p(-1)=-1+2+5-6=0\)</span>. Para <span class="math inline">\(c=-1\)</span>,</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+-1 &amp; 1 &amp; 2 &amp; -5 &amp; -6\\
+   &amp;   &amp; -1 &amp; -1 &amp; 6\\
+\hline
+   &amp; 1 &amp; 1 &amp; -6 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(x^2+x-6\)</span> y</p>
+<p><span class="math display">\[
+p(x)=(x+1)(x^2+x-6).
+\]</span></p>
+<p>Al desarrollar el producto se obtiene <span class="math inline">\(x^3+2x^2-5x-6\)</span>, como se requería.</p>
+<p><strong>2.</strong> Al multiplicar la ecuación por <span class="math inline">\(3\)</span> se obtiene</p>
+<p><span class="math display">\[
+3x^3+x^2+x-2=0.
+\]</span></p>
+<p>Los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm\dfrac13\)</span> y <span class="math inline">\(\pm\dfrac23\)</span>. Al probarlos se encuentra que <span class="math inline">\(c=\dfrac23\)</span> es raíz. Ruffini da</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+\frac23 &amp; 3 &amp; 1 &amp; 1 &amp; -2\\
+        &amp;   &amp; 2 &amp; 2 &amp; 2\\
+\hline
+        &amp; 3 &amp; 3 &amp; 3 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+3x^3+x^2+x-2
+=\left(x-\frac23\right)(3x^2+3x+3).
+\]</span></p>
+<p>Al dividir entre <span class="math inline">\(3\)</span>, el miembro izquierdo original queda factorizado como</p>
+<p><span class="math display">\[
+x^3+\frac13x^2+\frac13x-\frac23
+=\left(x-\frac23\right)(x^2+x+1).
+\]</span></p>
+<p><strong>3.</strong> El estudiante consideró los posibles numeradores, pero omitió los denominadores que dividen al coeficiente principal <span class="math inline">\(4\)</span>. Los divisores positivos de <span class="math inline">\(9\)</span> son <span class="math inline">\(1,3,9\)</span> y los de <span class="math inline">\(4\)</span> son <span class="math inline">\(1,2,4\)</span>. La lista completa, sin repeticiones, es</p>
+<p><span class="math display">\[
+\pm1,\quad \pm3,\quad \pm9,
+\quad \pm\frac12,\quad \pm\frac32,\quad \pm\frac92,
+\quad \pm\frac14,\quad \pm\frac34,\quad \pm\frac94.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Liste y pruebe todos los candidatos de <span class="math inline">\(2x^3+x+1\)</span>; concluya si tiene raíces racionales. Después, escriba sin probarlos los candidatos de <span class="math inline">\(x^4+2x^2-15\)</span>.</p></li>
+<li><p>Encuentre una raíz racional mediante evaluación directa o Ruffini y obtenga una factorización parcial:</p>
+<ol type="a">
+<li><p><span class="math inline">\(x^3-4x^2+x+6\)</span>.</p></li>
+<li><p><span class="math inline">\(3x^3+2x^2-7x+2\)</span>.</p></li>
+</ol></li>
+<li><p>Elimine primero los denominadores y obtenga una factorización parcial de</p>
+<p><span class="math display">\[
+x^3+\frac13x^2-x-\frac13.
+\]</span></p></li>
+<li><p>Para <span class="math inline">\(2x^3+x^2-5x+2\)</span>, un estudiante probó únicamente <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>. Explique por qué la lista está incompleta, escriba todos los candidatos y use <span class="math inline">\(c=1\)</span> para obtener el polinomio reducido y una factorización parcial.</p></li>
+</ol>
 
 
 </section>
@@ -866,13 +1102,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-28-sesion-14.html" class="pagination-link" aria-label="Sesión 14. Examen parcial 1: números reales y complejos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></span>
+      <a href="../sesiones/2026-09-03-sesion-17.html" class="pagination-link" aria-label="Sesión 17. Teoremas del residuo y del factor; regla de Ruffini">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-09-01-sesion-15.html" class="pagination-link" aria-label="Sesión 15. Polinomios: estructura, operaciones y evaluación">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
