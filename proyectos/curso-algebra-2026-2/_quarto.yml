@@ -57,6 +57,7 @@ book:
         - sesiones/2026-09-01-sesion-15.qmd
         - sesiones/2026-09-02-sesion-16.qmd
         - sesiones/2026-09-03-sesion-17.qmd
+        - sesiones/2026-09-04-sesion-18.qmd
     - part: "Unidad 3. Sistemas de ecuaciones lineales"
       chapters:
         - unidades/03-sistemas-ecuaciones.qmd

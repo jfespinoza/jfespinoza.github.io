@@ -1,0 +1,288 @@
+---
+title: "Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado"
+date: 2026-09-04
+description: "Generación y prueba de candidatos racionales mediante evaluación directa y regla de Ruffini; reducción del grado y factorización parcial."
+---
+
+## Candidatos a raíz racional
+
+En la [Sesión 17](2026-09-03-sesion-17.qmd) se estableció que un número $c$ es raíz de un polinomio $p(x)$ si y solo si $x-c$ es factor de $p(x)$. La regla de Ruffini permite probar un valor de $c$ y, si el residuo es cero, obtener al mismo tiempo el cociente. Falta decidir qué valores racionales conviene probar.
+
+**Teorema de la raíz racional.** Sea
+
+$$
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+$$
+
+un polinomio con coeficientes enteros, donde $a_n\ne0$ y $a_0\ne0$. Si el número racional $\dfrac rs$, escrito en forma irreducible con $s>0$, es raíz de $p(x)$, entonces
+
+$$
+r\mid a_0
+\qquad\text{y}\qquad
+s\mid a_n.
+$$
+
+Por tanto, toda raíz racional debe pertenecer a la lista
+
+$$
+\pm\frac rs,
+\qquad
+r\text{ divisor positivo de }|a_0|,
+\qquad
+s\text{ divisor positivo de }|a_n|.
+$$
+
+Cada fracción se simplifica y las repeticiones se eliminan. Los números restantes son los **candidatos a raíz racional**.
+
+El teorema proporciona una condición necesaria, no una garantía: cada raíz racional es candidata, pero una candidata puede no ser raíz. Por ejemplo, los candidatos de $x^2-2$ son $\pm1$ y $\pm2$; ninguno anula el polinomio. Se concluye que $x^2-2$ no tiene raíces racionales, no que carezca de raíces.
+
+Dos casos se simplifican antes de formar la lista:
+
+- Si $p(x)$ es mónico, entonces $a_n=1$ y todos los candidatos son enteros que dividen a $a_0$.
+- Si $a_0=0$, primero se extrae la mayor potencia posible de $x$. Así, $x^3-4x=x(x^2-4)$ y $0$ es una raíz antes de aplicar el teorema al factor $x^2-4$.
+
+Cuando los coeficientes son racionales, se eliminan los denominadores. Multiplicar una ecuación por una constante distinta de cero conserva sus raíces; por ejemplo,
+
+$$
+x^3-\frac12x^2-2x+1=0
+\quad\Longleftrightarrow\quad
+2x^3-x^2-4x+2=0.
+$$
+
+El teorema se aplica al polinomio con coeficientes enteros de la ecuación equivalente.
+
+## Procedimiento
+
+Para buscar raíces racionales y reducir el grado:
+
+1. Ordene el polinomio y compruebe que sus coeficientes sean enteros. Si falta alguna potencia, conserve su coeficiente $0$ para aplicar Ruffini.
+2. Escriba los divisores positivos de $|a_0|$ y de $|a_n|$.
+3. Forme los cocientes $\pm\dfrac rs$, simplifíquelos y elimine repeticiones.
+4. Pruebe candidatos mediante evaluación directa o Ruffini. Conviene comenzar con $1$ y $-1$; se tiene que $p(1)$ es la suma de los coeficientes.
+5. Cuando un candidato $c$ produzca residuo cero, escriba
+
+   $$
+   p(x)=(x-c)q(x),
+   $$
+
+   donde $q(x)$ es el cociente obtenido mediante Ruffini. Este cociente, de grado una unidad menor que $p(x)$, es el **polinomio reducido**.
+
+Una factorización parcial debe verificarse desarrollando el producto o comprobando la identidad de la división.
+Se llama parcial porque el polinomio reducido todavía puede admitir una factorización adicional.
+
+## Ejemplos
+
+### Ejemplo 1. Coeficiente principal distinto de uno
+
+Obtenga una raíz racional y una factorización parcial de
+
+$$
+p(x)=2x^3-3x^2-3x+2.
+$$
+
+Los divisores positivos del término independiente son $1$ y $2$; los del coeficiente principal también son $1$ y $2$. Los cocientes posibles, una vez simplificados, producen la lista
+
+$$
+\pm1,\qquad \pm2,\qquad \pm\frac12.
+$$
+
+Primero se prueba $1$:
+
+$$
+p(1)=2-3-3+2=-2\ne0.
+$$
+
+Por tanto, $1$ es candidato, pero no es raíz. Para $c=-1$ se usa Ruffini:
+
+$$
+\begin{array}{r|rrrr}
+-1 & 2 & -3 & -3 & 2\\
+   &   & -2 & 5 & -2\\
+\hline
+   & 2 & -5 & 2 & \mathbf{0}
+\end{array}
+$$
+
+El residuo es cero, así que $-1$ es raíz y el cociente es $q(x)=2x^2-5x+2$. Se obtiene la factorización parcial
+
+$$
+2x^3-3x^2-3x+2=(x+1)(2x^2-5x+2).
+$$
+
+La verificación es inmediata:
+
+$$
+(x+1)(2x^2-5x+2)
+=2x^3-3x^2-3x+2.
+$$
+
+### Ejemplo 2. Coeficientes racionales
+
+Obtenga una raíz racional y una factorización parcial de
+
+$$
+f(x)=x^3-\frac12x^2-2x+1.
+$$
+
+Se eliminan los denominadores y se trabaja con
+
+$$
+p(x)=2f(x)=2x^3-x^2-4x+2.
+$$
+
+Como $p(x)=0$ y $f(x)=0$ tienen las mismas raíces, basta estudiar $p(x)$. Sus candidatos son
+
+$$
+\pm1,\qquad \pm2,\qquad \pm\frac12.
+$$
+
+La evaluación directa descarta los enteros:
+
+$$
+p(1)=-1,
+\qquad
+p(-1)=3,
+\qquad
+p(2)=6,
+\qquad
+p(-2)=-10.
+$$
+
+Para $c=\dfrac12$, Ruffini da
+
+$$
+\begin{array}{r|rrrr}
+\frac12 & 2 & -1 & -4 & 2\\
+        &   & 1 & 0 & -2\\
+\hline
+        & 2 & 0 & -4 & \mathbf{0}
+\end{array}
+$$
+
+Así, $\dfrac12$ es raíz y
+
+$$
+p(x)=\left(x-\frac12\right)(2x^2-4).
+$$
+
+Como $f(x)=\dfrac12p(x)$, la factorización correspondiente al polinomio original es
+
+$$
+f(x)=\left(x-\frac12\right)(x^2-2).
+$$
+
+El producto recupera el polinomio original y confirma la factorización.
+
+## Errores frecuentes
+
+- **Intercambiar numerador y denominador.** El numerador divide al término independiente y el denominador divide al coeficiente principal. Para $3x^2-5x-2$, los candidatos son $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$.
+- **Confundir candidato con raíz.** Pertenecer a la lista solo autoriza a probar el número. Es necesario obtener $p(c)=0$ para afirmar que $c$ es raíz.
+- **Repetir fracciones equivalentes.** Si aparecen $\dfrac12$, $\dfrac24$ y $\dfrac36$, se conserva únicamente $\dfrac12$ y después se agrega su opuesto.
+- **Perder el signo al usar Ruffini.** Para probar el factor $x+2=x-(-2)$ se coloca $c=-2$ a la izquierda del esquema.
+- **Olvidar los coeficientes cero.** El renglón de $4x^3+3x-9$ es $4,0,3,-9$.
+
+## Actividad
+
+1. Sea $p(x)=x^3+2x^2-5x-6$.
+
+   a. Escriba la lista completa de candidatos a raíz racional.
+
+   b. Pruebe primero $1$ y $-1$. Cuando encuentre una raíz, use Ruffini para obtener el polinomio reducido.
+
+   c. Escriba y verifique una factorización parcial de $p(x)$.
+
+2. Considere la ecuación
+
+   $$
+   x^3+\frac13x^2+\frac13x-\frac23=0.
+   $$
+
+   Elimine los denominadores, liste los candidatos y use Ruffini para encontrar una raíz racional y una factorización parcial del miembro izquierdo.
+
+3. Un estudiante afirmó que los únicos candidatos de $4x^3+3x-9$ son $\pm1$, $\pm3$ y $\pm9$ porque todos dividen al término independiente. Explique el error y escriba la lista completa sin probar los candidatos.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Como el polinomio es mónico y su término independiente es $-6$, los candidatos son
+
+$$
+\pm1,\qquad \pm2,\qquad \pm3,\qquad \pm6.
+$$
+
+Se tiene $p(1)=1+2-5-6=-8$ y $p(-1)=-1+2+5-6=0$. Para $c=-1$,
+
+$$
+\begin{array}{r|rrrr}
+-1 & 1 & 2 & -5 & -6\\
+   &   & -1 & -1 & 6\\
+\hline
+   & 1 & 1 & -6 & \mathbf{0}
+\end{array}
+$$
+
+El cociente es $x^2+x-6$ y
+
+$$
+p(x)=(x+1)(x^2+x-6).
+$$
+
+Al desarrollar el producto se obtiene $x^3+2x^2-5x-6$, como se requería.
+
+**2.** Al multiplicar la ecuación por $3$ se obtiene
+
+$$
+3x^3+x^2+x-2=0.
+$$
+
+Los candidatos son $\pm1$, $\pm2$, $\pm\dfrac13$ y $\pm\dfrac23$. Al probarlos se encuentra que $c=\dfrac23$ es raíz. Ruffini da
+
+$$
+\begin{array}{r|rrrr}
+\frac23 & 3 & 1 & 1 & -2\\
+        &   & 2 & 2 & 2\\
+\hline
+        & 3 & 3 & 3 & \mathbf{0}
+\end{array}
+$$
+
+Por tanto,
+
+$$
+3x^3+x^2+x-2
+=\left(x-\frac23\right)(3x^2+3x+3).
+$$
+
+Al dividir entre $3$, el miembro izquierdo original queda factorizado como
+
+$$
+x^3+\frac13x^2+\frac13x-\frac23
+=\left(x-\frac23\right)(x^2+x+1).
+$$
+
+**3.** El estudiante consideró los posibles numeradores, pero omitió los denominadores que dividen al coeficiente principal $4$. Los divisores positivos de $9$ son $1,3,9$ y los de $4$ son $1,2,4$. La lista completa, sin repeticiones, es
+
+$$
+\pm1,\quad \pm3,\quad \pm9,
+\quad \pm\frac12,\quad \pm\frac32,\quad \pm\frac92,
+\quad \pm\frac14,\quad \pm\frac34,\quad \pm\frac94.
+$$
+
+:::
+
+## Ejercicios para practicar
+
+1. Liste y pruebe todos los candidatos de $2x^3+x+1$; concluya si tiene raíces racionales. Después, escriba sin probarlos los candidatos de $x^4+2x^2-15$.
+
+2. Encuentre una raíz racional mediante evaluación directa o Ruffini y obtenga una factorización parcial:
+
+   a. $x^3-4x^2+x+6$.
+
+   b. $3x^3+2x^2-7x+2$.
+
+3. Elimine primero los denominadores y obtenga una factorización parcial de
+
+   $$
+   x^3+\frac13x^2-x-\frac13.
+   $$
+
+4. Para $2x^3+x^2-5x+2$, un estudiante probó únicamente $\pm1$ y $\pm2$. Explique por qué la lista está incompleta, escriba todos los candidatos y use $c=1$ para obtener el polinomio reducido y una factorización parcial.
