@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Módulo como distancia al origen, argumentos y argumento principal, forma polar y conversiones entre las formas cartesiana y polar.">
+<meta name="description" content="Resolución de ecuaciones cúbicas con una raíz racional, solución de la cuadrática resultante y límites del procedimiento.">
 
-<title>Sesión 09. Números complejos: módulo, argumento y forma polar – Álgebra</title>
+<title>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-21-sesion-10.html" rel="next">
-<link href="../sesiones/2026-08-19-sesion-08.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-04-sesion-18.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 09. Números complejos: módulo, argumento y forma polar – Álgebra">
-<meta property="og:description" content="Módulo como distancia al origen, argumentos y argumento principal, forma polar y conversiones entre las formas cartesiana y polar.">
+<meta property="og:title" content="Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante – Álgebra">
+<meta property="og:description" content="Resolución de ecuaciones cúbicas con una raíz racional, solución de la cuadrática resultante y límites del procedimiento.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-20-sesion-09.html"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-07-sesion-19.html"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -197,13 +197,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -251,7 +251,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,13 +283,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -317,7 +317,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
   </div>
 </li>
       </ul>
@@ -417,16 +417,16 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#el-módulo" id="toc-el-módulo" class="nav-link active" data-scroll-target="#el-módulo">El módulo</a></li>
-  <li><a href="#argumentos-y-argumento-principal" id="toc-argumentos-y-argumento-principal" class="nav-link" data-scroll-target="#argumentos-y-argumento-principal">Argumentos y argumento principal</a></li>
-  <li><a href="#forma-polar" id="toc-forma-polar" class="nav-link" data-scroll-target="#forma-polar">Forma polar</a></li>
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <li><a href="#de-una-raíz-racional-a-la-solución-completa" id="toc-de-una-raíz-racional-a-la-solución-completa" class="nav-link active" data-scroll-target="#de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</a></li>
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  <li><a href="#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" id="toc-ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" class="nav-link" data-scroll-target="#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo. Una raíz racional y dos raíces irracionales</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-módulo" id="toc-ejemplo-1.-módulo" class="nav-link" data-scroll-target="#ejemplo-1.-módulo">Ejemplo 1. Módulo</a></li>
-  <li><a href="#ejemplo-2.-argumento-principal-sobre-los-ejes" id="toc-ejemplo-2.-argumento-principal-sobre-los-ejes" class="nav-link" data-scroll-target="#ejemplo-2.-argumento-principal-sobre-los-ejes">Ejemplo 2. Argumento principal sobre los ejes</a></li>
-  <li><a href="#ejemplo-3.-de-la-forma-cartesiana-a-la-polar" id="toc-ejemplo-3.-de-la-forma-cartesiana-a-la-polar" class="nav-link" data-scroll-target="#ejemplo-3.-de-la-forma-cartesiana-a-la-polar">Ejemplo 3. De la forma cartesiana a la polar</a></li>
-  <li><a href="#ejemplo-4.-de-la-forma-polar-a-la-cartesiana" id="toc-ejemplo-4.-de-la-forma-polar-a-la-cartesiana" class="nav-link" data-scroll-target="#ejemplo-4.-de-la-forma-polar-a-la-cartesiana">Ejemplo 4. De la forma polar a la cartesiana</a></li>
+  <li><a href="#encontrar-una-raíz-racional" id="toc-encontrar-una-raíz-racional" class="nav-link" data-scroll-target="#encontrar-una-raíz-racional">Encontrar una raíz racional</a></li>
+  <li><a href="#reducir-el-grado-mediante-ruffini" id="toc-reducir-el-grado-mediante-ruffini" class="nav-link" data-scroll-target="#reducir-el-grado-mediante-ruffini">Reducir el grado mediante Ruffini</a></li>
+  <li><a href="#resolver-la-cuadrática-resultante" id="toc-resolver-la-cuadrática-resultante" class="nav-link" data-scroll-target="#resolver-la-cuadrática-resultante">Resolver la cuadrática resultante</a></li>
+  <li><a href="#verificar-el-resultado" id="toc-verificar-el-resultado" class="nav-link" data-scroll-target="#verificar-el-resultado">Verificar el resultado</a></li>
   </ul></li>
+  <li><a href="#límite-del-procedimiento" id="toc-límite-del-procedimiento" class="nav-link" data-scroll-target="#límite-del-procedimiento">Límite del procedimiento</a></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -436,9 +436,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-20-sesion-09.html"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-07-sesion-19.html"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></h1>
 </div>
 
 
@@ -449,7 +449,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20 de agosto de 2026</p>
+      <p class="date">7 de septiembre de 2026</p>
     </div>
   </div>
   
@@ -461,232 +461,146 @@ window.Quarto = {
 </header>
 
 
-<section id="el-módulo" class="level2">
-<h2 class="anchored" data-anchor-id="el-módulo">El módulo</h2>
-<p>El <strong>módulo</strong> de <span class="math inline">\(z=a+bi\)</span> es el número real</p>
+<section id="de-una-raíz-racional-a-la-solución-completa" class="level2">
+<h2 class="anchored" data-anchor-id="de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</h2>
+<p>Una <strong>ecuación cúbica</strong> tiene la forma <span class="math inline">\(p(x)=0\)</span>, donde <span class="math inline">\(p(x)\)</span> es un polinomio de grado <span class="math inline">\(3\)</span>. Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.</p>
+<p>En la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a> se obtuvieron factorizaciones parciales. Si <span class="math inline">\(c\)</span> es una raíz de una cúbica, el teorema del factor permite escribir</p>
 <p><span class="math display">\[
-\lvert z\rvert=\sqrt{a^2+b^2}.
+p(x)=(x-c)q(x),
 \]</span></p>
-<p>Su significado es geométrico: bajo la correspondencia <span class="math inline">\(z\longleftrightarrow(a,b)\)</span> de la Sesión 07, el módulo es la <strong>distancia del punto que representa a <span class="math inline">\(z\)</span> al origen</strong> del plano complejo, obtenida por el teorema de Pitágoras en el triángulo rectángulo de catetos <span class="math inline">\(\lvert a\rvert\)</span> y <span class="math inline">\(\lvert b\rvert\)</span>.</p>
-<p>Si <span class="math inline">\(z=a\)</span> es real, entonces <span class="math inline">\(\lvert z\rvert=\sqrt{a^2}=\lvert a\rvert\)</span>: el módulo extiende al plano el valor absoluto estudiado en la Sesión 06. En ambos casos, las barras expresan una distancia al origen. Tres observaciones:</p>
-<ul>
-<li><span class="math inline">\(\lvert z\rvert\ge0\)</span> para todo <span class="math inline">\(z\)</span>, y <span class="math inline">\(\lvert z\rvert=0\)</span> exactamente cuando <span class="math inline">\(z=0\)</span>; en particular, <span class="math inline">\(\lvert0\rvert=0\)</span>;</li>
-<li><span class="math inline">\(\lvert\overline z\rvert=\lvert z\rvert\)</span>: la simetría respecto del eje real, estudiada en la Sesión 08, conserva la distancia al origen;</li>
-<li>la identidad <span class="math inline">\(z\overline z=a^2+b^2\)</span> de la Sesión 08 dice precisamente que</li>
-</ul>
+<p>donde <span class="math inline">\(q(x)\)</span> tiene grado <span class="math inline">\(2\)</span>. Por la propiedad del producto cero, para todo <span class="math inline">\(x\in\mathbb C\)</span>,</p>
 <p><span class="math display">\[
-z\overline z=\lvert z\rvert^2.
+p(x)=0
+\quad\Longleftrightarrow\quad
+x=c\quad\text{o}\quad q(x)=0.
 \]</span></p>
-<p>Esta es la interpretación geométrica anunciada en esa sesión: la ecuación <span class="math inline">\(z\overline z=25\)</span> describe la circunferencia con centro en el origen y radio <span class="math inline">\(5\)</span>. El reactivo 4 de la actividad de la Sesión 08 añadió la condición de que <span class="math inline">\(z\)</span> no fuera real, por lo que excluyó los puntos <span class="math inline">\(5\)</span> y <span class="math inline">\(-5\)</span>.</p>
+<p>Por tanto, se conserva la raíz <span class="math inline">\(c\)</span> y se resuelve la <strong>cuadrática resultante</strong> <span class="math inline">\(q(x)=0\)</span>. Esto proporciona todas las soluciones: cualquier número distinto de <span class="math inline">\(c\)</span> que anule <span class="math inline">\(p(x)\)</span> debe anular <span class="math inline">\(q(x)\)</span>.</p>
+<p>Una cúbica con coeficientes racionales es <strong>reducible sobre <span class="math inline">\(\mathbb Q\)</span></strong> si puede escribirse como producto de un factor lineal y uno cuadrático con coeficientes racionales. En grado <span class="math inline">\(3\)</span>, esto equivale a tener una raíz racional: dicha raíz permite extraer el factor lineal, y un factor lineal con coeficientes racionales tiene una raíz racional.</p>
 </section>
-<section id="argumentos-y-argumento-principal" class="level2">
-<h2 class="anchored" data-anchor-id="argumentos-y-argumento-principal">Argumentos y argumento principal</h2>
-<p>Sea <span class="math inline">\(z\ne0\)</span>. El punto que representa a <span class="math inline">\(z\)</span> determina una semirrecta que parte del origen. Un <strong>argumento</strong> de <span class="math inline">\(z\)</span> es un ángulo orientado desde el semieje real positivo hasta esa semirrecta: los ángulos positivos se miden en sentido contrario a las manecillas del reloj y los negativos, en sentido horario. Los ángulos se expresan en radianes: <span class="math inline">\(\pi\)</span> radianes equivalen a <span class="math inline">\(180^\circ\)</span>.</p>
-<p>Un número no nulo tiene una infinidad de argumentos: si <span class="math inline">\(\theta\)</span> es uno de ellos, también lo son <span class="math inline">\(\theta+2\pi\)</span>, <span class="math inline">\(\theta-2\pi\)</span> y, en general, <span class="math inline">\(\theta+2k\pi\)</span> con <span class="math inline">\(k\in\mathbb Z\)</span>, pues una vuelta completa regresa a la misma semirrecta. Para trabajar con un representante único se elige el <strong>argumento principal</strong>, denotado <span class="math inline">\(\operatorname{Arg}z\)</span>: el único argumento en el intervalo <span class="math inline">\((-\pi,\pi]\)</span>.</p>
-<p>El número <span class="math inline">\(0\)</span> es la excepción: no determina ninguna semirrecta y, por tanto, <strong>no tiene argumento</strong>, aunque su módulo sí está definido: <span class="math inline">\(\lvert0\rvert=0\)</span>.</p>
-<p>La ubicación del punto determina el argumento principal:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Ubicación de <span class="math inline">\(z\ne0\)</span></th>
-<th><span class="math inline">\(\operatorname{Arg}z\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Semieje real positivo</td>
-<td><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td>Primer cuadrante</td>
-<td>entre <span class="math inline">\(0\)</span> y <span class="math inline">\(\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje imaginario positivo</td>
-<td><span class="math inline">\(\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Segundo cuadrante</td>
-<td>entre <span class="math inline">\(\dfrac{\pi}{2}\)</span> y <span class="math inline">\(\pi\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje real negativo</td>
-<td><span class="math inline">\(\pi\)</span></td>
-</tr>
-<tr class="even">
-<td>Tercer cuadrante</td>
-<td>entre <span class="math inline">\(-\pi\)</span> y <span class="math inline">\(-\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td>Semieje imaginario negativo</td>
-<td><span class="math inline">\(-\dfrac{\pi}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td>Cuarto cuadrante</td>
-<td>entre <span class="math inline">\(-\dfrac{\pi}{2}\)</span> y <span class="math inline">\(0\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Debajo del eje real, el argumento principal es negativo: la convención <span class="math inline">\(\operatorname{Arg}z\in(-\pi,\pi]\)</span> representa esas direcciones mediante ángulos medidos en sentido horario desde el semieje real positivo.</p>
+<section id="procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento">Procedimiento</h2>
+<ol type="1">
+<li>Ordene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero. Si el término independiente es cero, <span class="math inline">\(c=0\)</span> es una raíz: extraiga <span class="math inline">\(x\)</span> como factor común y pase al paso 4 con la cuadrática restante.</li>
+<li>Si el término independiente es distinto de cero, forme la lista de candidatos a raíz racional y pruébelos hasta encontrar una raíz <span class="math inline">\(c\)</span>.</li>
+<li>Use Ruffini para dividir entre <span class="math inline">\(x-c\)</span>, incluyendo un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente. El residuo debe ser cero y el cociente debe tener grado <span class="math inline">\(2\)</span>.</li>
+<li>Resuelva la cuadrática resultante por factorización o mediante la fórmula general de la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>. Su discriminante permite decidir si sus raíces son reales o complejas no reales.</li>
+<li>Reúna la raíz <span class="math inline">\(c\)</span> y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.</li>
+</ol>
+<p>Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.</p>
 </section>
-<section id="forma-polar" class="level2">
-<h2 class="anchored" data-anchor-id="forma-polar">Forma polar</h2>
-<p>Sea <span class="math inline">\(z=a+bi\ne0\)</span>, con <span class="math inline">\(r=\lvert z\rvert\)</span> y <span class="math inline">\(\theta=\operatorname{Arg}z\)</span>. Para definir geométricamente el seno y el coseno, considérese primero el caso <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b&gt;0\)</span>, en el que <span class="math inline">\(\theta\)</span> es un ángulo agudo.</p>
-<figure style="max-width: 760px; margin: 1.5rem auto;" class="figure">
-<svg viewbox="0 0 760 420" width="100%" preserveaspectratio="xMidYMid meet" role="img" aria-labelledby="s09-geometria-title s09-geometria-desc" focusable="false" style="display: block; width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
-<title id="s09-geometria-title">
-Módulo, argumento y proyecciones de un número complejo
-</title>
-<desc id="s09-geometria-desc">Plano complejo con el número z igual a a más bi en el primer cuadrante. El segmento desde el origen hasta z tiene longitud r igual al módulo de z y forma un ángulo theta con el eje real. Sus proyecciones horizontal y vertical tienen longitudes a y b.</desc> <defs> <marker id="s09-flecha-eje" markerwidth="8" markerheight="8" refx="7" refy="4" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L8,4 L0,8 Z" fill="#495057"></path> </marker> <marker id="s09-flecha-vector" markerwidth="9" markerheight="9" refx="8" refy="4.5" orient="auto" markerunits="strokeWidth"> <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d6efd"></path> </marker> <marker id="s09-flecha-angulo" viewbox="0 0 10 10" markerwidth="10" markerheight="10" refx="9" refy="5" orient="auto" markerunits="userSpaceOnUse"> <path d="M0,0 L10,5 L0,10 Z" fill="#b83b0a"></path> </marker> </defs> <rect x="1" y="1" width="758" height="418" rx="12" fill="#ffffff" stroke="#ced4da" stroke-width="2"></rect> <g stroke="#e9ecef" stroke-width="1"> <line x1="190" y1="45" x2="190" y2="375"></line> <line x1="270" y1="45" x2="270" y2="375"></line> <line x1="350" y1="45" x2="350" y2="375"></line> <line x1="430" y1="45" x2="430" y2="375"></line> <line x1="510" y1="45" x2="510" y2="375"></line> <line x1="590" y1="45" x2="590" y2="375"></line> <line x1="670" y1="45" x2="670" y2="375"></line> <line x1="70" y1="260" x2="700" y2="260"></line> <line x1="70" y1="180" x2="700" y2="180"></line> <line x1="70" y1="100" x2="700" y2="100"></line> </g> <path d="M110 340 L540 340 L540 100 Z" fill="#dbeafe" fill-opacity="0.55"></path> <g stroke="#495057" stroke-width="2.2" fill="none"> <line x1="70" y1="340" x2="705" y2="340" marker-end="url(#s09-flecha-eje)"></line> <line x1="110" y1="382" x2="110" y2="38" marker-end="url(#s09-flecha-eje)"></line> </g> <g stroke="#6c757d" stroke-width="2" stroke-dasharray="7 6" fill="none"> <line x1="540" y1="100" x2="540" y2="340"></line> <line x1="110" y1="100" x2="540" y2="100"></line> </g> <line x1="110" y1="340" x2="540" y2="100" stroke="#0d6efd" stroke-width="4" marker-end="url(#s09-flecha-vector)"></line> <path d="M190 340 A80 80 0 0 0 180 301" fill="none" stroke="#b83b0a" stroke-width="4" marker-end="url(#s09-flecha-angulo)"></path> <path d="M523 340 L523 323 L540 323" fill="none" stroke="#6c757d" stroke-width="2"></path> <circle cx="540" cy="100" r="6" fill="#b02a37"></circle> <g fill="#212529" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24"> <text x="690" y="370" text-anchor="end">eje real</text> <text x="122" y="45">eje imaginario</text> <text x="91" y="363">0</text> <text x="321" y="365" font-style="italic">a</text> <text x="555" y="224" font-style="italic">b</text> <text x="557" y="91" font-style="italic">z = a + bi</text> <text x="300" y="190" fill="#0d6efd" stroke="#ffffff" stroke-width="6" paint-order="stroke fill" font-style="italic" transform="rotate(-29 300 190)">r = |z|</text> <text x="158" y="308" fill="#b83b0a" stroke="#ffffff" stroke-width="5" paint-order="stroke fill" font-style="italic">θ</text> </g>
-</svg>
-<figcaption style="text-align: center; color: #495057; font-size: 0.95rem; margin-top: 0.5rem;">
-Para <em>a</em> &gt; 0 y <em>b</em> &gt; 0, el módulo es la hipotenusa; <em>a</em> y <em>b</em> son las proyecciones sobre los ejes, y θ es un argumento de <em>z</em>.
-</figcaption>
-</figure>
-<p>El origen, el punto <span class="math inline">\(z\)</span> y su proyección <span class="math inline">\((a,0)\)</span> sobre el eje real forman un triángulo rectángulo. Respecto del ángulo <span class="math inline">\(\theta\)</span>, el cateto adyacente tiene longitud <span class="math inline">\(a\)</span>, el cateto opuesto tiene longitud <span class="math inline">\(b\)</span> y la hipotenusa tiene longitud <span class="math inline">\(r\)</span>. Por definición,</p>
+<section id="ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo. Una raíz racional y dos raíces irracionales</h2>
+<p>Resolvamos</p>
 <p><span class="math display">\[
-\cos\theta=\frac{\text{cateto adyacente}}{\text{hipotenusa}}=\frac ar,
-\qquad
-\operatorname{sen}\theta=\frac{\text{cateto opuesto}}{\text{hipotenusa}}=\frac br.
+x^3-4x^2+3x+2=0.
 \]</span></p>
-<p>Por tanto,</p>
+<section id="encontrar-una-raíz-racional" class="level3">
+<h3 class="anchored" data-anchor-id="encontrar-una-raíz-racional">Encontrar una raíz racional</h3>
+<p>El polinomio <span class="math inline">\(p(x)=x^3-4x^2+3x+2\)</span> es mónico y su término independiente es <span class="math inline">\(2\)</span>. Los candidatos son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>. Se prueban los valores más sencillos:</p>
 <p><span class="math display">\[
-a=r\cos\theta,
-\qquad
-b=r\operatorname{sen}\theta.
+\begin{aligned}
+p(1)&amp;=1-4+3+2=2,\\
+p(-1)&amp;=-1-4-3+2=-6,\\
+p(2)&amp;=8-16+6+2=0.
+\end{aligned}
 \]</span></p>
-<p>En los demás cuadrantes se forma el triángulo rectángulo con las longitudes <span class="math inline">\(\lvert a\rvert\)</span>, <span class="math inline">\(\lvert b\rvert\)</span> y <span class="math inline">\(r\)</span>. El ángulo agudo de ese triángulo es el <strong>ángulo de referencia</strong>; los signos del coseno y del seno se toman de los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Sobre los ejes, los valores se obtienen directamente de las coordenadas. De este modo, las fórmulas anteriores se conservan para cualquier <span class="math inline">\(z\ne0\)</span>.</p>
-<p>Al sustituir estas expresiones en <span class="math inline">\(z=a+bi\)</span> se obtiene la <strong>forma polar</strong>:</p>
-<p><span class="math display">\[
-z=r\bigl(\cos\theta+i\operatorname{sen}\theta\bigr).
-\]</span></p>
-<p>Una vuelta completa no cambia la semirrecta ni sus proyecciones. Por ello,</p>
-<p><span class="math display">\[
-\cos(\theta+2k\pi)=\cos\theta,
-\qquad
-\operatorname{sen}(\theta+2k\pi)=\operatorname{sen}\theta,
-\qquad k\in\mathbb Z.
-\]</span></p>
-<p>La forma polar no es única: sirve cualquier argumento de <span class="math inline">\(z\)</span>, aunque se usará normalmente el argumento principal. Dos formas polares con módulo positivo representan el mismo número exactamente cuando tienen el mismo módulo y sus ángulos difieren en un múltiplo entero de <span class="math inline">\(2\pi\)</span>. Como <span class="math inline">\(0\)</span> no tiene argumento, se escribe simplemente como <span class="math inline">\(0\)</span> y no se le asigna una forma polar mediante esta definición.</p>
-<p>Para las conversiones se usan los siguientes valores notables del intervalo <span class="math inline">\([0,\pi/2]\)</span>:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(\theta\)</span></th>
-<th><span class="math inline">\(0\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{6}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{4}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{3}\)</span></th>
-<th><span class="math inline">\(\dfrac{\pi}{2}\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\cos\theta\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt3}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt2}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac12\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\operatorname{sen}\theta\)</span></td>
-<td><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\(\dfrac12\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt2}{2}\)</span></td>
-<td><span class="math inline">\(\dfrac{\sqrt3}{2}\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>En los cuadrantes segundo, tercero y cuarto, el coseno y el seno se obtienen con el ángulo de referencia y los signos del cuadrante. Por ejemplo, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\cos\dfrac{\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\operatorname{sen}\dfrac{\pi}{3}=\dfrac{\sqrt3}{2}\)</span>.</p>
-<p>Las dos conversiones son:</p>
-<ul>
-<li><strong>de cartesiana a polar:</strong> calcular <span class="math inline">\(r=\sqrt{a^2+b^2}\)</span> y determinar <span class="math inline">\(\theta\)</span> mediante las dos condiciones <span class="math inline">\(\cos\theta=\dfrac ar\)</span> y <span class="math inline">\(\operatorname{sen}\theta=\dfrac br\)</span>, ubicando el cuadrante o el eje con los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>;</li>
-<li><strong>de polar a cartesiana:</strong> evaluar <span class="math inline">\(a=r\cos\theta\)</span> y <span class="math inline">\(b=r\operatorname{sen}\theta\)</span>.</li>
-</ul>
+<p>Así, <span class="math inline">\(c=2\)</span> es raíz y <span class="math inline">\(x-2\)</span> es factor.</p>
 </section>
-<section id="ejemplos" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-módulo" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-módulo">Ejemplo 1. Módulo</h3>
-<p>Calcular el módulo de <span class="math inline">\(3+4i\)</span>, de <span class="math inline">\(-2i\)</span> y de <span class="math inline">\(-7\)</span>.</p>
+<section id="reducir-el-grado-mediante-ruffini" class="level3">
+<h3 class="anchored" data-anchor-id="reducir-el-grado-mediante-ruffini">Reducir el grado mediante Ruffini</h3>
+<p>Se divide entre <span class="math inline">\(x-2\)</span>:</p>
 <p><span class="math display">\[
-\lvert3+4i\rvert=\sqrt{3^2+4^2}=\sqrt{25}=5,
-\qquad
-\lvert-2i\rvert=\sqrt{0^2+(-2)^2}=2,
-\qquad
-\lvert-7\rvert=\sqrt{(-7)^2}=7.
+\begin{array}{r|rrrr}
+2 &amp; 1 &amp; -4 &amp; 3 &amp; 2\\
+  &amp;   &amp; 2 &amp; -4 &amp; -2\\
+\hline
+  &amp; 1 &amp; -2 &amp; -1 &amp; \mathbf{0}
+\end{array}
 \]</span></p>
-<p>El tercero coincide con el valor absoluto de <span class="math inline">\(-7\)</span>, como debe ser. La identidad de la Sesión 08 confirma el primero:</p>
+<p>Se baja <span class="math inline">\(1\)</span>; se multiplica <span class="math inline">\(1(2)=2\)</span> y se suma <span class="math inline">\(-4+2=-2\)</span>; después, <span class="math inline">\((-2)(2)=-4\)</span> y <span class="math inline">\(3-4=-1\)</span>; finalmente, <span class="math inline">\((-1)(2)=-2\)</span> y <span class="math inline">\(2-2=0\)</span>.</p>
+<p>El cociente es <span class="math inline">\(q(x)=x^2-2x-1\)</span>, por lo que</p>
 <p><span class="math display">\[
-(3+4i)(3-4i)=3^2+4^2=25=\lvert3+4i\rvert^2.
+p(x)=(x-2)(x^2-2x-1).
+\]</span></p>
+<p>La ecuación original equivale a</p>
+<p><span class="math display">\[
+x=2\quad\text{o}\quad x^2-2x-1=0.
 \]</span></p>
 </section>
-<section id="ejemplo-2.-argumento-principal-sobre-los-ejes" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-argumento-principal-sobre-los-ejes">Ejemplo 2. Argumento principal sobre los ejes</h3>
-<p>Determinar el argumento principal de <span class="math inline">\(2\)</span>, <span class="math inline">\(3i\)</span>, <span class="math inline">\(-4\)</span> y <span class="math inline">\(-i\)</span>.</p>
-<p>Los cuatro puntos están sobre los ejes: <span class="math inline">\(\operatorname{Arg}2=0\)</span>, <span class="math inline">\(\operatorname{Arg}3i=\dfrac{\pi}{2}\)</span>, <span class="math inline">\(\operatorname{Arg}(-4)=\pi\)</span> y <span class="math inline">\(\operatorname{Arg}(-i)=-\dfrac{\pi}{2}\)</span>. En el último caso la convención exige <span class="math inline">\(-\dfrac{\pi}{2}\)</span> y no <span class="math inline">\(\dfrac{3\pi}{2}\)</span>, que está fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</p>
-</section>
-<section id="ejemplo-3.-de-la-forma-cartesiana-a-la-polar" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-de-la-forma-cartesiana-a-la-polar">Ejemplo 3. De la forma cartesiana a la polar</h3>
-<p>Escribir <span class="math inline">\(z=-1+i\)</span> en forma polar.</p>
-<p>El módulo es <span class="math inline">\(r=\sqrt{(-1)^2+1^2}=\sqrt2\)</span>. El ángulo debe cumplir</p>
+<section id="resolver-la-cuadrática-resultante" class="level3">
+<h3 class="anchored" data-anchor-id="resolver-la-cuadrática-resultante">Resolver la cuadrática resultante</h3>
+<p>Su discriminante es</p>
 <p><span class="math display">\[
-\cos\theta=-\frac{1}{\sqrt2}=-\frac{\sqrt2}{2}
-\qquad\text{y}\qquad
-\operatorname{sen}\theta=\frac{1}{\sqrt2}=\frac{\sqrt2}{2}.
+\Delta=(-2)^2-4(1)(-1)=8&gt;0.
 \]</span></p>
-<p>Como <span class="math inline">\(a&lt;0\)</span> y <span class="math inline">\(b&gt;0\)</span>, el punto está en el segundo cuadrante; el ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{4}\)</span>, así que <span class="math inline">\(\operatorname{Arg}z=\pi-\dfrac{\pi}{4}=\dfrac{3\pi}{4}\)</span>. Por tanto,</p>
+<p>La fórmula general da</p>
 <p><span class="math display">\[
--1+i=\sqrt2\Bigl(\cos\frac{3\pi}{4}+i\operatorname{sen}\frac{3\pi}{4}\Bigr).
+x=\frac{2\pm\sqrt8}{2}
+=\frac{2\pm2\sqrt2}{2}
+=1\pm\sqrt2.
+\]</span></p>
+<p>Por tanto, el conjunto solución es</p>
+<p><span class="math display">\[
+S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
+\]</span></p>
+<p>La raíz racional <span class="math inline">\(2\)</span> permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.</p>
+</section>
+<section id="verificar-el-resultado" class="level3">
+<h3 class="anchored" data-anchor-id="verificar-el-resultado">Verificar el resultado</h3>
+<p>El producto recupera el polinomio original:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x-2)(x^2-2x-1)
+&amp;=x^3-2x^2-x-2x^2+4x+2\\
+&amp;=x^3-4x^2+3x+2.
+\end{aligned}
+\]</span></p>
+<p>Ya se comprobó que <span class="math inline">\(p(2)=0\)</span>. Para <span class="math inline">\(r=1+\sqrt2\)</span> o <span class="math inline">\(r=1-\sqrt2\)</span>, se tiene <span class="math inline">\(r^2=3\pm2\sqrt2\)</span> y</p>
+<p><span class="math display">\[
+q(r)=(3\pm2\sqrt2)-2(1\pm\sqrt2)-1=0,
+\]</span></p>
+<p>usando el mismo signo en cada caso. En consecuencia, <span class="math inline">\(p(r)=(r-2)q(r)=0\)</span>.</p>
+<p>Las expresiones <span class="math inline">\(1\pm\sqrt2\)</span> son <strong>soluciones exactas</strong>. Un valor irracional puede expresarse exactamente mediante radicales. En cambio, <span class="math inline">\(2.41\)</span> es una aproximación a <span class="math inline">\(1+\sqrt2\)</span> y no satisface la ecuación:</p>
+<p><span class="math display">\[
+p(2.41)=(2.41-2)\bigl(2.41^2-2(2.41)-1\bigr)
+=(0.41)(-0.0119)=-0.004879\ne0.
 \]</span></p>
 </section>
-<section id="ejemplo-4.-de-la-forma-polar-a-la-cartesiana" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-de-la-forma-polar-a-la-cartesiana">Ejemplo 4. De la forma polar a la cartesiana</h3>
-<p>Escribir <span class="math inline">\(z=4\Bigl(\cos\dfrac{\pi}{6}+i\operatorname{sen}\dfrac{\pi}{6}\Bigr)\)</span> en forma cartesiana.</p>
-<p>Con los valores de referencia,</p>
-<p><span class="math display">\[
-z=4\biggl(\frac{\sqrt3}{2}+\frac12\,i\biggr)=2\sqrt3+2i.
-\]</span></p>
-<p>La verificación por módulo confirma el resultado: <span class="math inline">\(\lvert2\sqrt3+2i\rvert=\sqrt{12+4}=\sqrt{16}=4\)</span>, que es el <span class="math inline">\(r\)</span> original.</p>
 </section>
+<section id="límite-del-procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="límite-del-procedimiento">Límite del procedimiento</h2>
+<p>Considere ahora</p>
+<p><span class="math display">\[
+p(x)=x^3-x-1.
+\]</span></p>
+<p>Los únicos candidatos racionales son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>, pero</p>
+<p><span class="math display">\[
+p(1)=-1,\qquad p(-1)=-1.
+\]</span></p>
+<p>Por tanto, no hay raíces racionales y no se puede iniciar el procedimiento anterior. Esto no significa que la ecuación carezca de soluciones reales: <span class="math inline">\(p(1)=-1&lt;0\)</span> y <span class="math inline">\(p(2)=5&gt;0\)</span>. Como los polinomios son continuos, sus valores pasan de negativo a positivo sin saltos; en algún punto del intervalo <span class="math inline">\((1,2)\)</span> el valor es cero.</p>
+<p>Hay, pues, al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. La búsqueda de candidatos racionales no proporciona esa raíz. Para obtener un valor aproximado puede usarse la bisección, que se estudiará posteriormente. La ausencia de raíces racionales limita este procedimiento; por sí sola no descarta que otra estrategia permita obtener soluciones exactas.</p>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Sumar las partes en lugar de aplicar la definición.</strong> Se tiene <span class="math inline">\(\lvert3+4i\rvert=5\)</span>, no <span class="math inline">\(3+4=7\)</span>: el módulo es <span class="math inline">\(\sqrt{a^2+b^2}\)</span>, no <span class="math inline">\(a+b\)</span>.</li>
-<li><strong>Confundir el módulo con su cuadrado.</strong> Para <span class="math inline">\(3+4i\)</span>, la cantidad <span class="math inline">\(a^2+b^2=25\)</span> es <span class="math inline">\(\lvert z\rvert^2\)</span>; el módulo es <span class="math inline">\(\sqrt{25}=5\)</span>, no <span class="math inline">\(25\)</span>: no debe omitirse la raíz.</li>
-<li><strong>Reportar el argumento principal fuera de <span class="math inline">\((-\pi,\pi]\)</span>.</strong> Se tiene <span class="math inline">\(\operatorname{Arg}(-i)=-\dfrac{\pi}{2}\)</span>, no <span class="math inline">\(\dfrac{3\pi}{2}\)</span>: debajo del eje real, el argumento principal es negativo.</li>
-<li><strong>Ignorar el cuadrante en la conversión.</strong> Para <span class="math inline">\(-1+i\)</span>, el argumento principal es <span class="math inline">\(\dfrac{3\pi}{4}\)</span>, no <span class="math inline">\(-\dfrac{\pi}{4}\)</span>: deben cumplirse a la vez las condiciones del coseno y del seno, y los signos de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> ubican el cuadrante.</li>
-<li><strong>Asignar argumento al cero.</strong> Escribir <span class="math inline">\(\operatorname{Arg}0=0\)</span> es incorrecto: el <span class="math inline">\(0\)</span> no determina semirrecta alguna, así que no tiene argumento, aunque <span class="math inline">\(\lvert0\rvert=0\)</span>.</li>
+<li><strong>Detenerse después de encontrar una raíz.</strong> La igualdad <span class="math inline">\(p(x)=(x-c)q(x)\)</span> exige resolver también <span class="math inline">\(q(x)=0\)</span> para obtener todas las soluciones.</li>
+<li><strong>Dividir la ecuación entre <span class="math inline">\(x-c\)</span> sin considerar <span class="math inline">\(x=c\)</span>.</strong> Esa división solo es válida cuando <span class="math inline">\(x\ne c\)</span>. Si se olvida la raíz <span class="math inline">\(c\)</span>, se pierde una solución de la ecuación original.</li>
+<li><strong>Aplicar la fórmula general al polinomio cúbico.</strong> La fórmula de segundo grado se aplica al cociente cuadrático obtenido después de reducir el grado.</li>
+<li><strong>Confundir una expresión exacta con una aproximación.</strong> Un radical como <span class="math inline">\(1+\sqrt2\)</span> representa un número exacto; sustituirlo por un decimal truncado modifica su valor.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
+<p>Resuelva y justifique sus respuestas.</p>
 <ol type="1">
-<li><p>Calcule el módulo y el argumento principal de <span class="math inline">\(z=-\sqrt3-i\)</span> y de <span class="math inline">\(w=2+2\sqrt3\,i\)</span>, y escriba ambos números en forma polar.</p></li>
-<li><p>En la conversión</p>
-<p><span class="math display">\[
-1-i=\sqrt2\Bigl(\cos\frac{\pi}{4}+i\operatorname{sen}\frac{\pi}{4}\Bigr)
-\]</span></p>
-<p>identifique el error, corrija la forma polar e indique qué número representa en realidad la expresión de la derecha.</p></li>
-<li><p>Escriba <span class="math inline">\(z=6\Bigl(\cos\dfrac{2\pi}{3}+i\operatorname{sen}\dfrac{2\pi}{3}\Bigr)\)</span> en forma cartesiana y verifique que el módulo del resultado es <span class="math inline">\(6\)</span>.</p></li>
-<li><p>Describa y represente los conjuntos</p>
-<p><span class="math display">\[
-A=\{z\in\mathbb C:\lvert z\rvert=3\}
-\qquad\text{y}\qquad
-B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
-\]</span></p></li>
+<li><p>Resuelva <span class="math inline">\(x^3-7x+6=0\)</span>. Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre <span class="math inline">\(x-1\)</span> y conservar solo las soluciones del cociente daría una respuesta incompleta.</p></li>
+<li><p>Para resolver <span class="math inline">\(x^3-x^2+3x+5=0\)</span>, un estudiante encontró la raíz <span class="math inline">\(-1\)</span> y escribió <span class="math inline">\(S=\{-1\}\)</span>.</p>
+<ol type="a">
+<li><p>Use Ruffini para obtener el factor cuadrático que falta resolver.</p></li>
+<li><p>Complete el conjunto solución en <span class="math inline">\(\mathbb C\)</span> e indique cuáles soluciones son reales.</p></li>
+<li><p>Compruebe una raíz no real en la ecuación original, utilizando la factorización verificada.</p></li>
+</ol></li>
+<li><p>Para <span class="math inline">\(x^3-2x-5=0\)</span>, determine si existe una raíz racional y explique si puede aplicarse el procedimiento de reducción de esta sesión. ¿Sería correcto concluir que no hay soluciones reales? Justifique usando los valores del polinomio en <span class="math inline">\(2\)</span> y en <span class="math inline">\(3\)</span>.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -700,37 +614,60 @@ B=\{z\in\mathbb C\setminus\{0\}:\operatorname{Arg}z=\tfrac{\pi}{4}\}.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> Para <span class="math inline">\(z=-\sqrt3-i\)</span>,</p>
+<p><strong>1.</strong> Para <span class="math inline">\(p(x)=x^3-7x+6\)</span>, los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm3\)</span> y <span class="math inline">\(\pm6\)</span>. Como <span class="math inline">\(p(1)=1-7+6=0\)</span>, se usa <span class="math inline">\(c=1\)</span>. El coeficiente de <span class="math inline">\(x^2\)</span> es cero:</p>
 <p><span class="math display">\[
-\lvert z\rvert=\sqrt{(-\sqrt3)^2+(-1)^2}=2.
+\begin{array}{r|rrrr}
+1 &amp; 1 &amp; 0 &amp; -7 &amp; 6\\
+  &amp;   &amp; 1 &amp; 1 &amp; -6\\
+\hline
+  &amp; 1 &amp; 1 &amp; -6 &amp; \mathbf{0}
+\end{array}
 \]</span></p>
-<p>Como <span class="math inline">\(\cos\theta=-\dfrac{\sqrt3}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac12\)</span>, el punto está en el tercer cuadrante. El ángulo de referencia es <span class="math inline">\(\dfrac{\pi}{6}\)</span>, así que</p>
+<p>Se obtiene <span class="math inline">\(q(x)=x^2+x-6=(x+3)(x-2)\)</span>. Así,</p>
 <p><span class="math display">\[
-\operatorname{Arg}z=-\pi+\frac{\pi}{6}=-\frac{5\pi}{6}.
+p(x)=(x-1)(x+3)(x-2),
+\qquad S=\{-3,1,2\}.
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+(x-1)(x^2+x-6)=x^3+x^2-6x-x^2-x+6=x^3-7x+6.
+\]</span></p>
+<p>Cada valor de <span class="math inline">\(S\)</span> anula un factor y, por la identidad verificada, anula el polinomio original. Las soluciones del cociente son <span class="math inline">\(-3\)</span> y <span class="math inline">\(2\)</span>; conservar solo estas perdería la raíz <span class="math inline">\(1\)</span>, precisamente el valor para el cual no se puede dividir entre <span class="math inline">\(x-1\)</span>.</p>
+<p><strong>2.</strong> Para <span class="math inline">\(p(x)=x^3-x^2+3x+5\)</span>, se verifica <span class="math inline">\(p(-1)=-1-1-3+5=0\)</span>. Se divide entre <span class="math inline">\(x+1=x-(-1)\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+-1 &amp; 1 &amp; -1 &amp; 3 &amp; 5\\
+   &amp;   &amp; -1 &amp; 2 &amp; -5\\
+\hline
+   &amp; 1 &amp; -2 &amp; 5 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(q(x)=x^2-2x+5\)</span>. Su discriminante es <span class="math inline">\(\Delta=4-20=-16\)</span>, de modo que</p>
+<p><span class="math display">\[
+x=\frac{2\pm4i}{2}=1\pm2i.
 \]</span></p>
 <p>Por tanto,</p>
 <p><span class="math display">\[
-z=2\Bigl(\cos\Bigl(-\frac{5\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\frac{5\pi}{6}\Bigr)\Bigr).
+S=\{-1,\ 1+2i,\ 1-2i\}.
 \]</span></p>
-<p>Para <span class="math inline">\(w=2+2\sqrt3\,i\)</span>,</p>
+<p>La única solución real es <span class="math inline">\(-1\)</span>. Se comprueba la factorización:</p>
 <p><span class="math display">\[
-\lvert w\rvert=\sqrt{2^2+(2\sqrt3)^2}=4.
+(x+1)(x^2-2x+5)=x^3-x^2+3x+5.
 \]</span></p>
-<p>Como <span class="math inline">\(\cos\theta=\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\theta=\dfrac{\sqrt3}{2}\)</span>, el punto está en el primer cuadrante y <span class="math inline">\(\operatorname{Arg}w=\dfrac{\pi}{3}\)</span>. Entonces</p>
+<p>Para <span class="math inline">\(r=1+2i\)</span>, se tiene <span class="math inline">\(r^2=-3+4i\)</span> y</p>
 <p><span class="math display">\[
-w=4\Bigl(\cos\frac{\pi}{3}+i\operatorname{sen}\frac{\pi}{3}\Bigr).
+q(r)=(-3+4i)-2(1+2i)+5=0.
 \]</span></p>
-<p><strong>2.</strong> El módulo <span class="math inline">\(\sqrt2\)</span> es correcto, pero el ángulo se tomó sin revisar los signos: la parte imaginaria de <span class="math inline">\(1-i\)</span> es negativa, mientras que <span class="math inline">\(\operatorname{sen}\dfrac{\pi}{4}&gt;0\)</span>. Las condiciones <span class="math inline">\(\cos\theta=\dfrac{\sqrt2}{2}\)</span> y <span class="math inline">\(\operatorname{sen}\theta=-\dfrac{\sqrt2}{2}\)</span> ubican el punto en el cuarto cuadrante: <span class="math inline">\(\operatorname{Arg}(1-i)=-\dfrac{\pi}{4}\)</span> y</p>
+<p>Así, en el polinomio original, <span class="math inline">\(p(r)=(r+1)q(r)=(2+2i)0=0\)</span>. Para <span class="math inline">\(1-2i\)</span>, el mismo cálculo con los signos cambiados también da cero.</p>
+<p><strong>3.</strong> Los candidatos de <span class="math inline">\(p(x)=x^3-2x-5\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm5\)</span>. Se obtiene</p>
 <p><span class="math display">\[
-1-i=\sqrt2\Bigl(\cos\Bigl(-\frac{\pi}{4}\Bigr)+i\operatorname{sen}\Bigl(-\frac{\pi}{4}\Bigr)\Bigr).
+p(1)=-6,\quad p(-1)=-4,\quad p(5)=110,\quad p(-5)=-120.
 \]</span></p>
-<p>La expresión propuesta vale <span class="math inline">\(\sqrt2\Bigl(\dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}\,i\Bigr)=1+i\)</span>: representa el conjugado de <span class="math inline">\(1-i\)</span>.</p>
-<p><strong>3.</strong> Con el ángulo de referencia <span class="math inline">\(\dfrac{\pi}{3}\)</span> en el segundo cuadrante, <span class="math inline">\(\cos\dfrac{2\pi}{3}=-\dfrac12\)</span> y <span class="math inline">\(\operatorname{sen}\dfrac{2\pi}{3}=\dfrac{\sqrt3}{2}\)</span>. Por tanto,</p>
+<p>Ninguno es raíz. La ecuación no tiene raíces racionales y el procedimiento de reducción mediante una raíz racional no puede iniciarse. Sin embargo,</p>
 <p><span class="math display">\[
-z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
+p(2)=-1&lt;0,\qquad p(3)=16&gt;0.
 \]</span></p>
-<p>La verificación: <span class="math inline">\(\lvert-3+3\sqrt3\,i\rvert=\sqrt{9+27}=\sqrt{36}=6\)</span>.</p>
-<p><strong>4.</strong> <span class="math inline">\(A\)</span> es la <strong>circunferencia</strong> con centro en el origen y radio <span class="math inline">\(3\)</span>: todos los puntos cuya distancia al origen es <span class="math inline">\(3\)</span>. <span class="math inline">\(B\)</span> consta de los puntos de la semirrecta de dirección <span class="math inline">\(\dfrac{\pi}{4}\)</span>, con el origen excluido: sus elementos son los números <span class="math inline">\(r\Bigl(\cos\dfrac{\pi}{4}+i\operatorname{sen}\dfrac{\pi}{4}\Bigr)\)</span> con <span class="math inline">\(r&gt;0\)</span>. El origen se excluye porque <span class="math inline">\(0\)</span> no tiene argumento.</p>
+<p>La continuidad garantiza al menos una raíz real en <span class="math inline">\((2,3)\)</span>, necesariamente irracional. Por tanto, sería incorrecto afirmar que no hay soluciones reales. Una aproximación de esa raíz requiere un procedimiento adicional.</p>
 </div>
 </div>
 </div>
@@ -738,12 +675,15 @@ z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li>Calcule <span class="math inline">\(\lvert-6\rvert\)</span>, <span class="math inline">\(\lvert12-5i\rvert\)</span> y <span class="math inline">\(\lvert i\rvert\)</span>.</li>
-<li>Determine el argumento principal de <span class="math inline">\(7\)</span>, <span class="math inline">\(-7\)</span>, <span class="math inline">\(4i\)</span> y <span class="math inline">\(-1-i\)</span>.</li>
-<li>Escriba <span class="math inline">\(1+\sqrt3\,i\)</span> y <span class="math inline">\(-4\)</span> en forma polar.</li>
-<li>Exprese <span class="math inline">\(w=10\Bigl(\cos\Bigl(-\dfrac{\pi}{6}\Bigr)+i\operatorname{sen}\Bigl(-\dfrac{\pi}{6}\Bigr)\Bigr)\)</span> en forma cartesiana.</li>
-<li>Para <span class="math inline">\(z=2-3i\)</span>, calcule <span class="math inline">\(\lvert z\rvert\)</span>, <span class="math inline">\(\lvert\overline z\rvert\)</span> y <span class="math inline">\(z\overline z\)</span>, y compruebe que <span class="math inline">\(z\overline z=\lvert z\rvert^2\)</span>, como en la Sesión 08.</li>
-<li>Describa el conjunto <span class="math inline">\(\{z\in\mathbb C:\lvert z\rvert=1\}\)</span> y proponga tres de sus elementos: uno real, uno imaginario puro y uno que no sea de ninguno de esos dos tipos.</li>
+<li><p>Complete las factorizaciones parciales solicitadas en la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a>: resuelva <span class="math inline">\(x^3-4x^2+x+6=0\)</span> y <span class="math inline">\(3x^3+2x^2-7x+2=0\)</span>, y escriba cada polinomio como producto de factores lineales.</p></li>
+<li><p>Resuelva en <span class="math inline">\(\mathbb C\)</span> y clasifique las soluciones como racionales, irracionales o complejas no reales:</p>
+<ol type="a">
+<li><p><span class="math inline">\(x^3+x^2-3x-3=0\)</span>.</p></li>
+<li><p><span class="math inline">\(x^3-2x^2+x-2=0\)</span>.</p></li>
+</ol></li>
+<li><p>Resuelva <span class="math inline">\(x^3-\dfrac32x^2-x+\dfrac32=0\)</span>. Elimine primero los denominadores y explique por qué la ecuación resultante tiene las mismas soluciones.</p></li>
+<li><p>Resuelva <span class="math inline">\(x^3-4x=0\)</span>. Justifique qué factorización permite comenzar sin generar candidatos racionales y explique por qué dividir entre <span class="math inline">\(x\)</span> sin considerar <span class="math inline">\(x=0\)</span> perdería una solución.</p></li>
+<li><p>Para resolver <span class="math inline">\(2x^3-x^2-2x+1=0\)</span>, un estudiante encontró la raíz <span class="math inline">\(1\)</span> y obtuvo el cociente <span class="math inline">\(2x^2+x-1\)</span>. Después lo sustituyó por <span class="math inline">\(x^2+x-1\)</span> al aplicar la fórmula general. Explique el error, obtenga el conjunto solución correcto y verifique una factorización que conserve el coeficiente principal del polinomio original.</p></li>
 </ol>
 
 
@@ -1159,13 +1099,13 @@ z=6\biggl(-\frac12+\frac{\sqrt3}{2}\,i\biggr)=-3+3\sqrt3\,i.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-19-sesion-08.html" class="pagination-link" aria-label="Sesión 08. Números complejos: multiplicación, división y conjugado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></span>
+      <a href="../sesiones/2026-09-04-sesion-18.html" class="pagination-link" aria-label="Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-21-sesion-10.html" class="pagination-link" aria-label="Sesión 10. Números complejos: multiplicación y división en forma polar">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

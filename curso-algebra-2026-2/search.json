@@ -1931,6 +1931,83 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-07-sesion-19.html",
+    "href": "sesiones/2026-09-07-sesion-19.html",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "",
+    "text": "De una raíz racional a la solución completa\nUna ecuación cúbica tiene la forma \\(p(x)=0\\), donde \\(p(x)\\) es un polinomio de grado \\(3\\). Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.\nEn la Sesión 18 se obtuvieron factorizaciones parciales. Si \\(c\\) es una raíz de una cúbica, el teorema del factor permite escribir\n\\[\np(x)=(x-c)q(x),\n\\]\ndonde \\(q(x)\\) tiene grado \\(2\\). Por la propiedad del producto cero, para todo \\(x\\in\\mathbb C\\),\n\\[\np(x)=0\n\\quad\\Longleftrightarrow\\quad\nx=c\\quad\\text{o}\\quad q(x)=0.\n\\]\nPor tanto, se conserva la raíz \\(c\\) y se resuelve la cuadrática resultante \\(q(x)=0\\). Esto proporciona todas las soluciones: cualquier número distinto de \\(c\\) que anule \\(p(x)\\) debe anular \\(q(x)\\).\nUna cúbica con coeficientes racionales es reducible sobre \\(\\mathbb Q\\) si puede escribirse como producto de un factor lineal y uno cuadrático con coeficientes racionales. En grado \\(3\\), esto equivale a tener una raíz racional: dicha raíz permite extraer el factor lineal, y un factor lineal con coeficientes racionales tiene una raíz racional.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#procedimiento",
+    "href": "sesiones/2026-09-07-sesion-19.html#procedimiento",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Procedimiento",
+    "text": "Procedimiento\n\nOrdene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero. Si el término independiente es cero, \\(c=0\\) es una raíz: extraiga \\(x\\) como factor común y pase al paso 4 con la cuadrática restante.\nSi el término independiente es distinto de cero, forme la lista de candidatos a raíz racional y pruébelos hasta encontrar una raíz \\(c\\).\nUse Ruffini para dividir entre \\(x-c\\), incluyendo un coeficiente \\(0\\) por cada potencia ausente. El residuo debe ser cero y el cociente debe tener grado \\(2\\).\nResuelva la cuadrática resultante por factorización o mediante la fórmula general de la Sesión 16. Su discriminante permite decidir si sus raíces son reales o complejas no reales.\nReúna la raíz \\(c\\) y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.\n\nUna vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales",
+    "href": "sesiones/2026-09-07-sesion-19.html#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Ejemplo. Una raíz racional y dos raíces irracionales",
+    "text": "Ejemplo. Una raíz racional y dos raíces irracionales\nResolvamos\n\\[\nx^3-4x^2+3x+2=0.\n\\]\n\nEncontrar una raíz racional\nEl polinomio \\(p(x)=x^3-4x^2+3x+2\\) es mónico y su término independiente es \\(2\\). Los candidatos son \\(\\pm1\\) y \\(\\pm2\\). Se prueban los valores más sencillos:\n\\[\n\\begin{aligned}\np(1)&=1-4+3+2=2,\\\\\np(-1)&=-1-4-3+2=-6,\\\\\np(2)&=8-16+6+2=0.\n\\end{aligned}\n\\]\nAsí, \\(c=2\\) es raíz y \\(x-2\\) es factor.\n\n\nReducir el grado mediante Ruffini\nSe divide entre \\(x-2\\):\n\\[\n\\begin{array}{r|rrrr}\n2 & 1 & -4 & 3 & 2\\\\\n  &   & 2 & -4 & -2\\\\\n\\hline\n  & 1 & -2 & -1 & \\mathbf{0}\n\\end{array}\n\\]\nSe baja \\(1\\); se multiplica \\(1(2)=2\\) y se suma \\(-4+2=-2\\); después, \\((-2)(2)=-4\\) y \\(3-4=-1\\); finalmente, \\((-1)(2)=-2\\) y \\(2-2=0\\).\nEl cociente es \\(q(x)=x^2-2x-1\\), por lo que\n\\[\np(x)=(x-2)(x^2-2x-1).\n\\]\nLa ecuación original equivale a\n\\[\nx=2\\quad\\text{o}\\quad x^2-2x-1=0.\n\\]\n\n\nResolver la cuadrática resultante\nSu discriminante es\n\\[\n\\Delta=(-2)^2-4(1)(-1)=8&gt;0.\n\\]\nLa fórmula general da\n\\[\nx=\\frac{2\\pm\\sqrt8}{2}\n=\\frac{2\\pm2\\sqrt2}{2}\n=1\\pm\\sqrt2.\n\\]\nPor tanto, el conjunto solución es\n\\[\nS=\\{1-\\sqrt2,\\ 2,\\ 1+\\sqrt2\\}.\n\\]\nLa raíz racional \\(2\\) permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.\n\n\nVerificar el resultado\nEl producto recupera el polinomio original:\n\\[\n\\begin{aligned}\n(x-2)(x^2-2x-1)\n&=x^3-2x^2-x-2x^2+4x+2\\\\\n&=x^3-4x^2+3x+2.\n\\end{aligned}\n\\]\nYa se comprobó que \\(p(2)=0\\). Para \\(r=1+\\sqrt2\\) o \\(r=1-\\sqrt2\\), se tiene \\(r^2=3\\pm2\\sqrt2\\) y\n\\[\nq(r)=(3\\pm2\\sqrt2)-2(1\\pm\\sqrt2)-1=0,\n\\]\nusando el mismo signo en cada caso. En consecuencia, \\(p(r)=(r-2)q(r)=0\\).\nLas expresiones \\(1\\pm\\sqrt2\\) son soluciones exactas. Un valor irracional puede expresarse exactamente mediante radicales. En cambio, \\(2.41\\) es una aproximación a \\(1+\\sqrt2\\) y no satisface la ecuación:\n\\[\np(2.41)=(2.41-2)\\bigl(2.41^2-2(2.41)-1\\bigr)\n=(0.41)(-0.0119)=-0.004879\\ne0.\n\\]",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#límite-del-procedimiento",
+    "href": "sesiones/2026-09-07-sesion-19.html#límite-del-procedimiento",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Límite del procedimiento",
+    "text": "Límite del procedimiento\nConsidere ahora\n\\[\np(x)=x^3-x-1.\n\\]\nLos únicos candidatos racionales son \\(1\\) y \\(-1\\), pero\n\\[\np(1)=-1,\\qquad p(-1)=-1.\n\\]\nPor tanto, no hay raíces racionales y no se puede iniciar el procedimiento anterior. Esto no significa que la ecuación carezca de soluciones reales: \\(p(1)=-1&lt;0\\) y \\(p(2)=5&gt;0\\). Como los polinomios son continuos, sus valores pasan de negativo a positivo sin saltos; en algún punto del intervalo \\((1,2)\\) el valor es cero.\nHay, pues, al menos una raíz real entre \\(1\\) y \\(2\\). La búsqueda de candidatos racionales no proporciona esa raíz. Para obtener un valor aproximado puede usarse la bisección, que se estudiará posteriormente. La ausencia de raíces racionales limita este procedimiento; por sí sola no descarta que otra estrategia permita obtener soluciones exactas.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#errores-frecuentes",
+    "href": "sesiones/2026-09-07-sesion-19.html#errores-frecuentes",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nDetenerse después de encontrar una raíz. La igualdad \\(p(x)=(x-c)q(x)\\) exige resolver también \\(q(x)=0\\) para obtener todas las soluciones.\nDividir la ecuación entre \\(x-c\\) sin considerar \\(x=c\\). Esa división solo es válida cuando \\(x\\ne c\\). Si se olvida la raíz \\(c\\), se pierde una solución de la ecuación original.\nAplicar la fórmula general al polinomio cúbico. La fórmula de segundo grado se aplica al cociente cuadrático obtenido después de reducir el grado.\nConfundir una expresión exacta con una aproximación. Un radical como \\(1+\\sqrt2\\) representa un número exacto; sustituirlo por un decimal truncado modifica su valor.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#actividad",
+    "href": "sesiones/2026-09-07-sesion-19.html#actividad",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva y justifique sus respuestas.\n\nResuelva \\(x^3-7x+6=0\\). Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre \\(x-1\\) y conservar solo las soluciones del cociente daría una respuesta incompleta.\nPara resolver \\(x^3-x^2+3x+5=0\\), un estudiante encontró la raíz \\(-1\\) y escribió \\(S=\\{-1\\}\\).\n\nUse Ruffini para obtener el factor cuadrático que falta resolver.\nComplete el conjunto solución en \\(\\mathbb C\\) e indique cuáles soluciones son reales.\nCompruebe una raíz no real en la ecuación original, utilizando la factorización verificada.\n\nPara \\(x^3-2x-5=0\\), determine si existe una raíz racional y explique si puede aplicarse el procedimiento de reducción de esta sesión. ¿Sería correcto concluir que no hay soluciones reales? Justifique usando los valores del polinomio en \\(2\\) y en \\(3\\).\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Para \\(p(x)=x^3-7x+6\\), los candidatos son \\(\\pm1\\), \\(\\pm2\\), \\(\\pm3\\) y \\(\\pm6\\). Como \\(p(1)=1-7+6=0\\), se usa \\(c=1\\). El coeficiente de \\(x^2\\) es cero:\n\\[\n\\begin{array}{r|rrrr}\n1 & 1 & 0 & -7 & 6\\\\\n  &   & 1 & 1 & -6\\\\\n\\hline\n  & 1 & 1 & -6 & \\mathbf{0}\n\\end{array}\n\\]\nSe obtiene \\(q(x)=x^2+x-6=(x+3)(x-2)\\). Así,\n\\[\np(x)=(x-1)(x+3)(x-2),\n\\qquad S=\\{-3,1,2\\}.\n\\]\nLa verificación es\n\\[\n(x-1)(x^2+x-6)=x^3+x^2-6x-x^2-x+6=x^3-7x+6.\n\\]\nCada valor de \\(S\\) anula un factor y, por la identidad verificada, anula el polinomio original. Las soluciones del cociente son \\(-3\\) y \\(2\\); conservar solo estas perdería la raíz \\(1\\), precisamente el valor para el cual no se puede dividir entre \\(x-1\\).\n2. Para \\(p(x)=x^3-x^2+3x+5\\), se verifica \\(p(-1)=-1-1-3+5=0\\). Se divide entre \\(x+1=x-(-1)\\):\n\\[\n\\begin{array}{r|rrrr}\n-1 & 1 & -1 & 3 & 5\\\\\n   &   & -1 & 2 & -5\\\\\n\\hline\n   & 1 & -2 & 5 & \\mathbf{0}\n\\end{array}\n\\]\nEl cociente es \\(q(x)=x^2-2x+5\\). Su discriminante es \\(\\Delta=4-20=-16\\), de modo que\n\\[\nx=\\frac{2\\pm4i}{2}=1\\pm2i.\n\\]\nPor tanto,\n\\[\nS=\\{-1,\\ 1+2i,\\ 1-2i\\}.\n\\]\nLa única solución real es \\(-1\\). Se comprueba la factorización:\n\\[\n(x+1)(x^2-2x+5)=x^3-x^2+3x+5.\n\\]\nPara \\(r=1+2i\\), se tiene \\(r^2=-3+4i\\) y\n\\[\nq(r)=(-3+4i)-2(1+2i)+5=0.\n\\]\nAsí, en el polinomio original, \\(p(r)=(r+1)q(r)=(2+2i)0=0\\). Para \\(1-2i\\), el mismo cálculo con los signos cambiados también da cero.\n3. Los candidatos de \\(p(x)=x^3-2x-5\\) son \\(\\pm1\\) y \\(\\pm5\\). Se obtiene\n\\[\np(1)=-6,\\quad p(-1)=-4,\\quad p(5)=110,\\quad p(-5)=-120.\n\\]\nNinguno es raíz. La ecuación no tiene raíces racionales y el procedimiento de reducción mediante una raíz racional no puede iniciarse. Sin embargo,\n\\[\np(2)=-1&lt;0,\\qquad p(3)=16&gt;0.\n\\]\nLa continuidad garantiza al menos una raíz real en \\((2,3)\\), necesariamente irracional. Por tanto, sería incorrecto afirmar que no hay soluciones reales. Una aproximación de esa raíz requiere un procedimiento adicional.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-07-sesion-19.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-07-sesion-19.html#ejercicios-para-practicar",
+    "title": "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nComplete las factorizaciones parciales solicitadas en la Sesión 18: resuelva \\(x^3-4x^2+x+6=0\\) y \\(3x^3+2x^2-7x+2=0\\), y escriba cada polinomio como producto de factores lineales.\nResuelva en \\(\\mathbb C\\) y clasifique las soluciones como racionales, irracionales o complejas no reales:\n\n\\(x^3+x^2-3x-3=0\\).\n\\(x^3-2x^2+x-2=0\\).\n\nResuelva \\(x^3-\\dfrac32x^2-x+\\dfrac32=0\\). Elimine primero los denominadores y explique por qué la ecuación resultante tiene las mismas soluciones.\nResuelva \\(x^3-4x=0\\). Justifique qué factorización permite comenzar sin generar candidatos racionales y explique por qué dividir entre \\(x\\) sin considerar \\(x=0\\) perdería una solución.\nPara resolver \\(2x^3-x^2-2x+1=0\\), un estudiante encontró la raíz \\(1\\) y obtuvo el cociente \\(2x^2+x-1\\). Después lo sustituyó por \\(x^2+x-1\\) al aplicar la fórmula general. Explique el error, obtenga el conjunto solución correcto y verifique una factorización que conserve el coeficiente principal del polinomio original.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span>"
+    ]
+  },
+  {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
     "title": "Unidad 3. Sistemas de ecuaciones lineales",
@@ -1938,7 +2015,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1949,7 +2026,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -1960,7 +2037,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1971,7 +2048,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -1982,7 +2059,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -1993,7 +2070,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2004,7 +2081,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2015,7 +2092,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2026,7 +2103,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2037,7 +2114,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2048,7 +2125,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2059,7 +2136,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2070,7 +2147,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2081,7 +2158,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2092,7 +2169,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2103,7 +2180,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2114,7 +2191,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2125,7 +2202,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
