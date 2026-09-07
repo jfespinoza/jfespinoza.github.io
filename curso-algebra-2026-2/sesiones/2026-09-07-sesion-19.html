@@ -419,14 +419,11 @@ window.Quarto = {
   <ul>
   <li><a href="#de-una-raíz-racional-a-la-solución-completa" id="toc-de-una-raíz-racional-a-la-solución-completa" class="nav-link active" data-scroll-target="#de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</a></li>
   <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
-  <li><a href="#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" id="toc-ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" class="nav-link" data-scroll-target="#ejemplo.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo. Una raíz racional y dos raíces irracionales</a>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#encontrar-una-raíz-racional" id="toc-encontrar-una-raíz-racional" class="nav-link" data-scroll-target="#encontrar-una-raíz-racional">Encontrar una raíz racional</a></li>
-  <li><a href="#reducir-el-grado-mediante-ruffini" id="toc-reducir-el-grado-mediante-ruffini" class="nav-link" data-scroll-target="#reducir-el-grado-mediante-ruffini">Reducir el grado mediante Ruffini</a></li>
-  <li><a href="#resolver-la-cuadrática-resultante" id="toc-resolver-la-cuadrática-resultante" class="nav-link" data-scroll-target="#resolver-la-cuadrática-resultante">Resolver la cuadrática resultante</a></li>
-  <li><a href="#verificar-el-resultado" id="toc-verificar-el-resultado" class="nav-link" data-scroll-target="#verificar-el-resultado">Verificar el resultado</a></li>
+  <li><a href="#ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" id="toc-ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" class="nav-link" data-scroll-target="#ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo 1. Una raíz racional y dos raíces irracionales</a></li>
+  <li><a href="#ejemplo-2.-límite-del-procedimiento" id="toc-ejemplo-2.-límite-del-procedimiento" class="nav-link" data-scroll-target="#ejemplo-2.-límite-del-procedimiento">Ejemplo 2. Límite del procedimiento</a></li>
   </ul></li>
-  <li><a href="#límite-del-procedimiento" id="toc-límite-del-procedimiento" class="nav-link" data-scroll-target="#límite-del-procedimiento">Límite del procedimiento</a></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -463,12 +460,12 @@ window.Quarto = {
 
 <section id="de-una-raíz-racional-a-la-solución-completa" class="level2">
 <h2 class="anchored" data-anchor-id="de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</h2>
-<p>Una <strong>ecuación cúbica</strong> tiene la forma <span class="math inline">\(p(x)=0\)</span>, donde <span class="math inline">\(p(x)\)</span> es un polinomio de grado <span class="math inline">\(3\)</span>. Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.</p>
-<p>En la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a> se obtuvieron factorizaciones parciales. Si <span class="math inline">\(c\)</span> es una raíz de una cúbica, el teorema del factor permite escribir</p>
+<p>Una <strong>ecuación cúbica</strong> tiene la forma <span class="math inline">\(p(x)=0\)</span>, donde <span class="math inline">\(p(x)\)</span> es un polinomio de <a href="../sesiones/2026-09-01-sesion-15.html">grado</a> <span class="math inline">\(3\)</span>. Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.</p>
+<p>En la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a> se obtuvieron factorizaciones parciales. Si <span class="math inline">\(c\)</span> es una raíz de una cúbica, el <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> permite escribir</p>
 <p><span class="math display">\[
 p(x)=(x-c)q(x),
 \]</span></p>
-<p>donde <span class="math inline">\(q(x)\)</span> tiene grado <span class="math inline">\(2\)</span>. Por la propiedad del producto cero, para todo <span class="math inline">\(x\in\mathbb C\)</span>,</p>
+<p>donde <span class="math inline">\(q(x)\)</span> tiene grado <span class="math inline">\(2\)</span>. Por la <a href="../sesiones/2026-09-02-sesion-16.html">propiedad del producto cero</a>, para todo <span class="math inline">\(x\in\mathbb C\)</span>,</p>
 <p><span class="math display">\[
 p(x)=0
 \quad\Longleftrightarrow\quad
@@ -480,22 +477,23 @@ x=c\quad\text{o}\quad q(x)=0.
 <section id="procedimiento" class="level2">
 <h2 class="anchored" data-anchor-id="procedimiento">Procedimiento</h2>
 <ol type="1">
-<li>Ordene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero. Si el término independiente es cero, <span class="math inline">\(c=0\)</span> es una raíz: extraiga <span class="math inline">\(x\)</span> como factor común y pase al paso 4 con la cuadrática restante.</li>
-<li>Si el término independiente es distinto de cero, forme la lista de candidatos a raíz racional y pruébelos hasta encontrar una raíz <span class="math inline">\(c\)</span>.</li>
+<li>Ordene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero; esta operación <a href="../sesiones/2026-08-14-sesion-05.html">conserva las soluciones</a>. Si el término independiente es cero, <span class="math inline">\(c=0\)</span> es una raíz: extraiga <span class="math inline">\(x\)</span> como factor común y pase al paso 4 con la cuadrática restante.</li>
+<li>Si el término independiente es distinto de cero, forme la lista de candidatos a raíz racional. Pruébelos por evaluación directa o Ruffini, en el orden de la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a>: <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, los demás enteros por valor absoluto creciente y, al final, las fracciones, hasta encontrar una raíz <span class="math inline">\(c\)</span>.</li>
 <li>Use Ruffini para dividir entre <span class="math inline">\(x-c\)</span>, incluyendo un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente. El residuo debe ser cero y el cociente debe tener grado <span class="math inline">\(2\)</span>.</li>
-<li>Resuelva la cuadrática resultante por factorización o mediante la fórmula general de la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>. Su discriminante permite decidir si sus raíces son reales o complejas no reales.</li>
+<li>Resuelva la cuadrática resultante por factorización o mediante la fórmula general de la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>. Su discriminante permite decidir si sus raíces son reales o complejas no reales. Para una cuadrática con coeficientes enteros, un discriminante que sea un cuadrado perfecto no negativo da raíces racionales; si es positivo y no es un cuadrado perfecto, da raíces irracionales.</li>
 <li>Reúna la raíz <span class="math inline">\(c\)</span> y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.</li>
 </ol>
 <p>Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.</p>
 </section>
-<section id="ejemplo.-una-raíz-racional-y-dos-raíces-irracionales" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo. Una raíz racional y dos raíces irracionales</h2>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo 1. Una raíz racional y dos raíces irracionales</h3>
 <p>Resolvamos</p>
 <p><span class="math display">\[
 x^3-4x^2+3x+2=0.
 \]</span></p>
-<section id="encontrar-una-raíz-racional" class="level3">
-<h3 class="anchored" data-anchor-id="encontrar-una-raíz-racional">Encontrar una raíz racional</h3>
+<p><strong>Encontrar una raíz racional.</strong></p>
 <p>El polinomio <span class="math inline">\(p(x)=x^3-4x^2+3x+2\)</span> es mónico y su término independiente es <span class="math inline">\(2\)</span>. Los candidatos son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>. Se prueban los valores más sencillos:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -505,9 +503,7 @@ p(2)&amp;=8-16+6+2=0.
 \end{aligned}
 \]</span></p>
 <p>Así, <span class="math inline">\(c=2\)</span> es raíz y <span class="math inline">\(x-2\)</span> es factor.</p>
-</section>
-<section id="reducir-el-grado-mediante-ruffini" class="level3">
-<h3 class="anchored" data-anchor-id="reducir-el-grado-mediante-ruffini">Reducir el grado mediante Ruffini</h3>
+<p><strong>Reducir el grado mediante Ruffini.</strong></p>
 <p>Se divide entre <span class="math inline">\(x-2\)</span>:</p>
 <p><span class="math display">\[
 \begin{array}{r|rrrr}
@@ -526,27 +522,23 @@ p(x)=(x-2)(x^2-2x-1).
 <p><span class="math display">\[
 x=2\quad\text{o}\quad x^2-2x-1=0.
 \]</span></p>
-</section>
-<section id="resolver-la-cuadrática-resultante" class="level3">
-<h3 class="anchored" data-anchor-id="resolver-la-cuadrática-resultante">Resolver la cuadrática resultante</h3>
+<p><strong>Resolver la cuadrática resultante.</strong></p>
 <p>Su discriminante es</p>
 <p><span class="math display">\[
 \Delta=(-2)^2-4(1)(-1)=8&gt;0.
 \]</span></p>
-<p>La fórmula general da</p>
+<p>Como <span class="math inline">\(8\)</span> no es un cuadrado perfecto, las raíces de la cuadrática son irracionales. La fórmula general da</p>
 <p><span class="math display">\[
 x=\frac{2\pm\sqrt8}{2}
 =\frac{2\pm2\sqrt2}{2}
 =1\pm\sqrt2.
 \]</span></p>
-<p>Por tanto, el conjunto solución es</p>
+<p>Se simplificó <span class="math inline">\(\sqrt8=\sqrt{4\cdot2}=2\sqrt2\)</span> mediante las <a href="../sesiones/2026-08-12-sesion-03.html">propiedades de los radicales</a>. Por tanto, el conjunto solución es</p>
 <p><span class="math display">\[
 S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
 \]</span></p>
 <p>La raíz racional <span class="math inline">\(2\)</span> permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.</p>
-</section>
-<section id="verificar-el-resultado" class="level3">
-<h3 class="anchored" data-anchor-id="verificar-el-resultado">Verificar el resultado</h3>
+<p><strong>Verificar el resultado.</strong></p>
 <p>El producto recupera el polinomio original:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -560,15 +552,14 @@ S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
 q(r)=(3\pm2\sqrt2)-2(1\pm\sqrt2)-1=0,
 \]</span></p>
 <p>usando el mismo signo en cada caso. En consecuencia, <span class="math inline">\(p(r)=(r-2)q(r)=0\)</span>.</p>
-<p>Las expresiones <span class="math inline">\(1\pm\sqrt2\)</span> son <strong>soluciones exactas</strong>. Un valor irracional puede expresarse exactamente mediante radicales. En cambio, <span class="math inline">\(2.41\)</span> es una aproximación a <span class="math inline">\(1+\sqrt2\)</span> y no satisface la ecuación:</p>
+<p>Las expresiones <span class="math inline">\(1\pm\sqrt2\)</span> son <strong>soluciones exactas</strong>: estos valores irracionales se expresan exactamente mediante radicales. En cambio, <span class="math inline">\(2.41\)</span> es una aproximación a <span class="math inline">\(1+\sqrt2\)</span> y no satisface la ecuación:</p>
 <p><span class="math display">\[
 p(2.41)=(2.41-2)\bigl(2.41^2-2(2.41)-1\bigr)
 =(0.41)(-0.0119)=-0.004879\ne0.
 \]</span></p>
 </section>
-</section>
-<section id="límite-del-procedimiento" class="level2">
-<h2 class="anchored" data-anchor-id="límite-del-procedimiento">Límite del procedimiento</h2>
+<section id="ejemplo-2.-límite-del-procedimiento" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-límite-del-procedimiento">Ejemplo 2. Límite del procedimiento</h3>
 <p>Considere ahora</p>
 <p><span class="math display">\[
 p(x)=x^3-x-1.
@@ -580,20 +571,21 @@ p(1)=-1,\qquad p(-1)=-1.
 <p>Por tanto, no hay raíces racionales y no se puede iniciar el procedimiento anterior. Esto no significa que la ecuación carezca de soluciones reales: <span class="math inline">\(p(1)=-1&lt;0\)</span> y <span class="math inline">\(p(2)=5&gt;0\)</span>. Como los polinomios son continuos, sus valores pasan de negativo a positivo sin saltos; en algún punto del intervalo <span class="math inline">\((1,2)\)</span> el valor es cero.</p>
 <p>Hay, pues, al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. La búsqueda de candidatos racionales no proporciona esa raíz. Para obtener un valor aproximado puede usarse la bisección, que se estudiará posteriormente. La ausencia de raíces racionales limita este procedimiento; por sí sola no descarta que otra estrategia permita obtener soluciones exactas.</p>
 </section>
+</section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Detenerse después de encontrar una raíz.</strong> La igualdad <span class="math inline">\(p(x)=(x-c)q(x)\)</span> exige resolver también <span class="math inline">\(q(x)=0\)</span> para obtener todas las soluciones.</li>
-<li><strong>Dividir la ecuación entre <span class="math inline">\(x-c\)</span> sin considerar <span class="math inline">\(x=c\)</span>.</strong> Esa división solo es válida cuando <span class="math inline">\(x\ne c\)</span>. Si se olvida la raíz <span class="math inline">\(c\)</span>, se pierde una solución de la ecuación original.</li>
-<li><strong>Aplicar la fórmula general al polinomio cúbico.</strong> La fórmula de segundo grado se aplica al cociente cuadrático obtenido después de reducir el grado.</li>
-<li><strong>Confundir una expresión exacta con una aproximación.</strong> Un radical como <span class="math inline">\(1+\sqrt2\)</span> representa un número exacto; sustituirlo por un decimal truncado modifica su valor.</li>
+<li><strong>Detenerse después de encontrar una raíz.</strong> En el ejemplo 1, escribir <span class="math inline">\(S=\{2\}\)</span> omite las raíces de <span class="math inline">\(x^2-2x-1=0\)</span>. El conjunto completo es <span class="math inline">\(S=\{1-\sqrt2,2,1+\sqrt2\}\)</span>: además de conservar <span class="math inline">\(2\)</span>, se debe resolver la cuadrática.</li>
+<li><strong>Dividir la ecuación entre <span class="math inline">\(x-c\)</span> sin considerar <span class="math inline">\(x=c\)</span>.</strong> Esa división solo es válida cuando <span class="math inline">\(x\ne c\)</span>. Para <span class="math inline">\(x^3-4x^2+3x+2=0\)</span>, dividir entre <span class="math inline">\(x-2\)</span> y conservar solo <span class="math inline">\(S=\{1-\sqrt2,1+\sqrt2\}\)</span> pierde la solución <span class="math inline">\(2\)</span>. El conjunto correcto también incluye ese valor.</li>
+<li><strong>Aplicar la fórmula general al polinomio cúbico.</strong> Usar los tres primeros coeficientes de <span class="math inline">\(x^3-4x^2+3x+2\)</span> como si correspondieran a una cuadrática produce <span class="math inline">\(x=(4\pm\sqrt{16-12})/2\)</span>, es decir, <span class="math inline">\(1\)</span> y <span class="math inline">\(3\)</span>. Ninguno es raíz: <span class="math inline">\(p(1)=p(3)=2\)</span>. La fórmula debe aplicarse al cociente <span class="math inline">\(x^2-2x-1\)</span>, que da <span class="math inline">\(1\pm\sqrt2\)</span>, y conservarse además la raíz <span class="math inline">\(2\)</span>.</li>
+<li><strong>Confundir una expresión exacta con una aproximación.</strong> Sustituir <span class="math inline">\(1+\sqrt2\)</span> por <span class="math inline">\(2.41\)</span> en el conjunto solución no conserva la igualdad: <span class="math inline">\(p(1+\sqrt2)=0\)</span>, mientras que <span class="math inline">\(p(2.41)=-0.004879\ne0\)</span>. El radical representa la solución exacta.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva y justifique sus respuestas.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta.</p>
 <ol type="1">
-<li><p>Resuelva <span class="math inline">\(x^3-7x+6=0\)</span>. Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre <span class="math inline">\(x-1\)</span> y conservar solo las soluciones del cociente daría una respuesta incompleta.</p></li>
+<li><p>Resuelva <span class="math inline">\(x^3-7x+6=0\)</span>. Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre <span class="math inline">\(x-1\)</span> y conservar solo las soluciones del cociente daría una respuesta incompleta. Justifique también por qué no hace falta probar los demás candidatos una vez resuelta la cuadrática.</p></li>
 <li><p>Para resolver <span class="math inline">\(x^3-x^2+3x+5=0\)</span>, un estudiante encontró la raíz <span class="math inline">\(-1\)</span> y escribió <span class="math inline">\(S=\{-1\}\)</span>.</p>
 <ol type="a">
 <li><p>Use Ruffini para obtener el factor cuadrático que falta resolver.</p></li>
@@ -623,7 +615,7 @@ p(1)=-1,\qquad p(-1)=-1.
   &amp; 1 &amp; 1 &amp; -6 &amp; \mathbf{0}
 \end{array}
 \]</span></p>
-<p>Se obtiene <span class="math inline">\(q(x)=x^2+x-6=(x+3)(x-2)\)</span>. Así,</p>
+<p>Se obtiene <span class="math inline">\(q(x)=x^2+x-6\)</span>, cuyo discriminante es <span class="math inline">\(\Delta=1+24=25\)</span>. Sus raíces son racionales. La <a href="../sesiones/2026-08-13-sesion-04.html">factorización del trinomio</a> da <span class="math inline">\(q(x)=(x+3)(x-2)\)</span>. Así,</p>
 <p><span class="math display">\[
 p(x)=(x-1)(x+3)(x-2),
 \qquad S=\{-3,1,2\}.
@@ -633,6 +625,7 @@ p(x)=(x-1)(x+3)(x-2),
 (x-1)(x^2+x-6)=x^3+x^2-6x-x^2-x+6=x^3-7x+6.
 \]</span></p>
 <p>Cada valor de <span class="math inline">\(S\)</span> anula un factor y, por la identidad verificada, anula el polinomio original. Las soluciones del cociente son <span class="math inline">\(-3\)</span> y <span class="math inline">\(2\)</span>; conservar solo estas perdería la raíz <span class="math inline">\(1\)</span>, precisamente el valor para el cual no se puede dividir entre <span class="math inline">\(x-1\)</span>.</p>
+<p>La propiedad del producto cero también garantiza que cualquier raíz de <span class="math inline">\(p(x)\)</span> distinta de <span class="math inline">\(1\)</span> debe ser raíz de <span class="math inline">\(q(x)\)</span>. Como la cuadrática ya se resolvió por completo, no faltan soluciones ni hace falta probar los demás candidatos. Los cinco candidatos que no son raíces son <span class="math inline">\(-1\)</span>, <span class="math inline">\(-2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(6\)</span> y <span class="math inline">\(-6\)</span>.</p>
 <p><strong>2.</strong> Para <span class="math inline">\(p(x)=x^3-x^2+3x+5\)</span>, se verifica <span class="math inline">\(p(-1)=-1-1-3+5=0\)</span>. Se divide entre <span class="math inline">\(x+1=x-(-1)\)</span>:</p>
 <p><span class="math display">\[
 \begin{array}{r|rrrr}
@@ -654,7 +647,7 @@ S=\{-1,\ 1+2i,\ 1-2i\}.
 <p><span class="math display">\[
 (x+1)(x^2-2x+5)=x^3-x^2+3x+5.
 \]</span></p>
-<p>Para <span class="math inline">\(r=1+2i\)</span>, se tiene <span class="math inline">\(r^2=-3+4i\)</span> y</p>
+<p>Para <span class="math inline">\(r=1+2i\)</span>, el <a href="../sesiones/2026-08-19-sesion-08.html">producto de números complejos</a> da <span class="math inline">\(r^2=-3+4i\)</span> y</p>
 <p><span class="math display">\[
 q(r)=(-3+4i)-2(1+2i)+5=0.
 \]</span></p>
