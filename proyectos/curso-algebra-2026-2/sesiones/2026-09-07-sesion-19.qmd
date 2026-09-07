@@ -1,0 +1,275 @@
+---
+title: "Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante"
+date: 2026-09-07
+description: "Resolución de ecuaciones cúbicas con una raíz racional, solución de la cuadrática resultante y límites del procedimiento."
+---
+
+## De una raíz racional a la solución completa
+
+Una **ecuación cúbica** tiene la forma $p(x)=0$, donde $p(x)$ es un polinomio de grado $3$. Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.
+
+En la [Sesión 18](2026-09-04-sesion-18.qmd) se obtuvieron factorizaciones parciales. Si $c$ es una raíz de una cúbica, el teorema del factor permite escribir
+
+$$
+p(x)=(x-c)q(x),
+$$
+
+donde $q(x)$ tiene grado $2$. Por la propiedad del producto cero, para todo $x\in\mathbb C$,
+
+$$
+p(x)=0
+\quad\Longleftrightarrow\quad
+x=c\quad\text{o}\quad q(x)=0.
+$$
+
+Por tanto, se conserva la raíz $c$ y se resuelve la **cuadrática resultante** $q(x)=0$. Esto proporciona todas las soluciones: cualquier número distinto de $c$ que anule $p(x)$ debe anular $q(x)$.
+
+Una cúbica con coeficientes racionales es **reducible sobre $\mathbb Q$** si puede escribirse como producto de un factor lineal y uno cuadrático con coeficientes racionales. En grado $3$, esto equivale a tener una raíz racional: dicha raíz permite extraer el factor lineal, y un factor lineal con coeficientes racionales tiene una raíz racional.
+
+## Procedimiento
+
+1. Ordene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero. Si el término independiente es cero, $c=0$ es una raíz: extraiga $x$ como factor común y pase al paso 4 con la cuadrática restante.
+2. Si el término independiente es distinto de cero, forme la lista de candidatos a raíz racional y pruébelos hasta encontrar una raíz $c$.
+3. Use Ruffini para dividir entre $x-c$, incluyendo un coeficiente $0$ por cada potencia ausente. El residuo debe ser cero y el cociente debe tener grado $2$.
+4. Resuelva la cuadrática resultante por factorización o mediante la fórmula general de la [Sesión 16](2026-09-02-sesion-16.qmd). Su discriminante permite decidir si sus raíces son reales o complejas no reales.
+5. Reúna la raíz $c$ y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.
+
+Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.
+
+## Ejemplo. Una raíz racional y dos raíces irracionales
+
+Resolvamos
+
+$$
+x^3-4x^2+3x+2=0.
+$$
+
+### Encontrar una raíz racional
+
+El polinomio $p(x)=x^3-4x^2+3x+2$ es mónico y su término independiente es $2$. Los candidatos son $\pm1$ y $\pm2$. Se prueban los valores más sencillos:
+
+$$
+\begin{aligned}
+p(1)&=1-4+3+2=2,\\
+p(-1)&=-1-4-3+2=-6,\\
+p(2)&=8-16+6+2=0.
+\end{aligned}
+$$
+
+Así, $c=2$ es raíz y $x-2$ es factor.
+
+### Reducir el grado mediante Ruffini
+
+Se divide entre $x-2$:
+
+$$
+\begin{array}{r|rrrr}
+2 & 1 & -4 & 3 & 2\\
+  &   & 2 & -4 & -2\\
+\hline
+  & 1 & -2 & -1 & \mathbf{0}
+\end{array}
+$$
+
+Se baja $1$; se multiplica $1(2)=2$ y se suma $-4+2=-2$; después, $(-2)(2)=-4$ y $3-4=-1$; finalmente, $(-1)(2)=-2$ y $2-2=0$.
+
+El cociente es $q(x)=x^2-2x-1$, por lo que
+
+$$
+p(x)=(x-2)(x^2-2x-1).
+$$
+
+La ecuación original equivale a
+
+$$
+x=2\quad\text{o}\quad x^2-2x-1=0.
+$$
+
+### Resolver la cuadrática resultante
+
+Su discriminante es
+
+$$
+\Delta=(-2)^2-4(1)(-1)=8>0.
+$$
+
+La fórmula general da
+
+$$
+x=\frac{2\pm\sqrt8}{2}
+=\frac{2\pm2\sqrt2}{2}
+=1\pm\sqrt2.
+$$
+
+Por tanto, el conjunto solución es
+
+$$
+S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
+$$
+
+La raíz racional $2$ permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.
+
+### Verificar el resultado
+
+El producto recupera el polinomio original:
+
+$$
+\begin{aligned}
+(x-2)(x^2-2x-1)
+&=x^3-2x^2-x-2x^2+4x+2\\
+&=x^3-4x^2+3x+2.
+\end{aligned}
+$$
+
+Ya se comprobó que $p(2)=0$. Para $r=1+\sqrt2$ o $r=1-\sqrt2$, se tiene $r^2=3\pm2\sqrt2$ y
+
+$$
+q(r)=(3\pm2\sqrt2)-2(1\pm\sqrt2)-1=0,
+$$
+
+usando el mismo signo en cada caso. En consecuencia, $p(r)=(r-2)q(r)=0$.
+
+Las expresiones $1\pm\sqrt2$ son **soluciones exactas**. Un valor irracional puede expresarse exactamente mediante radicales. En cambio, $2.41$ es una aproximación a $1+\sqrt2$ y no satisface la ecuación:
+
+$$
+p(2.41)=(2.41-2)\bigl(2.41^2-2(2.41)-1\bigr)
+=(0.41)(-0.0119)=-0.004879\ne0.
+$$
+
+## Límite del procedimiento
+
+Considere ahora
+
+$$
+p(x)=x^3-x-1.
+$$
+
+Los únicos candidatos racionales son $1$ y $-1$, pero
+
+$$
+p(1)=-1,\qquad p(-1)=-1.
+$$
+
+Por tanto, no hay raíces racionales y no se puede iniciar el procedimiento anterior. Esto no significa que la ecuación carezca de soluciones reales: $p(1)=-1<0$ y $p(2)=5>0$. Como los polinomios son continuos, sus valores pasan de negativo a positivo sin saltos; en algún punto del intervalo $(1,2)$ el valor es cero.
+
+Hay, pues, al menos una raíz real entre $1$ y $2$. La búsqueda de candidatos racionales no proporciona esa raíz. Para obtener un valor aproximado puede usarse la bisección, que se estudiará posteriormente. La ausencia de raíces racionales limita este procedimiento; por sí sola no descarta que otra estrategia permita obtener soluciones exactas.
+
+## Errores frecuentes
+
+- **Detenerse después de encontrar una raíz.** La igualdad $p(x)=(x-c)q(x)$ exige resolver también $q(x)=0$ para obtener todas las soluciones.
+- **Dividir la ecuación entre $x-c$ sin considerar $x=c$.** Esa división solo es válida cuando $x\ne c$. Si se olvida la raíz $c$, se pierde una solución de la ecuación original.
+- **Aplicar la fórmula general al polinomio cúbico.** La fórmula de segundo grado se aplica al cociente cuadrático obtenido después de reducir el grado.
+- **Confundir una expresión exacta con una aproximación.** Un radical como $1+\sqrt2$ representa un número exacto; sustituirlo por un decimal truncado modifica su valor.
+
+## Actividad
+
+Resuelva y justifique sus respuestas.
+
+1. Resuelva $x^3-7x+6=0$. Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre $x-1$ y conservar solo las soluciones del cociente daría una respuesta incompleta.
+
+2. Para resolver $x^3-x^2+3x+5=0$, un estudiante encontró la raíz $-1$ y escribió $S=\{-1\}$.
+
+   a. Use Ruffini para obtener el factor cuadrático que falta resolver.
+
+   b. Complete el conjunto solución en $\mathbb C$ e indique cuáles soluciones son reales.
+
+   c. Compruebe una raíz no real en la ecuación original, utilizando la factorización verificada.
+
+3. Para $x^3-2x-5=0$, determine si existe una raíz racional y explique si puede aplicarse el procedimiento de reducción de esta sesión. ¿Sería correcto concluir que no hay soluciones reales? Justifique usando los valores del polinomio en $2$ y en $3$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** Para $p(x)=x^3-7x+6$, los candidatos son $\pm1$, $\pm2$, $\pm3$ y $\pm6$. Como $p(1)=1-7+6=0$, se usa $c=1$. El coeficiente de $x^2$ es cero:
+
+$$
+\begin{array}{r|rrrr}
+1 & 1 & 0 & -7 & 6\\
+  &   & 1 & 1 & -6\\
+\hline
+  & 1 & 1 & -6 & \mathbf{0}
+\end{array}
+$$
+
+Se obtiene $q(x)=x^2+x-6=(x+3)(x-2)$. Así,
+
+$$
+p(x)=(x-1)(x+3)(x-2),
+\qquad S=\{-3,1,2\}.
+$$
+
+La verificación es
+
+$$
+(x-1)(x^2+x-6)=x^3+x^2-6x-x^2-x+6=x^3-7x+6.
+$$
+
+Cada valor de $S$ anula un factor y, por la identidad verificada, anula el polinomio original. Las soluciones del cociente son $-3$ y $2$; conservar solo estas perdería la raíz $1$, precisamente el valor para el cual no se puede dividir entre $x-1$.
+
+**2.** Para $p(x)=x^3-x^2+3x+5$, se verifica $p(-1)=-1-1-3+5=0$. Se divide entre $x+1=x-(-1)$:
+
+$$
+\begin{array}{r|rrrr}
+-1 & 1 & -1 & 3 & 5\\
+   &   & -1 & 2 & -5\\
+\hline
+   & 1 & -2 & 5 & \mathbf{0}
+\end{array}
+$$
+
+El cociente es $q(x)=x^2-2x+5$. Su discriminante es $\Delta=4-20=-16$, de modo que
+
+$$
+x=\frac{2\pm4i}{2}=1\pm2i.
+$$
+
+Por tanto,
+
+$$
+S=\{-1,\ 1+2i,\ 1-2i\}.
+$$
+
+La única solución real es $-1$. Se comprueba la factorización:
+
+$$
+(x+1)(x^2-2x+5)=x^3-x^2+3x+5.
+$$
+
+Para $r=1+2i$, se tiene $r^2=-3+4i$ y
+
+$$
+q(r)=(-3+4i)-2(1+2i)+5=0.
+$$
+
+Así, en el polinomio original, $p(r)=(r+1)q(r)=(2+2i)0=0$. Para $1-2i$, el mismo cálculo con los signos cambiados también da cero.
+
+**3.** Los candidatos de $p(x)=x^3-2x-5$ son $\pm1$ y $\pm5$. Se obtiene
+
+$$
+p(1)=-6,\quad p(-1)=-4,\quad p(5)=110,\quad p(-5)=-120.
+$$
+
+Ninguno es raíz. La ecuación no tiene raíces racionales y el procedimiento de reducción mediante una raíz racional no puede iniciarse. Sin embargo,
+
+$$
+p(2)=-1<0,\qquad p(3)=16>0.
+$$
+
+La continuidad garantiza al menos una raíz real en $(2,3)$, necesariamente irracional. Por tanto, sería incorrecto afirmar que no hay soluciones reales. Una aproximación de esa raíz requiere un procedimiento adicional.
+
+:::
+
+## Ejercicios para practicar
+
+1. Complete las factorizaciones parciales solicitadas en la [Sesión 18](2026-09-04-sesion-18.qmd): resuelva $x^3-4x^2+x+6=0$ y $3x^3+2x^2-7x+2=0$, y escriba cada polinomio como producto de factores lineales.
+
+2. Resuelva en $\mathbb C$ y clasifique las soluciones como racionales, irracionales o complejas no reales:
+
+   a. $x^3+x^2-3x-3=0$.
+
+   b. $x^3-2x^2+x-2=0$.
+
+3. Resuelva $x^3-\dfrac32x^2-x+\dfrac32=0$. Elimine primero los denominadores y explique por qué la ecuación resultante tiene las mismas soluciones.
+
+4. Resuelva $x^3-4x=0$. Justifique qué factorización permite comenzar sin generar candidatos racionales y explique por qué dividir entre $x$ sin considerar $x=0$ perdería una solución.
+
+5. Para resolver $2x^3-x^2-2x+1=0$, un estudiante encontró la raíz $1$ y obtuvo el cociente $2x^2+x-1$. Después lo sustituyó por $x^2+x-1$ al aplicar la fórmula general. Explique el error, obtenga el conjunto solución correcto y verifique una factorización que conserve el coeficiente principal del polinomio original.
