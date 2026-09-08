@@ -470,7 +470,16 @@ window.Quarto = {
 
 <section id="una-raíz-que-se-repite" class="level2">
 <h2 class="anchored" data-anchor-id="una-raíz-que-se-repite">Una raíz que se repite</h2>
-<p>Al resolver una cúbica mediante el procedimiento de la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a>, una raíz de la cuadrática resultante puede coincidir con la raíz ya encontrada. Por ejemplo, para <span class="math inline">\(p(x)=x^3-3x-2\)</span>, se tiene <span class="math inline">\(p(-1)=0\)</span> y</p>
+<p>Al resolver una cúbica mediante el procedimiento de la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a>, una raíz de la cuadrática resultante puede coincidir con la raíz ya encontrada. Consideremos <span class="math inline">\(p(x)=x^3-3x-2\)</span>. Sus <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>. Como <span class="math inline">\(p(1)=-4\)</span> y <span class="math inline">\(p(-1)=-1+3-2=0\)</span>, se divide entre <span class="math inline">\(x+1\)</span> mediante Ruffini. Se incluye el coeficiente <span class="math inline">\(0\)</span> de <span class="math inline">\(x^2\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+-1 &amp; 1 &amp; 0 &amp; -3 &amp; -2\\
+   &amp;   &amp; -1 &amp; 1 &amp; 2\\
+\hline
+   &amp; 1 &amp; -1 &amp; -2 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(q(x)=x^2-x-2=(x-2)(x+1)\)</span>. Sus raíces son <span class="math inline">\(2\)</span> y <span class="math inline">\(-1\)</span>: la segunda coincide con la raíz que permitió reducir el grado. Por tanto,</p>
 <p><span class="math display">\[
 p(x)=(x+1)(x^2-x-2)=(x+1)^2(x-2).
 \]</span></p>
@@ -478,17 +487,17 @@ p(x)=(x+1)(x^2-x-2)=(x+1)^2(x-2).
 <p><span class="math display">\[
 (x^2+2x+1)(x-2)=x^3-3x-2.
 \]</span></p>
-<p>La ecuación <span class="math inline">\(p(x)=0\)</span> tiene el conjunto solución <span class="math inline">\(S=\{-1,2\}\)</span>. Hay dos soluciones distintas, aunque el grado es <span class="math inline">\(3\)</span>: el factor <span class="math inline">\(x+1\)</span> aparece dos veces. Se dice que <span class="math inline">\(-1\)</span> es una <strong>raíz doble</strong> y que <span class="math inline">\(2\)</span> es una <strong>raíz simple</strong>.</p>
+<p>La ecuación <span class="math inline">\(p(x)=0\)</span> tiene el conjunto solución <span class="math inline">\(S=\{-1,2\}\)</span>. Hay dos soluciones distintas, aunque el grado es <span class="math inline">\(3\)</span>: el factor <span class="math inline">\(x+1\)</span> aparece dos veces. Se dice que <span class="math inline">\(-1\)</span> es una <strong>raíz doble</strong>, como en las <a href="../sesiones/2026-09-02-sesion-16.html">ecuaciones cuadráticas</a> con discriminante cero, y que <span class="math inline">\(2\)</span> es una <strong>raíz simple</strong>.</p>
 </section>
 <section id="multiplicidad-de-una-raíz" class="level2">
 <h2 class="anchored" data-anchor-id="multiplicidad-de-una-raíz">Multiplicidad de una raíz</h2>
-<p>Sea <span class="math inline">\(p(x)\)</span> un polinomio de grado <span class="math inline">\(n\ge1\)</span> con coeficientes complejos. Una raíz <span class="math inline">\(c\in\mathbb C\)</span> tiene <strong>multiplicidad</strong> <span class="math inline">\(m\)</span>, donde <span class="math inline">\(m\)</span> es un entero positivo, si</p>
+<p>Los polinomios también pueden tener coeficientes complejos; las definiciones de grado, suma y producto se aplican de la misma manera que para coeficientes reales. Sea <span class="math inline">\(p(x)\)</span> uno de estos polinomios, de grado <span class="math inline">\(n\ge1\)</span>. Una raíz <span class="math inline">\(c\in\mathbb C\)</span> tiene <strong>multiplicidad</strong> <span class="math inline">\(m\)</span>, donde <span class="math inline">\(m\)</span> es un entero positivo, si</p>
 <p><span class="math display">\[
 p(x)=(x-c)^m q(x),
 \qquad m\ge1,
 \qquad q(c)\ne0.
 \]</span></p>
-<p>Así, <span class="math inline">\(m\)</span> es el mayor exponente para el cual <span class="math inline">\((x-c)^m\)</span> es factor de <span class="math inline">\(p(x)\)</span>. La condición <span class="math inline">\(q(c)\ne0\)</span> asegura que no queda otro factor <span class="math inline">\(x-c\)</span> en el cociente. Una raíz de multiplicidad <span class="math inline">\(1\)</span> se llama simple; de multiplicidad <span class="math inline">\(2\)</span>, doble; y de multiplicidad <span class="math inline">\(3\)</span>, triple. Siempre se cumple <span class="math inline">\(m\le n\)</span>.</p>
+<p>Así, <span class="math inline">\(m\)</span> es el mayor exponente para el cual <span class="math inline">\((x-c)^m\)</span> es factor de <span class="math inline">\(p(x)\)</span>. La condición <span class="math inline">\(q(c)\ne0\)</span> asegura que no queda otro factor <span class="math inline">\(x-c\)</span> en el cociente. Una raíz de multiplicidad <span class="math inline">\(1\)</span> se llama simple; de multiplicidad <span class="math inline">\(2\)</span>, doble; y de multiplicidad <span class="math inline">\(3\)</span>, triple. Siempre se cumple <span class="math inline">\(m\le n\)</span>: el factor <span class="math inline">\((x-c)^m\)</span> tiene grado <span class="math inline">\(m\)</span> y el <a href="../sesiones/2026-09-01-sesion-15.html">grado de un producto</a> es la suma de los grados de sus factores no nulos.</p>
 <p><strong>Contar con multiplicidad</strong> significa contar cada raíz tantas veces como indica su multiplicidad. En <span class="math inline">\((x+1)^2(x-2)\)</span>, el conteo es <span class="math inline">\(2+1=3\)</span>. El conjunto solución, en cambio, registra cada valor una sola vez.</p>
 <p>El <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> también vale para raíces complejas: <span class="math inline">\(p(c)=0\)</span> si y solo si <span class="math inline">\(x-c\)</span> es factor de <span class="math inline">\(p(x)\)</span>. En efecto, al sustituir <span class="math inline">\(x=c\)</span> en la identidad de la división, el residuo es <span class="math inline">\(p(c)\)</span>. Por ejemplo,</p>
 <p><span class="math display">\[
@@ -499,7 +508,7 @@ x^2+1=(x-i)(x+i),
 <h3 class="anchored" data-anchor-id="cómo-determinar-la-multiplicidad-mediante-ruffini">Cómo determinar la multiplicidad mediante Ruffini</h3>
 <p>Para una raíz conocida <span class="math inline">\(c\)</span>:</p>
 <ol type="1">
-<li>Divida <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> mediante Ruffini, incluyendo el coeficiente <span class="math inline">\(0\)</span> de cada potencia ausente.</li>
+<li>Divida <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> mediante la regla de <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a>, incluyendo el coeficiente <span class="math inline">\(0\)</span> de cada potencia ausente.</li>
 <li>Si el cociente todavía se anula en <span class="math inline">\(c\)</span>, divídalo otra vez entre <span class="math inline">\(x-c\)</span>.</li>
 <li>Continúe hasta obtener un cociente <span class="math inline">\(q(x)\)</span> para el cual <span class="math inline">\(q(c)\ne0\)</span>. La cantidad de divisiones exactas consecutivas es la multiplicidad de <span class="math inline">\(c\)</span>.</li>
 </ol>
@@ -509,11 +518,18 @@ x^2+1=(x-i)(x+i),
 <section id="teorema-fundamental-del-álgebra" class="level2">
 <h2 class="anchored" data-anchor-id="teorema-fundamental-del-álgebra">Teorema fundamental del álgebra</h2>
 <p><strong>Teorema fundamental del álgebra.</strong> Todo polinomio de grado <span class="math inline">\(n\ge1\)</span> con coeficientes complejos tiene exactamente <span class="math inline">\(n\)</span> raíces en <span class="math inline">\(\mathbb C\)</span>, contando multiplicidades.</p>
-<p>En particular, el teorema se aplica a los polinomios con coeficientes reales, porque <span class="math inline">\(\mathbb R\subset\mathbb C\)</span>. Si las raíces distintas tienen multiplicidades <span class="math inline">\(m_1,\ldots,m_k\)</span>, entonces</p>
+<p>En particular, el teorema se aplica a los polinomios con coeficientes reales, porque <span class="math inline">\(\mathbb R\subsetneq\mathbb C\)</span>, con la notación de <a href="../sesiones/2026-08-11-sesion-02.html">inclusión propia</a>. Si las <span class="math inline">\(k\)</span> raíces distintas tienen multiplicidades <span class="math inline">\(m_1,\ldots,m_k\)</span>, entonces</p>
 <p><span class="math display">\[
 m_1+\cdots+m_k=n.
 \]</span></p>
-<p>Por tanto, un polinomio de grado <span class="math inline">\(n\)</span> tiene a lo sumo <span class="math inline">\(n\)</span> raíces distintas. Una lista de raíces está completa cuando sus multiplicidades, correctamente determinadas, suman <span class="math inline">\(n\)</span>.</p>
+<p>Como cada <span class="math inline">\(m_j\ge1\)</span>, se obtiene <span class="math inline">\(k\le m_1+\cdots+m_k=n\)</span>: un polinomio de grado <span class="math inline">\(n\)</span> tiene a lo sumo <span class="math inline">\(n\)</span> raíces distintas. Una lista de raíces está completa cuando sus multiplicidades, correctamente determinadas, suman <span class="math inline">\(n\)</span>.</p>
+<p>El teorema del factor permite extraer un factor lineal por cada raíz, repitiéndolo según su multiplicidad. Al extraer los <span class="math inline">\(n\)</span> factores, queda una constante igual al coeficiente principal <span class="math inline">\(a_n\)</span>. Se obtiene la <strong>factorización completa sobre <span class="math inline">\(\mathbb C\)</span></strong>:</p>
+<p><span class="math display">\[
+p(x)=a_n(x-r_1)(x-r_2)\cdots(x-r_n),
+\qquad a_n\ne0,
+\qquad r_1,\ldots,r_n\in\mathbb C.
+\]</span></p>
+<p>Los valores <span class="math inline">\(r_j\)</span> pueden repetirse: una raíz de multiplicidad <span class="math inline">\(m\)</span> aparece exactamente <span class="math inline">\(m\)</span> veces en la lista. El coeficiente principal se conserva; por ejemplo, <span class="math inline">\(2x^2-2x-4=2(x-2)(x+1)\)</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 18%">
@@ -556,23 +572,34 @@ m_1+\cdots+m_k=n.
 </tr>
 </tbody>
 </table>
-<p>El conteo se realiza en <span class="math inline">\(\mathbb C\)</span>; no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, <span class="math inline">\(x^2+1\)</span> tiene dos raíces complejas no reales, mientras que <span class="math inline">\(x^3\)</span> tiene una única raíz distinta, que es real.</p>
+<p>El conteo se realiza en <span class="math inline">\(\mathbb C\)</span>; no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, <span class="math inline">\(x^2+1\)</span> tiene las raíces no reales <span class="math inline">\(\pm i\)</span>. En <span class="math inline">\(x^3\)</span>, la única raíz distinta es <span class="math inline">\(0\)</span>, con multiplicidad <span class="math inline">\(3\)</span>, como en el caso de las <a href="../sesiones/2026-08-25-sesion-12.html">raíces n-ésimas de cero</a>.</p>
 <p>Un polinomio constante distinto de cero no tiene raíces. El polinomio cero se anula en todos los números complejos; su grado no está definido y el teorema no se aplica a él.</p>
 </section>
 <section id="coeficientes-reales-y-raíces-conjugadas" class="level2">
 <h2 class="anchored" data-anchor-id="coeficientes-reales-y-raíces-conjugadas">Coeficientes reales y raíces conjugadas</h2>
 <p><strong>Teorema de las raíces conjugadas.</strong> Si un polinomio no nulo tiene coeficientes reales y <span class="math inline">\(z\)</span> es una raíz compleja no real, entonces <span class="math inline">\(\overline z\)</span> también es raíz, con la misma multiplicidad.</p>
-<p>La existencia de la raíz conjugada se explica porque la <a href="../sesiones/2026-08-19-sesion-08.html">conjugación</a> respeta sumas y productos y deja fijos los coeficientes reales. Así,</p>
+<p>Para comprobar que la conjugada también es raíz, se usan las propiedades de la <a href="../sesiones/2026-08-19-sesion-08.html">conjugación</a>. Si <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=u+vi\)</span>, con <span class="math inline">\(a,b,u,v\in\mathbb R\)</span>, entonces</p>
 <p><span class="math display">\[
-p(\overline z)=\overline{p(z)}.
+\begin{aligned}
+\overline{z+w}&amp;=(a+u)-(b+v)i=\overline z+\overline w,\\
+\overline{zw}&amp;=(au-bv)-(av+bu)i=(a-bi)(u-vi)=\overline z\,\overline w.
+\end{aligned}
 \]</span></p>
-<p>Si <span class="math inline">\(p(z)=0\)</span>, entonces <span class="math inline">\(p(\overline z)=0\)</span>. Para <span class="math inline">\(z=a+bi\)</span>, con <span class="math inline">\(b\ne0\)</span>, su conjugado es <span class="math inline">\(a-bi\)</span>: se conserva la parte real y cambia el signo de la parte imaginaria.</p>
+<p>Por tanto, la conjugación respeta sumas, productos y potencias enteras positivas. Si <span class="math inline">\(p(x)=a_nx^n+\cdots+a_1x+a_0\)</span> tiene coeficientes reales, cada <span class="math inline">\(a_j\)</span> es igual a su conjugado y</p>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{p(z)}
+&amp;=a_n(\overline z)^n+\cdots+a_1\overline z+a_0\\
+&amp;=p(\overline z).
+\end{aligned}
+\]</span></p>
+<p>Así, <span class="math inline">\(p(z)=0\)</span> implica <span class="math inline">\(p(\overline z)=\overline0=0\)</span>. Para <span class="math inline">\(z=a+bi\)</span>, con <span class="math inline">\(b\ne0\)</span>, la raíz conjugada es <span class="math inline">\(a-bi\)</span>: se conserva la parte real y cambia el signo de la parte imaginaria.</p>
 <p>Por ejemplo, si <span class="math inline">\(2+3i\)</span> es raíz doble de un polinomio con coeficientes reales, <span class="math inline">\(2-3i\)</span> también es raíz doble. Este par aporta <span class="math inline">\(2+2=4\)</span> al conteo, aunque contiene solo dos valores distintos.</p>
 <p>De este resultado se deduce que:</p>
 <ul>
 <li>Las raíces no reales aparecen en pares conjugados. Su número, contado con multiplicidad, es par.</li>
 <li>Todo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: las raíces no reales no pueden completar por sí solas un conteo impar.</li>
-<li>Un polinomio de grado par puede carecer de raíces reales, como <span class="math inline">\(x^2+1\)</span>, o tenerlas, como <span class="math inline">\(x^2-1\)</span>.</li>
+<li>Un polinomio de grado par puede carecer de raíces reales, como <span class="math inline">\(x^2+1\)</span>, o tenerlas, como <span class="math inline">\(x^2-1=(x-1)(x+1)\)</span>, una <a href="../sesiones/2026-08-13-sesion-04.html">diferencia de cuadrados</a>.</li>
 </ul>
 <p>Si una raíz es real, su conjugado es ella misma; esto no aumenta su multiplicidad. La hipótesis sobre los coeficientes es necesaria: el polinomio <span class="math inline">\(p(x)=x-i\)</span> tiene la raíz <span class="math inline">\(i\)</span>, pero <span class="math inline">\(p(-i)=-2i\ne0\)</span>.</p>
 </section>
@@ -610,7 +637,7 @@ p(x)=(x-1)^2(x^2+1)=(x-1)^2(x-i)(x+i).
 <p><span class="math display">\[
 (x^2-2x+1)(x^2+1)=x^4-2x^3+2x^2-2x+1.
 \]</span></p>
-<p>Las raíces <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> son simples. Las multiplicidades suman <span class="math inline">\(2+1+1=4\)</span>, por lo que no faltan raíces. Hay tres raíces distintas, una sola real. Los conjuntos solución son</p>
+<p>Las raíces <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> son simples. Las multiplicidades suman <span class="math inline">\(2+1+1=4\)</span>, por lo que no faltan raíces. Hay tres raíces distintas, una sola real. Denotamos por <span class="math inline">\(S_{\mathbb C}\)</span> el conjunto de soluciones en <span class="math inline">\(\mathbb C\)</span> y por <span class="math inline">\(S_{\mathbb R}\)</span> el de soluciones reales:</p>
 <p><span class="math display">\[
 S_{\mathbb C}=\{1,i,-i\},
 \qquad
@@ -632,9 +659,10 @@ S_{\mathbb R}=\{1\}.
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Eliminar un factor repetido.</strong> En <span class="math inline">\(x^3-3x-2=(x+1)^2(x-2)\)</span> no se puede sustituir <span class="math inline">\((x+1)^2\)</span> por <span class="math inline">\(x+1\)</span>: el producto dejaría de ser el polinomio original. La multiplicidad se conserva en la factorización.</li>
-<li><strong>Confundir raíces distintas con raíces contadas con multiplicidad.</strong> El conjunto <span class="math inline">\(\{-1,2\}\)</span> tiene dos elementos, pero las multiplicidades <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span> completan el grado <span class="math inline">\(3\)</span>. No falta una tercera solución distinta.</li>
-<li><strong>Suponer que dos raíces conjugadas pueden tener multiplicidades diferentes.</strong> Con coeficientes reales, si <span class="math inline">\(i\)</span> es doble, <span class="math inline">\(-i\)</span> también debe ser doble. Contar solo una vez a <span class="math inline">\(-i\)</span> produce una lista incompatible con esa hipótesis.</li>
+<li><strong>Eliminar un factor repetido.</strong> Si en <span class="math inline">\((x+1)^2(x-2)\)</span> se elimina un factor <span class="math inline">\(x+1\)</span>, se obtiene <span class="math inline">\((x+1)(x-2)=x^2-x-2\)</span>, de grado <span class="math inline">\(2\)</span>. Ese producto no recupera el polinomio original <span class="math inline">\(x^3-3x-2\)</span>, cuya factorización es <span class="math inline">\((x+1)^2(x-2)\)</span>. La multiplicidad se conserva en la factorización.</li>
+<li><strong>Confundir raíces distintas con raíces contadas con multiplicidad.</strong> Afirmar que <span class="math inline">\(x^3-3x-2\)</span> debe tener tres soluciones distintas por ser de grado <span class="math inline">\(3\)</span> es incorrecto. El conjunto <span class="math inline">\(\{-1,2\}\)</span> tiene dos elementos, pero las multiplicidades <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span> completan el grado: <span class="math inline">\(2+1=3\)</span>.</li>
+<li><strong>Deducir del grado el número de raíces reales.</strong> El grado <span class="math inline">\(2\)</span> de <span class="math inline">\(x^2+1\)</span> no implica que haya dos raíces reales: para todo <span class="math inline">\(x\in\mathbb R\)</span>, <span class="math inline">\(x^2+1&gt;0\)</span>. Sus dos raíces son <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span>. Asimismo, <span class="math inline">\(x^3+x=x(x^2+1)\)</span> tiene una sola raíz real distinta, <span class="math inline">\(0\)</span>, y dos no reales, <span class="math inline">\(\pm i\)</span>.</li>
+<li><strong>Suponer que dos raíces conjugadas pueden tener multiplicidades diferentes.</strong> La lista <span class="math inline">\(i\)</span> doble y <span class="math inline">\(-i\)</span> simple es incompatible con coeficientes reales. El polinomio mónico que tiene exactamente esas raíces es <span class="math inline">\((x-i)^2(x+i)=x^3-ix^2+x-i\)</span>, cuyos coeficientes no son todos reales. Con coeficientes reales, si <span class="math inline">\(i\)</span> es doble, <span class="math inline">\(-i\)</span> también debe ser doble; por ejemplo, <span class="math inline">\((x^2+1)^2=(x-i)^2(x+i)^2\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
