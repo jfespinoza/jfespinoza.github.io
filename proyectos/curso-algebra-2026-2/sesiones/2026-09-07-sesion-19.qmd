@@ -36,6 +36,8 @@ Una cúbica con coeficientes racionales es **reducible sobre $\mathbb Q$** si pu
 
 Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.
 
+Si la cuadrática tiene discriminante negativo, se resuelve en $\mathbb C$: no admite factores lineales reales, pero sí complejos. Esto no impide completar las soluciones de la cúbica.
+
 ## Ejemplos
 
 ### Ejemplo 1. Una raíz racional y dos raíces irracionales
@@ -75,6 +77,8 @@ $$
 
 Se baja $1$; se multiplica $1(2)=2$ y se suma $-4+2=-2$; después, $(-2)(2)=-4$ y $3-4=-1$; finalmente, $(-1)(2)=-2$ y $2-2=0$.
 
+Los tres primeros números de la última fila son los coeficientes de $x^2$, $x$ y el término independiente. El último $0$ es el residuo y no pertenece al cociente.
+
 El cociente es $q(x)=x^2-2x-1$, por lo que
 
 $$
@@ -89,7 +93,7 @@ $$
 
 **Resolver la cuadrática resultante.**
 
-Su discriminante es
+Los coeficientes de la cuadrática son $a=1$, $b=-2$ y $c=-1$; en particular, $-b=-(-2)=2$. Su discriminante es
 
 $$
 \Delta=(-2)^2-4(1)(-1)=8>0.
@@ -110,6 +114,16 @@ S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
 $$
 
 La raíz racional $2$ permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.
+
+Sobre $\mathbb Q$, el factor $x^2-2x-1$ es irreducible porque no tiene raíces racionales. Así, $(x-2)(x^2-2x-1)$ ya es una factorización en factores irreducibles sobre $\mathbb Q$. Sobre $\mathbb R$, se puede continuar:
+
+$$
+p(x)=(x-2)\bigl(x-(1+\sqrt2)\bigr)\bigl(x-(1-\sqrt2)\bigr).
+$$
+
+Cada factor resta la raíz completa. La irreducibilidad sobre $\mathbb Q$ no impide hallar las soluciones irracionales.
+
+En general, si $r_1,r_2$ son las raíces de $ax^2+bx+c$, con $a\ne0$, su factorización es $a(x-r_1)(x-r_2)$; se conserva el coeficiente principal.
 
 **Verificar el resultado.**
 
