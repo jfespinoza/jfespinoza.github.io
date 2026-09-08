@@ -484,6 +484,7 @@ x=c\quad\text{o}\quad q(x)=0.
 <li>Reúna la raíz <span class="math inline">\(c\)</span> y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.</li>
 </ol>
 <p>Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.</p>
+<p>Si la cuadrática tiene discriminante negativo, se resuelve en <span class="math inline">\(\mathbb C\)</span>: no admite factores lineales reales, pero sí complejos. Esto no impide completar las soluciones de la cúbica.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -514,6 +515,7 @@ p(2)&amp;=8-16+6+2=0.
 \end{array}
 \]</span></p>
 <p>Se baja <span class="math inline">\(1\)</span>; se multiplica <span class="math inline">\(1(2)=2\)</span> y se suma <span class="math inline">\(-4+2=-2\)</span>; después, <span class="math inline">\((-2)(2)=-4\)</span> y <span class="math inline">\(3-4=-1\)</span>; finalmente, <span class="math inline">\((-1)(2)=-2\)</span> y <span class="math inline">\(2-2=0\)</span>.</p>
+<p>Los tres primeros números de la última fila son los coeficientes de <span class="math inline">\(x^2\)</span>, <span class="math inline">\(x\)</span> y el término independiente. El último <span class="math inline">\(0\)</span> es el residuo y no pertenece al cociente.</p>
 <p>El cociente es <span class="math inline">\(q(x)=x^2-2x-1\)</span>, por lo que</p>
 <p><span class="math display">\[
 p(x)=(x-2)(x^2-2x-1).
@@ -523,7 +525,7 @@ p(x)=(x-2)(x^2-2x-1).
 x=2\quad\text{o}\quad x^2-2x-1=0.
 \]</span></p>
 <p><strong>Resolver la cuadrática resultante.</strong></p>
-<p>Su discriminante es</p>
+<p>Los coeficientes de la cuadrática son <span class="math inline">\(a=1\)</span>, <span class="math inline">\(b=-2\)</span> y <span class="math inline">\(c=-1\)</span>; en particular, <span class="math inline">\(-b=-(-2)=2\)</span>. Su discriminante es</p>
 <p><span class="math display">\[
 \Delta=(-2)^2-4(1)(-1)=8&gt;0.
 \]</span></p>
@@ -538,6 +540,12 @@ x=\frac{2\pm\sqrt8}{2}
 S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
 \]</span></p>
 <p>La raíz racional <span class="math inline">\(2\)</span> permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.</p>
+<p>Sobre <span class="math inline">\(\mathbb Q\)</span>, el factor <span class="math inline">\(x^2-2x-1\)</span> es irreducible porque no tiene raíces racionales. Así, <span class="math inline">\((x-2)(x^2-2x-1)\)</span> ya es una factorización en factores irreducibles sobre <span class="math inline">\(\mathbb Q\)</span>. Sobre <span class="math inline">\(\mathbb R\)</span>, se puede continuar:</p>
+<p><span class="math display">\[
+p(x)=(x-2)\bigl(x-(1+\sqrt2)\bigr)\bigl(x-(1-\sqrt2)\bigr).
+\]</span></p>
+<p>Cada factor resta la raíz completa. La irreducibilidad sobre <span class="math inline">\(\mathbb Q\)</span> no impide hallar las soluciones irracionales.</p>
+<p>En general, si <span class="math inline">\(r_1,r_2\)</span> son las raíces de <span class="math inline">\(ax^2+bx+c\)</span>, con <span class="math inline">\(a\ne0\)</span>, su factorización es <span class="math inline">\(a(x-r_1)(x-r_2)\)</span>; se conserva el coeficiente principal.</p>
 <p><strong>Verificar el resultado.</strong></p>
 <p>El producto recupera el polinomio original:</p>
 <p><span class="math display">\[
