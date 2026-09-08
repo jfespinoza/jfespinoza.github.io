@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Datos oficiales del espacio educativo y de los dos grupos.">
+<meta name="description" content="Multiplicidad de una raíz, teorema fundamental del álgebra y conteo de raíces; pares conjugados en polinomios con coeficientes reales.">
 
-<title>Identificación – Álgebra</title>
+<title>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../curso/metodologia.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-07-sesion-19.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Identificación – Álgebra">
-<meta property="og:description" content="Datos oficiales del espacio educativo y de los dos grupos.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces – Álgebra">
+<meta property="og:description" content="Multiplicidad de una raíz, teorema fundamental del álgebra y conteo de raíces; pares conjugados en polinomios con coeficientes reales.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/identificacion.html"><span class="chapter-title">Identificación</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-08-sesion-20.html"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -128,16 +156,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Información del curso</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Identificación</span></a>
+  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,13 +283,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -294,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
+  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
   </div>
 </li>
       </ul>
@@ -394,18 +422,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#datos-del-espacio-educativo" id="toc-datos-del-espacio-educativo" class="nav-link active" data-scroll-target="#datos-del-espacio-educativo">Datos del espacio educativo</a></li>
-  <li><a href="#grupos" id="toc-grupos" class="nav-link" data-scroll-target="#grupos">Grupos</a></li>
-  <li><a href="#alcance-formativo" id="toc-alcance-formativo" class="nav-link" data-scroll-target="#alcance-formativo">Alcance formativo</a></li>
+  <li><a href="#una-raíz-que-se-repite" id="toc-una-raíz-que-se-repite" class="nav-link active" data-scroll-target="#una-raíz-que-se-repite">Una raíz que se repite</a></li>
+  <li><a href="#multiplicidad-de-una-raíz" id="toc-multiplicidad-de-una-raíz" class="nav-link" data-scroll-target="#multiplicidad-de-una-raíz">Multiplicidad de una raíz</a>
+  <ul class="collapse">
+  <li><a href="#cómo-determinar-la-multiplicidad-mediante-ruffini" id="toc-cómo-determinar-la-multiplicidad-mediante-ruffini" class="nav-link" data-scroll-target="#cómo-determinar-la-multiplicidad-mediante-ruffini">Cómo determinar la multiplicidad mediante Ruffini</a></li>
+  </ul></li>
+  <li><a href="#teorema-fundamental-del-álgebra" id="toc-teorema-fundamental-del-álgebra" class="nav-link" data-scroll-target="#teorema-fundamental-del-álgebra">Teorema fundamental del álgebra</a></li>
+  <li><a href="#coeficientes-reales-y-raíces-conjugadas" id="toc-coeficientes-reales-y-raíces-conjugadas" class="nav-link" data-scroll-target="#coeficientes-reales-y-raíces-conjugadas">Coeficientes reales y raíces conjugadas</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-multiplicidad-mediante-ruffini-repetido" id="toc-ejemplo-1.-multiplicidad-mediante-ruffini-repetido" class="nav-link" data-scroll-target="#ejemplo-1.-multiplicidad-mediante-ruffini-repetido">Ejemplo 1. Multiplicidad mediante Ruffini repetido</a></li>
+  <li><a href="#ejemplo-2.-completar-las-raíces-a-partir-del-grado" id="toc-ejemplo-2.-completar-las-raíces-a-partir-del-grado" class="nav-link" data-scroll-target="#ejemplo-2.-completar-las-raíces-a-partir-del-grado">Ejemplo 2. Completar las raíces a partir del grado</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../curso/identificacion.html">Información del curso</a></li><li class="breadcrumb-item"><a href="../curso/identificacion.html"><span class="chapter-title">Identificación</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-08-sesion-20.html"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Identificación</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></h1>
 </div>
 
 
@@ -413,6 +453,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">8 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -422,112 +468,260 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="datos-del-espacio-educativo" class="level2">
-<h2 class="anchored" data-anchor-id="datos-del-espacio-educativo">Datos del espacio educativo</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dato</th>
-<th>Información</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nombre</td>
-<td>Álgebra</td>
-</tr>
-<tr class="even">
-<td>Clave</td>
-<td>22017</td>
-</tr>
-<tr class="odd">
-<td>Área formativa</td>
-<td>Básica</td>
-</tr>
-<tr class="even">
-<td>Departamento que presta el servicio</td>
-<td>Departamento de Matemáticas</td>
-</tr>
-<tr class="odd">
-<td>Modalidad</td>
-<td>Presencial</td>
-</tr>
-<tr class="even">
-<td>Idioma</td>
-<td>Español</td>
-</tr>
-<tr class="odd">
-<td>Semestre curricular</td>
-<td>Primero</td>
-</tr>
-<tr class="even">
-<td>Carácter</td>
-<td>Obligatoria</td>
-</tr>
-<tr class="odd">
-<td>Horas totales</td>
-<td>80</td>
-</tr>
-<tr class="even">
-<td>Créditos</td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>Espacio educativo subsecuente</td>
-<td>Geometría Analítica</td>
-</tr>
-<tr class="even">
-<td>Docente</td>
-<td>Dr.&nbsp;Jesús Francisco Espinoza Fierro</td>
-</tr>
-</tbody>
-</table>
+<section id="una-raíz-que-se-repite" class="level2">
+<h2 class="anchored" data-anchor-id="una-raíz-que-se-repite">Una raíz que se repite</h2>
+<p>Al resolver una cúbica mediante el procedimiento de la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a>, una raíz de la cuadrática resultante puede coincidir con la raíz ya encontrada. Por ejemplo, para <span class="math inline">\(p(x)=x^3-3x-2\)</span>, se tiene <span class="math inline">\(p(-1)=0\)</span> y</p>
+<p><span class="math display">\[
+p(x)=(x+1)(x^2-x-2)=(x+1)^2(x-2).
+\]</span></p>
+<p>La identidad se verifica desarrollando el producto:</p>
+<p><span class="math display">\[
+(x^2+2x+1)(x-2)=x^3-3x-2.
+\]</span></p>
+<p>La ecuación <span class="math inline">\(p(x)=0\)</span> tiene el conjunto solución <span class="math inline">\(S=\{-1,2\}\)</span>. Hay dos soluciones distintas, aunque el grado es <span class="math inline">\(3\)</span>: el factor <span class="math inline">\(x+1\)</span> aparece dos veces. Se dice que <span class="math inline">\(-1\)</span> es una <strong>raíz doble</strong> y que <span class="math inline">\(2\)</span> es una <strong>raíz simple</strong>.</p>
 </section>
-<section id="grupos" class="level2">
-<h2 class="anchored" data-anchor-id="grupos">Grupos</h2>
+<section id="multiplicidad-de-una-raíz" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicidad-de-una-raíz">Multiplicidad de una raíz</h2>
+<p>Sea <span class="math inline">\(p(x)\)</span> un polinomio de grado <span class="math inline">\(n\ge1\)</span> con coeficientes complejos. Una raíz <span class="math inline">\(c\in\mathbb C\)</span> tiene <strong>multiplicidad</strong> <span class="math inline">\(m\)</span>, donde <span class="math inline">\(m\)</span> es un entero positivo, si</p>
+<p><span class="math display">\[
+p(x)=(x-c)^m q(x),
+\qquad m\ge1,
+\qquad q(c)\ne0.
+\]</span></p>
+<p>Así, <span class="math inline">\(m\)</span> es el mayor exponente para el cual <span class="math inline">\((x-c)^m\)</span> es factor de <span class="math inline">\(p(x)\)</span>. La condición <span class="math inline">\(q(c)\ne0\)</span> asegura que no queda otro factor <span class="math inline">\(x-c\)</span> en el cociente. Una raíz de multiplicidad <span class="math inline">\(1\)</span> se llama simple; de multiplicidad <span class="math inline">\(2\)</span>, doble; y de multiplicidad <span class="math inline">\(3\)</span>, triple. Siempre se cumple <span class="math inline">\(m\le n\)</span>.</p>
+<p><strong>Contar con multiplicidad</strong> significa contar cada raíz tantas veces como indica su multiplicidad. En <span class="math inline">\((x+1)^2(x-2)\)</span>, el conteo es <span class="math inline">\(2+1=3\)</span>. El conjunto solución, en cambio, registra cada valor una sola vez.</p>
+<p>El <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> también vale para raíces complejas: <span class="math inline">\(p(c)=0\)</span> si y solo si <span class="math inline">\(x-c\)</span> es factor de <span class="math inline">\(p(x)\)</span>. En efecto, al sustituir <span class="math inline">\(x=c\)</span> en la identidad de la división, el residuo es <span class="math inline">\(p(c)\)</span>. Por ejemplo,</p>
+<p><span class="math display">\[
+x^2+1=(x-i)(x+i),
+\]</span></p>
+<p>pues <span class="math inline">\(i^2=-1\)</span>.</p>
+<section id="cómo-determinar-la-multiplicidad-mediante-ruffini" class="level3">
+<h3 class="anchored" data-anchor-id="cómo-determinar-la-multiplicidad-mediante-ruffini">Cómo determinar la multiplicidad mediante Ruffini</h3>
+<p>Para una raíz conocida <span class="math inline">\(c\)</span>:</p>
+<ol type="1">
+<li>Divida <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> mediante Ruffini, incluyendo el coeficiente <span class="math inline">\(0\)</span> de cada potencia ausente.</li>
+<li>Si el cociente todavía se anula en <span class="math inline">\(c\)</span>, divídalo otra vez entre <span class="math inline">\(x-c\)</span>.</li>
+<li>Continúe hasta obtener un cociente <span class="math inline">\(q(x)\)</span> para el cual <span class="math inline">\(q(c)\ne0\)</span>. La cantidad de divisiones exactas consecutivas es la multiplicidad de <span class="math inline">\(c\)</span>.</li>
+</ol>
+<p>Cada división se aplica al <strong>cociente anterior</strong>. Si se llega a una constante distinta de cero, el procedimiento termina: ya no puede extraerse otro factor <span class="math inline">\(x-c\)</span>.</p>
+</section>
+</section>
+<section id="teorema-fundamental-del-álgebra" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-fundamental-del-álgebra">Teorema fundamental del álgebra</h2>
+<p><strong>Teorema fundamental del álgebra.</strong> Todo polinomio de grado <span class="math inline">\(n\ge1\)</span> con coeficientes complejos tiene exactamente <span class="math inline">\(n\)</span> raíces en <span class="math inline">\(\mathbb C\)</span>, contando multiplicidades.</p>
+<p>En particular, el teorema se aplica a los polinomios con coeficientes reales, porque <span class="math inline">\(\mathbb R\subset\mathbb C\)</span>. Si las raíces distintas tienen multiplicidades <span class="math inline">\(m_1,\ldots,m_k\)</span>, entonces</p>
+<p><span class="math display">\[
+m_1+\cdots+m_k=n.
+\]</span></p>
+<p>Por tanto, un polinomio de grado <span class="math inline">\(n\)</span> tiene a lo sumo <span class="math inline">\(n\)</span> raíces distintas. Una lista de raíces está completa cuando sus multiplicidades, correctamente determinadas, suman <span class="math inline">\(n\)</span>.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 18%">
+<col style="width: 31%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Programa</th>
-<th style="text-align: right;">Grupo</th>
-<th style="text-align: right;">Tipo</th>
-<th style="text-align: right;">Cupo</th>
-<th>Horario</th>
-<th>Aula</th>
+<th>Polinomio</th>
+<th style="text-align: center;">Grado</th>
+<th>Raíces distintas y multiplicidades</th>
+<th style="text-align: center;">Conteo con multiplicidad</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Ingeniería en Materiales (IMA)</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">T1</td>
-<td style="text-align: right;">40</td>
-<td>Lunes a viernes, 08:00-09:00</td>
-<td>5I-A302</td>
+<td><span class="math inline">\((x-2)^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(2\)</span> doble</td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
 </tr>
 <tr class="even">
-<td>Ingeniería en Tecnología Electrónica (LTE)</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: right;">T1</td>
-<td style="text-align: right;">40</td>
-<td>Lunes a viernes, 14:00-15:00</td>
-<td>8B-A201</td>
+<td><span class="math inline">\((x+1)^2(x-2)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(-1\)</span> doble; <span class="math inline">\(2\)</span> simple</td>
+<td style="text-align: center;"><span class="math inline">\(2+1=3\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x^2+1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span>, simples</td>
+<td style="text-align: center;"><span class="math inline">\(1+1=2\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x^3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(0\)</span> triple</td>
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>La calendarización, los contenidos, las fechas de evaluación y los criterios generales son comunes a ambos grupos. Toda actividad presencial se realizará en el horario y aula del grupo correspondiente, salvo aviso institucional o indicación expresa del profesor.</p>
+<p>El conteo se realiza en <span class="math inline">\(\mathbb C\)</span>; no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, <span class="math inline">\(x^2+1\)</span> tiene dos raíces complejas no reales, mientras que <span class="math inline">\(x^3\)</span> tiene una única raíz distinta, que es real.</p>
+<p>Un polinomio constante distinto de cero no tiene raíces. El polinomio cero se anula en todos los números complejos; su grado no está definido y el teorema no se aplica a él.</p>
 </section>
-<section id="alcance-formativo" class="level2">
-<h2 class="anchored" data-anchor-id="alcance-formativo">Alcance formativo</h2>
-<p>El curso proporciona una base para operar con números reales y complejos, estudiar polinomios y ecuaciones, resolver sistemas de ecuaciones lineales y utilizar matrices. La parte final introduce combinaciones lineales y transformaciones lineales en el plano, con énfasis en las conexiones entre los procedimientos algebraicos y problemas propios de la ingeniería.</p>
+<section id="coeficientes-reales-y-raíces-conjugadas" class="level2">
+<h2 class="anchored" data-anchor-id="coeficientes-reales-y-raíces-conjugadas">Coeficientes reales y raíces conjugadas</h2>
+<p><strong>Teorema de las raíces conjugadas.</strong> Si un polinomio no nulo tiene coeficientes reales y <span class="math inline">\(z\)</span> es una raíz compleja no real, entonces <span class="math inline">\(\overline z\)</span> también es raíz, con la misma multiplicidad.</p>
+<p>La existencia de la raíz conjugada se explica porque la <a href="../sesiones/2026-08-19-sesion-08.html">conjugación</a> respeta sumas y productos y deja fijos los coeficientes reales. Así,</p>
+<p><span class="math display">\[
+p(\overline z)=\overline{p(z)}.
+\]</span></p>
+<p>Si <span class="math inline">\(p(z)=0\)</span>, entonces <span class="math inline">\(p(\overline z)=0\)</span>. Para <span class="math inline">\(z=a+bi\)</span>, con <span class="math inline">\(b\ne0\)</span>, su conjugado es <span class="math inline">\(a-bi\)</span>: se conserva la parte real y cambia el signo de la parte imaginaria.</p>
+<p>Por ejemplo, si <span class="math inline">\(2+3i\)</span> es raíz doble de un polinomio con coeficientes reales, <span class="math inline">\(2-3i\)</span> también es raíz doble. Este par aporta <span class="math inline">\(2+2=4\)</span> al conteo, aunque contiene solo dos valores distintos.</p>
+<p>De este resultado se deduce que:</p>
+<ul>
+<li>Las raíces no reales aparecen en pares conjugados. Su número, contado con multiplicidad, es par.</li>
+<li>Todo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: las raíces no reales no pueden completar por sí solas un conteo impar.</li>
+<li>Un polinomio de grado par puede carecer de raíces reales, como <span class="math inline">\(x^2+1\)</span>, o tenerlas, como <span class="math inline">\(x^2-1\)</span>.</li>
+</ul>
+<p>Si una raíz es real, su conjugado es ella misma; esto no aumenta su multiplicidad. La hipótesis sobre los coeficientes es necesaria: el polinomio <span class="math inline">\(p(x)=x-i\)</span> tiene la raíz <span class="math inline">\(i\)</span>, pero <span class="math inline">\(p(-i)=-2i\ne0\)</span>.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-multiplicidad-mediante-ruffini-repetido" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-multiplicidad-mediante-ruffini-repetido">Ejemplo 1. Multiplicidad mediante Ruffini repetido</h3>
+<p>Determine todas las raíces de</p>
+<p><span class="math display">\[
+p(x)=x^4-2x^3+2x^2-2x+1,
+\]</span></p>
+<p>con su multiplicidad. Los únicos <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Como <span class="math inline">\(p(1)=1-2+2-2+1=0\)</span>, se divide entre <span class="math inline">\(x-1\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrrr}
+1 &amp; 1 &amp; -2 &amp; 2 &amp; -2 &amp; 1\\
+  &amp;   &amp; 1 &amp; -1 &amp; 1 &amp; -1\\
+\hline
+  &amp; 1 &amp; -1 &amp; 1 &amp; -1 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(q_1(x)=x^3-x^2+x-1\)</span>. Como <span class="math inline">\(q_1(1)=0\)</span>, se divide de nuevo entre <span class="math inline">\(x-1\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+1 &amp; 1 &amp; -1 &amp; 1 &amp; -1\\
+  &amp;   &amp; 1 &amp; 0 &amp; 1\\
+\hline
+  &amp; 1 &amp; 0 &amp; 1 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>Ahora el cociente es <span class="math inline">\(q_2(x)=x^2+1\)</span> y <span class="math inline">\(q_2(1)=2\ne0\)</span>. Hubo exactamente dos divisiones exactas consecutivas; por tanto, <span class="math inline">\(1\)</span> es raíz doble y</p>
+<p><span class="math display">\[
+p(x)=(x-1)^2(x^2+1)=(x-1)^2(x-i)(x+i).
+\]</span></p>
+<p>Se verifica desarrollando:</p>
+<p><span class="math display">\[
+(x^2-2x+1)(x^2+1)=x^4-2x^3+2x^2-2x+1.
+\]</span></p>
+<p>Las raíces <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> son simples. Las multiplicidades suman <span class="math inline">\(2+1+1=4\)</span>, por lo que no faltan raíces. Hay tres raíces distintas, una sola real. Los conjuntos solución son</p>
+<p><span class="math display">\[
+S_{\mathbb C}=\{1,i,-i\},
+\qquad
+S_{\mathbb R}=\{1\}.
+\]</span></p>
+<p>La solución real <span class="math inline">\(1\)</span> aporta <span class="math inline">\(2\)</span> al conteo con multiplicidad, pero se escribe una sola vez en cada conjunto.</p>
+</section>
+<section id="ejemplo-2.-completar-las-raíces-a-partir-del-grado" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-completar-las-raíces-a-partir-del-grado">Ejemplo 2. Completar las raíces a partir del grado</h3>
+<p>Un polinomio de grado <span class="math inline">\(4\)</span> con coeficientes reales tiene como raíces <span class="math inline">\(2+i\)</span> y <span class="math inline">\(-3\)</span>, esta última doble. Determine todas sus raíces con multiplicidad.</p>
+<p>Como los coeficientes son reales, <span class="math inline">\(2-i\)</span> también es raíz. Las raíces conocidas aportan al menos</p>
+<p><span class="math display">\[
+\underbrace{2}_{-3}+\underbrace{1}_{2+i}+\underbrace{1}_{2-i}=4.
+\]</span></p>
+<p>Este conteo ya coincide con el grado. En consecuencia, <span class="math inline">\(-3\)</span> es doble, <span class="math inline">\(2+i\)</span> y <span class="math inline">\(2-i\)</span> son simples y no hay otras raíces. Hay una raíz real distinta, de multiplicidad <span class="math inline">\(2\)</span>.</p>
+<p>La raíz <span class="math inline">\(2+i\)</span> no puede ser doble: su conjugada también tendría que ser doble y el conteo sería <span class="math inline">\(2+2+2=6\)</span>, incompatible con el grado <span class="math inline">\(4\)</span>.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Eliminar un factor repetido.</strong> En <span class="math inline">\(x^3-3x-2=(x+1)^2(x-2)\)</span> no se puede sustituir <span class="math inline">\((x+1)^2\)</span> por <span class="math inline">\(x+1\)</span>: el producto dejaría de ser el polinomio original. La multiplicidad se conserva en la factorización.</li>
+<li><strong>Confundir raíces distintas con raíces contadas con multiplicidad.</strong> El conjunto <span class="math inline">\(\{-1,2\}\)</span> tiene dos elementos, pero las multiplicidades <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span> completan el grado <span class="math inline">\(3\)</span>. No falta una tercera solución distinta.</li>
+<li><strong>Suponer que dos raíces conjugadas pueden tener multiplicidades diferentes.</strong> Con coeficientes reales, si <span class="math inline">\(i\)</span> es doble, <span class="math inline">\(-i\)</span> también debe ser doble. Contar solo una vez a <span class="math inline">\(-i\)</span> produce una lista incompatible con esa hipótesis.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta.</p>
+<ol type="1">
+<li><p>Para <span class="math inline">\(p(x)=x^3-5x^2+8x-4\)</span>, se ha comprobado que <span class="math inline">\(p(1)=p(2)=0\)</span>. Un estudiante afirma que falta encontrar una tercera raíz distinta porque el grado es <span class="math inline">\(3\)</span>.</p>
+<ol type="a">
+<li><p>Use Ruffini repetido con <span class="math inline">\(c=2\)</span> para determinar su multiplicidad exacta.</p></li>
+<li><p>Obtenga una factorización de <span class="math inline">\(p(x)\)</span>, verifíquela y escriba el conjunto solución de <span class="math inline">\(p(x)=0\)</span>.</p></li>
+<li><p>Determine la multiplicidad de <span class="math inline">\(1\)</span> y explique si la afirmación del estudiante es correcta.</p></li>
+</ol></li>
+<li><p>Un polinomio de grado <span class="math inline">\(5\)</span> con coeficientes reales tiene la raíz <span class="math inline">\(3\)</span>, con multiplicidad exactamente <span class="math inline">\(2\)</span>, y la raíz <span class="math inline">\(-2i\)</span>.</p>
+<ol type="a">
+<li><p>Indique las raíces que pueden asegurarse y determine sus multiplicidades.</p></li>
+<li><p>¿Cuántas raíces faltan por determinar? ¿Qué puede afirmarse sobre ellas? ¿Podría aparecer otra vez el valor <span class="math inline">\(3\)</span>?</p></li>
+<li><p>¿Puede <span class="math inline">\(1+i\)</span> ser raíz de este polinomio?</p></li>
+</ol></li>
+<li><p>Decida si cada lista puede contener exactamente todas las raíces de un polinomio con coeficientes reales del grado indicado. Justifique con el conteo y la conjugación.</p>
+<ol type="a">
+<li><p>Grado <span class="math inline">\(3\)</span>: <span class="math inline">\(2\)</span>, <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span>, todas simples.</p></li>
+<li><p>Grado <span class="math inline">\(3\)</span>: <span class="math inline">\(1+i\)</span>, <span class="math inline">\(1-i\)</span> y <span class="math inline">\(2i\)</span>, todas simples.</p></li>
+<li><p>Grado <span class="math inline">\(4\)</span>: <span class="math inline">\(-1\)</span> triple y <span class="math inline">\(5\)</span> simple.</p></li>
+<li><p>Grado <span class="math inline">\(4\)</span>: <span class="math inline">\(0\)</span> simple, <span class="math inline">\(i\)</span> doble y <span class="math inline">\(-i\)</span> simple.</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> Las divisiones entre <span class="math inline">\(x-2\)</span> son</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+2 &amp; 1 &amp; -5 &amp; 8 &amp; -4\\
+  &amp;   &amp; 2 &amp; -6 &amp; 4\\
+\hline
+  &amp; 1 &amp; -3 &amp; 2 &amp; \mathbf{0}
+\end{array}
+\qquad
+\begin{array}{r|rrr}
+2 &amp; 1 &amp; -3 &amp; 2\\
+  &amp;   &amp; 2 &amp; -2\\
+\hline
+  &amp; 1 &amp; -1 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>El primer cociente es <span class="math inline">\(x^2-3x+2\)</span> y el segundo es <span class="math inline">\(q(x)=x-1\)</span>. Como <span class="math inline">\(q(2)=1\ne0\)</span>, <span class="math inline">\(2\)</span> tiene multiplicidad exactamente <span class="math inline">\(2\)</span>. Así,</p>
+<p><span class="math display">\[
+p(x)=(x-2)^2(x-1),
+\qquad S=\{1,2\}.
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+(x^2-4x+4)(x-1)=x^3-5x^2+8x-4.
+\]</span></p>
+<p>La raíz <span class="math inline">\(1\)</span> es simple: después de extraer <span class="math inline">\(x-1\)</span>, el factor restante <span class="math inline">\((x-2)^2\)</span> vale <span class="math inline">\(1\)</span> en <span class="math inline">\(x=1\)</span>. La suma de multiplicidades es <span class="math inline">\(2+1=3\)</span>. La afirmación es incorrecta: el grado cuenta multiplicidades y no exige tres soluciones distintas.</p>
+<p><strong>2.</strong> La raíz conjugada de <span class="math inline">\(-2i\)</span> es <span class="math inline">\(2i\)</span>. Las raíces <span class="math inline">\(\pm2i\)</span> son simples: si alguna tuviera multiplicidad al menos <span class="math inline">\(2\)</span>, la otra también, y junto con la raíz doble <span class="math inline">\(3\)</span> aportarían al menos <span class="math inline">\(2+2+2=6\)</span>, más que el grado.</p>
+<p>Se conocen entonces <span class="math inline">\(3\)</span> doble, <span class="math inline">\(-2i\)</span> simple y <span class="math inline">\(2i\)</span> simple. Falta una raíz porque <span class="math inline">\(5-(2+1+1)=1\)</span>. Debe ser real: una nueva raíz no real exigiría también su conjugada. Además, debe ser distinta de <span class="math inline">\(3\)</span>, cuya multiplicidad es exactamente <span class="math inline">\(2\)</span>. La información no permite calcular ese valor real; su multiplicidad es <span class="math inline">\(1\)</span>.</p>
+<p>El número <span class="math inline">\(1+i\)</span> no puede ser raíz, pues también lo sería <span class="math inline">\(1-i\)</span> y el conteo sería al menos <span class="math inline">\(4+2=6\)</span>.</p>
+<p><strong>3.</strong></p>
+<ol type="a">
+<li><p>Sí. Las tres raíces simples completan el grado y las no reales forman un par conjugado. Lo confirma el polinomio <span class="math inline">\((x-2)(x^2+1)\)</span>, con coeficientes reales.</p></li>
+<li><p>No.&nbsp;La raíz <span class="math inline">\(2i\)</span> exige también <span class="math inline">\(-2i\)</span>. Se necesitarían al menos cuatro raíces contadas con multiplicidad en grado <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Sí. Todas las raíces son reales y <span class="math inline">\(3+1=4\)</span>. Lo confirma <span class="math inline">\((x+1)^3(x-5)\)</span>.</p></li>
+<li><p>No.&nbsp;Aunque <span class="math inline">\(1+2+1=4\)</span>, las multiplicidades de <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> son diferentes. Si <span class="math inline">\(i\)</span> fuera doble, <span class="math inline">\(-i\)</span> también lo sería y, junto con <span class="math inline">\(0\)</span>, el conteo sería al menos <span class="math inline">\(5\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Determine mediante Ruffini repetido la multiplicidad de <span class="math inline">\(-2\)</span> en <span class="math inline">\(x^4+5x^3+6x^2-4x-8\)</span>. Obtenga todas las raíces y compruebe que sus multiplicidades suman el grado.</p></li>
+<li><p>Resuelva <span class="math inline">\(x^3-4x^2+5x-2=0\)</span>. Indique las raíces distintas y sus multiplicidades, y verifique la factorización.</p></li>
+<li><p>Para <span class="math inline">\(p(x)=(x-3)^2(x^2+9)(x+1)\)</span>, determine el grado y todas las raíces con sus multiplicidades. ¿Cuántas raíces reales distintas tiene? ¿Cuántas tiene contadas con multiplicidad?</p></li>
+<li><p>Un polinomio de grado <span class="math inline">\(6\)</span> con coeficientes reales tiene las raíces <span class="math inline">\(1-2i\)</span>, con multiplicidad exactamente <span class="math inline">\(2\)</span>, y <span class="math inline">\(0\)</span>, simple. Determine las demás raíces que pueden asegurarse y describa lo que puede afirmarse sobre la raíz que falta.</p></li>
+<li><p>Explique por qué un polinomio de grado <span class="math inline">\(5\)</span> con coeficientes reales no puede tener exactamente dos raíces reales contadas con multiplicidad. ¿Puede tener exactamente dos raíces reales distintas? Justifique esta última respuesta con las multiplicidades de <span class="math inline">\(p(x)=(x-1)^2(x+2)^3\)</span>.</p></li>
+</ol>
 
 
 </section>
@@ -942,13 +1136,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Álgebra 22017">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Álgebra 22017</span></span>
+      <a href="../sesiones/2026-09-07-sesion-19.html" class="pagination-link" aria-label="Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../curso/metodologia.html" class="pagination-link" aria-label="Forma de trabajo">
-        <span class="nav-page-text"><span class="chapter-title">Forma de trabajo</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1997,6 +1997,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-08-sesion-20.html",
+    "href": "sesiones/2026-09-08-sesion-20.html",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "",
+    "text": "Una raíz que se repite\nAl resolver una cúbica mediante el procedimiento de la Sesión 19, una raíz de la cuadrática resultante puede coincidir con la raíz ya encontrada. Por ejemplo, para \\(p(x)=x^3-3x-2\\), se tiene \\(p(-1)=0\\) y\n\\[\np(x)=(x+1)(x^2-x-2)=(x+1)^2(x-2).\n\\]\nLa identidad se verifica desarrollando el producto:\n\\[\n(x^2+2x+1)(x-2)=x^3-3x-2.\n\\]\nLa ecuación \\(p(x)=0\\) tiene el conjunto solución \\(S=\\{-1,2\\}\\). Hay dos soluciones distintas, aunque el grado es \\(3\\): el factor \\(x+1\\) aparece dos veces. Se dice que \\(-1\\) es una raíz doble y que \\(2\\) es una raíz simple.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#multiplicidad-de-una-raíz",
+    "href": "sesiones/2026-09-08-sesion-20.html#multiplicidad-de-una-raíz",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Multiplicidad de una raíz",
+    "text": "Multiplicidad de una raíz\nSea \\(p(x)\\) un polinomio de grado \\(n\\ge1\\) con coeficientes complejos. Una raíz \\(c\\in\\mathbb C\\) tiene multiplicidad \\(m\\), donde \\(m\\) es un entero positivo, si\n\\[\np(x)=(x-c)^m q(x),\n\\qquad m\\ge1,\n\\qquad q(c)\\ne0.\n\\]\nAsí, \\(m\\) es el mayor exponente para el cual \\((x-c)^m\\) es factor de \\(p(x)\\). La condición \\(q(c)\\ne0\\) asegura que no queda otro factor \\(x-c\\) en el cociente. Una raíz de multiplicidad \\(1\\) se llama simple; de multiplicidad \\(2\\), doble; y de multiplicidad \\(3\\), triple. Siempre se cumple \\(m\\le n\\).\nContar con multiplicidad significa contar cada raíz tantas veces como indica su multiplicidad. En \\((x+1)^2(x-2)\\), el conteo es \\(2+1=3\\). El conjunto solución, en cambio, registra cada valor una sola vez.\nEl teorema del factor también vale para raíces complejas: \\(p(c)=0\\) si y solo si \\(x-c\\) es factor de \\(p(x)\\). En efecto, al sustituir \\(x=c\\) en la identidad de la división, el residuo es \\(p(c)\\). Por ejemplo,\n\\[\nx^2+1=(x-i)(x+i),\n\\]\npues \\(i^2=-1\\).\n\nCómo determinar la multiplicidad mediante Ruffini\nPara una raíz conocida \\(c\\):\n\nDivida \\(p(x)\\) entre \\(x-c\\) mediante Ruffini, incluyendo el coeficiente \\(0\\) de cada potencia ausente.\nSi el cociente todavía se anula en \\(c\\), divídalo otra vez entre \\(x-c\\).\nContinúe hasta obtener un cociente \\(q(x)\\) para el cual \\(q(c)\\ne0\\). La cantidad de divisiones exactas consecutivas es la multiplicidad de \\(c\\).\n\nCada división se aplica al cociente anterior. Si se llega a una constante distinta de cero, el procedimiento termina: ya no puede extraerse otro factor \\(x-c\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#teorema-fundamental-del-álgebra",
+    "href": "sesiones/2026-09-08-sesion-20.html#teorema-fundamental-del-álgebra",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Teorema fundamental del álgebra",
+    "text": "Teorema fundamental del álgebra\nTeorema fundamental del álgebra. Todo polinomio de grado \\(n\\ge1\\) con coeficientes complejos tiene exactamente \\(n\\) raíces en \\(\\mathbb C\\), contando multiplicidades.\nEn particular, el teorema se aplica a los polinomios con coeficientes reales, porque \\(\\mathbb R\\subset\\mathbb C\\). Si las raíces distintas tienen multiplicidades \\(m_1,\\ldots,m_k\\), entonces\n\\[\nm_1+\\cdots+m_k=n.\n\\]\nPor tanto, un polinomio de grado \\(n\\) tiene a lo sumo \\(n\\) raíces distintas. Una lista de raíces está completa cuando sus multiplicidades, correctamente determinadas, suman \\(n\\).\n\n\n\n\n\n\n\n\n\nPolinomio\nGrado\nRaíces distintas y multiplicidades\nConteo con multiplicidad\n\n\n\n\n\\((x-2)^2\\)\n\\(2\\)\n\\(2\\) doble\n\\(2\\)\n\n\n\\((x+1)^2(x-2)\\)\n\\(3\\)\n\\(-1\\) doble; \\(2\\) simple\n\\(2+1=3\\)\n\n\n\\(x^2+1\\)\n\\(2\\)\n\\(i\\) y \\(-i\\), simples\n\\(1+1=2\\)\n\n\n\\(x^3\\)\n\\(3\\)\n\\(0\\) triple\n\\(3\\)\n\n\n\nEl conteo se realiza en \\(\\mathbb C\\); no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, \\(x^2+1\\) tiene dos raíces complejas no reales, mientras que \\(x^3\\) tiene una única raíz distinta, que es real.\nUn polinomio constante distinto de cero no tiene raíces. El polinomio cero se anula en todos los números complejos; su grado no está definido y el teorema no se aplica a él.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#coeficientes-reales-y-raíces-conjugadas",
+    "href": "sesiones/2026-09-08-sesion-20.html#coeficientes-reales-y-raíces-conjugadas",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Coeficientes reales y raíces conjugadas",
+    "text": "Coeficientes reales y raíces conjugadas\nTeorema de las raíces conjugadas. Si un polinomio no nulo tiene coeficientes reales y \\(z\\) es una raíz compleja no real, entonces \\(\\overline z\\) también es raíz, con la misma multiplicidad.\nLa existencia de la raíz conjugada se explica porque la conjugación respeta sumas y productos y deja fijos los coeficientes reales. Así,\n\\[\np(\\overline z)=\\overline{p(z)}.\n\\]\nSi \\(p(z)=0\\), entonces \\(p(\\overline z)=0\\). Para \\(z=a+bi\\), con \\(b\\ne0\\), su conjugado es \\(a-bi\\): se conserva la parte real y cambia el signo de la parte imaginaria.\nPor ejemplo, si \\(2+3i\\) es raíz doble de un polinomio con coeficientes reales, \\(2-3i\\) también es raíz doble. Este par aporta \\(2+2=4\\) al conteo, aunque contiene solo dos valores distintos.\nDe este resultado se deduce que:\n\nLas raíces no reales aparecen en pares conjugados. Su número, contado con multiplicidad, es par.\nTodo polinomio de grado impar con coeficientes reales tiene al menos una raíz real: las raíces no reales no pueden completar por sí solas un conteo impar.\nUn polinomio de grado par puede carecer de raíces reales, como \\(x^2+1\\), o tenerlas, como \\(x^2-1\\).\n\nSi una raíz es real, su conjugado es ella misma; esto no aumenta su multiplicidad. La hipótesis sobre los coeficientes es necesaria: el polinomio \\(p(x)=x-i\\) tiene la raíz \\(i\\), pero \\(p(-i)=-2i\\ne0\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#ejemplos",
+    "href": "sesiones/2026-09-08-sesion-20.html#ejemplos",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Multiplicidad mediante Ruffini repetido\nDetermine todas las raíces de\n\\[\np(x)=x^4-2x^3+2x^2-2x+1,\n\\]\ncon su multiplicidad. Los únicos candidatos racionales son \\(1\\) y \\(-1\\). Como \\(p(1)=1-2+2-2+1=0\\), se divide entre \\(x-1\\):\n\\[\n\\begin{array}{r|rrrrr}\n1 & 1 & -2 & 2 & -2 & 1\\\\\n  &   & 1 & -1 & 1 & -1\\\\\n\\hline\n  & 1 & -1 & 1 & -1 & \\mathbf{0}\n\\end{array}\n\\]\nEl cociente es \\(q_1(x)=x^3-x^2+x-1\\). Como \\(q_1(1)=0\\), se divide de nuevo entre \\(x-1\\):\n\\[\n\\begin{array}{r|rrrr}\n1 & 1 & -1 & 1 & -1\\\\\n  &   & 1 & 0 & 1\\\\\n\\hline\n  & 1 & 0 & 1 & \\mathbf{0}\n\\end{array}\n\\]\nAhora el cociente es \\(q_2(x)=x^2+1\\) y \\(q_2(1)=2\\ne0\\). Hubo exactamente dos divisiones exactas consecutivas; por tanto, \\(1\\) es raíz doble y\n\\[\np(x)=(x-1)^2(x^2+1)=(x-1)^2(x-i)(x+i).\n\\]\nSe verifica desarrollando:\n\\[\n(x^2-2x+1)(x^2+1)=x^4-2x^3+2x^2-2x+1.\n\\]\nLas raíces \\(i\\) y \\(-i\\) son simples. Las multiplicidades suman \\(2+1+1=4\\), por lo que no faltan raíces. Hay tres raíces distintas, una sola real. Los conjuntos solución son\n\\[\nS_{\\mathbb C}=\\{1,i,-i\\},\n\\qquad\nS_{\\mathbb R}=\\{1\\}.\n\\]\nLa solución real \\(1\\) aporta \\(2\\) al conteo con multiplicidad, pero se escribe una sola vez en cada conjunto.\n\n\nEjemplo 2. Completar las raíces a partir del grado\nUn polinomio de grado \\(4\\) con coeficientes reales tiene como raíces \\(2+i\\) y \\(-3\\), esta última doble. Determine todas sus raíces con multiplicidad.\nComo los coeficientes son reales, \\(2-i\\) también es raíz. Las raíces conocidas aportan al menos\n\\[\n\\underbrace{2}_{-3}+\\underbrace{1}_{2+i}+\\underbrace{1}_{2-i}=4.\n\\]\nEste conteo ya coincide con el grado. En consecuencia, \\(-3\\) es doble, \\(2+i\\) y \\(2-i\\) son simples y no hay otras raíces. Hay una raíz real distinta, de multiplicidad \\(2\\).\nLa raíz \\(2+i\\) no puede ser doble: su conjugada también tendría que ser doble y el conteo sería \\(2+2+2=6\\), incompatible con el grado \\(4\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#errores-frecuentes",
+    "href": "sesiones/2026-09-08-sesion-20.html#errores-frecuentes",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nEliminar un factor repetido. En \\(x^3-3x-2=(x+1)^2(x-2)\\) no se puede sustituir \\((x+1)^2\\) por \\(x+1\\): el producto dejaría de ser el polinomio original. La multiplicidad se conserva en la factorización.\nConfundir raíces distintas con raíces contadas con multiplicidad. El conjunto \\(\\{-1,2\\}\\) tiene dos elementos, pero las multiplicidades \\(2\\) y \\(1\\) completan el grado \\(3\\). No falta una tercera solución distinta.\nSuponer que dos raíces conjugadas pueden tener multiplicidades diferentes. Con coeficientes reales, si \\(i\\) es doble, \\(-i\\) también debe ser doble. Contar solo una vez a \\(-i\\) produce una lista incompatible con esa hipótesis.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#actividad",
+    "href": "sesiones/2026-09-08-sesion-20.html#actividad",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta.\n\nPara \\(p(x)=x^3-5x^2+8x-4\\), se ha comprobado que \\(p(1)=p(2)=0\\). Un estudiante afirma que falta encontrar una tercera raíz distinta porque el grado es \\(3\\).\n\nUse Ruffini repetido con \\(c=2\\) para determinar su multiplicidad exacta.\nObtenga una factorización de \\(p(x)\\), verifíquela y escriba el conjunto solución de \\(p(x)=0\\).\nDetermine la multiplicidad de \\(1\\) y explique si la afirmación del estudiante es correcta.\n\nUn polinomio de grado \\(5\\) con coeficientes reales tiene la raíz \\(3\\), con multiplicidad exactamente \\(2\\), y la raíz \\(-2i\\).\n\nIndique las raíces que pueden asegurarse y determine sus multiplicidades.\n¿Cuántas raíces faltan por determinar? ¿Qué puede afirmarse sobre ellas? ¿Podría aparecer otra vez el valor \\(3\\)?\n¿Puede \\(1+i\\) ser raíz de este polinomio?\n\nDecida si cada lista puede contener exactamente todas las raíces de un polinomio con coeficientes reales del grado indicado. Justifique con el conteo y la conjugación.\n\nGrado \\(3\\): \\(2\\), \\(i\\) y \\(-i\\), todas simples.\nGrado \\(3\\): \\(1+i\\), \\(1-i\\) y \\(2i\\), todas simples.\nGrado \\(4\\): \\(-1\\) triple y \\(5\\) simple.\nGrado \\(4\\): \\(0\\) simple, \\(i\\) doble y \\(-i\\) simple.\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. Las divisiones entre \\(x-2\\) son\n\\[\n\\begin{array}{r|rrrr}\n2 & 1 & -5 & 8 & -4\\\\\n  &   & 2 & -6 & 4\\\\\n\\hline\n  & 1 & -3 & 2 & \\mathbf{0}\n\\end{array}\n\\qquad\n\\begin{array}{r|rrr}\n2 & 1 & -3 & 2\\\\\n  &   & 2 & -2\\\\\n\\hline\n  & 1 & -1 & \\mathbf{0}\n\\end{array}\n\\]\nEl primer cociente es \\(x^2-3x+2\\) y el segundo es \\(q(x)=x-1\\). Como \\(q(2)=1\\ne0\\), \\(2\\) tiene multiplicidad exactamente \\(2\\). Así,\n\\[\np(x)=(x-2)^2(x-1),\n\\qquad S=\\{1,2\\}.\n\\]\nLa verificación es\n\\[\n(x^2-4x+4)(x-1)=x^3-5x^2+8x-4.\n\\]\nLa raíz \\(1\\) es simple: después de extraer \\(x-1\\), el factor restante \\((x-2)^2\\) vale \\(1\\) en \\(x=1\\). La suma de multiplicidades es \\(2+1=3\\). La afirmación es incorrecta: el grado cuenta multiplicidades y no exige tres soluciones distintas.\n2. La raíz conjugada de \\(-2i\\) es \\(2i\\). Las raíces \\(\\pm2i\\) son simples: si alguna tuviera multiplicidad al menos \\(2\\), la otra también, y junto con la raíz doble \\(3\\) aportarían al menos \\(2+2+2=6\\), más que el grado.\nSe conocen entonces \\(3\\) doble, \\(-2i\\) simple y \\(2i\\) simple. Falta una raíz porque \\(5-(2+1+1)=1\\). Debe ser real: una nueva raíz no real exigiría también su conjugada. Además, debe ser distinta de \\(3\\), cuya multiplicidad es exactamente \\(2\\). La información no permite calcular ese valor real; su multiplicidad es \\(1\\).\nEl número \\(1+i\\) no puede ser raíz, pues también lo sería \\(1-i\\) y el conteo sería al menos \\(4+2=6\\).\n3.\n\nSí. Las tres raíces simples completan el grado y las no reales forman un par conjugado. Lo confirma el polinomio \\((x-2)(x^2+1)\\), con coeficientes reales.\nNo. La raíz \\(2i\\) exige también \\(-2i\\). Se necesitarían al menos cuatro raíces contadas con multiplicidad en grado \\(3\\).\nSí. Todas las raíces son reales y \\(3+1=4\\). Lo confirma \\((x+1)^3(x-5)\\).\nNo. Aunque \\(1+2+1=4\\), las multiplicidades de \\(i\\) y \\(-i\\) son diferentes. Si \\(i\\) fuera doble, \\(-i\\) también lo sería y, junto con \\(0\\), el conteo sería al menos \\(5\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-08-sesion-20.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-08-sesion-20.html#ejercicios-para-practicar",
+    "title": "Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nDetermine mediante Ruffini repetido la multiplicidad de \\(-2\\) en \\(x^4+5x^3+6x^2-4x-8\\). Obtenga todas las raíces y compruebe que sus multiplicidades suman el grado.\nResuelva \\(x^3-4x^2+5x-2=0\\). Indique las raíces distintas y sus multiplicidades, y verifique la factorización.\nPara \\(p(x)=(x-3)^2(x^2+9)(x+1)\\), determine el grado y todas las raíces con sus multiplicidades. ¿Cuántas raíces reales distintas tiene? ¿Cuántas tiene contadas con multiplicidad?\nUn polinomio de grado \\(6\\) con coeficientes reales tiene las raíces \\(1-2i\\), con multiplicidad exactamente \\(2\\), y \\(0\\), simple. Determine las demás raíces que pueden asegurarse y describa lo que puede afirmarse sobre la raíz que falta.\nExplique por qué un polinomio de grado \\(5\\) con coeficientes reales no puede tener exactamente dos raíces reales contadas con multiplicidad. ¿Puede tener exactamente dos raíces reales distintas? Justifique esta última respuesta con las multiplicidades de \\(p(x)=(x-1)^2(x+2)^3\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span>"
+    ]
+  },
+  {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
     "title": "Unidad 3. Sistemas de ecuaciones lineales",
@@ -2004,7 +2092,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -2015,7 +2103,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -2026,7 +2114,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2037,7 +2125,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2048,7 +2136,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2059,7 +2147,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2070,7 +2158,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2081,7 +2169,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2092,7 +2180,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2103,7 +2191,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2114,7 +2202,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2125,7 +2213,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2136,7 +2224,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2147,7 +2235,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2158,7 +2246,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2169,7 +2257,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2180,7 +2268,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2191,7 +2279,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
