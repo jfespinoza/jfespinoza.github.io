@@ -43,6 +43,8 @@ $$
 
 Así, $m$ es el mayor exponente para el cual $(x-c)^m$ es factor de $p(x)$. La condición $q(c)\ne0$ asegura que no queda otro factor $x-c$ en el cociente. Una raíz de multiplicidad $1$ se llama simple; de multiplicidad $2$, doble; y de multiplicidad $3$, triple. Siempre se cumple $m\le n$: el factor $(x-c)^m$ tiene grado $m$ y el [grado de un producto](2026-09-01-sesion-15.qmd) es la suma de los grados de sus factores no nulos.
 
+La multiplicidad depende del polinomio considerado: $2$ es raíz doble de $(x-2)^2$, pero es raíz simple de $(x+1)^2(x-2)$. El valor de la raíz, por sí solo, no determina su multiplicidad.
+
 **Contar con multiplicidad** significa contar cada raíz tantas veces como indica su multiplicidad. En $(x+1)^2(x-2)$, el conteo es $2+1=3$. El conjunto solución, en cambio, registra cada valor una sola vez.
 
 El [teorema del factor](2026-09-03-sesion-17.qmd) también vale para raíces complejas: $p(c)=0$ si y solo si $x-c$ es factor de $p(x)$. En efecto, al sustituir $x=c$ en la identidad de la división, el residuo es $p(c)$. Por ejemplo,
@@ -54,6 +56,8 @@ $$
 pues $i^2=-1$.
 
 ### Cómo determinar la multiplicidad mediante Ruffini
+
+La igualdad $p(c)=0$ significa que al sustituir $x$ por $c$ se obtiene cero. Confirma que $c$ es raíz y que $x-c$ es factor, pero aún no determina cuántas veces aparece ese factor.
 
 Para una raíz conocida $c$:
 
@@ -91,6 +95,14 @@ Los valores $r_j$ pueden repetirse: una raíz de multiplicidad $m$ aparece exact
 | $(x+1)^2(x-2)$ | $3$ | $-1$ doble; $2$ simple | $2+1=3$ |
 | $x^2+1$ | $2$ | $i$ y $-i$, simples | $1+1=2$ |
 | $x^3$ | $3$ | $0$ triple | $3$ |
+
+El grado también puede leerse en una factorización sin desarrollar todo el producto. Por ejemplo,
+
+$$
+(x-1)^3(x+8)^2(x-17)^{10}
+$$
+
+tiene grado $3+2+10=15$: el producto de los términos de mayor grado es $x^3x^2x^{10}=x^{15}$ y los demás productos tienen menor grado. Sus raíces son $1$, $-8$ y $17$, con multiplicidades $3$, $2$ y $10$, respectivamente.
 
 El conteo se realiza en $\mathbb C$; no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, $x^2+1$ tiene las raíces no reales $\pm i$. En $x^3$, la única raíz distinta es $0$, con multiplicidad $3$, como en el caso de las [raíces n-ésimas de cero](2026-08-25-sesion-12.qmd).
 
@@ -198,6 +210,23 @@ $$
 Este conteo ya coincide con el grado. En consecuencia, $-3$ es doble, $2+i$ y $2-i$ son simples y no hay otras raíces. Hay una raíz real distinta, de multiplicidad $2$.
 
 La raíz $2+i$ no puede ser doble: su conjugada también tendría que ser doble y el conteo sería $2+2+2=6$, incompatible con el grado $4$.
+
+Para expresar estas raíces como factores, se resta **la raíz completa**, usando paréntesis:
+
+$$
+x-(2+i)=x-2-i,
+\qquad
+x-(2-i)=x-2+i.
+$$
+
+La raíz $-3$, doble, aporta $(x-(-3))^2=(x+3)^2$. Por tanto, la factorización del polinomio del ejemplo es
+
+$$
+p(x)=a(x+3)^2\bigl(x-(2+i)\bigr)\bigl(x-(2-i)\bigr),
+\qquad a\in\mathbb R,\quad a\ne0.
+$$
+
+El número $a$ es su coeficiente principal; conocer las raíces y sus multiplicidades no permite determinarlo.
 
 ## Errores frecuentes
 
