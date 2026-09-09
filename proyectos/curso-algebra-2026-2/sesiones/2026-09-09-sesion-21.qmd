@@ -21,7 +21,7 @@ p(x)=a(x-r_1)(x-r_2)\cdots(x-r_n)
 =a\prod_{j=1}^{n}(x-r_j)
 $$
 
-tiene grado $n$ y coeficiente principal $a$. El símbolo $\prod$ abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la propiedad del producto cero, $p(c)=0$ si y solo si $c=r_j$ para algún $j$.
+tiene grado $n$ y coeficiente principal $a$: el [grado del producto](2026-09-01-sesion-15.qmd) es la suma de los grados de sus factores y su coeficiente principal es el producto de los coeficientes principales. El símbolo $\prod$ abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la [propiedad del producto cero](2026-09-02-sesion-16.qmd), $p(c)=0$ si y solo si $c=r_j$ para algún $j$.
 
 Cada raíz debe aparecer tantas veces como indique su [multiplicidad](2026-09-08-sesion-20.qmd). Si las raíces distintas son $-2$, doble, y $0$ y $3$, simples, los factores correspondientes son
 
@@ -31,9 +31,65 @@ $$
 
 El producto tiene grado $2+1+1=4$. La raíz negativa $-2$ aporta $x-(-2)=x+2$; la raíz $0$ aporta $x$.
 
-El teorema fundamental del álgebra garantiza que, si la lista contiene **todas las raíces contadas con multiplicidad**, cualquier polinomio con esos datos tiene la forma anterior. Al fijar $a$, queda determinado un único polinomio. Se llama **mónico** cuando su coeficiente principal es $1$.
+La [factorización completa sobre $\mathbb C$](2026-09-08-sesion-20.qmd), consecuencia del teorema fundamental del álgebra, garantiza que, si la lista contiene **todas las raíces contadas con multiplicidad**, cualquier polinomio con esos datos tiene la forma anterior. Al fijar $a$, queda determinado un único polinomio. Se llama **mónico** cuando su coeficiente principal es $1$.
 
-## Ejemplo 1. Raíz doble y coeficiente principal
+## Pares conjugados y coeficientes reales
+
+Si el polinomio tiene coeficientes reales y una raíz $z=u+vi$, con $u,v\in\mathbb R$ y $v\ne0$, también tiene la raíz $\overline z=u-vi$ con la misma multiplicidad, por el [teorema de las raíces conjugadas](2026-09-08-sesion-20.qmd). Los factores del par conjugado pueden agruparse, mediante la [diferencia de cuadrados](2026-08-13-sesion-04.qmd), en una cuadrática con coeficientes reales:
+
+$$
+\begin{aligned}
+(x-z)(x-\overline z)
+&=(x-u-vi)(x-u+vi)\\
+&=(x-u)^2-(vi)^2\\
+&=x^2-2ux+(u^2+v^2).
+\end{aligned}
+$$
+
+Por ejemplo, $1+2i$ y $1-2i$ aportan $x^2-2x+5$; las raíces $i$ y $-i$ aportan $x^2+1$. Si ambas raíces de un par son dobles, el factor cuadrático aparece elevado al cuadrado.
+
+## Determinar el coeficiente principal mediante un valor
+
+Cuando se conocen todas las raíces con sus multiplicidades, puede escribirse $p(x)=a\,q(x)$, donde $q(x)$ es el producto de los factores lineales, repetidos según las multiplicidades, y tiene coeficiente principal $1$. Si se prescribe $p(c)=d$ en un número $c$ que no es raíz, entonces $q(c)\ne0$ y
+
+$$
+a\,q(c)=d,
+\qquad
+a=\frac{d}{q(c)}.
+$$
+
+Para obtener un polinomio con las raíces prescritas se requiere $a\ne0$. Si $d=0$ y $c$ no es una de esas raíces, los datos son incompatibles.
+
+## Suma y producto de las raíces de una cuadrática
+
+Al desarrollar el producto de dos factores,
+
+$$
+a(x-r_1)(x-r_2)=ax^2-a(r_1+r_2)x+ar_1r_2,
+\qquad a\ne0.
+$$
+
+Al [igualar los coeficientes](2026-09-01-sesion-15.qmd) de cada potencia con los de $ax^2+bx+c$, se obtienen las relaciones de Vieta en grado $2$:
+
+$$
+r_1+r_2=-\frac ba,
+\qquad
+r_1r_2=\frac ca.
+$$
+
+En particular, si dos números tienen suma $s$ y producto $t$, el polinomio mónico que los tiene como raíces, contadas con multiplicidad, es $x^2-sx+t$. Para las raíces $2$ y $3$, la suma es $5$ y el producto es $6$, de modo que se obtiene $x^2-5x+6$.
+
+## Procedimiento
+
+1. Escriba un factor $x-r$ por cada raíz $r$, repetido según su multiplicidad.
+2. Si se requieren coeficientes reales, complete los pares conjugados que falten con multiplicidades iguales, sin duplicar las raíces ya incluidas. Agrupe los factores de cada par en la cuadrática real correspondiente; el coeficiente principal también debe ser real.
+3. Multiplique por el coeficiente principal prescrito. Si se proporciona un valor del polinomio, escriba $p(x)=a\,q(x)$ y determine $a\ne0$ usando ese dato.
+4. Desarrolle el producto y ordene las potencias de $x$.
+5. Verifique el grado, el coeficiente principal, las raíces y sus multiplicidades. Use la forma factorizada o compruebe la forma desarrollada mediante evaluación directa y Ruffini repetido.
+
+## Ejemplos
+
+### Ejemplo 1. Raíz doble y coeficiente principal
 
 Construyamos el polinomio mónico de grado $3$ cuyas raíces son $2$, doble, y $-1$, simple.
 
@@ -56,7 +112,25 @@ p(2)=8-12+4=0,
 p(-1)=-1-3+4=0.
 $$
 
-Para verificar la multiplicidad de $2$, se extrae $(x-2)^2$: el factor restante es $x+1$, que vale $3\ne0$ en $x=2$. Por tanto, la multiplicidad es exactamente $2$. Al extraer $x+1$, queda $(x-2)^2$, que vale $9\ne0$ en $x=-1$; esa raíz es simple.
+La multiplicidad de $2$ también puede verificarse sobre la forma desarrollada mediante [Ruffini repetido](2026-09-08-sesion-20.qmd). Se incluye el coeficiente $0$ de $x$ y se divide primero $p(x)$ y después el cociente entre $x-2$:
+
+$$
+\begin{array}{r|rrrr}
+2 & 1 & -3 & 0 & 4\\
+  &   & 2 & -2 & -4\\
+\hline
+  & 1 & -1 & -2 & \mathbf{0}
+\end{array}
+\qquad
+\begin{array}{r|rrr}
+2 & 1 & -1 & -2\\
+  &   & 2 & 2\\
+\hline
+  & 1 & 1 & \mathbf{0}
+\end{array}
+$$
+
+Los cocientes son $x^2-x-2$ y $x+1$. Como el segundo vale $3\ne0$ en $x=2$, hubo exactamente dos divisiones exactas y $2$ es raíz doble. Al extraer $x+1$ de $p(x)$, queda $(x-2)^2$, que vale $9\ne0$ en $x=-1$; esa raíz es simple.
 
 Si se pide el mismo grado, las mismas raíces y multiplicidades, pero coeficiente principal $-3$, se obtiene
 
@@ -66,7 +140,7 @@ $$
 
 Multiplicar por una constante distinta de cero cambia el coeficiente principal y conserva las raíces con sus multiplicidades.
 
-### Lectura de los coeficientes en grado 3
+**Lectura de los coeficientes en grado 3.**
 
 En $(x-2)(x-2)(x+1)$, un término de grado $2$ se obtiene tomando el término independiente de uno de los factores y $x$ de los otros dos. Sus contribuciones son
 
@@ -81,23 +155,6 @@ $$
 $$
 
 En $q(x)=-3p(x)$, todos esos coeficientes se multiplican por $-3$: el de $x^2$ es $9$ y el término independiente es $-12$.
-
-## Pares conjugados y coeficientes reales
-
-Si el polinomio tiene coeficientes reales y una raíz $z=u+vi$, con $u,v\in\mathbb R$ y $v\ne0$, también tiene la raíz $\overline z=u-vi$ con la misma multiplicidad. Los factores del par conjugado pueden agruparse en una cuadrática con coeficientes reales:
-
-$$
-\begin{aligned}
-(x-z)(x-\overline z)
-&=(x-u-vi)(x-u+vi)\\
-&=(x-u)^2-(vi)^2\\
-&=x^2-2ux+(u^2+v^2).
-\end{aligned}
-$$
-
-Por ejemplo, $1+2i$ y $1-2i$ aportan $x^2-2x+5$; las raíces $i$ y $-i$ aportan $x^2+1$. Si ambas raíces de un par son dobles, el factor cuadrático aparece elevado al cuadrado.
-
-Para construir un polinomio con coeficientes reales, se incluyen las conjugadas que falten, se respetan sus multiplicidades y se elige un coeficiente principal real distinto de cero.
 
 ### Ejemplo 2. Menor grado posible con coeficientes reales
 
@@ -114,7 +171,7 @@ p(x)&=(x-3)\bigl(x-(1+2i)\bigr)\bigl(x-(1-2i)\bigr)\\
 \end{aligned}
 $$
 
-El polinomio tiene coeficientes reales, es mónico y tiene grado $3$. Se comprueba $p(3)=27-45+33-15=0$. Para $z=1+2i$, se tiene $z^2=-3+4i$ y
+El polinomio tiene coeficientes reales, es mónico y tiene grado $3$. Se comprueba $p(3)=27-45+33-15=0$. Para $z=1+2i$, el [producto de números complejos](2026-08-19-sesion-08.qmd) da $z^2=-3+4i$ y
 
 $$
 z^2-2z+5=(-3+4i)-2(1+2i)+5=0.
@@ -123,18 +180,6 @@ $$
 Así, $p(z)=(z-3)\cdot0=0$; su conjugada también es raíz. Las tres raíces son simples, pues ya completan el grado.
 
 El producto de solo dos factores, $(x-3)\bigl(x-(1+2i)\bigr)$, tiene grado $2$, pero su término independiente es $3+6i$. Por ello, no satisface la condición de tener coeficientes reales.
-
-## Determinar el coeficiente principal mediante un valor
-
-Cuando se conocen todas las raíces con sus multiplicidades, puede escribirse $p(x)=a\,q(x)$, donde $q(x)$ es el producto mónico de sus factores. Si se prescribe $p(c)=d$ en un número $c$ que no es raíz, entonces $q(c)\ne0$ y
-
-$$
-a\,q(c)=d,
-\qquad
-a=\frac{d}{q(c)}.
-$$
-
-Para obtener un polinomio con las raíces prescritas se requiere $a\ne0$. Si $d=0$ y $c$ no es una de esas raíces, los datos son incompatibles.
 
 ### Ejemplo 3. Construcción con una condición adicional
 
@@ -166,35 +211,18 @@ $$
 
 Las tres raíces son distintas y completan el grado, por lo que todas son simples.
 
-## Suma y producto de las raíces de una cuadrática
-
-Al desarrollar el producto de dos factores,
-
-$$
-a(x-r_1)(x-r_2)=ax^2-a(r_1+r_2)x+ar_1r_2,
-\qquad a\ne0.
-$$
-
-Si se compara con $ax^2+bx+c$, se obtienen las relaciones de Vieta en grado $2$:
-
-$$
-r_1+r_2=-\frac ba,
-\qquad
-r_1r_2=\frac ca.
-$$
-
-En particular, si dos números tienen suma $s$ y producto $t$, el polinomio mónico que los tiene como raíces, contadas con multiplicidad, es $x^2-sx+t$. Para las raíces $2$ y $3$, la suma es $5$ y el producto es $6$, de modo que se obtiene $x^2-5x+6$.
-
 ## Errores frecuentes
 
-- **Confundir el signo de la raíz con el del factor.** La raíz $-3$ aporta $x+3$. El factor $x-3$ se anula en $3$.
-- **Omitir una multiplicidad o el coeficiente principal.** Para raíz doble $1$, raíz simple $-2$ y coeficiente principal $3$, el polinomio es $3(x-1)^2(x+2)$. Quitar el cuadrado cambia la multiplicidad y el grado; quitar el $3$ produce un polinomio mónico.
-- **Confundir conjugada con opuesto.** La conjugada de $1+2i$ es $1-2i$, mientras que su opuesto es $-1-2i$. Si se exigen coeficientes reales, debe incluirse la conjugada con la misma multiplicidad.
-- **Usar una raíz para determinar el coeficiente principal.** Si ya se sabe que $2$ es raíz, la condición $p(2)=0$ se cumple para cualquier $a\ne0$ y no permite elegir uno.
+- **Confundir el signo de la raíz con el del factor.** Para las raíces $3$ y $1$, proponer $(x+3)(x+1)=x^2+4x+3$ es incorrecto: sus raíces son $-3$ y $-1$. El polinomio mónico correcto es $(x-3)(x-1)=x^2-4x+3$.
+- **Omitir el coeficiente principal.** Para raíces $1$ y $2$ y coeficiente principal $3$, el polinomio $x^2-3x+2$ incumple el último dato porque es mónico. El correcto es $3(x-1)(x-2)=3x^2-9x+6$.
+- **Ignorar la multiplicidad.** Para raíz doble $1$ y raíz simple $-2$, el producto $(x-1)(x+2)=x^2+x-2$ deja a $1$ como raíz simple. El polinomio mónico correcto es $(x-1)^2(x+2)=x^3-3x+2$.
+- **Confundir conjugada con opuesto.** La conjugada de $1+2i$ es $1-2i$; su opuesto es $-1-2i$. Usar este último produce $(x-(1+2i))(x+(1+2i))=x^2+3-4i$, con un coeficiente no real. El par conjugado da $x^2-2x+5$.
+- **Equivocar el signo de la suma.** Para raíces $2$ y $3$, escribir $x^2+5x+6$ da las raíces $-2$ y $-3$. La suma $5$ y el producto $6$ corresponden a $x^2-5x+6$.
+- **Usar una raíz para determinar el coeficiente principal.** En $p(x)=a(x-2)(x+1)$, la condición $p(2)=0$ se cumple tanto con $a=1$ como con $a=5$, y no determina $a$. En cambio, $p(0)=-4$ da $-2a=-4$, de donde $a=2$.
 
 ## Actividad
 
-Construya los polinomios solicitados y justifique las verificaciones.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta.
 
 1. Se busca un polinomio de grado $4$ con raíz doble $-3$, raíces simples $0$ y $2$, y coeficiente principal $-2$. Se propone $q(x)=(x+3)x(x-2)$.
 
@@ -282,10 +310,10 @@ El término independiente es $(-2)(2)(-1)(-3)=-12$. La condición $p(1)=8$ serí
 
 2. Un polinomio de grado $3$ tiene las raíces $\sqrt2$, $-\sqrt2$ y $3$, y cumple $p(1)=4$. Determínelo y explique por qué sus coeficientes son enteros aunque dos raíces sean irracionales.
 
-3. Escriba una ecuación cuadrática con coeficientes enteros cuyas raíces sean $\frac12$ y $-\frac23$. Construya primero el polinomio mónico y elimine después los denominadores. Verifique ambas raíces.
+3. Escriba una ecuación cuadrática con coeficientes enteros cuyas raíces sean $\frac12$ y $-\frac23$. Construya primero el polinomio mónico y [elimine después los denominadores](2026-09-07-sesion-19.qmd). Verifique ambas raíces.
 
 4. Dos números complejos tienen suma $-3$ y producto $5$. Construya la ecuación cuadrática mónica que los tiene como raíces, resuélvala y compruebe la suma y el producto.
 
 5. Un estudiante afirma que $x^3-6x^2+11x-6$ es el único polinomio de grado $3$ cuyas raíces son $1$, $2$ y $3$. Explique el error, describa todos los polinomios de ese grado con esas raíces y determine el que cumple $p(0)=12$.
 
-6. Construya el polinomio mónico de grado $4$ cuyas raíces son $2$, $-2$, $2i$ y $-2i$. Agrupe los factores para aprovechar las diferencias de cuadrados y compruebe que obtiene $x^4-16$.
+6. Construya el polinomio mónico de grado $4$ cuyas raíces son $2$, $-2$, $2i$ y $-2i$. Agrupe los factores para aprovechar las diferencias de cuadrados y compruebe que obtiene $x^4-16$, en concordancia con las [raíces cuartas de $16$](2026-08-25-sesion-12.qmd).
