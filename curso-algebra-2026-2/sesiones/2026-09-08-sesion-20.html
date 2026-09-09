@@ -498,6 +498,7 @@ p(x)=(x-c)^m q(x),
 \qquad q(c)\ne0.
 \]</span></p>
 <p>Así, <span class="math inline">\(m\)</span> es el mayor exponente para el cual <span class="math inline">\((x-c)^m\)</span> es factor de <span class="math inline">\(p(x)\)</span>. La condición <span class="math inline">\(q(c)\ne0\)</span> asegura que no queda otro factor <span class="math inline">\(x-c\)</span> en el cociente. Una raíz de multiplicidad <span class="math inline">\(1\)</span> se llama simple; de multiplicidad <span class="math inline">\(2\)</span>, doble; y de multiplicidad <span class="math inline">\(3\)</span>, triple. Siempre se cumple <span class="math inline">\(m\le n\)</span>: el factor <span class="math inline">\((x-c)^m\)</span> tiene grado <span class="math inline">\(m\)</span> y el <a href="../sesiones/2026-09-01-sesion-15.html">grado de un producto</a> es la suma de los grados de sus factores no nulos.</p>
+<p>La multiplicidad depende del polinomio considerado: <span class="math inline">\(2\)</span> es raíz doble de <span class="math inline">\((x-2)^2\)</span>, pero es raíz simple de <span class="math inline">\((x+1)^2(x-2)\)</span>. El valor de la raíz, por sí solo, no determina su multiplicidad.</p>
 <p><strong>Contar con multiplicidad</strong> significa contar cada raíz tantas veces como indica su multiplicidad. En <span class="math inline">\((x+1)^2(x-2)\)</span>, el conteo es <span class="math inline">\(2+1=3\)</span>. El conjunto solución, en cambio, registra cada valor una sola vez.</p>
 <p>El <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> también vale para raíces complejas: <span class="math inline">\(p(c)=0\)</span> si y solo si <span class="math inline">\(x-c\)</span> es factor de <span class="math inline">\(p(x)\)</span>. En efecto, al sustituir <span class="math inline">\(x=c\)</span> en la identidad de la división, el residuo es <span class="math inline">\(p(c)\)</span>. Por ejemplo,</p>
 <p><span class="math display">\[
@@ -506,6 +507,7 @@ x^2+1=(x-i)(x+i),
 <p>pues <span class="math inline">\(i^2=-1\)</span>.</p>
 <section id="cómo-determinar-la-multiplicidad-mediante-ruffini" class="level3">
 <h3 class="anchored" data-anchor-id="cómo-determinar-la-multiplicidad-mediante-ruffini">Cómo determinar la multiplicidad mediante Ruffini</h3>
+<p>La igualdad <span class="math inline">\(p(c)=0\)</span> significa que al sustituir <span class="math inline">\(x\)</span> por <span class="math inline">\(c\)</span> se obtiene cero. Confirma que <span class="math inline">\(c\)</span> es raíz y que <span class="math inline">\(x-c\)</span> es factor, pero aún no determina cuántas veces aparece ese factor.</p>
 <p>Para una raíz conocida <span class="math inline">\(c\)</span>:</p>
 <ol type="1">
 <li>Divida <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> mediante la regla de <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a>, incluyendo el coeficiente <span class="math inline">\(0\)</span> de cada potencia ausente.</li>
@@ -572,6 +574,11 @@ p(x)=a_n(x-r_1)(x-r_2)\cdots(x-r_n),
 </tr>
 </tbody>
 </table>
+<p>El grado también puede leerse en una factorización sin desarrollar todo el producto. Por ejemplo,</p>
+<p><span class="math display">\[
+(x-1)^3(x+8)^2(x-17)^{10}
+\]</span></p>
+<p>tiene grado <span class="math inline">\(3+2+10=15\)</span>: el producto de los términos de mayor grado es <span class="math inline">\(x^3x^2x^{10}=x^{15}\)</span> y los demás productos tienen menor grado. Sus raíces son <span class="math inline">\(1\)</span>, <span class="math inline">\(-8\)</span> y <span class="math inline">\(17\)</span>, con multiplicidades <span class="math inline">\(3\)</span>, <span class="math inline">\(2\)</span> y <span class="math inline">\(10\)</span>, respectivamente.</p>
 <p>El conteo se realiza en <span class="math inline">\(\mathbb C\)</span>; no afirma que todas las raíces sean reales. Tampoco proporciona un procedimiento para calcularlas. Por ejemplo, <span class="math inline">\(x^2+1\)</span> tiene las raíces no reales <span class="math inline">\(\pm i\)</span>. En <span class="math inline">\(x^3\)</span>, la única raíz distinta es <span class="math inline">\(0\)</span>, con multiplicidad <span class="math inline">\(3\)</span>, como en el caso de las <a href="../sesiones/2026-08-25-sesion-12.html">raíces n-ésimas de cero</a>.</p>
 <p>Un polinomio constante distinto de cero no tiene raíces. El polinomio cero se anula en todos los números complejos; su grado no está definido y el teorema no se aplica a él.</p>
 </section>
@@ -654,6 +661,18 @@ S_{\mathbb R}=\{1\}.
 \]</span></p>
 <p>Este conteo ya coincide con el grado. En consecuencia, <span class="math inline">\(-3\)</span> es doble, <span class="math inline">\(2+i\)</span> y <span class="math inline">\(2-i\)</span> son simples y no hay otras raíces. Hay una raíz real distinta, de multiplicidad <span class="math inline">\(2\)</span>.</p>
 <p>La raíz <span class="math inline">\(2+i\)</span> no puede ser doble: su conjugada también tendría que ser doble y el conteo sería <span class="math inline">\(2+2+2=6\)</span>, incompatible con el grado <span class="math inline">\(4\)</span>.</p>
+<p>Para expresar estas raíces como factores, se resta <strong>la raíz completa</strong>, usando paréntesis:</p>
+<p><span class="math display">\[
+x-(2+i)=x-2-i,
+\qquad
+x-(2-i)=x-2+i.
+\]</span></p>
+<p>La raíz <span class="math inline">\(-3\)</span>, doble, aporta <span class="math inline">\((x-(-3))^2=(x+3)^2\)</span>. Por tanto, la factorización del polinomio del ejemplo es</p>
+<p><span class="math display">\[
+p(x)=a(x+3)^2\bigl(x-(2+i)\bigr)\bigl(x-(2-i)\bigr),
+\qquad a\in\mathbb R,\quad a\ne0.
+\]</span></p>
+<p>El número <span class="math inline">\(a\)</span> es su coeficiente principal; conocer las raíces y sus multiplicidades no permite determinarlo.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
