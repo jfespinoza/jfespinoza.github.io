@@ -2085,6 +2085,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-09-sesion-21.html",
+    "href": "sesiones/2026-09-09-sesion-21.html",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "",
+    "text": "De las raíces al polinomio\nPor el teorema del factor, a una raíz \\(r\\) le corresponde el factor \\(x-r\\). Así, las raíces \\(1\\) y \\(2\\) permiten construir\n\\[\n(x-1)(x-2)=x^2-3x+2.\n\\]\nPero \\(3(x-1)(x-2)=3x^2-9x+6\\) tiene las mismas raíces, ambas simples. Para determinar un polinomio no basta con conocer sus raíces: también deben precisarse sus multiplicidades y su coeficiente principal.\nSean \\(r_1,\\ldots,r_n\\in\\mathbb C\\), con \\(n\\ge1\\), y sea \\(a\\in\\mathbb C\\), \\(a\\ne0\\). El polinomio\n\\[\np(x)=a(x-r_1)(x-r_2)\\cdots(x-r_n)\n=a\\prod_{j=1}^{n}(x-r_j)\n\\]\ntiene grado \\(n\\) y coeficiente principal \\(a\\). El símbolo \\(\\prod\\) abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la propiedad del producto cero, \\(p(c)=0\\) si y solo si \\(c=r_j\\) para algún \\(j\\).\nCada raíz debe aparecer tantas veces como indique su multiplicidad. Si las raíces distintas son \\(-2\\), doble, y \\(0\\) y \\(3\\), simples, los factores correspondientes son\n\\[\n(x+2)^2,\\qquad x,\\qquad x-3.\n\\]\nEl producto tiene grado \\(2+1+1=4\\). La raíz negativa \\(-2\\) aporta \\(x-(-2)=x+2\\); la raíz \\(0\\) aporta \\(x\\).\nEl teorema fundamental del álgebra garantiza que, si la lista contiene todas las raíces contadas con multiplicidad, cualquier polinomio con esos datos tiene la forma anterior. Al fijar \\(a\\), queda determinado un único polinomio. Se llama mónico cuando su coeficiente principal es \\(1\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#ejemplo-1.-raíz-doble-y-coeficiente-principal",
+    "href": "sesiones/2026-09-09-sesion-21.html#ejemplo-1.-raíz-doble-y-coeficiente-principal",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Ejemplo 1. Raíz doble y coeficiente principal",
+    "text": "Ejemplo 1. Raíz doble y coeficiente principal\nConstruyamos el polinomio mónico de grado \\(3\\) cuyas raíces son \\(2\\), doble, y \\(-1\\), simple.\nLos factores son \\((x-2)^2\\) y \\(x+1\\). Se desarrolla el producto:\n\\[\n\\begin{aligned}\np(x)&=(x-2)^2(x+1)\\\\\n&=(x^2-4x+4)(x+1)\\\\\n&=x^3+x^2-4x^2-4x+4x+4\\\\\n&=x^3-3x^2+4.\n\\end{aligned}\n\\]\nEl grado es \\(3\\) y el coeficiente principal es \\(1\\). La evaluación directa confirma las raíces:\n\\[\np(2)=8-12+4=0,\n\\qquad\np(-1)=-1-3+4=0.\n\\]\nPara verificar la multiplicidad de \\(2\\), se extrae \\((x-2)^2\\): el factor restante es \\(x+1\\), que vale \\(3\\ne0\\) en \\(x=2\\). Por tanto, la multiplicidad es exactamente \\(2\\). Al extraer \\(x+1\\), queda \\((x-2)^2\\), que vale \\(9\\ne0\\) en \\(x=-1\\); esa raíz es simple.\nSi se pide el mismo grado, las mismas raíces y multiplicidades, pero coeficiente principal \\(-3\\), se obtiene\n\\[\nq(x)=-3(x-2)^2(x+1)=-3x^3+9x^2-12.\n\\]\nMultiplicar por una constante distinta de cero cambia el coeficiente principal y conserva las raíces con sus multiplicidades.\n\nLectura de los coeficientes en grado 3\nEn \\((x-2)(x-2)(x+1)\\), un término de grado \\(2\\) se obtiene tomando el término independiente de uno de los factores y \\(x\\) de los otros dos. Sus contribuciones son\n\\[\n-2x^2,\\qquad -2x^2,\\qquad x^2.\n\\]\nLa suma es \\(-3x^2\\): su coeficiente es el opuesto de la suma de las raíces, \\(-(2+2-1)=-3\\). El término independiente se obtiene multiplicando los tres términos independientes:\n\\[\n(-2)(-2)(1)=4.\n\\]\nEn \\(q(x)=-3p(x)\\), todos esos coeficientes se multiplican por \\(-3\\): el de \\(x^2\\) es \\(9\\) y el término independiente es \\(-12\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#pares-conjugados-y-coeficientes-reales",
+    "href": "sesiones/2026-09-09-sesion-21.html#pares-conjugados-y-coeficientes-reales",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Pares conjugados y coeficientes reales",
+    "text": "Pares conjugados y coeficientes reales\nSi el polinomio tiene coeficientes reales y una raíz \\(z=u+vi\\), con \\(u,v\\in\\mathbb R\\) y \\(v\\ne0\\), también tiene la raíz \\(\\overline z=u-vi\\) con la misma multiplicidad. Los factores del par conjugado pueden agruparse en una cuadrática con coeficientes reales:\n\\[\n\\begin{aligned}\n(x-z)(x-\\overline z)\n&=(x-u-vi)(x-u+vi)\\\\\n&=(x-u)^2-(vi)^2\\\\\n&=x^2-2ux+(u^2+v^2).\n\\end{aligned}\n\\]\nPor ejemplo, \\(1+2i\\) y \\(1-2i\\) aportan \\(x^2-2x+5\\); las raíces \\(i\\) y \\(-i\\) aportan \\(x^2+1\\). Si ambas raíces de un par son dobles, el factor cuadrático aparece elevado al cuadrado.\nPara construir un polinomio con coeficientes reales, se incluyen las conjugadas que falten, se respetan sus multiplicidades y se elige un coeficiente principal real distinto de cero.\n\nEjemplo 2. Menor grado posible con coeficientes reales\nDeterminemos el polinomio mónico de menor grado con coeficientes reales que tiene las raíces \\(3\\) y \\(1+2i\\).\nLa raíz \\(1+2i\\) obliga a incluir \\(1-2i\\). Como son tres raíces distintas, el grado es al menos \\(3\\). El producto de sus tres factores alcanza ese grado:\n\\[\n\\begin{aligned}\np(x)&=(x-3)\\bigl(x-(1+2i)\\bigr)\\bigl(x-(1-2i)\\bigr)\\\\\n&=(x-3)(x^2-2x+5)\\\\\n&=x^3-2x^2+5x-3x^2+6x-15\\\\\n&=x^3-5x^2+11x-15.\n\\end{aligned}\n\\]\nEl polinomio tiene coeficientes reales, es mónico y tiene grado \\(3\\). Se comprueba \\(p(3)=27-45+33-15=0\\). Para \\(z=1+2i\\), se tiene \\(z^2=-3+4i\\) y\n\\[\nz^2-2z+5=(-3+4i)-2(1+2i)+5=0.\n\\]\nAsí, \\(p(z)=(z-3)\\cdot0=0\\); su conjugada también es raíz. Las tres raíces son simples, pues ya completan el grado.\nEl producto de solo dos factores, \\((x-3)\\bigl(x-(1+2i)\\bigr)\\), tiene grado \\(2\\), pero su término independiente es \\(3+6i\\). Por ello, no satisface la condición de tener coeficientes reales.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#determinar-el-coeficiente-principal-mediante-un-valor",
+    "href": "sesiones/2026-09-09-sesion-21.html#determinar-el-coeficiente-principal-mediante-un-valor",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Determinar el coeficiente principal mediante un valor",
+    "text": "Determinar el coeficiente principal mediante un valor\nCuando se conocen todas las raíces con sus multiplicidades, puede escribirse \\(p(x)=a\\,q(x)\\), donde \\(q(x)\\) es el producto mónico de sus factores. Si se prescribe \\(p(c)=d\\) en un número \\(c\\) que no es raíz, entonces \\(q(c)\\ne0\\) y\n\\[\na\\,q(c)=d,\n\\qquad\na=\\frac{d}{q(c)}.\n\\]\nPara obtener un polinomio con las raíces prescritas se requiere \\(a\\ne0\\). Si \\(d=0\\) y \\(c\\) no es una de esas raíces, los datos son incompatibles.\n\nEjemplo 3. Construcción con una condición adicional\nUn polinomio de grado \\(3\\) tiene las raíces \\(-1\\), \\(2\\) y \\(4\\), y cumple \\(p(0)=16\\). Para determinarlo, se escribe\n\\[\np(x)=a(x+1)(x-2)(x-4).\n\\]\nLa condición da \\(p(0)=a(1)(-2)(-4)=8a=16\\), de donde \\(a=2\\). Por tanto,\n\\[\n\\begin{aligned}\np(x)&=2(x+1)(x^2-6x+8)\\\\\n&=2(x^3-5x^2+2x+8)\\\\\n&=2x^3-10x^2+4x+16.\n\\end{aligned}\n\\]\nEl término independiente confirma \\(p(0)=16\\). Además,\n\\[\n\\begin{aligned}\np(-1)&=-2-10-4+16=0,\\\\\np(2)&=16-40+8+16=0,\\\\\np(4)&=128-160+16+16=0.\n\\end{aligned}\n\\]\nLas tres raíces son distintas y completan el grado, por lo que todas son simples.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#suma-y-producto-de-las-raíces-de-una-cuadrática",
+    "href": "sesiones/2026-09-09-sesion-21.html#suma-y-producto-de-las-raíces-de-una-cuadrática",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Suma y producto de las raíces de una cuadrática",
+    "text": "Suma y producto de las raíces de una cuadrática\nAl desarrollar el producto de dos factores,\n\\[\na(x-r_1)(x-r_2)=ax^2-a(r_1+r_2)x+ar_1r_2,\n\\qquad a\\ne0.\n\\]\nSi se compara con \\(ax^2+bx+c\\), se obtienen las relaciones de Vieta en grado \\(2\\):\n\\[\nr_1+r_2=-\\frac ba,\n\\qquad\nr_1r_2=\\frac ca.\n\\]\nEn particular, si dos números tienen suma \\(s\\) y producto \\(t\\), el polinomio mónico que los tiene como raíces, contadas con multiplicidad, es \\(x^2-sx+t\\). Para las raíces \\(2\\) y \\(3\\), la suma es \\(5\\) y el producto es \\(6\\), de modo que se obtiene \\(x^2-5x+6\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#errores-frecuentes",
+    "href": "sesiones/2026-09-09-sesion-21.html#errores-frecuentes",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nConfundir el signo de la raíz con el del factor. La raíz \\(-3\\) aporta \\(x+3\\). El factor \\(x-3\\) se anula en \\(3\\).\nOmitir una multiplicidad o el coeficiente principal. Para raíz doble \\(1\\), raíz simple \\(-2\\) y coeficiente principal \\(3\\), el polinomio es \\(3(x-1)^2(x+2)\\). Quitar el cuadrado cambia la multiplicidad y el grado; quitar el \\(3\\) produce un polinomio mónico.\nConfundir conjugada con opuesto. La conjugada de \\(1+2i\\) es \\(1-2i\\), mientras que su opuesto es \\(-1-2i\\). Si se exigen coeficientes reales, debe incluirse la conjugada con la misma multiplicidad.\nUsar una raíz para determinar el coeficiente principal. Si ya se sabe que \\(2\\) es raíz, la condición \\(p(2)=0\\) se cumple para cualquier \\(a\\ne0\\) y no permite elegir uno.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#actividad",
+    "href": "sesiones/2026-09-09-sesion-21.html#actividad",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Actividad",
+    "text": "Actividad\nConstruya los polinomios solicitados y justifique las verificaciones.\n\nSe busca un polinomio de grado \\(4\\) con raíz doble \\(-3\\), raíces simples \\(0\\) y \\(2\\), y coeficiente principal \\(-2\\). Se propone \\(q(x)=(x+3)x(x-2)\\).\n\nIdentifique cuáles de las condiciones cumple y cuáles incumple la propuesta.\nCorríjala, desarrolle el producto y escriba el polinomio en forma ordenada.\nVerifique que la multiplicidad de \\(-3\\) es exactamente \\(2\\) y compruebe \\(p(2)=0\\) en la forma desarrollada.\n\nDetermine el polinomio de menor grado con coeficientes reales que tiene la raíz \\(i\\) con multiplicidad exactamente \\(2\\) y cumple \\(p(0)=3\\).\n\nJustifique el menor grado posible y escriba los factores necesarios.\nDetermine el coeficiente principal, desarrolle el producto y verifique las multiplicidades y el valor prescrito.\n\nUn polinomio de grado \\(3\\) tiene las raíces \\(-2\\), \\(1\\) y \\(3\\), y cumple \\(p(2)=8\\).\n\nDetermine su coeficiente principal y escríbalo en forma ordenada.\nCompruebe el coeficiente de \\(x^2\\) a partir de la suma de las raíces, como en el ejemplo 1, y el término independiente a partir del producto de los términos independientes de los factores.\nSi se sustituyera \\(p(2)=8\\) por \\(p(1)=8\\), ¿existiría un polinomio con esos datos? ¿La condición \\(p(1)=0\\) permitiría determinar uno solo?\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. La propuesta tiene las raíces \\(-3\\), \\(0\\) y \\(2\\), pero las tres son simples. Su grado es \\(3\\) y su coeficiente principal es \\(1\\). Cumple las condiciones sobre las raíces simples \\(0\\) y \\(2\\); incumple la multiplicidad de \\(-3\\), el grado y el coeficiente principal.\nLa corrección es\n\\[\n\\begin{aligned}\np(x)&=-2(x+3)^2x(x-2)\\\\\n&=-2(x^2+6x+9)(x^2-2x)\\\\\n&=-2(x^4+4x^3-3x^2-18x)\\\\\n&=-2x^4-8x^3+6x^2+36x.\n\\end{aligned}\n\\]\nAl extraer \\((x+3)^2\\), queda \\(-2x(x-2)\\), cuyo valor en \\(x=-3\\) es \\(-2(-3)(-5)=-30\\ne0\\). Por ello, \\(-3\\) es exactamente doble. Los factores restantes tampoco se anulan en \\(0\\) ni en \\(2\\) después de extraer, respectivamente, \\(x\\) y \\(x-2\\); ambas raíces son simples. En la forma desarrollada,\n\\[\np(2)=-32-64+24+72=0.\n\\]\n2. La raíz conjugada \\(-i\\) también debe ser doble. El grado es al menos \\(2+2=4\\), y ese grado se alcanza con\n\\[\np(x)=a(x-i)^2(x+i)^2=a(x^2+1)^2.\n\\]\nComo \\(p(0)=a=3\\),\n\\[\np(x)=3(x^2+1)^2=3x^4+6x^2+3.\n\\]\nEl valor en cero es \\(3\\). Al extraer \\((x-i)^2\\), queda \\(3(x+i)^2\\), que en \\(x=i\\) vale \\(3(2i)^2=-12\\ne0\\); la multiplicidad de \\(i\\) es exactamente \\(2\\). Al extraer \\((x+i)^2\\), el factor restante vale \\(3(-2i)^2=-12\\ne0\\) en \\(x=-i\\), por lo que también es doble.\n3. Se escribe \\(p(x)=a(x+2)(x-1)(x-3)\\). La condición da\n\\[\np(2)=a(4)(1)(-1)=-4a=8,\n\\qquad a=-2.\n\\]\nAsí,\n\\[\n\\begin{aligned}\np(x)&=-2(x+2)(x^2-4x+3)\\\\\n&=-2(x^3-2x^2-5x+6)\\\\\n&=-2x^3+4x^2+10x-12.\n\\end{aligned}\n\\]\nLas raíces prescritas anulan sus respectivos factores y se verifica \\(p(2)=-16+16+20-12=8\\). La suma de las raíces es \\(-2+1+3=2\\); al tomar un término independiente y dos términos \\(x\\) en el producto mónico, el coeficiente de \\(x^2\\) es \\(-2\\). Multiplicarlo por \\(a=-2\\) da \\(4\\), como en el resultado.\nEl término independiente es \\((-2)(2)(-1)(-3)=-12\\). La condición \\(p(1)=8\\) sería incompatible con que \\(1\\) sea raíz. En cambio, \\(p(1)=0\\) se cumple para todos los polinomios \\(a(x+2)(x-1)(x-3)\\) con \\(a\\ne0\\): por sí sola no determina el coeficiente principal.",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-09-sesion-21.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-09-sesion-21.html#ejercicios-para-practicar",
+    "title": "Sesión 21. Construcción de un polinomio a partir de sus raíces",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nConstruya el polinomio mónico de grado \\(5\\) cuyas raíces son \\(0\\), doble, y \\(1\\), \\(-1\\) y \\(4\\), simples. Escríbalo en forma ordenada e indique su término independiente.\nUn polinomio de grado \\(3\\) tiene las raíces \\(\\sqrt2\\), \\(-\\sqrt2\\) y \\(3\\), y cumple \\(p(1)=4\\). Determínelo y explique por qué sus coeficientes son enteros aunque dos raíces sean irracionales.\nEscriba una ecuación cuadrática con coeficientes enteros cuyas raíces sean \\(\\frac12\\) y \\(-\\frac23\\). Construya primero el polinomio mónico y elimine después los denominadores. Verifique ambas raíces.\nDos números complejos tienen suma \\(-3\\) y producto \\(5\\). Construya la ecuación cuadrática mónica que los tiene como raíces, resuélvala y compruebe la suma y el producto.\nUn estudiante afirma que \\(x^3-6x^2+11x-6\\) es el único polinomio de grado \\(3\\) cuyas raíces son \\(1\\), \\(2\\) y \\(3\\). Explique el error, describa todos los polinomios de ese grado con esas raíces y determine el que cumple \\(p(0)=12\\).\nConstruya el polinomio mónico de grado \\(4\\) cuyas raíces son \\(2\\), \\(-2\\), \\(2i\\) y \\(-2i\\). Agrupe los factores para aprovechar las diferencias de cuadrados y compruebe que obtiene \\(x^4-16\\).",
+    "crumbs": [
+      "Unidad 2. Polinomios y raíces",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Sesión 21. Construcción de un polinomio a partir de sus raíces</span>"
+    ]
+  },
+  {
     "objectID": "unidades/03-sistemas-ecuaciones.html",
     "href": "unidades/03-sistemas-ecuaciones.html",
     "title": "Unidad 3. Sistemas de ecuaciones lineales",
@@ -2092,7 +2180,7 @@
     "text": "Contenidos\nDuración prevista: 10 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -2103,7 +2191,7 @@
     "text": "Problemas que conducen a sistemas de ecuaciones; definición y tipos de solución.\nMétodos de Gauss y Gauss-Jordan.\nSistemas consistentes e inconsistentes.",
     "crumbs": [
       "Unidad 3. Sistemas de ecuaciones lineales",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 3. Sistemas de ecuaciones lineales</span>"
     ]
   },
   {
@@ -2114,7 +2202,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2125,7 +2213,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2136,7 +2224,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2147,7 +2235,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2158,7 +2246,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2169,7 +2257,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2180,7 +2268,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2191,7 +2279,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2202,7 +2290,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2213,7 +2301,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2224,7 +2312,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2235,7 +2323,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2246,7 +2334,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2257,7 +2345,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2268,7 +2356,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2279,7 +2367,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]

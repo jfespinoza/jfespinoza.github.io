@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ecuaciones, raíces, factorización y aproximación.">
+<meta name="description" content="Construcción de polinomios a partir de raíces, multiplicidades y coeficiente principal; polinomios mónicos, pares conjugados y comprobación de coeficientes.">
 
-<title>Unidad 2. Polinomios y raíces – Álgebra</title>
+<title>Sesión 21. Construcción de un polinomio a partir de sus raíces – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-09-01-sesion-15.html" rel="next">
-<link href="../sesiones/2026-08-28-sesion-14.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-08-sesion-20.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Unidad 2. Polinomios y raíces – Álgebra">
-<meta property="og:description" content="Ecuaciones, raíces, factorización y aproximación.">
+<meta property="og:title" content="Sesión 21. Construcción de un polinomio a partir de sus raíces – Álgebra">
+<meta property="og:description" content="Construcción de polinomios a partir de raíces, multiplicidades y coeficiente principal; polinomios mónicos, pares conjugados y comprobación de coeficientes.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-09-sesion-21.html"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -292,7 +292,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -327,7 +327,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
+  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
   </div>
 </li>
       </ul>
@@ -427,16 +427,32 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#de-las-raíces-al-polinomio" id="toc-de-las-raíces-al-polinomio" class="nav-link active" data-scroll-target="#de-las-raíces-al-polinomio">De las raíces al polinomio</a></li>
+  <li><a href="#ejemplo-1.-raíz-doble-y-coeficiente-principal" id="toc-ejemplo-1.-raíz-doble-y-coeficiente-principal" class="nav-link" data-scroll-target="#ejemplo-1.-raíz-doble-y-coeficiente-principal">Ejemplo 1. Raíz doble y coeficiente principal</a>
+  <ul class="collapse">
+  <li><a href="#lectura-de-los-coeficientes-en-grado-3" id="toc-lectura-de-los-coeficientes-en-grado-3" class="nav-link" data-scroll-target="#lectura-de-los-coeficientes-en-grado-3">Lectura de los coeficientes en grado 3</a></li>
+  </ul></li>
+  <li><a href="#pares-conjugados-y-coeficientes-reales" id="toc-pares-conjugados-y-coeficientes-reales" class="nav-link" data-scroll-target="#pares-conjugados-y-coeficientes-reales">Pares conjugados y coeficientes reales</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-2.-menor-grado-posible-con-coeficientes-reales" id="toc-ejemplo-2.-menor-grado-posible-con-coeficientes-reales" class="nav-link" data-scroll-target="#ejemplo-2.-menor-grado-posible-con-coeficientes-reales">Ejemplo 2. Menor grado posible con coeficientes reales</a></li>
+  </ul></li>
+  <li><a href="#determinar-el-coeficiente-principal-mediante-un-valor" id="toc-determinar-el-coeficiente-principal-mediante-un-valor" class="nav-link" data-scroll-target="#determinar-el-coeficiente-principal-mediante-un-valor">Determinar el coeficiente principal mediante un valor</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-3.-construcción-con-una-condición-adicional" id="toc-ejemplo-3.-construcción-con-una-condición-adicional" class="nav-link" data-scroll-target="#ejemplo-3.-construcción-con-una-condición-adicional">Ejemplo 3. Construcción con una condición adicional</a></li>
+  </ul></li>
+  <li><a href="#suma-y-producto-de-las-raíces-de-una-cuadrática" id="toc-suma-y-producto-de-las-raíces-de-una-cuadrática" class="nav-link" data-scroll-target="#suma-y-producto-de-las-raíces-de-una-cuadrática">Suma y producto de las raíces de una cuadrática</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-09-sesion-21.html"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></h1>
 </div>
 
 
@@ -444,6 +460,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">9 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -453,20 +475,240 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 20 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="de-las-raíces-al-polinomio" class="level2">
+<h2 class="anchored" data-anchor-id="de-las-raíces-al-polinomio">De las raíces al polinomio</h2>
+<p>Por el <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a>, a una raíz <span class="math inline">\(r\)</span> le corresponde el factor <span class="math inline">\(x-r\)</span>. Así, las raíces <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span> permiten construir</p>
+<p><span class="math display">\[
+(x-1)(x-2)=x^2-3x+2.
+\]</span></p>
+<p>Pero <span class="math inline">\(3(x-1)(x-2)=3x^2-9x+6\)</span> tiene las mismas raíces, ambas simples. Para determinar un polinomio no basta con conocer sus raíces: también deben precisarse sus multiplicidades y su coeficiente principal.</p>
+<p>Sean <span class="math inline">\(r_1,\ldots,r_n\in\mathbb C\)</span>, con <span class="math inline">\(n\ge1\)</span>, y sea <span class="math inline">\(a\in\mathbb C\)</span>, <span class="math inline">\(a\ne0\)</span>. El polinomio</p>
+<p><span class="math display">\[
+p(x)=a(x-r_1)(x-r_2)\cdots(x-r_n)
+=a\prod_{j=1}^{n}(x-r_j)
+\]</span></p>
+<p>tiene grado <span class="math inline">\(n\)</span> y coeficiente principal <span class="math inline">\(a\)</span>. El símbolo <span class="math inline">\(\prod\)</span> abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la propiedad del producto cero, <span class="math inline">\(p(c)=0\)</span> si y solo si <span class="math inline">\(c=r_j\)</span> para algún <span class="math inline">\(j\)</span>.</p>
+<p>Cada raíz debe aparecer tantas veces como indique su <a href="../sesiones/2026-09-08-sesion-20.html">multiplicidad</a>. Si las raíces distintas son <span class="math inline">\(-2\)</span>, doble, y <span class="math inline">\(0\)</span> y <span class="math inline">\(3\)</span>, simples, los factores correspondientes son</p>
+<p><span class="math display">\[
+(x+2)^2,\qquad x,\qquad x-3.
+\]</span></p>
+<p>El producto tiene grado <span class="math inline">\(2+1+1=4\)</span>. La raíz negativa <span class="math inline">\(-2\)</span> aporta <span class="math inline">\(x-(-2)=x+2\)</span>; la raíz <span class="math inline">\(0\)</span> aporta <span class="math inline">\(x\)</span>.</p>
+<p>El teorema fundamental del álgebra garantiza que, si la lista contiene <strong>todas las raíces contadas con multiplicidad</strong>, cualquier polinomio con esos datos tiene la forma anterior. Al fijar <span class="math inline">\(a\)</span>, queda determinado un único polinomio. Se llama <strong>mónico</strong> cuando su coeficiente principal es <span class="math inline">\(1\)</span>.</p>
+</section>
+<section id="ejemplo-1.-raíz-doble-y-coeficiente-principal" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-1.-raíz-doble-y-coeficiente-principal">Ejemplo 1. Raíz doble y coeficiente principal</h2>
+<p>Construyamos el polinomio mónico de grado <span class="math inline">\(3\)</span> cuyas raíces son <span class="math inline">\(2\)</span>, doble, y <span class="math inline">\(-1\)</span>, simple.</p>
+<p>Los factores son <span class="math inline">\((x-2)^2\)</span> y <span class="math inline">\(x+1\)</span>. Se desarrolla el producto:</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)&amp;=(x-2)^2(x+1)\\
+&amp;=(x^2-4x+4)(x+1)\\
+&amp;=x^3+x^2-4x^2-4x+4x+4\\
+&amp;=x^3-3x^2+4.
+\end{aligned}
+\]</span></p>
+<p>El grado es <span class="math inline">\(3\)</span> y el coeficiente principal es <span class="math inline">\(1\)</span>. La evaluación directa confirma las raíces:</p>
+<p><span class="math display">\[
+p(2)=8-12+4=0,
+\qquad
+p(-1)=-1-3+4=0.
+\]</span></p>
+<p>Para verificar la multiplicidad de <span class="math inline">\(2\)</span>, se extrae <span class="math inline">\((x-2)^2\)</span>: el factor restante es <span class="math inline">\(x+1\)</span>, que vale <span class="math inline">\(3\ne0\)</span> en <span class="math inline">\(x=2\)</span>. Por tanto, la multiplicidad es exactamente <span class="math inline">\(2\)</span>. Al extraer <span class="math inline">\(x+1\)</span>, queda <span class="math inline">\((x-2)^2\)</span>, que vale <span class="math inline">\(9\ne0\)</span> en <span class="math inline">\(x=-1\)</span>; esa raíz es simple.</p>
+<p>Si se pide el mismo grado, las mismas raíces y multiplicidades, pero coeficiente principal <span class="math inline">\(-3\)</span>, se obtiene</p>
+<p><span class="math display">\[
+q(x)=-3(x-2)^2(x+1)=-3x^3+9x^2-12.
+\]</span></p>
+<p>Multiplicar por una constante distinta de cero cambia el coeficiente principal y conserva las raíces con sus multiplicidades.</p>
+<section id="lectura-de-los-coeficientes-en-grado-3" class="level3">
+<h3 class="anchored" data-anchor-id="lectura-de-los-coeficientes-en-grado-3">Lectura de los coeficientes en grado 3</h3>
+<p>En <span class="math inline">\((x-2)(x-2)(x+1)\)</span>, un término de grado <span class="math inline">\(2\)</span> se obtiene tomando el término independiente de uno de los factores y <span class="math inline">\(x\)</span> de los otros dos. Sus contribuciones son</p>
+<p><span class="math display">\[
+-2x^2,\qquad -2x^2,\qquad x^2.
+\]</span></p>
+<p>La suma es <span class="math inline">\(-3x^2\)</span>: su coeficiente es el opuesto de la suma de las raíces, <span class="math inline">\(-(2+2-1)=-3\)</span>. El término independiente se obtiene multiplicando los tres términos independientes:</p>
+<p><span class="math display">\[
+(-2)(-2)(1)=4.
+\]</span></p>
+<p>En <span class="math inline">\(q(x)=-3p(x)\)</span>, todos esos coeficientes se multiplican por <span class="math inline">\(-3\)</span>: el de <span class="math inline">\(x^2\)</span> es <span class="math inline">\(9\)</span> y el término independiente es <span class="math inline">\(-12\)</span>.</p>
+</section>
+</section>
+<section id="pares-conjugados-y-coeficientes-reales" class="level2">
+<h2 class="anchored" data-anchor-id="pares-conjugados-y-coeficientes-reales">Pares conjugados y coeficientes reales</h2>
+<p>Si el polinomio tiene coeficientes reales y una raíz <span class="math inline">\(z=u+vi\)</span>, con <span class="math inline">\(u,v\in\mathbb R\)</span> y <span class="math inline">\(v\ne0\)</span>, también tiene la raíz <span class="math inline">\(\overline z=u-vi\)</span> con la misma multiplicidad. Los factores del par conjugado pueden agruparse en una cuadrática con coeficientes reales:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x-z)(x-\overline z)
+&amp;=(x-u-vi)(x-u+vi)\\
+&amp;=(x-u)^2-(vi)^2\\
+&amp;=x^2-2ux+(u^2+v^2).
+\end{aligned}
+\]</span></p>
+<p>Por ejemplo, <span class="math inline">\(1+2i\)</span> y <span class="math inline">\(1-2i\)</span> aportan <span class="math inline">\(x^2-2x+5\)</span>; las raíces <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> aportan <span class="math inline">\(x^2+1\)</span>. Si ambas raíces de un par son dobles, el factor cuadrático aparece elevado al cuadrado.</p>
+<p>Para construir un polinomio con coeficientes reales, se incluyen las conjugadas que falten, se respetan sus multiplicidades y se elige un coeficiente principal real distinto de cero.</p>
+<section id="ejemplo-2.-menor-grado-posible-con-coeficientes-reales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-menor-grado-posible-con-coeficientes-reales">Ejemplo 2. Menor grado posible con coeficientes reales</h3>
+<p>Determinemos el polinomio mónico de menor grado con coeficientes reales que tiene las raíces <span class="math inline">\(3\)</span> y <span class="math inline">\(1+2i\)</span>.</p>
+<p>La raíz <span class="math inline">\(1+2i\)</span> obliga a incluir <span class="math inline">\(1-2i\)</span>. Como son tres raíces distintas, el grado es al menos <span class="math inline">\(3\)</span>. El producto de sus tres factores alcanza ese grado:</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)&amp;=(x-3)\bigl(x-(1+2i)\bigr)\bigl(x-(1-2i)\bigr)\\
+&amp;=(x-3)(x^2-2x+5)\\
+&amp;=x^3-2x^2+5x-3x^2+6x-15\\
+&amp;=x^3-5x^2+11x-15.
+\end{aligned}
+\]</span></p>
+<p>El polinomio tiene coeficientes reales, es mónico y tiene grado <span class="math inline">\(3\)</span>. Se comprueba <span class="math inline">\(p(3)=27-45+33-15=0\)</span>. Para <span class="math inline">\(z=1+2i\)</span>, se tiene <span class="math inline">\(z^2=-3+4i\)</span> y</p>
+<p><span class="math display">\[
+z^2-2z+5=(-3+4i)-2(1+2i)+5=0.
+\]</span></p>
+<p>Así, <span class="math inline">\(p(z)=(z-3)\cdot0=0\)</span>; su conjugada también es raíz. Las tres raíces son simples, pues ya completan el grado.</p>
+<p>El producto de solo dos factores, <span class="math inline">\((x-3)\bigl(x-(1+2i)\bigr)\)</span>, tiene grado <span class="math inline">\(2\)</span>, pero su término independiente es <span class="math inline">\(3+6i\)</span>. Por ello, no satisface la condición de tener coeficientes reales.</p>
+</section>
+</section>
+<section id="determinar-el-coeficiente-principal-mediante-un-valor" class="level2">
+<h2 class="anchored" data-anchor-id="determinar-el-coeficiente-principal-mediante-un-valor">Determinar el coeficiente principal mediante un valor</h2>
+<p>Cuando se conocen todas las raíces con sus multiplicidades, puede escribirse <span class="math inline">\(p(x)=a\,q(x)\)</span>, donde <span class="math inline">\(q(x)\)</span> es el producto mónico de sus factores. Si se prescribe <span class="math inline">\(p(c)=d\)</span> en un número <span class="math inline">\(c\)</span> que no es raíz, entonces <span class="math inline">\(q(c)\ne0\)</span> y</p>
+<p><span class="math display">\[
+a\,q(c)=d,
+\qquad
+a=\frac{d}{q(c)}.
+\]</span></p>
+<p>Para obtener un polinomio con las raíces prescritas se requiere <span class="math inline">\(a\ne0\)</span>. Si <span class="math inline">\(d=0\)</span> y <span class="math inline">\(c\)</span> no es una de esas raíces, los datos son incompatibles.</p>
+<section id="ejemplo-3.-construcción-con-una-condición-adicional" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-construcción-con-una-condición-adicional">Ejemplo 3. Construcción con una condición adicional</h3>
+<p>Un polinomio de grado <span class="math inline">\(3\)</span> tiene las raíces <span class="math inline">\(-1\)</span>, <span class="math inline">\(2\)</span> y <span class="math inline">\(4\)</span>, y cumple <span class="math inline">\(p(0)=16\)</span>. Para determinarlo, se escribe</p>
+<p><span class="math display">\[
+p(x)=a(x+1)(x-2)(x-4).
+\]</span></p>
+<p>La condición da <span class="math inline">\(p(0)=a(1)(-2)(-4)=8a=16\)</span>, de donde <span class="math inline">\(a=2\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)&amp;=2(x+1)(x^2-6x+8)\\
+&amp;=2(x^3-5x^2+2x+8)\\
+&amp;=2x^3-10x^2+4x+16.
+\end{aligned}
+\]</span></p>
+<p>El término independiente confirma <span class="math inline">\(p(0)=16\)</span>. Además,</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(-1)&amp;=-2-10-4+16=0,\\
+p(2)&amp;=16-40+8+16=0,\\
+p(4)&amp;=128-160+16+16=0.
+\end{aligned}
+\]</span></p>
+<p>Las tres raíces son distintas y completan el grado, por lo que todas son simples.</p>
+</section>
+</section>
+<section id="suma-y-producto-de-las-raíces-de-una-cuadrática" class="level2">
+<h2 class="anchored" data-anchor-id="suma-y-producto-de-las-raíces-de-una-cuadrática">Suma y producto de las raíces de una cuadrática</h2>
+<p>Al desarrollar el producto de dos factores,</p>
+<p><span class="math display">\[
+a(x-r_1)(x-r_2)=ax^2-a(r_1+r_2)x+ar_1r_2,
+\qquad a\ne0.
+\]</span></p>
+<p>Si se compara con <span class="math inline">\(ax^2+bx+c\)</span>, se obtienen las relaciones de Vieta en grado <span class="math inline">\(2\)</span>:</p>
+<p><span class="math display">\[
+r_1+r_2=-\frac ba,
+\qquad
+r_1r_2=\frac ca.
+\]</span></p>
+<p>En particular, si dos números tienen suma <span class="math inline">\(s\)</span> y producto <span class="math inline">\(t\)</span>, el polinomio mónico que los tiene como raíces, contadas con multiplicidad, es <span class="math inline">\(x^2-sx+t\)</span>. Para las raíces <span class="math inline">\(2\)</span> y <span class="math inline">\(3\)</span>, la suma es <span class="math inline">\(5\)</span> y el producto es <span class="math inline">\(6\)</span>, de modo que se obtiene <span class="math inline">\(x^2-5x+6\)</span>.</p>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Confundir el signo de la raíz con el del factor.</strong> La raíz <span class="math inline">\(-3\)</span> aporta <span class="math inline">\(x+3\)</span>. El factor <span class="math inline">\(x-3\)</span> se anula en <span class="math inline">\(3\)</span>.</li>
+<li><strong>Omitir una multiplicidad o el coeficiente principal.</strong> Para raíz doble <span class="math inline">\(1\)</span>, raíz simple <span class="math inline">\(-2\)</span> y coeficiente principal <span class="math inline">\(3\)</span>, el polinomio es <span class="math inline">\(3(x-1)^2(x+2)\)</span>. Quitar el cuadrado cambia la multiplicidad y el grado; quitar el <span class="math inline">\(3\)</span> produce un polinomio mónico.</li>
+<li><strong>Confundir conjugada con opuesto.</strong> La conjugada de <span class="math inline">\(1+2i\)</span> es <span class="math inline">\(1-2i\)</span>, mientras que su opuesto es <span class="math inline">\(-1-2i\)</span>. Si se exigen coeficientes reales, debe incluirse la conjugada con la misma multiplicidad.</li>
+<li><strong>Usar una raíz para determinar el coeficiente principal.</strong> Si ya se sabe que <span class="math inline">\(2\)</span> es raíz, la condición <span class="math inline">\(p(2)=0\)</span> se cumple para cualquier <span class="math inline">\(a\ne0\)</span> y no permite elegir uno.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Construya los polinomios solicitados y justifique las verificaciones.</p>
 <ol type="1">
-<li>Resolución algebraica de ecuaciones de segundo y tercer grado.</li>
-<li>Polinomios de grado <span class="math inline">\(n\)</span> en una variable y su representación gráfica.</li>
-<li>Raíces reales y complejas.</li>
-<li>Construcción de un polinomio a partir de sus raíces.</li>
-<li>Relación entre el grado de un polinomio y su número de raíces.</li>
-<li>Coeficientes, raíces, división sintética, factores, residuos y multiplicidad.</li>
-<li>Regla de Descartes para la separación de raíces.</li>
-<li>Método de bisección para aproximar raíces.</li>
+<li><p>Se busca un polinomio de grado <span class="math inline">\(4\)</span> con raíz doble <span class="math inline">\(-3\)</span>, raíces simples <span class="math inline">\(0\)</span> y <span class="math inline">\(2\)</span>, y coeficiente principal <span class="math inline">\(-2\)</span>. Se propone <span class="math inline">\(q(x)=(x+3)x(x-2)\)</span>.</p>
+<ol type="a">
+<li><p>Identifique cuáles de las condiciones cumple y cuáles incumple la propuesta.</p></li>
+<li><p>Corríjala, desarrolle el producto y escriba el polinomio en forma ordenada.</p></li>
+<li><p>Verifique que la multiplicidad de <span class="math inline">\(-3\)</span> es exactamente <span class="math inline">\(2\)</span> y compruebe <span class="math inline">\(p(2)=0\)</span> en la forma desarrollada.</p></li>
+</ol></li>
+<li><p>Determine el polinomio de menor grado con coeficientes reales que tiene la raíz <span class="math inline">\(i\)</span> con multiplicidad exactamente <span class="math inline">\(2\)</span> y cumple <span class="math inline">\(p(0)=3\)</span>.</p>
+<ol type="a">
+<li><p>Justifique el menor grado posible y escriba los factores necesarios.</p></li>
+<li><p>Determine el coeficiente principal, desarrolle el producto y verifique las multiplicidades y el valor prescrito.</p></li>
+</ol></li>
+<li><p>Un polinomio de grado <span class="math inline">\(3\)</span> tiene las raíces <span class="math inline">\(-2\)</span>, <span class="math inline">\(1\)</span> y <span class="math inline">\(3\)</span>, y cumple <span class="math inline">\(p(2)=8\)</span>.</p>
+<ol type="a">
+<li><p>Determine su coeficiente principal y escríbalo en forma ordenada.</p></li>
+<li><p>Compruebe el coeficiente de <span class="math inline">\(x^2\)</span> a partir de la suma de las raíces, como en el ejemplo 1, y el término independiente a partir del producto de los términos independientes de los factores.</p></li>
+<li><p>Si se sustituyera <span class="math inline">\(p(2)=8\)</span> por <span class="math inline">\(p(1)=8\)</span>, ¿existiría un polinomio con esos datos? ¿La condición <span class="math inline">\(p(1)=0\)</span> permitiría determinar uno solo?</p></li>
+</ol></li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> La propuesta tiene las raíces <span class="math inline">\(-3\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(2\)</span>, pero las tres son simples. Su grado es <span class="math inline">\(3\)</span> y su coeficiente principal es <span class="math inline">\(1\)</span>. Cumple las condiciones sobre las raíces simples <span class="math inline">\(0\)</span> y <span class="math inline">\(2\)</span>; incumple la multiplicidad de <span class="math inline">\(-3\)</span>, el grado y el coeficiente principal.</p>
+<p>La corrección es</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)&amp;=-2(x+3)^2x(x-2)\\
+&amp;=-2(x^2+6x+9)(x^2-2x)\\
+&amp;=-2(x^4+4x^3-3x^2-18x)\\
+&amp;=-2x^4-8x^3+6x^2+36x.
+\end{aligned}
+\]</span></p>
+<p>Al extraer <span class="math inline">\((x+3)^2\)</span>, queda <span class="math inline">\(-2x(x-2)\)</span>, cuyo valor en <span class="math inline">\(x=-3\)</span> es <span class="math inline">\(-2(-3)(-5)=-30\ne0\)</span>. Por ello, <span class="math inline">\(-3\)</span> es exactamente doble. Los factores restantes tampoco se anulan en <span class="math inline">\(0\)</span> ni en <span class="math inline">\(2\)</span> después de extraer, respectivamente, <span class="math inline">\(x\)</span> y <span class="math inline">\(x-2\)</span>; ambas raíces son simples. En la forma desarrollada,</p>
+<p><span class="math display">\[
+p(2)=-32-64+24+72=0.
+\]</span></p>
+<p><strong>2.</strong> La raíz conjugada <span class="math inline">\(-i\)</span> también debe ser doble. El grado es al menos <span class="math inline">\(2+2=4\)</span>, y ese grado se alcanza con</p>
+<p><span class="math display">\[
+p(x)=a(x-i)^2(x+i)^2=a(x^2+1)^2.
+\]</span></p>
+<p>Como <span class="math inline">\(p(0)=a=3\)</span>,</p>
+<p><span class="math display">\[
+p(x)=3(x^2+1)^2=3x^4+6x^2+3.
+\]</span></p>
+<p>El valor en cero es <span class="math inline">\(3\)</span>. Al extraer <span class="math inline">\((x-i)^2\)</span>, queda <span class="math inline">\(3(x+i)^2\)</span>, que en <span class="math inline">\(x=i\)</span> vale <span class="math inline">\(3(2i)^2=-12\ne0\)</span>; la multiplicidad de <span class="math inline">\(i\)</span> es exactamente <span class="math inline">\(2\)</span>. Al extraer <span class="math inline">\((x+i)^2\)</span>, el factor restante vale <span class="math inline">\(3(-2i)^2=-12\ne0\)</span> en <span class="math inline">\(x=-i\)</span>, por lo que también es doble.</p>
+<p><strong>3.</strong> Se escribe <span class="math inline">\(p(x)=a(x+2)(x-1)(x-3)\)</span>. La condición da</p>
+<p><span class="math display">\[
+p(2)=a(4)(1)(-1)=-4a=8,
+\qquad a=-2.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(x)&amp;=-2(x+2)(x^2-4x+3)\\
+&amp;=-2(x^3-2x^2-5x+6)\\
+&amp;=-2x^3+4x^2+10x-12.
+\end{aligned}
+\]</span></p>
+<p>Las raíces prescritas anulan sus respectivos factores y se verifica <span class="math inline">\(p(2)=-16+16+20-12=8\)</span>. La suma de las raíces es <span class="math inline">\(-2+1+3=2\)</span>; al tomar un término independiente y dos términos <span class="math inline">\(x\)</span> en el producto mónico, el coeficiente de <span class="math inline">\(x^2\)</span> es <span class="math inline">\(-2\)</span>. Multiplicarlo por <span class="math inline">\(a=-2\)</span> da <span class="math inline">\(4\)</span>, como en el resultado.</p>
+<p>El término independiente es <span class="math inline">\((-2)(2)(-1)(-3)=-12\)</span>. La condición <span class="math inline">\(p(1)=8\)</span> sería incompatible con que <span class="math inline">\(1\)</span> sea raíz. En cambio, <span class="math inline">\(p(1)=0\)</span> se cumple para todos los polinomios <span class="math inline">\(a(x+2)(x-1)(x-3)\)</span> con <span class="math inline">\(a\ne0\)</span>: por sí sola no determina el coeficiente principal.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Construya el polinomio mónico de grado <span class="math inline">\(5\)</span> cuyas raíces son <span class="math inline">\(0\)</span>, doble, y <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span> y <span class="math inline">\(4\)</span>, simples. Escríbalo en forma ordenada e indique su término independiente.</p></li>
+<li><p>Un polinomio de grado <span class="math inline">\(3\)</span> tiene las raíces <span class="math inline">\(\sqrt2\)</span>, <span class="math inline">\(-\sqrt2\)</span> y <span class="math inline">\(3\)</span>, y cumple <span class="math inline">\(p(1)=4\)</span>. Determínelo y explique por qué sus coeficientes son enteros aunque dos raíces sean irracionales.</p></li>
+<li><p>Escriba una ecuación cuadrática con coeficientes enteros cuyas raíces sean <span class="math inline">\(\frac12\)</span> y <span class="math inline">\(-\frac23\)</span>. Construya primero el polinomio mónico y elimine después los denominadores. Verifique ambas raíces.</p></li>
+<li><p>Dos números complejos tienen suma <span class="math inline">\(-3\)</span> y producto <span class="math inline">\(5\)</span>. Construya la ecuación cuadrática mónica que los tiene como raíces, resuélvala y compruebe la suma y el producto.</p></li>
+<li><p>Un estudiante afirma que <span class="math inline">\(x^3-6x^2+11x-6\)</span> es el único polinomio de grado <span class="math inline">\(3\)</span> cuyas raíces son <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> y <span class="math inline">\(3\)</span>. Explique el error, describa todos los polinomios de ese grado con esas raíces y determine el que cumple <span class="math inline">\(p(0)=12\)</span>.</p></li>
+<li><p>Construya el polinomio mónico de grado <span class="math inline">\(4\)</span> cuyas raíces son <span class="math inline">\(2\)</span>, <span class="math inline">\(-2\)</span>, <span class="math inline">\(2i\)</span> y <span class="math inline">\(-2i\)</span>. Agrupe los factores para aprovechar las diferencias de cuadrados y compruebe que obtiene <span class="math inline">\(x^4-16\)</span>.</p></li>
+</ol>
 
 
 </section>
@@ -881,13 +1123,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-28-sesion-14.html" class="pagination-link" aria-label="Sesión 14. Examen parcial 1: números reales y complejos">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></span>
+      <a href="../sesiones/2026-09-08-sesion-20.html" class="pagination-link" aria-label="Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-09-01-sesion-15.html" class="pagination-link" aria-label="Sesión 15. Polinomios: estructura, operaciones y evaluación">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
