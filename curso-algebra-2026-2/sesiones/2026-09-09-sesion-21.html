@@ -478,6 +478,7 @@ window.Quarto = {
 <p><span class="math display">\[
 (x-1)(x-2)=x^2-3x+2.
 \]</span></p>
+<p>La raíz es un número; el factor es un polinomio lineal. Por ejemplo, <span class="math inline">\(2\)</span> es una raíz y <span class="math inline">\(x-2\)</span> es el factor correspondiente.</p>
 <p>Pero <span class="math inline">\(3(x-1)(x-2)=3x^2-9x+6\)</span> tiene las mismas raíces, ambas simples. Para determinar un polinomio no basta con conocer sus raíces: también deben precisarse sus multiplicidades y su coeficiente principal.</p>
 <p>Sean <span class="math inline">\(r_1,\ldots,r_n\in\mathbb C\)</span>, con <span class="math inline">\(n\ge1\)</span>, y sea <span class="math inline">\(a\in\mathbb C\)</span>, <span class="math inline">\(a\ne0\)</span>. El polinomio</p>
 <p><span class="math display">\[
@@ -485,6 +486,11 @@ p(x)=a(x-r_1)(x-r_2)\cdots(x-r_n)
 =a\prod_{j=1}^{n}(x-r_j)
 \]</span></p>
 <p>tiene grado <span class="math inline">\(n\)</span> y coeficiente principal <span class="math inline">\(a\)</span>: el <a href="../sesiones/2026-09-01-sesion-15.html">grado del producto</a> es la suma de los grados de sus factores y su coeficiente principal es el producto de los coeficientes principales. El símbolo <span class="math inline">\(\prod\)</span> abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la <a href="../sesiones/2026-09-02-sesion-16.html">propiedad del producto cero</a>, <span class="math inline">\(p(c)=0\)</span> si y solo si <span class="math inline">\(c=r_j\)</span> para algún <span class="math inline">\(j\)</span>.</p>
+<p>En <span class="math inline">\(\prod_{j=1}^{n}(x-r_j)\)</span>, el índice <span class="math inline">\(j\)</span> toma los valores <span class="math inline">\(1,2,\ldots,n\)</span> y se multiplican los factores obtenidos. En cambio, <span class="math inline">\(\sum\)</span> indica una suma; por ejemplo,</p>
+<p><span class="math display">\[
+\sum_{j=0}^{n}a_jx^j=a_0+a_1x+\cdots+a_nx^n.
+\]</span></p>
+<p>Aquí <span class="math inline">\(j\)</span> es un índice entero; <span class="math inline">\(i\)</span> se reserva para la unidad imaginaria. El símbolo <span class="math inline">\(\prod\)</span> indica una operación y no representa el número <span class="math inline">\(\pi\)</span>.</p>
 <p>Cada raíz debe aparecer tantas veces como indique su <a href="../sesiones/2026-09-08-sesion-20.html">multiplicidad</a>. Si las raíces distintas son <span class="math inline">\(-2\)</span>, doble, y <span class="math inline">\(0\)</span> y <span class="math inline">\(3\)</span>, simples, los factores correspondientes son</p>
 <p><span class="math display">\[
 (x+2)^2,\qquad x,\qquad x-3.
@@ -494,6 +500,7 @@ p(x)=a(x-r_1)(x-r_2)\cdots(x-r_n)
 </section>
 <section id="pares-conjugados-y-coeficientes-reales" class="level2">
 <h2 class="anchored" data-anchor-id="pares-conjugados-y-coeficientes-reales">Pares conjugados y coeficientes reales</h2>
+<p>Tener <strong>coeficientes reales</strong> significa que todos los coeficientes, incluido el término independiente, pertenecen a <span class="math inline">\(\mathbb R\)</span>. Por ejemplo, en <span class="math inline">\(x^3-3x^2+4\)</span> son <span class="math inline">\(1,-3,0,4\)</span>; el <span class="math inline">\(0\)</span> corresponde a la potencia <span class="math inline">\(x\)</span> ausente. Esta condición no exige que las raíces sean reales.</p>
 <p>Si el polinomio tiene coeficientes reales y una raíz <span class="math inline">\(z=u+vi\)</span>, con <span class="math inline">\(u,v\in\mathbb R\)</span> y <span class="math inline">\(v\ne0\)</span>, también tiene la raíz <span class="math inline">\(\overline z=u-vi\)</span> con la misma multiplicidad, por el <a href="../sesiones/2026-09-08-sesion-20.html">teorema de las raíces conjugadas</a>. Los factores del par conjugado pueden agruparse, mediante la <a href="../sesiones/2026-08-13-sesion-04.html">diferencia de cuadrados</a>, en una cuadrática con coeficientes reales:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -545,7 +552,11 @@ r_1r_2=\frac ca.
 <section id="ejemplo-1.-raíz-doble-y-coeficiente-principal" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-1.-raíz-doble-y-coeficiente-principal">Ejemplo 1. Raíz doble y coeficiente principal</h3>
 <p>Construyamos el polinomio mónico de grado <span class="math inline">\(3\)</span> cuyas raíces son <span class="math inline">\(2\)</span>, doble, y <span class="math inline">\(-1\)</span>, simple.</p>
-<p>Los factores son <span class="math inline">\((x-2)^2\)</span> y <span class="math inline">\(x+1\)</span>. Se desarrolla el producto:</p>
+<p>Los factores son <span class="math inline">\((x-2)^2\)</span> y <span class="math inline">\(x+1\)</span>. El factor <span class="math inline">\((x-2)^2\)</span> se desarrolla multiplicando <span class="math inline">\(x-2\)</span> por sí mismo:</p>
+<p><span class="math display">\[
+(x-2)^2=(x-2)(x-2)=x^2-2x-2x+4=x^2-4x+4.
+\]</span></p>
+<p>Se desarrolla el producto:</p>
 <p><span class="math display">\[
 \begin{aligned}
 p(x)&amp;=(x-2)^2(x+1)\\
@@ -596,7 +607,15 @@ q(x)=-3(x-2)^2(x+1)=-3x^3+9x^2-12.
 <section id="ejemplo-2.-menor-grado-posible-con-coeficientes-reales" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-menor-grado-posible-con-coeficientes-reales">Ejemplo 2. Menor grado posible con coeficientes reales</h3>
 <p>Determinemos el polinomio mónico de menor grado con coeficientes reales que tiene las raíces <span class="math inline">\(3\)</span> y <span class="math inline">\(1+2i\)</span>.</p>
-<p>La raíz <span class="math inline">\(1+2i\)</span> obliga a incluir <span class="math inline">\(1-2i\)</span>. Como son tres raíces distintas, el grado es al menos <span class="math inline">\(3\)</span>. El producto de sus tres factores alcanza ese grado:</p>
+<p>La raíz <span class="math inline">\(1+2i\)</span> obliga a incluir <span class="math inline">\(1-2i\)</span>. Como son tres raíces distintas, el grado es al menos <span class="math inline">\(3\)</span>. La multiplicación de los factores conjugados se desarrolla así:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x-1-2i)(x-1+2i)
+&amp;=x^2-x+2ix-x+1-2i-2ix+2i-4i^2\\
+&amp;=x^2-2x+5,
+\end{aligned}
+\]</span></p>
+<p>pues <span class="math inline">\(2ix-2ix=0\)</span>, <span class="math inline">\(-2i+2i=0\)</span> y <span class="math inline">\(-4i^2=4\)</span>. El producto de sus tres factores alcanza ese grado:</p>
 <p><span class="math display">\[
 \begin{aligned}
 p(x)&amp;=(x-3)\bigl(x-(1+2i)\bigr)\bigl(x-(1-2i)\bigr)\\
@@ -610,7 +629,11 @@ p(x)&amp;=(x-3)\bigl(x-(1+2i)\bigr)\bigl(x-(1-2i)\bigr)\\
 z^2-2z+5=(-3+4i)-2(1+2i)+5=0.
 \]</span></p>
 <p>Así, <span class="math inline">\(p(z)=(z-3)\cdot0=0\)</span>; su conjugada también es raíz. Las tres raíces son simples, pues ya completan el grado.</p>
-<p>El producto de solo dos factores, <span class="math inline">\((x-3)\bigl(x-(1+2i)\bigr)\)</span>, tiene grado <span class="math inline">\(2\)</span>, pero su término independiente es <span class="math inline">\(3+6i\)</span>. Por ello, no satisface la condición de tener coeficientes reales.</p>
+<p>El producto de solo dos factores es</p>
+<p><span class="math display">\[
+(x-3)\bigl(x-(1+2i)\bigr)=x^2-(4+2i)x+3+6i.
+\]</span></p>
+<p>Tiene grado <span class="math inline">\(2\)</span>, pero los coeficientes <span class="math inline">\(-(4+2i)\)</span> y <span class="math inline">\(3+6i\)</span> no son reales. Si se omite la condición de coeficientes reales, este sí es el polinomio mónico de menor grado con las dos raíces indicadas.</p>
 </section>
 <section id="ejemplo-3.-construcción-con-una-condición-adicional" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-3.-construcción-con-una-condición-adicional">Ejemplo 3. Construcción con una condición adicional</h3>
