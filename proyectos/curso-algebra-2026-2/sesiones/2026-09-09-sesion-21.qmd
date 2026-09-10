@@ -12,6 +12,8 @@ $$
 (x-1)(x-2)=x^2-3x+2.
 $$
 
+La raíz es un número; el factor es un polinomio lineal. Por ejemplo, $2$ es una raíz y $x-2$ es el factor correspondiente.
+
 Pero $3(x-1)(x-2)=3x^2-9x+6$ tiene las mismas raíces, ambas simples. Para determinar un polinomio no basta con conocer sus raíces: también deben precisarse sus multiplicidades y su coeficiente principal.
 
 Sean $r_1,\ldots,r_n\in\mathbb C$, con $n\ge1$, y sea $a\in\mathbb C$, $a\ne0$. El polinomio
@@ -22,6 +24,14 @@ p(x)=a(x-r_1)(x-r_2)\cdots(x-r_n)
 $$
 
 tiene grado $n$ y coeficiente principal $a$: el [grado del producto](2026-09-01-sesion-15.qmd) es la suma de los grados de sus factores y su coeficiente principal es el producto de los coeficientes principales. El símbolo $\prod$ abrevia el producto de los factores indicados. Sus raíces son exactamente los números de la lista: por la [propiedad del producto cero](2026-09-02-sesion-16.qmd), $p(c)=0$ si y solo si $c=r_j$ para algún $j$.
+
+En $\prod_{j=1}^{n}(x-r_j)$, el índice $j$ toma los valores $1,2,\ldots,n$ y se multiplican los factores obtenidos. En cambio, $\sum$ indica una suma; por ejemplo,
+
+$$
+\sum_{j=0}^{n}a_jx^j=a_0+a_1x+\cdots+a_nx^n.
+$$
+
+Aquí $j$ es un índice entero; $i$ se reserva para la unidad imaginaria. El símbolo $\prod$ indica una operación y no representa el número $\pi$.
 
 Cada raíz debe aparecer tantas veces como indique su [multiplicidad](2026-09-08-sesion-20.qmd). Si las raíces distintas son $-2$, doble, y $0$ y $3$, simples, los factores correspondientes son
 
@@ -34,6 +44,8 @@ El producto tiene grado $2+1+1=4$. La raíz negativa $-2$ aporta $x-(-2)=x+2$; l
 La [factorización completa sobre $\mathbb C$](2026-09-08-sesion-20.qmd), consecuencia del teorema fundamental del álgebra, garantiza que, si la lista contiene **todas las raíces contadas con multiplicidad**, cualquier polinomio con esos datos tiene la forma anterior. Al fijar $a$, queda determinado un único polinomio. Se llama **mónico** cuando su coeficiente principal es $1$.
 
 ## Pares conjugados y coeficientes reales
+
+Tener **coeficientes reales** significa que todos los coeficientes, incluido el término independiente, pertenecen a $\mathbb R$. Por ejemplo, en $x^3-3x^2+4$ son $1,-3,0,4$; el $0$ corresponde a la potencia $x$ ausente. Esta condición no exige que las raíces sean reales.
 
 Si el polinomio tiene coeficientes reales y una raíz $z=u+vi$, con $u,v\in\mathbb R$ y $v\ne0$, también tiene la raíz $\overline z=u-vi$ con la misma multiplicidad, por el [teorema de las raíces conjugadas](2026-09-08-sesion-20.qmd). Los factores del par conjugado pueden agruparse, mediante la [diferencia de cuadrados](2026-08-13-sesion-04.qmd), en una cuadrática con coeficientes reales:
 
@@ -93,7 +105,13 @@ En particular, si dos números tienen suma $s$ y producto $t$, el polinomio món
 
 Construyamos el polinomio mónico de grado $3$ cuyas raíces son $2$, doble, y $-1$, simple.
 
-Los factores son $(x-2)^2$ y $x+1$. Se desarrolla el producto:
+Los factores son $(x-2)^2$ y $x+1$. El factor $(x-2)^2$ se desarrolla multiplicando $x-2$ por sí mismo:
+
+$$
+(x-2)^2=(x-2)(x-2)=x^2-2x-2x+4=x^2-4x+4.
+$$
+
+Se desarrolla el producto:
 
 $$
 \begin{aligned}
@@ -160,7 +178,17 @@ En $q(x)=-3p(x)$, todos esos coeficientes se multiplican por $-3$: el de $x^2$ e
 
 Determinemos el polinomio mónico de menor grado con coeficientes reales que tiene las raíces $3$ y $1+2i$.
 
-La raíz $1+2i$ obliga a incluir $1-2i$. Como son tres raíces distintas, el grado es al menos $3$. El producto de sus tres factores alcanza ese grado:
+La raíz $1+2i$ obliga a incluir $1-2i$. Como son tres raíces distintas, el grado es al menos $3$. La multiplicación de los factores conjugados se desarrolla así:
+
+$$
+\begin{aligned}
+(x-1-2i)(x-1+2i)
+&=x^2-x+2ix-x+1-2i-2ix+2i-4i^2\\
+&=x^2-2x+5,
+\end{aligned}
+$$
+
+pues $2ix-2ix=0$, $-2i+2i=0$ y $-4i^2=4$. El producto de sus tres factores alcanza ese grado:
 
 $$
 \begin{aligned}
@@ -179,7 +207,13 @@ $$
 
 Así, $p(z)=(z-3)\cdot0=0$; su conjugada también es raíz. Las tres raíces son simples, pues ya completan el grado.
 
-El producto de solo dos factores, $(x-3)\bigl(x-(1+2i)\bigr)$, tiene grado $2$, pero su término independiente es $3+6i$. Por ello, no satisface la condición de tener coeficientes reales.
+El producto de solo dos factores es
+
+$$
+(x-3)\bigl(x-(1+2i)\bigr)=x^2-(4+2i)x+3+6i.
+$$
+
+Tiene grado $2$, pero los coeficientes $-(4+2i)$ y $3+6i$ no son reales. Si se omite la condición de coeficientes reales, este sí es el polinomio mónico de menor grado con las dos raíces indicadas.
 
 ### Ejemplo 3. Construcción con una condición adicional
 
