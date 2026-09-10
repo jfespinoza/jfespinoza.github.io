@@ -439,13 +439,13 @@ window.Quarto = {
   <li><a href="#signo-del-polinomio" id="toc-signo-del-polinomio" class="nav-link" data-scroll-target="#signo-del-polinomio">Signo del polinomio</a></li>
   <li><a href="#multiplicidad-cruce-o-contacto-sin-cruce" id="toc-multiplicidad-cruce-o-contacto-sin-cruce" class="nav-link" data-scroll-target="#multiplicidad-cruce-o-contacto-sin-cruce">Multiplicidad: cruce o contacto sin cruce</a></li>
   <li><a href="#comportamiento-en-los-extremos" id="toc-comportamiento-en-los-extremos" class="nav-link" data-scroll-target="#comportamiento-en-los-extremos">Comportamiento en los extremos</a></li>
+  <li><a href="#procedimiento-para-un-bosquejo-razonado" id="toc-procedimiento-para-un-bosquejo-razonado" class="nav-link" data-scroll-target="#procedimiento-para-un-bosquejo-razonado">Procedimiento para un bosquejo razonado</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
   <li><a href="#ejemplo-1.-tres-raíces-simples" id="toc-ejemplo-1.-tres-raíces-simples" class="nav-link" data-scroll-target="#ejemplo-1.-tres-raíces-simples">Ejemplo 1. Tres raíces simples</a></li>
   <li><a href="#ejemplo-2.-una-raíz-doble-y-una-simple" id="toc-ejemplo-2.-una-raíz-doble-y-una-simple" class="nav-link" data-scroll-target="#ejemplo-2.-una-raíz-doble-y-una-simple">Ejemplo 2. Una raíz doble y una simple</a></li>
   <li><a href="#ejemplo-3.-un-factor-cuadrático-sin-raíces-reales" id="toc-ejemplo-3.-un-factor-cuadrático-sin-raíces-reales" class="nav-link" data-scroll-target="#ejemplo-3.-un-factor-cuadrático-sin-raíces-reales">Ejemplo 3. Un factor cuadrático sin raíces reales</a></li>
   </ul></li>
-  <li><a href="#procedimiento-para-un-bosquejo-razonado" id="toc-procedimiento-para-un-bosquejo-razonado" class="nav-link" data-scroll-target="#procedimiento-para-un-bosquejo-razonado">Procedimiento para un bosquejo razonado</a></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -482,8 +482,8 @@ window.Quarto = {
 
 <section id="de-la-factorización-a-la-gráfica" class="level2">
 <h2 class="anchored" data-anchor-id="de-la-factorización-a-la-gráfica">De la factorización a la gráfica</h2>
-<p>Sea <span class="math inline">\(p(x)\)</span> un polinomio con coeficientes reales, de grado <span class="math inline">\(n\ge1\)</span>. Su <strong>gráfica</strong> es el conjunto de puntos <span class="math inline">\((x,p(x))\)</span>, con <span class="math inline">\(x\in\mathbb R\)</span>: la primera coordenada se lee en el eje horizontal y la segunda, en el vertical. La gráfica tiene ecuación <span class="math inline">\(y=p(x)\)</span> y es una curva continua, sin saltos ni interrupciones.</p>
-<p>La factorización permite determinar dónde la curva está arriba o abajo del eje horizontal y qué ocurre cuando pasa por una raíz. Junto con el grado y el coeficiente principal, estos datos permiten trazar un <strong>bosquejo razonado</strong>: una curva compatible con la información algebraica, sin calcular la posición ni la altura de sus máximos y mínimos.</p>
+<p>Sea <span class="math inline">\(p(x)\)</span> un polinomio con coeficientes reales, de grado <span class="math inline">\(n\ge1\)</span>. Su <strong>gráfica</strong> es el conjunto de puntos <span class="math inline">\((x,p(x))\)</span>, con <span class="math inline">\(x\in\mathbb R\)</span>: la primera coordenada se lee en el eje horizontal y la segunda, en el vertical. La gráfica tiene ecuación <span class="math inline">\(y=p(x)\)</span> y es una <a href="../sesiones/2026-09-07-sesion-19.html">curva continua</a>, sin saltos ni interrupciones.</p>
+<p>La factorización permite determinar dónde la curva está arriba o abajo del eje horizontal y qué ocurre cuando pasa por una raíz. Junto con el grado y el coeficiente principal, estos datos permiten trazar un <strong>bosquejo razonado</strong>: una curva compatible con la información algebraica, sin determinar su altura en todos los puntos entre las raíces.</p>
 <section id="intersecciones-con-los-ejes" class="level3">
 <h3 class="anchored" data-anchor-id="intersecciones-con-los-ejes">Intersecciones con los ejes</h3>
 <p>Para un número real <span class="math inline">\(r\)</span>, el <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> da las equivalencias:</p>
@@ -495,17 +495,26 @@ p(r)=0
 \end{aligned}
 \]</span></p>
 <p>Las raíces reales corresponden, por tanto, a los puntos donde la gráfica <strong>cruza el eje horizontal o lo toca sin cruzarlo</strong>. Las raíces no reales no son intersecciones de esta gráfica con el eje: <span class="math inline">\(x^2+1\)</span> tiene raíces <span class="math inline">\(\pm i\)</span>, pero <span class="math inline">\(x^2+1&gt;0\)</span> para todo <span class="math inline">\(x\in\mathbb R\)</span>.</p>
-<p>La intersección con el eje vertical es siempre <span class="math inline">\((0,p(0))\)</span>. El valor <span class="math inline">\(p(0)\)</span> es el término independiente; si vale cero, la gráfica pasa por el origen.</p>
+<p>La intersección con el eje vertical es siempre <span class="math inline">\((0,p(0))\)</span>. El valor <span class="math inline">\(p(0)\)</span> es el <a href="../sesiones/2026-09-01-sesion-15.html">término independiente</a>; si vale cero, la gráfica pasa por el origen. Un dibujo puede sugerir una raíz, pero la igualdad <span class="math inline">\(p(r)=0\)</span> se confirma algebraicamente.</p>
 </section>
 </section>
 <section id="signo-del-polinomio" class="level2">
 <h2 class="anchored" data-anchor-id="signo-del-polinomio">Signo del polinomio</h2>
+<p>La <a href="../sesiones/2026-09-08-sesion-20.html">factorización completa sobre <span class="math inline">\(\mathbb C\)</span></a> y el agrupamiento de <a href="../sesiones/2026-09-09-sesion-21.html">pares conjugados</a> permiten escribir <strong>todo polinomio con coeficientes reales de grado <span class="math inline">\(n\ge1\)</span> como el producto de su coeficiente principal, factores lineales <span class="math inline">\(x-r\)</span> con <span class="math inline">\(r\in\mathbb R\)</span> y factores cuadráticos mónicos sin raíces reales</strong>. Los factores se repiten según las multiplicidades de sus raíces; puede no haber factores de alguno de los dos tipos. Esta es la <strong>factorización completa en <span class="math inline">\(\mathbb R\)</span></strong>.</p>
+<p>Por diferencia de cuadrados,</p>
+<p><span class="math display">\[
+x^4-16=(x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4).
+\]</span></p>
+<p>Los factores lineales aportan las raíces <span class="math inline">\(\pm2\)</span> y el cuadrático aporta <span class="math inline">\(\pm2i\)</span>, en concordancia con las <a href="../sesiones/2026-08-25-sesion-12.html">raíces cuartas de <span class="math inline">\(16\)</span></a>. Asimismo, al agrupar los factores de las raíces <span class="math inline">\(3\)</span> y <span class="math inline">\(1\pm2i\)</span> del ejemplo 2 de la <a href="../sesiones/2026-09-09-sesion-21.html">Sesión 21</a>, se obtiene</p>
+<p><span class="math display">\[
+(x-3)(x^2-2x+5)=x^3-5x^2+11x-15.
+\]</span></p>
 <p>Después de obtener una factorización mediante <a href="../sesiones/2026-08-13-sesion-04.html">factor común, productos notables o agrupación</a>, o mediante <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales y Ruffini</a>, el signo del polinomio se determina multiplicando los signos de sus factores.</p>
 <ul>
-<li><span class="math inline">\(x-r\)</span> es negativo si <span class="math inline">\(x&lt;r\)</span> y positivo si <span class="math inline">\(x&gt;r\)</span>.</li>
+<li><span class="math inline">\(x-r\)</span> es negativo si <span class="math inline">\(x&lt;r\)</span> y positivo si <span class="math inline">\(x&gt;r\)</span>, por las <a href="../sesiones/2026-08-17-sesion-06.html">propiedades de orden</a>.</li>
 <li>Si <span class="math inline">\(m\)</span> es par, <span class="math inline">\((x-r)^m&gt;0\)</span> para <span class="math inline">\(x\ne r\)</span>; si <span class="math inline">\(m\)</span> es impar, tiene el signo de <span class="math inline">\(x-r\)</span>.</li>
 <li>El coeficiente principal conserva su signo y debe incluirse en el producto.</li>
-<li>Los factores cuadráticos <strong>mónicos sin raíces reales</strong> son positivos. Por ejemplo, el factor asociado al par conjugado <span class="math inline">\(u\pm vi\)</span>, con <span class="math inline">\(u,v\in\mathbb R\)</span> y <span class="math inline">\(v\ne0\)</span>, satisface</li>
+<li>Los factores cuadráticos <strong>mónicos sin raíces reales</strong> son positivos. Por ejemplo, el factor asociado al par conjugado <span class="math inline">\(u\pm vi\)</span>, con <span class="math inline">\(u,v\in\mathbb R\)</span> y <span class="math inline">\(v\ne0\)</span>, satisface, al <a href="../sesiones/2026-09-02-sesion-16.html">completar el cuadrado</a>,</li>
 </ul>
 <p><span class="math display">\[
 x^2-2ux+(u^2+v^2)=(x-u)^2+v^2&gt;0.
@@ -548,7 +557,7 @@ p(x)=(x-r)^m q(x),\qquad q(r)\ne0.
 </tr>
 </tbody>
 </table>
-<p>En el caso par, la curva queda cerca de <span class="math inline">\(r\)</span> por arriba del eje si <span class="math inline">\(q(r)&gt;0\)</span> y por abajo si <span class="math inline">\(q(r)&lt;0\)</span>. Este contacto sin cruce es una tangencia al eje. En una raíz de multiplicidad impar mayor que <span class="math inline">\(1\)</span>, la gráfica también tiene tangente horizontal y cruza, como en <span class="math inline">\(y=x^3\)</span>; la paridad distingue el <strong>cambio de signo</strong>, no la existencia de tangente horizontal.</p>
+<p>En el caso par, la curva queda cerca de <span class="math inline">\(r\)</span> por arriba del eje si <span class="math inline">\(q(r)&gt;0\)</span> y por abajo si <span class="math inline">\(q(r)&lt;0\)</span>. Este contacto sin cruce es una tangencia al eje. En una raíz de multiplicidad impar mayor que <span class="math inline">\(1\)</span>, la gráfica también cruza, como <span class="math inline">\(y=x^3\)</span> en <span class="math inline">\(0\)</span>: que una raíz se repita no basta para concluir que la gráfica toca el eje sin cruzarlo.</p>
 </section>
 <section id="comportamiento-en-los-extremos" class="level2">
 <h2 class="anchored" data-anchor-id="comportamiento-en-los-extremos">Comportamiento en los extremos</h2>
@@ -604,7 +613,17 @@ p(x)=x^n\left(a_n+\frac{a_{n-1}}x+\cdots+\frac{a_0}{x^n}\right).
 </tbody>
 </table>
 <p>“Hacia arriba” significa que <span class="math inline">\(p(x)\)</span> toma valores positivos cada vez mayores; “hacia abajo”, valores negativos de valor absoluto cada vez mayor, al alejarse hacia el extremo indicado. Esto no describe todo el comportamiento entre las raíces.</p>
-<p>Por ejemplo, en <span class="math inline">\(5x-2x^3+1\)</span> el término dominante es <span class="math inline">\(-2x^3\)</span>: la curva va hacia arriba por la izquierda y hacia abajo por la derecha. Se atiende a la potencia mayor, aunque no sea el primer término escrito.</p>
+<p>Por ejemplo, en <span class="math inline">\(5x-2x^3+1\)</span> el término dominante es <span class="math inline">\(-2x^3\)</span>: la curva va hacia arriba por la izquierda y hacia abajo por la derecha. Al escribir el polinomio en <a href="../sesiones/2026-09-01-sesion-15.html">forma ordenada</a>, <span class="math inline">\(-2x^3+5x+1\)</span>, se identifica directamente el término de mayor grado.</p>
+</section>
+<section id="procedimiento-para-un-bosquejo-razonado" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento-para-un-bosquejo-razonado">Procedimiento para un bosquejo razonado</h2>
+<ol type="1">
+<li>Escriba el polinomio en forma ordenada e identifique el grado y el coeficiente principal. Obtenga una factorización con los métodos estudiados y determine las raíces reales con sus multiplicidades; puede confirmarlas mediante <a href="../sesiones/2026-09-08-sesion-20.html">Ruffini repetido</a>. Revise si quedan factores cuadráticos sin raíces reales.</li>
+<li>Marque las intersecciones <span class="math inline">\((r,0)\)</span> y <span class="math inline">\((0,p(0))\)</span>.</li>
+<li>Construya la tabla de signos y compruebe los resultados con valores de prueba.</li>
+<li>Determine en cada raíz si la gráfica cruza el eje o lo toca sin cruzarlo.</li>
+<li>Deduzca el comportamiento en los extremos a partir del grado y del coeficiente principal. Trace una curva continua y compruebe que respeta las intersecciones y los signos: debe haber un cruce por cada raíz real distinta de multiplicidad impar y un contacto sin cruce por cada raíz real distinta de multiplicidad par. La dirección de cada extremo debe concordar con el signo en el intervalo exterior correspondiente.</li>
+</ol>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
@@ -697,11 +716,11 @@ p(-3)=-15,\qquad p(-1)=3,\qquad p(1)=-3,\qquad p(3)=15
 <text x="345.00" y="177.50" font-size="20" text-anchor="start" fill="#006f62" font-weight="600" style="">(0, 0)</text>
 <text x="563.62" y="232.50" font-size="20" text-anchor="middle" fill="#006f62" font-weight="600" style="">(2, 0)</text>
 </svg>
-<p>La tabla también permite escribir dónde el polinomio es positivo:</p>
+<p>La tabla también permite escribir dónde el polinomio es positivo. El símbolo <span class="math inline">\(A\cup B\)</span> denota la <strong>unión</strong> de los conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>: los elementos que pertenecen a <span class="math inline">\(A\)</span> o a <span class="math inline">\(B\)</span>, incluidos los que pertenecen a ambos. Así,</p>
 <p><span class="math display">\[
 p(x)&gt;0\iff x\in(-2,0)\cup(2,\infty).
 \]</span></p>
-<p>Si se pide <span class="math inline">\(p(x)\ge0\)</span>, se incluyen las raíces y se obtiene <span class="math inline">\([-2,0]\cup[2,\infty)\)</span>.</p>
+<p>El <a href="../sesiones/2026-08-17-sesion-06.html">conjunto solución</a> es <span class="math inline">\(S=(-2,0)\cup(2,\infty)\)</span>. Si se pide <span class="math inline">\(p(x)\ge0\)</span>, se incluyen las raíces y se obtiene <span class="math inline">\(S=[-2,0]\cup[2,\infty)\)</span>.</p>
 </section>
 <section id="ejemplo-2.-una-raíz-doble-y-una-simple" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-una-raíz-doble-y-una-simple">Ejemplo 2. Una raíz doble y una simple</h3>
@@ -792,7 +811,7 @@ p(x)=(x+1)^2(x-2).
 </section>
 <section id="ejemplo-3.-un-factor-cuadrático-sin-raíces-reales" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-3.-un-factor-cuadrático-sin-raíces-reales">Ejemplo 3. Un factor cuadrático sin raíces reales</h3>
-<p>Sea <span class="math inline">\(p(x)=-x^3+4x^2-9x+10\)</span>. Sus candidatos racionales son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm5\)</span> y <span class="math inline">\(\pm10\)</span>. Como <span class="math inline">\(p(1)=4\)</span> y <span class="math inline">\(p(2)=0\)</span>, se divide entre <span class="math inline">\(x-2\)</span>:</p>
+<p>Sea <span class="math inline">\(p(x)=-x^3+4x^2-9x+10\)</span>. Sus <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm5\)</span> y <span class="math inline">\(\pm10\)</span>. Como <span class="math inline">\(p(1)=4\)</span> y <span class="math inline">\(p(2)=0\)</span>, se divide entre <span class="math inline">\(x-2\)</span> mediante <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a>:</p>
 <p><span class="math display">\[
 \begin{array}{r|rrrr}
 2 &amp; -1 &amp; 4 &amp; -9 &amp; 10\\
@@ -805,27 +824,17 @@ p(x)=(x+1)^2(x-2).
 <p><span class="math display">\[
 p(x)=-(x-2)(x^2-2x+5),\qquad x^2-2x+5=(x-1)^2+4&gt;0.
 \]</span></p>
-<p>El factor cuadrático tiene discriminante <span class="math inline">\(-16\)</span> y raíces <span class="math inline">\(1\pm2i\)</span>. La única raíz real es <span class="math inline">\(2\)</span>, simple. El signo de <span class="math inline">\(p(x)\)</span> es el de <span class="math inline">\(-(x-2)\)</span>: positivo para <span class="math inline">\(x&lt;2\)</span> y negativo para <span class="math inline">\(x&gt;2\)</span>.</p>
+<p>El factor cuadrático tiene <a href="../sesiones/2026-09-02-sesion-16.html">discriminante</a> <span class="math inline">\(-16\)</span> y raíces <span class="math inline">\(1\pm2i\)</span>. La única raíz real es <span class="math inline">\(2\)</span>, simple. El signo de <span class="math inline">\(p(x)\)</span> es el de <span class="math inline">\(-(x-2)\)</span>: positivo para <span class="math inline">\(x&lt;2\)</span> y negativo para <span class="math inline">\(x&gt;2\)</span>.</p>
 <p>La gráfica pasa por <span class="math inline">\((0,10)\)</span> y cruza el eje horizontal en <span class="math inline">\((2,0)\)</span>. El término dominante <span class="math inline">\(-x^3\)</span> indica que va hacia arriba por la izquierda y hacia abajo por la derecha. El grado <span class="math inline">\(3\)</span> no obliga a que haya tres intersecciones con el eje horizontal.</p>
 </section>
-</section>
-<section id="procedimiento-para-un-bosquejo-razonado" class="level2">
-<h2 class="anchored" data-anchor-id="procedimiento-para-un-bosquejo-razonado">Procedimiento para un bosquejo razonado</h2>
-<ol type="1">
-<li>Obtenga una factorización con los métodos estudiados. Determine todas las raíces reales y sus multiplicidades; revise si quedan factores cuadráticos sin raíces reales.</li>
-<li>Marque las intersecciones <span class="math inline">\((r,0)\)</span> y <span class="math inline">\((0,p(0))\)</span>.</li>
-<li>Construya la tabla de signos y compruebe los resultados con valores de prueba.</li>
-<li>Determine en cada raíz si la gráfica cruza el eje o lo toca sin cruzarlo.</li>
-<li>Deduzca el comportamiento en los extremos a partir del grado y del coeficiente principal. Trace una curva continua que respete los puntos, los signos y los cruces o contactos obtenidos.</li>
-</ol>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Alternar el signo en todas las raíces.</strong> En el ejemplo 2, el signo es negativo tanto antes como después de <span class="math inline">\(-1\)</span>, cerca de esa raíz. Solo cambia al atravesar una raíz de multiplicidad impar.</li>
-<li><strong>Omitir un factor negativo.</strong> En el ejemplo 3, <span class="math inline">\(x^2-2x+5&gt;0\)</span>, pero también interviene el coeficiente <span class="math inline">\(-1\)</span>: el signo es el opuesto al de <span class="math inline">\(x-2\)</span>.</li>
-<li><strong>Incluir una raíz al pedir valores positivos.</strong> Una raíz cumple <span class="math inline">\(p(r)=0\)</span>, no <span class="math inline">\(p(r)&gt;0\)</span>, aunque la curva toque el eje sin cruzarlo.</li>
-<li><strong>Confundir signo con crecimiento.</strong> Que <span class="math inline">\(p(x)&gt;0\)</span> en un intervalo solo significa que la gráfica está arriba del eje. No determina si sube o baja al avanzar hacia la derecha.</li>
+<li><strong>Alternar el signo en todas las raíces.</strong> Para <span class="math inline">\(p(x)=(x+1)^2(x-2)\)</span>, cambiar de signo en <span class="math inline">\(-1\)</span> llevaría a asignar signo positivo a <span class="math inline">\((-1,2)\)</span>, pero <span class="math inline">\(p(-2)=-4\)</span> y <span class="math inline">\(p(0)=-2\)</span>: el signo es negativo a ambos lados de la raíz doble. Solo cambia al atravesar una raíz de multiplicidad impar.</li>
+<li><strong>Omitir un factor negativo.</strong> En <span class="math inline">\(p(x)=-(x-2)(x^2-2x+5)\)</span>, leer solo el signo de <span class="math inline">\(x-2\)</span> daría <span class="math inline">\(p(0)&lt;0\)</span> y <span class="math inline">\(p(3)&gt;0\)</span>. Los valores correctos son <span class="math inline">\(p(0)=10\)</span> y <span class="math inline">\(p(3)=-8\)</span>, pues el factor <span class="math inline">\(-1\)</span> invierte el signo.</li>
+<li><strong>Incluir una raíz al pedir valores positivos.</strong> Para <span class="math inline">\(p(x)=(x-1)^2\)</span>, los valores <span class="math inline">\(p(0)=p(2)=1&gt;0\)</span> no permiten incluir <span class="math inline">\(1\)</span> entre los números donde <span class="math inline">\(p(x)&gt;0\)</span>: <span class="math inline">\(p(1)=0\)</span>. El conjunto solución es <span class="math inline">\(S=(-\infty,1)\cup(1,\infty)\)</span>, aunque la curva toque el eje sin cruzarlo.</li>
+<li><strong>Confundir el signo con la variación de los valores.</strong> Para <span class="math inline">\(p(x)=x^2+1\)</span>, se tiene <span class="math inline">\(p(-2)=5&gt;0\)</span> y <span class="math inline">\(p(-1)=2&gt;0\)</span>: al pasar de <span class="math inline">\(-2\)</span> a <span class="math inline">\(-1\)</span>, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -839,7 +848,7 @@ p(x)=-(x-2)(x^2-2x+5),\qquad x^2-2x+5=(x-1)^2+4&gt;0.
 <li><p>Construya la tabla de signos y verifíquela con un valor de prueba en cada intervalo. Indique en qué raíces la gráfica cruza el eje y en cuáles lo toca sin cruzarlo.</p></li>
 <li><p>Trace un bosquejo compatible y escriba los intervalos donde <span class="math inline">\(p(x)&gt;0\)</span>. Explique por qué <span class="math inline">\(0\)</span> se incluye o se excluye de este conjunto.</p></li>
 </ol></li>
-<li><p>Decida si cada descripción corresponde a algún polinomio con coeficientes reales. Si es posible, construya uno y verifique los datos; si no, justifique la incompatibilidad.</p>
+<li><p>Decida si cada descripción corresponde a algún polinomio con coeficientes reales. Si es posible, <a href="../sesiones/2026-09-09-sesion-21.html">construya uno</a> y verifique los datos; si no, justifique la incompatibilidad.</p>
 <ol type="a">
 <li><p>Grado <span class="math inline">\(3\)</span>, coeficiente principal positivo y gráfica situada por completo arriba del eje horizontal.</p></li>
 <li><p>Grado <span class="math inline">\(4\)</span>, coeficiente principal positivo, una única intersección con el eje horizontal en <span class="math inline">\((1,0)\)</span>, sin cruce, y <span class="math inline">\(p(0)=2\)</span>. ¿Estos datos determinan una sola multiplicidad para la raíz <span class="math inline">\(1\)</span>?</p></li>
@@ -908,7 +917,7 @@ p(x)=-x^2(x^2-4)=-x^2(x-2)(x+2).
 <p><span class="math display">\[
 p(x)&gt;0\iff x\in(-2,0)\cup(0,2).
 \]</span></p>
-<p>Se excluye <span class="math inline">\(0\)</span> porque <span class="math inline">\(p(0)=0\)</span>; la ausencia de cruce no lo convierte en un valor donde el polinomio sea positivo.</p>
+<p>El conjunto solución es <span class="math inline">\(S=(-2,0)\cup(0,2)\)</span>. Se excluye <span class="math inline">\(0\)</span> porque <span class="math inline">\(p(0)=0\)</span>; la ausencia de cruce no lo convierte en un valor donde el polinomio sea positivo.</p>
 <p><strong>2. a.</strong> No es posible. Con grado impar y coeficiente principal positivo, el extremo izquierdo va hacia abajo. Por ello, <span class="math inline">\(p(x)&lt;0\)</span> para números negativos de valor absoluto suficientemente grande, lo que contradice que la gráfica esté siempre arriba del eje.</p>
 <p><strong>2. b.</strong> Sí es posible. Una opción es</p>
 <p><span class="math display">\[
@@ -929,8 +938,10 @@ p(x)=2x^4-4x^3+4x^2-4x+2.
 <li><p>Para <span class="math inline">\(p(x)=x^3-2x^2-5x+6\)</span>, pruebe los candidatos racionales necesarios y use Ruffini para factorizar. Determine las raíces, <span class="math inline">\(p(0)\)</span>, los signos y el comportamiento en los extremos. Trace el bosquejo y escriba dónde <span class="math inline">\(p(x)&lt;0\)</span>.</p></li>
 <li><p>Factorice <span class="math inline">\(p(x)=x^3+x^2+x+1\)</span> por agrupación. Determine sus raíces en <span class="math inline">\(\mathbb C\)</span> y explique por qué la gráfica tiene una sola intersección con el eje horizontal. Indique el signo a cada lado de ella.</p></li>
 <li><p>Factorice <span class="math inline">\(p(x)=x^5-2x^4+x^3\)</span>. Determine la multiplicidad de cada raíz y si la gráfica cruza o toca sin cruzar. ¿Es correcta la afirmación “si una raíz se repite, la gráfica no cruza el eje”?</p></li>
-<li><p>Construya un polinomio de grado <span class="math inline">\(4\)</span> con coeficiente principal <span class="math inline">\(-1\)</span> cuya gráfica toque sin cruzar en <span class="math inline">\((-2,0)\)</span> y cruce en <span class="math inline">\((1,0)\)</span> y <span class="math inline">\((3,0)\)</span>. Desarrolle el producto, calcule <span class="math inline">\(p(0)\)</span> y determine los signos por intervalos.</p></li>
-<li><p>Un estudiante afirma que <span class="math inline">\(p(x)=x^3-4x\)</span> es creciente en todo <span class="math inline">\((-2,0)\)</span> porque allí <span class="math inline">\(p(x)&gt;0\)</span>. Explique qué indica realmente el signo y refute la afirmación comparando <span class="math inline">\(p(-1)\)</span> con <span class="math inline">\(p(-\tfrac12)\)</span>.</p></li>
+<li><p><a href="../sesiones/2026-09-09-sesion-21.html">Construya un polinomio</a> de grado <span class="math inline">\(4\)</span> con coeficiente principal <span class="math inline">\(-1\)</span> cuya gráfica toque sin cruzar en <span class="math inline">\((-2,0)\)</span> y cruce en <span class="math inline">\((1,0)\)</span> y <span class="math inline">\((3,0)\)</span>. Desarrolle el producto, calcule <span class="math inline">\(p(0)\)</span> y determine los signos por intervalos.</p></li>
+<li><p>Un estudiante afirma que, para <span class="math inline">\(p(x)=x^3-4x\)</span>, los valores de <span class="math inline">\(p(x)\)</span> siempre aumentan al avanzar hacia la derecha en <span class="math inline">\((-2,0)\)</span> porque allí <span class="math inline">\(p(x)&gt;0\)</span>. Explique qué indica realmente el signo y refute la afirmación comparando <span class="math inline">\(p(-1)\)</span> con <span class="math inline">\(p(-\tfrac12)\)</span>.</p></li>
+<li><p>¿Puede un polinomio de grado <span class="math inline">\(3\)</span> con coeficientes reales tener las raíces <span class="math inline">\(-1\)</span> y <span class="math inline">\(2\)</span>, ambas simples, y ningún otro punto de su gráfica sobre el eje horizontal? Justifique con el grado y los pares conjugados.</p></li>
+<li><p>Factorice <span class="math inline">\(p(x)=-x^3+x^2+6x\)</span> mediante factor común y factorización de la cuadrática. Trace un bosquejo razonado e indique las raíces, <span class="math inline">\(p(0)\)</span>, los signos por intervalos y el comportamiento en los extremos.</p></li>
 </ol>
 
 
