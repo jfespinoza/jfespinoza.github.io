@@ -6,9 +6,9 @@ description: "Raíces e intersecciones, signo de un polinomio a partir de sus fa
 
 ## De la factorización a la gráfica
 
-Sea $p(x)$ un polinomio con coeficientes reales, de grado $n\ge1$. Su **gráfica** es el conjunto de puntos $(x,p(x))$, con $x\in\mathbb R$: la primera coordenada se lee en el eje horizontal y la segunda, en el vertical. La gráfica tiene ecuación $y=p(x)$ y es una curva continua, sin saltos ni interrupciones.
+Sea $p(x)$ un polinomio con coeficientes reales, de grado $n\ge1$. Su **gráfica** es el conjunto de puntos $(x,p(x))$, con $x\in\mathbb R$: la primera coordenada se lee en el eje horizontal y la segunda, en el vertical. La gráfica tiene ecuación $y=p(x)$ y es una [curva continua](2026-09-07-sesion-19.qmd), sin saltos ni interrupciones.
 
-La factorización permite determinar dónde la curva está arriba o abajo del eje horizontal y qué ocurre cuando pasa por una raíz. Junto con el grado y el coeficiente principal, estos datos permiten trazar un **bosquejo razonado**: una curva compatible con la información algebraica, sin calcular la posición ni la altura de sus máximos y mínimos.
+La factorización permite determinar dónde la curva está arriba o abajo del eje horizontal y qué ocurre cuando pasa por una raíz. Junto con el grado y el coeficiente principal, estos datos permiten trazar un **bosquejo razonado**: una curva compatible con la información algebraica, sin determinar su altura en todos los puntos entre las raíces.
 
 ### Intersecciones con los ejes
 
@@ -24,16 +24,30 @@ $$
 
 Las raíces reales corresponden, por tanto, a los puntos donde la gráfica **cruza el eje horizontal o lo toca sin cruzarlo**. Las raíces no reales no son intersecciones de esta gráfica con el eje: $x^2+1$ tiene raíces $\pm i$, pero $x^2+1>0$ para todo $x\in\mathbb R$.
 
-La intersección con el eje vertical es siempre $(0,p(0))$. El valor $p(0)$ es el término independiente; si vale cero, la gráfica pasa por el origen.
+La intersección con el eje vertical es siempre $(0,p(0))$. El valor $p(0)$ es el [término independiente](2026-09-01-sesion-15.qmd); si vale cero, la gráfica pasa por el origen. Un dibujo puede sugerir una raíz, pero la igualdad $p(r)=0$ se confirma algebraicamente.
 
 ## Signo del polinomio
 
+La [factorización completa sobre $\mathbb C$](2026-09-08-sesion-20.qmd) y el agrupamiento de [pares conjugados](2026-09-09-sesion-21.qmd) permiten escribir **todo polinomio con coeficientes reales de grado $n\ge1$ como el producto de su coeficiente principal, factores lineales $x-r$ con $r\in\mathbb R$ y factores cuadráticos mónicos sin raíces reales**. Los factores se repiten según las multiplicidades de sus raíces; puede no haber factores de alguno de los dos tipos. Esta es la **factorización completa en $\mathbb R$**.
+
+Por diferencia de cuadrados,
+
+$$
+x^4-16=(x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4).
+$$
+
+Los factores lineales aportan las raíces $\pm2$ y el cuadrático aporta $\pm2i$, en concordancia con las [raíces cuartas de $16$](2026-08-25-sesion-12.qmd). Asimismo, al agrupar los factores de las raíces $3$ y $1\pm2i$ del ejemplo 2 de la [Sesión 21](2026-09-09-sesion-21.qmd), se obtiene
+
+$$
+(x-3)(x^2-2x+5)=x^3-5x^2+11x-15.
+$$
+
 Después de obtener una factorización mediante [factor común, productos notables o agrupación](2026-08-13-sesion-04.qmd), o mediante [candidatos racionales y Ruffini](2026-09-04-sesion-18.qmd), el signo del polinomio se determina multiplicando los signos de sus factores.
 
-- $x-r$ es negativo si $x<r$ y positivo si $x>r$.
+- $x-r$ es negativo si $x<r$ y positivo si $x>r$, por las [propiedades de orden](2026-08-17-sesion-06.qmd).
 - Si $m$ es par, $(x-r)^m>0$ para $x\ne r$; si $m$ es impar, tiene el signo de $x-r$.
 - El coeficiente principal conserva su signo y debe incluirse en el producto.
-- Los factores cuadráticos **mónicos sin raíces reales** son positivos. Por ejemplo, el factor asociado al par conjugado $u\pm vi$, con $u,v\in\mathbb R$ y $v\ne0$, satisface
+- Los factores cuadráticos **mónicos sin raíces reales** son positivos. Por ejemplo, el factor asociado al par conjugado $u\pm vi$, con $u,v\in\mathbb R$ y $v\ne0$, satisface, al [completar el cuadrado](2026-09-02-sesion-16.qmd),
 
 $$
 x^2-2ux+(u^2+v^2)=(x-u)^2+v^2>0.
@@ -62,7 +76,7 @@ Como $q$ es continuo y $q(r)\ne0$, conserva el signo de $q(r)$ cerca de $r$. El 
 | Impar: $1,3,5,\ldots$ | Cambia | Cruza el eje en $(r,0)$ |
 | Par: $2,4,6,\ldots$ | Se conserva | Toca el eje en $(r,0)$ sin cruzarlo |
 
-En el caso par, la curva queda cerca de $r$ por arriba del eje si $q(r)>0$ y por abajo si $q(r)<0$. Este contacto sin cruce es una tangencia al eje. En una raíz de multiplicidad impar mayor que $1$, la gráfica también tiene tangente horizontal y cruza, como en $y=x^3$; la paridad distingue el **cambio de signo**, no la existencia de tangente horizontal.
+En el caso par, la curva queda cerca de $r$ por arriba del eje si $q(r)>0$ y por abajo si $q(r)<0$. Este contacto sin cruce es una tangencia al eje. En una raíz de multiplicidad impar mayor que $1$, la gráfica también cruza, como $y=x^3$ en $0$: que una raíz se repita no basta para concluir que la gráfica toca el eje sin cruzarlo.
 
 ## Comportamiento en los extremos
 
@@ -89,7 +103,15 @@ Cuando $|x|$ crece sin cota, las fracciones dentro del paréntesis se acercan a 
 
 "Hacia arriba" significa que $p(x)$ toma valores positivos cada vez mayores; "hacia abajo", valores negativos de valor absoluto cada vez mayor, al alejarse hacia el extremo indicado. Esto no describe todo el comportamiento entre las raíces.
 
-Por ejemplo, en $5x-2x^3+1$ el término dominante es $-2x^3$: la curva va hacia arriba por la izquierda y hacia abajo por la derecha. Se atiende a la potencia mayor, aunque no sea el primer término escrito.
+Por ejemplo, en $5x-2x^3+1$ el término dominante es $-2x^3$: la curva va hacia arriba por la izquierda y hacia abajo por la derecha. Al escribir el polinomio en [forma ordenada](2026-09-01-sesion-15.qmd), $-2x^3+5x+1$, se identifica directamente el término de mayor grado.
+
+## Procedimiento para un bosquejo razonado
+
+1. Escriba el polinomio en forma ordenada e identifique el grado y el coeficiente principal. Obtenga una factorización con los métodos estudiados y determine las raíces reales con sus multiplicidades; puede confirmarlas mediante [Ruffini repetido](2026-09-08-sesion-20.qmd). Revise si quedan factores cuadráticos sin raíces reales.
+2. Marque las intersecciones $(r,0)$ y $(0,p(0))$.
+3. Construya la tabla de signos y compruebe los resultados con valores de prueba.
+4. Determine en cada raíz si la gráfica cruza el eje o lo toca sin cruzarlo.
+5. Deduzca el comportamiento en los extremos a partir del grado y del coeficiente principal. Trace una curva continua y compruebe que respeta las intersecciones y los signos: debe haber un cruce por cada raíz real distinta de multiplicidad impar y un contacto sin cruce por cada raíz real distinta de multiplicidad par. La dirección de cada extremo debe concordar con el signo en el intervalo exterior correspondiente.
 
 ## Ejemplos
 
@@ -157,13 +179,13 @@ confirman las cuatro columnas. El grado es impar y el coeficiente principal es p
 </svg>
 ```
 
-La tabla también permite escribir dónde el polinomio es positivo:
+La tabla también permite escribir dónde el polinomio es positivo. El símbolo $A\cup B$ denota la **unión** de los conjuntos $A$ y $B$: los elementos que pertenecen a $A$ o a $B$, incluidos los que pertenecen a ambos. Así,
 
 $$
 p(x)>0\iff x\in(-2,0)\cup(2,\infty).
 $$
 
-Si se pide $p(x)\ge0$, se incluyen las raíces y se obtiene $[-2,0]\cup[2,\infty)$.
+El [conjunto solución](2026-08-17-sesion-06.qmd) es $S=(-2,0)\cup(2,\infty)$. Si se pide $p(x)\ge0$, se incluyen las raíces y se obtiene $S=[-2,0]\cup[2,\infty)$.
 
 ### Ejemplo 2. Una raíz doble y una simple
 
@@ -239,7 +261,7 @@ El término dominante es $x^3$, así que los extremos tienen la misma orientaci�
 
 ### Ejemplo 3. Un factor cuadrático sin raíces reales
 
-Sea $p(x)=-x^3+4x^2-9x+10$. Sus candidatos racionales son $\pm1$, $\pm2$, $\pm5$ y $\pm10$. Como $p(1)=4$ y $p(2)=0$, se divide entre $x-2$:
+Sea $p(x)=-x^3+4x^2-9x+10$. Sus [candidatos racionales](2026-09-04-sesion-18.qmd) son $\pm1$, $\pm2$, $\pm5$ y $\pm10$. Como $p(1)=4$ y $p(2)=0$, se divide entre $x-2$ mediante [Ruffini](2026-09-03-sesion-17.qmd):
 
 $$
 \begin{array}{r|rrrr}
@@ -256,24 +278,16 @@ $$
 p(x)=-(x-2)(x^2-2x+5),\qquad x^2-2x+5=(x-1)^2+4>0.
 $$
 
-El factor cuadrático tiene discriminante $-16$ y raíces $1\pm2i$. La única raíz real es $2$, simple. El signo de $p(x)$ es el de $-(x-2)$: positivo para $x<2$ y negativo para $x>2$.
+El factor cuadrático tiene [discriminante](2026-09-02-sesion-16.qmd) $-16$ y raíces $1\pm2i$. La única raíz real es $2$, simple. El signo de $p(x)$ es el de $-(x-2)$: positivo para $x<2$ y negativo para $x>2$.
 
 La gráfica pasa por $(0,10)$ y cruza el eje horizontal en $(2,0)$. El término dominante $-x^3$ indica que va hacia arriba por la izquierda y hacia abajo por la derecha. El grado $3$ no obliga a que haya tres intersecciones con el eje horizontal.
 
-## Procedimiento para un bosquejo razonado
-
-1. Obtenga una factorización con los métodos estudiados. Determine todas las raíces reales y sus multiplicidades; revise si quedan factores cuadráticos sin raíces reales.
-2. Marque las intersecciones $(r,0)$ y $(0,p(0))$.
-3. Construya la tabla de signos y compruebe los resultados con valores de prueba.
-4. Determine en cada raíz si la gráfica cruza el eje o lo toca sin cruzarlo.
-5. Deduzca el comportamiento en los extremos a partir del grado y del coeficiente principal. Trace una curva continua que respete los puntos, los signos y los cruces o contactos obtenidos.
-
 ## Errores frecuentes
 
-- **Alternar el signo en todas las raíces.** En el ejemplo 2, el signo es negativo tanto antes como después de $-1$, cerca de esa raíz. Solo cambia al atravesar una raíz de multiplicidad impar.
-- **Omitir un factor negativo.** En el ejemplo 3, $x^2-2x+5>0$, pero también interviene el coeficiente $-1$: el signo es el opuesto al de $x-2$.
-- **Incluir una raíz al pedir valores positivos.** Una raíz cumple $p(r)=0$, no $p(r)>0$, aunque la curva toque el eje sin cruzarlo.
-- **Confundir signo con crecimiento.** Que $p(x)>0$ en un intervalo solo significa que la gráfica está arriba del eje. No determina si sube o baja al avanzar hacia la derecha.
+- **Alternar el signo en todas las raíces.** Para $p(x)=(x+1)^2(x-2)$, cambiar de signo en $-1$ llevaría a asignar signo positivo a $(-1,2)$, pero $p(-2)=-4$ y $p(0)=-2$: el signo es negativo a ambos lados de la raíz doble. Solo cambia al atravesar una raíz de multiplicidad impar.
+- **Omitir un factor negativo.** En $p(x)=-(x-2)(x^2-2x+5)$, leer solo el signo de $x-2$ daría $p(0)<0$ y $p(3)>0$. Los valores correctos son $p(0)=10$ y $p(3)=-8$, pues el factor $-1$ invierte el signo.
+- **Incluir una raíz al pedir valores positivos.** Para $p(x)=(x-1)^2$, los valores $p(0)=p(2)=1>0$ no permiten incluir $1$ entre los números donde $p(x)>0$: $p(1)=0$. El conjunto solución es $S=(-\infty,1)\cup(1,\infty)$, aunque la curva toque el eje sin cruzarlo.
+- **Confundir el signo con la variación de los valores.** Para $p(x)=x^2+1$, se tiene $p(-2)=5>0$ y $p(-1)=2>0$: al pasar de $-2$ a $-1$, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha.
 
 ## Actividad
 
@@ -289,7 +303,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    d. Trace un bosquejo compatible y escriba los intervalos donde $p(x)>0$. Explique por qué $0$ se incluye o se excluye de este conjunto.
 
-2. Decida si cada descripción corresponde a algún polinomio con coeficientes reales. Si es posible, construya uno y verifique los datos; si no, justifique la incompatibilidad.
+2. Decida si cada descripción corresponde a algún polinomio con coeficientes reales. Si es posible, [construya uno](2026-09-09-sesion-21.qmd) y verifique los datos; si no, justifique la incompatibilidad.
 
    a. Grado $3$, coeficiente principal positivo y gráfica situada por completo arriba del eje horizontal.
 
@@ -320,7 +334,7 @@ $$
 p(x)>0\iff x\in(-2,0)\cup(0,2).
 $$
 
-Se excluye $0$ porque $p(0)=0$; la ausencia de cruce no lo convierte en un valor donde el polinomio sea positivo.
+El conjunto solución es $S=(-2,0)\cup(0,2)$. Se excluye $0$ porque $p(0)=0$; la ausencia de cruce no lo convierte en un valor donde el polinomio sea positivo.
 
 **2. a.** No es posible. Con grado impar y coeficiente principal positivo, el extremo izquierdo va hacia abajo. Por ello, $p(x)<0$ para números negativos de valor absoluto suficientemente grande, lo que contradice que la gráfica esté siempre arriba del eje.
 
@@ -348,6 +362,10 @@ Otra opción es $q(x)=2(x-1)^4$, cuya única raíz es $1$ con multiplicidad $4$ 
 
 3. Factorice $p(x)=x^5-2x^4+x^3$. Determine la multiplicidad de cada raíz y si la gráfica cruza o toca sin cruzar. ¿Es correcta la afirmación "si una raíz se repite, la gráfica no cruza el eje"?
 
-4. Construya un polinomio de grado $4$ con coeficiente principal $-1$ cuya gráfica toque sin cruzar en $(-2,0)$ y cruce en $(1,0)$ y $(3,0)$. Desarrolle el producto, calcule $p(0)$ y determine los signos por intervalos.
+4. [Construya un polinomio](2026-09-09-sesion-21.qmd) de grado $4$ con coeficiente principal $-1$ cuya gráfica toque sin cruzar en $(-2,0)$ y cruce en $(1,0)$ y $(3,0)$. Desarrolle el producto, calcule $p(0)$ y determine los signos por intervalos.
 
-5. Un estudiante afirma que $p(x)=x^3-4x$ es creciente en todo $(-2,0)$ porque allí $p(x)>0$. Explique qué indica realmente el signo y refute la afirmación comparando $p(-1)$ con $p(-\tfrac12)$.
+5. Un estudiante afirma que, para $p(x)=x^3-4x$, los valores de $p(x)$ siempre aumentan al avanzar hacia la derecha en $(-2,0)$ porque allí $p(x)>0$. Explique qué indica realmente el signo y refute la afirmación comparando $p(-1)$ con $p(-\tfrac12)$.
+
+6. ¿Puede un polinomio de grado $3$ con coeficientes reales tener las raíces $-1$ y $2$, ambas simples, y ningún otro punto de su gráfica sobre el eje horizontal? Justifique con el grado y los pares conjugados.
+
+7. Factorice $p(x)=-x^3+x^2+6x$ mediante factor común y factorización de la cuadrática. Trace un bosquejo razonado e indique las raíces, $p(0)$, los signos por intervalos y el comportamiento en los extremos.
