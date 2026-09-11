@@ -520,9 +520,10 @@ x^4-16=(x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4).
 x^2-2ux+(u^2+v^2)=(x-u)^2+v^2&gt;0.
 \]</span></p>
 <p>El signo del coeficiente principal debe tenerse en cuenta: <span class="math inline">\(-x^2-1=-(x^2+1)\)</span> es negativo para todo <span class="math inline">\(x\)</span> real.</p>
-<p>Las raíces reales, colocadas en orden, dividen la recta en intervalos. <strong>El signo de <span class="math inline">\(p(x)\)</span> es constante en cada intervalo abierto que no contiene raíces.</strong> Por continuidad, pasar de positivo a negativo exigiría pasar por cero.</p>
+<p>Las raíces reales, colocadas en orden, dividen la recta en intervalos. Se usan las raíces <strong>distintas</strong>: una raíz doble se marca una sola vez. Los intervalos son abiertos porque las raíces, donde <span class="math inline">\(p(x)=0\)</span>, se examinan por separado. <strong>El signo de <span class="math inline">\(p(x)\)</span> es constante en cada intervalo abierto que no contiene raíces.</strong> Por continuidad, pasar de positivo a negativo exigiría pasar por cero.</p>
 <p>En una <strong>tabla de signos</strong> se escribe un intervalo por columna y un factor por fila. El producto es positivo si el número de factores negativos es par y negativo si es impar. Un valor de prueba permite comprobar cada columna, una vez que se ha establecido que el intervalo no contiene raíces.</p>
 <p>Si <span class="math inline">\(p(x)&gt;0\)</span>, la gráfica está arriba del eje horizontal; si <span class="math inline">\(p(x)&lt;0\)</span>, está abajo. En las raíces se tiene <span class="math inline">\(p(x)=0\)</span>.</p>
+<p>Para un cuadrático <span class="math inline">\(q(x)=ax^2+bx+c\)</span>, con <span class="math inline">\(a\ne0\)</span>, el <a href="../sesiones/2026-09-02-sesion-16.html">discriminante</a> <span class="math inline">\(\Delta=b^2-4ac&lt;0\)</span> garantiza que no hay raíces reales. Por continuidad, <span class="math inline">\(q\)</span> conserva un mismo signo en toda la recta; una evaluación, por ejemplo <span class="math inline">\(q(0)=c\)</span>, permite identificarlo. También coincide con el signo de <span class="math inline">\(a\)</span>, por el comportamiento del término dominante. <strong>Discriminante negativo no significa polinomio negativo</strong>: determina la ausencia de raíces reales. Conservar el signo tampoco significa conservar el valor.</p>
 </section>
 <section id="multiplicidad-cruce-o-contacto-sin-cruce" class="level2">
 <h2 class="anchored" data-anchor-id="multiplicidad-cruce-o-contacto-sin-cruce">Multiplicidad: cruce o contacto sin cruce</h2>
@@ -675,7 +676,7 @@ p(x)=x(x^2-4)=x(x-2)(x+2).
 </tr>
 </tbody>
 </table>
-<p>Por ejemplo, en <span class="math inline">\((-2,0)\)</span> hay dos factores negativos y uno positivo, por lo que el producto es positivo. Los valores</p>
+<p>Por ejemplo, si <span class="math inline">\(-2&lt;x&lt;0\)</span>, entonces <span class="math inline">\(0&lt;x+2&lt;2\)</span> y <span class="math inline">\(-4&lt;x-2&lt;-2\)</span>. Así, en <span class="math inline">\((-2,0)\)</span> hay dos factores negativos y uno positivo, por lo que el producto es positivo. Se determina el signo de cada factor completo, no solo el de <span class="math inline">\(x\)</span>. Los valores</p>
 <p><span class="math display">\[
 p(-3)=-15,\qquad p(-1)=3,\qquad p(1)=-3,\qquad p(3)=15
 \]</span></p>
@@ -768,6 +769,7 @@ p(x)=(x+1)^2(x-2).
 </tr>
 </tbody>
 </table>
+<p>En los tres intervalos, <span class="math inline">\((x+1)^2\)</span> es estrictamente positivo porque <span class="math inline">\(x=-1\)</span> está excluido; en la raíz sí vale cero. Para <span class="math inline">\(-1&lt;x&lt;2\)</span>, restar <span class="math inline">\(2\)</span> da <span class="math inline">\(-3&lt;x-2&lt;0\)</span>, lo que justifica el signo negativo de ese factor en toda la columna central.</p>
 <p>Lo confirman <span class="math inline">\(p(-2)=-4\)</span>, <span class="math inline">\(p(0)=-2\)</span> y <span class="math inline">\(p(3)=16\)</span>. En <span class="math inline">\(-1\)</span> la gráfica toca el eje sin cruzarlo y permanece por debajo cerca de ese punto. En <span class="math inline">\(2\)</span> cruza de valores negativos a positivos. El punto <span class="math inline">\((0,-2)\)</span> marca la intersección con el eje vertical.</p>
 <p>El término dominante es <span class="math inline">\(x^3\)</span>, así que los extremos tienen la misma orientación que en el ejemplo anterior. Sin embargo, la raíz doble cambia la forma de pasar por el eje horizontal.</p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="s22-cubica-doble-titulo s22-cubica-doble-descripcion" style="display:block;width:100%;max-width:640px;height:auto;margin:1rem auto;background:#fff;font-family:Arial,Helvetica,sans-serif">
@@ -825,6 +827,34 @@ p(x)=(x+1)^2(x-2).
 p(x)=-(x-2)(x^2-2x+5),\qquad x^2-2x+5=(x-1)^2+4&gt;0.
 \]</span></p>
 <p>El factor cuadrático tiene <a href="../sesiones/2026-09-02-sesion-16.html">discriminante</a> <span class="math inline">\(-16\)</span> y raíces <span class="math inline">\(1\pm2i\)</span>. La única raíz real es <span class="math inline">\(2\)</span>, simple. El signo de <span class="math inline">\(p(x)\)</span> es el de <span class="math inline">\(-(x-2)\)</span>: positivo para <span class="math inline">\(x&lt;2\)</span> y negativo para <span class="math inline">\(x&gt;2\)</span>.</p>
+<p>También se puede conservar el cociente de Ruffini como un solo factor: <span class="math inline">\(q(x)=-x^2+2x-5\)</span>. Su discriminante es <span class="math inline">\(2^2-4(-1)(-5)=-16\)</span> y <span class="math inline">\(q(0)=-5\)</span>, por lo que <span class="math inline">\(q(x)&lt;0\)</span> para todo <span class="math inline">\(x\in\mathbb R\)</span>. La tabla queda</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th style="text-align: center;"><span class="math inline">\((-\infty,2)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((2,\infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x-2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(-x^2+2x-5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El cuadrático no aporta intersecciones con el eje horizontal, pero su signo sí interviene en el producto.</p>
 <p>La gráfica pasa por <span class="math inline">\((0,10)\)</span> y cruza el eje horizontal en <span class="math inline">\((2,0)\)</span>. El término dominante <span class="math inline">\(-x^3\)</span> indica que va hacia arriba por la izquierda y hacia abajo por la derecha. El grado <span class="math inline">\(3\)</span> no obliga a que haya tres intersecciones con el eje horizontal.</p>
 </section>
 </section>
@@ -834,7 +864,7 @@ p(x)=-(x-2)(x^2-2x+5),\qquad x^2-2x+5=(x-1)^2+4&gt;0.
 <li><strong>Alternar el signo en todas las raíces.</strong> Para <span class="math inline">\(p(x)=(x+1)^2(x-2)\)</span>, cambiar de signo en <span class="math inline">\(-1\)</span> llevaría a asignar signo positivo a <span class="math inline">\((-1,2)\)</span>, pero <span class="math inline">\(p(-2)=-4\)</span> y <span class="math inline">\(p(0)=-2\)</span>: el signo es negativo a ambos lados de la raíz doble. Solo cambia al atravesar una raíz de multiplicidad impar.</li>
 <li><strong>Omitir un factor negativo.</strong> En <span class="math inline">\(p(x)=-(x-2)(x^2-2x+5)\)</span>, leer solo el signo de <span class="math inline">\(x-2\)</span> daría <span class="math inline">\(p(0)&lt;0\)</span> y <span class="math inline">\(p(3)&gt;0\)</span>. Los valores correctos son <span class="math inline">\(p(0)=10\)</span> y <span class="math inline">\(p(3)=-8\)</span>, pues el factor <span class="math inline">\(-1\)</span> invierte el signo.</li>
 <li><strong>Incluir una raíz al pedir valores positivos.</strong> Para <span class="math inline">\(p(x)=(x-1)^2\)</span>, los valores <span class="math inline">\(p(0)=p(2)=1&gt;0\)</span> no permiten incluir <span class="math inline">\(1\)</span> entre los números donde <span class="math inline">\(p(x)&gt;0\)</span>: <span class="math inline">\(p(1)=0\)</span>. El conjunto solución es <span class="math inline">\(S=(-\infty,1)\cup(1,\infty)\)</span>, aunque la curva toque el eje sin cruzarlo.</li>
-<li><strong>Confundir el signo con la variación de los valores.</strong> Para <span class="math inline">\(p(x)=x^2+1\)</span>, se tiene <span class="math inline">\(p(-2)=5&gt;0\)</span> y <span class="math inline">\(p(-1)=2&gt;0\)</span>: al pasar de <span class="math inline">\(-2\)</span> a <span class="math inline">\(-1\)</span>, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha.</li>
+<li><strong>Confundir el signo con la variación de los valores.</strong> Para <span class="math inline">\(p(x)=x^2+1\)</span>, se tiene <span class="math inline">\(p(-2)=5&gt;0\)</span> y <span class="math inline">\(p(-1)=2&gt;0\)</span>: al pasar de <span class="math inline">\(-2\)</span> a <span class="math inline">\(-1\)</span>, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha. Tampoco determina la concavidad: «estar debajo del eje» y «ser cóncava hacia abajo» describen propiedades diferentes.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
