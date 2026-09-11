@@ -439,13 +439,14 @@ window.Quarto = {
   <ul>
   <li><a href="#de-la-localización-a-la-aproximación" id="toc-de-la-localización-a-la-aproximación" class="nav-link active" data-scroll-target="#de-la-localización-a-la-aproximación">De la localización a la aproximación</a></li>
   <li><a href="#continuidad-y-cambio-de-signo" id="toc-continuidad-y-cambio-de-signo" class="nav-link" data-scroll-target="#continuidad-y-cambio-de-signo">Continuidad y cambio de signo</a></li>
-  <li><a href="#cómo-se-conserva-el-intervalo" id="toc-cómo-se-conserva-el-intervalo" class="nav-link" data-scroll-target="#cómo-se-conserva-el-intervalo">Cómo se conserva el intervalo</a>
-  <ul class="collapse">
+  <li><a href="#cómo-se-conserva-el-intervalo" id="toc-cómo-se-conserva-el-intervalo" class="nav-link" data-scroll-target="#cómo-se-conserva-el-intervalo">Cómo se conserva el intervalo</a></li>
   <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-tres-iteraciones-para-una-cúbica" id="toc-ejemplo-1.-tres-iteraciones-para-una-cúbica" class="nav-link" data-scroll-target="#ejemplo-1.-tres-iteraciones-para-una-cúbica">Ejemplo 1. Tres iteraciones para una cúbica</a></li>
+  <li><a href="#ejemplo-2.-una-raíz-doble-sin-cambio-de-signo" id="toc-ejemplo-2.-una-raíz-doble-sin-cambio-de-signo" class="nav-link" data-scroll-target="#ejemplo-2.-una-raíz-doble-sin-cambio-de-signo">Ejemplo 2. Una raíz doble sin cambio de signo</a></li>
   </ul></li>
-  <li><a href="#ejemplo.-tres-iteraciones-para-una-cúbica" id="toc-ejemplo.-tres-iteraciones-para-una-cúbica" class="nav-link" data-scroll-target="#ejemplo.-tres-iteraciones-para-una-cúbica">Ejemplo. Tres iteraciones para una cúbica</a></li>
   <li><a href="#cota-del-error-y-criterio-de-paro" id="toc-cota-del-error-y-criterio-de-paro" class="nav-link" data-scroll-target="#cota-del-error-y-criterio-de-paro">Cota del error y criterio de paro</a></li>
-  <li><a href="#raíces-que-no-producen-cambio-de-signo" id="toc-raíces-que-no-producen-cambio-de-signo" class="nav-link" data-scroll-target="#raíces-que-no-producen-cambio-de-signo">Raíces que no producen cambio de signo</a></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -482,17 +483,18 @@ window.Quarto = {
 
 <section id="de-la-localización-a-la-aproximación" class="level2">
 <h2 class="anchored" data-anchor-id="de-la-localización-a-la-aproximación">De la localización a la aproximación</h2>
-<p>Para <span class="math inline">\(p(x)=x^3-x-1\)</span>, los únicos <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Como <span class="math inline">\(p(1)=p(-1)=-1\)</span>, ninguno es raíz. El procedimiento de raíz racional, Ruffini y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.</p>
-<p>En la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a> se obtuvo <span class="math inline">\(p(1)=-1\)</span> y <span class="math inline">\(p(2)=5\)</span>, y se localizó al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. El <strong>método de bisección</strong> permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante evaluación directa y comparación de signos.</p>
+<p>Para <span class="math inline">\(p(x)=x^3-x-1\)</span>, los únicos <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Como <span class="math inline">\(p(1)=p(-1)=-1\)</span>, ninguno es raíz. El procedimiento de raíz racional, <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a> y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.</p>
+<p>En la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a> se obtuvo <span class="math inline">\(p(1)=-1\)</span> y <span class="math inline">\(p(2)=5\)</span>, y se localizó al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. El <strong>método de bisección</strong> permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante <a href="../sesiones/2026-09-01-sesion-15.html">evaluación directa</a> y comparación de signos.</p>
+<p>Cuando la <a href="../sesiones/2026-08-13-sesion-04.html">factorización</a> o la <a href="../sesiones/2026-09-02-sesion-16.html">fórmula general</a> permiten resolver una ecuación, se conservan las soluciones exactas. Por ejemplo, las soluciones de <span class="math inline">\(x^2-2=0\)</span> son <span class="math inline">\(\pm\sqrt2\)</span>. Si además se necesita un valor numérico, la bisección puede aproximar la raíz positiva en <span class="math inline">\([1,2]\)</span>. Disponer de una expresión exacta no impide calcular una aproximación con cota del error.</p>
 </section>
 <section id="continuidad-y-cambio-de-signo" class="level2">
 <h2 class="anchored" data-anchor-id="continuidad-y-cambio-de-signo">Continuidad y cambio de signo</h2>
-<p>La gráfica de un polinomio con coeficientes reales es una curva continua, sin saltos ni interrupciones. Por ello, si pasa de un lado del eje horizontal al otro, debe cortarlo en algún punto intermedio.</p>
+<p>La gráfica de un polinomio con coeficientes reales es una <a href="../sesiones/2026-09-10-sesion-22.html">curva continua</a>, sin saltos ni interrupciones. Por ello, si pasa de un lado del eje horizontal al otro, debe cortarlo en algún punto intermedio.</p>
 <p><strong>Propiedad del cambio de signo.</strong> Sea <span class="math inline">\(p(x)\)</span> un polinomio con coeficientes reales y sean <span class="math inline">\(a&lt;b\)</span>. Si</p>
 <p><span class="math display">\[
 p(a)p(b)&lt;0,
 \]</span></p>
-<p>entonces existe al menos una raíz <span class="math inline">\(r\)</span> en <span class="math inline">\((a,b)\)</span>. El producto es negativo precisamente cuando <span class="math inline">\(p(a)\)</span> y <span class="math inline">\(p(b)\)</span> tienen signos opuestos.</p>
+<p>entonces existe al menos una raíz <span class="math inline">\(r\)</span> en <span class="math inline">\((a,b)\)</span>. El producto es negativo precisamente cuando <span class="math inline">\(p(a)\)</span> y <span class="math inline">\(p(b)\)</span> tienen signos opuestos, por las <a href="../sesiones/2026-08-17-sesion-06.html">propiedades de orden</a>.</p>
 <p>Antes de buscar un cambio de signo se revisan los extremos: si <span class="math inline">\(p(a)=0\)</span> o <span class="math inline">\(p(b)=0\)</span>, ya se ha encontrado una raíz exacta. Cuando ninguno es cero y ambos valores tienen el mismo signo, esta propiedad no permite concluir si hay raíces dentro del intervalo.</p>
 <p>La condición garantiza <strong>al menos una raíz</strong>, sin afirmar que sea la única. Por ejemplo,</p>
 <p><span class="math display">\[
@@ -531,19 +533,21 @@ m=\frac{a+b}{2}
 </table>
 <p>Si <span class="math inline">\(p(m)\ne0\)</span>, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. <strong>Se reemplaza el extremo cuyo valor tiene el mismo signo que <span class="math inline">\(p(m)\)</span>.</strong></p>
 <p>Cada repetición de este paso se llama <strong>iteración</strong>. El nuevo intervalo mide la mitad del anterior y sigue conteniendo al menos una raíz. No se escoge la mitad por el tamaño de los valores de <span class="math inline">\(p\)</span>, sino por sus signos.</p>
-<section id="procedimiento" class="level3">
-<h3 class="anchored" data-anchor-id="procedimiento">Procedimiento</h3>
+</section>
+<section id="procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento">Procedimiento</h2>
 <ol type="1">
 <li>Evalúe el polinomio en los extremos del intervalo <span class="math inline">\([a,b]\)</span>. Si alguno es raíz, repórtelo. Si ninguno lo es, compruebe que los valores tienen signos opuestos. Cuando el intervalo no esté dado, evaluar en números sencillos puede ayudar a encontrar un cambio de signo, aunque no siempre lo proporciona.</li>
 <li>Calcule el punto medio y evalúe el polinomio allí. Trabaje con fracciones o decimales exactos para conservar el signo correcto.</li>
 <li>Si el punto medio es raíz, termine. En caso contrario, conserve la mitad con cambio de signo.</li>
 <li>Repita con el intervalo conservado. Registre el punto medio, su evaluación y el nuevo intervalo en cada paso.</li>
-<li>Al detenerse, reporte el intervalo final, su punto medio como aproximación y una cota del error.</li>
+<li>Si no se encontró una raíz exacta, llame <span class="math inline">\([a,b]\)</span> al intervalo final y reporte su punto medio <span class="math inline">\(\bar x=\frac{a+b}{2}\)</span> como aproximación, con cota del error <span class="math inline">\(\frac{b-a}{2}\)</span>. Compruebe que la longitud final sea la longitud inicial dividida entre <span class="math inline">\(2^k\)</span>, donde <span class="math inline">\(k\)</span> es el número de iteraciones realizadas.</li>
 </ol>
 </section>
-</section>
-<section id="ejemplo.-tres-iteraciones-para-una-cúbica" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo.-tres-iteraciones-para-una-cúbica">Ejemplo. Tres iteraciones para una cúbica</h2>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-tres-iteraciones-para-una-cúbica" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-tres-iteraciones-para-una-cúbica">Ejemplo 1. Tres iteraciones para una cúbica</h3>
 <p>Consideremos <span class="math inline">\(p(x)=x^3-x-1\)</span> en <span class="math inline">\([1,2]\)</span>. Ningún extremo es raíz y <span class="math inline">\(p(1)=-1&lt;0&lt;p(2)=5\)</span>.</p>
 <p><strong>Primera iteración.</strong> El punto medio es <span class="math inline">\(\frac32\)</span>. Su evaluación es</p>
 <p><span class="math display">\[
@@ -651,7 +655,7 @@ p\!\left(\frac{11}{8}\right)
 </svg>
 <figcaption style="text-align: center; margin-top: .6rem;">Cada intervalo conserva un cambio de signo y mide la mitad del anterior.</figcaption>
 </figure>
-<p>El intervalo final tiene longitud <span class="math inline">\(\frac{11}{8}-\frac54=\frac18\)</span>. Su punto medio es</p>
+<p>El intervalo final tiene longitud <span class="math inline">\(\frac{11}{8}-\frac54=\frac18\)</span>. Su punto medio proporciona la aproximación</p>
 <p><span class="math display">\[
 \bar x=\frac{\frac54+\frac{11}{8}}2=\frac{21}{16}=1.3125.
 \]</span></p>
@@ -665,16 +669,27 @@ r\approx\frac{21}{16},
 \]</span></p>
 <p>Calcular este punto medio final no añade una cuarta iteración: para reportarlo no hace falta evaluar <span class="math inline">\(p\)</span> allí ni volver a recortar el intervalo. Tampoco se afirma que sea la raíz exacta; de hecho, <span class="math inline">\(p\!\left(\frac{21}{16}\right)=-\frac{211}{4096}\ne0\)</span>.</p>
 </section>
+<section id="ejemplo-2.-una-raíz-doble-sin-cambio-de-signo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-una-raíz-doble-sin-cambio-de-signo">Ejemplo 2. Una raíz doble sin cambio de signo</h3>
+<p>Para <span class="math inline">\(p(x)=x^2-4x+4=(x-2)^2\)</span>,</p>
+<p><span class="math display">\[
+p(0)=4,\qquad p(3)=1.
+\]</span></p>
+<p>Los valores tienen el mismo signo, pero <span class="math inline">\(2\in(0,3)\)</span> es raíz doble. La gráfica toca el eje sin cruzarlo, como se estudió al relacionar <a href="../sesiones/2026-09-10-sesion-22.html">signo y multiplicidad</a>. No se cumple la condición para iniciar la bisección en <span class="math inline">\([0,3]\)</span>.</p>
+<p>Una raíz de <a href="../sesiones/2026-09-08-sesion-20.html">multiplicidad</a> par no produce cambio de signo al atravesarla. Por ello, el criterio de signos no garantiza localizarla. Si una evaluación coincide exactamente con ella, sí se reconoce por el valor cero. <strong>La ausencia de cambio de signo no demuestra la ausencia de raíces.</strong></p>
+<p>La bisección aproxima una raíz del intervalo elegido; por sí sola no determina cuántas raíces hay ni proporciona todas las soluciones de la ecuación.</p>
+</section>
+</section>
 <section id="cota-del-error-y-criterio-de-paro" class="level2">
 <h2 class="anchored" data-anchor-id="cota-del-error-y-criterio-de-paro">Cota del error y criterio de paro</h2>
-<p>El <strong>error absoluto</strong> de una aproximación <span class="math inline">\(\bar x\)</span> a una raíz <span class="math inline">\(r\)</span> es la distancia <span class="math inline">\(|r-\bar x|\)</span>. Una <strong>cota del error</strong> es un número que garantiza una distancia máxima, aunque se desconozca el valor exacto de <span class="math inline">\(r\)</span>.</p>
+<p>El <strong>error absoluto</strong> de una aproximación <span class="math inline">\(\bar x\)</span> a una raíz <span class="math inline">\(r\)</span> es la distancia <span class="math inline">\(\lvert r-\bar x\rvert\)</span>, medida con el <a href="../sesiones/2026-08-17-sesion-06.html">valor absoluto</a>. Una <strong>cota del error</strong> es un número que garantiza una distancia máxima, aunque se desconozca el valor exacto de <span class="math inline">\(r\)</span>.</p>
 <p>Sea <span class="math inline">\([a_0,b_0]\)</span> el intervalo inicial. Si se han realizado <span class="math inline">\(k\)</span> iteraciones sin encontrar una raíz exacta, el intervalo conservado <span class="math inline">\([a_k,b_k]\)</span> tiene longitud</p>
 <p><span class="math display">\[
 b_k-a_k=\frac{b_0-a_0}{2^k}.
 \]</span></p>
 <p>Si se reporta su punto medio <span class="math inline">\(\bar x=\frac{a_k+b_k}{2}\)</span>, para una raíz <span class="math inline">\(r\)</span> contenida en ese intervalo se tiene</p>
 <p><span class="math display">\[
-|r-\bar x|\le\frac{b_k-a_k}{2}
+\lvert r-\bar x\rvert\le\frac{b_k-a_k}{2}
 =\frac{b_0-a_0}{2^{k+1}}.
 \]</span></p>
 <p>La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre <span class="math inline">\(2\)</span>.</p>
@@ -714,33 +729,29 @@ b_k-a_k=\frac{b_0-a_0}{2^k}.
 </tr>
 </tbody>
 </table>
-<p>El <strong>criterio de paro</strong> indica cuándo detenerse. Puede fijarse un número de iteraciones y reportar la cota obtenida, o prescribirse una <strong>tolerancia</strong> <span class="math inline">\(\varepsilon&gt;0\)</span> y detenerse cuando</p>
+<p>El <strong>criterio de paro</strong> indica cuándo detenerse. Puede fijarse un número de iteraciones y reportar la cota obtenida, o prescribirse una <strong>tolerancia</strong> <span class="math inline">\(\varepsilon&gt;0\)</span> —la letra <span class="math inline">\(\varepsilon\)</span> se lee «épsilon»— y detenerse cuando</p>
 <p><span class="math display">\[
 \frac{b_k-a_k}{2}\le\varepsilon.
 \]</span></p>
-<p>Por ejemplo, desde un intervalo de longitud <span class="math inline">\(1\)</span>, para garantizar un error a lo sumo <span class="math inline">\(\frac18\)</span> bastan dos iteraciones. Para garantizar un error a lo sumo <span class="math inline">\(\frac1{16}\)</span> bastan tres. Si se encuentra antes un extremo o punto medio que anula el polinomio, se termina con una raíz exacta y error cero.</p>
-</section>
-<section id="raíces-que-no-producen-cambio-de-signo" class="level2">
-<h2 class="anchored" data-anchor-id="raíces-que-no-producen-cambio-de-signo">Raíces que no producen cambio de signo</h2>
-<p>Para <span class="math inline">\(p(x)=x^2-4x+4=(x-2)^2\)</span>,</p>
+<p>Para decidir cuántas iteraciones bastan, se compara la cota con la tolerancia. Por ejemplo, desde un intervalo de longitud <span class="math inline">\(1\)</span> y con tolerancia <span class="math inline">\(\frac18\)</span>, se requiere</p>
 <p><span class="math display">\[
-p(0)=4,\qquad p(3)=1.
+\frac{1}{2^{k+1}}\le\frac18,
+\qquad\text{equivalentemente,}\qquad
+2^{k+1}\ge8.
 \]</span></p>
-<p>Los valores tienen el mismo signo, pero <span class="math inline">\(2\in(0,3)\)</span> es raíz doble. La gráfica toca el eje sin cruzarlo, como se estudió al relacionar <a href="../sesiones/2026-09-10-sesion-22.html">signo y multiplicidad</a>. No se cumple la condición para iniciar la bisección en <span class="math inline">\([0,3]\)</span>.</p>
-<p>Una raíz de multiplicidad par no produce cambio de signo al atravesarla. Por ello, el criterio de signos no garantiza localizarla. Si una evaluación coincide exactamente con ella, sí se reconoce por el valor cero. <strong>La ausencia de cambio de signo no demuestra la ausencia de raíces.</strong></p>
-<p>La bisección aproxima una raíz del intervalo elegido; por sí sola no determina cuántas raíces hay ni proporciona todas las soluciones de la ecuación.</p>
+<p>Como <span class="math inline">\(2^2=4&lt;8\)</span> y <span class="math inline">\(2^3=8\)</span>, el menor número es <span class="math inline">\(k=2\)</span>. Para una tolerancia <span class="math inline">\(\frac1{16}\)</span> se necesita <span class="math inline">\(2^{k+1}\ge16=2^4\)</span>, por lo que bastan tres iteraciones. Si se encuentra antes un extremo o punto medio que anula el polinomio, se termina con una raíz exacta y error cero.</p>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li><strong>Conservar la mitad equivocada.</strong> En la primera iteración del ejemplo, <span class="math inline">\(p(\frac32)&gt;0\)</span> y <span class="math inline">\(p(2)&gt;0\)</span>. Conservar <span class="math inline">\([\frac32,2]\)</span> perdería la garantía del cambio de signo. El intervalo correcto es <span class="math inline">\([1,\frac32]\)</span>.</li>
-<li><strong>Confundir longitud con cota del punto medio.</strong> Después de tres recortes de un intervalo de longitud <span class="math inline">\(1\)</span>, la longitud es <span class="math inline">\(\frac18\)</span> y la cota del punto medio final es <span class="math inline">\(\frac1{16}\)</span>. El último punto evaluado, <span class="math inline">\(\frac{11}{8}\)</span> en el ejemplo, es un extremo del intervalo final; no es su punto medio.</li>
-<li><strong>Usar <span class="math inline">\(|p(\bar x)|\)</span> como si fuera el error.</strong> Para <span class="math inline">\(p(x)=(x-2)^3\)</span>, se tiene <span class="math inline">\(p(2.5)=0.125\)</span>, pero la distancia de <span class="math inline">\(2.5\)</span> a la raíz <span class="math inline">\(2\)</span> es <span class="math inline">\(0.5\)</span>. El valor del polinomio y la distancia a la raíz son cantidades distintas. La cota de bisección procede del intervalo.</li>
+<li><strong>Confundir longitud con cota del punto medio.</strong> Después de tres iteraciones desde un intervalo de longitud <span class="math inline">\(1\)</span>, la longitud es <span class="math inline">\(\frac18\)</span> y la cota del punto medio final es <span class="math inline">\(\frac1{16}\)</span>. El último punto evaluado, <span class="math inline">\(\frac{11}{8}\)</span> en el ejemplo, es un extremo del intervalo final; no es su punto medio.</li>
+<li><strong>Usar <span class="math inline">\(\lvert p(\bar x)\rvert\)</span> como si fuera el error.</strong> Para <span class="math inline">\(p(x)=(x-2)^3\)</span>, se tiene <span class="math inline">\(p(2.5)=0.125\)</span>, pero la distancia de <span class="math inline">\(2.5\)</span> a la raíz <span class="math inline">\(2\)</span> es <span class="math inline">\(0.5\)</span>. El valor del polinomio y la distancia a la raíz son cantidades distintas. La cota de bisección procede del intervalo.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva y justifique cada decisión sobre el intervalo que se conserva. Registre las evaluaciones sin redondear.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada decisión sobre el intervalo que se conserva y registre las evaluaciones sin redondear.</p>
 <ol type="1">
 <li><p>Sea <span class="math inline">\(p(x)=x^3-3x+1\)</span>.</p>
 <ol type="a">
@@ -816,12 +827,12 @@ p\!\left(\frac74\right)=\frac{343-336+64}{64}=\frac{71}{64}.
 \qquad
 \left|r-\frac{13}{8}\right|\le\frac18=0.125.
 \]</span></p>
-<p>Se garantiza la tolerancia <span class="math inline">\(\frac18\)</span>. La cota obtenida no garantiza la tolerancia <span class="math inline">\(\frac1{16}\)</span>; un recorte adicional permitiría garantizarla al reportar el nuevo punto medio. La cota es un máximo garantizado, no el error real de la aproximación.</p>
+<p>Se garantiza la tolerancia <span class="math inline">\(\frac18\)</span>. La cota obtenida no garantiza la tolerancia <span class="math inline">\(\frac1{16}\)</span>; una iteración adicional permitiría garantizarla al reportar el nuevo punto medio. La cota es un máximo garantizado, no el error real de la aproximación.</p>
 <p><strong>2.</strong> Los valores son</p>
 <p><span class="math display">\[
 p(-2)=-1,\qquad p(-1)=3,\qquad p(0)=1,\qquad p(1)=-1.
 \]</span></p>
-<p>Hay una raíz en <span class="math inline">\((-2,-1)\)</span> y otra en <span class="math inline">\((0,1)\)</span>. El ejercicio 1 garantiza una tercera en <span class="math inline">\((1,2)\)</span>. Son intervalos disjuntos, por lo que las tres raíces son distintas. Un polinomio de grado <span class="math inline">\(3\)</span> tiene a lo sumo tres raíces distintas; estas son todas, y las tres son reales y simples. La afirmación es falsa: aproximar una raíz no determina la naturaleza de las demás.</p>
+<p>Hay una raíz en <span class="math inline">\((-2,-1)\)</span> y otra en <span class="math inline">\((0,1)\)</span>. El ejercicio 1 garantiza una tercera en <span class="math inline">\((1,2)\)</span>. Son intervalos disjuntos, por lo que las tres raíces son distintas. Un polinomio de grado <span class="math inline">\(3\)</span> tiene <a href="../sesiones/2026-09-08-sesion-20.html">a lo sumo tres raíces distintas</a>; estas son todas, y las tres son reales y simples. La afirmación es falsa: aproximar una raíz no determina la naturaleza de las demás.</p>
 <p><strong>3. a.</strong> <span class="math inline">\(q(1)=-6\)</span> y <span class="math inline">\(q(2)=0\)</span>. El extremo <span class="math inline">\(2\)</span> es una raíz exacta; no hace falta bisecar para encontrarla.</p>
 <p><strong>3. b.</strong> En <span class="math inline">\([1,3]\)</span>, <span class="math inline">\(q(1)=-6\)</span> y <span class="math inline">\(q(3)=18\)</span> tienen signos opuestos. El primer punto medio es <span class="math inline">\(2\)</span> y <span class="math inline">\(q(2)=0\)</span>, así que el proceso termina con una raíz exacta. La afirmación es falsa: el método permite aproximar una raíz y, en ocasiones, encuentra una exactamente.</p>
 </div>
@@ -831,7 +842,7 @@ p(-2)=-1,\qquad p(-1)=3,\qquad p(0)=1,\qquad p(1)=-1.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Para <span class="math inline">\(p(x)=x^3-2x-5\)</span>, compruebe el cambio de signo en <span class="math inline">\([2,3]\)</span>. Realice tres iteraciones y reporte el intervalo final, su punto medio y la cota del error.</p></li>
+<li><p>Para <span class="math inline">\(p(x)=x^3-2x-5\)</span>, considerado en la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a>, compruebe el cambio de signo en <span class="math inline">\([2,3]\)</span>. Realice tres iteraciones y reporte el intervalo final, su punto medio y la cota del error.</p></li>
 <li><p>Aproxime <span class="math inline">\(\sqrt3\)</span> mediante dos iteraciones aplicadas a <span class="math inline">\(x^2-3\)</span> en <span class="math inline">\([1,2]\)</span>. Reporte el intervalo, la aproximación y su cota. Distinga la aproximación de las dos soluciones exactas de <span class="math inline">\(x^2-3=0\)</span>.</p></li>
 <li><p>Después de dos iteraciones iniciadas en <span class="math inline">\([2,4]\)</span>, se reporta el punto medio del intervalo conservado. ¿Cuál es la cota del error? ¿Cuántas iteraciones en total bastan para garantizar una cota a lo sumo <span class="math inline">\(\frac18\)</span>? Suponga que no se ha encontrado una raíz exacta.</p></li>
 <li><p>Se reporta, para el ejemplo de <span class="math inline">\(x^3-x-1\)</span>, «la raíz es <span class="math inline">\(\frac{11}{8}\)</span> y el error es a lo sumo <span class="math inline">\(\frac1{16}\)</span>». Corrija el reporte usando el intervalo final <span class="math inline">\([\frac54,\frac{11}{8}]\)</span>. Distinga el último punto evaluado del punto medio de ese intervalo.</p></li>
