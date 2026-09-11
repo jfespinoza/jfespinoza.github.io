@@ -55,11 +55,13 @@ $$
 
 El signo del coeficiente principal debe tenerse en cuenta: $-x^2-1=-(x^2+1)$ es negativo para todo $x$ real.
 
-Las raíces reales, colocadas en orden, dividen la recta en intervalos. **El signo de $p(x)$ es constante en cada intervalo abierto que no contiene raíces.** Por continuidad, pasar de positivo a negativo exigiría pasar por cero.
+Las raíces reales, colocadas en orden, dividen la recta en intervalos. Se usan las raíces **distintas**: una raíz doble se marca una sola vez. Los intervalos son abiertos porque las raíces, donde $p(x)=0$, se examinan por separado. **El signo de $p(x)$ es constante en cada intervalo abierto que no contiene raíces.** Por continuidad, pasar de positivo a negativo exigiría pasar por cero.
 
 En una **tabla de signos** se escribe un intervalo por columna y un factor por fila. El producto es positivo si el número de factores negativos es par y negativo si es impar. Un valor de prueba permite comprobar cada columna, una vez que se ha establecido que el intervalo no contiene raíces.
 
 Si $p(x)>0$, la gráfica está arriba del eje horizontal; si $p(x)<0$, está abajo. En las raíces se tiene $p(x)=0$.
+
+Para un cuadrático $q(x)=ax^2+bx+c$, con $a\ne0$, el [discriminante](2026-09-02-sesion-16.qmd) $\Delta=b^2-4ac<0$ garantiza que no hay raíces reales. Por continuidad, $q$ conserva un mismo signo en toda la recta; una evaluación, por ejemplo $q(0)=c$, permite identificarlo. También coincide con el signo de $a$, por el comportamiento del término dominante. **Discriminante negativo no significa polinomio negativo**: determina la ausencia de raíces reales. Conservar el signo tampoco significa conservar el valor.
 
 ## Multiplicidad: cruce o contacto sin cruce
 
@@ -132,7 +134,7 @@ Las raíces son $-2$, $0$ y $2$, todas simples. La suma de sus multiplicidades e
 | $x-2$ | $-$ | $-$ | $-$ | $+$ |
 | $p(x)$ | $-$ | $+$ | $-$ | $+$ |
 
-Por ejemplo, en $(-2,0)$ hay dos factores negativos y uno positivo, por lo que el producto es positivo. Los valores
+Por ejemplo, si $-2<x<0$, entonces $0<x+2<2$ y $-4<x-2<-2$. Así, en $(-2,0)$ hay dos factores negativos y uno positivo, por lo que el producto es positivo. Se determina el signo de cada factor completo, no solo el de $x$. Los valores
 
 $$
 p(-3)=-15,\qquad p(-1)=3,\qquad p(1)=-3,\qquad p(3)=15
@@ -214,6 +216,8 @@ La raíz $-1$ es doble, pues el factor restante vale $-3\ne0$ en $x=-1$; la raí
 | $x-2$ | $-$ | $-$ | $+$ |
 | $p(x)$ | $-$ | $-$ | $+$ |
 
+En los tres intervalos, $(x+1)^2$ es estrictamente positivo porque $x=-1$ está excluido; en la raíz sí vale cero. Para $-1<x<2$, restar $2$ da $-3<x-2<0$, lo que justifica el signo negativo de ese factor en toda la columna central.
+
 Lo confirman $p(-2)=-4$, $p(0)=-2$ y $p(3)=16$. En $-1$ la gráfica toca el eje sin cruzarlo y permanece por debajo cerca de ese punto. En $2$ cruza de valores negativos a positivos. El punto $(0,-2)$ marca la intersección con el eje vertical.
 
 El término dominante es $x^3$, así que los extremos tienen la misma orientación que en el ejemplo anterior. Sin embargo, la raíz doble cambia la forma de pasar por el eje horizontal.
@@ -280,6 +284,16 @@ $$
 
 El factor cuadrático tiene [discriminante](2026-09-02-sesion-16.qmd) $-16$ y raíces $1\pm2i$. La única raíz real es $2$, simple. El signo de $p(x)$ es el de $-(x-2)$: positivo para $x<2$ y negativo para $x>2$.
 
+También se puede conservar el cociente de Ruffini como un solo factor: $q(x)=-x^2+2x-5$. Su discriminante es $2^2-4(-1)(-5)=-16$ y $q(0)=-5$, por lo que $q(x)<0$ para todo $x\in\mathbb R$. La tabla queda
+
+| Factor | $(-\infty,2)$ | $(2,\infty)$ |
+|---|:---:|:---:|
+| $x-2$ | $-$ | $+$ |
+| $-x^2+2x-5$ | $-$ | $-$ |
+| $p(x)$ | $+$ | $-$ |
+
+El cuadrático no aporta intersecciones con el eje horizontal, pero su signo sí interviene en el producto.
+
 La gráfica pasa por $(0,10)$ y cruza el eje horizontal en $(2,0)$. El término dominante $-x^3$ indica que va hacia arriba por la izquierda y hacia abajo por la derecha. El grado $3$ no obliga a que haya tres intersecciones con el eje horizontal.
 
 ## Errores frecuentes
@@ -287,7 +301,7 @@ La gráfica pasa por $(0,10)$ y cruza el eje horizontal en $(2,0)$. El término 
 - **Alternar el signo en todas las raíces.** Para $p(x)=(x+1)^2(x-2)$, cambiar de signo en $-1$ llevaría a asignar signo positivo a $(-1,2)$, pero $p(-2)=-4$ y $p(0)=-2$: el signo es negativo a ambos lados de la raíz doble. Solo cambia al atravesar una raíz de multiplicidad impar.
 - **Omitir un factor negativo.** En $p(x)=-(x-2)(x^2-2x+5)$, leer solo el signo de $x-2$ daría $p(0)<0$ y $p(3)>0$. Los valores correctos son $p(0)=10$ y $p(3)=-8$, pues el factor $-1$ invierte el signo.
 - **Incluir una raíz al pedir valores positivos.** Para $p(x)=(x-1)^2$, los valores $p(0)=p(2)=1>0$ no permiten incluir $1$ entre los números donde $p(x)>0$: $p(1)=0$. El conjunto solución es $S=(-\infty,1)\cup(1,\infty)$, aunque la curva toque el eje sin cruzarlo.
-- **Confundir el signo con la variación de los valores.** Para $p(x)=x^2+1$, se tiene $p(-2)=5>0$ y $p(-1)=2>0$: al pasar de $-2$ a $-1$, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha.
+- **Confundir el signo con la variación de los valores.** Para $p(x)=x^2+1$, se tiene $p(-2)=5>0$ y $p(-1)=2>0$: al pasar de $-2$ a $-1$, el valor disminuye aunque sea positivo. El signo indica de qué lado del eje está la curva; no determina si sus valores aumentan o disminuyen al avanzar hacia la derecha. Tampoco determina la concavidad: «estar debajo del eje» y «ser cóncava hacia abajo» describen propiedades diferentes.
 
 ## Actividad
 
