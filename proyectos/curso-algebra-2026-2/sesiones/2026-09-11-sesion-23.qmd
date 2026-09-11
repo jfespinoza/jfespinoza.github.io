@@ -4,7 +4,7 @@ date: 2026-09-11
 description: "Cambio de signo, bisección manual, actualización del intervalo, aproximación con cota del error y limitaciones del método."
 ---
 
-## De la localización a la aproximación
+## Aproximación de raíces
 
 Para $p(x)=x^3-x-1$, los únicos [candidatos racionales](2026-09-04-sesion-18.qmd) son $1$ y $-1$. Como $p(1)=p(-1)=-1$, ninguno es raíz. El procedimiento de raíz racional, [Ruffini](2026-09-03-sesion-17.qmd) y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.
 
