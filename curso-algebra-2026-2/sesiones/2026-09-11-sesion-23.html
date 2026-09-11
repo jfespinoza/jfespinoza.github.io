@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Operaciones, sistemas, inversas y determinantes.">
+<meta name="description" content="Cambio de signo, bisección manual, actualización del intervalo, aproximación con cota del error y limitaciones del método.">
 
-<title>Unidad 4. Matrices – Álgebra</title>
+<title>Sesión 23. Aproximación de una raíz real por bisección – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../unidades/05-conceptos-algebra-lineal.html" rel="next">
-<link href="../unidades/03-sistemas-ecuaciones.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-10-sesion-22.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Unidad 4. Matrices – Álgebra">
-<meta property="og:description" content="Operaciones, sistemas, inversas y determinantes.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 23. Aproximación de una raíz real por bisección – Álgebra">
+<meta property="og:description" content="Cambio de signo, bisección manual, actualización del intervalo, aproximación con cota del error y limitaciones del método.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-11-sesion-23.html"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -255,13 +283,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -309,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
+  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
   </div>
 </li>
       </ul>
@@ -332,16 +360,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 4. Matrices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
   </div>
 </li>
       </ul>
@@ -409,16 +437,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#de-la-localización-a-la-aproximación" id="toc-de-la-localización-a-la-aproximación" class="nav-link active" data-scroll-target="#de-la-localización-a-la-aproximación">De la localización a la aproximación</a></li>
+  <li><a href="#continuidad-y-cambio-de-signo" id="toc-continuidad-y-cambio-de-signo" class="nav-link" data-scroll-target="#continuidad-y-cambio-de-signo">Continuidad y cambio de signo</a></li>
+  <li><a href="#cómo-se-conserva-el-intervalo" id="toc-cómo-se-conserva-el-intervalo" class="nav-link" data-scroll-target="#cómo-se-conserva-el-intervalo">Cómo se conserva el intervalo</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  </ul></li>
+  <li><a href="#ejemplo.-tres-iteraciones-para-una-cúbica" id="toc-ejemplo.-tres-iteraciones-para-una-cúbica" class="nav-link" data-scroll-target="#ejemplo.-tres-iteraciones-para-una-cúbica">Ejemplo. Tres iteraciones para una cúbica</a></li>
+  <li><a href="#cota-del-error-y-criterio-de-paro" id="toc-cota-del-error-y-criterio-de-paro" class="nav-link" data-scroll-target="#cota-del-error-y-criterio-de-paro">Cota del error y criterio de paro</a></li>
+  <li><a href="#raíces-que-no-producen-cambio-de-signo" id="toc-raíces-que-no-producen-cambio-de-signo" class="nav-link" data-scroll-target="#raíces-que-no-producen-cambio-de-signo">Raíces que no producen cambio de signo</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-11-sesion-23.html"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 4. Matrices</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></h1>
 </div>
 
 
@@ -426,6 +465,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">11 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -435,16 +480,363 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 15 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="de-la-localización-a-la-aproximación" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-localización-a-la-aproximación">De la localización a la aproximación</h2>
+<p>Para <span class="math inline">\(p(x)=x^3-x-1\)</span>, los únicos <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Como <span class="math inline">\(p(1)=p(-1)=-1\)</span>, ninguno es raíz. El procedimiento de raíz racional, Ruffini y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.</p>
+<p>En la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a> se obtuvo <span class="math inline">\(p(1)=-1\)</span> y <span class="math inline">\(p(2)=5\)</span>, y se localizó al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. El <strong>método de bisección</strong> permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante evaluación directa y comparación de signos.</p>
+</section>
+<section id="continuidad-y-cambio-de-signo" class="level2">
+<h2 class="anchored" data-anchor-id="continuidad-y-cambio-de-signo">Continuidad y cambio de signo</h2>
+<p>La gráfica de un polinomio con coeficientes reales es una curva continua, sin saltos ni interrupciones. Por ello, si pasa de un lado del eje horizontal al otro, debe cortarlo en algún punto intermedio.</p>
+<p><strong>Propiedad del cambio de signo.</strong> Sea <span class="math inline">\(p(x)\)</span> un polinomio con coeficientes reales y sean <span class="math inline">\(a&lt;b\)</span>. Si</p>
+<p><span class="math display">\[
+p(a)p(b)&lt;0,
+\]</span></p>
+<p>entonces existe al menos una raíz <span class="math inline">\(r\)</span> en <span class="math inline">\((a,b)\)</span>. El producto es negativo precisamente cuando <span class="math inline">\(p(a)\)</span> y <span class="math inline">\(p(b)\)</span> tienen signos opuestos.</p>
+<p>Antes de buscar un cambio de signo se revisan los extremos: si <span class="math inline">\(p(a)=0\)</span> o <span class="math inline">\(p(b)=0\)</span>, ya se ha encontrado una raíz exacta. Cuando ninguno es cero y ambos valores tienen el mismo signo, esta propiedad no permite concluir si hay raíces dentro del intervalo.</p>
+<p>La condición garantiza <strong>al menos una raíz</strong>, sin afirmar que sea la única. Por ejemplo,</p>
+<p><span class="math display">\[
+p(x)=x^3-4x=x(x-2)(x+2)
+\]</span></p>
+<p>tiene <span class="math inline">\(p(-3)=-15\)</span> y <span class="math inline">\(p(3)=15\)</span>, pero en <span class="math inline">\((-3,3)\)</span> están las tres raíces <span class="math inline">\(-2\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(2\)</span>.</p>
+</section>
+<section id="cómo-se-conserva-el-intervalo" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-se-conserva-el-intervalo">Cómo se conserva el intervalo</h2>
+<p>Supóngase que <span class="math inline">\(p(a)p(b)&lt;0\)</span>. Se calcula el <strong>punto medio</strong></p>
+<p><span class="math display">\[
+m=\frac{a+b}{2}
+\]</span></p>
+<p>y se evalúa <span class="math inline">\(p(m)\)</span>. Hay tres posibilidades:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p(m)=0\)</span></td>
+<td><span class="math inline">\(m\)</span> es una raíz exacta; el proceso termina.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p(a)p(m)&lt;0\)</span></td>
+<td>Se conserva <span class="math inline">\([a,m]\)</span>.</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(p(m)p(b)&lt;0\)</span></td>
+<td>Se conserva <span class="math inline">\([m,b]\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>Si <span class="math inline">\(p(m)\ne0\)</span>, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. <strong>Se reemplaza el extremo cuyo valor tiene el mismo signo que <span class="math inline">\(p(m)\)</span>.</strong></p>
+<p>Cada repetición de este paso se llama <strong>iteración</strong>. El nuevo intervalo mide la mitad del anterior y sigue conteniendo al menos una raíz. No se escoge la mitad por el tamaño de los valores de <span class="math inline">\(p\)</span>, sino por sus signos.</p>
+<section id="procedimiento" class="level3">
+<h3 class="anchored" data-anchor-id="procedimiento">Procedimiento</h3>
 <ol type="1">
-<li>Operaciones con matrices y sus propiedades.</li>
-<li>Representación matricial de un sistema de ecuaciones lineales.</li>
-<li>Matriz inversa en la resolución de sistemas.</li>
-<li>Determinantes y regla de Cramer.</li>
+<li>Evalúe el polinomio en los extremos del intervalo <span class="math inline">\([a,b]\)</span>. Si alguno es raíz, repórtelo. Si ninguno lo es, compruebe que los valores tienen signos opuestos. Cuando el intervalo no esté dado, evaluar en números sencillos puede ayudar a encontrar un cambio de signo, aunque no siempre lo proporciona.</li>
+<li>Calcule el punto medio y evalúe el polinomio allí. Trabaje con fracciones o decimales exactos para conservar el signo correcto.</li>
+<li>Si el punto medio es raíz, termine. En caso contrario, conserve la mitad con cambio de signo.</li>
+<li>Repita con el intervalo conservado. Registre el punto medio, su evaluación y el nuevo intervalo en cada paso.</li>
+<li>Al detenerse, reporte el intervalo final, su punto medio como aproximación y una cota del error.</li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+</section>
+</section>
+<section id="ejemplo.-tres-iteraciones-para-una-cúbica" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo.-tres-iteraciones-para-una-cúbica">Ejemplo. Tres iteraciones para una cúbica</h2>
+<p>Consideremos <span class="math inline">\(p(x)=x^3-x-1\)</span> en <span class="math inline">\([1,2]\)</span>. Ningún extremo es raíz y <span class="math inline">\(p(1)=-1&lt;0&lt;p(2)=5\)</span>.</p>
+<p><strong>Primera iteración.</strong> El punto medio es <span class="math inline">\(\frac32\)</span>. Su evaluación es</p>
+<p><span class="math display">\[
+p\!\left(\frac32\right)
+=\frac{27}{8}-\frac32-1
+=\frac{27-12-8}{8}
+=\frac78&gt;0.
+\]</span></p>
+<p>El valor tiene el mismo signo que <span class="math inline">\(p(2)\)</span>, así que se reemplaza el extremo derecho. Se conserva <span class="math inline">\(\left[1,\frac32\right]\)</span>.</p>
+<p><strong>Segunda iteración.</strong> El nuevo punto medio y su evaluación son</p>
+<p><span class="math display">\[
+m=\frac{1+\frac32}{2}=\frac54,
+\qquad
+p\!\left(\frac54\right)
+=\frac{125-80-64}{64}
+=-\frac{19}{64}&lt;0.
+\]</span></p>
+<p>Ahora se reemplaza el extremo izquierdo, pues <span class="math inline">\(p(1)\)</span> también es negativo. Se conserva <span class="math inline">\(\left[\frac54,\frac32\right]\)</span>.</p>
+<p><strong>Tercera iteración.</strong> Se obtiene</p>
+<p><span class="math display">\[
+m=\frac{\frac54+\frac32}{2}=\frac{11}{8},
+\qquad
+p\!\left(\frac{11}{8}\right)
+=\frac{1331-704-512}{512}
+=\frac{115}{512}&gt;0.
+\]</span></p>
+<p>Se reemplaza el extremo derecho y queda <span class="math inline">\(\left[\frac54,\frac{11}{8}\right]\)</span>. Los tres pasos se resumen así:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Iteración</th>
+<th style="text-align: center;">Intervalo antes de bisecar</th>
+<th style="text-align: center;">Punto medio</th>
+<th style="text-align: center;">Valor de <span class="math inline">\(p\)</span></th>
+<th style="text-align: center;">Intervalo conservado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([1,2]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac32\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac78\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[1,\frac32\right]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[1,\frac32\right]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac54\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\frac{19}{64}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac54,\frac32\right]\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac54,\frac32\right]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{11}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{115}{512}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac54,\frac{11}{8}\right]\)</span></td>
+</tr>
+</tbody>
+</table>
+<figure style="margin: 1.5rem auto; max-width: 700px;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 700 290" role="img" aria-labelledby="s23-intervalos-titulo s23-intervalos-desc" style="display: block; width: 100%; height: auto;">
+  <title id="s23-intervalos-titulo">Intervalos conservados en tres bisecciones</title>
+  <desc id="s23-intervalos-desc">En una misma escala horizontal: el intervalo inicial de 1 a 2 se reduce a [1, 3/2], luego a [5/4, 3/2] y finalmente a [5/4, 11/8]. Las longitudes son 1, 1/2, 1/4 y 1/8.</desc>
+  <rect x="1" y="1" width="698" height="288" rx="12" fill="#f8fafc" stroke="#dbe4ee"></rect>
+  <g font-family="system-ui, sans-serif" font-size="15" fill="#334155">
+    <text x="25" y="30" font-weight="650">Intervalos conservados, en la misma escala</text>
+    <text x="568" y="62" font-weight="650">Longitud</text>
+    <text x="24" y="103">Inicial</text><text x="585" y="103">1</text>
+    <text x="24" y="148">Paso 1</text><text x="585" y="148">1/2</text>
+    <text x="24" y="193">Paso 2</text><text x="585" y="193">1/4</text>
+    <text x="24" y="238">Paso 3</text><text x="585" y="238">1/8</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-dasharray="3 4">
+    <line x1="120" y1="70" x2="120" y2="245"></line>
+    <line x1="220" y1="70" x2="220" y2="245"></line>
+    <line x1="270" y1="70" x2="270" y2="245"></line>
+    <line x1="320" y1="70" x2="320" y2="245"></line>
+    <line x1="520" y1="70" x2="520" y2="245"></line>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="15" text-anchor="middle" fill="#334155">
+    <text x="120" y="62">1</text><text x="220" y="62">5/4</text>
+    <text x="270" y="62">11/8</text><text x="320" y="62">3/2</text>
+    <text x="520" y="62">2</text>
+  </g>
+  <g stroke="#0f766e" stroke-width="5">
+    <line x1="120" y1="98" x2="520" y2="98"></line>
+    <line x1="120" y1="143" x2="320" y2="143"></line>
+    <line x1="220" y1="188" x2="320" y2="188"></line>
+    <line x1="220" y1="233" x2="270" y2="233"></line>
+  </g>
+  <g stroke="#0f766e" stroke-width="2">
+    <path d="M120 90v16 M520 90v16 M120 135v16 M320 135v16 M220 180v16 M320 180v16 M220 225v16 M270 225v16"></path>
+  </g>
+  <circle cx="245" cy="233" r="5" fill="#1d4ed8" stroke="white" stroke-width="2"></circle>
+  <text x="245" y="270" text-anchor="middle" fill="#1d4ed8" font-family="system-ui, sans-serif" font-size="15">Punto medio final: 21/16</text>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">Cada intervalo conserva un cambio de signo y mide la mitad del anterior.</figcaption>
+</figure>
+<p>El intervalo final tiene longitud <span class="math inline">\(\frac{11}{8}-\frac54=\frac18\)</span>. Su punto medio es</p>
+<p><span class="math display">\[
+\bar x=\frac{\frac54+\frac{11}{8}}2=\frac{21}{16}=1.3125.
+\]</span></p>
+<p>Hay una raíz <span class="math inline">\(r\)</span> dentro de ese intervalo, de modo que su distancia al centro es a lo sumo la mitad de la longitud:</p>
+<p><span class="math display">\[
+r\in\left[\frac54,\frac{11}{8}\right],
+\qquad
+r\approx\frac{21}{16},
+\qquad
+\left|r-\frac{21}{16}\right|\le\frac1{16}=0.0625.
+\]</span></p>
+<p>Calcular este punto medio final no añade una cuarta iteración: para reportarlo no hace falta evaluar <span class="math inline">\(p\)</span> allí ni volver a recortar el intervalo. Tampoco se afirma que sea la raíz exacta; de hecho, <span class="math inline">\(p\!\left(\frac{21}{16}\right)=-\frac{211}{4096}\ne0\)</span>.</p>
+</section>
+<section id="cota-del-error-y-criterio-de-paro" class="level2">
+<h2 class="anchored" data-anchor-id="cota-del-error-y-criterio-de-paro">Cota del error y criterio de paro</h2>
+<p>El <strong>error absoluto</strong> de una aproximación <span class="math inline">\(\bar x\)</span> a una raíz <span class="math inline">\(r\)</span> es la distancia <span class="math inline">\(|r-\bar x|\)</span>. Una <strong>cota del error</strong> es un número que garantiza una distancia máxima, aunque se desconozca el valor exacto de <span class="math inline">\(r\)</span>.</p>
+<p>Sea <span class="math inline">\([a_0,b_0]\)</span> el intervalo inicial. Si se han realizado <span class="math inline">\(k\)</span> iteraciones sin encontrar una raíz exacta, el intervalo conservado <span class="math inline">\([a_k,b_k]\)</span> tiene longitud</p>
+<p><span class="math display">\[
+b_k-a_k=\frac{b_0-a_0}{2^k}.
+\]</span></p>
+<p>Si se reporta su punto medio <span class="math inline">\(\bar x=\frac{a_k+b_k}{2}\)</span>, para una raíz <span class="math inline">\(r\)</span> contenida en ese intervalo se tiene</p>
+<p><span class="math display">\[
+|r-\bar x|\le\frac{b_k-a_k}{2}
+=\frac{b_0-a_0}{2^{k+1}}.
+\]</span></p>
+<p>La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre <span class="math inline">\(2\)</span>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Iteraciones realizadas</th>
+<th style="text-align: center;">Longitud, si <span class="math inline">\(b_0-a_0=1\)</span></th>
+<th style="text-align: center;">Cota para el punto medio del intervalo conservado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac12\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac12\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac14\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac14\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac18\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac18\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac1{16}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>criterio de paro</strong> indica cuándo detenerse. Puede fijarse un número de iteraciones y reportar la cota obtenida, o prescribirse una <strong>tolerancia</strong> <span class="math inline">\(\varepsilon&gt;0\)</span> y detenerse cuando</p>
+<p><span class="math display">\[
+\frac{b_k-a_k}{2}\le\varepsilon.
+\]</span></p>
+<p>Por ejemplo, desde un intervalo de longitud <span class="math inline">\(1\)</span>, para garantizar un error a lo sumo <span class="math inline">\(\frac18\)</span> bastan dos iteraciones. Para garantizar un error a lo sumo <span class="math inline">\(\frac1{16}\)</span> bastan tres. Si se encuentra antes un extremo o punto medio que anula el polinomio, se termina con una raíz exacta y error cero.</p>
+</section>
+<section id="raíces-que-no-producen-cambio-de-signo" class="level2">
+<h2 class="anchored" data-anchor-id="raíces-que-no-producen-cambio-de-signo">Raíces que no producen cambio de signo</h2>
+<p>Para <span class="math inline">\(p(x)=x^2-4x+4=(x-2)^2\)</span>,</p>
+<p><span class="math display">\[
+p(0)=4,\qquad p(3)=1.
+\]</span></p>
+<p>Los valores tienen el mismo signo, pero <span class="math inline">\(2\in(0,3)\)</span> es raíz doble. La gráfica toca el eje sin cruzarlo, como se estudió al relacionar <a href="../sesiones/2026-09-10-sesion-22.html">signo y multiplicidad</a>. No se cumple la condición para iniciar la bisección en <span class="math inline">\([0,3]\)</span>.</p>
+<p>Una raíz de multiplicidad par no produce cambio de signo al atravesarla. Por ello, el criterio de signos no garantiza localizarla. Si una evaluación coincide exactamente con ella, sí se reconoce por el valor cero. <strong>La ausencia de cambio de signo no demuestra la ausencia de raíces.</strong></p>
+<p>La bisección aproxima una raíz del intervalo elegido; por sí sola no determina cuántas raíces hay ni proporciona todas las soluciones de la ecuación.</p>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Conservar la mitad equivocada.</strong> En la primera iteración del ejemplo, <span class="math inline">\(p(\frac32)&gt;0\)</span> y <span class="math inline">\(p(2)&gt;0\)</span>. Conservar <span class="math inline">\([\frac32,2]\)</span> perdería la garantía del cambio de signo. El intervalo correcto es <span class="math inline">\([1,\frac32]\)</span>.</li>
+<li><strong>Confundir longitud con cota del punto medio.</strong> Después de tres recortes de un intervalo de longitud <span class="math inline">\(1\)</span>, la longitud es <span class="math inline">\(\frac18\)</span> y la cota del punto medio final es <span class="math inline">\(\frac1{16}\)</span>. El último punto evaluado, <span class="math inline">\(\frac{11}{8}\)</span> en el ejemplo, es un extremo del intervalo final; no es su punto medio.</li>
+<li><strong>Usar <span class="math inline">\(|p(\bar x)|\)</span> como si fuera el error.</strong> Para <span class="math inline">\(p(x)=(x-2)^3\)</span>, se tiene <span class="math inline">\(p(2.5)=0.125\)</span>, pero la distancia de <span class="math inline">\(2.5\)</span> a la raíz <span class="math inline">\(2\)</span> es <span class="math inline">\(0.5\)</span>. El valor del polinomio y la distancia a la raíz son cantidades distintas. La cota de bisección procede del intervalo.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva y justifique cada decisión sobre el intervalo que se conserva. Registre las evaluaciones sin redondear.</p>
+<ol type="1">
+<li><p>Sea <span class="math inline">\(p(x)=x^3-3x+1\)</span>.</p>
+<ol type="a">
+<li><p>Compruebe que no tiene raíces racionales y verifique el cambio de signo en <span class="math inline">\([1,2]\)</span>.</p></li>
+<li><p>Realice dos iteraciones de bisección. Registre el punto medio, el valor de <span class="math inline">\(p\)</span> y el intervalo conservado en cada paso.</p></li>
+<li><p>Reporte el intervalo final, su punto medio como aproximación y la cota del error. ¿Se garantiza un error a lo sumo <span class="math inline">\(\frac18\)</span>? ¿Y a lo sumo <span class="math inline">\(\frac1{16}\)</span> con esos mismos dos pasos?</p></li>
+</ol></li>
+<li><p>Para el polinomio del ejercicio 1 se afirma: «Ya se aproximó una raíz real; como el grado es <span class="math inline">\(3\)</span>, las otras dos raíces no son reales». Evalúe <span class="math inline">\(p\)</span> en <span class="math inline">\(-2\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>. Use los signos y el grado para determinar cuántas raíces reales distintas tiene y localizar cada una en un intervalo abierto.</p></li>
+<li><p>Para <span class="math inline">\(q(x)=x^3-x-6\)</span> se propone comenzar la bisección en <span class="math inline">\([1,2]\)</span>.</p>
+<ol type="a">
+<li><p>Revise los extremos y explique si hace falta bisecar para encontrar una raíz en ese intervalo.</p></li>
+<li><p>Si se comienza en <span class="math inline">\([1,3]\)</span>, ¿qué ocurre al evaluar el primer punto medio? ¿Es correcto afirmar que la bisección nunca encuentra una raíz exacta?</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> Los candidatos racionales son <span class="math inline">\(\pm1\)</span>. Como <span class="math inline">\(p(1)=-1\)</span> y <span class="math inline">\(p(-1)=3\)</span>, ninguno es raíz. Además, <span class="math inline">\(p(2)=3\)</span>, de modo que los extremos de <span class="math inline">\([1,2]\)</span> no son raíces y tienen valores de signos opuestos.</p>
+<p><strong>1. b.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Iteración</th>
+<th style="text-align: center;">Intervalo antes de bisecar</th>
+<th style="text-align: center;">Punto medio</th>
+<th style="text-align: center;">Valor de <span class="math inline">\(p\)</span></th>
+<th style="text-align: center;">Intervalo conservado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([1,2]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac32\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\frac18\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac32,2\right]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac32,2\right]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac74\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{71}{64}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac32,\frac74\right]\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Las evaluaciones son</p>
+<p><span class="math display">\[
+p\!\left(\frac32\right)=\frac{27-36+8}{8}=-\frac18,
+\qquad
+p\!\left(\frac74\right)=\frac{343-336+64}{64}=\frac{71}{64}.
+\]</span></p>
+<p>Primero se reemplaza el extremo izquierdo y después el derecho. En ambos casos se conservan valores de signos opuestos en los extremos.</p>
+<p><strong>1. c.</strong> El intervalo final es <span class="math inline">\(\left[\frac32,\frac74\right]\)</span>, de longitud <span class="math inline">\(\frac14\)</span>. Su punto medio y la cota son</p>
+<p><span class="math display">\[
+\bar x=\frac{13}{8}=1.625,
+\qquad
+\left|r-\frac{13}{8}\right|\le\frac18=0.125.
+\]</span></p>
+<p>Se garantiza la tolerancia <span class="math inline">\(\frac18\)</span>. La cota obtenida no garantiza la tolerancia <span class="math inline">\(\frac1{16}\)</span>; un recorte adicional permitiría garantizarla al reportar el nuevo punto medio. La cota es un máximo garantizado, no el error real de la aproximación.</p>
+<p><strong>2.</strong> Los valores son</p>
+<p><span class="math display">\[
+p(-2)=-1,\qquad p(-1)=3,\qquad p(0)=1,\qquad p(1)=-1.
+\]</span></p>
+<p>Hay una raíz en <span class="math inline">\((-2,-1)\)</span> y otra en <span class="math inline">\((0,1)\)</span>. El ejercicio 1 garantiza una tercera en <span class="math inline">\((1,2)\)</span>. Son intervalos disjuntos, por lo que las tres raíces son distintas. Un polinomio de grado <span class="math inline">\(3\)</span> tiene a lo sumo tres raíces distintas; estas son todas, y las tres son reales y simples. La afirmación es falsa: aproximar una raíz no determina la naturaleza de las demás.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(q(1)=-6\)</span> y <span class="math inline">\(q(2)=0\)</span>. El extremo <span class="math inline">\(2\)</span> es una raíz exacta; no hace falta bisecar para encontrarla.</p>
+<p><strong>3. b.</strong> En <span class="math inline">\([1,3]\)</span>, <span class="math inline">\(q(1)=-6\)</span> y <span class="math inline">\(q(3)=18\)</span> tienen signos opuestos. El primer punto medio es <span class="math inline">\(2\)</span> y <span class="math inline">\(q(2)=0\)</span>, así que el proceso termina con una raíz exacta. La afirmación es falsa: el método permite aproximar una raíz y, en ocasiones, encuentra una exactamente.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Para <span class="math inline">\(p(x)=x^3-2x-5\)</span>, compruebe el cambio de signo en <span class="math inline">\([2,3]\)</span>. Realice tres iteraciones y reporte el intervalo final, su punto medio y la cota del error.</p></li>
+<li><p>Aproxime <span class="math inline">\(\sqrt3\)</span> mediante dos iteraciones aplicadas a <span class="math inline">\(x^2-3\)</span> en <span class="math inline">\([1,2]\)</span>. Reporte el intervalo, la aproximación y su cota. Distinga la aproximación de las dos soluciones exactas de <span class="math inline">\(x^2-3=0\)</span>.</p></li>
+<li><p>Después de dos iteraciones iniciadas en <span class="math inline">\([2,4]\)</span>, se reporta el punto medio del intervalo conservado. ¿Cuál es la cota del error? ¿Cuántas iteraciones en total bastan para garantizar una cota a lo sumo <span class="math inline">\(\frac18\)</span>? Suponga que no se ha encontrado una raíz exacta.</p></li>
+<li><p>Se reporta, para el ejemplo de <span class="math inline">\(x^3-x-1\)</span>, «la raíz es <span class="math inline">\(\frac{11}{8}\)</span> y el error es a lo sumo <span class="math inline">\(\frac1{16}\)</span>». Corrija el reporte usando el intervalo final <span class="math inline">\([\frac54,\frac{11}{8}]\)</span>. Distinga el último punto evaluado del punto medio de ese intervalo.</p></li>
+<li><p>Factorice <span class="math inline">\(x^4-2x^2+1\)</span> como el cuadrado de un binomio y determine sus raíces con multiplicidad. Evalúe en los extremos de <span class="math inline">\([0,2]\)</span> y explique por qué la condición de cambio de signo no permite iniciar allí la bisección, aunque el intervalo contenga una raíz.</p></li>
+</ol>
 
 
 </section>
@@ -859,13 +1251,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span>
+      <a href="../sesiones/2026-09-10-sesion-22.html" class="pagination-link" aria-label="Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
-        <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
