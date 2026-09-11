@@ -1,0 +1,297 @@
+---
+title: "Sesión 23. Aproximación de una raíz real por bisección"
+date: 2026-09-11
+description: "Cambio de signo, bisección manual, actualización del intervalo, aproximación con cota del error y limitaciones del método."
+---
+
+## De la localización a la aproximación
+
+Para $p(x)=x^3-x-1$, los únicos [candidatos racionales](2026-09-04-sesion-18.qmd) son $1$ y $-1$. Como $p(1)=p(-1)=-1$, ninguno es raíz. El procedimiento de raíz racional, Ruffini y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.
+
+En la [Sesión 19](2026-09-07-sesion-19.qmd) se obtuvo $p(1)=-1$ y $p(2)=5$, y se localizó al menos una raíz real entre $1$ y $2$. El **método de bisección** permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante evaluación directa y comparación de signos.
+
+## Continuidad y cambio de signo
+
+La gráfica de un polinomio con coeficientes reales es una curva continua, sin saltos ni interrupciones. Por ello, si pasa de un lado del eje horizontal al otro, debe cortarlo en algún punto intermedio.
+
+**Propiedad del cambio de signo.** Sea $p(x)$ un polinomio con coeficientes reales y sean $a<b$. Si
+
+$$
+p(a)p(b)<0,
+$$
+
+entonces existe al menos una raíz $r$ en $(a,b)$. El producto es negativo precisamente cuando $p(a)$ y $p(b)$ tienen signos opuestos.
+
+Antes de buscar un cambio de signo se revisan los extremos: si $p(a)=0$ o $p(b)=0$, ya se ha encontrado una raíz exacta. Cuando ninguno es cero y ambos valores tienen el mismo signo, esta propiedad no permite concluir si hay raíces dentro del intervalo.
+
+La condición garantiza **al menos una raíz**, sin afirmar que sea la única. Por ejemplo,
+
+$$
+p(x)=x^3-4x=x(x-2)(x+2)
+$$
+
+tiene $p(-3)=-15$ y $p(3)=15$, pero en $(-3,3)$ están las tres raíces $-2$, $0$ y $2$.
+
+## Cómo se conserva el intervalo
+
+Supóngase que $p(a)p(b)<0$. Se calcula el **punto medio**
+
+$$
+m=\frac{a+b}{2}
+$$
+
+y se evalúa $p(m)$. Hay tres posibilidades:
+
+| Resultado | Decisión |
+|---|---|
+| $p(m)=0$ | $m$ es una raíz exacta; el proceso termina. |
+| $p(a)p(m)<0$ | Se conserva $[a,m]$. |
+| $p(m)p(b)<0$ | Se conserva $[m,b]$. |
+
+Si $p(m)\ne0$, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. **Se reemplaza el extremo cuyo valor tiene el mismo signo que $p(m)$.**
+
+Cada repetición de este paso se llama **iteración**. El nuevo intervalo mide la mitad del anterior y sigue conteniendo al menos una raíz. No se escoge la mitad por el tamaño de los valores de $p$, sino por sus signos.
+
+### Procedimiento
+
+1. Evalúe el polinomio en los extremos del intervalo $[a,b]$. Si alguno es raíz, repórtelo. Si ninguno lo es, compruebe que los valores tienen signos opuestos. Cuando el intervalo no esté dado, evaluar en números sencillos puede ayudar a encontrar un cambio de signo, aunque no siempre lo proporciona.
+2. Calcule el punto medio y evalúe el polinomio allí. Trabaje con fracciones o decimales exactos para conservar el signo correcto.
+3. Si el punto medio es raíz, termine. En caso contrario, conserve la mitad con cambio de signo.
+4. Repita con el intervalo conservado. Registre el punto medio, su evaluación y el nuevo intervalo en cada paso.
+5. Al detenerse, reporte el intervalo final, su punto medio como aproximación y una cota del error.
+
+## Ejemplo. Tres iteraciones para una cúbica
+
+Consideremos $p(x)=x^3-x-1$ en $[1,2]$. Ningún extremo es raíz y $p(1)=-1<0<p(2)=5$.
+
+**Primera iteración.** El punto medio es $\frac32$. Su evaluación es
+
+$$
+p\!\left(\frac32\right)
+=\frac{27}{8}-\frac32-1
+=\frac{27-12-8}{8}
+=\frac78>0.
+$$
+
+El valor tiene el mismo signo que $p(2)$, así que se reemplaza el extremo derecho. Se conserva $\left[1,\frac32\right]$.
+
+**Segunda iteración.** El nuevo punto medio y su evaluación son
+
+$$
+m=\frac{1+\frac32}{2}=\frac54,
+\qquad
+p\!\left(\frac54\right)
+=\frac{125-80-64}{64}
+=-\frac{19}{64}<0.
+$$
+
+Ahora se reemplaza el extremo izquierdo, pues $p(1)$ también es negativo. Se conserva $\left[\frac54,\frac32\right]$.
+
+**Tercera iteración.** Se obtiene
+
+$$
+m=\frac{\frac54+\frac32}{2}=\frac{11}{8},
+\qquad
+p\!\left(\frac{11}{8}\right)
+=\frac{1331-704-512}{512}
+=\frac{115}{512}>0.
+$$
+
+Se reemplaza el extremo derecho y queda $\left[\frac54,\frac{11}{8}\right]$. Los tres pasos se resumen así:
+
+| Iteración | Intervalo antes de bisecar | Punto medio | Valor de $p$ | Intervalo conservado |
+|:---:|:---:|:---:|:---:|:---:|
+| $1$ | $[1,2]$ | $\frac32$ | $\frac78$ | $\left[1,\frac32\right]$ |
+| $2$ | $\left[1,\frac32\right]$ | $\frac54$ | $-\frac{19}{64}$ | $\left[\frac54,\frac32\right]$ |
+| $3$ | $\left[\frac54,\frac32\right]$ | $\frac{11}{8}$ | $\frac{115}{512}$ | $\left[\frac54,\frac{11}{8}\right]$ |
+
+```{=html}
+<figure style="margin: 1.5rem auto; max-width: 700px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" role="img" aria-labelledby="s23-intervalos-titulo s23-intervalos-desc" style="display: block; width: 100%; height: auto;">
+  <title id="s23-intervalos-titulo">Intervalos conservados en tres bisecciones</title>
+  <desc id="s23-intervalos-desc">En una misma escala horizontal: el intervalo inicial de 1 a 2 se reduce a [1, 3/2], luego a [5/4, 3/2] y finalmente a [5/4, 11/8]. Las longitudes son 1, 1/2, 1/4 y 1/8.</desc>
+  <rect x="1" y="1" width="698" height="288" rx="12" fill="#f8fafc" stroke="#dbe4ee"/>
+  <g font-family="system-ui, sans-serif" font-size="15" fill="#334155">
+    <text x="25" y="30" font-weight="650">Intervalos conservados, en la misma escala</text>
+    <text x="568" y="62" font-weight="650">Longitud</text>
+    <text x="24" y="103">Inicial</text><text x="585" y="103">1</text>
+    <text x="24" y="148">Paso 1</text><text x="585" y="148">1/2</text>
+    <text x="24" y="193">Paso 2</text><text x="585" y="193">1/4</text>
+    <text x="24" y="238">Paso 3</text><text x="585" y="238">1/8</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-dasharray="3 4">
+    <line x1="120" y1="70" x2="120" y2="245"/>
+    <line x1="220" y1="70" x2="220" y2="245"/>
+    <line x1="270" y1="70" x2="270" y2="245"/>
+    <line x1="320" y1="70" x2="320" y2="245"/>
+    <line x1="520" y1="70" x2="520" y2="245"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="15" text-anchor="middle" fill="#334155">
+    <text x="120" y="62">1</text><text x="220" y="62">5/4</text>
+    <text x="270" y="62">11/8</text><text x="320" y="62">3/2</text>
+    <text x="520" y="62">2</text>
+  </g>
+  <g stroke="#0f766e" stroke-width="5">
+    <line x1="120" y1="98" x2="520" y2="98"/>
+    <line x1="120" y1="143" x2="320" y2="143"/>
+    <line x1="220" y1="188" x2="320" y2="188"/>
+    <line x1="220" y1="233" x2="270" y2="233"/>
+  </g>
+  <g stroke="#0f766e" stroke-width="2">
+    <path d="M120 90v16 M520 90v16 M120 135v16 M320 135v16 M220 180v16 M320 180v16 M220 225v16 M270 225v16"/>
+  </g>
+  <circle cx="245" cy="233" r="5" fill="#1d4ed8" stroke="white" stroke-width="2"/>
+  <text x="245" y="270" text-anchor="middle" fill="#1d4ed8" font-family="system-ui, sans-serif" font-size="15">Punto medio final: 21/16</text>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">Cada intervalo conserva un cambio de signo y mide la mitad del anterior.</figcaption>
+</figure>
+```
+
+El intervalo final tiene longitud $\frac{11}{8}-\frac54=\frac18$. Su punto medio es
+
+$$
+\bar x=\frac{\frac54+\frac{11}{8}}2=\frac{21}{16}=1.3125.
+$$
+
+Hay una raíz $r$ dentro de ese intervalo, de modo que su distancia al centro es a lo sumo la mitad de la longitud:
+
+$$
+r\in\left[\frac54,\frac{11}{8}\right],
+\qquad
+r\approx\frac{21}{16},
+\qquad
+\left|r-\frac{21}{16}\right|\le\frac1{16}=0.0625.
+$$
+
+Calcular este punto medio final no añade una cuarta iteración: para reportarlo no hace falta evaluar $p$ allí ni volver a recortar el intervalo. Tampoco se afirma que sea la raíz exacta; de hecho, $p\!\left(\frac{21}{16}\right)=-\frac{211}{4096}\ne0$.
+
+## Cota del error y criterio de paro
+
+El **error absoluto** de una aproximación $\bar x$ a una raíz $r$ es la distancia $|r-\bar x|$. Una **cota del error** es un número que garantiza una distancia máxima, aunque se desconozca el valor exacto de $r$.
+
+Sea $[a_0,b_0]$ el intervalo inicial. Si se han realizado $k$ iteraciones sin encontrar una raíz exacta, el intervalo conservado $[a_k,b_k]$ tiene longitud
+
+$$
+b_k-a_k=\frac{b_0-a_0}{2^k}.
+$$
+
+Si se reporta su punto medio $\bar x=\frac{a_k+b_k}{2}$, para una raíz $r$ contenida en ese intervalo se tiene
+
+$$
+|r-\bar x|\le\frac{b_k-a_k}{2}
+=\frac{b_0-a_0}{2^{k+1}}.
+$$
+
+La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre $2$.
+
+| Iteraciones realizadas | Longitud, si $b_0-a_0=1$ | Cota para el punto medio del intervalo conservado |
+|:---:|:---:|:---:|
+| $0$ | $1$ | $\frac12$ |
+| $1$ | $\frac12$ | $\frac14$ |
+| $2$ | $\frac14$ | $\frac18$ |
+| $3$ | $\frac18$ | $\frac1{16}$ |
+
+El **criterio de paro** indica cuándo detenerse. Puede fijarse un número de iteraciones y reportar la cota obtenida, o prescribirse una **tolerancia** $\varepsilon>0$ y detenerse cuando
+
+$$
+\frac{b_k-a_k}{2}\le\varepsilon.
+$$
+
+Por ejemplo, desde un intervalo de longitud $1$, para garantizar un error a lo sumo $\frac18$ bastan dos iteraciones. Para garantizar un error a lo sumo $\frac1{16}$ bastan tres. Si se encuentra antes un extremo o punto medio que anula el polinomio, se termina con una raíz exacta y error cero.
+
+## Raíces que no producen cambio de signo
+
+Para $p(x)=x^2-4x+4=(x-2)^2$,
+
+$$
+p(0)=4,\qquad p(3)=1.
+$$
+
+Los valores tienen el mismo signo, pero $2\in(0,3)$ es raíz doble. La gráfica toca el eje sin cruzarlo, como se estudió al relacionar [signo y multiplicidad](2026-09-10-sesion-22.qmd). No se cumple la condición para iniciar la bisección en $[0,3]$.
+
+Una raíz de multiplicidad par no produce cambio de signo al atravesarla. Por ello, el criterio de signos no garantiza localizarla. Si una evaluación coincide exactamente con ella, sí se reconoce por el valor cero. **La ausencia de cambio de signo no demuestra la ausencia de raíces.**
+
+La bisección aproxima una raíz del intervalo elegido; por sí sola no determina cuántas raíces hay ni proporciona todas las soluciones de la ecuación.
+
+## Errores frecuentes
+
+- **Conservar la mitad equivocada.** En la primera iteración del ejemplo, $p(\frac32)>0$ y $p(2)>0$. Conservar $[\frac32,2]$ perdería la garantía del cambio de signo. El intervalo correcto es $[1,\frac32]$.
+- **Confundir longitud con cota del punto medio.** Después de tres recortes de un intervalo de longitud $1$, la longitud es $\frac18$ y la cota del punto medio final es $\frac1{16}$. El último punto evaluado, $\frac{11}{8}$ en el ejemplo, es un extremo del intervalo final; no es su punto medio.
+- **Usar $|p(\bar x)|$ como si fuera el error.** Para $p(x)=(x-2)^3$, se tiene $p(2.5)=0.125$, pero la distancia de $2.5$ a la raíz $2$ es $0.5$. El valor del polinomio y la distancia a la raíz son cantidades distintas. La cota de bisección procede del intervalo.
+
+## Actividad
+
+Resuelva y justifique cada decisión sobre el intervalo que se conserva. Registre las evaluaciones sin redondear.
+
+1. Sea $p(x)=x^3-3x+1$.
+
+   a. Compruebe que no tiene raíces racionales y verifique el cambio de signo en $[1,2]$.
+
+   b. Realice dos iteraciones de bisección. Registre el punto medio, el valor de $p$ y el intervalo conservado en cada paso.
+
+   c. Reporte el intervalo final, su punto medio como aproximación y la cota del error. ¿Se garantiza un error a lo sumo $\frac18$? ¿Y a lo sumo $\frac1{16}$ con esos mismos dos pasos?
+
+2. Para el polinomio del ejercicio 1 se afirma: «Ya se aproximó una raíz real; como el grado es $3$, las otras dos raíces no son reales». Evalúe $p$ en $-2$, $-1$, $0$ y $1$. Use los signos y el grado para determinar cuántas raíces reales distintas tiene y localizar cada una en un intervalo abierto.
+
+3. Para $q(x)=x^3-x-6$ se propone comenzar la bisección en $[1,2]$.
+
+   a. Revise los extremos y explique si hace falta bisecar para encontrar una raíz en ese intervalo.
+
+   b. Si se comienza en $[1,3]$, ¿qué ocurre al evaluar el primer punto medio? ¿Es correcto afirmar que la bisección nunca encuentra una raíz exacta?
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Los candidatos racionales son $\pm1$. Como $p(1)=-1$ y $p(-1)=3$, ninguno es raíz. Además, $p(2)=3$, de modo que los extremos de $[1,2]$ no son raíces y tienen valores de signos opuestos.
+
+**1. b.**
+
+| Iteración | Intervalo antes de bisecar | Punto medio | Valor de $p$ | Intervalo conservado |
+|:---:|:---:|:---:|:---:|:---:|
+| $1$ | $[1,2]$ | $\frac32$ | $-\frac18$ | $\left[\frac32,2\right]$ |
+| $2$ | $\left[\frac32,2\right]$ | $\frac74$ | $\frac{71}{64}$ | $\left[\frac32,\frac74\right]$ |
+
+Las evaluaciones son
+
+$$
+p\!\left(\frac32\right)=\frac{27-36+8}{8}=-\frac18,
+\qquad
+p\!\left(\frac74\right)=\frac{343-336+64}{64}=\frac{71}{64}.
+$$
+
+Primero se reemplaza el extremo izquierdo y después el derecho. En ambos casos se conservan valores de signos opuestos en los extremos.
+
+**1. c.** El intervalo final es $\left[\frac32,\frac74\right]$, de longitud $\frac14$. Su punto medio y la cota son
+
+$$
+\bar x=\frac{13}{8}=1.625,
+\qquad
+\left|r-\frac{13}{8}\right|\le\frac18=0.125.
+$$
+
+Se garantiza la tolerancia $\frac18$. La cota obtenida no garantiza la tolerancia $\frac1{16}$; un recorte adicional permitiría garantizarla al reportar el nuevo punto medio. La cota es un máximo garantizado, no el error real de la aproximación.
+
+**2.** Los valores son
+
+$$
+p(-2)=-1,\qquad p(-1)=3,\qquad p(0)=1,\qquad p(1)=-1.
+$$
+
+Hay una raíz en $(-2,-1)$ y otra en $(0,1)$. El ejercicio 1 garantiza una tercera en $(1,2)$. Son intervalos disjuntos, por lo que las tres raíces son distintas. Un polinomio de grado $3$ tiene a lo sumo tres raíces distintas; estas son todas, y las tres son reales y simples. La afirmación es falsa: aproximar una raíz no determina la naturaleza de las demás.
+
+**3. a.** $q(1)=-6$ y $q(2)=0$. El extremo $2$ es una raíz exacta; no hace falta bisecar para encontrarla.
+
+**3. b.** En $[1,3]$, $q(1)=-6$ y $q(3)=18$ tienen signos opuestos. El primer punto medio es $2$ y $q(2)=0$, así que el proceso termina con una raíz exacta. La afirmación es falsa: el método permite aproximar una raíz y, en ocasiones, encuentra una exactamente.
+
+:::
+
+## Ejercicios para practicar
+
+1. Para $p(x)=x^3-2x-5$, compruebe el cambio de signo en $[2,3]$. Realice tres iteraciones y reporte el intervalo final, su punto medio y la cota del error.
+
+2. Aproxime $\sqrt3$ mediante dos iteraciones aplicadas a $x^2-3$ en $[1,2]$. Reporte el intervalo, la aproximación y su cota. Distinga la aproximación de las dos soluciones exactas de $x^2-3=0$.
+
+3. Después de dos iteraciones iniciadas en $[2,4]$, se reporta el punto medio del intervalo conservado. ¿Cuál es la cota del error? ¿Cuántas iteraciones en total bastan para garantizar una cota a lo sumo $\frac18$? Suponga que no se ha encontrado una raíz exacta.
+
+4. Se reporta, para el ejemplo de $x^3-x-1$, «la raíz es $\frac{11}{8}$ y el error es a lo sumo $\frac1{16}$». Corrija el reporte usando el intervalo final $[\frac54,\frac{11}{8}]$. Distinga el último punto evaluado del punto medio de ese intervalo.
+
+5. Factorice $x^4-2x^2+1$ como el cuadrado de un binomio y determine sus raíces con multiplicidad. Evalúe en los extremos de $[0,2]$ y explique por qué la condición de cambio de signo no permite iniciar allí la bisección, aunque el intervalo contenga una raíz.
