@@ -17,27 +17,39 @@ Los métodos se eligen de acuerdo con la estructura de la ecuación. En los caso
 
 | Situación | Procedimiento | Resultado |
 |---|---|---|
-| Polinomio que puede factorizarse completamente por factor común, productos notables o agrupación | Factorizar y aplicar la propiedad del producto cero | Soluciones exactas |
-| Ecuación cuadrática | Factorización, si es visible, o fórmula general | Dos raíces exactas en $\mathbb C$, contando multiplicidad |
-| Ecuación cúbica con coeficientes enteros y una raíz racional | Candidatos racionales, Ruffini y resolución de la cuadrática resultante | Todas las soluciones exactas |
-| Ecuación cúbica sin raíces racionales | Localizar un cambio de signo y aplicar bisección | Aproximación de una raíz real con cota del error |
+| Polinomio que puede factorizarse completamente por factor común, productos notables o agrupación | Factorizar y aplicar la [propiedad del producto cero](2026-09-02-sesion-16.qmd) | Soluciones exactas |
+| Ecuación cuadrática | Factorización, si es visible, o fórmula general | Dos raíces exactas en $\mathbb C$, contando [multiplicidad](2026-09-08-sesion-20.qmd) |
+| Ecuación cúbica con coeficientes enteros y una raíz racional | Candidatos racionales, Ruffini y resolución de la [cuadrática resultante](2026-09-07-sesion-19.qmd) | Todas las soluciones exactas |
+| Ecuación cúbica sin raíces racionales | Localizar un [cambio de signo](2026-09-11-sesion-23.qmd) y aplicar bisección | Aproximación de una raíz real con cota del error |
 | Grado mayor que $3$ | Factorización y Ruffini repetido, mientras sean aplicables | Solución exacta completa solo si los factores restantes son lineales o cuadráticos |
 
-La bisección también puede emplearse para aproximar una raíz cuya expresión exacta ya se conoce. Sin embargo, cuando la consigna es resolver la ecuación, se conserva primero la solución exacta.
+**Cuando la consigna es resolver una ecuación, se prefiere un método exacto que permita obtener sus soluciones.** Por ejemplo, tres bisecciones para $x^2-2=0$ en $[1,2]$ permiten reportar $1.4375$ como aproximación de la raíz positiva, con error a lo sumo $\frac1{16}$; pero $1.4375^2-2=0.06640625\ne0$ y la raíz positiva exacta sigue siendo $\sqrt2$.
 
 ## Procedimiento de elección
 
-1. Escriba la ecuación como $p(x)=0$ y ordene el polinomio. Si los coeficientes tienen denominadores numéricos, elimínelos multiplicando por un múltiplo común. Si el término independiente es cero, extraiga la mayor potencia de $x$ como factor común.
+1. Escriba la ecuación como $p(x)=0$, con el polinomio en [forma ordenada](2026-09-01-sesion-15.qmd). Si los coeficientes tienen denominadores numéricos, elimínelos multiplicando por su mínimo común múltiplo, como en la [Sesión 18](2026-09-04-sesion-18.qmd). Si el término independiente es cero, extraiga la mayor potencia de $x$ como factor común.
 2. Busque una [factorización](2026-08-13-sesion-04.qmd) inmediata.
 3. Si el grado es $2$, use la [fórmula general](2026-09-02-sesion-16.qmd) cuando la factorización no sea evidente.
-4. Si el grado es $3$, determine los [candidatos a raíz racional](2026-09-04-sesion-18.qmd). Si encuentra una raíz, aplique [Ruffini](2026-09-03-sesion-17.qmd) y resuelva la cuadrática resultante.
+4. Si el grado es $3$, determine los [candidatos a raíz racional](2026-09-04-sesion-18.qmd). Si encuentra una raíz, aplique [Ruffini](2026-09-03-sesion-17.qmd), pruebe de nuevo la raíz hallada en el cociente por si se repite y resuelva la cuadrática resultante.
 5. Si el grado es mayor que $3$, los candidatos racionales y Ruffini pueden aplicarse repetidamente. El procedimiento produce una solución exacta completa únicamente cuando la factorización termina en factores lineales o cuadráticos.
-6. Si queda una cúbica sin raíces racionales, los métodos exactos estudiados no bastan para resolverla. Localice un intervalo $[a,b]$ con $p(a)p(b)<0$ y aplique bisección.
+6. Si los métodos exactos estudiados dejan sin resolver un factor de grado al menos $3$ y este toma signos opuestos en los extremos de un intervalo $[a,b]$, aplique bisección a ese factor para aproximar una de sus raíces.
 7. Indique por escrito por qué el método es aplicable y qué se obtuvo: el conjunto de soluciones exactas o la aproximación de una raíz con su cota del error.
 
-Antes de aplicar bisección se revisan los extremos. Si $p(a)=0$ o $p(b)=0$, ya se encontró una raíz exacta. Un cambio de signo garantiza al menos una raíz en el intervalo, pero no indica cuántas raíces tiene la ecuación fuera de él.
+Antes de aplicar bisección se revisan los extremos del polinomio o factor considerado, como en la [Sesión 23](2026-09-11-sesion-23.qmd). Si el valor en alguno de ellos es cero, ya se encontró una raíz exacta. Un cambio de signo garantiza al menos una raíz en el intervalo, pero no cuenta cuántas hay, ni dentro ni fuera de él.
 
-## Ejemplo 1. Una cúbica con solución exacta
+## Aproximar una raíz no es resolver la ecuación
+
+Una factorización completa exhibe todas las raíces con su multiplicidad. La bisección, en cambio, aproxima una raíz contenida en el intervalo que se conserva.
+
+- Un polinomio de grado $n$ tiene [a lo sumo $n$ raíces distintas](2026-09-08-sesion-20.qmd). Si se localiza una raíz en cada uno de $n$ intervalos disjuntos, esas raíces son distintas y son todas.
+- Localizar menos de $n$ cambios de signo no determina por sí solo cuántas raíces reales hay. Un intervalo puede contener dos raíces y tener valores del mismo signo en sus extremos; además, una raíz de multiplicidad par no produce cambio de signo.
+- Un polinomio de grado impar con coeficientes reales tiene al menos una raíz real. Uno de grado par puede no tener ninguna; por ejemplo, $x^4+3x^2+2>0$ para todo $x\in\mathbb R$.
+
+Por tanto, al usar bisección se debe indicar qué raíz se aproximó y cuántas raíces reales se localizaron. Si se han localizado $n$ raíces distintas de un polinomio de grado $n$, el grado garantiza que son todas; con menos raíces localizadas, el conteo por sí solo no basta para afirmarlo.
+
+## Ejemplos
+
+### Ejemplo 1. Una cúbica con solución exacta
 
 Resolver
 
@@ -77,7 +89,7 @@ $$
 
 Las tres soluciones son exactas. Aunque dos sean irracionales, no hace falta bisección para resolver la ecuación.
 
-## Ejemplo 2. Aproximación de una cúbica con los métodos estudiados
+### Ejemplo 2. Aproximación de una cúbica con los métodos estudiados
 
 Resolver, mediante los métodos estudiados,
 
@@ -93,7 +105,7 @@ $$
 
 Ninguno es raíz. Por ello, los métodos exactos estudiados no resuelven esta cúbica. Como $p(1)=-1<0<p(2)=7$, existe una raíz $r$ en $(1,2)$. Dos iteraciones de bisección producen:
 
-| Iteración | Intervalo | Punto medio | Valor de $p$ | Intervalo conservado |
+| Iteración | Intervalo antes de bisecar | Punto medio | Valor de $p$ | Intervalo conservado |
 |:---:|:---:|:---:|:---:|:---:|
 | $1$ | $[1,2]$ | $\frac32$ | $\frac{15}{8}$ | $\left[1,\frac32\right]$ |
 | $2$ | $\left[1,\frac32\right]$ | $\frac54$ | $\frac{13}{64}$ | $\left[1,\frac54\right]$ |
@@ -105,21 +117,21 @@ r\in\left[1,\frac54\right],
 \qquad
 r\approx\frac98,
 \qquad
-\left|r-\frac98\right|\le\frac18.
+\lvert r-\frac98\rvert\le\frac18.
 $$
 
 Este resultado aproxima una raíz; no constituye el conjunto solución de la ecuación.
 
 ## Errores frecuentes
 
-- **Usar bisección antes de revisar los métodos exactos.** Para $x^3-7x+6=0$, los candidatos racionales permiten obtener $x^3-7x+6=(x-1)(x-2)(x+3)$. Bisecar un intervalo daría información sobre una sola raíz y omitiría las demás.
-- **Concluir que no hay soluciones porque no hay raíces racionales.** Una cúbica sin raíces racionales tiene al menos una raíz real, aunque sea irracional.
-- **Afirmar que una bisección determina todas las raíces.** El método conserva un intervalo que contiene al menos una raíz. Las demás deben localizarse y aproximarse por separado.
-- **Ignorar raíces de multiplicidad par.** Una raíz par puede no producir cambio de signo, como ocurre con $(x-2)^2$ en $[0,3]$.
+- **Usar bisección antes de revisar los métodos exactos.** Para $p(x)=x^3-7x+6$, se tiene $p(0)=6$ y $p(3)=12$. Que los valores en los extremos tengan el mismo signo no impide resolver la ecuación: $p(1)=0$ y Ruffini produce $x^2+x-6=(x+3)(x-2)$. Por tanto, $S=\{-3,1,2\}$.
+- **Concluir que no hay soluciones porque no hay raíces racionales.** Para $p(x)=x^3+x^2-1$, los candidatos $\pm1$ no son raíces, pues $p(1)=1$ y $p(-1)=-1$. Sin embargo, $p(0)=-1<0<p(1)=1$, por lo que existe una raíz real en $(0,1)$ que puede aproximarse.
+- **Afirmar que una bisección determina todas las raíces.** Para $p(x)=x^3-3x+1$, la [Sesión 23](2026-09-11-sesion-23.qmd) aproximó una raíz en $(1,2)$. Los valores $p(-2)=-1$, $p(-1)=3$, $p(0)=1$ y $p(1)=-1$ localizan otras dos en $(-2,-1)$ y $(0,1)$.
+- **Ignorar raíces de multiplicidad par.** Para $p(x)=(x-2)^2$, los valores $p(0)=4$ y $p(3)=1$ tienen el mismo signo aunque $2\in(0,3)$ es una raíz de multiplicidad par. La gráfica [toca el eje sin cruzarlo](2026-09-10-sesion-22.qmd), por lo que la bisección no puede iniciarse en $[0,3]$.
 
 ## Actividad
 
-En cada problema, justifique la elección del método antes de efectuar los cálculos.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique por escrito la elección del método en cada caso, antes de efectuar los cálculos.
 
 1. Resuelva $x^2-6x+7=0$. Indique si las soluciones son exactas o aproximadas y explique por qué no se requiere bisección.
 
@@ -188,7 +200,7 @@ $$
 
 Los únicos candidatos racionales son $\pm1$, y $p(1)=2$, $p(-1)=-2$. Los métodos exactos estudiados no resuelven esta cúbica. Además, $p(0)=-1<0<p(1)=2$, por lo que se aplica bisección en $[0,1]$.
 
-| Iteración | Intervalo | Punto medio | Valor de $p$ | Intervalo conservado |
+| Iteración | Intervalo antes de bisecar | Punto medio | Valor de $p$ | Intervalo conservado |
 |:---:|:---:|:---:|:---:|:---:|
 | $1$ | $[0,1]$ | $\frac12$ | $-\frac18$ | $\left[\frac12,1\right]$ |
 | $2$ | $\left[\frac12,1\right]$ | $\frac34$ | $\frac{47}{64}$ | $\left[\frac12,\frac34\right]$ |
@@ -198,7 +210,7 @@ El punto medio del intervalo final es $\frac58$ y la mitad de su longitud es $\f
 $$
 x\approx\frac58,
 \qquad
-\left|x-\frac58\right|\le\frac18.
+\lvert x-\frac58\rvert\le\frac18.
 $$
 
 La respuesta es aproximada. La garantía del problema permite afirmar que corresponde a la única magnitud del intervalo con esa lectura.
@@ -211,11 +223,11 @@ La respuesta es aproximada. La garantía del problema permite afirmar que corres
 
 1. Sea $p(x)=x^3-4x+1$.
 
-   a. Determine si la ecuación $p(x)=0$ tiene raíces racionales.
+   a. Determine si la ecuación $p(x)=0$ admite alguno de los métodos exactos estudiados.
 
-   b. Evalúe $p$ en $-3,-2,-1,0,1$ y $2$. Localice sus raíces reales en intervalos disjuntos y explique por qué son todas.
+   b. Evalúe $p$ en $-3,-2,-1,0,1$ y $2$. Localice sus raíces reales en intervalos disjuntos y explique por qué son todas, usando que un polinomio de grado $3$ tiene [a lo sumo tres raíces distintas](2026-09-08-sesion-20.qmd).
 
-   c. Realice una iteración de bisección en $[1,2]$ y reporte la aproximación con su cota. Explique qué tendría que hacerse para aproximar las demás raíces.
+   c. Realice una iteración de bisección en $[1,2]$ y reporte la aproximación con su cota. Explique si esa bisección resuelve la ecuación y qué tendría que hacerse para aproximar las demás raíces.
 
 2. Para cada ecuación, elija un método, justifique la elección y resuelva exactamente o aproxime una raíz mediante dos iteraciones de bisección.
 
@@ -228,3 +240,13 @@ La respuesta es aproximada. La garantía del problema permite afirmar que corres
 3. Resuelva $x^4-x^3-7x^2+x+6=0$ mediante candidatos racionales y Ruffini repetido. Escriba la factorización completa y explique por qué no se necesita aproximar.
 
 4. Un estudiante afirma: "Si una ecuación no tiene raíces racionales, hay que usar bisección". Use $x^2-6x+7=0$ para mostrar que la afirmación es falsa y reformúlela de manera correcta para los métodos estudiados.
+
+5. Resuelva $x^2+2x+5=0$ en $\mathbb C$ y explique por qué ningún intervalo real presenta un cambio de signo para este polinomio.
+
+6. Resuelva
+
+   $$
+   x^3-\frac12x^2-3x+\frac32=0.
+   $$
+
+   Elimine primero los denominadores, determine los candidatos racionales y explique por qué no se necesita bisección aunque dos soluciones sean irracionales.
