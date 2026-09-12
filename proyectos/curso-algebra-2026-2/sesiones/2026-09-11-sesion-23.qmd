@@ -8,9 +8,11 @@ description: "Cambio de signo, bisección manual, actualización del intervalo, 
 
 Para $p(x)=x^3-x-1$, los únicos [candidatos racionales](2026-09-04-sesion-18.qmd) son $1$ y $-1$. Como $p(1)=p(-1)=-1$, ninguno es raíz. El procedimiento de raíz racional, [Ruffini](2026-09-03-sesion-17.qmd) y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.
 
+Para descartar raíces racionales mediante la lista de candidatos se revisan todos ellos: basta evaluar el polinomio en cada uno y comprobar que ningún resultado sea cero. No encontrar raíces racionales tampoco significa que no haya raíces reales; estas pueden ser irracionales.
+
 En la [Sesión 19](2026-09-07-sesion-19.qmd) se obtuvo $p(1)=-1$ y $p(2)=5$, y se localizó al menos una raíz real entre $1$ y $2$. El **método de bisección** permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante [evaluación directa](2026-09-01-sesion-15.qmd) y comparación de signos.
 
-Cuando la [factorización](2026-08-13-sesion-04.qmd) o la [fórmula general](2026-09-02-sesion-16.qmd) permiten resolver una ecuación, se conservan las soluciones exactas. Por ejemplo, las soluciones de $x^2-2=0$ son $\pm\sqrt2$. Si además se necesita un valor numérico, la bisección puede aproximar la raíz positiva en $[1,2]$. Disponer de una expresión exacta no impide calcular una aproximación con cota del error.
+Cuando la [factorización](2026-08-13-sesion-04.qmd) o la [fórmula general](2026-09-02-sesion-16.qmd) permiten resolver una ecuación, se conservan las soluciones exactas. Por ejemplo, las soluciones de $x^2-2=0$ son $\pm\sqrt2$. Si además se necesita un valor numérico, la bisección puede aproximar la raíz positiva en $[1,2]$. Disponer de una expresión exacta no impide calcular una aproximación con cota del error. La ausencia de raíces racionales no es un requisito para aplicar bisección.
 
 ## Continuidad y cambio de signo
 
@@ -42,7 +44,7 @@ $$
 m=\frac{a+b}{2}
 $$
 
-y se evalúa $p(m)$. Hay tres posibilidades:
+y se evalúa $p(m)$. Los extremos $a,b$ y el punto medio $m$ son valores de $x$; $p(a)$, $p(b)$ y $p(m)$ son las alturas correspondientes en la gráfica. El promedio se calcula con los extremos del intervalo, no con los valores del polinomio. Hay tres posibilidades:
 
 | Resultado | Decisión |
 |---|---|
@@ -50,7 +52,7 @@ y se evalúa $p(m)$. Hay tres posibilidades:
 | $p(a)p(m)<0$ | Se conserva $[a,m]$. |
 | $p(m)p(b)<0$ | Se conserva $[m,b]$. |
 
-Si $p(m)\ne0$, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. **Se reemplaza el extremo cuyo valor tiene el mismo signo que $p(m)$.**
+Si $p(m)\ne0$, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. **Se reemplaza el extremo cuyo valor tiene el mismo signo que $p(m)$.** El nuevo extremo es $m$, no $p(m)$; de la evaluación se utiliza el signo para decidir. Descartar la otra mitad no demuestra que carezca de raíces: se conserva aquella donde el cambio de signo garantiza al menos una.
 
 Cada repetición de este paso se llama **iteración**. El nuevo intervalo mide la mitad del anterior y sigue conteniendo al menos una raíz. No se escoge la mitad por el tamaño de los valores de $p$, sino por sus signos.
 
@@ -90,6 +92,8 @@ p\!\left(\frac54\right)
 $$
 
 Ahora se reemplaza el extremo izquierdo, pues $p(1)$ también es negativo. Se conserva $\left[\frac54,\frac32\right]$.
+
+Si se detuviera el proceso después de estas dos iteraciones, se reportaría su punto medio $\frac{11}{8}$ con cota del error $\frac18$. Para continuar, ese mismo punto se evalúa en la tercera iteración y se vuelve a reducir el intervalo.
 
 **Tercera iteración.** Se obtiene
 
@@ -200,7 +204,7 @@ $$
 =\frac{b_0-a_0}{2^{k+1}}.
 $$
 
-La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre $2$.
+La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre $2$. Elegir un punto distinto del centro aumenta la distancia al extremo más alejado. Por eso, con la sola información de que la raíz pertenece al intervalo, el punto medio da la menor cota garantizada; otro punto podría estar más cerca de la raíz concreta, pero el intervalo por sí solo no permite saberlo.
 
 | Iteraciones realizadas | Longitud, si $b_0-a_0=1$ | Cota para el punto medio del intervalo conservado |
 |:---:|:---:|:---:|
