@@ -1,0 +1,230 @@
+---
+title: "Sesión 24. Selección del método para ecuaciones polinómicas"
+date: 2026-09-14
+description: "Elección justificada entre métodos exactos y bisección para resolver o aproximar raíces de ecuaciones polinómicas."
+---
+
+## Solución exacta y aproximación
+
+Al resolver una ecuación polinómica $p(x)=0$ conviene distinguir dos resultados:
+
+- Una **solución exacta** se especifica sin redondeo y satisface la ecuación. En los problemas de esta unidad puede expresarse, por ejemplo, mediante enteros, fracciones, radicales o expresiones con $i$. Las soluciones exactas de $x^2-2=0$ son $\pm\sqrt2$.
+- Una **aproximación** es un número cercano a una raíz. En esta sesión se reportará acompañada de una cota del error. Por ejemplo, la [bisección](2026-09-11-sesion-23.qmd) puede aproximar la raíz positiva de $x^2-2=0$, pero el decimal obtenido no sustituye a la solución exacta $\sqrt2$.
+
+Que una raíz sea irracional no significa que sea aproximada. El número $3+\sqrt2$ es exacto; $4.4142$ es una aproximación decimal suya, con error menor que $0.00005$.
+
+Los métodos se eligen de acuerdo con la estructura de la ecuación. En los casos trabajados en esta unidad:
+
+| Situación | Procedimiento | Resultado |
+|---|---|---|
+| Polinomio que puede factorizarse completamente por factor común, productos notables o agrupación | Factorizar y aplicar la propiedad del producto cero | Soluciones exactas |
+| Ecuación cuadrática | Factorización, si es visible, o fórmula general | Dos raíces exactas en $\mathbb C$, contando multiplicidad |
+| Ecuación cúbica con coeficientes enteros y una raíz racional | Candidatos racionales, Ruffini y resolución de la cuadrática resultante | Todas las soluciones exactas |
+| Ecuación cúbica sin raíces racionales | Localizar un cambio de signo y aplicar bisección | Aproximación de una raíz real con cota del error |
+| Grado mayor que $3$ | Factorización y Ruffini repetido, mientras sean aplicables | Solución exacta completa solo si los factores restantes son lineales o cuadráticos |
+
+La bisección también puede emplearse para aproximar una raíz cuya expresión exacta ya se conoce. Sin embargo, cuando la consigna es resolver la ecuación, se conserva primero la solución exacta.
+
+## Procedimiento de elección
+
+1. Escriba la ecuación como $p(x)=0$ y ordene el polinomio. Si los coeficientes tienen denominadores numéricos, elimínelos multiplicando por un múltiplo común. Si el término independiente es cero, extraiga la mayor potencia de $x$ como factor común.
+2. Busque una [factorización](2026-08-13-sesion-04.qmd) inmediata.
+3. Si el grado es $2$, use la [fórmula general](2026-09-02-sesion-16.qmd) cuando la factorización no sea evidente.
+4. Si el grado es $3$, determine los [candidatos a raíz racional](2026-09-04-sesion-18.qmd). Si encuentra una raíz, aplique [Ruffini](2026-09-03-sesion-17.qmd) y resuelva la cuadrática resultante.
+5. Si el grado es mayor que $3$, los candidatos racionales y Ruffini pueden aplicarse repetidamente. El procedimiento produce una solución exacta completa únicamente cuando la factorización termina en factores lineales o cuadráticos.
+6. Si queda una cúbica sin raíces racionales, los métodos exactos estudiados no bastan para resolverla. Localice un intervalo $[a,b]$ con $p(a)p(b)<0$ y aplique bisección.
+7. Indique por escrito por qué el método es aplicable y qué se obtuvo: el conjunto de soluciones exactas o la aproximación de una raíz con su cota del error.
+
+Antes de aplicar bisección se revisan los extremos. Si $p(a)=0$ o $p(b)=0$, ya se encontró una raíz exacta. Un cambio de signo garantiza al menos una raíz en el intervalo, pero no indica cuántas raíces tiene la ecuación fuera de él.
+
+## Ejemplo 1. Una cúbica con solución exacta
+
+Resolver
+
+$$
+x^3-x^2-3x+3=0.
+$$
+
+Para $p(x)=x^3-x^2-3x+3$, los candidatos racionales son $\pm1$ y $\pm3$. Como
+
+$$
+p(1)=1-1-3+3=0,
+$$
+
+$1$ es una raíz. La tabla de Ruffini es
+
+$$
+\begin{array}{r|rrrr}
+1 & 1 & -1 & -3 & 3\\
+  &   & 1 & 0 & -3\\
+\hline
+  & 1 & 0 & -3 & \mathbf{0}
+\end{array}
+$$
+
+y el cociente es $x^2-3$. Por tanto,
+
+$$
+x^3-x^2-3x+3=(x-1)(x^2-3)
+=(x-1)(x-\sqrt3)(x+\sqrt3),
+$$
+
+de modo que
+
+$$
+S=\{-\sqrt3,1,\sqrt3\}.
+$$
+
+Las tres soluciones son exactas. Aunque dos sean irracionales, no hace falta bisección para resolver la ecuación.
+
+## Ejemplo 2. Aproximación de una cúbica con los métodos estudiados
+
+Resolver, mediante los métodos estudiados,
+
+$$
+x^3+x-3=0.
+$$
+
+Los candidatos racionales de $p(x)=x^3+x-3$ son $\pm1$ y $\pm3$. Sus valores son
+
+$$
+p(1)=-1,\qquad p(-1)=-5,\qquad p(3)=27,\qquad p(-3)=-33.
+$$
+
+Ninguno es raíz. Por ello, los métodos exactos estudiados no resuelven esta cúbica. Como $p(1)=-1<0<p(2)=7$, existe una raíz $r$ en $(1,2)$. Dos iteraciones de bisección producen:
+
+| Iteración | Intervalo | Punto medio | Valor de $p$ | Intervalo conservado |
+|:---:|:---:|:---:|:---:|:---:|
+| $1$ | $[1,2]$ | $\frac32$ | $\frac{15}{8}$ | $\left[1,\frac32\right]$ |
+| $2$ | $\left[1,\frac32\right]$ | $\frac54$ | $\frac{13}{64}$ | $\left[1,\frac54\right]$ |
+
+El intervalo final tiene longitud $\frac14$. Se reporta su punto medio, $\frac98$, sin contarlo como una iteración adicional, pues no se vuelve a evaluar ni a reducir el intervalo. Por tanto,
+
+$$
+r\in\left[1,\frac54\right],
+\qquad
+r\approx\frac98,
+\qquad
+\left|r-\frac98\right|\le\frac18.
+$$
+
+Este resultado aproxima una raíz; no constituye el conjunto solución de la ecuación.
+
+## Errores frecuentes
+
+- **Usar bisección antes de revisar los métodos exactos.** Para $x^3-7x+6=0$, los candidatos racionales permiten obtener $x^3-7x+6=(x-1)(x-2)(x+3)$. Bisecar un intervalo daría información sobre una sola raíz y omitiría las demás.
+- **Concluir que no hay soluciones porque no hay raíces racionales.** Una cúbica sin raíces racionales tiene al menos una raíz real, aunque sea irracional.
+- **Afirmar que una bisección determina todas las raíces.** El método conserva un intervalo que contiene al menos una raíz. Las demás deben localizarse y aproximarse por separado.
+- **Ignorar raíces de multiplicidad par.** Una raíz par puede no producir cambio de signo, como ocurre con $(x-2)^2$ en $[0,3]$.
+
+## Actividad
+
+En cada problema, justifique la elección del método antes de efectuar los cálculos.
+
+1. Resuelva $x^2-6x+7=0$. Indique si las soluciones son exactas o aproximadas y explique por qué no se requiere bisección.
+
+2. Un instrumento se calibra mediante la relación
+
+   $$
+   L(x)=x^3+x^2+x,\qquad 0\le x\le2,
+   $$
+
+   donde $x$ es la magnitud medida y $L(x)$ la lectura. Se garantiza que a cada lectura corresponde una sola magnitud en ese intervalo.
+
+   a. Determine la magnitud que produce la lectura $L=3$.
+
+   b. Para la lectura $L=1$, decida si los métodos exactos estudiados son suficientes. Si no lo son, realice dos iteraciones de bisección y reporte la aproximación con su cota del error.
+
+   c. Distinga cuál respuesta es exacta y cuál es aproximada.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1.** La ecuación es cuadrática, así que la fórmula general proporciona las soluciones exactas. El discriminante es
+
+$$
+\Delta=(-6)^2-4(1)(7)=8.
+$$
+
+Por tanto,
+
+$$
+x=\frac{6\pm\sqrt8}{2}=3\pm\sqrt2,
+\qquad
+S=\{3-\sqrt2,3+\sqrt2\}.
+$$
+
+Las soluciones son irracionales, pero exactas. La bisección solo daría una aproximación de una raíz en cada intervalo elegido.
+
+**2. a.** La ecuación es
+
+$$
+x^3+x^2+x-3=0.
+$$
+
+Como $p(1)=0$, se aplica Ruffini:
+
+$$
+\begin{array}{r|rrrr}
+1 & 1 & 1 & 1 & -3\\
+  &   & 1 & 2 & 3\\
+\hline
+  & 1 & 2 & 3 & \mathbf{0}
+\end{array}
+$$
+
+Así,
+
+$$
+x^3+x^2+x-3=(x-1)(x^2+2x+3).
+$$
+
+La cuadrática tiene discriminante $4-12=-8$, por lo que sus raíces no son reales. La única solución en $[0,2]$ es $x=1$, y $L(1)=3$. La respuesta es exacta.
+
+**2. b.** Ahora se resuelve
+
+$$
+p(x)=x^3+x^2+x-1=0.
+$$
+
+Los únicos candidatos racionales son $\pm1$, y $p(1)=2$, $p(-1)=-2$. Los métodos exactos estudiados no resuelven esta cúbica. Además, $p(0)=-1<0<p(1)=2$, por lo que se aplica bisección en $[0,1]$.
+
+| Iteración | Intervalo | Punto medio | Valor de $p$ | Intervalo conservado |
+|:---:|:---:|:---:|:---:|:---:|
+| $1$ | $[0,1]$ | $\frac12$ | $-\frac18$ | $\left[\frac12,1\right]$ |
+| $2$ | $\left[\frac12,1\right]$ | $\frac34$ | $\frac{47}{64}$ | $\left[\frac12,\frac34\right]$ |
+
+El punto medio del intervalo final es $\frac58$ y la mitad de su longitud es $\frac18$. Por tanto,
+
+$$
+x\approx\frac58,
+\qquad
+\left|x-\frac58\right|\le\frac18.
+$$
+
+La respuesta es aproximada. La garantía del problema permite afirmar que corresponde a la única magnitud del intervalo con esa lectura.
+
+**2. c.** Para $L=3$, la magnitud es exactamente $x=1$. Para $L=1$, después de dos iteraciones se obtiene $x\approx\frac58$ con error a lo sumo $\frac18$.
+
+:::
+
+## Ejercicios para practicar
+
+1. Sea $p(x)=x^3-4x+1$.
+
+   a. Determine si la ecuación $p(x)=0$ tiene raíces racionales.
+
+   b. Evalúe $p$ en $-3,-2,-1,0,1$ y $2$. Localice sus raíces reales en intervalos disjuntos y explique por qué son todas.
+
+   c. Realice una iteración de bisección en $[1,2]$ y reporte la aproximación con su cota. Explique qué tendría que hacerse para aproximar las demás raíces.
+
+2. Para cada ecuación, elija un método, justifique la elección y resuelva exactamente o aproxime una raíz mediante dos iteraciones de bisección.
+
+   a. $2x^2-x-3=0$.
+
+   b. $x^3-3x^2-4x+12=0$.
+
+   c. $x^3-3x-1=0$; localice primero sus tres raíces reales.
+
+3. Resuelva $x^4-x^3-7x^2+x+6=0$ mediante candidatos racionales y Ruffini repetido. Escriba la factorización completa y explique por qué no se necesita aproximar.
+
+4. Un estudiante afirma: "Si una ecuación no tiene raíces racionales, hay que usar bisección". Use $x^2-6x+7=0$ para mostrar que la afirmación es falsa y reformúlela de manera correcta para los métodos estudiados.
