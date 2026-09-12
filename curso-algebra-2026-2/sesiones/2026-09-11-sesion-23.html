@@ -484,8 +484,9 @@ window.Quarto = {
 <section id="aproximación-de-raíces" class="level2">
 <h2 class="anchored" data-anchor-id="aproximación-de-raíces">Aproximación de raíces</h2>
 <p>Para <span class="math inline">\(p(x)=x^3-x-1\)</span>, los únicos <a href="../sesiones/2026-09-04-sesion-18.html">candidatos racionales</a> son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>. Como <span class="math inline">\(p(1)=p(-1)=-1\)</span>, ninguno es raíz. El procedimiento de raíz racional, <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a> y cuadrática resultante no permite resolver esta ecuación. Esto no significa que carezca de soluciones exactas; señala una limitación de ese procedimiento.</p>
+<p>Para descartar raíces racionales mediante la lista de candidatos se revisan todos ellos: basta evaluar el polinomio en cada uno y comprobar que ningún resultado sea cero. No encontrar raíces racionales tampoco significa que no haya raíces reales; estas pueden ser irracionales.</p>
 <p>En la <a href="../sesiones/2026-09-07-sesion-19.html">Sesión 19</a> se obtuvo <span class="math inline">\(p(1)=-1\)</span> y <span class="math inline">\(p(2)=5\)</span>, y se localizó al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. El <strong>método de bisección</strong> permite reducir ese intervalo y obtener una aproximación con una garantía sobre su error, mediante <a href="../sesiones/2026-09-01-sesion-15.html">evaluación directa</a> y comparación de signos.</p>
-<p>Cuando la <a href="../sesiones/2026-08-13-sesion-04.html">factorización</a> o la <a href="../sesiones/2026-09-02-sesion-16.html">fórmula general</a> permiten resolver una ecuación, se conservan las soluciones exactas. Por ejemplo, las soluciones de <span class="math inline">\(x^2-2=0\)</span> son <span class="math inline">\(\pm\sqrt2\)</span>. Si además se necesita un valor numérico, la bisección puede aproximar la raíz positiva en <span class="math inline">\([1,2]\)</span>. Disponer de una expresión exacta no impide calcular una aproximación con cota del error.</p>
+<p>Cuando la <a href="../sesiones/2026-08-13-sesion-04.html">factorización</a> o la <a href="../sesiones/2026-09-02-sesion-16.html">fórmula general</a> permiten resolver una ecuación, se conservan las soluciones exactas. Por ejemplo, las soluciones de <span class="math inline">\(x^2-2=0\)</span> son <span class="math inline">\(\pm\sqrt2\)</span>. Si además se necesita un valor numérico, la bisección puede aproximar la raíz positiva en <span class="math inline">\([1,2]\)</span>. Disponer de una expresión exacta no impide calcular una aproximación con cota del error. La ausencia de raíces racionales no es un requisito para aplicar bisección.</p>
 </section>
 <section id="continuidad-y-cambio-de-signo" class="level2">
 <h2 class="anchored" data-anchor-id="continuidad-y-cambio-de-signo">Continuidad y cambio de signo</h2>
@@ -508,7 +509,7 @@ p(x)=x^3-4x=x(x-2)(x+2)
 <p><span class="math display">\[
 m=\frac{a+b}{2}
 \]</span></p>
-<p>y se evalúa <span class="math inline">\(p(m)\)</span>. Hay tres posibilidades:</p>
+<p>y se evalúa <span class="math inline">\(p(m)\)</span>. Los extremos <span class="math inline">\(a,b\)</span> y el punto medio <span class="math inline">\(m\)</span> son valores de <span class="math inline">\(x\)</span>; <span class="math inline">\(p(a)\)</span>, <span class="math inline">\(p(b)\)</span> y <span class="math inline">\(p(m)\)</span> son las alturas correspondientes en la gráfica. El promedio se calcula con los extremos del intervalo, no con los valores del polinomio. Hay tres posibilidades:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -531,7 +532,7 @@ m=\frac{a+b}{2}
 </tr>
 </tbody>
 </table>
-<p>Si <span class="math inline">\(p(m)\ne0\)</span>, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. <strong>Se reemplaza el extremo cuyo valor tiene el mismo signo que <span class="math inline">\(p(m)\)</span>.</strong></p>
+<p>Si <span class="math inline">\(p(m)\ne0\)</span>, su signo coincide con el de uno de los extremos y es opuesto al del otro. Por eso, exactamente una de las dos mitades conserva el cambio de signo. <strong>Se reemplaza el extremo cuyo valor tiene el mismo signo que <span class="math inline">\(p(m)\)</span>.</strong> El nuevo extremo es <span class="math inline">\(m\)</span>, no <span class="math inline">\(p(m)\)</span>; de la evaluación se utiliza el signo para decidir. Descartar la otra mitad no demuestra que carezca de raíces: se conserva aquella donde el cambio de signo garantiza al menos una.</p>
 <p>Cada repetición de este paso se llama <strong>iteración</strong>. El nuevo intervalo mide la mitad del anterior y sigue conteniendo al menos una raíz. No se escoge la mitad por el tamaño de los valores de <span class="math inline">\(p\)</span>, sino por sus signos.</p>
 </section>
 <section id="procedimiento" class="level2">
@@ -566,6 +567,7 @@ p\!\left(\frac54\right)
 =-\frac{19}{64}&lt;0.
 \]</span></p>
 <p>Ahora se reemplaza el extremo izquierdo, pues <span class="math inline">\(p(1)\)</span> también es negativo. Se conserva <span class="math inline">\(\left[\frac54,\frac32\right]\)</span>.</p>
+<p>Si se detuviera el proceso después de estas dos iteraciones, se reportaría su punto medio <span class="math inline">\(\frac{11}{8}\)</span> con cota del error <span class="math inline">\(\frac18\)</span>. Para continuar, ese mismo punto se evalúa en la tercera iteración y se vuelve a reducir el intervalo.</p>
 <p><strong>Tercera iteración.</strong> Se obtiene</p>
 <p><span class="math display">\[
 m=\frac{\frac54+\frac32}{2}=\frac{11}{8},
@@ -692,7 +694,7 @@ b_k-a_k=\frac{b_0-a_0}{2^k}.
 \lvert r-\bar x\rvert\le\frac{b_k-a_k}{2}
 =\frac{b_0-a_0}{2^{k+1}}.
 \]</span></p>
-<p>La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre <span class="math inline">\(2\)</span>.</p>
+<p>La justificación es geométrica: desde el centro del intervalo hasta cualquiera de sus extremos hay la mitad de su longitud. Cada bisección divide también la cota entre <span class="math inline">\(2\)</span>. Elegir un punto distinto del centro aumenta la distancia al extremo más alejado. Por eso, con la sola información de que la raíz pertenece al intervalo, el punto medio da la menor cota garantizada; otro punto podría estar más cerca de la raíz concreta, pero el intervalo por sí solo no permite saberlo.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
