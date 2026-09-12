@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Operaciones, sistemas, inversas y determinantes.">
+<meta name="description" content="Elección justificada entre métodos exactos y bisección para resolver o aproximar raíces de ecuaciones polinómicas.">
 
-<title>Unidad 4. Matrices – Álgebra</title>
+<title>Sesión 24. Selección del método para ecuaciones polinómicas – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../unidades/05-conceptos-algebra-lineal.html" rel="next">
-<link href="../unidades/03-sistemas-ecuaciones.html" rel="prev">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="next">
+<link href="../sesiones/2026-09-11-sesion-23.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Unidad 4. Matrices – Álgebra">
-<meta property="og:description" content="Operaciones, sistemas, inversas y determinantes.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 24. Selección del método para ecuaciones polinómicas – Álgebra">
+<meta property="og:description" content="Elección justificada entre métodos exactos y bisección para resolver o aproximar raíces de ecuaciones polinómicas.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -93,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-14-sesion-24.html"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -255,13 +283,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -314,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
+  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
   </div>
 </li>
       </ul>
@@ -337,16 +365,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 4. Matrices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
   </div>
 </li>
       </ul>
@@ -414,16 +442,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#contenidos" id="toc-contenidos" class="nav-link active" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#solución-exacta-y-aproximación" id="toc-solución-exacta-y-aproximación" class="nav-link active" data-scroll-target="#solución-exacta-y-aproximación">Solución exacta y aproximación</a></li>
+  <li><a href="#procedimiento-de-elección" id="toc-procedimiento-de-elección" class="nav-link" data-scroll-target="#procedimiento-de-elección">Procedimiento de elección</a></li>
+  <li><a href="#ejemplo-1.-una-cúbica-con-solución-exacta" id="toc-ejemplo-1.-una-cúbica-con-solución-exacta" class="nav-link" data-scroll-target="#ejemplo-1.-una-cúbica-con-solución-exacta">Ejemplo 1. Una cúbica con solución exacta</a></li>
+  <li><a href="#ejemplo-2.-aproximación-de-una-cúbica-con-los-métodos-estudiados" id="toc-ejemplo-2.-aproximación-de-una-cúbica-con-los-métodos-estudiados" class="nav-link" data-scroll-target="#ejemplo-2.-aproximación-de-una-cúbica-con-los-métodos-estudiados">Ejemplo 2. Aproximación de una cúbica con los métodos estudiados</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../unidades/04-matrices.html"><span class="chapter-title">Unidad 4. Matrices</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-14-sesion-24.html"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Unidad 4. Matrices</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></h1>
 </div>
 
 
@@ -431,6 +465,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">14 de septiembre de 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -440,16 +480,291 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Duración prevista:</strong> 15 horas.</p>
-<section id="contenidos" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos">Contenidos</h2>
+<section id="solución-exacta-y-aproximación" class="level2">
+<h2 class="anchored" data-anchor-id="solución-exacta-y-aproximación">Solución exacta y aproximación</h2>
+<p>Al resolver una ecuación polinómica <span class="math inline">\(p(x)=0\)</span> conviene distinguir dos resultados:</p>
+<ul>
+<li>Una <strong>solución exacta</strong> se especifica sin redondeo y satisface la ecuación. En los problemas de esta unidad puede expresarse, por ejemplo, mediante enteros, fracciones, radicales o expresiones con <span class="math inline">\(i\)</span>. Las soluciones exactas de <span class="math inline">\(x^2-2=0\)</span> son <span class="math inline">\(\pm\sqrt2\)</span>.</li>
+<li>Una <strong>aproximación</strong> es un número cercano a una raíz. En esta sesión se reportará acompañada de una cota del error. Por ejemplo, la <a href="../sesiones/2026-09-11-sesion-23.html">bisección</a> puede aproximar la raíz positiva de <span class="math inline">\(x^2-2=0\)</span>, pero el decimal obtenido no sustituye a la solución exacta <span class="math inline">\(\sqrt2\)</span>.</li>
+</ul>
+<p>Que una raíz sea irracional no significa que sea aproximada. El número <span class="math inline">\(3+\sqrt2\)</span> es exacto; <span class="math inline">\(4.4142\)</span> es una aproximación decimal suya, con error menor que <span class="math inline">\(0.00005\)</span>.</p>
+<p>Los métodos se eligen de acuerdo con la estructura de la ecuación. En los casos trabajados en esta unidad:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situación</th>
+<th>Procedimiento</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Polinomio que puede factorizarse completamente por factor común, productos notables o agrupación</td>
+<td>Factorizar y aplicar la propiedad del producto cero</td>
+<td>Soluciones exactas</td>
+</tr>
+<tr class="even">
+<td>Ecuación cuadrática</td>
+<td>Factorización, si es visible, o fórmula general</td>
+<td>Dos raíces exactas en <span class="math inline">\(\mathbb C\)</span>, contando multiplicidad</td>
+</tr>
+<tr class="odd">
+<td>Ecuación cúbica con coeficientes enteros y una raíz racional</td>
+<td>Candidatos racionales, Ruffini y resolución de la cuadrática resultante</td>
+<td>Todas las soluciones exactas</td>
+</tr>
+<tr class="even">
+<td>Ecuación cúbica sin raíces racionales</td>
+<td>Localizar un cambio de signo y aplicar bisección</td>
+<td>Aproximación de una raíz real con cota del error</td>
+</tr>
+<tr class="odd">
+<td>Grado mayor que <span class="math inline">\(3\)</span></td>
+<td>Factorización y Ruffini repetido, mientras sean aplicables</td>
+<td>Solución exacta completa solo si los factores restantes son lineales o cuadráticos</td>
+</tr>
+</tbody>
+</table>
+<p>La bisección también puede emplearse para aproximar una raíz cuya expresión exacta ya se conoce. Sin embargo, cuando la consigna es resolver la ecuación, se conserva primero la solución exacta.</p>
+</section>
+<section id="procedimiento-de-elección" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento-de-elección">Procedimiento de elección</h2>
 <ol type="1">
-<li>Operaciones con matrices y sus propiedades.</li>
-<li>Representación matricial de un sistema de ecuaciones lineales.</li>
-<li>Matriz inversa en la resolución de sistemas.</li>
-<li>Determinantes y regla de Cramer.</li>
+<li>Escriba la ecuación como <span class="math inline">\(p(x)=0\)</span> y ordene el polinomio. Si los coeficientes tienen denominadores numéricos, elimínelos multiplicando por un múltiplo común. Si el término independiente es cero, extraiga la mayor potencia de <span class="math inline">\(x\)</span> como factor común.</li>
+<li>Busque una <a href="../sesiones/2026-08-13-sesion-04.html">factorización</a> inmediata.</li>
+<li>Si el grado es <span class="math inline">\(2\)</span>, use la <a href="../sesiones/2026-09-02-sesion-16.html">fórmula general</a> cuando la factorización no sea evidente.</li>
+<li>Si el grado es <span class="math inline">\(3\)</span>, determine los <a href="../sesiones/2026-09-04-sesion-18.html">candidatos a raíz racional</a>. Si encuentra una raíz, aplique <a href="../sesiones/2026-09-03-sesion-17.html">Ruffini</a> y resuelva la cuadrática resultante.</li>
+<li>Si el grado es mayor que <span class="math inline">\(3\)</span>, los candidatos racionales y Ruffini pueden aplicarse repetidamente. El procedimiento produce una solución exacta completa únicamente cuando la factorización termina en factores lineales o cuadráticos.</li>
+<li>Si queda una cúbica sin raíces racionales, los métodos exactos estudiados no bastan para resolverla. Localice un intervalo <span class="math inline">\([a,b]\)</span> con <span class="math inline">\(p(a)p(b)&lt;0\)</span> y aplique bisección.</li>
+<li>Indique por escrito por qué el método es aplicable y qué se obtuvo: el conjunto de soluciones exactas o la aproximación de una raíz con su cota del error.</li>
 </ol>
-<p>Las sesiones de esta unidad se incorporarán conforme se desarrollen en clase.</p>
+<p>Antes de aplicar bisección se revisan los extremos. Si <span class="math inline">\(p(a)=0\)</span> o <span class="math inline">\(p(b)=0\)</span>, ya se encontró una raíz exacta. Un cambio de signo garantiza al menos una raíz en el intervalo, pero no indica cuántas raíces tiene la ecuación fuera de él.</p>
+</section>
+<section id="ejemplo-1.-una-cúbica-con-solución-exacta" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-1.-una-cúbica-con-solución-exacta">Ejemplo 1. Una cúbica con solución exacta</h2>
+<p>Resolver</p>
+<p><span class="math display">\[
+x^3-x^2-3x+3=0.
+\]</span></p>
+<p>Para <span class="math inline">\(p(x)=x^3-x^2-3x+3\)</span>, los candidatos racionales son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm3\)</span>. Como</p>
+<p><span class="math display">\[
+p(1)=1-1-3+3=0,
+\]</span></p>
+<p><span class="math inline">\(1\)</span> es una raíz. La tabla de Ruffini es</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+1 &amp; 1 &amp; -1 &amp; -3 &amp; 3\\
+  &amp;   &amp; 1 &amp; 0 &amp; -3\\
+\hline
+  &amp; 1 &amp; 0 &amp; -3 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>y el cociente es <span class="math inline">\(x^2-3\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+x^3-x^2-3x+3=(x-1)(x^2-3)
+=(x-1)(x-\sqrt3)(x+\sqrt3),
+\]</span></p>
+<p>de modo que</p>
+<p><span class="math display">\[
+S=\{-\sqrt3,1,\sqrt3\}.
+\]</span></p>
+<p>Las tres soluciones son exactas. Aunque dos sean irracionales, no hace falta bisección para resolver la ecuación.</p>
+</section>
+<section id="ejemplo-2.-aproximación-de-una-cúbica-con-los-métodos-estudiados" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-2.-aproximación-de-una-cúbica-con-los-métodos-estudiados">Ejemplo 2. Aproximación de una cúbica con los métodos estudiados</h2>
+<p>Resolver, mediante los métodos estudiados,</p>
+<p><span class="math display">\[
+x^3+x-3=0.
+\]</span></p>
+<p>Los candidatos racionales de <span class="math inline">\(p(x)=x^3+x-3\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm3\)</span>. Sus valores son</p>
+<p><span class="math display">\[
+p(1)=-1,\qquad p(-1)=-5,\qquad p(3)=27,\qquad p(-3)=-33.
+\]</span></p>
+<p>Ninguno es raíz. Por ello, los métodos exactos estudiados no resuelven esta cúbica. Como <span class="math inline">\(p(1)=-1&lt;0&lt;p(2)=7\)</span>, existe una raíz <span class="math inline">\(r\)</span> en <span class="math inline">\((1,2)\)</span>. Dos iteraciones de bisección producen:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Iteración</th>
+<th style="text-align: center;">Intervalo</th>
+<th style="text-align: center;">Punto medio</th>
+<th style="text-align: center;">Valor de <span class="math inline">\(p\)</span></th>
+<th style="text-align: center;">Intervalo conservado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([1,2]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac32\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{15}{8}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[1,\frac32\right]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[1,\frac32\right]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac54\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{13}{64}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[1,\frac54\right]\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El intervalo final tiene longitud <span class="math inline">\(\frac14\)</span>. Se reporta su punto medio, <span class="math inline">\(\frac98\)</span>, sin contarlo como una iteración adicional, pues no se vuelve a evaluar ni a reducir el intervalo. Por tanto,</p>
+<p><span class="math display">\[
+r\in\left[1,\frac54\right],
+\qquad
+r\approx\frac98,
+\qquad
+\left|r-\frac98\right|\le\frac18.
+\]</span></p>
+<p>Este resultado aproxima una raíz; no constituye el conjunto solución de la ecuación.</p>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Usar bisección antes de revisar los métodos exactos.</strong> Para <span class="math inline">\(x^3-7x+6=0\)</span>, los candidatos racionales permiten obtener <span class="math inline">\(x^3-7x+6=(x-1)(x-2)(x+3)\)</span>. Bisecar un intervalo daría información sobre una sola raíz y omitiría las demás.</li>
+<li><strong>Concluir que no hay soluciones porque no hay raíces racionales.</strong> Una cúbica sin raíces racionales tiene al menos una raíz real, aunque sea irracional.</li>
+<li><strong>Afirmar que una bisección determina todas las raíces.</strong> El método conserva un intervalo que contiene al menos una raíz. Las demás deben localizarse y aproximarse por separado.</li>
+<li><strong>Ignorar raíces de multiplicidad par.</strong> Una raíz par puede no producir cambio de signo, como ocurre con <span class="math inline">\((x-2)^2\)</span> en <span class="math inline">\([0,3]\)</span>.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>En cada problema, justifique la elección del método antes de efectuar los cálculos.</p>
+<ol type="1">
+<li><p>Resuelva <span class="math inline">\(x^2-6x+7=0\)</span>. Indique si las soluciones son exactas o aproximadas y explique por qué no se requiere bisección.</p></li>
+<li><p>Un instrumento se calibra mediante la relación</p>
+<p><span class="math display">\[
+L(x)=x^3+x^2+x,\qquad 0\le x\le2,
+\]</span></p>
+<p>donde <span class="math inline">\(x\)</span> es la magnitud medida y <span class="math inline">\(L(x)\)</span> la lectura. Se garantiza que a cada lectura corresponde una sola magnitud en ese intervalo.</p>
+<ol type="a">
+<li><p>Determine la magnitud que produce la lectura <span class="math inline">\(L=3\)</span>.</p></li>
+<li><p>Para la lectura <span class="math inline">\(L=1\)</span>, decida si los métodos exactos estudiados son suficientes. Si no lo son, realice dos iteraciones de bisección y reporte la aproximación con su cota del error.</p></li>
+<li><p>Distinga cuál respuesta es exacta y cuál es aproximada.</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> La ecuación es cuadrática, así que la fórmula general proporciona las soluciones exactas. El discriminante es</p>
+<p><span class="math display">\[
+\Delta=(-6)^2-4(1)(7)=8.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+x=\frac{6\pm\sqrt8}{2}=3\pm\sqrt2,
+\qquad
+S=\{3-\sqrt2,3+\sqrt2\}.
+\]</span></p>
+<p>Las soluciones son irracionales, pero exactas. La bisección solo daría una aproximación de una raíz en cada intervalo elegido.</p>
+<p><strong>2. a.</strong> La ecuación es</p>
+<p><span class="math display">\[
+x^3+x^2+x-3=0.
+\]</span></p>
+<p>Como <span class="math inline">\(p(1)=0\)</span>, se aplica Ruffini:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; -3\\
+  &amp;   &amp; 1 &amp; 2 &amp; 3\\
+\hline
+  &amp; 1 &amp; 2 &amp; 3 &amp; \mathbf{0}
+\end{array}
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+x^3+x^2+x-3=(x-1)(x^2+2x+3).
+\]</span></p>
+<p>La cuadrática tiene discriminante <span class="math inline">\(4-12=-8\)</span>, por lo que sus raíces no son reales. La única solución en <span class="math inline">\([0,2]\)</span> es <span class="math inline">\(x=1\)</span>, y <span class="math inline">\(L(1)=3\)</span>. La respuesta es exacta.</p>
+<p><strong>2. b.</strong> Ahora se resuelve</p>
+<p><span class="math display">\[
+p(x)=x^3+x^2+x-1=0.
+\]</span></p>
+<p>Los únicos candidatos racionales son <span class="math inline">\(\pm1\)</span>, y <span class="math inline">\(p(1)=2\)</span>, <span class="math inline">\(p(-1)=-2\)</span>. Los métodos exactos estudiados no resuelven esta cúbica. Además, <span class="math inline">\(p(0)=-1&lt;0&lt;p(1)=2\)</span>, por lo que se aplica bisección en <span class="math inline">\([0,1]\)</span>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Iteración</th>
+<th style="text-align: center;">Intervalo</th>
+<th style="text-align: center;">Punto medio</th>
+<th style="text-align: center;">Valor de <span class="math inline">\(p\)</span></th>
+<th style="text-align: center;">Intervalo conservado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac12\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\frac18\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac12,1\right]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac12,1\right]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac34\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{47}{64}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left[\frac12,\frac34\right]\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El punto medio del intervalo final es <span class="math inline">\(\frac58\)</span> y la mitad de su longitud es <span class="math inline">\(\frac18\)</span>. Por tanto,</p>
+<p><span class="math display">\[
+x\approx\frac58,
+\qquad
+\left|x-\frac58\right|\le\frac18.
+\]</span></p>
+<p>La respuesta es aproximada. La garantía del problema permite afirmar que corresponde a la única magnitud del intervalo con esa lectura.</p>
+<p><strong>2. c.</strong> Para <span class="math inline">\(L=3\)</span>, la magnitud es exactamente <span class="math inline">\(x=1\)</span>. Para <span class="math inline">\(L=1\)</span>, después de dos iteraciones se obtiene <span class="math inline">\(x\approx\frac58\)</span> con error a lo sumo <span class="math inline">\(\frac18\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<ol type="1">
+<li><p>Sea <span class="math inline">\(p(x)=x^3-4x+1\)</span>.</p>
+<ol type="a">
+<li><p>Determine si la ecuación <span class="math inline">\(p(x)=0\)</span> tiene raíces racionales.</p></li>
+<li><p>Evalúe <span class="math inline">\(p\)</span> en <span class="math inline">\(-3,-2,-1,0,1\)</span> y <span class="math inline">\(2\)</span>. Localice sus raíces reales en intervalos disjuntos y explique por qué son todas.</p></li>
+<li><p>Realice una iteración de bisección en <span class="math inline">\([1,2]\)</span> y reporte la aproximación con su cota. Explique qué tendría que hacerse para aproximar las demás raíces.</p></li>
+</ol></li>
+<li><p>Para cada ecuación, elija un método, justifique la elección y resuelva exactamente o aproxime una raíz mediante dos iteraciones de bisección.</p>
+<ol type="a">
+<li><p><span class="math inline">\(2x^2-x-3=0\)</span>.</p></li>
+<li><p><span class="math inline">\(x^3-3x^2-4x+12=0\)</span>.</p></li>
+<li><p><span class="math inline">\(x^3-3x-1=0\)</span>; localice primero sus tres raíces reales.</p></li>
+</ol></li>
+<li><p>Resuelva <span class="math inline">\(x^4-x^3-7x^2+x+6=0\)</span> mediante candidatos racionales y Ruffini repetido. Escriba la factorización completa y explique por qué no se necesita aproximar.</p></li>
+<li><p>Un estudiante afirma: “Si una ecuación no tiene raíces racionales, hay que usar bisección”. Use <span class="math inline">\(x^2-6x+7=0\)</span> para mostrar que la afirmación es falsa y reformúlela de manera correcta para los métodos estudiados.</p></li>
+</ol>
 
 
 </section>
@@ -864,13 +1179,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span>
+      <a href="../sesiones/2026-09-11-sesion-23.html" class="pagination-link" aria-label="Sesión 23. Aproximación de una raíz real por bisección">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
-        <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
