@@ -1,0 +1,21 @@
+---
+title: "Sesión 25. Práctica integradora de polinomios y sus raíces"
+date: 2026-09-15
+description: "Práctica integradora de la Unidad 2 con cinco versiones descargables del simulacro de examen parcial."
+---
+
+## Práctica integradora
+
+Descargue una versión del simulacro y **elija un ejercicio de cada una de sus diez secciones**. Resuelva sin calculadora y escriba el procedimiento utilizado en cada ejercicio.
+
+Las respuestas aparecen en azul después de cada enunciado para comprobar los resultados. Cada versión contiene cinco páginas.
+
+## Simulacros para descargar
+
+| Versión | Archivo |
+|:---:|---|
+| 1 | [Descargar simulacro: versión 1 (PDF)](../examenes/parcial-2/simulacros/simulacro-polinomios-version-01.pdf){download="simulacro-polinomios-version-01.pdf"} |
+| 2 | [Descargar simulacro: versión 2 (PDF)](../examenes/parcial-2/simulacros/simulacro-polinomios-version-02.pdf){download="simulacro-polinomios-version-02.pdf"} |
+| 3 | [Descargar simulacro: versión 3 (PDF)](../examenes/parcial-2/simulacros/simulacro-polinomios-version-03.pdf){download="simulacro-polinomios-version-03.pdf"} |
+| 4 | [Descargar simulacro: versión 4 (PDF)](../examenes/parcial-2/simulacros/simulacro-polinomios-version-04.pdf){download="simulacro-polinomios-version-04.pdf"} |
+| 5 | [Descargar simulacro: versión 5 (PDF)](../examenes/parcial-2/simulacros/simulacro-polinomios-version-05.pdf){download="simulacro-polinomios-version-05.pdf"} |
