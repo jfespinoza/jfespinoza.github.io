@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Unidad imaginaria, forma cartesiana, igualdad, plano complejo y suma y resta de números complejos.">
+<meta name="description" content="Ecuaciones lineales en varias incógnitas, planteamiento de sistemas y comprobación de soluciones por sustitución.">
 
-<title>Sesión 07. Números complejos: forma cartesiana, plano, suma y resta – Álgebra</title>
+<title>Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-19-sesion-08.html" rel="next">
-<link href="../sesiones/2026-08-17-sesion-06.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../unidades/03-sistemas-ecuaciones.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 07. Números complejos: forma cartesiana, plano, suma y resta – Álgebra">
-<meta property="og:description" content="Unidad imaginaria, forma cartesiana, igualdad, plano complejo y suma y resta de números complejos.">
+<meta property="og:title" content="Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones – Álgebra">
+<meta property="og:description" content="Ecuaciones lineales en varias incógnitas, planteamiento de sistemas y comprobación de soluciones por sustitución.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-18-sesion-07.html"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-21-sesion-27.html"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -197,13 +197,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -241,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,13 +359,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
@@ -373,7 +373,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
   </div>
 </li>
       </ul>
@@ -457,30 +457,32 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#de-los-números-reales-a-los-complejos" id="toc-de-los-números-reales-a-los-complejos" class="nav-link active" data-scroll-target="#de-los-números-reales-a-los-complejos">De los números reales a los complejos</a></li>
-  <li><a href="#una-referencia-histórica" id="toc-una-referencia-histórica" class="nav-link" data-scroll-target="#una-referencia-histórica">Una referencia histórica</a></li>
-  <li><a href="#forma-cartesiana" id="toc-forma-cartesiana" class="nav-link" data-scroll-target="#forma-cartesiana">Forma cartesiana</a></li>
-  <li><a href="#el-plano-complejo" id="toc-el-plano-complejo" class="nav-link" data-scroll-target="#el-plano-complejo">El plano complejo</a></li>
-  <li><a href="#suma-y-resta" id="toc-suma-y-resta" class="nav-link" data-scroll-target="#suma-y-resta">Suma y resta</a></li>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#ecuaciones-lineales-en-varias-incógnitas" id="toc-ecuaciones-lineales-en-varias-incógnitas" class="nav-link" data-scroll-target="#ecuaciones-lineales-en-varias-incógnitas">Ecuaciones lineales en varias incógnitas</a>
+  <ul class="collapse">
+  <li><a href="#solución-y-conjunto-solución-de-una-ecuación" id="toc-solución-y-conjunto-solución-de-una-ecuación" class="nav-link" data-scroll-target="#solución-y-conjunto-solución-de-una-ecuación">Solución y conjunto solución de una ecuación</a></li>
+  </ul></li>
+  <li><a href="#sistemas-de-ecuaciones-lineales" id="toc-sistemas-de-ecuaciones-lineales" class="nav-link" data-scroll-target="#sistemas-de-ecuaciones-lineales">Sistemas de ecuaciones lineales</a></li>
+  <li><a href="#procedimiento-de-planteamiento-y-verificación" id="toc-procedimiento-de-planteamiento-y-verificación" class="nav-link" data-scroll-target="#procedimiento-de-planteamiento-y-verificación">Procedimiento de planteamiento y verificación</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-ubicación-en-el-plano" id="toc-ejemplo-1.-ubicación-en-el-plano" class="nav-link" data-scroll-target="#ejemplo-1.-ubicación-en-el-plano">Ejemplo 1. Ubicación en el plano</a></li>
-  <li><a href="#ejemplo-2.-igualdad-de-números-complejos" id="toc-ejemplo-2.-igualdad-de-números-complejos" class="nav-link" data-scroll-target="#ejemplo-2.-igualdad-de-números-complejos">Ejemplo 2. Igualdad de números complejos</a></li>
-  <li><a href="#ejemplo-3.-suma-y-resta" id="toc-ejemplo-3.-suma-y-resta" class="nav-link" data-scroll-target="#ejemplo-3.-suma-y-resta">Ejemplo 3. Suma y resta</a></li>
-  <li><a href="#ejemplo-4.-las-expresiones-del-problema-de-cardano" id="toc-ejemplo-4.-las-expresiones-del-problema-de-cardano" class="nav-link" data-scroll-target="#ejemplo-4.-las-expresiones-del-problema-de-cardano">Ejemplo 4. Las expresiones del problema de Cardano</a></li>
+  <li><a href="#ejemplo-1.-reconocimiento-de-ecuaciones-lineales" id="toc-ejemplo-1.-reconocimiento-de-ecuaciones-lineales" class="nav-link" data-scroll-target="#ejemplo-1.-reconocimiento-de-ecuaciones-lineales">Ejemplo 1. Reconocimiento de ecuaciones lineales</a></li>
+  <li><a href="#ejemplo-2.-mezcla-de-dos-aleaciones" id="toc-ejemplo-2.-mezcla-de-dos-aleaciones" class="nav-link" data-scroll-target="#ejemplo-2.-mezcla-de-dos-aleaciones">Ejemplo 2. Mezcla de dos aleaciones</a></li>
+  <li><a href="#ejemplo-3.-verificación-de-una-terna" id="toc-ejemplo-3.-verificación-de-una-terna" class="nav-link" data-scroll-target="#ejemplo-3.-verificación-de-una-terna">Ejemplo 3. Verificación de una terna</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-18-sesion-07.html"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-21-sesion-27.html"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></h1>
 </div>
 
 
@@ -491,7 +493,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">18 de agosto de 2026</p>
+      <p class="date">21 de septiembre de 2026</p>
     </div>
   </div>
   
@@ -503,248 +505,191 @@ window.Quarto = {
 </header>
 
 
-<section id="de-los-números-reales-a-los-complejos" class="level2">
-<h2 class="anchored" data-anchor-id="de-los-números-reales-a-los-complejos">De los números reales a los complejos</h2>
-<p>La ampliación de un conjunto numérico permite resolver ecuaciones que no tienen solución en el conjunto anterior. Por ejemplo:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Ecuación</th>
-<th>No tiene solución en</th>
-<th>Tiene solución en</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(x+5=2\)</span></td>
-<td><span class="math inline">\(\mathbb N\)</span></td>
-<td><span class="math inline">\(\mathbb Z\)</span>: <span class="math inline">\(x=-3\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(3x=2\)</span></td>
-<td><span class="math inline">\(\mathbb Z\)</span></td>
-<td><span class="math inline">\(\mathbb Q\)</span>: <span class="math inline">\(x=\dfrac23\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(x^2=2\)</span></td>
-<td><span class="math inline">\(\mathbb Q\)</span></td>
-<td><span class="math inline">\(\mathbb R\)</span>: <span class="math inline">\(x=\pm\sqrt2\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(x^2+1=0\)</span></td>
-<td><span class="math inline">\(\mathbb R\)</span></td>
-<td><span class="math inline">\(\mathbb C\)</span>: <span class="math inline">\(x=\pm i\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>La última ecuación no tiene solución real porque <span class="math inline">\(x^2\ge0\)</span> para todo <span class="math inline">\(x\in\mathbb R\)</span>. Para resolverla se introduce un número <span class="math inline">\(i\)</span>, llamado <strong>unidad imaginaria</strong>, que cumple</p>
-<p><span class="math display">\[
-i^2=-1.
-\]</span></p>
-<p>Su opuesto <span class="math inline">\(-i\)</span> también cumple la misma propiedad. Por tanto, <span class="math inline">\(i\)</span> y <span class="math inline">\(-i\)</span> satisfacen <span class="math inline">\(x^2+1=0\)</span>.</p>
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá reconocer ecuaciones lineales, plantear un sistema a partir de datos sencillos y comprobar si una pareja o terna propuesta es solución. Para verificarlo, definirá las variables con sus unidades, escribirá las ecuaciones y justificará la comprobación en todas ellas.</p>
 </section>
-<section id="una-referencia-histórica" class="level2">
-<h2 class="anchored" data-anchor-id="una-referencia-histórica">Una referencia histórica</h2>
-<p>En 1545, Girolamo Cardano estudió el problema de encontrar dos números cuya suma fuera <span class="math inline">\(10\)</span> y cuyo producto fuera <span class="math inline">\(40\)</span>. El cálculo conduce a</p>
+<section id="ecuaciones-lineales-en-varias-incógnitas" class="level2">
+<h2 class="anchored" data-anchor-id="ecuaciones-lineales-en-varias-incógnitas">Ecuaciones lineales en varias incógnitas</h2>
+<p>En la <a href="../sesiones/2026-08-14-sesion-05.html">Sesión 05</a> se trabajó con ecuaciones lineales en una incógnita. Cuando un problema relaciona varias cantidades desconocidas, se necesita una variable para cada una.</p>
+<p>Una <strong>ecuación lineal</strong> en las incógnitas <span class="math inline">\(x_1,x_2,\ldots,x_n\)</span> tiene, después de simplificar y reunir términos, la forma</p>
 <p><span class="math display">\[
-5+\sqrt{-15}
-\qquad\text{y}\qquad
-5-\sqrt{-15}.
+a_1x_1+a_2x_2+\cdots+a_nx_n=b,
 \]</span></p>
-<p>En el estudio de ciertas ecuaciones cúbicas, expresiones de este tipo aparecen en pasos intermedios aun cuando las soluciones buscadas sean reales. En 1572, Rafael Bombelli estableció reglas coherentes para operar con ellas. Este trabajo fue decisivo para la aceptación operativa de los números complejos, cuya formalización y representación geométrica se desarrollaron posteriormente.</p>
+<p>donde <span class="math inline">\(a_1,\ldots,a_n\)</span> y <span class="math inline">\(b\)</span> son números reales dados. Los números <span class="math inline">\(a_1,\ldots,a_n\)</span> son los <strong>coeficientes</strong> y <span class="math inline">\(b\)</span> es el <strong>término independiente</strong>. Con dos o tres incógnitas se acostumbra usar <span class="math inline">\(x,y\)</span> o <span class="math inline">\(x,y,z\)</span>.</p>
+<p>Los coeficientes pueden ser enteros, fracciones, decimales o irracionales. También pueden ser cero: considerada en las incógnitas <span class="math inline">\(x,y\)</span>, la ecuación <span class="math inline">\(x=3\)</span> se escribe <span class="math inline">\(x+0y=3\)</span>.</p>
+<p>Las ecuaciones <span class="math inline">\(x^2+y=1\)</span>, <span class="math inline">\(xy=6\)</span> y <span class="math inline">\(\frac{2}{x}+y=1\)</span> no son lineales: contienen, respectivamente, un cuadrado de una incógnita, un producto de incógnitas y una incógnita en el denominador. La clasificación se hace <strong>después de simplificar</strong>. Por ejemplo, <span class="math inline">\(x^2+x+y=x^2+1\)</span> equivale a <span class="math inline">\(x+y=1\)</span>, que sí es lineal.</p>
+<section id="solución-y-conjunto-solución-de-una-ecuación" class="level3">
+<h3 class="anchored" data-anchor-id="solución-y-conjunto-solución-de-una-ecuación">Solución y conjunto solución de una ecuación</h3>
+<p>Una <strong>solución</strong> de una ecuación en <span class="math inline">\(x,y\)</span> es una <strong>pareja ordenada</strong> <span class="math inline">\((x,y)\)</span> que hace verdadera la igualdad al sustituir sus componentes. En tres incógnitas se usa una <strong>terna</strong> <span class="math inline">\((x,y,z)\)</span>. El orden indica qué número corresponde a cada variable.</p>
+<p>El conjunto de todas las parejas de números reales se denota <span class="math inline">\(\mathbb R^2\)</span>; el de todas las ternas reales, <span class="math inline">\(\mathbb R^3\)</span>. El <strong>conjunto solución</strong> reúne todas las soluciones de la ecuación. Por ejemplo, para <span class="math inline">\(x+y=500\)</span> es</p>
+<p><span class="math display">\[
+S=\{(x,y)\in\mathbb R^2:\ x+y=500\}.
+\]</span></p>
+<p>Las parejas <span class="math inline">\((0,500)\)</span>, <span class="math inline">\((200,300)\)</span> y <span class="math inline">\((250,250)\)</span> pertenecen a <span class="math inline">\(S\)</span>. Esta ecuación tiene infinitas soluciones reales: para cada valor real de <span class="math inline">\(x\)</span>, el valor <span class="math inline">\(y=500-x\)</span> satisface la igualdad.</p>
+<p>Si <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> representan masas, el contexto impone además <span class="math inline">\(x\ge0\)</span> y <span class="math inline">\(y\ge0\)</span>. La pareja <span class="math inline">\((600,-100)\)</span> satisface la ecuación, pero no representa masas admisibles. <strong>Cumplir la ecuación y cumplir las restricciones del problema son dos comprobaciones necesarias.</strong></p>
 </section>
-<section id="forma-cartesiana" class="level2">
-<h2 class="anchored" data-anchor-id="forma-cartesiana">Forma cartesiana</h2>
-<p>Un <strong>número complejo</strong> se escribe en la forma</p>
-<p><span class="math display">\[
-z=a+bi,
-\qquad a,b\in\mathbb R.
-\]</span></p>
-<p>El conjunto de los números complejos es</p>
-<p><span class="math display">\[
-\mathbb C=\{a+bi:a,b\in\mathbb R\}.
-\]</span></p>
-<p>En <span class="math inline">\(z=a+bi\)</span>, el número real <span class="math inline">\(a\)</span> es la <strong>parte real</strong> y el número real <span class="math inline">\(b\)</span> es la <strong>parte imaginaria</strong>:</p>
-<p><span class="math display">\[
-\operatorname{Re}(z)=a,
-\qquad
-\operatorname{Im}(z)=b.
-\]</span></p>
-<p>La parte imaginaria de <span class="math inline">\(z\)</span> es <span class="math inline">\(b\)</span>, no <span class="math inline">\(bi\)</span>. La escritura <span class="math inline">\(a+bi\)</span> se denomina <strong>forma cartesiana</strong>. Se simplifica la notación escribiendo, por ejemplo, <span class="math inline">\(2+i\)</span> en lugar de <span class="math inline">\(2+1i\)</span>, <span class="math inline">\(3-2i\)</span> en lugar de <span class="math inline">\(3+(-2)i\)</span>, <span class="math inline">\(bi\)</span> en lugar de <span class="math inline">\(0+bi\)</span> y <span class="math inline">\(a\)</span> en lugar de <span class="math inline">\(a+0i\)</span>. En particular, <span class="math inline">\(i=0+1i\)</span> y <span class="math inline">\(-i=0+(-1)i\)</span>.</p>
-<p>Dos casos particulares son:</p>
-<ul>
-<li>si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(z=a\)</span> es real; por ello <span class="math inline">\(\mathbb R\subseteq\mathbb C\)</span>;</li>
-<li>si <span class="math inline">\(a=0\)</span> y <span class="math inline">\(b\ne0\)</span>, entonces <span class="math inline">\(z=bi\)</span> es un <strong>imaginario puro</strong>.</li>
-</ul>
-<p>La cadena de inclusiones estudiada en la Sesión 02 se extiende a</p>
-<p><span class="math display">\[
-\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\subseteq\mathbb C.
-\]</span></p>
-<p>Dos números complejos son iguales si coinciden sus partes reales y sus partes imaginarias:</p>
-<p><span class="math display">\[
-a+bi=c+di
-\quad\Longleftrightarrow\quad
-a=c\ \text{ y }\ b=d.
-\]</span></p>
-<p>Para <span class="math inline">\(d&gt;0\)</span>, las soluciones en <span class="math inline">\(\mathbb C\)</span> de <span class="math inline">\(x^2=-d\)</span> son</p>
-<p><span class="math display">\[
-x=\pm\bigl(\sqrt d\bigr)i.
-\]</span></p>
-<p>Se adoptará la convención</p>
-<p><span class="math display">\[
-\sqrt{-d}=\bigl(\sqrt d\bigr)i.
-\]</span></p>
-<p>Antes de operar con un radical de radicando negativo debe convertirse a la forma cartesiana, pues las leyes de radicales estudiadas en la Sesión 03 para radicandos no negativos no se aplican directamente.</p>
 </section>
-<section id="el-plano-complejo" class="level2">
-<h2 class="anchored" data-anchor-id="el-plano-complejo">El plano complejo</h2>
-<p>Así como cada número real corresponde a un punto de la recta real, estudiada en la Sesión 02, el número <span class="math inline">\(z=a+bi\)</span> se representa mediante el punto <span class="math inline">\((a,b)\)</span> del plano. Esta correspondencia se escribe <span class="math inline">\(a+bi\longleftrightarrow(a,b)\)</span> y puede leerse en ambos sentidos: el punto <span class="math inline">\((a,b)\)</span> representa al número <span class="math inline">\(a+bi\)</span>. El eje horizontal es el <strong>eje real</strong> y el eje vertical es el <strong>eje imaginario</strong>. El origen representa al número <span class="math inline">\(0\)</span>.</p>
-<p>Esta correspondencia es biunívoca: cada número complejo determina un único punto y cada punto del plano determina un único número complejo. En particular:</p>
-<ul>
-<li>los números reales se encuentran sobre el eje real;</li>
-<li>los imaginarios puros se encuentran sobre el eje imaginario;</li>
-<li>dos números complejos son iguales exactamente cuando corresponden al mismo punto.</li>
-</ul>
+<section id="sistemas-de-ecuaciones-lineales" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-ecuaciones-lineales">Sistemas de ecuaciones lineales</h2>
+<p>Un <strong>sistema de ecuaciones lineales</strong> es una colección de ecuaciones lineales en las mismas incógnitas que deben cumplirse <strong>simultáneamente</strong>. Un sistema de <span class="math inline">\(m\)</span> ecuaciones con <span class="math inline">\(n\)</span> incógnitas se llama sistema <span class="math inline">\(m\times n\)</span>. Por ejemplo,</p>
+<p><span class="math display">\[
+\left\{\begin{aligned}
+x+y&amp;=500\\
+0.80x+0.50y&amp;=310
+\end{aligned}\right.
+\]</span></p>
+<p>es un sistema <span class="math inline">\(2\times2\)</span>.</p>
+<p>Una <strong>solución del sistema</strong> es una pareja, terna o lista ordenada que satisface <strong>cada una</strong> de sus ecuaciones. Su <strong>conjunto solución</strong> contiene todas esas soluciones. Para dos ecuaciones, si sus conjuntos solución son <span class="math inline">\(S_1\)</span> y <span class="math inline">\(S_2\)</span>, el del sistema es</p>
+<p><span class="math display">\[
+S=S_1\cap S_2.
+\]</span></p>
+<p>La intersección expresa que una misma pareja debe pertenecer a ambos conjuntos. Si satisface una ecuación y falla en la otra, no es solución del sistema.</p>
+<p><strong>Verificar una propuesta no equivale a determinar todo el conjunto solución.</strong> Una propuesta que falla queda descartada; eso no demuestra que el sistema carezca de soluciones. Una propuesta que funciona tampoco demuestra, por sí sola, que sea la única.</p>
 </section>
-<section id="suma-y-resta" class="level2">
-<h2 class="anchored" data-anchor-id="suma-y-resta">Suma y resta</h2>
-<p>La suma se realiza componente a componente:</p>
-<p><span class="math display">\[
-(a+bi)+(c+di)=(a+c)+(b+d)i.
-\]</span></p>
-<p>El opuesto de <span class="math inline">\(z=a+bi\)</span> es</p>
-<p><span class="math display">\[
--z=-a-bi.
-\]</span></p>
-<p>En el plano, <span class="math inline">\(-z\)</span> es el punto simétrico de <span class="math inline">\(z\)</span> respecto del origen. La resta se define como la suma del opuesto:</p>
-<p><span class="math display">\[
-(a+bi)-(c+di)=(a-c)+(b-d)i.
-\]</span></p>
-<p>Bajo la correspondencia entre números complejos y puntos del plano, estas operaciones se expresan como</p>
-<p><span class="math display">\[
-(a,b)\pm(c,d)=(a\pm c,\,b\pm d).
-\]</span></p>
-<p>Al identificar cada punto <span class="math inline">\((a,b)\)</span> con su vector de posición, la suma y la resta de números complejos en forma cartesiana se realizan componente a componente.</p>
-<p>Estas definiciones extienden la suma y la resta de números reales. Si el origen y los puntos que representan a <span class="math inline">\(z\)</span> y <span class="math inline">\(w\)</span> no son colineales, los puntos que representan a <span class="math inline">\(0\)</span>, <span class="math inline">\(z\)</span>, <span class="math inline">\(w\)</span> y <span class="math inline">\(z+w\)</span> son los vértices de un paralelogramo; el punto correspondiente a <span class="math inline">\(z+w\)</span> es el vértice opuesto al origen.</p>
+<section id="procedimiento-de-planteamiento-y-verificación" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento-de-planteamiento-y-verificación">Procedimiento de planteamiento y verificación</h2>
+<ol type="1">
+<li><strong>Defina las variables.</strong> Indique qué representa cada una y en qué unidades se expresa.</li>
+<li><strong>Traduzca las condiciones.</strong> Escriba una ecuación por cada relación del enunciado y conserve el mismo significado y orden de las incógnitas.</li>
+<li><strong>Sustituya la propuesta.</strong> Reemplace cada incógnita por su componente y calcule ambos lados de cada ecuación, sin redondear. Una sola igualdad falsa basta para descartar la propuesta.</li>
+<li><strong>Concluya e interprete.</strong> La propuesta es solución del sistema si y solo si satisface todas sus ecuaciones. En un problema contextual, compruebe además las restricciones, como masas no negativas o cantidades enteras de piezas.</li>
+</ol>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-ubicación-en-el-plano" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-ubicación-en-el-plano">Ejemplo 1. Ubicación en el plano</h3>
-<p>Ubicar los números <span class="math inline">\(3+2i\)</span>, <span class="math inline">\(-4+i\)</span>, <span class="math inline">\(-2i\)</span> y <span class="math inline">\(-3\)</span> en el plano complejo e identificar sus partes real e imaginaria.</p>
+<section id="ejemplo-1.-reconocimiento-de-ecuaciones-lineales" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-reconocimiento-de-ecuaciones-lineales">Ejemplo 1. Reconocimiento de ecuaciones lineales</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Número</th>
-<th style="text-align: right;">Parte real</th>
-<th style="text-align: right;">Parte imaginaria</th>
-<th>Punto</th>
+<th>Ecuación</th>
+<th style="text-align: center;">¿Lineal en <span class="math inline">\(x,y\)</span>?</th>
+<th>Razón o forma simplificada</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(3+2i\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td><span class="math inline">\((3,2)\)</span></td>
+<td><span class="math inline">\(3(x-1)+2y=y-4\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td><span class="math inline">\(3x+y=-1\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(-4+i\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-4\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\((-4,1)\)</span></td>
+<td><span class="math inline">\(\frac{x}{2}-\sqrt2\,y=5\)</span></td>
+<td style="text-align: center;">Sí</td>
+<td>Coeficientes <span class="math inline">\(\frac12\)</span> y <span class="math inline">\(-\sqrt2\)</span>; término independiente <span class="math inline">\(5\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(-2i\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-2\)</span></td>
-<td><span class="math inline">\((0,-2)\)</span></td>
+<td><span class="math inline">\(x^2+y=1\)</span></td>
+<td style="text-align: center;">No</td>
+<td>Término <span class="math inline">\(x^2\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td><span class="math inline">\((-3,0)\)</span></td>
+<td><span class="math inline">\(xy=6\)</span></td>
+<td style="text-align: center;">No</td>
+<td>Producto de incógnitas</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{2}{x}+y=1\)</span></td>
+<td style="text-align: center;">No</td>
+<td>Incógnita en el denominador</td>
 </tr>
 </tbody>
 </table>
-<p>Los dos primeros números se representan fuera de los ejes. El número <span class="math inline">\(-2i\)</span> se ubica sobre el eje imaginario y <span class="math inline">\(-3\)</span> sobre el eje real.</p>
+<p>En la primera ecuación se distribuye el <span class="math inline">\(3\)</span> y se reúnen los términos:</p>
+<p><span class="math display">\[
+3x-3+2y=y-4
+\quad\Longleftrightarrow\quad
+3x+y=-1.
+\]</span></p>
+<p>Sus coeficientes son <span class="math inline">\(3\)</span> y <span class="math inline">\(1\)</span>, y su término independiente es <span class="math inline">\(-1\)</span>. En la segunda ecuación, la raíz aparece en un <strong>coeficiente constante</strong>; no se está calculando la raíz de una incógnita.</p>
 </section>
-<section id="ejemplo-2.-igualdad-de-números-complejos" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-igualdad-de-números-complejos">Ejemplo 2. Igualdad de números complejos</h3>
-<p>Determinar los números reales <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tales que</p>
+<section id="ejemplo-2.-mezcla-de-dos-aleaciones" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-mezcla-de-dos-aleaciones">Ejemplo 2. Mezcla de dos aleaciones</h3>
+<p>Una <strong>aleación</strong> es una mezcla de metales. Se dispone de una aleación A con <span class="math inline">\(80\,\%\)</span> de cobre en masa y otra B con <span class="math inline">\(50\,\%\)</span>. Se desea obtener <span class="math inline">\(500\)</span> g con <span class="math inline">\(62\,\%\)</span> de cobre. Para este problema se supone que no hay pérdidas de material: las masas totales y las masas de cobre se suman. La masa de cobre de cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.</p>
+<p><strong>Variables:</strong> <span class="math inline">\(x\)</span> es la masa de A, en gramos, y <span class="math inline">\(y\)</span> la masa de B, en gramos; se exige <span class="math inline">\(x,y\ge0\)</span>.</p>
+<p>La condición de masa total es <span class="math inline">\(x+y=500\)</span>. La masa de cobre requerida es <span class="math inline">\(0.62(500)=310\)</span> g, y las porciones aportan <span class="math inline">\(0.80x\)</span> y <span class="math inline">\(0.50y\)</span> gramos. Por tanto, el sistema es</p>
 <p><span class="math display">\[
-(2x-1)+(y+3)i=5-2i.
+\left\{\begin{aligned}
+x+y&amp;=500\\
+0.80x+0.50y&amp;=310.
+\end{aligned}\right.
 \]</span></p>
-<p>La igualdad de las partes reales y de las partes imaginarias produce dos ecuaciones lineales, del tipo estudiado en la Sesión 05:</p>
+<p><strong>Propuesta <span class="math inline">\((200,300)\)</span>.</strong> Se comprueban ambas ecuaciones:</p>
 <p><span class="math display">\[
-2x-1=5
-\qquad\text{y}\qquad
-y+3=-2.
+\begin{aligned}
+200+300&amp;=500,\\
+0.80(200)+0.50(300)&amp;=160+150=310.
+\end{aligned}
 \]</span></p>
-<p>Por tanto, <span class="math inline">\(x=3\)</span> y <span class="math inline">\(y=-5\)</span>. La sustitución verifica que</p>
+<p>La pareja es solución y sus componentes son positivas: <span class="math inline">\(200\)</span> g de A y <span class="math inline">\(300\)</span> g de B producen los <span class="math inline">\(500\)</span> g solicitados, con <span class="math inline">\(310\)</span> g de cobre, es decir, <span class="math inline">\(62\,\%\)</span> en masa.</p>
+<p><strong>Propuesta <span class="math inline">\((250,250)\)</span>.</strong> Cumple <span class="math inline">\(250+250=500\)</span>, pero</p>
 <p><span class="math display">\[
-(2\cdot3-1)+(-5+3)i=5-2i.
+0.80(250)+0.50(250)=200+125=325\ne310.
 \]</span></p>
+<p>No es solución del sistema. La masa total es correcta, pero la mezcla tendría <span class="math inline">\(65\,\%\)</span> de cobre en lugar de <span class="math inline">\(62\,\%\)</span>.</p>
 </section>
-<section id="ejemplo-3.-suma-y-resta" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-suma-y-resta">Ejemplo 3. Suma y resta</h3>
-<p>Sean <span class="math inline">\(z=4-3i\)</span> y <span class="math inline">\(w=-1+2i\)</span>. Entonces</p>
+<section id="ejemplo-3.-verificación-de-una-terna" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-verificación-de-una-terna">Ejemplo 3. Verificación de una terna</h3>
+<p>Considere el sistema <span class="math inline">\(3\times3\)</span></p>
 <p><span class="math display">\[
-z+w=(4-1)+(-3+2)i=3-i
+\left\{\begin{aligned}
+x+y+z&amp;=2\\
+2x-y+z&amp;=7\\
+x+2y-3z&amp;=-12.
+\end{aligned}\right.
 \]</span></p>
-<p>y</p>
+<p>Para la propuesta <span class="math inline">\((1,-2,3)\)</span> se sustituye <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=-2\)</span> y <span class="math inline">\(z=3\)</span>:</p>
 <p><span class="math display">\[
-z-w=(4-(-1))+(-3-2)i=5-5i.
+\begin{aligned}
+1+(-2)+3&amp;=2,\\
+2(1)-(-2)+3&amp;=7,\\
+1+2(-2)-3(3)&amp;=1-4-9=-12.
+\end{aligned}
 \]</span></p>
-<p>El signo de la resta afecta a las dos componentes de <span class="math inline">\(w\)</span>. La comprobación se obtiene al sumar de nuevo <span class="math inline">\(w\)</span>:</p>
-<p><span class="math display">\[
-(z-w)+w=(5-5i)+(-1+2i)=4-3i=z.
-\]</span></p>
-</section>
-<section id="ejemplo-4.-las-expresiones-del-problema-de-cardano" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-las-expresiones-del-problema-de-cardano">Ejemplo 4. Las expresiones del problema de Cardano</h3>
-<p>Con la convención para radicales de radicando negativo, los números de la referencia histórica se escriben en forma cartesiana como</p>
-<p><span class="math display">\[
-5+\bigl(\sqrt{15}\bigr)i
-\qquad\text{y}\qquad
-5-\bigl(\sqrt{15}\bigr)i.
-\]</span></p>
-<p>Su suma es</p>
-<p><span class="math display">\[
-\Bigl(5+\bigl(\sqrt{15}\bigr)i\Bigr)
-+\Bigl(5-\bigl(\sqrt{15}\bigr)i\Bigr)
-=10,
-\]</span></p>
-<p>pues las partes imaginarias son opuestas y se cancelan.</p>
+<p>Las tres igualdades son verdaderas; la terna es solución. Los paréntesis ayudan a conservar los signos al sustituir un número negativo.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Mezclar partes reales e imaginarias.</strong> Se tiene <span class="math inline">\((3+2i)+(1+4i)=4+6i\)</span>, no <span class="math inline">\(10\)</span> ni <span class="math inline">\(10i\)</span>.</li>
-<li><strong>Confundir la parte imaginaria con el término imaginario.</strong> En <span class="math inline">\(5-7i\)</span>, la parte imaginaria es el número real <span class="math inline">\(-7\)</span>.</li>
-<li><strong>Distribuir la resta solo a una componente.</strong> Se tiene <span class="math inline">\((5+2i)-(3+4i)=2-2i\)</span>, no <span class="math inline">\(2+2i\)</span>.</li>
-<li><strong>Aplicar sin hipótesis las leyes de los radicales.</strong> El cálculo <span class="math inline">\(\sqrt{-1}\sqrt{-1}=\sqrt{(-1)(-1)}=1\)</span> es inválido. Al escribir <span class="math inline">\(\sqrt{-1}=i\)</span>, se obtiene <span class="math inline">\(i^2=-1\)</span>.</li>
-<li><strong>Intercambiar las coordenadas.</strong> El número <span class="math inline">\(4i\)</span> corresponde a <span class="math inline">\((0,4)\)</span>, mientras que <span class="math inline">\((4,0)\)</span> corresponde al número real <span class="math inline">\(4\)</span>.</li>
+<li><strong>Verificar una sola ecuación.</strong> En el ejemplo de aleaciones, <span class="math inline">\((250,250)\)</span> cumple la condición de masa total, pero falla en la de cobre. Una solución debe satisfacer ambas.</li>
+<li><strong>Confundir una propuesta incorrecta con la ausencia de soluciones.</strong> Que <span class="math inline">\((250,250)\)</span> falle no significa que el sistema no tenga solución: <span class="math inline">\((200,300)\)</span> sí satisface sus dos ecuaciones.</li>
+<li><strong>Intercambiar las componentes.</strong> En <span class="math inline">\((200,300)\)</span>, la primera masa corresponde a A. Al invertirlas, <span class="math inline">\(0.80(300)+0.50(200)=340\ne310\)</span>; <span class="math inline">\((300,200)\)</span> no es solución.</li>
+<li><strong>Usar el porcentaje como si fuera una masa.</strong> La ecuación del cobre no es <span class="math inline">\(0.80x+0.50y=0.62\)</span>. El lado derecho debe expresar la masa de cobre requerida: <span class="math inline">\(0.62(500)=310\)</span> g.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta y registre las sustituciones sin redondear.</p>
 <ol type="1">
-<li><p>Los puntos <span class="math inline">\(P=(-2,4)\)</span> y <span class="math inline">\(Q=(5,-1)\)</span> representan los números complejos <span class="math inline">\(z\)</span> y <span class="math inline">\(w\)</span>, respectivamente. Escriba <span class="math inline">\(z\)</span> y <span class="math inline">\(w\)</span> en forma cartesiana, calcule <span class="math inline">\(z+w\)</span> y represente el resultado.</p></li>
-<li><p>En el cálculo</p>
+<li><p>Decida si cada ecuación es lineal en las incógnitas indicadas. Si lo es, escríbala en la forma general e identifique sus coeficientes y término independiente; si no lo es, señale qué lo impide.</p>
+<ol type="a">
+<li><p><span class="math inline">\(2(x+y)-3=x-y+1\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2-y=0\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
+<li><p><span class="math inline">\(\frac{x}{2}+\frac{y}{3}-z=1\)</span>, en <span class="math inline">\(x,y,z\)</span>.</p></li>
+<li><p><span class="math inline">\(\frac{3}{x}+y=2\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
+</ol></li>
+<li><p>Un <strong>material compuesto</strong> combina componentes distintos; en este problema se prepara con fibra de vidrio y resina. Se requiere un lote de <span class="math inline">\(1\,200\)</span> kg cuya masa de fibra sea <span class="math inline">\(60\)</span> kg menor que el doble de la masa de resina. Suponga que las masas se suman sin pérdidas.</p>
+<ol type="a">
+<li><p>Defina las variables con unidades, usando la primera para la fibra y la segunda para la resina, y plantee el sistema.</p></li>
+<li><p>Compruebe las propuestas <span class="math inline">\((780,420)\)</span> y <span class="math inline">\((800,400)\)</span> e indique cuál satisface ambas condiciones.</p></li>
+<li><p>Interprete la propuesta válida. ¿Que la ecuación <span class="math inline">\(x-2y=-60\)</span> tenga término independiente negativo significa que alguna masa debe ser negativa?</p></li>
+</ol></li>
+<li><p>Para el sistema</p>
 <p><span class="math display">\[
-(2-3i)-(-4+i)=(2-4)+(-3+1)i=-2-2i
+\left\{\begin{aligned}
+x+2y+z&amp;=1\\
+3x-y+2z&amp;=9\\
+x-y-z&amp;=2,
+\end{aligned}\right.
 \]</span></p>
-<p>identifique el error, obtenga el resultado correcto y ubíquelo en el plano complejo.</p></li>
-<li><p>Determine el número complejo <span class="math inline">\(z\)</span> que satisface</p>
-<p><span class="math display">\[
-z+(-3+2i)=4-i.
-\]</span></p>
-<p>Represente <span class="math inline">\(z\)</span> y verifique el resultado mediante una suma.</p></li>
-<li><p>Proponga dos números complejos no reales cuya suma sea <span class="math inline">\(6\)</span>. Represente ambos números y su suma. ¿Qué condiciones deben cumplir sus partes reales e imaginarias?</p></li>
+<p>decida si <span class="math inline">\((2,-1,1)\)</span> y <span class="math inline">\((1,1,-2)\)</span> son soluciones. Indique cuántas ecuaciones satisface cada terna y explique por qué satisfacer dos de las tres no basta.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -758,39 +703,40 @@ z+(-3+2i)=4-i.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> Del punto <span class="math inline">\(P=(-2,4)\)</span> se obtiene <span class="math inline">\(z=-2+4i\)</span>, y de <span class="math inline">\(Q=(5,-1)\)</span> se obtiene <span class="math inline">\(w=5-i\)</span>. Por tanto,</p>
+<p><strong>1. a.</strong> Lineal: <span class="math inline">\(2x+2y-3=x-y+1\)</span> equivale a <span class="math inline">\(x+3y=4\)</span>. Los coeficientes son <span class="math inline">\(1\)</span> y <span class="math inline">\(3\)</span>; el término independiente es <span class="math inline">\(4\)</span>.</p>
+<p><strong>1. b.</strong> No lineal: contiene <span class="math inline">\(x^2\)</span>.</p>
+<p><strong>1. c.</strong> Lineal, ya en la forma pedida. Los coeficientes son <span class="math inline">\(\frac12\)</span>, <span class="math inline">\(\frac13\)</span> y <span class="math inline">\(-1\)</span>; el término independiente es <span class="math inline">\(1\)</span>.</p>
+<p><strong>1. d.</strong> No lineal: la incógnita <span class="math inline">\(x\)</span> aparece en el denominador.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x\)</span>: masa de fibra, en kg; <span class="math inline">\(y\)</span>: masa de resina, en kg. Las restricciones son <span class="math inline">\(x,y\ge0\)</span>. Las relaciones son <span class="math inline">\(x+y=1\,200\)</span> y <span class="math inline">\(x=2y-60\)</span>, de donde</p>
 <p><span class="math display">\[
-z+w=(-2+5)+(4-1)i=3+3i.
+\left\{\begin{aligned}
+x+y&amp;=1\,200\\
+x-2y&amp;=-60.
+\end{aligned}\right.
 \]</span></p>
-<p>La suma corresponde al punto <span class="math inline">\((3,3)\)</span>.</p>
-<p><strong>2.</strong> En la resta se cambian los signos de las dos componentes del segundo número. Por tanto,</p>
+<p><strong>2. b.</strong> Para <span class="math inline">\((780,420)\)</span>:</p>
+<p><span class="math display">\[
+780+420=1\,200,\qquad 780-2(420)=-60.
+\]</span></p>
+<p>Cumple ambas ecuaciones. Para <span class="math inline">\((800,400)\)</span>, la suma también es <span class="math inline">\(1\,200\)</span>, pero <span class="math inline">\(800-2(400)=0\ne-60\)</span>. Solo la primera propuesta es solución.</p>
+<p><strong>2. c.</strong> Se necesitan <span class="math inline">\(780\)</span> kg de fibra y <span class="math inline">\(420\)</span> kg de resina. Las dos masas son positivas. El valor <span class="math inline">\(-60\)</span> expresa que la masa de fibra es menor que el doble de la de resina; no es la masa de un componente.</p>
+<p><strong>3.</strong> Para <span class="math inline">\((2,-1,1)\)</span>, los lados izquierdos son</p>
 <p><span class="math display">\[
 \begin{aligned}
-(2-3i)-(-4+i)
-&amp;=(2-(-4))+(-3-1)i\\
-&amp;=6-4i.
+2+2(-1)+1&amp;=1,\\
+3(2)-(-1)+2(1)&amp;=9,\\
+2-(-1)-1&amp;=2.
 \end{aligned}
 \]</span></p>
-<p>El resultado se representa mediante el punto <span class="math inline">\((6,-4)\)</span>. El procedimiento propuesto sumó el segundo número en lugar de restarlo: no cambió los signos de sus dos componentes.</p>
-<p><strong>3.</strong> Al sumar a ambos miembros el opuesto de <span class="math inline">\(-3+2i\)</span>,</p>
+<p>Satisface las tres ecuaciones y es solución. Para <span class="math inline">\((1,1,-2)\)</span>:</p>
 <p><span class="math display">\[
-z=(4-i)-(-3+2i)=7-3i.
+\begin{aligned}
+1+2(1)+(-2)&amp;=1,\\
+3(1)-1+2(-2)&amp;=-2\ne9,\\
+1-1-(-2)&amp;=2.
+\end{aligned}
 \]</span></p>
-<p>El número corresponde al punto <span class="math inline">\((7,-3)\)</span>. La verificación es</p>
-<p><span class="math display">\[
-(7-3i)+(-3+2i)=4-i.
-\]</span></p>
-<p><strong>4.</strong> Si los números son <span class="math inline">\(a+bi\)</span> y <span class="math inline">\(c+di\)</span>, entonces su suma es <span class="math inline">\(6\)</span> exactamente cuando</p>
-<p><span class="math display">\[
-a+c=6
-\qquad\text{y}\qquad
-b+d=0.
-\]</span></p>
-<p>Además, para que ambos sean no reales se requiere <span class="math inline">\(b\ne0\)</span> y <span class="math inline">\(d\ne0\)</span>. Por ejemplo,</p>
-<p><span class="math display">\[
-(2+i)+(4-i)=6.
-\]</span></p>
-<p>Los puntos <span class="math inline">\((2,1)\)</span> y <span class="math inline">\((4,-1)\)</span> representan los sumandos, y <span class="math inline">\((6,0)\)</span> representa la suma.</p>
+<p>Satisface la primera y la tercera, pero no la segunda. No es solución del sistema, pues las tres condiciones deben cumplirse simultáneamente.</p>
 </div>
 </div>
 </div>
@@ -798,13 +744,87 @@ b+d=0.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li>Ubique en el plano complejo <span class="math inline">\(1+4i\)</span>, <span class="math inline">\(-3-3i\)</span>, <span class="math inline">\(-5i\)</span> y <span class="math inline">\(2\)</span>, e indique sus partes real e imaginaria.</li>
-<li>Escriba el número complejo con parte real <span class="math inline">\(-2\)</span> y parte imaginaria <span class="math inline">\(3\)</span>. Determine su opuesto y represente ambos.</li>
-<li>Calcule <span class="math inline">\((7-2i)+(-3+6i)\)</span> y <span class="math inline">\((7-2i)-(-3+6i)\)</span>.</li>
-<li>Determine los números reales <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tales que <span class="math inline">\((3x+1)+(2y-5)i=10-9i\)</span>.</li>
-<li>Encuentre <span class="math inline">\(w\in\mathbb C\)</span> tal que <span class="math inline">\((4-7i)+w=1+2i\)</span>.</li>
-<li>Exprese <span class="math inline">\(6+\sqrt{-25}\)</span> y <span class="math inline">\(6-\sqrt{-25}\)</span> en la forma cartesiana y calcule su suma.</li>
+<li><p>Decida si cada ecuación es lineal en las incógnitas que aparecen. Cuando lo sea, escríbala en la forma general.</p>
+<ol type="a">
+<li><p><span class="math inline">\(4x-7y+z=0\)</span>.</p></li>
+<li><p><span class="math inline">\(x(y+1)=3\)</span>.</p></li>
+<li><p><span class="math inline">\(\frac{x-1}{4}-\frac{y}{2}=\frac{y-x}{4}\)</span>.</p></li>
+<li><p><span class="math inline">\(x^2+2x-y=x^2+3\)</span>.</p></li>
+</ol></li>
+<li><p>Para preparar mezclas cerámicas se dispone de paquetes P y Q con dos tipos de polvo, llamados alúmina y sílice. La tabla indica la masa de cada polvo por paquete. Se utilizan paquetes completos y las masas se suman sin pérdidas.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Polvo</th>
+<th style="text-align: right;">Paquete P</th>
+<th style="text-align: right;">Paquete Q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alúmina</td>
+<td style="text-align: right;"><span class="math inline">\(30\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(10\)</span> g</td>
+</tr>
+<tr class="even">
+<td>Sílice</td>
+<td style="text-align: right;"><span class="math inline">\(20\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(40\)</span> g</td>
+</tr>
+</tbody>
+</table>
+<p>Se requieren <span class="math inline">\(110\)</span> g de alúmina y <span class="math inline">\(140\)</span> g de sílice.</p>
+<ol type="a">
+<li><p>Defina las variables, indique qué valores admiten y plantee un sistema con las dos condiciones.</p></li>
+<li><p>Con el número de paquetes P como primera componente, compruebe las propuestas <span class="math inline">\((3,2)\)</span> y <span class="math inline">\((2,3)\)</span>.</p></li>
+<li><p>Interprete la propuesta válida. ¿Sus componentes representan gramos o cantidades de paquetes?</p></li>
+</ol></li>
+<li><p>Una <strong>probeta</strong> es una muestra preparada para realizar un ensayo. Una probeta rectangular debe tener perímetro <span class="math inline">\(70\)</span> cm y área <span class="math inline">\(300\ \mathrm{cm}^2\)</span>. Si sus lados miden <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> centímetros, con <span class="math inline">\(x,y&gt;0\)</span>, use las fórmulas de perímetro <span class="math inline">\(2x+2y\)</span> y área <span class="math inline">\(xy\)</span>.</p>
+<ol type="a">
+<li><p>Escriba el sistema y decida si es lineal, indicando la razón.</p></li>
+<li><p>Verifique si <span class="math inline">\((20,15)\)</span> y <span class="math inline">\((25,10)\)</span> satisfacen las dos condiciones.</p></li>
+<li><p>Indique cuál propuesta es admisible y exprese las dimensiones con sus unidades.</p></li>
+</ol></li>
+<li><p>Para el sistema <span class="math inline">\(x+y=5\)</span>, <span class="math inline">\(3x-2y=5\)</span>, un estudiante escribe: “<span class="math inline">\((3,2)\)</span> es solución porque <span class="math inline">\(3+2=5\)</span>”. Complete la comprobación de la segunda ecuación e indique si la conclusión es correcta y si la justificación original era suficiente.</p></li>
+<li><p>Escriba tres soluciones distintas de <span class="math inline">\(2x-y=4\)</span> y describa su conjunto solución por comprensión. ¿Basta elegir una pareja para describir todas las soluciones? Justifique.</p></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> Lineal: <span class="math inline">\(4x-7y+z=0\)</span>.</p>
+<p><strong>1. b.</strong> No lineal: contiene el producto <span class="math inline">\(xy\)</span>.</p>
+<p><strong>1. c.</strong> Lineal: <span class="math inline">\(2x-3y=1\)</span>.</p>
+<p><strong>1. d.</strong> Lineal: <span class="math inline">\(2x-y=3\)</span>.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x\)</span>: número de paquetes P; <span class="math inline">\(y\)</span>: número de paquetes Q. Ambos son enteros no negativos. El sistema es <span class="math inline">\(30x+10y=110\)</span>, <span class="math inline">\(20x+40y=140\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\((3,2)\)</span> satisface ambas ecuaciones; <span class="math inline">\((2,3)\)</span> no satisface ninguna.</p>
+<p><strong>2. c.</strong> Tres paquetes P y dos paquetes Q. Las componentes son cantidades de paquetes, no gramos.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(2x+2y=70\)</span>, <span class="math inline">\(xy=300\)</span>, con <span class="math inline">\(x,y&gt;0\)</span>. No es un sistema lineal por el producto <span class="math inline">\(xy\)</span>.</p>
+<p><strong>3. b.</strong> <span class="math inline">\((20,15)\)</span> satisface ambas condiciones. <span class="math inline">\((25,10)\)</span> satisface la de perímetro, pero su área es <span class="math inline">\(250\ \mathrm{cm}^2\)</span>.</p>
+<p><strong>3. c.</strong> La propuesta admisible es <span class="math inline">\((20,15)\)</span>: lados de <span class="math inline">\(20\)</span> cm y <span class="math inline">\(15\)</span> cm.</p>
+<p><strong>4.</strong> En la segunda ecuación, ambos lados valen <span class="math inline">\(5\)</span>. La conclusión es correcta; la justificación original era incompleta.</p>
+<p><strong>5.</strong> Una respuesta posible es <span class="math inline">\((0,-4)\)</span>, <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((3,2)\)</span>. El conjunto solución es <span class="math inline">\(S=\{(x,y)\in\mathbb R^2:\ 2x-y=4\}\)</span>. Una pareja no lo describe: hay infinitas soluciones, una por cada elección real de <span class="math inline">\(x\)</span>, con <span class="math inline">\(y=2x-4\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El trabajo de la sesión permite comprobar estas capacidades:</p>
+<ul>
+<li>Reconocer una ecuación lineal después de simplificar e identificar sus coeficientes y término independiente.</li>
+<li>Traducir las condiciones de un problema a un sistema, con variables, unidades y restricciones explícitas.</li>
+<li>Verificar una pareja o terna en todas las ecuaciones e interpretar si es admisible en el problema.</li>
+<li>Distinguir entre comprobar una propuesta y describir todo el conjunto solución: descartar una propuesta no demuestra que no haya soluciones.</li>
+</ul>
 
 
 </section>
@@ -1219,13 +1239,13 @@ b+d=0.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-17-sesion-06.html" class="pagination-link" aria-label="Sesión 06. Inecuaciones lineales y valor absoluto como distancia">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></span>
+      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-19-sesion-08.html" class="pagination-link" aria-label="Sesión 08. Números complejos: multiplicación, división y conjugado">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
