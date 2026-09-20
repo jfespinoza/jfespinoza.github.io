@@ -6,13 +6,13 @@ description: "Ecuaciones lineales en varias incógnitas, planteamiento de sistem
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá reconocer ecuaciones lineales, plantear un sistema a partir de datos sencillos y comprobar si una pareja o terna propuesta es solución. Para verificarlo, definirá las variables con sus unidades, escribirá las ecuaciones y justificará la comprobación en todas ellas.
+Al finalizar la sesión podrá reconocer ecuaciones lineales, plantear un sistema a partir de datos sencillos y verificar si una pareja o terna es solución. Podrá comprobarlo al resolver sin ayuda los [ejercicios 1–3 de la Actividad](#actividad), definiendo las variables con sus unidades, justificando la clasificación y comprobando cada propuesta en todas las ecuaciones.
 
 ## Ecuaciones lineales en varias incógnitas
 
 En la [Sesión 05](2026-08-14-sesion-05.qmd) se trabajó con ecuaciones lineales en una incógnita. Cuando un problema relaciona varias cantidades desconocidas, se necesita una variable para cada una.
 
-Una **ecuación lineal** en las incógnitas $x_1,x_2,\ldots,x_n$ tiene, después de simplificar y reunir términos, la forma
+Una **ecuación lineal** en las incógnitas $x_1,x_2,\ldots,x_n$ tiene, después de simplificar y reunir términos, la **forma general**
 
 $$
 a_1x_1+a_2x_2+\cdots+a_nx_n=b,
@@ -20,21 +20,23 @@ $$
 
 donde $a_1,\ldots,a_n$ y $b$ son números reales dados. Los números $a_1,\ldots,a_n$ son los **coeficientes** y $b$ es el **término independiente**. Con dos o tres incógnitas se acostumbra usar $x,y$ o $x,y,z$.
 
-Los coeficientes pueden ser enteros, fracciones, decimales o irracionales. También pueden ser cero: considerada en las incógnitas $x,y$, la ecuación $x=3$ se escribe $x+0y=3$.
+Los coeficientes pueden ser enteros, fracciones, decimales o [irracionales](2026-08-11-sesion-02.qmd). También pueden ser cero: considerada en las incógnitas $x,y$, la ecuación $x=3$ se escribe $x+0y=3$.
 
-Las ecuaciones $x^2+y=1$, $xy=6$ y $\frac{2}{x}+y=1$ no son lineales: contienen, respectivamente, un cuadrado de una incógnita, un producto de incógnitas y una incógnita en el denominador. La clasificación se hace **después de simplificar**. Por ejemplo, $x^2+x+y=x^2+1$ equivale a $x+y=1$, que sí es lineal.
+Las ecuaciones $x^2+y=1$, $xy=6$ y $\frac{2}{x}+y=1$ no son lineales: contienen, respectivamente, un cuadrado de una incógnita, un producto de incógnitas y una incógnita en el denominador. En la última se requiere $x\ne0$. La clasificación se hace **después de simplificar**. Por ejemplo, $x^2+x+y=x^2+1$ equivale a $x+y=1$, que sí es lineal.
 
 ### Solución y conjunto solución de una ecuación
 
 Una **solución** de una ecuación en $x,y$ es una **pareja ordenada** $(x,y)$ que hace verdadera la igualdad al sustituir sus componentes. En tres incógnitas se usa una **terna** $(x,y,z)$. El orden indica qué número corresponde a cada variable.
 
-El conjunto de todas las parejas de números reales se denota $\mathbb R^2$; el de todas las ternas reales, $\mathbb R^3$. El **conjunto solución** reúne todas las soluciones de la ecuación. Por ejemplo, para $x+y=500$ es
+Una pareja ordenada representa un [punto del plano](2026-08-18-sesion-07.qmd), como se trabajó con los números complejos. No debe confundirse con un [intervalo abierto](2026-08-17-sesion-06.qmd): aunque ambos usan paréntesis, su significado depende del contexto.
+
+El conjunto de todas las parejas ordenadas de números reales se denota $\mathbb R^2$; el de todas las ternas ordenadas reales, $\mathbb R^3$. El **conjunto solución** reúne todas las soluciones de la ecuación. Por ejemplo, para $x+y=500$ es
 
 $$
 S=\{(x,y)\in\mathbb R^2:\ x+y=500\}.
 $$
 
-Las parejas $(0,500)$, $(200,300)$ y $(250,250)$ pertenecen a $S$. Esta ecuación tiene infinitas soluciones reales: para cada valor real de $x$, el valor $y=500-x$ satisface la igualdad.
+Las parejas $(0,500)$, $(200,300)$ y $(250,250)$ pertenecen a $S$. Esta ecuación tiene infinitas soluciones reales: al [despejar](2026-08-14-sesion-05.qmd), se obtiene $y=500-x$, que proporciona una solución para cada valor real de $x$.
 
 Si $x$ y $y$ representan masas, el contexto impone además $x\ge0$ y $y\ge0$. La pareja $(600,-100)$ satisface la ecuación, pero no representa masas admisibles. **Cumplir la ecuación y cumplir las restricciones del problema son dos comprobaciones necesarias.**
 
@@ -59,13 +61,21 @@ $$
 
 La intersección expresa que una misma pareja debe pertenecer a ambos conjuntos. Si satisface una ecuación y falla en la otra, no es solución del sistema.
 
+En general, si $S_1,\ldots,S_m$ son los conjuntos solución de las $m$ ecuaciones, escritos con el mismo orden de incógnitas, entonces
+
+$$
+S=S_1\cap S_2\cap\cdots\cap S_m.
+$$
+
+Pertenecer a esta intersección significa satisfacer todas las ecuaciones.
+
 **Verificar una propuesta no equivale a determinar todo el conjunto solución.** Una propuesta que falla queda descartada; eso no demuestra que el sistema carezca de soluciones. Una propuesta que funciona tampoco demuestra, por sí sola, que sea la única.
 
 ## Procedimiento de planteamiento y verificación
 
 1. **Defina las variables.** Indique qué representa cada una y en qué unidades se expresa.
 2. **Traduzca las condiciones.** Escriba una ecuación por cada relación del enunciado y conserve el mismo significado y orden de las incógnitas.
-3. **Sustituya la propuesta.** Reemplace cada incógnita por su componente y calcule ambos lados de cada ecuación, sin redondear. Una sola igualdad falsa basta para descartar la propuesta.
+3. **Sustituya la propuesta.** Reemplace cada incógnita por su componente y calcule ambos lados de cada ecuación, sin redondear, como en la [evaluación directa](2026-09-01-sesion-15.qmd). Una sola igualdad falsa basta para descartar la propuesta.
 4. **Concluya e interprete.** La propuesta es solución del sistema si y solo si satisface todas sus ecuaciones. En un problema contextual, compruebe además las restricciones, como masas no negativas o cantidades enteras de piezas.
 
 ## Ejemplos
@@ -78,7 +88,7 @@ La intersección expresa que una misma pareja debe pertenecer a ambos conjuntos.
 | $\frac{x}{2}-\sqrt2\,y=5$ | Sí | Coeficientes $\frac12$ y $-\sqrt2$; término independiente $5$ |
 | $x^2+y=1$ | No | Término $x^2$ |
 | $xy=6$ | No | Producto de incógnitas |
-| $\frac{2}{x}+y=1$ | No | Incógnita en el denominador |
+| $\frac{2}{x}+y=1$ | No | Incógnita en el denominador; $x\ne0$ |
 
 En la primera ecuación se distribuye el $3$ y se reúnen los términos:
 
@@ -88,11 +98,11 @@ $$
 3x+y=-1.
 $$
 
-Sus coeficientes son $3$ y $1$, y su término independiente es $-1$. En la segunda ecuación, la raíz aparece en un **coeficiente constante**; no se está calculando la raíz de una incógnita.
+Las dos ecuaciones son [equivalentes](2026-08-14-sesion-05.qmd): tienen el mismo conjunto solución. Sus coeficientes son $3$ y $1$, y su término independiente es $-1$. En la segunda fila de la tabla, la raíz aparece en un **coeficiente constante**; no se está calculando la raíz de una incógnita.
 
 ### Ejemplo 2. Mezcla de dos aleaciones
 
-Una **aleación** es una mezcla de metales. Se dispone de una aleación A con $80\,\%$ de cobre en masa y otra B con $50\,\%$. Se desea obtener $500$ g con $62\,\%$ de cobre. Para este problema se supone que no hay pérdidas de material: las masas totales y las masas de cobre se suman. La masa de cobre de cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.
+Una **aleación** combina dos o más elementos, al menos uno de ellos metálico. Se dispone de una aleación A con $80\,\%$ de cobre en masa y otra B con $50\,\%$. Se desea obtener $500$ g con $62\,\%$ de cobre. Para este problema se supone que no hay pérdidas de material: las masas totales y las masas de cobre se suman. La masa de cobre de cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.
 
 **Variables:** $x$ es la masa de A, en gramos, y $y$ la masa de B, en gramos; se exige $x,y\ge0$.
 
@@ -148,10 +158,13 @@ $$
 
 Las tres igualdades son verdaderas; la terna es solución. Los paréntesis ayudan a conservar los signos al sustituir un número negativo.
 
+En cambio, $(2,-3,3)$ cumple la primera ecuación, pero en la segunda da $2(2)-(-3)+3=10\ne7$. Esta sola falla basta para descartar la terna.
+
 ## Errores frecuentes
 
-- **Verificar una sola ecuación.** En el ejemplo de aleaciones, $(250,250)$ cumple la condición de masa total, pero falla en la de cobre. Una solución debe satisfacer ambas.
+- **Verificar una sola ecuación.** En el ejemplo de aleaciones, $(250,250)$ cumple la condición de masa total, pero aporta $325$ g de cobre en lugar de $310$ g. Una solución debe satisfacer ambas condiciones.
 - **Confundir una propuesta incorrecta con la ausencia de soluciones.** Que $(250,250)$ falle no significa que el sistema no tenga solución: $(200,300)$ sí satisface sus dos ecuaciones.
+- **Confundir una solución con todo el conjunto solución.** La pareja $(200,300)$ satisface $x+y=500$, pero no es la única: $(0,500)$ y $(250,250)$ también la satisfacen. Para describir todas, se necesita indicar la relación $y=500-x$ y los valores admitidos de $x$.
 - **Intercambiar las componentes.** En $(200,300)$, la primera masa corresponde a A. Al invertirlas, $0.80(300)+0.50(200)=340\ne310$; $(300,200)$ no es solución.
 - **Usar el porcentaje como si fuera una masa.** La ecuación del cobre no es $0.80x+0.50y=0.62$. El lado derecho debe expresar la masa de cobre requerida: $0.62(500)=310$ g.
 
@@ -167,7 +180,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    c. $\frac{x}{2}+\frac{y}{3}-z=1$, en $x,y,z$.
 
-   d. $\frac{3}{x}+y=2$, en $x,y$.
+   d. $\frac{3}{x}+y=2$, en $x,y$, con $x\ne0$.
 
 2. Un **material compuesto** combina componentes distintos; en este problema se prepara con fibra de vidrio y resina. Se requiere un lote de $1\,200$ kg cuya masa de fibra sea $60$ kg menor que el doble de la masa de resina. Suponga que las masas se suman sin pérdidas.
 
@@ -277,9 +290,19 @@ Satisface la primera y la tercera, pero no la segunda. No es solución del siste
 
    c. Indique cuál propuesta es admisible y exprese las dimensiones con sus unidades.
 
-4. Para el sistema $x+y=5$, $3x-2y=5$, un estudiante escribe: "$(3,2)$ es solución porque $3+2=5$". Complete la comprobación de la segunda ecuación e indique si la conclusión es correcta y si la justificación original era suficiente.
+4. Una **disolución salina** es una mezcla homogénea de sal y agua. Se dispone de una disolución A con $4\,\%$ de sal en masa y otra B con $12\,\%$. Se requieren $400$ g con $10\,\%$ de sal. Suponga que no hay pérdidas y que las masas se suman. La masa de sal se obtiene multiplicando la masa de disolución por el porcentaje expresado como fracción.
 
-5. Escriba tres soluciones distintas de $2x-y=4$ y describa su conjunto solución por comprensión. ¿Basta elegir una pareja para describir todas las soluciones? Justifique.
+   a. Defina las variables con unidades y restricciones, usando la primera para A y la segunda para B, y plantee el sistema.
+
+   b. Un estudiante afirma que $(200,200)$ es solución porque $200+200=400$. Compruebe la masa de sal e indique si su conclusión es correcta y si su justificación es suficiente.
+
+   c. Verifique la propuesta $(100,300)$ e interprétela con sus unidades.
+
+5. Considere las ecuaciones $2x-y=4$ y $x+y=5$.
+
+   a. Escriba tres soluciones distintas de $2x-y=4$ y describa su conjunto solución $S_1$ por comprensión. ¿Basta elegir una pareja para describir todas las soluciones? Justifique.
+
+   b. Compruebe cuáles de sus tres parejas satisfacen también $x+y=5$. Si $S_2$ es el conjunto solución de esta segunda ecuación, explique qué representa $S_1\cap S_2$.
 
 ::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
 
@@ -303,17 +326,23 @@ Satisface la primera y la tercera, pero no la segunda. No es solución del siste
 
 **3. c.** La propuesta admisible es $(20,15)$: lados de $20$ cm y $15$ cm.
 
-**4.** En la segunda ecuación, ambos lados valen $5$. La conclusión es correcta; la justificación original era incompleta.
+**4. a.** $x$: masa de A, en g; $y$: masa de B, en g, con $x,y\ge0$. El sistema es $x+y=400$, $0.04x+0.12y=40$.
 
-**5.** Una respuesta posible es $(0,-4)$, $(2,0)$ y $(3,2)$. El conjunto solución es $S=\{(x,y)\in\mathbb R^2:\ 2x-y=4\}$. Una pareja no lo describe: hay infinitas soluciones, una por cada elección real de $x$, con $y=2x-4$.
+**4. b.** La propuesta tiene $400$ g de masa total, pero solo $32$ g de sal frente a los $40$ g requeridos. La conclusión es falsa y la justificación es insuficiente.
+
+**4. c.** $(100,300)$ satisface ambas condiciones: $100$ g de A y $300$ g de B producen $400$ g de disolución con $40$ g de sal, es decir, $10\,\%$ en masa.
+
+**5. a.** Una respuesta posible es $(0,-4)$, $(2,0)$ y $(3,2)$. El conjunto solución es $S_1=\{(x,y)\in\mathbb R^2:\ 2x-y=4\}$. Una pareja no lo describe: hay infinitas soluciones, una por cada elección real de $x$, con $y=2x-4$.
+
+**5. b.** De las tres parejas anteriores, solo $(3,2)$ satisface $x+y=5$. La intersección $S_1\cap S_2$ reúne las parejas que satisfacen ambas ecuaciones: es el conjunto solución del sistema.
 
 :::
 
 ## Conclusiones del aprendizaje
 
-El trabajo de la sesión permite comprobar estas capacidades:
+El planteamiento traduce las condiciones de un problema a ecuaciones; la verificación comprueba si una propuesta las satisface simultáneamente. El trabajo realizado permite revisar estas capacidades:
 
-- Reconocer una ecuación lineal después de simplificar e identificar sus coeficientes y término independiente.
-- Traducir las condiciones de un problema a un sistema, con variables, unidades y restricciones explícitas.
-- Verificar una pareja o terna en todas las ecuaciones e interpretar si es admisible en el problema.
-- Distinguir entre comprobar una propuesta y describir todo el conjunto solución: descartar una propuesta no demuestra que no haya soluciones.
+- Reconocer una ecuación lineal después de simplificar e identificar sus coeficientes y término independiente, como en la Actividad 1 y el ejercicio 1 de práctica.
+- Traducir condiciones a un sistema e interpretar las variables con sus unidades y restricciones, como en la Actividad 2 y los ejercicios 2–4 de práctica.
+- Verificar una pareja o terna en todas las ecuaciones y distinguir una propuesta incorrecta de la ausencia de soluciones, como en la Actividad 3 y el ejercicio 4 de práctica.
+- Distinguir una solución de todo el conjunto solución y explicar la intersección de conjuntos solución, como en el ejercicio 5 de práctica.
