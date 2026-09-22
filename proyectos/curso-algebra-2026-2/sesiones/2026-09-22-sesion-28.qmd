@@ -6,17 +6,17 @@ description: "Sustitución y eliminación, clasificación de sistemas lineales d
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, e interpretar sus soluciones como puntos comunes de dos rectas. Podrá comprobarlo al justificar los tres casos de la Actividad 1 y explicar qué información proporcionan las condiciones del problema de la Actividad 2.
+Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, interpretar sus soluciones como puntos comunes de dos rectas y describir todas las soluciones cuando las rectas coinciden. Podrá comprobarlo al justificar los tres casos de la [Actividad 1](#actividad) y explicar qué información proporcionan las condiciones del problema de la Actividad 2.
 
 ## Sistemas equivalentes y métodos de resolución
 
-En la [Sesión 27](2026-09-21-sesion-27.qmd) se verificaron soluciones propuestas. **Resolver un sistema** significa determinar todas sus soluciones. Dos sistemas son **equivalentes** cuando tienen el mismo conjunto solución; transformar uno en otro equivalente permite resolver sin perder ni agregar soluciones.
+En la [Sesión 27](2026-09-21-sesion-27.qmd) se verificaron soluciones propuestas. **Resolver un sistema** significa determinar todas sus soluciones. Dos sistemas con las mismas incógnitas son **equivalentes** cuando tienen el mismo conjunto solución, como ocurre con las [ecuaciones equivalentes](2026-08-14-sesion-05.qmd) en una incógnita. Transformar un sistema en otro equivalente permite resolver sin perder ni agregar soluciones.
 
 Trabajaremos con ecuaciones $ax+by=c$, con coeficientes reales y con $a,b$ no ambos cero. Esta condición permite despejar al menos una incógnita y garantiza que la ecuación representa una recta.
 
 ### Método de sustitución
 
-1. Despeje una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.
+1. [Despeje](2026-08-14-sesion-05.qmd) una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.
 2. Sustituya esa expresión en la otra ecuación y simplifique.
 3. Si obtiene un valor para la incógnita restante, recupere la despejada y verifique la pareja en ambas ecuaciones originales. Si obtiene una igualdad sin incógnitas, decida si es verdadera o falsa.
 
@@ -44,15 +44,15 @@ Suponga que se despejó $y$ en una ecuación y se sustituyó en la otra, o que s
 
 En el último caso, no todas las parejas son soluciones: deben satisfacer la ecuación conservada.
 
-La gráfica de $ax+by=c$, con $a,b$ no ambos cero, es una recta. Si $b\ne0$, se puede escribir
+La gráfica de $ax+by=c$, con $a,b$ no ambos cero, es el conjunto de los [puntos del plano](2026-08-18-sesion-07.qmd) $(x,y)$ cuyas coordenadas satisfacen la ecuación, y es una recta. Si $b\ne0$, se puede escribir
 
 $$
 y=-\frac{a}{b}x+\frac{c}{b},
 $$
 
-donde $-a/b$ es la **pendiente**. Si $b=0$, entonces $a\ne0$ y la recta es vertical: $x=c/a$.
+donde $-a/b$ es la **pendiente** y $c/b$ es la **ordenada al origen**, el valor de $y$ donde la recta corta al eje vertical. Si $b=0$, entonces $a\ne0$ y la recta es vertical: $x=c/a$.
 
-Las soluciones del sistema son los puntos comunes de las dos rectas:
+Si $S_1$ y $S_2$ son los conjuntos solución de las ecuaciones, las soluciones del sistema forman la intersección $S=S_1\cap S_2$, como en la [Sesión 27](2026-09-21-sesion-27.qmd). Geométricamente, son los puntos comunes de las dos rectas:
 
 | Rectas | Puntos comunes | Tipo de solución |
 |---|---|---|
@@ -60,9 +60,11 @@ Las soluciones del sistema son los puntos comunes de las dos rectas:
 | Paralelas distintas | Ninguno | Sin solución |
 | Coincidentes | Todos los puntos de una misma recta | Infinitas |
 
+Dos rectas que tienen dos puntos distintos en común coinciden, por lo que comparten infinitos puntos. Esto explica por qué el sistema no puede tener exactamente dos soluciones. Una [ecuación cuadrática](2026-09-02-sesion-16.qmd), en cambio, sí puede tener dos soluciones reales distintas, como se retoma en el ejercicio 7.
+
 Cuando ambas rectas tienen pendiente definida, pendientes distintas indican rectas secantes; pendientes iguales exigen comparar además las ordenadas al origen para distinguir paralelas distintas de coincidentes. El dibujo permite interpretar el resultado, pero la clasificación se justifica algebraicamente: una intersección puede quedar fuera de la región dibujada.
 
-Si al simplificar una ecuación original desaparecen **ambas** incógnitas, se revisa por separado: $0=0$ no impone ninguna condición y $0=c$, con $c\ne0$, hace inconsistente al sistema. Esas ecuaciones no representan rectas.
+Las igualdades sin incógnitas que aparecen al eliminar se interpretan por su valor de verdad. $0=0$ es una **identidad**, verdadera para cualquier elección de las incógnitas; $0=c$, con $c\ne0$, es una **contradicción**, falsa para cualquier elección. No representan rectas: son las condiciones que quedan al comparar las dos ecuaciones originales.
 
 <figure style="margin: 1.5rem auto; max-width: 720px;">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="s28-rectas-titulo s28-rectas-desc" style="display: block; width: 100%; height: auto;">
@@ -201,7 +203,7 @@ Se recupera $y=500-200=300$. La verificación da $200+300=500$ y $0.80(200)+0.50
 
 La eliminación conduce al mismo resultado: multiplicar la segunda ecuación por $10$ da $8x+5y=3\,100$; restar cinco veces la primera da $3x=600$. Al conservar $x+y=500$, se recupera también $y=300$.
 
-Las rectas son secantes y su punto común es $(200,300)$.
+Las rectas son secantes y su punto común es $(200,300)$. La verificación de la Sesión 27 confirma que esta pareja satisface el sistema; la resolución anterior prueba además que es la única.
 
 ### Ejemplo 2. Un sistema inconsistente
 
@@ -247,7 +249,7 @@ Cada valor real de $x$ determina una pareja. Por ejemplo, $(0,3)$, $(2,0)$ y $(4
 
 ## Errores frecuentes
 
-- **Confundir una identidad con una contradicción.** $0=0$ no impone otra condición; $0=11$ es imposible. En el primer caso se debe conservar la ecuación que aún relaciona las incógnitas.
+- **Confundir una identidad con una contradicción.** Es falso que obtener $0=0$ en $3x+2y=6$, $6x+4y=12$ signifique que no hay solución: $(0,3)$ cumple ambas ecuaciones. La identidad no impone otra condición y se conserva $3x+2y=6$ para describir las infinitas soluciones. Una contradicción, como $0=11$ en el Ejemplo 2, sí indica que no hay solución.
 - **Multiplicar solo el lado izquierdo.** El doble de $x+y=500$ es $2x+2y=1\,000$; el término independiente también se multiplica.
 - **Conservar únicamente la suma de las ecuaciones.** De $x+y=5$ y $x-y=1$ se obtiene $2x=6$, pero todavía se necesita una ecuación original para determinar $y=2$.
 - **Afirmar que cualquier pareja sirve si hay infinitas soluciones.** En el Ejemplo 3 todas deben cumplir $3x+2y=6$; $(1,1)$ no cumple esa condición.
@@ -270,6 +272,8 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    a. Defina las variables, plantee el sistema y clasifíquelo. ¿La segunda anotación permite determinar por separado las dos masas? Describa todas las parejas admisibles y dé dos ejemplos.
 
    b. Si la segunda anotación dijera $260$ g, clasifique el sistema e interprete el resultado en el contexto del registro.
+
+   c. Mantenga los $500$ g de masa total y sustituya la segunda anotación por estos datos: un componente C constituye el $20\,\%$ de la masa del primer polvo y el $50\,\%$ de la del segundo; la mezcla debe contener $160$ g de C. La masa de C en cada porción se obtiene multiplicando la masa de polvo por su porcentaje expresado como fracción. Plantee el nuevo sistema, resuélvalo por sustitución, clasifíquelo y verifique e interprete las masas obtenidas.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
@@ -299,6 +303,19 @@ Restar la mitad de la primera ecuación a la segunda da $0=0$. El sistema es con
 Al conservar $y=500-x$, las restricciones dan $0\le x\le500$. Las parejas admisibles son $(x,500-x)$ con $x$ en ese intervalo; por ejemplo, $(100,400)$ y $(250,250)$, cuyas masas suman $500$ g y cuyas semisumas son $250$ g.
 
 **2. b.** Ahora la segunda ecuación es $0.5x+0.5y=260$. Restar la mitad de la primera produce $0=10$, una contradicción. El sistema es inconsistente: las dos anotaciones no pueden ser correctas simultáneamente.
+
+**2. c.** Con las mismas variables y restricciones, el sistema es
+
+$$
+\left\{\begin{aligned}
+x+y&=500\\
+0.20x+0.50y&=160.
+\end{aligned}\right.
+$$
+
+Al sustituir $x=500-y$ en la segunda ecuación se obtiene $0.20(500-y)+0.50y=160$, es decir, $100+0.30y=160$. Por tanto, $y=200$ y $x=300$. Se verifica que $300+200=500$ y $0.20(300)+0.50(200)=60+100=160$.
+
+El sistema es consistente con solución única $(300,200)$: se requieren $300$ g del primer polvo y $200$ g del segundo. Ambas masas son positivas. Esta nueva condición sí determina las masas individuales junto con la masa total.
 
 :::
 
@@ -345,6 +362,14 @@ Al conservar $y=500-x$, las restricciones dan $0\le x\le500$. Las parejas admisi
 
    c. $(100,400)$ como única solución.
 
+7. Resuelva y verifique por sustitución estas ecuaciones de sesiones anteriores:
+
+   a. La [ecuación cuadrática](2026-09-02-sesion-16.qmd) $x^2-4x+3=0$ en $\mathbb R$.
+
+   b. La [ecuación lineal](2026-08-14-sesion-05.qmd) $\frac{x-1}{2}-\frac{x}{3}=1$.
+
+   c. Compare el número de soluciones distintas del inciso a con los tres casos de un sistema lineal real de dos ecuaciones con dos incógnitas. Explique por qué este sistema no puede tener exactamente dos soluciones.
+
 ::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
 
 **1. a.** $7x=14$; consistente con solución única, $S=\{(2,1)\}$; rectas secantes.
@@ -375,13 +400,19 @@ Al conservar $y=500-x$, las restricciones dan $0\le x\le500$. Las parejas admisi
 
 **6. c.** $x-y=-300$; igualdad $2x=200$, con solución única $(100,400)$.
 
+**7. a.** $S=\{1,3\}$. El lado izquierdo vale $0$ para cada una de las dos soluciones.
+
+**7. b.** $S=\{9\}$. El lado izquierdo vale $1$ al sustituir $x=9$.
+
+**7. c.** La cuadrática tiene exactamente dos soluciones reales distintas. El sistema lineal puede tener una, ninguna o infinitas; dos rectas con dos puntos distintos en común coinciden y tienen infinitos puntos comunes.
+
 :::
 
 ## Conclusiones del aprendizaje
 
-El trabajo realizado permite comprobar si puede:
+Sustitución y eliminación permiten determinar el conjunto solución conservando sistemas equivalentes. La clasificación algebraica se interpreta mediante los puntos comunes de las dos rectas. El trabajo realizado permite comprobar si puede:
 
-- Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales.
-- Distinguir una igualdad que determina una incógnita, una contradicción y una identidad, conservando las condiciones necesarias para describir todo el conjunto solución.
-- Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes.
-- Explicar si los datos de un problema determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una solución admisible en el contexto.
+- Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales, como en el Ejemplo 1, la [Actividad 1a y 2c](#actividad) y el ejercicio 4 de práctica.
+- Distinguir una igualdad que determina una incógnita, una contradicción y una identidad; cuando hay infinitas soluciones, describirlas todas y dar parejas particulares, como en los Ejemplos 2–3 y la Actividad 1b–c.
+- Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes, como en la Actividad 1 y los [ejercicios 1 y 7](#ejercicios-para-practicar).
+- Explicar si los datos determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una admisible en el contexto, como en la Actividad 2 y los ejercicios 2–3 de práctica.
