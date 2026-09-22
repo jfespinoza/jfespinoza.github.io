@@ -1,0 +1,387 @@
+---
+title: "Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia"
+date: 2026-09-22
+description: "Sustitución y eliminación, clasificación de sistemas lineales de dos ecuaciones e interpretación mediante rectas."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, e interpretar sus soluciones como puntos comunes de dos rectas. Podrá comprobarlo al justificar los tres casos de la Actividad 1 y explicar qué información proporcionan las condiciones del problema de la Actividad 2.
+
+## Sistemas equivalentes y métodos de resolución
+
+En la [Sesión 27](2026-09-21-sesion-27.qmd) se verificaron soluciones propuestas. **Resolver un sistema** significa determinar todas sus soluciones. Dos sistemas son **equivalentes** cuando tienen el mismo conjunto solución; transformar uno en otro equivalente permite resolver sin perder ni agregar soluciones.
+
+Trabajaremos con ecuaciones $ax+by=c$, con coeficientes reales y con $a,b$ no ambos cero. Esta condición permite despejar al menos una incógnita y garantiza que la ecuación representa una recta.
+
+### Método de sustitución
+
+1. Despeje una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.
+2. Sustituya esa expresión en la otra ecuación y simplifique.
+3. Si obtiene un valor para la incógnita restante, recupere la despejada y verifique la pareja en ambas ecuaciones originales. Si obtiene una igualdad sin incógnitas, decida si es verdadera o falsa.
+
+Por ejemplo, de $x+y=500$ se obtiene $y=500-x$. Sustituir esta expresión en otra ecuación permite trabajar solo con $x$, conservando la condición $y=500-x$.
+
+### Método de eliminación
+
+Se conserva una ecuación y se reemplaza la otra por su suma con un múltiplo de la conservada, elegido para cancelar una incógnita. Si es necesario multiplicar una ecuación, se multiplican **ambos lados por el mismo número distinto de cero**, incluido el término independiente.
+
+La transformación es reversible: si se conserva la primera ecuación y a la segunda se le suma un múltiplo de la primera, la segunda original se recupera restando ese mismo múltiplo. Por ello, el sistema nuevo tiene exactamente las mismas soluciones.
+
+**Conserve una ecuación que permita recuperar la incógnita eliminada.** La ecuación obtenida al sumar, por sí sola, no sustituye al sistema completo. Si una incógnita no aparece en ninguna ecuación, se despeja la que sí aparece y se comprueba si las dos condiciones son compatibles; la incógnita ausente queda sin restricción.
+
+## Clasificación e interpretación geométrica
+
+Un sistema es **consistente** si tiene al menos una solución e **inconsistente** si no tiene ninguna. Un sistema lineal de dos ecuaciones con dos incógnitas puede tener una solución, ninguna o infinitas; no puede tener exactamente dos.
+
+Suponga que se despejó $y$ en una ecuación y se sustituyó en la otra, o que se eliminó $y$ conservando una ecuación con coeficiente de $y$ distinto de cero. El resultado se interpreta así; si se elimina $x$, se intercambian los papeles de las incógnitas.
+
+| Igualdad obtenida | Qué permite concluir | Clasificación |
+|---|---|---|
+| $d\,x=e$, con $d\ne0$ | $x=e/d$ y la ecuación conservada determina $y$ | Consistente con solución única |
+| $0=e$, con $e\ne0$ | Ninguna pareja puede cumplir una igualdad falsa | Inconsistente; $S=\varnothing$ |
+| $0=0$ | Solo queda la condición de la ecuación conservada | Consistente con infinitas soluciones |
+
+En el último caso, no todas las parejas son soluciones: deben satisfacer la ecuación conservada.
+
+La gráfica de $ax+by=c$, con $a,b$ no ambos cero, es una recta. Si $b\ne0$, se puede escribir
+
+$$
+y=-\frac{a}{b}x+\frac{c}{b},
+$$
+
+donde $-a/b$ es la **pendiente**. Si $b=0$, entonces $a\ne0$ y la recta es vertical: $x=c/a$.
+
+Las soluciones del sistema son los puntos comunes de las dos rectas:
+
+| Rectas | Puntos comunes | Tipo de solución |
+|---|---|---|
+| Secantes | Un punto | Única |
+| Paralelas distintas | Ninguno | Sin solución |
+| Coincidentes | Todos los puntos de una misma recta | Infinitas |
+
+Cuando ambas rectas tienen pendiente definida, pendientes distintas indican rectas secantes; pendientes iguales exigen comparar además las ordenadas al origen para distinguir paralelas distintas de coincidentes. El dibujo permite interpretar el resultado, pero la clasificación se justifica algebraicamente: una intersección puede quedar fuera de la región dibujada.
+
+Si al simplificar una ecuación original desaparecen **ambas** incógnitas, se revisa por separado: $0=0$ no impone ninguna condición y $0=c$, con $c\ne0$, hace inconsistente al sistema. Esas ecuaciones no representan rectas.
+
+<figure style="margin: 1.5rem auto; max-width: 720px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="s28-rectas-titulo s28-rectas-desc" style="display: block; width: 100%; height: auto;">
+<title id="s28-rectas-titulo">Tres sistemas 2 por 2 y sus rectas</title>
+<desc id="s28-rectas-desc">Panel izquierdo: las rectas x + y = 500 y 0.80x + 0.50y = 310 se cortan en el punto (200, 300), única solución. Panel central: las rectas x - 2y = 4 y -2x + 4y = 3 son paralelas y distintas, sin punto en común. Panel derecho: las ecuaciones 3x + 2y = 6 y 6x + 4y = 12 tienen la misma recta como gráfica; todos sus puntos son soluciones, entre ellos (0, 3) y (2, 0).</desc>
+<rect x="1" y="1" width="718" height="298" rx="12" fill="#f8fafc" stroke="#dbe4ee"/>
+<g font-family="system-ui, sans-serif" font-size="14" fill="#334155">
+<text x="30" y="30" font-weight="650">Secantes: una solución</text>
+<text x="265" y="30" font-weight="650">Paralelas: ninguna solución</text>
+<text x="500" y="30" font-weight="650">Coincidentes: infinitas</text>
+</g>
+<g stroke="#cbd5e1" stroke-width="1">
+<line x1="88.5" y1="252.0" x2="88.5" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="30.0" y1="193.5" x2="220.0" y2="193.5" stroke-dasharray="3 4"/>
+<line x1="146.9" y1="252.0" x2="146.9" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="30.0" y1="135.1" x2="220.0" y2="135.1" stroke-dasharray="3 4"/>
+<line x1="205.4" y1="252.0" x2="205.4" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="30.0" y1="76.6" x2="220.0" y2="76.6" stroke-dasharray="3 4"/>
+</g>
+<g stroke="#334155" stroke-width="1.5">
+<line x1="30.0" y1="252.0" x2="220.0" y2="252.0"/>
+<line x1="30.0" y1="252.0" x2="30.0" y2="62.0"/>
+</g>
+<g font-family="system-ui, sans-serif" font-size="11" fill="#334155">
+<text x="88.5" y="266.0" text-anchor="middle">200</text>
+<text x="26.0" y="197.5" text-anchor="end">200</text>
+<text x="146.9" y="266.0" text-anchor="middle">400</text>
+<text x="26.0" y="139.1" text-anchor="end">400</text>
+<text x="205.4" y="266.0" text-anchor="middle">600</text>
+<text x="26.0" y="80.6" text-anchor="end">600</text>
+<text x="222.0" y="256.0" font-style="italic">x</text>
+<text x="35.0" y="58.0" font-style="italic">y</text>
+</g>
+<line x1="30.0" y1="105.8" x2="176.2" y2="252.0" stroke="#0f766e" stroke-width="2.5"/>
+<line x1="30.0" y1="70.8" x2="143.3" y2="252.0" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="88.5" cy="164.3" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"/>
+<text x="96.5" y="158.3" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(200, 300)</text>
+<g stroke="#cbd5e1" stroke-width="1">
+<line x1="265.0" y1="252.0" x2="265.0" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="265.0" y1="233.0" x2="455.0" y2="233.0" stroke-dasharray="3 4"/>
+<line x1="303.0" y1="252.0" x2="303.0" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="265.0" y1="195.0" x2="455.0" y2="195.0" stroke-dasharray="3 4"/>
+<line x1="379.0" y1="252.0" x2="379.0" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="265.0" y1="119.0" x2="455.0" y2="119.0" stroke-dasharray="3 4"/>
+<line x1="417.0" y1="252.0" x2="417.0" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="265.0" y1="81.0" x2="455.0" y2="81.0" stroke-dasharray="3 4"/>
+</g>
+<g stroke="#334155" stroke-width="1.5">
+<line x1="265.0" y1="157.0" x2="455.0" y2="157.0"/>
+<line x1="341.0" y1="252.0" x2="341.0" y2="62.0"/>
+</g>
+<g font-family="system-ui, sans-serif" font-size="11" fill="#334155">
+<text x="265.0" y="266.0" text-anchor="middle">-4</text>
+<text x="261.0" y="237.0" text-anchor="end">-4</text>
+<text x="303.0" y="266.0" text-anchor="middle">-2</text>
+<text x="261.0" y="199.0" text-anchor="end">-2</text>
+<text x="379.0" y="266.0" text-anchor="middle">2</text>
+<text x="261.0" y="123.0" text-anchor="end">2</text>
+<text x="417.0" y="266.0" text-anchor="middle">4</text>
+<text x="261.0" y="85.0" text-anchor="end">4</text>
+<text x="457.0" y="161.0" font-style="italic">x</text>
+<text x="346.0" y="58.0" font-style="italic">y</text>
+</g>
+<line x1="265.0" y1="233.0" x2="455.0" y2="138.0" stroke="#0f766e" stroke-width="2.5"/>
+<line x1="265.0" y1="180.8" x2="455.0" y2="85.8" stroke="#1d4ed8" stroke-width="2.5"/>
+<g stroke="#cbd5e1" stroke-width="1">
+<line x1="500.0" y1="252.0" x2="500.0" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="500.0" y1="224.9" x2="690.0" y2="224.9" stroke-dasharray="3 4"/>
+<line x1="608.6" y1="252.0" x2="608.6" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="500.0" y1="116.3" x2="690.0" y2="116.3" stroke-dasharray="3 4"/>
+<line x1="662.9" y1="252.0" x2="662.9" y2="62.0" stroke-dasharray="3 4"/>
+<line x1="500.0" y1="62.0" x2="690.0" y2="62.0" stroke-dasharray="3 4"/>
+</g>
+<g stroke="#334155" stroke-width="1.5">
+<line x1="500.0" y1="170.6" x2="690.0" y2="170.6"/>
+<line x1="554.3" y1="252.0" x2="554.3" y2="62.0"/>
+</g>
+<g font-family="system-ui, sans-serif" font-size="11" fill="#334155">
+<text x="500.0" y="266.0" text-anchor="middle">-2</text>
+<text x="496.0" y="228.9" text-anchor="end">-2</text>
+<text x="608.6" y="266.0" text-anchor="middle">2</text>
+<text x="496.0" y="120.3" text-anchor="end">2</text>
+<text x="662.9" y="266.0" text-anchor="middle">4</text>
+<text x="692.0" y="174.6" font-style="italic">x</text>
+<text x="559.3" y="58.0" font-style="italic">y</text>
+</g>
+<line x1="536.2" y1="62.0" x2="662.9" y2="252.0" stroke="#0f766e" stroke-width="5"/>
+<line x1="536.2" y1="62.0" x2="662.9" y2="252.0" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 6"/>
+<circle cx="554.3" cy="89.1" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"/>
+<text x="562.3" y="83.1" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(0, 3)</text>
+<circle cx="608.6" cy="170.6" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"/>
+<text x="616.6" y="164.6" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(2, 0)</text>
+<g font-family="system-ui, sans-serif" font-size="12">
+<line x1="30" y1="276" x2="52" y2="276" stroke="#0f766e" stroke-width="2.5"/>
+<text x="58" y="280" fill="#334155">x + y = 500</text>
+<line x1="30" y1="292" x2="52" y2="292" stroke="#1d4ed8" stroke-width="2.5"/>
+<text x="58" y="296" fill="#334155">0.80x + 0.50y = 310</text>
+<line x1="265" y1="276" x2="287" y2="276" stroke="#0f766e" stroke-width="2.5"/>
+<text x="293" y="280" fill="#334155">x − 2y = 4</text>
+<line x1="265" y1="292" x2="287" y2="292" stroke="#1d4ed8" stroke-width="2.5"/>
+<text x="293" y="296" fill="#334155">−2x + 4y = 3</text>
+<line x1="500" y1="276" x2="522" y2="276" stroke="#0f766e" stroke-width="5"/>
+<text x="528" y="280" fill="#334155">3x + 2y = 6</text>
+<line x1="500" y1="292" x2="522" y2="292" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 6"/>
+<text x="528" y="296" fill="#334155">6x + 4y = 12</text>
+</g>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">Los tres sistemas de los ejemplos: un punto común, ninguno o todos los puntos de una misma recta.</figcaption>
+</figure>
+
+## Ejemplos
+
+### Ejemplo 1. Una mezcla con solución única
+
+Se retoma la mezcla de la [Sesión 27](2026-09-21-sesion-27.qmd). Una aleación A contiene $80\,\%$ de cobre en masa y otra B, $50\,\%$. Se requieren $500$ g con $62\,\%$ de cobre. Suponiendo que las masas se suman sin pérdidas, las masas $x,y$ de A y B, en gramos, deben satisfacer
+
+$$
+\left\{\begin{aligned}
+x+y&=500\\
+0.80x+0.50y&=310.
+\end{aligned}\right.
+$$
+
+Por sustitución, $y=500-x$. Entonces
+
+$$
+\begin{aligned}
+0.80x+0.50(500-x)&=310,\\
+0.30x+250&=310,\\
+0.30x&=60,\\
+x&=200.
+\end{aligned}
+$$
+
+Se recupera $y=500-200=300$. La verificación da $200+300=500$ y $0.80(200)+0.50(300)=310$. El sistema es **consistente con solución única**: $S=\{(200,300)\}$. Ambas masas son positivas, por lo que se pueden usar $200$ g de A y $300$ g de B.
+
+La eliminación conduce al mismo resultado: multiplicar la segunda ecuación por $10$ da $8x+5y=3\,100$; restar cinco veces la primera da $3x=600$. Al conservar $x+y=500$, se recupera también $y=300$.
+
+Las rectas son secantes y su punto común es $(200,300)$.
+
+### Ejemplo 2. Un sistema inconsistente
+
+Considere
+
+$$
+\left\{\begin{aligned}
+x-2y&=4\\
+-2x+4y&=3.
+\end{aligned}\right.
+$$
+
+Se conserva la primera ecuación y se suma su doble a la segunda:
+
+$$
+(-2x+4y)+2(x-2y)=3+2(4)
+\quad\Longrightarrow\quad 0=11.
+$$
+
+Como esta igualdad es falsa, el sistema es **inconsistente** y $S=\varnothing$. Al despejar $y$, las rectas son $y=\frac12x-2$ y $y=\frac12x+\frac34$: tienen la misma pendiente y distintas ordenadas al origen, de modo que son paralelas distintas.
+
+### Ejemplo 3. Un sistema con infinitas soluciones
+
+Considere
+
+$$
+\left\{\begin{aligned}
+3x+2y&=6\\
+6x+4y&=12.
+\end{aligned}\right.
+$$
+
+Restar el doble de la primera ecuación a la segunda produce $0=0$. La segunda ecuación repite la condición de la primera: las rectas son coincidentes y el sistema es **consistente con infinitas soluciones**.
+
+Se conserva $3x+2y=6$, de donde $y=3-\frac32x$. Por tanto,
+
+$$
+S=\left\{\left(x,3-\frac32x\right):x\in\mathbb R\right\}
+=\{(x,y)\in\mathbb R^2:3x+2y=6\}.
+$$
+
+Cada valor real de $x$ determina una pareja. Por ejemplo, $(0,3)$, $(2,0)$ y $(4,-3)$ son soluciones. Para la última, $3(4)+2(-3)=6$ y $6(4)+4(-3)=12$. En cambio, $(1,1)$ no es solución, pues $3+2\ne6$.
+
+## Errores frecuentes
+
+- **Confundir una identidad con una contradicción.** $0=0$ no impone otra condición; $0=11$ es imposible. En el primer caso se debe conservar la ecuación que aún relaciona las incógnitas.
+- **Multiplicar solo el lado izquierdo.** El doble de $x+y=500$ es $2x+2y=1\,000$; el término independiente también se multiplica.
+- **Conservar únicamente la suma de las ecuaciones.** De $x+y=5$ y $x-y=1$ se obtiene $2x=6$, pero todavía se necesita una ecuación original para determinar $y=2$.
+- **Afirmar que cualquier pareja sirve si hay infinitas soluciones.** En el Ejemplo 3 todas deben cumplir $3x+2y=6$; $(1,1)$ no cumple esa condición.
+- **Decidir solo por la apariencia del dibujo.** Para $2x-3y=1$ y $4x-6y=3$, restar el doble de la primera ecuación a la segunda da $0=1$: las rectas son paralelas distintas aunque parezcan casi superpuestas.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada clasificación con una igualdad obtenida por sustitución o eliminación.
+
+1. Clasifique los siguientes sistemas e indique si sus rectas son secantes, paralelas distintas o coincidentes. Si hay solución única, determínela y verifíquela; si hay infinitas, describa todas las soluciones y dé dos parejas particulares.
+
+   a. $2x+y=7$, $x-y=-1$.
+
+   b. $x-3y=2$, $-2x+6y=5$.
+
+   c. $4x-6y=2$, $-2x+3y=-1$.
+
+2. En el registro de una mezcla de dos polvos para fabricar cerámica se anotan estas condiciones: la masa total es $500$ g; la mitad de la masa del primer polvo más la mitad de la masa del segundo es $250$ g. Las masas se suman sin pérdidas y se admiten cantidades no negativas.
+
+   a. Defina las variables, plantee el sistema y clasifíquelo. ¿La segunda anotación permite determinar por separado las dos masas? Describa todas las parejas admisibles y dé dos ejemplos.
+
+   b. Si la segunda anotación dijera $260$ g, clasifique el sistema e interprete el resultado en el contexto del registro.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Al sumar las ecuaciones se obtiene $3x=6$, de donde $x=2$. De $x-y=-1$ resulta $y=3$. La pareja verifica $2(2)+3=7$ y $2-3=-1$. El sistema es consistente con solución única, $S=\{(2,3)\}$; sus rectas son secantes.
+
+**1. b.** Sumar el doble de la primera ecuación a la segunda da $0=9$. Es una contradicción: sistema inconsistente, $S=\varnothing$; rectas paralelas distintas.
+
+**1. c.** Sumar la primera ecuación al doble de la segunda da $0=0$. Las dos condiciones son equivalentes, así que hay infinitas soluciones y las rectas coinciden. De $4x-6y=2$ se obtiene $y=(2x-1)/3$:
+
+$$
+S=\left\{\left(x,\frac{2x-1}{3}\right):x\in\mathbb R\right\}.
+$$
+
+Dos soluciones son $(2,1)$ y $(-1,-1)$. La primera cumple $8-6=2$ y $-4+3=-1$; la segunda cumple $-4+6=2$ y $2-3=-1$.
+
+**2. a.** Sean $x,y$ las masas de los dos polvos, en gramos, con $x,y\ge0$. El sistema es
+
+$$
+\left\{\begin{aligned}
+x+y&=500\\
+0.5x+0.5y&=250.
+\end{aligned}\right.
+$$
+
+Restar la mitad de la primera ecuación a la segunda da $0=0$. El sistema es consistente con infinitas soluciones; la segunda anotación repite la información de masa total y no determina las masas individuales.
+
+Al conservar $y=500-x$, las restricciones dan $0\le x\le500$. Las parejas admisibles son $(x,500-x)$ con $x$ en ese intervalo; por ejemplo, $(100,400)$ y $(250,250)$, cuyas masas suman $500$ g y cuyas semisumas son $250$ g.
+
+**2. b.** Ahora la segunda ecuación es $0.5x+0.5y=260$. Restar la mitad de la primera produce $0=10$, una contradicción. El sistema es inconsistente: las dos anotaciones no pueden ser correctas simultáneamente.
+
+:::
+
+## Ejercicios para practicar
+
+1. Clasifique cada sistema, indique una igualdad que justifique la clasificación y describa cómo son sus rectas. Escriba la solución única o, si hay infinitas, el conjunto solución por comprensión.
+
+   a. $3x-y=5$, $x+2y=4$.
+
+   b. $2x+4y=6$, $x+2y=3$.
+
+   c. $x-y=2$, $2x-2y=1$.
+
+2. Se dispone de dos aleaciones, es decir, mezclas que contienen elementos metálicos: E tiene $30\,\%$ de níquel en masa y F, $70\,\%$. Se supone que las masas totales y las de níquel se suman sin pérdidas. La masa de níquel de una porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.
+
+   a. Defina las variables con sus unidades y restricciones. Plantee y resuelva el sistema para obtener $800$ g con $45\,\%$ de níquel; clasifíquelo e interprete la solución.
+
+   b. Plantee y resuelva el sistema para obtener $800$ g con $80\,\%$ de níquel. Clasifíquelo sobre $\mathbb R$ y decida si la mezcla puede prepararse con E y F.
+
+3. Una **probeta** es una muestra preparada para un ensayo. Todas las probetas de un mismo tipo tienen igual masa, estrictamente positiva. Se registran estas pesadas:
+
+   | Pesada | Probetas de tipo A | Probetas de tipo B | Masa total |
+   |---|---:|---:|---:|
+   | Primera | $2$ | $3$ | $520$ g |
+   | Segunda | $4$ | $6$ | $1\,040$ g |
+
+   a. Sean $x,y$ las masas, en gramos, de una probeta de tipo A y B, respectivamente. Plantee el sistema, clasifíquelo y describa las parejas de masas admisibles. ¿Las pesadas determinan las masas individuales?
+
+   b. Se puede añadir uno de dos datos: "la segunda masa total es el doble de la primera" o "una probeta B pesa $40$ g más que una A". ¿Cuál permite determinar las masas individuales? Escriba su ecuación y obtenga esas masas.
+
+4. Elija sustitución o eliminación, justifique brevemente su elección y resuelva.
+
+   a. $y=2x-3$, $3x+2y=8$.
+
+   b. $5x-3y=7$, $5x+2y=-3$.
+
+5. Para resolver $2x+3y=12$, $x-y=1$, un estudiante multiplica la segunda ecuación por $3$, pero escribe $3x-3y=1$. Después suma y propone $(13/5,8/5)$. Identifique el error, corrija la solución y compruebe si la propuesta satisface las ecuaciones originales.
+
+6. Escriba una segunda ecuación que, junto con $x+y=500$, forme un sistema con la condición indicada. Justifique cada elección con una igualdad obtenida por eliminación.
+
+   a. Infinitas soluciones.
+
+   b. Ninguna solución.
+
+   c. $(100,400)$ como única solución.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $7x=14$; consistente con solución única, $S=\{(2,1)\}$; rectas secantes.
+
+**1. b.** $0=0$; consistente con infinitas soluciones; rectas coincidentes. $S=\{(x,y)\in\mathbb R^2:x+2y=3\}$.
+
+**1. c.** $0=-3$; inconsistente, $S=\varnothing$; rectas paralelas distintas.
+
+**2. a.** $x$: masa de E, en g; $y$: masa de F, en g, con $x,y\ge0$. Sistema: $x+y=800$, $0.30x+0.70y=360$. Consistente con solución única $(500,300)$: $500$ g de E y $300$ g de F.
+
+**2. b.** Sistema: $x+y=800$, $0.30x+0.70y=640$. Consistente sobre $\mathbb R$ con solución única $(-200,1\,000)$. La mezcla no puede prepararse: la masa de E sería negativa.
+
+**3. a.** Sistema: $2x+3y=520$, $4x+6y=1\,040$. Consistente con infinitas soluciones; las pesadas no determinan las masas individuales. Parejas admisibles: $\left(x,(520-2x)/3\right)$ con $0<x<260$; por ejemplo, $(80,120)$ y $(200,40)$, en gramos.
+
+**3. b.** El segundo dato, $y-x=40$, permite determinar las masas: $x=80$ g y $y=120$ g. El primero repite la proporción ya registrada.
+
+**4. a.** Sustitución, porque $y$ ya está despejada; solución $(2,1)$.
+
+**4. b.** Eliminación, porque los coeficientes de $x$ son iguales; solución $(1/5,-2)$.
+
+**5.** No se multiplicó el término independiente: la ecuación correcta es $3x-3y=3$. La solución del sistema es $(3,2)$. La propuesta del estudiante satisface $x-y=1$, pero el lado izquierdo de la primera ecuación vale $10$, no $12$.
+
+**6.** Una respuesta posible en cada inciso:
+
+**6. a.** $2x+2y=1\,000$; igualdad $0=0$.
+
+**6. b.** $x+y=600$; igualdad $0=100$.
+
+**6. c.** $x-y=-300$; igualdad $2x=200$, con solución única $(100,400)$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+El trabajo realizado permite comprobar si puede:
+
+- Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales.
+- Distinguir una igualdad que determina una incógnita, una contradicción y una identidad, conservando las condiciones necesarias para describir todo el conjunto solución.
+- Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes.
+- Explicar si los datos de un problema determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una solución admisible en el contexto.
