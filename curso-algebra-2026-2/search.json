@@ -2734,6 +2734,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-09-23-sesion-29.html",
+    "href": "sesiones/2026-09-23-sesion-29.html",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá traducir entre un sistema lineal y su matriz aumentada, aplicar las tres operaciones elementales de renglón e iniciar la eliminación debajo de un pivote. Podrá comprobarlo en la Actividad, al conservar el orden de las incógnitas, operar también los términos independientes e interpretar las ecuaciones obtenidas.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada",
+    "href": "sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Matriz de coeficientes y matriz aumentada",
+    "text": "Matriz de coeficientes y matriz aumentada\nLa eliminación de la Sesión 28 transforma los coeficientes y los términos independientes de las ecuaciones. Esos números pueden organizarse en un arreglo que mantenga una posición fija para cada incógnita.\nUna matriz es un arreglo rectangular de números. Sus renglones, también llamados filas, son horizontales; sus columnas son verticales. Si tiene \\(m\\) renglones y \\(n\\) columnas, sus dimensiones son \\(m\\times n\\): primero se indica el número de renglones. Cada número es una entrada; \\(a_{ij}\\) denota la entrada situada en el renglón \\(i\\) y la columna \\(j\\).\nConsidere un sistema de \\(m\\) ecuaciones lineales en \\(n\\) incógnitas. Después de simplificar, se escribe cada ecuación en la forma general, con las incógnitas en el mismo orden y el término independiente al lado derecho.\n\nLa matriz de coeficientes \\(A\\) contiene los coeficientes de las incógnitas. Tiene dimensiones \\(m\\times n\\).\nLa columna de términos independientes \\(b\\) contiene, en el mismo orden, los lados derechos de las ecuaciones.\nLa matriz aumentada \\([A\\mid b]\\) añade esa columna a \\(A\\) y tiene dimensiones \\(m\\times(n+1)\\). La barra vertical separa los coeficientes de los términos independientes; no es una columna adicional.\n\nCada renglón de la matriz aumentada representa una ecuación. Cada columna de \\(A\\) corresponde a una incógnita, según el orden fijado. Cuando una incógnita no aparece, se escribe su coeficiente cero: en el orden \\(x,y,z\\), la ecuación \\(x-3z=0\\) produce el renglón \\([1\\ \\ 0\\ \\ {-3}\\mid0]\\).\nPara recuperar el sistema, se multiplica cada entrada de \\(A\\) por la incógnita de su columna y se iguala la suma al término independiente. Por ejemplo, \\([2\\ \\ 0\\ \\ {-1}\\mid4]\\) se lee \\(2x+0y-z=4\\), o simplemente \\(2x-z=4\\). La matriz \\(A\\) sola no especifica los términos independientes y, por ello, no determina el sistema completo.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#operaciones-elementales-de-renglón",
+    "href": "sesiones/2026-09-23-sesion-29.html#operaciones-elementales-de-renglón",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Operaciones elementales de renglón",
+    "text": "Operaciones elementales de renglón\nSe escribe \\(R_i\\) para referirse al renglón \\(i\\). Las tres operaciones elementales son:\n\n\n\n\n\n\n\n\nOperación\nNotación\nCondición\n\n\n\n\nIntercambiar dos renglones\n\\(R_i\\leftrightarrow R_j\\)\n\\(i\\ne j\\)\n\n\nMultiplicar un renglón por un número\n\\(R_i\\to cR_i\\)\n\\(c\\ne0\\)\n\n\nSumar a un renglón un múltiplo de otro\n\\(R_i\\to R_i+cR_j\\)\n\\(i\\ne j\\)\n\n\n\nLos índices identifican renglones existentes y \\(c\\) es un número real. En la tercera operación, \\(c\\) puede ser cero, aunque entonces no se produce ningún cambio.\nLa notación \\(R_2\\to R_2-8R_1\\) indica que el segundo renglón se reemplaza por el segundo menos ocho veces el primero. Se opera sobre todas sus entradas, incluido el término independiente. El renglón auxiliar \\(R_1\\) se conserva.\nEstas operaciones producen sistemas equivalentes: sistemas con el mismo conjunto solución. Se justifican porque pueden deshacerse:\n\nUn intercambio se deshace repitiéndolo.\nMultiplicar por \\(c\\ne0\\) se deshace multiplicando por \\(1/c\\), como en las ecuaciones equivalentes.\nSumar \\(c\\) veces un renglón a otro se deshace restando ese mismo múltiplo del renglón conservado.\n\nMultiplicar un renglón por cero no es una operación elemental: reemplaza una ecuación por \\(0=0\\) y puede perder información. Por ejemplo, transformar \\(x=3\\) en \\(0=0\\) permite cualquier valor de \\(x\\).\nSi se indican varias operaciones sucesivas, cada una usa la matriz resultante de la anterior. Verificar una solución conocida en el sistema nuevo ayuda a detectar errores, pero no basta para demostrar equivalencia: dos sistemas pueden compartir una solución y tener conjuntos solución distintos. La equivalencia se garantiza mediante las operaciones reversibles aplicadas correctamente.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#pivote-y-comienzo-del-escalonamiento",
+    "href": "sesiones/2026-09-23-sesion-29.html#pivote-y-comienzo-del-escalonamiento",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Pivote y comienzo del escalonamiento",
+    "text": "Pivote y comienzo del escalonamiento\nUn pivote de eliminación es una entrada no nula que se utiliza para anular otras entradas de su columna mediante operaciones elementales. Para comenzar el escalonamiento se elige el primer pivote y se obtienen ceros debajo de él:\n\nLocalice la primera columna de coeficientes que tenga alguna entrada no nula. Si la primera columna es nula, pase a la siguiente.\nLleve una entrada no nula de esa columna al primer renglón mediante un intercambio, si hace falta.\nConserve el renglón del pivote y sume múltiplos suyos a los renglones inferiores para anular las entradas que están debajo.\n\nSi el pivote vale \\(p\\ne0\\) y la entrada que se desea anular vale \\(a\\), se utiliza \\(R_i\\to R_i-\\frac{a}{p}R_1\\), porque \\(a-\\frac{a}{p}p=0\\). No es necesario convertir el pivote en \\(1\\) antes de eliminar. Al continuar hacia las columnas siguientes se trabaja con los renglones inferiores, conservando los ceros ya obtenidos.\nSi todas las columnas de coeficientes son nulas, no hay pivote de eliminación: las ecuaciones se leen directamente como igualdades entre constantes. En cualquier etapa deben reconocerse estos dos casos:\n\n\n\n\n\n\n\nRenglón aumentado\nEcuación e interpretación\n\n\n\n\n\\([0\\ \\cdots\\ 0\\mid c]\\), con \\(c\\ne0\\)\n\\(0=c\\): contradicción; el sistema no tiene solución\n\n\n\\([0\\ \\cdots\\ 0\\mid0]\\)\n\\(0=0\\): no impone una condición; deben revisarse los demás renglones\n\n\n\nUn renglón nulo no determina por sí solo el número de soluciones.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#ejemplos",
+    "href": "sesiones/2026-09-23-sesion-29.html#ejemplos",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Representación de una mezcla\nPara preparar \\(100\\) g de mezcla cerámica se usan tres polvos llamados alúmina, sílice y magnesia. Sus masas se suman sin pérdidas. La masa de alúmina es el triple de la de magnesia, y la de sílice es \\(20\\) g menor que la suma de las otras dos.\nSean \\(x,y,z\\) sus masas en gramos, respectivamente, con \\(x,y,z\\ge0\\). Las condiciones \\(x+y+z=100\\), \\(x=3z\\) y \\(y=x+z-20\\) se escriben como\n\\[\n\\left\\{\\begin{aligned}\nx+y+z&=100\\\\\nx-3z&=0\\\\\n-x+y-z&=-20.\n\\end{aligned}\\right.\n\\]\nEn el orden \\(x,y,z\\), las matrices son\n\\[\nA=\\begin{bmatrix}\n1&1&1\\\\\n1&0&-3\\\\\n-1&1&-1\n\\end{bmatrix},\n\\qquad\n[A\\mid b]=\\left[\\begin{array}{ccc|c}\n1&1&1&100\\\\\n1&0&-3&0\\\\\n-1&1&-1&-20\n\\end{array}\\right].\n\\]\n\\(A\\) es \\(3\\times3\\) y la matriz aumentada es \\(3\\times4\\). La entrada \\(a_{23}=-3\\) es el coeficiente de \\(z\\) en la segunda ecuación; \\(a_{22}=0\\) registra la ausencia de \\(y\\).\n\n\n\nDel sistema a la matriz aumentada\n\nA la izquierda, el sistema x + y + z = 100, x − 3z = 0, −x + y − z = −20 con sus términos alineados por incógnita; a la derecha, su matriz aumentada de 3 renglones y 4 columnas: 1 1 1 | 100, 1 0 −3 | 0, −1 1 −1 | −20. Cada columna de la matriz está sombreada con el mismo color que la incógnita correspondiente del sistema; la columna de y del segundo renglón contiene el 0 de la incógnita ausente. La barra vertical separa los coeficientes de los términos independientes.   Sistema (incógnitas en el orden x, y, z) Matriz aumentada [A | b]       x + y + z = 100 x − 3z = 0 −x + y − z = −20   falta y                 1 1 1 100 1 0 −3 0 −1 1 −1 −20   x y z b  Renglones: ecuaciones. Columnas de A: incógnitas. A es 3 × 3; la aumentada [A | b] es 3 × 4.\n\n\nTraducir un sistema a su matriz aumentada: mismo orden de incógnitas en todas las ecuaciones y un 0 en el lugar de cada incógnita ausente.\n\n\nLa terna \\((45,40,15)\\) cumple las condiciones: \\(45+40+15=100\\), \\(45=3(15)\\) y \\(40=45+15-20\\). Las tres masas son positivas. Esta propuesta permitirá comprobar los sistemas transformados.\nEn sentido contrario, la matriz aumentada\n\\[\n\\left[\\begin{array}{ccc|c}\n2&0&-1&4\\\\\n0&3&5&-1\n\\end{array}\\right],\n\\]\ncon incógnitas \\(x,y,z\\), representa \\(2x-z=4\\), \\(3y+5z=-1\\). Es un sistema \\(2\\times3\\), aunque su matriz aumentada tiene dimensiones \\(2\\times4\\).\n\n\nEjemplo 2. Escala y suma de renglones\nSe retoma el sistema de la mezcla de aleaciones de la Sesión 28: \\(x+y=500\\), \\(0.80x+0.50y=310\\). Para anular el coeficiente de \\(x\\) en el segundo renglón, primero se eliminan los decimales:\n\\[\n\\left[\\begin{array}{cc|c}1&1&500\\\\0.80&0.50&310\\end{array}\\right]\n\\xrightarrow{\\ R_2\\to10R_2\\ }\n\\left[\\begin{array}{cc|c}1&1&500\\\\8&5&3\\,100\\end{array}\\right].\n\\]\nDespués se resta ocho veces el primer renglón:\n\\[\n\\left[\\begin{array}{cc|c}1&1&500\\\\8&5&3\\,100\\end{array}\\right]\n\\xrightarrow{\\ R_2\\to R_2-8R_1\\ }\n\\left[\\begin{array}{cc|c}1&1&500\\\\0&-3&-900\\end{array}\\right].\n\\]\nEl término independiente también cambia: \\(3\\,100-8(500)=-900\\). El sistema resultante es \\(x+y=500\\), \\(-3y=-900\\), que da \\(y=300\\) y \\(x=200\\). La pareja satisface las ecuaciones originales: \\(200+300=500\\) y \\(0.80(200)+0.50(300)=310\\).\n\n\nEjemplo 3. Ceros debajo del primer pivote\nEn la matriz aumentada de la mezcla cerámica, la entrada \\(a_{11}=1\\) sirve de pivote. Primero se aplica \\(R_2\\to R_2-R_1\\):\n\\[\n\\left[\\begin{array}{ccc|c}1&1&1&100\\\\1&0&-3&0\\\\-1&1&-1&-20\\end{array}\\right]\n\\longrightarrow\n\\left[\\begin{array}{ccc|c}1&1&1&100\\\\0&-1&-4&-100\\\\-1&1&-1&-20\\end{array}\\right].\n\\]\nDespués se aplica \\(R_3\\to R_3+R_1\\):\n\\[\n\\left[\\begin{array}{ccc|c}1&1&1&100\\\\0&-1&-4&-100\\\\0&2&0&80\\end{array}\\right].\n\\]\nEl sistema equivalente es \\(x+y+z=100\\), \\(-y-4z=-100\\), \\(2y=80\\). Las dos últimas ecuaciones ya no contienen \\(x\\). La terna \\((45,40,15)\\) sigue siendo solución: sus lados izquierdos valen \\(100\\), \\(-100\\) y \\(80\\), respectivamente.\nLa primera columna está preparada, pero queda una entrada \\(2\\) debajo de \\(-1\\) en la segunda columna. Obtener ceros en una columna no significa haber terminado el escalonamiento.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#errores-frecuentes",
+    "href": "sesiones/2026-09-23-sesion-29.html#errores-frecuentes",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nOmitir un coeficiente cero. Para \\(x-3z=0\\), en el orden \\(x,y,z\\), se necesita \\([1\\ \\ 0\\ \\ {-3}\\mid0]\\). El renglón \\([1\\ \\ {-3}\\mid0]\\) tiene una columna de coeficientes menos y no representa la ecuación con ese orden de tres incógnitas.\nCambiar el orden de las incógnitas. Para \\(y+2x=7\\), la fila de coeficientes en el orden \\(x,y\\) es \\([2\\ \\ 1]\\), no \\([1\\ \\ 2]\\).\nDejar fijo el término independiente. Multiplicar por \\(\\frac12\\) el renglón \\([2\\ \\ 4\\mid6]\\) produce \\([1\\ \\ 2\\mid3]\\), no \\([1\\ \\ 2\\mid6]\\).\nUsar cero como pivote. Si la entrada elegida es cero, no se puede dividir entre ella. Se busca una entrada no nula en esa columna y se intercambian renglones; si toda la columna es nula, se pasa a la siguiente.\nConcluir que un renglón nulo implica infinitas soluciones. La matriz \\(\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]\\) representa \\(x=3\\), \\(y=2\\), \\(0=0\\). Tiene solución única \\((3,2)\\).",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#actividad",
+    "href": "sesiones/2026-09-23-sesion-29.html#actividad",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Anote cada operación y actúe sobre el renglón completo.\n\nTraduzca entre ecuaciones y matrices.\n\nEscriba \\(A\\) y \\([A\\mid b]\\) para \\(2x-z=4\\), \\(-x+3y+2z=-1\\), \\(y-z=3\\), en el orden \\(x,y,z\\). Indique sus dimensiones.\nRecupere el sistema representado por \\(\\left[\\begin{array}{ccc|c}0&4&-1&0\\\\1&-2&0&5\\end{array}\\right]\\), en el orden \\(x,y,z\\), e indique cuántas ecuaciones e incógnitas tiene.\nEn la matriz del inciso b, intercambie \\(R_1\\) y \\(R_2\\). Escriba la matriz resultante, identifique el primer pivote y explique por qué el intercambio conserva las soluciones.\n\nUna aleación es una mezcla de elementos, al menos uno de ellos metálico. Se preparan \\(360\\) g con aluminio, cobre y magnesio. La masa de aluminio es cinco veces la suma de las otras dos, y la de cobre es el doble de la de magnesio. Las masas se suman sin pérdidas y son no negativas.\n\nDefina las variables con unidades, usando el orden aluminio, cobre, magnesio. Plantee las ecuaciones en el orden de las tres condiciones anteriores y escriba la matriz aumentada.\nEjecute \\(R_2\\to R_2-R_1\\) y después \\(R_2\\to-\\frac16R_2\\). Escriba la matriz obtenida y el sistema que representa.\nVerifique \\((300,40,20)\\) en ambos sistemas. Interprete el segundo renglón nuevo y explique qué garantiza la equivalencia de los sistemas.\n\nEscriba las matrices aumentadas de estos sistemas de la Sesión 28. En cada una, anule la entrada debajo del primer pivote y clasifique el sistema, considerando ambos renglones.\n\n\\(x-3y=2\\), \\(-2x+6y=5\\).\n\\(4x-6y=2\\), \\(-2x+3y=-1\\).\n\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. Las matrices son\n\\[\nA=\\begin{bmatrix}2&0&-1\\\\-1&3&2\\\\0&1&-1\\end{bmatrix},\n\\qquad\n[A\\mid b]=\\left[\\begin{array}{ccc|c}2&0&-1&4\\\\-1&3&2&-1\\\\0&1&-1&3\\end{array}\\right].\n\\]\nSus dimensiones son \\(3\\times3\\) y \\(3\\times4\\), respectivamente.\n1. b. \\(4y-z=0\\), \\(x-2y=5\\): dos ecuaciones y tres incógnitas.\n1. c. Después de \\(R_1\\leftrightarrow R_2\\):\n\\[\n\\left[\\begin{array}{ccc|c}1&-2&0&5\\\\0&4&-1&0\\end{array}\\right].\n\\]\nEl primer pivote es \\(1\\), en el primer renglón y la primera columna. El intercambio solo cambia el orden de las ecuaciones; las mismas ternas satisfacen ambas.\n2. a. \\(x,y,z\\) son las masas de aluminio, cobre y magnesio, respectivamente, en gramos; \\(x,y,z\\ge0\\). Las ecuaciones son \\(x+y+z=360\\), \\(x-5y-5z=0\\), \\(y-2z=0\\). Su matriz aumentada es\n\\[\n\\left[\\begin{array}{ccc|c}1&1&1&360\\\\1&-5&-5&0\\\\0&1&-2&0\\end{array}\\right].\n\\]\n2. b. La primera operación da el renglón \\([0\\ \\ {-6}\\ \\ {-6}\\mid-360]\\); multiplicarlo por \\(-\\frac16\\) produce \\([0\\ \\ 1\\ \\ 1\\mid60]\\). La matriz final es\n\\[\n\\left[\\begin{array}{ccc|c}1&1&1&360\\\\0&1&1&60\\\\0&1&-2&0\\end{array}\\right].\n\\]\nRepresenta \\(x+y+z=360\\), \\(y+z=60\\), \\(y-2z=0\\).\n2. c. En el sistema original, \\(300+40+20=360\\), \\(300-5(40)-5(20)=0\\) y \\(40-2(20)=0\\). En el nuevo, se conserva la primera y la tercera igualdad, y \\(40+20=60\\). Las masas son admisibles. El segundo renglón expresa que cobre y magnesio suman \\(60\\) g. La equivalencia se garantiza por las operaciones elementales reversibles; verificar esta terna solo comprueba una solución compartida.\n3. a. Se suma el doble del primer renglón al segundo:\n\\[\n\\left[\\begin{array}{cc|c}1&-3&2\\\\-2&6&5\\end{array}\\right]\n\\xrightarrow{\\ R_2\\to R_2+2R_1\\ }\n\\left[\\begin{array}{cc|c}1&-3&2\\\\0&0&9\\end{array}\\right].\n\\]\nLa ecuación \\(0=9\\) es imposible: sistema inconsistente.\n3. b. Se suma la mitad del primer renglón al segundo:\n\\[\n\\left[\\begin{array}{cc|c}4&-6&2\\\\-2&3&-1\\end{array}\\right]\n\\xrightarrow{\\ R_2\\to R_2+\\frac12R_1\\ }\n\\left[\\begin{array}{cc|c}4&-6&2\\\\0&0&0\\end{array}\\right].\n\\]\nSolo queda \\(4x-6y=2\\): sistema consistente con infinitas soluciones, \\(S=\\{(x,(2x-1)/3):x\\in\\mathbb R\\}\\).",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-09-23-sesion-29.html#ejercicios-para-practicar",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\n\nEscriba \\(A\\) y \\([A\\mid b]\\), con sus dimensiones, para cada sistema. Use el orden \\(x,y\\) o \\(x,y,z\\), según corresponda.\n\n\\(3x-y=7\\), \\(x+4y=2\\).\n\\(x+y+z=6\\), \\(2y-z=1\\), \\(x-z=0\\).\n\\(y=2x-3\\), \\(3x+2y=8\\).\n\nRecupere el sistema representado por cada matriz aumentada. Use \\(x,y,z\\) en el inciso a y \\(x,y\\) en el inciso b.\n\n\\(\\left[\\begin{array}{ccc|c}2&-1&3&0\\\\0&5&-2&7\\end{array}\\right]\\).\n\\(\\left[\\begin{array}{cc|c}1&0&4\\\\0&1&-2\\end{array}\\right]\\).\n\nPara una mezcla cerámica se usan paquetes completos P y Q, cada uno con dos polvos llamados alúmina y sílice. Las masas se suman sin pérdidas. La tabla muestra los gramos por paquete y las cantidades requeridas.\n\n\n\nMasa\nPaquete P\nPaquete Q\nCantidad requerida\n\n\n\n\nAlúmina\n\\(20\\) g\n\\(10\\) g\n\\(100\\) g\n\n\nSílice\n\\(10\\) g\n\\(20\\) g\n\\(80\\) g\n\n\nTotal\n\\(30\\) g\n\\(30\\) g\n\\(180\\) g\n\n\n\n\nDefina las variables y sus restricciones. Plantee las tres ecuaciones en el orden de la tabla y escriba su matriz aumentada.\nEjecute sucesivamente \\(R_3\\to R_3-R_1\\) y \\(R_3\\to R_3-R_2\\). Escriba la matriz final e interprete su tercer renglón. Verifique si \\((4,2)\\), en el orden P, Q, es admisible.\nSi la cantidad total requerida fuera \\(190\\) g, conservando los otros datos, ¿qué tercer renglón producirían las mismas operaciones? ¿Sería posible satisfacer las tres condiciones?\n\nUna probeta es una muestra preparada para un ensayo. Todas las de un mismo tipo tienen igual masa positiva. Se registran estas pesadas, sin incluir recipientes:\n\n\n\nPesada\nProbetas de tipo A\nProbetas de tipo B\nMasa total\n\n\n\n\nPrimera\n\\(0\\)\n\\(2\\)\n\\(40\\) g\n\n\nSegunda\n\\(1\\)\n\\(1\\)\n\\(50\\) g\n\n\n\n\nSean \\(x,y\\) las masas, en gramos, de una probeta A y B. Escriba el sistema y la matriz aumentada en el orden de la tabla.\nProponga un intercambio que coloque un pivote no nulo en la primera columna del primer renglón. Después multiplique el segundo renglón por \\(\\frac12\\) y escriba la matriz final.\nInterprete el segundo renglón final y compruebe si \\((30,20)\\) satisface las pesadas originales y las restricciones.\n\nUn estudiante parte de \\(\\left[\\begin{array}{cc|c}2&4&6\\\\1&3&4\\end{array}\\right]\\). Al aplicar \\(R_1\\to\\frac12R_1\\), escribe \\([1\\ \\ 2\\mid6]\\); después aplica \\(R_2\\to R_2-R_1\\), obtiene \\([0\\ \\ 1\\mid-2]\\) y propone \\((10,-2)\\). Identifique el error, escriba la matriz correcta tras las dos operaciones, determine la solución y compruebe en cuáles ecuaciones originales falla la propuesta.\nDecida cuáles de las siguientes expresiones pueden representarse directamente mediante una matriz aumentada de ecuaciones lineales en las incógnitas indicadas. Escríbala cuando corresponda; en los demás casos, explique el impedimento y dé el conjunto solución.\n\nLa inecuación \\(2x-3\\le7\\), en \\(x\\).\nLa ecuación cuadrática \\(x^2-5x+6=0\\), en \\(x\\).\nEl sistema \\(\\frac{x}{2}+\\frac{y}{3}=1\\), \\(x-y=0\\), en \\(x,y\\).\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a.\n\\[\nA=\\begin{bmatrix}3&-1\\\\1&4\\end{bmatrix},\n\\qquad\n[A\\mid b]=\\left[\\begin{array}{cc|c}3&-1&7\\\\1&4&2\\end{array}\\right].\n\\]\nDimensiones: \\(2\\times2\\) y \\(2\\times3\\).\n1. b.\n\\[\nA=\\begin{bmatrix}1&1&1\\\\0&2&-1\\\\1&0&-1\\end{bmatrix},\n\\qquad\n[A\\mid b]=\\left[\\begin{array}{ccc|c}1&1&1&6\\\\0&2&-1&1\\\\1&0&-1&0\\end{array}\\right].\n\\]\nDimensiones: \\(3\\times3\\) y \\(3\\times4\\).\n1. c.\n\\[\nA=\\begin{bmatrix}-2&1\\\\3&2\\end{bmatrix},\n\\qquad\n[A\\mid b]=\\left[\\begin{array}{cc|c}-2&1&-3\\\\3&2&8\\end{array}\\right].\n\\]\nDimensiones: \\(2\\times2\\) y \\(2\\times3\\).\n2. a. \\(2x-y+3z=0\\), \\(5y-2z=7\\).\n2. b. \\(x=4\\), \\(y=-2\\).\n3. a. \\(x\\): número de paquetes P; \\(y\\): número de paquetes Q; enteros no negativos. Sistema: \\(20x+10y=100\\), \\(10x+20y=80\\), \\(30x+30y=180\\).\n\\[\n[A\\mid b]=\\left[\\begin{array}{cc|c}20&10&100\\\\10&20&80\\\\30&30&180\\end{array}\\right].\n\\]\n3. b. Matriz final:\n\\[\n\\left[\\begin{array}{cc|c}20&10&100\\\\10&20&80\\\\0&0&0\\end{array}\\right].\n\\]\nEl tercer renglón no agrega una condición: la masa total repite la suma de las masas de los dos polvos. \\((4,2)\\) es admisible; produce \\(100\\) g de alúmina, \\(80\\) g de sílice y \\(180\\) g en total.\n3. c. \\([0\\ \\ 0\\mid10]\\). Sistema inconsistente; no se pueden satisfacer las tres cantidades requeridas.\n4. a. \\(2y=40\\), \\(x+y=50\\), con \\(x,y&gt;0\\).\n\\[\n[A\\mid b]=\\left[\\begin{array}{cc|c}0&2&40\\\\1&1&50\\end{array}\\right].\n\\]\n4. b. Intercambio \\(R_1\\leftrightarrow R_2\\); pivote \\(1\\). Matriz final:\n\\[\n\\left[\\begin{array}{cc|c}1&1&50\\\\0&1&20\\end{array}\\right].\n\\]\n4. c. Una probeta B pesa \\(20\\) g. La propuesta es admisible: \\(30\\) g por probeta A y \\(20\\) g por probeta B; reproduce las pesadas de \\(40\\) g y \\(50\\) g.\n5. No se dividió entre \\(2\\) el término independiente del primer renglón. Matriz correcta final:\n\\[\n\\left[\\begin{array}{cc|c}1&2&3\\\\0&1&1\\end{array}\\right].\n\\]\nSolución \\((1,1)\\). La propuesta \\((10,-2)\\) falla en la primera ecuación: su lado izquierdo vale \\(12\\), en lugar de \\(6\\); sí satisface la segunda.\n6. a. No: es una desigualdad. \\(S=(-\\infty,5]\\).\n6. b. No: contiene el término no lineal \\(x^2\\). \\(S=\\{2,3\\}\\).\n6. c. Sí:\n\\[\n\\left[\\begin{array}{cc|c}\\frac12&\\frac13&1\\\\1&-1&0\\end{array}\\right].\n\\]",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-09-23-sesion-29.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-09-23-sesion-29.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 29. Matriz aumentada y operaciones elementales de renglón",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nLa matriz aumentada conserva la información de las ecuaciones cuando se fija el orden de las incógnitas. Las operaciones elementales modifican su escritura mediante transformaciones reversibles. El trabajo realizado permite comprobar si puede:\n\nTraducir en ambos sentidos e identificar coeficientes, términos independientes y dimensiones, como en la Actividad 1 y los ejercicios 1–2.\nAplicar intercambios, multiplicaciones no nulas y sumas de renglones completos, justificando la equivalencia, como en las Actividades 1–2.\nElegir un pivote no nulo y producir ceros debajo de él, como en el Ejemplo 3, la Actividad 3 y el ejercicio 4.\nInterpretar una contradicción o un renglón nulo a partir del sistema completo y del contexto, como en la Actividad 3 y el ejercicio 3.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Sesión 29. Matriz aumentada y operaciones elementales de renglón</span>"
+    ]
+  },
+  {
     "objectID": "unidades/04-matrices.html",
     "href": "unidades/04-matrices.html",
     "title": "Unidad 4. Matrices",
@@ -2741,7 +2840,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2752,7 +2851,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -2763,7 +2862,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2774,7 +2873,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -2785,7 +2884,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2796,7 +2895,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -2807,7 +2906,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2818,7 +2917,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2829,7 +2928,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2840,7 +2939,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2851,7 +2950,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2862,7 +2961,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2873,7 +2972,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -2884,7 +2983,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2895,7 +2994,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -2906,7 +3005,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]

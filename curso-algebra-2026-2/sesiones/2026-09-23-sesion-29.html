@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Ecuaciones lineales en varias incógnitas, planteamiento de sistemas y comprobación de soluciones por sustitución.">
+<meta name="description" content="Representación de sistemas mediante matrices aumentadas, operaciones elementales equivalentes y comienzo del escalonamiento.">
 
-<title>Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones – Álgebra</title>
+<title>Sesión 29. Matriz aumentada y operaciones elementales de renglón – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-09-22-sesion-28.html" rel="next">
-<link href="../unidades/03-sistemas-ecuaciones.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../sesiones/2026-09-22-sesion-28.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones – Álgebra">
-<meta property="og:description" content="Ecuaciones lineales en varias incógnitas, planteamiento de sistemas y comprobación de soluciones por sustitución.">
+<meta property="og:title" content="Sesión 29. Matriz aumentada y operaciones elementales de renglón – Álgebra">
+<meta property="og:description" content="Representación de sistemas mediante matrices aumentadas, operaciones elementales equivalentes y comienzo del escalonamiento.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-21-sesion-27.html"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-23-sesion-29.html"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -373,7 +373,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -383,7 +383,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
+  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
   </div>
 </li>
       </ul>
@@ -468,17 +468,14 @@ window.Quarto = {
    
   <ul>
   <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
-  <li><a href="#ecuaciones-lineales-en-varias-incógnitas" id="toc-ecuaciones-lineales-en-varias-incógnitas" class="nav-link" data-scroll-target="#ecuaciones-lineales-en-varias-incógnitas">Ecuaciones lineales en varias incógnitas</a>
-  <ul class="collapse">
-  <li><a href="#solución-y-conjunto-solución-de-una-ecuación" id="toc-solución-y-conjunto-solución-de-una-ecuación" class="nav-link" data-scroll-target="#solución-y-conjunto-solución-de-una-ecuación">Solución y conjunto solución de una ecuación</a></li>
-  </ul></li>
-  <li><a href="#sistemas-de-ecuaciones-lineales" id="toc-sistemas-de-ecuaciones-lineales" class="nav-link" data-scroll-target="#sistemas-de-ecuaciones-lineales">Sistemas de ecuaciones lineales</a></li>
-  <li><a href="#procedimiento-de-planteamiento-y-verificación" id="toc-procedimiento-de-planteamiento-y-verificación" class="nav-link" data-scroll-target="#procedimiento-de-planteamiento-y-verificación">Procedimiento de planteamiento y verificación</a></li>
+  <li><a href="#matriz-de-coeficientes-y-matriz-aumentada" id="toc-matriz-de-coeficientes-y-matriz-aumentada" class="nav-link" data-scroll-target="#matriz-de-coeficientes-y-matriz-aumentada">Matriz de coeficientes y matriz aumentada</a></li>
+  <li><a href="#operaciones-elementales-de-renglón" id="toc-operaciones-elementales-de-renglón" class="nav-link" data-scroll-target="#operaciones-elementales-de-renglón">Operaciones elementales de renglón</a></li>
+  <li><a href="#pivote-y-comienzo-del-escalonamiento" id="toc-pivote-y-comienzo-del-escalonamiento" class="nav-link" data-scroll-target="#pivote-y-comienzo-del-escalonamiento">Pivote y comienzo del escalonamiento</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-reconocimiento-de-ecuaciones-lineales" id="toc-ejemplo-1.-reconocimiento-de-ecuaciones-lineales" class="nav-link" data-scroll-target="#ejemplo-1.-reconocimiento-de-ecuaciones-lineales">Ejemplo 1. Reconocimiento de ecuaciones lineales</a></li>
-  <li><a href="#ejemplo-2.-mezcla-de-dos-aleaciones" id="toc-ejemplo-2.-mezcla-de-dos-aleaciones" class="nav-link" data-scroll-target="#ejemplo-2.-mezcla-de-dos-aleaciones">Ejemplo 2. Mezcla de dos aleaciones</a></li>
-  <li><a href="#ejemplo-3.-verificación-de-una-terna" id="toc-ejemplo-3.-verificación-de-una-terna" class="nav-link" data-scroll-target="#ejemplo-3.-verificación-de-una-terna">Ejemplo 3. Verificación de una terna</a></li>
+  <li><a href="#ejemplo-1.-representación-de-una-mezcla" id="toc-ejemplo-1.-representación-de-una-mezcla" class="nav-link" data-scroll-target="#ejemplo-1.-representación-de-una-mezcla">Ejemplo 1. Representación de una mezcla</a></li>
+  <li><a href="#ejemplo-2.-escala-y-suma-de-renglones" id="toc-ejemplo-2.-escala-y-suma-de-renglones" class="nav-link" data-scroll-target="#ejemplo-2.-escala-y-suma-de-renglones">Ejemplo 2. Escala y suma de renglones</a></li>
+  <li><a href="#ejemplo-3.-ceros-debajo-del-primer-pivote" id="toc-ejemplo-3.-ceros-debajo-del-primer-pivote" class="nav-link" data-scroll-target="#ejemplo-3.-ceros-debajo-del-primer-pivote">Ejemplo 3. Ceros debajo del primer pivote</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -490,9 +487,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-21-sesion-27.html"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-23-sesion-29.html"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></h1>
 </div>
 
 
@@ -503,7 +500,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">21 de septiembre de 2026</p>
+      <p class="date">23 de septiembre de 2026</p>
     </div>
   </div>
   
@@ -517,197 +514,212 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá reconocer ecuaciones lineales, plantear un sistema a partir de datos sencillos y verificar si una pareja o terna es solución. Podrá comprobarlo al resolver sin ayuda los <a href="#actividad">ejercicios 1–3 de la Actividad</a>, definiendo las variables con sus unidades, justificando la clasificación y comprobando cada propuesta en todas las ecuaciones.</p>
+<p>Al finalizar la sesión podrá traducir entre un sistema lineal y su matriz aumentada, aplicar las tres operaciones elementales de renglón e iniciar la eliminación debajo de un pivote. Podrá comprobarlo en la <a href="#actividad">Actividad</a>, al conservar el orden de las incógnitas, operar también los términos independientes e interpretar las ecuaciones obtenidas.</p>
 </section>
-<section id="ecuaciones-lineales-en-varias-incógnitas" class="level2">
-<h2 class="anchored" data-anchor-id="ecuaciones-lineales-en-varias-incógnitas">Ecuaciones lineales en varias incógnitas</h2>
-<p>En la <a href="../sesiones/2026-08-14-sesion-05.html">Sesión 05</a> se trabajó con ecuaciones lineales en una incógnita. Cuando un problema relaciona varias cantidades desconocidas, se necesita una variable para cada una.</p>
-<p>Una <strong>ecuación lineal</strong> en las incógnitas <span class="math inline">\(x_1,x_2,\ldots,x_n\)</span> tiene, después de simplificar y reunir términos, la <strong>forma general</strong></p>
-<p><span class="math display">\[
-a_1x_1+a_2x_2+\cdots+a_nx_n=b,
-\]</span></p>
-<p>donde <span class="math inline">\(a_1,\ldots,a_n\)</span> y <span class="math inline">\(b\)</span> son números reales dados. Los números <span class="math inline">\(a_1,\ldots,a_n\)</span> son los <strong>coeficientes</strong> y <span class="math inline">\(b\)</span> es el <strong>término independiente</strong>. Con dos o tres incógnitas se acostumbra usar <span class="math inline">\(x,y\)</span> o <span class="math inline">\(x,y,z\)</span>.</p>
-<p>Los coeficientes pueden ser enteros, fracciones, decimales o <a href="../sesiones/2026-08-11-sesion-02.html">irracionales</a>. También pueden ser cero: considerada en las incógnitas <span class="math inline">\(x,y\)</span>, la ecuación <span class="math inline">\(x=3\)</span> se escribe <span class="math inline">\(x+0y=3\)</span>.</p>
-<p>Las ecuaciones <span class="math inline">\(x^2+y=1\)</span>, <span class="math inline">\(xy=6\)</span> y <span class="math inline">\(\frac{2}{x}+y=1\)</span> no son lineales: contienen, respectivamente, un cuadrado de una incógnita, un producto de incógnitas y una incógnita en el denominador. En la última se requiere <span class="math inline">\(x\ne0\)</span>. La clasificación se hace <strong>después de simplificar</strong>. Por ejemplo, <span class="math inline">\(x^2+x+y=x^2+1\)</span> equivale a <span class="math inline">\(x+y=1\)</span>, que sí es lineal.</p>
-<section id="solución-y-conjunto-solución-de-una-ecuación" class="level3">
-<h3 class="anchored" data-anchor-id="solución-y-conjunto-solución-de-una-ecuación">Solución y conjunto solución de una ecuación</h3>
-<p>Una <strong>solución</strong> de una ecuación en <span class="math inline">\(x,y\)</span> es una <strong>pareja ordenada</strong> <span class="math inline">\((x,y)\)</span> que hace verdadera la igualdad al sustituir sus componentes. En tres incógnitas se usa una <strong>terna</strong> <span class="math inline">\((x,y,z)\)</span>. El orden indica qué número corresponde a cada variable.</p>
-<p>Una pareja ordenada representa un <a href="../sesiones/2026-08-18-sesion-07.html">punto del plano</a>, como se trabajó con los números complejos. No debe confundirse con un <a href="../sesiones/2026-08-17-sesion-06.html">intervalo abierto</a>: aunque ambos usan paréntesis, su significado depende del contexto.</p>
-<p>El conjunto de todas las parejas ordenadas de números reales se denota <span class="math inline">\(\mathbb R^2\)</span>; el de todas las ternas ordenadas reales, <span class="math inline">\(\mathbb R^3\)</span>. El <strong>conjunto solución</strong> reúne todas las soluciones de la ecuación. Por ejemplo, para <span class="math inline">\(x+y=500\)</span> es</p>
-<p><span class="math display">\[
-S=\{(x,y)\in\mathbb R^2:\ x+y=500\}.
-\]</span></p>
-<p>Las parejas <span class="math inline">\((0,500)\)</span>, <span class="math inline">\((200,300)\)</span> y <span class="math inline">\((250,250)\)</span> pertenecen a <span class="math inline">\(S\)</span>. Esta ecuación tiene infinitas soluciones reales: al <a href="../sesiones/2026-08-14-sesion-05.html">despejar</a>, se obtiene <span class="math inline">\(y=500-x\)</span>, que proporciona una solución para cada valor real de <span class="math inline">\(x\)</span>.</p>
-<p>Si <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> representan masas, el contexto impone además <span class="math inline">\(x\ge0\)</span> y <span class="math inline">\(y\ge0\)</span>. La pareja <span class="math inline">\((600,-100)\)</span> satisface la ecuación, pero no representa masas admisibles. <strong>Cumplir la ecuación y cumplir las restricciones del problema son dos comprobaciones necesarias.</strong></p>
+<section id="matriz-de-coeficientes-y-matriz-aumentada" class="level2">
+<h2 class="anchored" data-anchor-id="matriz-de-coeficientes-y-matriz-aumentada">Matriz de coeficientes y matriz aumentada</h2>
+<p>La eliminación de la <a href="../sesiones/2026-09-22-sesion-28.html">Sesión 28</a> transforma los coeficientes y los términos independientes de las ecuaciones. Esos números pueden organizarse en un arreglo que mantenga una posición fija para cada incógnita.</p>
+<p>Una <strong>matriz</strong> es un arreglo rectangular de números. Sus <strong>renglones</strong>, también llamados filas, son horizontales; sus <strong>columnas</strong> son verticales. Si tiene <span class="math inline">\(m\)</span> renglones y <span class="math inline">\(n\)</span> columnas, sus <strong>dimensiones</strong> son <span class="math inline">\(m\times n\)</span>: primero se indica el número de renglones. Cada número es una <strong>entrada</strong>; <span class="math inline">\(a_{ij}\)</span> denota la entrada situada en el renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span>.</p>
+<p>Considere un sistema de <span class="math inline">\(m\)</span> ecuaciones lineales en <span class="math inline">\(n\)</span> incógnitas. Después de simplificar, se escribe cada ecuación en la <a href="../sesiones/2026-09-21-sesion-27.html">forma general</a>, con las incógnitas en el mismo orden y el término independiente al lado derecho.</p>
+<ul>
+<li>La <strong>matriz de coeficientes</strong> <span class="math inline">\(A\)</span> contiene los coeficientes de las incógnitas. Tiene dimensiones <span class="math inline">\(m\times n\)</span>.</li>
+<li>La <strong>columna de términos independientes</strong> <span class="math inline">\(b\)</span> contiene, en el mismo orden, los lados derechos de las ecuaciones.</li>
+<li>La <strong>matriz aumentada</strong> <span class="math inline">\([A\mid b]\)</span> añade esa columna a <span class="math inline">\(A\)</span> y tiene dimensiones <span class="math inline">\(m\times(n+1)\)</span>. La barra vertical separa los coeficientes de los términos independientes; no es una columna adicional.</li>
+</ul>
+<p>Cada renglón de la matriz aumentada representa una ecuación. Cada columna de <span class="math inline">\(A\)</span> corresponde a una incógnita, según el orden fijado. <strong>Cuando una incógnita no aparece, se escribe su coeficiente cero</strong>: en el orden <span class="math inline">\(x,y,z\)</span>, la ecuación <span class="math inline">\(x-3z=0\)</span> produce el renglón <span class="math inline">\([1\ \ 0\ \ {-3}\mid0]\)</span>.</p>
+<p>Para recuperar el sistema, se multiplica cada entrada de <span class="math inline">\(A\)</span> por la incógnita de su columna y se iguala la suma al término independiente. Por ejemplo, <span class="math inline">\([2\ \ 0\ \ {-1}\mid4]\)</span> se lee <span class="math inline">\(2x+0y-z=4\)</span>, o simplemente <span class="math inline">\(2x-z=4\)</span>. La matriz <span class="math inline">\(A\)</span> sola no especifica los términos independientes y, por ello, no determina el sistema completo.</p>
 </section>
-</section>
-<section id="sistemas-de-ecuaciones-lineales" class="level2">
-<h2 class="anchored" data-anchor-id="sistemas-de-ecuaciones-lineales">Sistemas de ecuaciones lineales</h2>
-<p>Un <strong>sistema de ecuaciones lineales</strong> es una colección de ecuaciones lineales en las mismas incógnitas que deben cumplirse <strong>simultáneamente</strong>. Un sistema de <span class="math inline">\(m\)</span> ecuaciones con <span class="math inline">\(n\)</span> incógnitas se llama sistema <span class="math inline">\(m\times n\)</span>. Por ejemplo,</p>
-<p><span class="math display">\[
-\left\{\begin{aligned}
-x+y&amp;=500\\
-0.80x+0.50y&amp;=310
-\end{aligned}\right.
-\]</span></p>
-<p>es un sistema <span class="math inline">\(2\times2\)</span>.</p>
-<p>Una <strong>solución del sistema</strong> es una pareja, terna o lista ordenada que satisface <strong>cada una</strong> de sus ecuaciones. Su <strong>conjunto solución</strong> contiene todas esas soluciones. Para dos ecuaciones, si sus conjuntos solución son <span class="math inline">\(S_1\)</span> y <span class="math inline">\(S_2\)</span>, el del sistema es</p>
-<p><span class="math display">\[
-S=S_1\cap S_2.
-\]</span></p>
-<p>La intersección expresa que una misma pareja debe pertenecer a ambos conjuntos. Si satisface una ecuación y falla en la otra, no es solución del sistema.</p>
-<p>En general, si <span class="math inline">\(S_1,\ldots,S_m\)</span> son los conjuntos solución de las <span class="math inline">\(m\)</span> ecuaciones, escritos con el mismo orden de incógnitas, entonces</p>
-<p><span class="math display">\[
-S=S_1\cap S_2\cap\cdots\cap S_m.
-\]</span></p>
-<p>Pertenecer a esta intersección significa satisfacer todas las ecuaciones.</p>
-<p><strong>Verificar una propuesta no equivale a determinar todo el conjunto solución.</strong> Una propuesta que falla queda descartada; eso no demuestra que el sistema carezca de soluciones. Una propuesta que funciona tampoco demuestra, por sí sola, que sea la única.</p>
-</section>
-<section id="procedimiento-de-planteamiento-y-verificación" class="level2">
-<h2 class="anchored" data-anchor-id="procedimiento-de-planteamiento-y-verificación">Procedimiento de planteamiento y verificación</h2>
-<ol type="1">
-<li><strong>Defina las variables.</strong> Indique qué representa cada una y en qué unidades se expresa.</li>
-<li><strong>Traduzca las condiciones.</strong> Escriba una ecuación por cada relación del enunciado y conserve el mismo significado y orden de las incógnitas.</li>
-<li><strong>Sustituya la propuesta.</strong> Reemplace cada incógnita por su componente y calcule ambos lados de cada ecuación, sin redondear, como en la <a href="../sesiones/2026-09-01-sesion-15.html">evaluación directa</a>. Una sola igualdad falsa basta para descartar la propuesta.</li>
-<li><strong>Concluya e interprete.</strong> La propuesta es solución del sistema si y solo si satisface todas sus ecuaciones. En un problema contextual, compruebe además las restricciones, como masas no negativas o cantidades enteras de piezas.</li>
-</ol>
-</section>
-<section id="ejemplos" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-reconocimiento-de-ecuaciones-lineales" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-reconocimiento-de-ecuaciones-lineales">Ejemplo 1. Reconocimiento de ecuaciones lineales</h3>
+<section id="operaciones-elementales-de-renglón" class="level2">
+<h2 class="anchored" data-anchor-id="operaciones-elementales-de-renglón">Operaciones elementales de renglón</h2>
+<p>Se escribe <span class="math inline">\(R_i\)</span> para referirse al renglón <span class="math inline">\(i\)</span>. Las tres <strong>operaciones elementales</strong> son:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 45%">
-<col style="width: 27%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Ecuación</th>
-<th style="text-align: center;">¿Lineal en <span class="math inline">\(x,y\)</span>?</th>
-<th>Razón o forma simplificada</th>
+<th>Operación</th>
+<th>Notación</th>
+<th>Condición</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(3(x-1)+2y=y-4\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(3x+y=-1\)</span></td>
+<td>Intercambiar dos renglones</td>
+<td><span class="math inline">\(R_i\leftrightarrow R_j\)</span></td>
+<td><span class="math inline">\(i\ne j\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\frac{x}{2}-\sqrt2\,y=5\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td>Coeficientes <span class="math inline">\(\frac12\)</span> y <span class="math inline">\(-\sqrt2\)</span>; término independiente <span class="math inline">\(5\)</span></td>
+<td>Multiplicar un renglón por un número</td>
+<td><span class="math inline">\(R_i\to cR_i\)</span></td>
+<td><span class="math inline">\(c\ne0\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(x^2+y=1\)</span></td>
-<td style="text-align: center;">No</td>
-<td>Término <span class="math inline">\(x^2\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(xy=6\)</span></td>
-<td style="text-align: center;">No</td>
-<td>Producto de incógnitas</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\frac{2}{x}+y=1\)</span></td>
-<td style="text-align: center;">No</td>
-<td>Incógnita en el denominador; <span class="math inline">\(x\ne0\)</span></td>
+<td>Sumar a un renglón un múltiplo de otro</td>
+<td><span class="math inline">\(R_i\to R_i+cR_j\)</span></td>
+<td><span class="math inline">\(i\ne j\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>En la primera ecuación se distribuye el <span class="math inline">\(3\)</span> y se reúnen los términos:</p>
-<p><span class="math display">\[
-3x-3+2y=y-4
-\quad\Longleftrightarrow\quad
-3x+y=-1.
-\]</span></p>
-<p>Las dos ecuaciones son <a href="../sesiones/2026-08-14-sesion-05.html">equivalentes</a>: tienen el mismo conjunto solución. Sus coeficientes son <span class="math inline">\(3\)</span> y <span class="math inline">\(1\)</span>, y su término independiente es <span class="math inline">\(-1\)</span>. En la segunda fila de la tabla, la raíz aparece en un <strong>coeficiente constante</strong>; no se está calculando la raíz de una incógnita.</p>
+<p>Los índices identifican renglones existentes y <span class="math inline">\(c\)</span> es un número real. En la tercera operación, <span class="math inline">\(c\)</span> puede ser cero, aunque entonces no se produce ningún cambio.</p>
+<p>La notación <span class="math inline">\(R_2\to R_2-8R_1\)</span> indica que el segundo renglón se reemplaza por el segundo menos ocho veces el primero. <strong>Se opera sobre todas sus entradas, incluido el término independiente.</strong> El renglón auxiliar <span class="math inline">\(R_1\)</span> se conserva.</p>
+<p>Estas operaciones producen <a href="../sesiones/2026-09-22-sesion-28.html">sistemas equivalentes</a>: sistemas con el mismo conjunto solución. Se justifican porque pueden deshacerse:</p>
+<ul>
+<li>Un intercambio se deshace repitiéndolo.</li>
+<li>Multiplicar por <span class="math inline">\(c\ne0\)</span> se deshace multiplicando por <span class="math inline">\(1/c\)</span>, como en las <a href="../sesiones/2026-08-14-sesion-05.html">ecuaciones equivalentes</a>.</li>
+<li>Sumar <span class="math inline">\(c\)</span> veces un renglón a otro se deshace restando ese mismo múltiplo del renglón conservado.</li>
+</ul>
+<p>Multiplicar un renglón por cero no es una operación elemental: reemplaza una ecuación por <span class="math inline">\(0=0\)</span> y puede perder información. Por ejemplo, transformar <span class="math inline">\(x=3\)</span> en <span class="math inline">\(0=0\)</span> permite cualquier valor de <span class="math inline">\(x\)</span>.</p>
+<p>Si se indican varias operaciones sucesivas, cada una usa la matriz resultante de la anterior. Verificar una solución conocida en el sistema nuevo ayuda a detectar errores, pero <strong>no basta para demostrar equivalencia</strong>: dos sistemas pueden compartir una solución y tener conjuntos solución distintos. La equivalencia se garantiza mediante las operaciones reversibles aplicadas correctamente.</p>
 </section>
-<section id="ejemplo-2.-mezcla-de-dos-aleaciones" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-mezcla-de-dos-aleaciones">Ejemplo 2. Mezcla de dos aleaciones</h3>
-<p>Una <strong>aleación</strong> combina dos o más elementos, al menos uno de ellos metálico. Se dispone de una aleación A con <span class="math inline">\(80\,\%\)</span> de cobre en masa y otra B con <span class="math inline">\(50\,\%\)</span>. Se desea obtener <span class="math inline">\(500\)</span> g con <span class="math inline">\(62\,\%\)</span> de cobre. Para este problema se supone que no hay pérdidas de material: las masas totales y las masas de cobre se suman. La masa de cobre de cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.</p>
-<p><strong>Variables:</strong> <span class="math inline">\(x\)</span> es la masa de A, en gramos, y <span class="math inline">\(y\)</span> la masa de B, en gramos; se exige <span class="math inline">\(x,y\ge0\)</span>.</p>
-<p>La condición de masa total es <span class="math inline">\(x+y=500\)</span>. La masa de cobre requerida es <span class="math inline">\(0.62(500)=310\)</span> g, y las porciones aportan <span class="math inline">\(0.80x\)</span> y <span class="math inline">\(0.50y\)</span> gramos. Por tanto, el sistema es</p>
+<section id="pivote-y-comienzo-del-escalonamiento" class="level2">
+<h2 class="anchored" data-anchor-id="pivote-y-comienzo-del-escalonamiento">Pivote y comienzo del escalonamiento</h2>
+<p>Un <strong>pivote de eliminación</strong> es una entrada no nula que se utiliza para anular otras entradas de su columna mediante operaciones elementales. Para comenzar el escalonamiento se elige el primer pivote y se obtienen ceros debajo de él:</p>
+<ol type="1">
+<li>Localice la primera columna de coeficientes que tenga alguna entrada no nula. Si la primera columna es nula, pase a la siguiente.</li>
+<li>Lleve una entrada no nula de esa columna al primer renglón mediante un intercambio, si hace falta.</li>
+<li>Conserve el renglón del pivote y sume múltiplos suyos a los renglones inferiores para anular las entradas que están debajo.</li>
+</ol>
+<p>Si el pivote vale <span class="math inline">\(p\ne0\)</span> y la entrada que se desea anular vale <span class="math inline">\(a\)</span>, se utiliza <span class="math inline">\(R_i\to R_i-\frac{a}{p}R_1\)</span>, porque <span class="math inline">\(a-\frac{a}{p}p=0\)</span>. No es necesario convertir el pivote en <span class="math inline">\(1\)</span> antes de eliminar. Al continuar hacia las columnas siguientes se trabaja con los renglones inferiores, conservando los ceros ya obtenidos.</p>
+<p>Si todas las columnas de coeficientes son nulas, no hay pivote de eliminación: las ecuaciones se leen directamente como igualdades entre constantes. En cualquier etapa deben reconocerse estos dos casos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Renglón aumentado</th>
+<th>Ecuación e interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\([0\ \cdots\ 0\mid c]\)</span>, con <span class="math inline">\(c\ne0\)</span></td>
+<td><span class="math inline">\(0=c\)</span>: contradicción; el sistema no tiene solución</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([0\ \cdots\ 0\mid0]\)</span></td>
+<td><span class="math inline">\(0=0\)</span>: no impone una condición; deben revisarse los demás renglones</td>
+</tr>
+</tbody>
+</table>
+<p>Un renglón nulo <strong>no determina por sí solo el número de soluciones</strong>.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-representación-de-una-mezcla" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-representación-de-una-mezcla">Ejemplo 1. Representación de una mezcla</h3>
+<p>Para preparar <span class="math inline">\(100\)</span> g de mezcla cerámica se usan tres polvos llamados alúmina, sílice y magnesia. Sus masas se suman sin pérdidas. La masa de alúmina es el triple de la de magnesia, y la de sílice es <span class="math inline">\(20\)</span> g menor que la suma de las otras dos.</p>
+<p>Sean <span class="math inline">\(x,y,z\)</span> sus masas en gramos, respectivamente, con <span class="math inline">\(x,y,z\ge0\)</span>. Las condiciones <span class="math inline">\(x+y+z=100\)</span>, <span class="math inline">\(x=3z\)</span> y <span class="math inline">\(y=x+z-20\)</span> se escriben como</p>
 <p><span class="math display">\[
 \left\{\begin{aligned}
-x+y&amp;=500\\
-0.80x+0.50y&amp;=310.
+x+y+z&amp;=100\\
+x-3z&amp;=0\\
+-x+y-z&amp;=-20.
 \end{aligned}\right.
 \]</span></p>
-<p><strong>Propuesta <span class="math inline">\((200,300)\)</span>.</strong> Se comprueban ambas ecuaciones:</p>
+<p>En el orden <span class="math inline">\(x,y,z\)</span>, las matrices son</p>
 <p><span class="math display">\[
-\begin{aligned}
-200+300&amp;=500,\\
-0.80(200)+0.50(300)&amp;=160+150=310.
-\end{aligned}
+A=\begin{bmatrix}
+1&amp;1&amp;1\\
+1&amp;0&amp;-3\\
+-1&amp;1&amp;-1
+\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}
+1&amp;1&amp;1&amp;100\\
+1&amp;0&amp;-3&amp;0\\
+-1&amp;1&amp;-1&amp;-20
+\end{array}\right].
 \]</span></p>
-<p>La pareja es solución y sus componentes son positivas: <span class="math inline">\(200\)</span> g de A y <span class="math inline">\(300\)</span> g de B producen los <span class="math inline">\(500\)</span> g solicitados, con <span class="math inline">\(310\)</span> g de cobre, es decir, <span class="math inline">\(62\,\%\)</span> en masa.</p>
-<p><strong>Propuesta <span class="math inline">\((250,250)\)</span>.</strong> Cumple <span class="math inline">\(250+250=500\)</span>, pero</p>
+<p><span class="math inline">\(A\)</span> es <span class="math inline">\(3\times3\)</span> y la matriz aumentada es <span class="math inline">\(3\times4\)</span>. La entrada <span class="math inline">\(a_{23}=-3\)</span> es el coeficiente de <span class="math inline">\(z\)</span> en la segunda ecuación; <span class="math inline">\(a_{22}=0\)</span> registra la ausencia de <span class="math inline">\(y\)</span>.</p>
+<figure style="margin: 1.5rem auto; max-width: 720px;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 720 260" role="img" aria-labelledby="s29-matriz-titulo s29-matriz-desc" style="display: block; width: 100%; height: auto;">
+<title id="s29-matriz-titulo">
+Del sistema a la matriz aumentada
+</title>
+<desc id="s29-matriz-desc">A la izquierda, el sistema x + y + z = 100, x − 3z = 0, −x + y − z = −20 con sus términos alineados por incógnita; a la derecha, su matriz aumentada de 3 renglones y 4 columnas: 1 1 1 | 100, 1 0 −3 | 0, −1 1 −1 | −20. Cada columna de la matriz está sombreada con el mismo color que la incógnita correspondiente del sistema; la columna de y del segundo renglón contiene el 0 de la incógnita ausente. La barra vertical separa los coeficientes de los términos independientes.</desc> <rect x="1" y="1" width="718" height="258" rx="12" fill="#f8fafc" stroke="#dbe4ee"></rect> <g font-family="system-ui, sans-serif" font-size="14" fill="#334155"> <text x="30" y="30" font-weight="650">Sistema (incógnitas en el orden x, y, z)</text> <text x="430" y="30" font-weight="650">Matriz aumentada [A | b]</text> </g> <rect x="52" y="70" width="62" height="135" rx="6" fill="#0f766e" fill-opacity="0.12"></rect> <rect x="122" y="70" width="62" height="135" rx="6" fill="#1d4ed8" fill-opacity="0.12"></rect> <rect x="192" y="70" width="62" height="135" rx="6" fill="#b45309" fill-opacity="0.12"></rect> <rect x="292" y="70" width="62" height="135" rx="6" fill="#64748b" fill-opacity="0.12"></rect> <g font-family="system-ui, sans-serif" font-size="18" fill="#334155"> <text x="60" y="95">x</text> <text x="130" y="95">+ y</text> <text x="200" y="95">+ z</text> <text x="262" y="95">=</text> <text x="300" y="95">100</text> <text x="60" y="140">x</text> <text x="200" y="140">− 3z</text> <text x="262" y="140">=</text> <text x="300" y="140">0</text> <text x="60" y="185">−x</text> <text x="130" y="185">+ y</text> <text x="200" y="185">− z</text> <text x="262" y="185">=</text> <text x="300" y="185">−20</text> </g> <rect x="124" y="120" width="56" height="28" rx="5" fill="none" stroke="#1d4ed8" stroke-dasharray="4 3"></rect> <text x="132" y="139" font-family="system-ui, sans-serif" font-size="12" fill="#1d4ed8" font-style="italic">falta y</text> <g stroke="#334155" stroke-width="2" fill="none"> <line x1="372" y1="140" x2="418" y2="140"></line> <polyline points="410,133 418,140 410,147"></polyline> <line x1="418" y1="150" x2="372" y2="150"></line> <polyline points="380,143 372,150 380,157"></polyline> </g> <rect x="446" y="70" width="52" height="135" rx="6" fill="#0f766e" fill-opacity="0.12"></rect> <rect x="504" y="70" width="52" height="135" rx="6" fill="#1d4ed8" fill-opacity="0.12"></rect> <rect x="562" y="70" width="52" height="135" rx="6" fill="#b45309" fill-opacity="0.12"></rect> <rect x="632" y="70" width="52" height="135" rx="6" fill="#64748b" fill-opacity="0.12"></rect> <g stroke="#334155" stroke-width="2.5" fill="none"> <polyline points="452,70 440,70 440,205 452,205"></polyline> <polyline points="678,70 690,70 690,205 678,205"></polyline> </g> <line x1="621" y1="72" x2="621" y2="203" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 4"></line> <g font-family="system-ui, sans-serif" font-size="18" fill="#334155" text-anchor="middle"> <text x="470" y="95">1</text> <text x="528" y="95">1</text> <text x="586" y="95">1</text> <text x="656" y="95">100</text> <text x="470" y="140">1</text> <text x="528" y="140" font-weight="700" fill="#1d4ed8">0</text> <text x="586" y="140">−3</text> <text x="656" y="140">0</text> <text x="470" y="185">−1</text> <text x="528" y="185">1</text> <text x="586" y="185">−1</text> <text x="656" y="185">−20</text> </g> <g font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" font-weight="650"> <text x="470" y="62" fill="#0f766e" font-style="italic">x</text> <text x="528" y="62" fill="#1d4ed8" font-style="italic">y</text> <text x="586" y="62" fill="#b45309" font-style="italic">z</text> <text x="656" y="62" fill="#64748b" font-style="italic">b</text> </g> <text x="30" y="236" font-family="system-ui, sans-serif" font-size="12" fill="#334155">Renglones: ecuaciones. Columnas de A: incógnitas. A es 3 × 3; la aumentada [A | b] es 3 × 4.</text>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">
+Traducir un sistema a su matriz aumentada: mismo orden de incógnitas en todas las ecuaciones y un 0 en el lugar de cada incógnita ausente.
+</figcaption>
+</figure>
+<p>La terna <span class="math inline">\((45,40,15)\)</span> cumple las condiciones: <span class="math inline">\(45+40+15=100\)</span>, <span class="math inline">\(45=3(15)\)</span> y <span class="math inline">\(40=45+15-20\)</span>. Las tres masas son positivas. Esta propuesta permitirá comprobar los sistemas transformados.</p>
+<p>En sentido contrario, la matriz aumentada</p>
 <p><span class="math display">\[
-0.80(250)+0.50(250)=200+125=325\ne310.
+\left[\begin{array}{ccc|c}
+2&amp;0&amp;-1&amp;4\\
+0&amp;3&amp;5&amp;-1
+\end{array}\right],
 \]</span></p>
-<p>No es solución del sistema. La masa total es correcta, pero la mezcla tendría <span class="math inline">\(65\,\%\)</span> de cobre en lugar de <span class="math inline">\(62\,\%\)</span>.</p>
+<p>con incógnitas <span class="math inline">\(x,y,z\)</span>, representa <span class="math inline">\(2x-z=4\)</span>, <span class="math inline">\(3y+5z=-1\)</span>. Es un sistema <span class="math inline">\(2\times3\)</span>, aunque su matriz aumentada tiene dimensiones <span class="math inline">\(2\times4\)</span>.</p>
 </section>
-<section id="ejemplo-3.-verificación-de-una-terna" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-verificación-de-una-terna">Ejemplo 3. Verificación de una terna</h3>
-<p>Considere el sistema <span class="math inline">\(3\times3\)</span></p>
+<section id="ejemplo-2.-escala-y-suma-de-renglones" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-escala-y-suma-de-renglones">Ejemplo 2. Escala y suma de renglones</h3>
+<p>Se retoma el sistema de la mezcla de aleaciones de la <a href="../sesiones/2026-09-22-sesion-28.html">Sesión 28</a>: <span class="math inline">\(x+y=500\)</span>, <span class="math inline">\(0.80x+0.50y=310\)</span>. Para anular el coeficiente de <span class="math inline">\(x\)</span> en el segundo renglón, primero se eliminan los decimales:</p>
 <p><span class="math display">\[
-\left\{\begin{aligned}
-x+y+z&amp;=2\\
-2x-y+z&amp;=7\\
-x+2y-3z&amp;=-12.
-\end{aligned}\right.
+\left[\begin{array}{cc|c}1&amp;1&amp;500\\0.80&amp;0.50&amp;310\end{array}\right]
+\xrightarrow{\ R_2\to10R_2\ }
+\left[\begin{array}{cc|c}1&amp;1&amp;500\\8&amp;5&amp;3\,100\end{array}\right].
 \]</span></p>
-<p>Para la propuesta <span class="math inline">\((1,-2,3)\)</span> se sustituye <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=-2\)</span> y <span class="math inline">\(z=3\)</span>:</p>
+<p>Después se resta ocho veces el primer renglón:</p>
 <p><span class="math display">\[
-\begin{aligned}
-1+(-2)+3&amp;=2,\\
-2(1)-(-2)+3&amp;=7,\\
-1+2(-2)-3(3)&amp;=1-4-9=-12.
-\end{aligned}
+\left[\begin{array}{cc|c}1&amp;1&amp;500\\8&amp;5&amp;3\,100\end{array}\right]
+\xrightarrow{\ R_2\to R_2-8R_1\ }
+\left[\begin{array}{cc|c}1&amp;1&amp;500\\0&amp;-3&amp;-900\end{array}\right].
 \]</span></p>
-<p>Las tres igualdades son verdaderas; la terna es solución. Los paréntesis ayudan a conservar los signos al sustituir un número negativo.</p>
-<p>En cambio, <span class="math inline">\((2,-3,3)\)</span> cumple la primera ecuación, pero en la segunda da <span class="math inline">\(2(2)-(-3)+3=10\ne7\)</span>. Esta sola falla basta para descartar la terna.</p>
+<p>El término independiente también cambia: <span class="math inline">\(3\,100-8(500)=-900\)</span>. El sistema resultante es <span class="math inline">\(x+y=500\)</span>, <span class="math inline">\(-3y=-900\)</span>, que da <span class="math inline">\(y=300\)</span> y <span class="math inline">\(x=200\)</span>. La pareja satisface las ecuaciones originales: <span class="math inline">\(200+300=500\)</span> y <span class="math inline">\(0.80(200)+0.50(300)=310\)</span>.</p>
+</section>
+<section id="ejemplo-3.-ceros-debajo-del-primer-pivote" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-ceros-debajo-del-primer-pivote">Ejemplo 3. Ceros debajo del primer pivote</h3>
+<p>En la matriz aumentada de la mezcla cerámica, la entrada <span class="math inline">\(a_{11}=1\)</span> sirve de pivote. Primero se aplica <span class="math inline">\(R_2\to R_2-R_1\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\1&amp;0&amp;-3&amp;0\\-1&amp;1&amp;-1&amp;-20\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\-1&amp;1&amp;-1&amp;-20\end{array}\right].
+\]</span></p>
+<p>Después se aplica <span class="math inline">\(R_3\to R_3+R_1\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\0&amp;2&amp;0&amp;80\end{array}\right].
+\]</span></p>
+<p>El sistema equivalente es <span class="math inline">\(x+y+z=100\)</span>, <span class="math inline">\(-y-4z=-100\)</span>, <span class="math inline">\(2y=80\)</span>. Las dos últimas ecuaciones ya no contienen <span class="math inline">\(x\)</span>. La terna <span class="math inline">\((45,40,15)\)</span> sigue siendo solución: sus lados izquierdos valen <span class="math inline">\(100\)</span>, <span class="math inline">\(-100\)</span> y <span class="math inline">\(80\)</span>, respectivamente.</p>
+<p>La primera columna está preparada, pero queda una entrada <span class="math inline">\(2\)</span> debajo de <span class="math inline">\(-1\)</span> en la segunda columna. Obtener ceros en una columna no significa haber terminado el escalonamiento.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Verificar una sola ecuación.</strong> En el ejemplo de aleaciones, <span class="math inline">\((250,250)\)</span> cumple la condición de masa total, pero aporta <span class="math inline">\(325\)</span> g de cobre en lugar de <span class="math inline">\(310\)</span> g. Una solución debe satisfacer ambas condiciones.</li>
-<li><strong>Confundir una propuesta incorrecta con la ausencia de soluciones.</strong> Que <span class="math inline">\((250,250)\)</span> falle no significa que el sistema no tenga solución: <span class="math inline">\((200,300)\)</span> sí satisface sus dos ecuaciones.</li>
-<li><strong>Confundir una solución con todo el conjunto solución.</strong> La pareja <span class="math inline">\((200,300)\)</span> satisface <span class="math inline">\(x+y=500\)</span>, pero no es la única: <span class="math inline">\((0,500)\)</span> y <span class="math inline">\((250,250)\)</span> también la satisfacen. Para describir todas, se necesita indicar la relación <span class="math inline">\(y=500-x\)</span> y los valores admitidos de <span class="math inline">\(x\)</span>.</li>
-<li><strong>Intercambiar las componentes.</strong> En <span class="math inline">\((200,300)\)</span>, la primera masa corresponde a A. Al invertirlas, <span class="math inline">\(0.80(300)+0.50(200)=340\ne310\)</span>; <span class="math inline">\((300,200)\)</span> no es solución.</li>
-<li><strong>Usar el porcentaje como si fuera una masa.</strong> La ecuación del cobre no es <span class="math inline">\(0.80x+0.50y=0.62\)</span>. El lado derecho debe expresar la masa de cobre requerida: <span class="math inline">\(0.62(500)=310\)</span> g.</li>
+<li><strong>Omitir un coeficiente cero.</strong> Para <span class="math inline">\(x-3z=0\)</span>, en el orden <span class="math inline">\(x,y,z\)</span>, se necesita <span class="math inline">\([1\ \ 0\ \ {-3}\mid0]\)</span>. El renglón <span class="math inline">\([1\ \ {-3}\mid0]\)</span> tiene una columna de coeficientes menos y no representa la ecuación con ese orden de tres incógnitas.</li>
+<li><strong>Cambiar el orden de las incógnitas.</strong> Para <span class="math inline">\(y+2x=7\)</span>, la fila de coeficientes en el orden <span class="math inline">\(x,y\)</span> es <span class="math inline">\([2\ \ 1]\)</span>, no <span class="math inline">\([1\ \ 2]\)</span>.</li>
+<li><strong>Dejar fijo el término independiente.</strong> Multiplicar por <span class="math inline">\(\frac12\)</span> el renglón <span class="math inline">\([2\ \ 4\mid6]\)</span> produce <span class="math inline">\([1\ \ 2\mid3]\)</span>, no <span class="math inline">\([1\ \ 2\mid6]\)</span>.</li>
+<li><strong>Usar cero como pivote.</strong> Si la entrada elegida es cero, no se puede dividir entre ella. Se busca una entrada no nula en esa columna y se intercambian renglones; si toda la columna es nula, se pasa a la siguiente.</li>
+<li><strong>Concluir que un renglón nulo implica infinitas soluciones.</strong> La matriz <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;0&amp;3\\0&amp;1&amp;2\\0&amp;0&amp;0\end{array}\right]\)</span> representa <span class="math inline">\(x=3\)</span>, <span class="math inline">\(y=2\)</span>, <span class="math inline">\(0=0\)</span>. Tiene solución única <span class="math inline">\((3,2)\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta y registre las sustituciones sin redondear.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Anote cada operación y actúe sobre el renglón completo.</p>
 <ol type="1">
-<li><p>Decida si cada ecuación es lineal en las incógnitas indicadas. Si lo es, escríbala en la forma general e identifique sus coeficientes y término independiente; si no lo es, señale qué lo impide.</p>
+<li><p>Traduzca entre ecuaciones y matrices.</p>
 <ol type="a">
-<li><p><span class="math inline">\(2(x+y)-3=x-y+1\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
-<li><p><span class="math inline">\(x^2-y=0\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
-<li><p><span class="math inline">\(\frac{x}{2}+\frac{y}{3}-z=1\)</span>, en <span class="math inline">\(x,y,z\)</span>.</p></li>
-<li><p><span class="math inline">\(\frac{3}{x}+y=2\)</span>, en <span class="math inline">\(x,y\)</span>, con <span class="math inline">\(x\ne0\)</span>.</p></li>
+<li><p>Escriba <span class="math inline">\(A\)</span> y <span class="math inline">\([A\mid b]\)</span> para <span class="math inline">\(2x-z=4\)</span>, <span class="math inline">\(-x+3y+2z=-1\)</span>, <span class="math inline">\(y-z=3\)</span>, en el orden <span class="math inline">\(x,y,z\)</span>. Indique sus dimensiones.</p></li>
+<li><p>Recupere el sistema representado por <span class="math inline">\(\left[\begin{array}{ccc|c}0&amp;4&amp;-1&amp;0\\1&amp;-2&amp;0&amp;5\end{array}\right]\)</span>, en el orden <span class="math inline">\(x,y,z\)</span>, e indique cuántas ecuaciones e incógnitas tiene.</p></li>
+<li><p>En la matriz del inciso b, intercambie <span class="math inline">\(R_1\)</span> y <span class="math inline">\(R_2\)</span>. Escriba la matriz resultante, identifique el primer pivote y explique por qué el intercambio conserva las soluciones.</p></li>
 </ol></li>
-<li><p>Un <strong>material compuesto</strong> combina componentes distintos; en este problema se prepara con fibra de vidrio y resina. Se requiere un lote de <span class="math inline">\(1\,200\)</span> kg cuya masa de fibra sea <span class="math inline">\(60\)</span> kg menor que el doble de la masa de resina. Suponga que las masas se suman sin pérdidas.</p>
+<li><p>Una <strong>aleación</strong> es una mezcla de elementos, al menos uno de ellos metálico. Se preparan <span class="math inline">\(360\)</span> g con aluminio, cobre y magnesio. La masa de aluminio es cinco veces la suma de las otras dos, y la de cobre es el doble de la de magnesio. Las masas se suman sin pérdidas y son no negativas.</p>
 <ol type="a">
-<li><p>Defina las variables con unidades, usando la primera para la fibra y la segunda para la resina, y plantee el sistema.</p></li>
-<li><p>Compruebe las propuestas <span class="math inline">\((780,420)\)</span> y <span class="math inline">\((800,400)\)</span> e indique cuál satisface ambas condiciones.</p></li>
-<li><p>Interprete la propuesta válida. ¿Que la ecuación <span class="math inline">\(x-2y=-60\)</span> tenga término independiente negativo significa que alguna masa debe ser negativa?</p></li>
+<li><p>Defina las variables con unidades, usando el orden aluminio, cobre, magnesio. Plantee las ecuaciones en el orden de las tres condiciones anteriores y escriba la matriz aumentada.</p></li>
+<li><p>Ejecute <span class="math inline">\(R_2\to R_2-R_1\)</span> y después <span class="math inline">\(R_2\to-\frac16R_2\)</span>. Escriba la matriz obtenida y el sistema que representa.</p></li>
+<li><p>Verifique <span class="math inline">\((300,40,20)\)</span> en ambos sistemas. Interprete el segundo renglón nuevo y explique qué garantiza la equivalencia de los sistemas.</p></li>
 </ol></li>
-<li><p>Para el sistema</p>
-<p><span class="math display">\[
-\left\{\begin{aligned}
-x+2y+z&amp;=1\\
-3x-y+2z&amp;=9\\
-x-y-z&amp;=2,
-\end{aligned}\right.
-\]</span></p>
-<p>decida si <span class="math inline">\((2,-1,1)\)</span> y <span class="math inline">\((1,1,-2)\)</span> son soluciones. Indique cuántas ecuaciones satisface cada terna y explique por qué satisfacer dos de las tres no basta.</p></li>
+<li><p>Escriba las matrices aumentadas de estos sistemas de la <a href="../sesiones/2026-09-22-sesion-28.html">Sesión 28</a>. En cada una, anule la entrada debajo del primer pivote y clasifique el sistema, considerando ambos renglones.</p>
+<ol type="a">
+<li><p><span class="math inline">\(x-3y=2\)</span>, <span class="math inline">\(-2x+6y=5\)</span>.</p></li>
+<li><p><span class="math inline">\(4x-6y=2\)</span>, <span class="math inline">\(-2x+3y=-1\)</span>.</p></li>
+</ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -721,40 +733,43 @@ x-y-z&amp;=2,
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> Lineal: <span class="math inline">\(2x+2y-3=x-y+1\)</span> equivale a <span class="math inline">\(x+3y=4\)</span>. Los coeficientes son <span class="math inline">\(1\)</span> y <span class="math inline">\(3\)</span>; el término independiente es <span class="math inline">\(4\)</span>.</p>
-<p><strong>1. b.</strong> No lineal: contiene <span class="math inline">\(x^2\)</span>.</p>
-<p><strong>1. c.</strong> Lineal, ya en la forma pedida. Los coeficientes son <span class="math inline">\(\frac12\)</span>, <span class="math inline">\(\frac13\)</span> y <span class="math inline">\(-1\)</span>; el término independiente es <span class="math inline">\(1\)</span>.</p>
-<p><strong>1. d.</strong> No lineal: la incógnita <span class="math inline">\(x\)</span> aparece en el denominador.</p>
-<p><strong>2. a.</strong> <span class="math inline">\(x\)</span>: masa de fibra, en kg; <span class="math inline">\(y\)</span>: masa de resina, en kg. Las restricciones son <span class="math inline">\(x,y\ge0\)</span>. Las relaciones son <span class="math inline">\(x+y=1\,200\)</span> y <span class="math inline">\(x=2y-60\)</span>, de donde</p>
+<p><strong>1. a.</strong> Las matrices son</p>
 <p><span class="math display">\[
-\left\{\begin{aligned}
-x+y&amp;=1\,200\\
-x-2y&amp;=-60.
-\end{aligned}\right.
+A=\begin{bmatrix}2&amp;0&amp;-1\\-1&amp;3&amp;2\\0&amp;1&amp;-1\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}2&amp;0&amp;-1&amp;4\\-1&amp;3&amp;2&amp;-1\\0&amp;1&amp;-1&amp;3\end{array}\right].
 \]</span></p>
-<p><strong>2. b.</strong> Para <span class="math inline">\((780,420)\)</span>:</p>
+<p>Sus dimensiones son <span class="math inline">\(3\times3\)</span> y <span class="math inline">\(3\times4\)</span>, respectivamente.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(4y-z=0\)</span>, <span class="math inline">\(x-2y=5\)</span>: dos ecuaciones y tres incógnitas.</p>
+<p><strong>1. c.</strong> Después de <span class="math inline">\(R_1\leftrightarrow R_2\)</span>:</p>
 <p><span class="math display">\[
-780+420=1\,200,\qquad 780-2(420)=-60.
+\left[\begin{array}{ccc|c}1&amp;-2&amp;0&amp;5\\0&amp;4&amp;-1&amp;0\end{array}\right].
 \]</span></p>
-<p>Cumple ambas ecuaciones. Para <span class="math inline">\((800,400)\)</span>, la suma también es <span class="math inline">\(1\,200\)</span>, pero <span class="math inline">\(800-2(400)=0\ne-60\)</span>. Solo la primera propuesta es solución.</p>
-<p><strong>2. c.</strong> Se necesitan <span class="math inline">\(780\)</span> kg de fibra y <span class="math inline">\(420\)</span> kg de resina. Las dos masas son positivas. El valor <span class="math inline">\(-60\)</span> expresa que la masa de fibra es menor que el doble de la de resina; no es la masa de un componente.</p>
-<p><strong>3.</strong> Para <span class="math inline">\((2,-1,1)\)</span>, los lados izquierdos son</p>
+<p>El primer pivote es <span class="math inline">\(1\)</span>, en el primer renglón y la primera columna. El intercambio solo cambia el orden de las ecuaciones; las mismas ternas satisfacen ambas.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x,y,z\)</span> son las masas de aluminio, cobre y magnesio, respectivamente, en gramos; <span class="math inline">\(x,y,z\ge0\)</span>. Las ecuaciones son <span class="math inline">\(x+y+z=360\)</span>, <span class="math inline">\(x-5y-5z=0\)</span>, <span class="math inline">\(y-2z=0\)</span>. Su matriz aumentada es</p>
 <p><span class="math display">\[
-\begin{aligned}
-2+2(-1)+1&amp;=1,\\
-3(2)-(-1)+2(1)&amp;=9,\\
-2-(-1)-1&amp;=2.
-\end{aligned}
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;360\\1&amp;-5&amp;-5&amp;0\\0&amp;1&amp;-2&amp;0\end{array}\right].
 \]</span></p>
-<p>Satisface las tres ecuaciones y es solución. Para <span class="math inline">\((1,1,-2)\)</span>:</p>
+<p><strong>2. b.</strong> La primera operación da el renglón <span class="math inline">\([0\ \ {-6}\ \ {-6}\mid-360]\)</span>; multiplicarlo por <span class="math inline">\(-\frac16\)</span> produce <span class="math inline">\([0\ \ 1\ \ 1\mid60]\)</span>. La matriz final es</p>
 <p><span class="math display">\[
-\begin{aligned}
-1+2(1)+(-2)&amp;=1,\\
-3(1)-1+2(-2)&amp;=-2\ne9,\\
-1-1-(-2)&amp;=2.
-\end{aligned}
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;360\\0&amp;1&amp;1&amp;60\\0&amp;1&amp;-2&amp;0\end{array}\right].
 \]</span></p>
-<p>Satisface la primera y la tercera, pero no la segunda. No es solución del sistema, pues las tres condiciones deben cumplirse simultáneamente.</p>
+<p>Representa <span class="math inline">\(x+y+z=360\)</span>, <span class="math inline">\(y+z=60\)</span>, <span class="math inline">\(y-2z=0\)</span>.</p>
+<p><strong>2. c.</strong> En el sistema original, <span class="math inline">\(300+40+20=360\)</span>, <span class="math inline">\(300-5(40)-5(20)=0\)</span> y <span class="math inline">\(40-2(20)=0\)</span>. En el nuevo, se conserva la primera y la tercera igualdad, y <span class="math inline">\(40+20=60\)</span>. Las masas son admisibles. El segundo renglón expresa que cobre y magnesio suman <span class="math inline">\(60\)</span> g. La equivalencia se garantiza por las operaciones elementales reversibles; verificar esta terna solo comprueba una solución compartida.</p>
+<p><strong>3. a.</strong> Se suma el doble del primer renglón al segundo:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;-3&amp;2\\-2&amp;6&amp;5\end{array}\right]
+\xrightarrow{\ R_2\to R_2+2R_1\ }
+\left[\begin{array}{cc|c}1&amp;-3&amp;2\\0&amp;0&amp;9\end{array}\right].
+\]</span></p>
+<p>La ecuación <span class="math inline">\(0=9\)</span> es imposible: sistema inconsistente.</p>
+<p><strong>3. b.</strong> Se suma la mitad del primer renglón al segundo:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}4&amp;-6&amp;2\\-2&amp;3&amp;-1\end{array}\right]
+\xrightarrow{\ R_2\to R_2+\frac12R_1\ }
+\left[\begin{array}{cc|c}4&amp;-6&amp;2\\0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>Solo queda <span class="math inline">\(4x-6y=2\)</span>: sistema consistente con infinitas soluciones, <span class="math inline">\(S=\{(x,(2x-1)/3):x\in\mathbb R\}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -762,57 +777,89 @@ x-2y&amp;=-60.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Decida si cada ecuación es lineal en las incógnitas que aparecen. Cuando lo sea, escríbala en la forma general.</p>
+<li><p>Escriba <span class="math inline">\(A\)</span> y <span class="math inline">\([A\mid b]\)</span>, con sus dimensiones, para cada sistema. Use el orden <span class="math inline">\(x,y\)</span> o <span class="math inline">\(x,y,z\)</span>, según corresponda.</p>
 <ol type="a">
-<li><p><span class="math inline">\(4x-7y+z=0\)</span>.</p></li>
-<li><p><span class="math inline">\(x(y+1)=3\)</span>.</p></li>
-<li><p><span class="math inline">\(\frac{x-1}{4}-\frac{y}{2}=\frac{y-x}{4}\)</span>.</p></li>
-<li><p><span class="math inline">\(x^2+2x-y=x^2+3\)</span>.</p></li>
+<li><p><span class="math inline">\(3x-y=7\)</span>, <span class="math inline">\(x+4y=2\)</span>.</p></li>
+<li><p><span class="math inline">\(x+y+z=6\)</span>, <span class="math inline">\(2y-z=1\)</span>, <span class="math inline">\(x-z=0\)</span>.</p></li>
+<li><p><span class="math inline">\(y=2x-3\)</span>, <span class="math inline">\(3x+2y=8\)</span>.</p></li>
 </ol></li>
-<li><p>Para preparar mezclas cerámicas se dispone de paquetes P y Q con dos tipos de polvo, llamados alúmina y sílice. La tabla indica la masa de cada polvo por paquete. Se utilizan paquetes completos y las masas se suman sin pérdidas.</p>
+<li><p>Recupere el sistema representado por cada matriz aumentada. Use <span class="math inline">\(x,y,z\)</span> en el inciso a y <span class="math inline">\(x,y\)</span> en el inciso b.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\left[\begin{array}{ccc|c}2&amp;-1&amp;3&amp;0\\0&amp;5&amp;-2&amp;7\end{array}\right]\)</span>.</p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{cc|c}1&amp;0&amp;4\\0&amp;1&amp;-2\end{array}\right]\)</span>.</p></li>
+</ol></li>
+<li><p>Para una mezcla cerámica se usan paquetes completos P y Q, cada uno con dos polvos llamados alúmina y sílice. Las masas se suman sin pérdidas. La tabla muestra los gramos por paquete y las cantidades requeridas.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Polvo</th>
+<th>Masa</th>
 <th style="text-align: right;">Paquete P</th>
 <th style="text-align: right;">Paquete Q</th>
+<th style="text-align: right;">Cantidad requerida</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Alúmina</td>
-<td style="text-align: right;"><span class="math inline">\(30\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(20\)</span> g</td>
 <td style="text-align: right;"><span class="math inline">\(10\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(100\)</span> g</td>
 </tr>
 <tr class="even">
 <td>Sílice</td>
+<td style="text-align: right;"><span class="math inline">\(10\)</span> g</td>
 <td style="text-align: right;"><span class="math inline">\(20\)</span> g</td>
-<td style="text-align: right;"><span class="math inline">\(40\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(80\)</span> g</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td style="text-align: right;"><span class="math inline">\(30\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(30\)</span> g</td>
+<td style="text-align: right;"><span class="math inline">\(180\)</span> g</td>
 </tr>
 </tbody>
 </table>
-<p>Se requieren <span class="math inline">\(110\)</span> g de alúmina y <span class="math inline">\(140\)</span> g de sílice.</p>
 <ol type="a">
-<li><p>Defina las variables, indique qué valores admiten y plantee un sistema con las dos condiciones.</p></li>
-<li><p>Con el número de paquetes P como primera componente, compruebe las propuestas <span class="math inline">\((3,2)\)</span> y <span class="math inline">\((2,3)\)</span>.</p></li>
-<li><p>Interprete la propuesta válida. ¿Sus componentes representan gramos o cantidades de paquetes?</p></li>
+<li><p>Defina las variables y sus restricciones. Plantee las tres ecuaciones en el orden de la tabla y escriba su matriz aumentada.</p></li>
+<li><p>Ejecute sucesivamente <span class="math inline">\(R_3\to R_3-R_1\)</span> y <span class="math inline">\(R_3\to R_3-R_2\)</span>. Escriba la matriz final e interprete su tercer renglón. Verifique si <span class="math inline">\((4,2)\)</span>, en el orden P, Q, es admisible.</p></li>
+<li><p>Si la cantidad total requerida fuera <span class="math inline">\(190\)</span> g, conservando los otros datos, ¿qué tercer renglón producirían las mismas operaciones? ¿Sería posible satisfacer las tres condiciones?</p></li>
 </ol></li>
-<li><p>Una <strong>probeta</strong> es una muestra preparada para realizar un ensayo. Una probeta rectangular debe tener perímetro <span class="math inline">\(70\)</span> cm y área <span class="math inline">\(300\ \mathrm{cm}^2\)</span>. Si sus lados miden <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> centímetros, con <span class="math inline">\(x,y&gt;0\)</span>, use las fórmulas de perímetro <span class="math inline">\(2x+2y\)</span> y área <span class="math inline">\(xy\)</span>.</p>
+<li><p>Una <strong>probeta</strong> es una muestra preparada para un ensayo. Todas las de un mismo tipo tienen igual masa positiva. Se registran estas pesadas, sin incluir recipientes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pesada</th>
+<th style="text-align: right;">Probetas de tipo A</th>
+<th style="text-align: right;">Probetas de tipo B</th>
+<th style="text-align: right;">Masa total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primera</td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(40\)</span> g</td>
+</tr>
+<tr class="even">
+<td>Segunda</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(50\)</span> g</td>
+</tr>
+</tbody>
+</table>
 <ol type="a">
-<li><p>Escriba el sistema y decida si es lineal, indicando la razón.</p></li>
-<li><p>Verifique si <span class="math inline">\((20,15)\)</span> y <span class="math inline">\((25,10)\)</span> satisfacen las dos condiciones.</p></li>
-<li><p>Indique cuál propuesta es admisible y exprese las dimensiones con sus unidades.</p></li>
+<li><p>Sean <span class="math inline">\(x,y\)</span> las masas, en gramos, de una probeta A y B. Escriba el sistema y la matriz aumentada en el orden de la tabla.</p></li>
+<li><p>Proponga un intercambio que coloque un pivote no nulo en la primera columna del primer renglón. Después multiplique el segundo renglón por <span class="math inline">\(\frac12\)</span> y escriba la matriz final.</p></li>
+<li><p>Interprete el segundo renglón final y compruebe si <span class="math inline">\((30,20)\)</span> satisface las pesadas originales y las restricciones.</p></li>
 </ol></li>
-<li><p>Una <strong>disolución salina</strong> es una mezcla homogénea de sal y agua. Se dispone de una disolución A con <span class="math inline">\(4\,\%\)</span> de sal en masa y otra B con <span class="math inline">\(12\,\%\)</span>. Se requieren <span class="math inline">\(400\)</span> g con <span class="math inline">\(10\,\%\)</span> de sal. Suponga que no hay pérdidas y que las masas se suman. La masa de sal se obtiene multiplicando la masa de disolución por el porcentaje expresado como fracción.</p>
+<li><p>Un estudiante parte de <span class="math inline">\(\left[\begin{array}{cc|c}2&amp;4&amp;6\\1&amp;3&amp;4\end{array}\right]\)</span>. Al aplicar <span class="math inline">\(R_1\to\frac12R_1\)</span>, escribe <span class="math inline">\([1\ \ 2\mid6]\)</span>; después aplica <span class="math inline">\(R_2\to R_2-R_1\)</span>, obtiene <span class="math inline">\([0\ \ 1\mid-2]\)</span> y propone <span class="math inline">\((10,-2)\)</span>. Identifique el error, escriba la matriz correcta tras las dos operaciones, determine la solución y compruebe en cuáles ecuaciones originales falla la propuesta.</p></li>
+<li><p>Decida cuáles de las siguientes expresiones pueden representarse directamente mediante una matriz aumentada de ecuaciones lineales en las incógnitas indicadas. Escríbala cuando corresponda; en los demás casos, explique el impedimento y dé el conjunto solución.</p>
 <ol type="a">
-<li><p>Defina las variables con unidades y restricciones, usando la primera para A y la segunda para B, y plantee el sistema.</p></li>
-<li><p>Un estudiante afirma que <span class="math inline">\((200,200)\)</span> es solución porque <span class="math inline">\(200+200=400\)</span>. Compruebe la masa de sal e indique si su conclusión es correcta y si su justificación es suficiente.</p></li>
-<li><p>Verifique la propuesta <span class="math inline">\((100,300)\)</span> e interprétela con sus unidades.</p></li>
-</ol></li>
-<li><p>Considere las ecuaciones <span class="math inline">\(2x-y=4\)</span> y <span class="math inline">\(x+y=5\)</span>.</p>
-<ol type="a">
-<li><p>Escriba tres soluciones distintas de <span class="math inline">\(2x-y=4\)</span> y describa su conjunto solución <span class="math inline">\(S_1\)</span> por comprensión. ¿Basta elegir una pareja para describir todas las soluciones? Justifique.</p></li>
-<li><p>Compruebe cuáles de sus tres parejas satisfacen también <span class="math inline">\(x+y=5\)</span>. Si <span class="math inline">\(S_2\)</span> es el conjunto solución de esta segunda ecuación, explique qué representa <span class="math inline">\(S_1\cap S_2\)</span>.</p></li>
+<li><p>La <a href="../sesiones/2026-08-17-sesion-06.html">inecuación</a> <span class="math inline">\(2x-3\le7\)</span>, en <span class="math inline">\(x\)</span>.</p></li>
+<li><p>La <a href="../sesiones/2026-09-02-sesion-16.html">ecuación cuadrática</a> <span class="math inline">\(x^2-5x+6=0\)</span>, en <span class="math inline">\(x\)</span>.</p></li>
+<li><p>El sistema <span class="math inline">\(\frac{x}{2}+\frac{y}{3}=1\)</span>, <span class="math inline">\(x-y=0\)</span>, en <span class="math inline">\(x,y\)</span>.</p></li>
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
@@ -827,33 +874,71 @@ x-2y&amp;=-60.
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> Lineal: <span class="math inline">\(4x-7y+z=0\)</span>.</p>
-<p><strong>1. b.</strong> No lineal: contiene el producto <span class="math inline">\(xy\)</span>.</p>
-<p><strong>1. c.</strong> Lineal: <span class="math inline">\(2x-3y=1\)</span>.</p>
-<p><strong>1. d.</strong> Lineal: <span class="math inline">\(2x-y=3\)</span>.</p>
-<p><strong>2. a.</strong> <span class="math inline">\(x\)</span>: número de paquetes P; <span class="math inline">\(y\)</span>: número de paquetes Q. Ambos son enteros no negativos. El sistema es <span class="math inline">\(30x+10y=110\)</span>, <span class="math inline">\(20x+40y=140\)</span>.</p>
-<p><strong>2. b.</strong> <span class="math inline">\((3,2)\)</span> satisface ambas ecuaciones; <span class="math inline">\((2,3)\)</span> no satisface ninguna.</p>
-<p><strong>2. c.</strong> Tres paquetes P y dos paquetes Q. Las componentes son cantidades de paquetes, no gramos.</p>
-<p><strong>3. a.</strong> <span class="math inline">\(2x+2y=70\)</span>, <span class="math inline">\(xy=300\)</span>, con <span class="math inline">\(x,y&gt;0\)</span>. No es un sistema lineal por el producto <span class="math inline">\(xy\)</span>.</p>
-<p><strong>3. b.</strong> <span class="math inline">\((20,15)\)</span> satisface ambas condiciones. <span class="math inline">\((25,10)\)</span> satisface la de perímetro, pero su área es <span class="math inline">\(250\ \mathrm{cm}^2\)</span>.</p>
-<p><strong>3. c.</strong> La propuesta admisible es <span class="math inline">\((20,15)\)</span>: lados de <span class="math inline">\(20\)</span> cm y <span class="math inline">\(15\)</span> cm.</p>
-<p><strong>4. a.</strong> <span class="math inline">\(x\)</span>: masa de A, en g; <span class="math inline">\(y\)</span>: masa de B, en g, con <span class="math inline">\(x,y\ge0\)</span>. El sistema es <span class="math inline">\(x+y=400\)</span>, <span class="math inline">\(0.04x+0.12y=40\)</span>.</p>
-<p><strong>4. b.</strong> La propuesta tiene <span class="math inline">\(400\)</span> g de masa total, pero solo <span class="math inline">\(32\)</span> g de sal frente a los <span class="math inline">\(40\)</span> g requeridos. La conclusión es falsa y la justificación es insuficiente.</p>
-<p><strong>4. c.</strong> <span class="math inline">\((100,300)\)</span> satisface ambas condiciones: <span class="math inline">\(100\)</span> g de A y <span class="math inline">\(300\)</span> g de B producen <span class="math inline">\(400\)</span> g de disolución con <span class="math inline">\(40\)</span> g de sal, es decir, <span class="math inline">\(10\,\%\)</span> en masa.</p>
-<p><strong>5. a.</strong> Una respuesta posible es <span class="math inline">\((0,-4)\)</span>, <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((3,2)\)</span>. El conjunto solución es <span class="math inline">\(S_1=\{(x,y)\in\mathbb R^2:\ 2x-y=4\}\)</span>. Una pareja no lo describe: hay infinitas soluciones, una por cada elección real de <span class="math inline">\(x\)</span>, con <span class="math inline">\(y=2x-4\)</span>.</p>
-<p><strong>5. b.</strong> De las tres parejas anteriores, solo <span class="math inline">\((3,2)\)</span> satisface <span class="math inline">\(x+y=5\)</span>. La intersección <span class="math inline">\(S_1\cap S_2\)</span> reúne las parejas que satisfacen ambas ecuaciones: es el conjunto solución del sistema.</p>
+<p><strong>1. a.</strong></p>
+<p><span class="math display">\[
+A=\begin{bmatrix}3&amp;-1\\1&amp;4\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{cc|c}3&amp;-1&amp;7\\1&amp;4&amp;2\end{array}\right].
+\]</span></p>
+<p>Dimensiones: <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(2\times3\)</span>.</p>
+<p><strong>1. b.</strong></p>
+<p><span class="math display">\[
+A=\begin{bmatrix}1&amp;1&amp;1\\0&amp;2&amp;-1\\1&amp;0&amp;-1\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;6\\0&amp;2&amp;-1&amp;1\\1&amp;0&amp;-1&amp;0\end{array}\right].
+\]</span></p>
+<p>Dimensiones: <span class="math inline">\(3\times3\)</span> y <span class="math inline">\(3\times4\)</span>.</p>
+<p><strong>1. c.</strong></p>
+<p><span class="math display">\[
+A=\begin{bmatrix}-2&amp;1\\3&amp;2\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{cc|c}-2&amp;1&amp;-3\\3&amp;2&amp;8\end{array}\right].
+\]</span></p>
+<p>Dimensiones: <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(2\times3\)</span>.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(2x-y+3z=0\)</span>, <span class="math inline">\(5y-2z=7\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(x=4\)</span>, <span class="math inline">\(y=-2\)</span>.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(x\)</span>: número de paquetes P; <span class="math inline">\(y\)</span>: número de paquetes Q; enteros no negativos. Sistema: <span class="math inline">\(20x+10y=100\)</span>, <span class="math inline">\(10x+20y=80\)</span>, <span class="math inline">\(30x+30y=180\)</span>.</p>
+<p><span class="math display">\[
+[A\mid b]=\left[\begin{array}{cc|c}20&amp;10&amp;100\\10&amp;20&amp;80\\30&amp;30&amp;180\end{array}\right].
+\]</span></p>
+<p><strong>3. b.</strong> Matriz final:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}20&amp;10&amp;100\\10&amp;20&amp;80\\0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>El tercer renglón no agrega una condición: la masa total repite la suma de las masas de los dos polvos. <span class="math inline">\((4,2)\)</span> es admisible; produce <span class="math inline">\(100\)</span> g de alúmina, <span class="math inline">\(80\)</span> g de sílice y <span class="math inline">\(180\)</span> g en total.</p>
+<p><strong>3. c.</strong> <span class="math inline">\([0\ \ 0\mid10]\)</span>. Sistema inconsistente; no se pueden satisfacer las tres cantidades requeridas.</p>
+<p><strong>4. a.</strong> <span class="math inline">\(2y=40\)</span>, <span class="math inline">\(x+y=50\)</span>, con <span class="math inline">\(x,y&gt;0\)</span>.</p>
+<p><span class="math display">\[
+[A\mid b]=\left[\begin{array}{cc|c}0&amp;2&amp;40\\1&amp;1&amp;50\end{array}\right].
+\]</span></p>
+<p><strong>4. b.</strong> Intercambio <span class="math inline">\(R_1\leftrightarrow R_2\)</span>; pivote <span class="math inline">\(1\)</span>. Matriz final:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;1&amp;50\\0&amp;1&amp;20\end{array}\right].
+\]</span></p>
+<p><strong>4. c.</strong> Una probeta B pesa <span class="math inline">\(20\)</span> g. La propuesta es admisible: <span class="math inline">\(30\)</span> g por probeta A y <span class="math inline">\(20\)</span> g por probeta B; reproduce las pesadas de <span class="math inline">\(40\)</span> g y <span class="math inline">\(50\)</span> g.</p>
+<p><strong>5.</strong> No se dividió entre <span class="math inline">\(2\)</span> el término independiente del primer renglón. Matriz correcta final:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;2&amp;3\\0&amp;1&amp;1\end{array}\right].
+\]</span></p>
+<p>Solución <span class="math inline">\((1,1)\)</span>. La propuesta <span class="math inline">\((10,-2)\)</span> falla en la primera ecuación: su lado izquierdo vale <span class="math inline">\(12\)</span>, en lugar de <span class="math inline">\(6\)</span>; sí satisface la segunda.</p>
+<p><strong>6. a.</strong> No: es una desigualdad. <span class="math inline">\(S=(-\infty,5]\)</span>.</p>
+<p><strong>6. b.</strong> No: contiene el término no lineal <span class="math inline">\(x^2\)</span>. <span class="math inline">\(S=\{2,3\}\)</span>.</p>
+<p><strong>6. c.</strong> Sí:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}\frac12&amp;\frac13&amp;1\\1&amp;-1&amp;0\end{array}\right].
+\]</span></p>
 </div>
 </div>
 </div>
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>El planteamiento traduce las condiciones de un problema a ecuaciones; la verificación comprueba si una propuesta las satisface simultáneamente. El trabajo realizado permite revisar estas capacidades:</p>
+<p>La matriz aumentada conserva la información de las ecuaciones cuando se fija el orden de las incógnitas. Las operaciones elementales modifican su escritura mediante transformaciones reversibles. El trabajo realizado permite comprobar si puede:</p>
 <ul>
-<li>Reconocer una ecuación lineal después de simplificar e identificar sus coeficientes y término independiente, como en la Actividad 1 y el ejercicio 1 de práctica.</li>
-<li>Traducir condiciones a un sistema e interpretar las variables con sus unidades y restricciones, como en la Actividad 2 y los ejercicios 2–4 de práctica.</li>
-<li>Verificar una pareja o terna en todas las ecuaciones y distinguir una propuesta incorrecta de la ausencia de soluciones, como en la Actividad 3 y el ejercicio 4 de práctica.</li>
-<li>Distinguir una solución de todo el conjunto solución y explicar la intersección de conjuntos solución, como en el ejercicio 5 de práctica.</li>
+<li>Traducir en ambos sentidos e identificar coeficientes, términos independientes y dimensiones, como en la Actividad 1 y los ejercicios 1–2.</li>
+<li>Aplicar intercambios, multiplicaciones no nulas y sumas de renglones completos, justificando la equivalencia, como en las Actividades 1–2.</li>
+<li>Elegir un pivote no nulo y producir ceros debajo de él, como en el Ejemplo 3, la Actividad 3 y el ejercicio 4.</li>
+<li>Interpretar una contradicción o un renglón nulo a partir del sistema completo y del contexto, como en la Actividad 3 y el ejercicio 3.</li>
 </ul>
 
 
@@ -1269,13 +1354,13 @@ x-2y&amp;=-60.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/03-sistemas-ecuaciones.html" class="pagination-link" aria-label="Unidad 3. Sistemas de ecuaciones lineales">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></span>
+      <a href="../sesiones/2026-09-22-sesion-28.html" class="pagination-link" aria-label="Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-09-22-sesion-28.html" class="pagination-link" aria-label="Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
