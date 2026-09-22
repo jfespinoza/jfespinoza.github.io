@@ -512,16 +512,16 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, e interpretar sus soluciones como puntos comunes de dos rectas. Podrá comprobarlo al justificar los tres casos de la Actividad 1 y explicar qué información proporcionan las condiciones del problema de la Actividad 2.</p>
+<p>Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, interpretar sus soluciones como puntos comunes de dos rectas y describir todas las soluciones cuando las rectas coinciden. Podrá comprobarlo al justificar los tres casos de la <a href="#actividad">Actividad 1</a> y explicar qué información proporcionan las condiciones del problema de la Actividad 2.</p>
 </section>
 <section id="sistemas-equivalentes-y-métodos-de-resolución" class="level2">
 <h2 class="anchored" data-anchor-id="sistemas-equivalentes-y-métodos-de-resolución">Sistemas equivalentes y métodos de resolución</h2>
-<p>En la <a href="../sesiones/2026-09-21-sesion-27.html">Sesión 27</a> se verificaron soluciones propuestas. <strong>Resolver un sistema</strong> significa determinar todas sus soluciones. Dos sistemas son <strong>equivalentes</strong> cuando tienen el mismo conjunto solución; transformar uno en otro equivalente permite resolver sin perder ni agregar soluciones.</p>
+<p>En la <a href="../sesiones/2026-09-21-sesion-27.html">Sesión 27</a> se verificaron soluciones propuestas. <strong>Resolver un sistema</strong> significa determinar todas sus soluciones. Dos sistemas con las mismas incógnitas son <strong>equivalentes</strong> cuando tienen el mismo conjunto solución, como ocurre con las <a href="../sesiones/2026-08-14-sesion-05.html">ecuaciones equivalentes</a> en una incógnita. Transformar un sistema en otro equivalente permite resolver sin perder ni agregar soluciones.</p>
 <p>Trabajaremos con ecuaciones <span class="math inline">\(ax+by=c\)</span>, con coeficientes reales y con <span class="math inline">\(a,b\)</span> no ambos cero. Esta condición permite despejar al menos una incógnita y garantiza que la ecuación representa una recta.</p>
 <section id="método-de-sustitución" class="level3">
 <h3 class="anchored" data-anchor-id="método-de-sustitución">Método de sustitución</h3>
 <ol type="1">
-<li>Despeje una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.</li>
+<li><a href="../sesiones/2026-08-14-sesion-05.html">Despeje</a> una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.</li>
 <li>Sustituya esa expresión en la otra ecuación y simplifique.</li>
 <li>Si obtiene un valor para la incógnita restante, recupere la despejada y verifique la pareja en ambas ecuaciones originales. Si obtiene una igualdad sin incógnitas, decida si es verdadera o falsa.</li>
 </ol>
@@ -570,12 +570,12 @@ window.Quarto = {
 </tbody>
 </table>
 <p>En el último caso, no todas las parejas son soluciones: deben satisfacer la ecuación conservada.</p>
-<p>La gráfica de <span class="math inline">\(ax+by=c\)</span>, con <span class="math inline">\(a,b\)</span> no ambos cero, es una recta. Si <span class="math inline">\(b\ne0\)</span>, se puede escribir</p>
+<p>La gráfica de <span class="math inline">\(ax+by=c\)</span>, con <span class="math inline">\(a,b\)</span> no ambos cero, es el conjunto de los <a href="../sesiones/2026-08-18-sesion-07.html">puntos del plano</a> <span class="math inline">\((x,y)\)</span> cuyas coordenadas satisfacen la ecuación, y es una recta. Si <span class="math inline">\(b\ne0\)</span>, se puede escribir</p>
 <p><span class="math display">\[
 y=-\frac{a}{b}x+\frac{c}{b},
 \]</span></p>
-<p>donde <span class="math inline">\(-a/b\)</span> es la <strong>pendiente</strong>. Si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(a\ne0\)</span> y la recta es vertical: <span class="math inline">\(x=c/a\)</span>.</p>
-<p>Las soluciones del sistema son los puntos comunes de las dos rectas:</p>
+<p>donde <span class="math inline">\(-a/b\)</span> es la <strong>pendiente</strong> y <span class="math inline">\(c/b\)</span> es la <strong>ordenada al origen</strong>, el valor de <span class="math inline">\(y\)</span> donde la recta corta al eje vertical. Si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(a\ne0\)</span> y la recta es vertical: <span class="math inline">\(x=c/a\)</span>.</p>
+<p>Si <span class="math inline">\(S_1\)</span> y <span class="math inline">\(S_2\)</span> son los conjuntos solución de las ecuaciones, las soluciones del sistema forman la intersección <span class="math inline">\(S=S_1\cap S_2\)</span>, como en la <a href="../sesiones/2026-09-21-sesion-27.html">Sesión 27</a>. Geométricamente, son los puntos comunes de las dos rectas:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -602,8 +602,9 @@ y=-\frac{a}{b}x+\frac{c}{b},
 </tr>
 </tbody>
 </table>
+<p>Dos rectas que tienen dos puntos distintos en común coinciden, por lo que comparten infinitos puntos. Esto explica por qué el sistema no puede tener exactamente dos soluciones. Una <a href="../sesiones/2026-09-02-sesion-16.html">ecuación cuadrática</a>, en cambio, sí puede tener dos soluciones reales distintas, como se retoma en el ejercicio 7.</p>
 <p>Cuando ambas rectas tienen pendiente definida, pendientes distintas indican rectas secantes; pendientes iguales exigen comparar además las ordenadas al origen para distinguir paralelas distintas de coincidentes. El dibujo permite interpretar el resultado, pero la clasificación se justifica algebraicamente: una intersección puede quedar fuera de la región dibujada.</p>
-<p>Si al simplificar una ecuación original desaparecen <strong>ambas</strong> incógnitas, se revisa por separado: <span class="math inline">\(0=0\)</span> no impone ninguna condición y <span class="math inline">\(0=c\)</span>, con <span class="math inline">\(c\ne0\)</span>, hace inconsistente al sistema. Esas ecuaciones no representan rectas.</p>
+<p>Las igualdades sin incógnitas que aparecen al eliminar se interpretan por su valor de verdad. <span class="math inline">\(0=0\)</span> es una <strong>identidad</strong>, verdadera para cualquier elección de las incógnitas; <span class="math inline">\(0=c\)</span>, con <span class="math inline">\(c\ne0\)</span>, es una <strong>contradicción</strong>, falsa para cualquier elección. No representan rectas: son las condiciones que quedan al comparar las dos ecuaciones originales.</p>
 <figure style="margin: 1.5rem auto; max-width: 720px;" class="figure">
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 720 300" role="img" aria-labelledby="s28-rectas-titulo s28-rectas-desc" style="display: block; width: 100%; height: auto;">
 <title id="s28-rectas-titulo">
@@ -638,7 +639,7 @@ x&amp;=200.
 \]</span></p>
 <p>Se recupera <span class="math inline">\(y=500-200=300\)</span>. La verificación da <span class="math inline">\(200+300=500\)</span> y <span class="math inline">\(0.80(200)+0.50(300)=310\)</span>. El sistema es <strong>consistente con solución única</strong>: <span class="math inline">\(S=\{(200,300)\}\)</span>. Ambas masas son positivas, por lo que se pueden usar <span class="math inline">\(200\)</span> g de A y <span class="math inline">\(300\)</span> g de B.</p>
 <p>La eliminación conduce al mismo resultado: multiplicar la segunda ecuación por <span class="math inline">\(10\)</span> da <span class="math inline">\(8x+5y=3\,100\)</span>; restar cinco veces la primera da <span class="math inline">\(3x=600\)</span>. Al conservar <span class="math inline">\(x+y=500\)</span>, se recupera también <span class="math inline">\(y=300\)</span>.</p>
-<p>Las rectas son secantes y su punto común es <span class="math inline">\((200,300)\)</span>.</p>
+<p>Las rectas son secantes y su punto común es <span class="math inline">\((200,300)\)</span>. La verificación de la Sesión 27 confirma que esta pareja satisface el sistema; la resolución anterior prueba además que es la única.</p>
 </section>
 <section id="ejemplo-2.-un-sistema-inconsistente" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-un-sistema-inconsistente">Ejemplo 2. Un sistema inconsistente</h3>
@@ -677,7 +678,7 @@ S=\left\{\left(x,3-\frac32x\right):x\in\mathbb R\right\}
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Confundir una identidad con una contradicción.</strong> <span class="math inline">\(0=0\)</span> no impone otra condición; <span class="math inline">\(0=11\)</span> es imposible. En el primer caso se debe conservar la ecuación que aún relaciona las incógnitas.</li>
+<li><strong>Confundir una identidad con una contradicción.</strong> Es falso que obtener <span class="math inline">\(0=0\)</span> en <span class="math inline">\(3x+2y=6\)</span>, <span class="math inline">\(6x+4y=12\)</span> signifique que no hay solución: <span class="math inline">\((0,3)\)</span> cumple ambas ecuaciones. La identidad no impone otra condición y se conserva <span class="math inline">\(3x+2y=6\)</span> para describir las infinitas soluciones. Una contradicción, como <span class="math inline">\(0=11\)</span> en el Ejemplo 2, sí indica que no hay solución.</li>
 <li><strong>Multiplicar solo el lado izquierdo.</strong> El doble de <span class="math inline">\(x+y=500\)</span> es <span class="math inline">\(2x+2y=1\,000\)</span>; el término independiente también se multiplica.</li>
 <li><strong>Conservar únicamente la suma de las ecuaciones.</strong> De <span class="math inline">\(x+y=5\)</span> y <span class="math inline">\(x-y=1\)</span> se obtiene <span class="math inline">\(2x=6\)</span>, pero todavía se necesita una ecuación original para determinar <span class="math inline">\(y=2\)</span>.</li>
 <li><strong>Afirmar que cualquier pareja sirve si hay infinitas soluciones.</strong> En el Ejemplo 3 todas deben cumplir <span class="math inline">\(3x+2y=6\)</span>; <span class="math inline">\((1,1)\)</span> no cumple esa condición.</li>
@@ -698,6 +699,7 @@ S=\left\{\left(x,3-\frac32x\right):x\in\mathbb R\right\}
 <ol type="a">
 <li><p>Defina las variables, plantee el sistema y clasifíquelo. ¿La segunda anotación permite determinar por separado las dos masas? Describa todas las parejas admisibles y dé dos ejemplos.</p></li>
 <li><p>Si la segunda anotación dijera <span class="math inline">\(260\)</span> g, clasifique el sistema e interprete el resultado en el contexto del registro.</p></li>
+<li><p>Mantenga los <span class="math inline">\(500\)</span> g de masa total y sustituya la segunda anotación por estos datos: un componente C constituye el <span class="math inline">\(20\,\%\)</span> de la masa del primer polvo y el <span class="math inline">\(50\,\%\)</span> de la del segundo; la mezcla debe contener <span class="math inline">\(160\)</span> g de C. La masa de C en cada porción se obtiene multiplicando la masa de polvo por su porcentaje expresado como fracción. Plantee el nuevo sistema, resuélvalo por sustitución, clasifíquelo y verifique e interprete las masas obtenidas.</p></li>
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
@@ -729,6 +731,15 @@ x+y&amp;=500\\
 <p>Restar la mitad de la primera ecuación a la segunda da <span class="math inline">\(0=0\)</span>. El sistema es consistente con infinitas soluciones; la segunda anotación repite la información de masa total y no determina las masas individuales.</p>
 <p>Al conservar <span class="math inline">\(y=500-x\)</span>, las restricciones dan <span class="math inline">\(0\le x\le500\)</span>. Las parejas admisibles son <span class="math inline">\((x,500-x)\)</span> con <span class="math inline">\(x\)</span> en ese intervalo; por ejemplo, <span class="math inline">\((100,400)\)</span> y <span class="math inline">\((250,250)\)</span>, cuyas masas suman <span class="math inline">\(500\)</span> g y cuyas semisumas son <span class="math inline">\(250\)</span> g.</p>
 <p><strong>2. b.</strong> Ahora la segunda ecuación es <span class="math inline">\(0.5x+0.5y=260\)</span>. Restar la mitad de la primera produce <span class="math inline">\(0=10\)</span>, una contradicción. El sistema es inconsistente: las dos anotaciones no pueden ser correctas simultáneamente.</p>
+<p><strong>2. c.</strong> Con las mismas variables y restricciones, el sistema es</p>
+<p><span class="math display">\[
+\left\{\begin{aligned}
+x+y&amp;=500\\
+0.20x+0.50y&amp;=160.
+\end{aligned}\right.
+\]</span></p>
+<p>Al sustituir <span class="math inline">\(x=500-y\)</span> en la segunda ecuación se obtiene <span class="math inline">\(0.20(500-y)+0.50y=160\)</span>, es decir, <span class="math inline">\(100+0.30y=160\)</span>. Por tanto, <span class="math inline">\(y=200\)</span> y <span class="math inline">\(x=300\)</span>. Se verifica que <span class="math inline">\(300+200=500\)</span> y <span class="math inline">\(0.20(300)+0.50(200)=60+100=160\)</span>.</p>
+<p>El sistema es consistente con solución única <span class="math inline">\((300,200)\)</span>: se requieren <span class="math inline">\(300\)</span> g del primer polvo y <span class="math inline">\(200\)</span> g del segundo. Ambas masas son positivas. Esta nueva condición sí determina las masas individuales junto con la masa total.</p>
 </div>
 </div>
 </div>
@@ -788,6 +799,12 @@ x+y&amp;=500\\
 <li><p>Ninguna solución.</p></li>
 <li><p><span class="math inline">\((100,400)\)</span> como única solución.</p></li>
 </ol></li>
+<li><p>Resuelva y verifique por sustitución estas ecuaciones de sesiones anteriores:</p>
+<ol type="a">
+<li><p>La <a href="../sesiones/2026-09-02-sesion-16.html">ecuación cuadrática</a> <span class="math inline">\(x^2-4x+3=0\)</span> en <span class="math inline">\(\mathbb R\)</span>.</p></li>
+<li><p>La <a href="../sesiones/2026-08-14-sesion-05.html">ecuación lineal</a> <span class="math inline">\(\frac{x-1}{2}-\frac{x}{3}=1\)</span>.</p></li>
+<li><p>Compare el número de soluciones distintas del inciso a con los tres casos de un sistema lineal real de dos ecuaciones con dos incógnitas. Explique por qué este sistema no puede tener exactamente dos soluciones.</p></li>
+</ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -815,18 +832,21 @@ x+y&amp;=500\\
 <p><strong>6. a.</strong> <span class="math inline">\(2x+2y=1\,000\)</span>; igualdad <span class="math inline">\(0=0\)</span>.</p>
 <p><strong>6. b.</strong> <span class="math inline">\(x+y=600\)</span>; igualdad <span class="math inline">\(0=100\)</span>.</p>
 <p><strong>6. c.</strong> <span class="math inline">\(x-y=-300\)</span>; igualdad <span class="math inline">\(2x=200\)</span>, con solución única <span class="math inline">\((100,400)\)</span>.</p>
+<p><strong>7. a.</strong> <span class="math inline">\(S=\{1,3\}\)</span>. El lado izquierdo vale <span class="math inline">\(0\)</span> para cada una de las dos soluciones.</p>
+<p><strong>7. b.</strong> <span class="math inline">\(S=\{9\}\)</span>. El lado izquierdo vale <span class="math inline">\(1\)</span> al sustituir <span class="math inline">\(x=9\)</span>.</p>
+<p><strong>7. c.</strong> La cuadrática tiene exactamente dos soluciones reales distintas. El sistema lineal puede tener una, ninguna o infinitas; dos rectas con dos puntos distintos en común coinciden y tienen infinitos puntos comunes.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>El trabajo realizado permite comprobar si puede:</p>
+<p>Sustitución y eliminación permiten determinar el conjunto solución conservando sistemas equivalentes. La clasificación algebraica se interpreta mediante los puntos comunes de las dos rectas. El trabajo realizado permite comprobar si puede:</p>
 <ul>
-<li>Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales.</li>
-<li>Distinguir una igualdad que determina una incógnita, una contradicción y una identidad, conservando las condiciones necesarias para describir todo el conjunto solución.</li>
-<li>Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes.</li>
-<li>Explicar si los datos de un problema determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una solución admisible en el contexto.</li>
+<li>Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales, como en el Ejemplo 1, la <a href="#actividad">Actividad 1a y 2c</a> y el ejercicio 4 de práctica.</li>
+<li>Distinguir una igualdad que determina una incógnita, una contradicción y una identidad; cuando hay infinitas soluciones, describirlas todas y dar parejas particulares, como en los Ejemplos 2–3 y la Actividad 1b–c.</li>
+<li>Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes, como en la Actividad 1 y los <a href="#ejercicios-para-practicar">ejercicios 1 y 7</a>.</li>
+<li>Explicar si los datos determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una admisible en el contexto, como en la Actividad 2 y los ejercicios 2–3 de práctica.</li>
 </ul>
 
 
