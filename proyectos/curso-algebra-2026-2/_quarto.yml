@@ -71,6 +71,7 @@ book:
         - unidades/03-sistemas-ecuaciones.qmd
         - sesiones/2026-09-21-sesion-27.qmd
         - sesiones/2026-09-22-sesion-28.qmd
+        - sesiones/2026-09-23-sesion-29.qmd
     - part: "Unidad 4. Matrices"
       chapters:
         - unidades/04-matrices.qmd

@@ -1,0 +1,468 @@
+---
+title: "Sesión 29. Matriz aumentada y operaciones elementales de renglón"
+date: 2026-09-23
+description: "Representación de sistemas mediante matrices aumentadas, operaciones elementales equivalentes y comienzo del escalonamiento."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá traducir entre un sistema lineal y su matriz aumentada, aplicar las tres operaciones elementales de renglón e iniciar la eliminación debajo de un pivote. Podrá comprobarlo en la [Actividad](#actividad), al conservar el orden de las incógnitas, operar también los términos independientes e interpretar las ecuaciones obtenidas.
+
+## Matriz de coeficientes y matriz aumentada
+
+La eliminación de la [Sesión 28](2026-09-22-sesion-28.qmd) transforma los coeficientes y los términos independientes de las ecuaciones. Esos números pueden organizarse en un arreglo que mantenga una posición fija para cada incógnita.
+
+Una **matriz** es un arreglo rectangular de números. Sus **renglones**, también llamados filas, son horizontales; sus **columnas** son verticales. Si tiene $m$ renglones y $n$ columnas, sus **dimensiones** son $m\times n$: primero se indica el número de renglones. Cada número es una **entrada**; $a_{ij}$ denota la entrada situada en el renglón $i$ y la columna $j$.
+
+Considere un sistema de $m$ ecuaciones lineales en $n$ incógnitas. Después de simplificar, se escribe cada ecuación en la [forma general](2026-09-21-sesion-27.qmd), con las incógnitas en el mismo orden y el término independiente al lado derecho.
+
+- La **matriz de coeficientes** $A$ contiene los coeficientes de las incógnitas. Tiene dimensiones $m\times n$.
+- La **columna de términos independientes** $b$ contiene, en el mismo orden, los lados derechos de las ecuaciones.
+- La **matriz aumentada** $[A\mid b]$ añade esa columna a $A$ y tiene dimensiones $m\times(n+1)$. La barra vertical separa los coeficientes de los términos independientes; no es una columna adicional.
+
+Cada renglón de la matriz aumentada representa una ecuación. Cada columna de $A$ corresponde a una incógnita, según el orden fijado. **Cuando una incógnita no aparece, se escribe su coeficiente cero**: en el orden $x,y,z$, la ecuación $x-3z=0$ produce el renglón $[1\ \ 0\ \ {-3}\mid0]$.
+
+Para recuperar el sistema, se multiplica cada entrada de $A$ por la incógnita de su columna y se iguala la suma al término independiente. Por ejemplo, $[2\ \ 0\ \ {-1}\mid4]$ se lee $2x+0y-z=4$, o simplemente $2x-z=4$. La matriz $A$ sola no especifica los términos independientes y, por ello, no determina el sistema completo.
+
+## Operaciones elementales de renglón
+
+Se escribe $R_i$ para referirse al renglón $i$. Las tres **operaciones elementales** son:
+
+| Operación | Notación | Condición |
+|---|---|---|
+| Intercambiar dos renglones | $R_i\leftrightarrow R_j$ | $i\ne j$ |
+| Multiplicar un renglón por un número | $R_i\to cR_i$ | $c\ne0$ |
+| Sumar a un renglón un múltiplo de otro | $R_i\to R_i+cR_j$ | $i\ne j$ |
+
+Los índices identifican renglones existentes y $c$ es un número real. En la tercera operación, $c$ puede ser cero, aunque entonces no se produce ningún cambio.
+
+La notación $R_2\to R_2-8R_1$ indica que el segundo renglón se reemplaza por el segundo menos ocho veces el primero. **Se opera sobre todas sus entradas, incluido el término independiente.** El renglón auxiliar $R_1$ se conserva.
+
+Estas operaciones producen [sistemas equivalentes](2026-09-22-sesion-28.qmd): sistemas con el mismo conjunto solución. Se justifican porque pueden deshacerse:
+
+- Un intercambio se deshace repitiéndolo.
+- Multiplicar por $c\ne0$ se deshace multiplicando por $1/c$, como en las [ecuaciones equivalentes](2026-08-14-sesion-05.qmd).
+- Sumar $c$ veces un renglón a otro se deshace restando ese mismo múltiplo del renglón conservado.
+
+Multiplicar un renglón por cero no es una operación elemental: reemplaza una ecuación por $0=0$ y puede perder información. Por ejemplo, transformar $x=3$ en $0=0$ permite cualquier valor de $x$.
+
+Si se indican varias operaciones sucesivas, cada una usa la matriz resultante de la anterior. Verificar una solución conocida en el sistema nuevo ayuda a detectar errores, pero **no basta para demostrar equivalencia**: dos sistemas pueden compartir una solución y tener conjuntos solución distintos. La equivalencia se garantiza mediante las operaciones reversibles aplicadas correctamente.
+
+## Pivote y comienzo del escalonamiento
+
+Un **pivote de eliminación** es una entrada no nula que se utiliza para anular otras entradas de su columna mediante operaciones elementales. Para comenzar el escalonamiento se elige el primer pivote y se obtienen ceros debajo de él:
+
+1. Localice la primera columna de coeficientes que tenga alguna entrada no nula. Si la primera columna es nula, pase a la siguiente.
+2. Lleve una entrada no nula de esa columna al primer renglón mediante un intercambio, si hace falta.
+3. Conserve el renglón del pivote y sume múltiplos suyos a los renglones inferiores para anular las entradas que están debajo.
+
+Si el pivote vale $p\ne0$ y la entrada que se desea anular vale $a$, se utiliza $R_i\to R_i-\frac{a}{p}R_1$, porque $a-\frac{a}{p}p=0$. No es necesario convertir el pivote en $1$ antes de eliminar. Al continuar hacia las columnas siguientes se trabaja con los renglones inferiores, conservando los ceros ya obtenidos.
+
+Si todas las columnas de coeficientes son nulas, no hay pivote de eliminación: las ecuaciones se leen directamente como igualdades entre constantes. En cualquier etapa deben reconocerse estos dos casos:
+
+| Renglón aumentado | Ecuación e interpretación |
+|---|---|
+| $[0\ \cdots\ 0\mid c]$, con $c\ne0$ | $0=c$: contradicción; el sistema no tiene solución |
+| $[0\ \cdots\ 0\mid0]$ | $0=0$: no impone una condición; deben revisarse los demás renglones |
+
+Un renglón nulo **no determina por sí solo el número de soluciones**.
+
+## Ejemplos
+
+### Ejemplo 1. Representación de una mezcla
+
+Para preparar $100$ g de mezcla cerámica se usan tres polvos llamados alúmina, sílice y magnesia. Sus masas se suman sin pérdidas. La masa de alúmina es el triple de la de magnesia, y la de sílice es $20$ g menor que la suma de las otras dos.
+
+Sean $x,y,z$ sus masas en gramos, respectivamente, con $x,y,z\ge0$. Las condiciones $x+y+z=100$, $x=3z$ y $y=x+z-20$ se escriben como
+
+$$
+\left\{\begin{aligned}
+x+y+z&=100\\
+x-3z&=0\\
+-x+y-z&=-20.
+\end{aligned}\right.
+$$
+
+En el orden $x,y,z$, las matrices son
+
+$$
+A=\begin{bmatrix}
+1&1&1\\
+1&0&-3\\
+-1&1&-1
+\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}
+1&1&1&100\\
+1&0&-3&0\\
+-1&1&-1&-20
+\end{array}\right].
+$$
+
+$A$ es $3\times3$ y la matriz aumentada es $3\times4$. La entrada $a_{23}=-3$ es el coeficiente de $z$ en la segunda ecuación; $a_{22}=0$ registra la ausencia de $y$.
+
+<figure style="margin: 1.5rem auto; max-width: 720px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="s29-matriz-titulo s29-matriz-desc" style="display: block; width: 100%; height: auto;">
+<title id="s29-matriz-titulo">Del sistema a la matriz aumentada</title>
+<desc id="s29-matriz-desc">A la izquierda, el sistema x + y + z = 100, x − 3z = 0, −x + y − z = −20 con sus términos alineados por incógnita; a la derecha, su matriz aumentada de 3 renglones y 4 columnas: 1 1 1 | 100, 1 0 −3 | 0, −1 1 −1 | −20. Cada columna de la matriz está sombreada con el mismo color que la incógnita correspondiente del sistema; la columna de y del segundo renglón contiene el 0 de la incógnita ausente. La barra vertical separa los coeficientes de los términos independientes.</desc>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#f8fafc" stroke="#dbe4ee"/>
+<g font-family="system-ui, sans-serif" font-size="14" fill="#334155">
+<text x="30" y="30" font-weight="650">Sistema (incógnitas en el orden x, y, z)</text>
+<text x="430" y="30" font-weight="650">Matriz aumentada [A | b]</text>
+</g>
+<rect x="52" y="70" width="62" height="135" rx="6" fill="#0f766e" fill-opacity="0.12"/>
+<rect x="122" y="70" width="62" height="135" rx="6" fill="#1d4ed8" fill-opacity="0.12"/>
+<rect x="192" y="70" width="62" height="135" rx="6" fill="#b45309" fill-opacity="0.12"/>
+<rect x="292" y="70" width="62" height="135" rx="6" fill="#64748b" fill-opacity="0.12"/>
+<g font-family="system-ui, sans-serif" font-size="18" fill="#334155">
+<text x="60" y="95">x</text>
+<text x="130" y="95">+ y</text>
+<text x="200" y="95">+ z</text>
+<text x="262" y="95">=</text>
+<text x="300" y="95">100</text>
+<text x="60" y="140">x</text>
+<text x="200" y="140">− 3z</text>
+<text x="262" y="140">=</text>
+<text x="300" y="140">0</text>
+<text x="60" y="185">−x</text>
+<text x="130" y="185">+ y</text>
+<text x="200" y="185">− z</text>
+<text x="262" y="185">=</text>
+<text x="300" y="185">−20</text>
+</g>
+<rect x="124" y="120" width="56" height="28" rx="5" fill="none" stroke="#1d4ed8" stroke-dasharray="4 3"/>
+<text x="132" y="139" font-family="system-ui, sans-serif" font-size="12" fill="#1d4ed8" font-style="italic">falta y</text>
+<g stroke="#334155" stroke-width="2" fill="none">
+<line x1="372" y1="140" x2="418" y2="140"/>
+<polyline points="410,133 418,140 410,147"/>
+<line x1="418" y1="150" x2="372" y2="150"/>
+<polyline points="380,143 372,150 380,157"/>
+</g>
+<rect x="446" y="70" width="52" height="135" rx="6" fill="#0f766e" fill-opacity="0.12"/>
+<rect x="504" y="70" width="52" height="135" rx="6" fill="#1d4ed8" fill-opacity="0.12"/>
+<rect x="562" y="70" width="52" height="135" rx="6" fill="#b45309" fill-opacity="0.12"/>
+<rect x="632" y="70" width="52" height="135" rx="6" fill="#64748b" fill-opacity="0.12"/>
+<g stroke="#334155" stroke-width="2.5" fill="none">
+<polyline points="452,70 440,70 440,205 452,205"/>
+<polyline points="678,70 690,70 690,205 678,205"/>
+</g>
+<line x1="621" y1="72" x2="621" y2="203" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 4"/>
+<g font-family="system-ui, sans-serif" font-size="18" fill="#334155" text-anchor="middle">
+<text x="470" y="95">1</text>
+<text x="528" y="95">1</text>
+<text x="586" y="95">1</text>
+<text x="656" y="95">100</text>
+<text x="470" y="140">1</text>
+<text x="528" y="140" font-weight="700" fill="#1d4ed8">0</text>
+<text x="586" y="140">−3</text>
+<text x="656" y="140">0</text>
+<text x="470" y="185">−1</text>
+<text x="528" y="185">1</text>
+<text x="586" y="185">−1</text>
+<text x="656" y="185">−20</text>
+</g>
+<g font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" font-weight="650">
+<text x="470" y="62" fill="#0f766e" font-style="italic">x</text>
+<text x="528" y="62" fill="#1d4ed8" font-style="italic">y</text>
+<text x="586" y="62" fill="#b45309" font-style="italic">z</text>
+<text x="656" y="62" fill="#64748b" font-style="italic">b</text>
+</g>
+<text x="30" y="236" font-family="system-ui, sans-serif" font-size="12" fill="#334155">Renglones: ecuaciones. Columnas de A: incógnitas. A es 3 × 3; la aumentada [A | b] es 3 × 4.</text>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">Traducir un sistema a su matriz aumentada: mismo orden de incógnitas en todas las ecuaciones y un 0 en el lugar de cada incógnita ausente.</figcaption>
+</figure>
+
+La terna $(45,40,15)$ cumple las condiciones: $45+40+15=100$, $45=3(15)$ y $40=45+15-20$. Las tres masas son positivas. Esta propuesta permitirá comprobar los sistemas transformados.
+
+En sentido contrario, la matriz aumentada
+
+$$
+\left[\begin{array}{ccc|c}
+2&0&-1&4\\
+0&3&5&-1
+\end{array}\right],
+$$
+
+con incógnitas $x,y,z$, representa $2x-z=4$, $3y+5z=-1$. Es un sistema $2\times3$, aunque su matriz aumentada tiene dimensiones $2\times4$.
+
+### Ejemplo 2. Escala y suma de renglones
+
+Se retoma el sistema de la mezcla de aleaciones de la [Sesión 28](2026-09-22-sesion-28.qmd): $x+y=500$, $0.80x+0.50y=310$. Para anular el coeficiente de $x$ en el segundo renglón, primero se eliminan los decimales:
+
+$$
+\left[\begin{array}{cc|c}1&1&500\\0.80&0.50&310\end{array}\right]
+\xrightarrow{\ R_2\to10R_2\ }
+\left[\begin{array}{cc|c}1&1&500\\8&5&3\,100\end{array}\right].
+$$
+
+Después se resta ocho veces el primer renglón:
+
+$$
+\left[\begin{array}{cc|c}1&1&500\\8&5&3\,100\end{array}\right]
+\xrightarrow{\ R_2\to R_2-8R_1\ }
+\left[\begin{array}{cc|c}1&1&500\\0&-3&-900\end{array}\right].
+$$
+
+El término independiente también cambia: $3\,100-8(500)=-900$. El sistema resultante es $x+y=500$, $-3y=-900$, que da $y=300$ y $x=200$. La pareja satisface las ecuaciones originales: $200+300=500$ y $0.80(200)+0.50(300)=310$.
+
+### Ejemplo 3. Ceros debajo del primer pivote
+
+En la matriz aumentada de la mezcla cerámica, la entrada $a_{11}=1$ sirve de pivote. Primero se aplica $R_2\to R_2-R_1$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\1&0&-3&0\\-1&1&-1&-20\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\-1&1&-1&-20\end{array}\right].
+$$
+
+Después se aplica $R_3\to R_3+R_1$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\0&2&0&80\end{array}\right].
+$$
+
+El sistema equivalente es $x+y+z=100$, $-y-4z=-100$, $2y=80$. Las dos últimas ecuaciones ya no contienen $x$. La terna $(45,40,15)$ sigue siendo solución: sus lados izquierdos valen $100$, $-100$ y $80$, respectivamente.
+
+La primera columna está preparada, pero queda una entrada $2$ debajo de $-1$ en la segunda columna. Obtener ceros en una columna no significa haber terminado el escalonamiento.
+
+## Errores frecuentes
+
+- **Omitir un coeficiente cero.** Para $x-3z=0$, en el orden $x,y,z$, se necesita $[1\ \ 0\ \ {-3}\mid0]$. El renglón $[1\ \ {-3}\mid0]$ tiene una columna de coeficientes menos y no representa la ecuación con ese orden de tres incógnitas.
+- **Cambiar el orden de las incógnitas.** Para $y+2x=7$, la fila de coeficientes en el orden $x,y$ es $[2\ \ 1]$, no $[1\ \ 2]$.
+- **Dejar fijo el término independiente.** Multiplicar por $\frac12$ el renglón $[2\ \ 4\mid6]$ produce $[1\ \ 2\mid3]$, no $[1\ \ 2\mid6]$.
+- **Usar cero como pivote.** Si la entrada elegida es cero, no se puede dividir entre ella. Se busca una entrada no nula en esa columna y se intercambian renglones; si toda la columna es nula, se pasa a la siguiente.
+- **Concluir que un renglón nulo implica infinitas soluciones.** La matriz $\left[\begin{array}{cc|c}1&0&3\\0&1&2\\0&0&0\end{array}\right]$ representa $x=3$, $y=2$, $0=0$. Tiene solución única $(3,2)$.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Anote cada operación y actúe sobre el renglón completo.
+
+1. Traduzca entre ecuaciones y matrices.
+
+   a. Escriba $A$ y $[A\mid b]$ para $2x-z=4$, $-x+3y+2z=-1$, $y-z=3$, en el orden $x,y,z$. Indique sus dimensiones.
+
+   b. Recupere el sistema representado por $\left[\begin{array}{ccc|c}0&4&-1&0\\1&-2&0&5\end{array}\right]$, en el orden $x,y,z$, e indique cuántas ecuaciones e incógnitas tiene.
+
+   c. En la matriz del inciso b, intercambie $R_1$ y $R_2$. Escriba la matriz resultante, identifique el primer pivote y explique por qué el intercambio conserva las soluciones.
+
+2. Una **aleación** es una mezcla de elementos, al menos uno de ellos metálico. Se preparan $360$ g con aluminio, cobre y magnesio. La masa de aluminio es cinco veces la suma de las otras dos, y la de cobre es el doble de la de magnesio. Las masas se suman sin pérdidas y son no negativas.
+
+   a. Defina las variables con unidades, usando el orden aluminio, cobre, magnesio. Plantee las ecuaciones en el orden de las tres condiciones anteriores y escriba la matriz aumentada.
+
+   b. Ejecute $R_2\to R_2-R_1$ y después $R_2\to-\frac16R_2$. Escriba la matriz obtenida y el sistema que representa.
+
+   c. Verifique $(300,40,20)$ en ambos sistemas. Interprete el segundo renglón nuevo y explique qué garantiza la equivalencia de los sistemas.
+
+3. Escriba las matrices aumentadas de estos sistemas de la [Sesión 28](2026-09-22-sesion-28.qmd). En cada una, anule la entrada debajo del primer pivote y clasifique el sistema, considerando ambos renglones.
+
+   a. $x-3y=2$, $-2x+6y=5$.
+
+   b. $4x-6y=2$, $-2x+3y=-1$.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Las matrices son
+
+$$
+A=\begin{bmatrix}2&0&-1\\-1&3&2\\0&1&-1\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}2&0&-1&4\\-1&3&2&-1\\0&1&-1&3\end{array}\right].
+$$
+
+Sus dimensiones son $3\times3$ y $3\times4$, respectivamente.
+
+**1. b.** $4y-z=0$, $x-2y=5$: dos ecuaciones y tres incógnitas.
+
+**1. c.** Después de $R_1\leftrightarrow R_2$:
+
+$$
+\left[\begin{array}{ccc|c}1&-2&0&5\\0&4&-1&0\end{array}\right].
+$$
+
+El primer pivote es $1$, en el primer renglón y la primera columna. El intercambio solo cambia el orden de las ecuaciones; las mismas ternas satisfacen ambas.
+
+**2. a.** $x,y,z$ son las masas de aluminio, cobre y magnesio, respectivamente, en gramos; $x,y,z\ge0$. Las ecuaciones son $x+y+z=360$, $x-5y-5z=0$, $y-2z=0$. Su matriz aumentada es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&360\\1&-5&-5&0\\0&1&-2&0\end{array}\right].
+$$
+
+**2. b.** La primera operación da el renglón $[0\ \ {-6}\ \ {-6}\mid-360]$; multiplicarlo por $-\frac16$ produce $[0\ \ 1\ \ 1\mid60]$. La matriz final es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&360\\0&1&1&60\\0&1&-2&0\end{array}\right].
+$$
+
+Representa $x+y+z=360$, $y+z=60$, $y-2z=0$.
+
+**2. c.** En el sistema original, $300+40+20=360$, $300-5(40)-5(20)=0$ y $40-2(20)=0$. En el nuevo, se conserva la primera y la tercera igualdad, y $40+20=60$. Las masas son admisibles. El segundo renglón expresa que cobre y magnesio suman $60$ g. La equivalencia se garantiza por las operaciones elementales reversibles; verificar esta terna solo comprueba una solución compartida.
+
+**3. a.** Se suma el doble del primer renglón al segundo:
+
+$$
+\left[\begin{array}{cc|c}1&-3&2\\-2&6&5\end{array}\right]
+\xrightarrow{\ R_2\to R_2+2R_1\ }
+\left[\begin{array}{cc|c}1&-3&2\\0&0&9\end{array}\right].
+$$
+
+La ecuación $0=9$ es imposible: sistema inconsistente.
+
+**3. b.** Se suma la mitad del primer renglón al segundo:
+
+$$
+\left[\begin{array}{cc|c}4&-6&2\\-2&3&-1\end{array}\right]
+\xrightarrow{\ R_2\to R_2+\frac12R_1\ }
+\left[\begin{array}{cc|c}4&-6&2\\0&0&0\end{array}\right].
+$$
+
+Solo queda $4x-6y=2$: sistema consistente con infinitas soluciones, $S=\{(x,(2x-1)/3):x\in\mathbb R\}$.
+
+:::
+
+## Ejercicios para practicar
+
+1. Escriba $A$ y $[A\mid b]$, con sus dimensiones, para cada sistema. Use el orden $x,y$ o $x,y,z$, según corresponda.
+
+   a. $3x-y=7$, $x+4y=2$.
+
+   b. $x+y+z=6$, $2y-z=1$, $x-z=0$.
+
+   c. $y=2x-3$, $3x+2y=8$.
+
+2. Recupere el sistema representado por cada matriz aumentada. Use $x,y,z$ en el inciso a y $x,y$ en el inciso b.
+
+   a. $\left[\begin{array}{ccc|c}2&-1&3&0\\0&5&-2&7\end{array}\right]$.
+
+   b. $\left[\begin{array}{cc|c}1&0&4\\0&1&-2\end{array}\right]$.
+
+3. Para una mezcla cerámica se usan paquetes completos P y Q, cada uno con dos polvos llamados alúmina y sílice. Las masas se suman sin pérdidas. La tabla muestra los gramos por paquete y las cantidades requeridas.
+
+   | Masa | Paquete P | Paquete Q | Cantidad requerida |
+   |---|---:|---:|---:|
+   | Alúmina | $20$ g | $10$ g | $100$ g |
+   | Sílice | $10$ g | $20$ g | $80$ g |
+   | Total | $30$ g | $30$ g | $180$ g |
+
+   a. Defina las variables y sus restricciones. Plantee las tres ecuaciones en el orden de la tabla y escriba su matriz aumentada.
+
+   b. Ejecute sucesivamente $R_3\to R_3-R_1$ y $R_3\to R_3-R_2$. Escriba la matriz final e interprete su tercer renglón. Verifique si $(4,2)$, en el orden P, Q, es admisible.
+
+   c. Si la cantidad total requerida fuera $190$ g, conservando los otros datos, ¿qué tercer renglón producirían las mismas operaciones? ¿Sería posible satisfacer las tres condiciones?
+
+4. Una **probeta** es una muestra preparada para un ensayo. Todas las de un mismo tipo tienen igual masa positiva. Se registran estas pesadas, sin incluir recipientes:
+
+   | Pesada | Probetas de tipo A | Probetas de tipo B | Masa total |
+   |---|---:|---:|---:|
+   | Primera | $0$ | $2$ | $40$ g |
+   | Segunda | $1$ | $1$ | $50$ g |
+
+   a. Sean $x,y$ las masas, en gramos, de una probeta A y B. Escriba el sistema y la matriz aumentada en el orden de la tabla.
+
+   b. Proponga un intercambio que coloque un pivote no nulo en la primera columna del primer renglón. Después multiplique el segundo renglón por $\frac12$ y escriba la matriz final.
+
+   c. Interprete el segundo renglón final y compruebe si $(30,20)$ satisface las pesadas originales y las restricciones.
+
+5. Un estudiante parte de $\left[\begin{array}{cc|c}2&4&6\\1&3&4\end{array}\right]$. Al aplicar $R_1\to\frac12R_1$, escribe $[1\ \ 2\mid6]$; después aplica $R_2\to R_2-R_1$, obtiene $[0\ \ 1\mid-2]$ y propone $(10,-2)$. Identifique el error, escriba la matriz correcta tras las dos operaciones, determine la solución y compruebe en cuáles ecuaciones originales falla la propuesta.
+
+6. Decida cuáles de las siguientes expresiones pueden representarse directamente mediante una matriz aumentada de ecuaciones lineales en las incógnitas indicadas. Escríbala cuando corresponda; en los demás casos, explique el impedimento y dé el conjunto solución.
+
+   a. La [inecuación](2026-08-17-sesion-06.qmd) $2x-3\le7$, en $x$.
+
+   b. La [ecuación cuadrática](2026-09-02-sesion-16.qmd) $x^2-5x+6=0$, en $x$.
+
+   c. El sistema $\frac{x}{2}+\frac{y}{3}=1$, $x-y=0$, en $x,y$.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.**
+
+$$
+A=\begin{bmatrix}3&-1\\1&4\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{cc|c}3&-1&7\\1&4&2\end{array}\right].
+$$
+
+Dimensiones: $2\times2$ y $2\times3$.
+
+**1. b.**
+
+$$
+A=\begin{bmatrix}1&1&1\\0&2&-1\\1&0&-1\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{ccc|c}1&1&1&6\\0&2&-1&1\\1&0&-1&0\end{array}\right].
+$$
+
+Dimensiones: $3\times3$ y $3\times4$.
+
+**1. c.**
+
+$$
+A=\begin{bmatrix}-2&1\\3&2\end{bmatrix},
+\qquad
+[A\mid b]=\left[\begin{array}{cc|c}-2&1&-3\\3&2&8\end{array}\right].
+$$
+
+Dimensiones: $2\times2$ y $2\times3$.
+
+**2. a.** $2x-y+3z=0$, $5y-2z=7$.
+
+**2. b.** $x=4$, $y=-2$.
+
+**3. a.** $x$: número de paquetes P; $y$: número de paquetes Q; enteros no negativos. Sistema: $20x+10y=100$, $10x+20y=80$, $30x+30y=180$.
+
+$$
+[A\mid b]=\left[\begin{array}{cc|c}20&10&100\\10&20&80\\30&30&180\end{array}\right].
+$$
+
+**3. b.** Matriz final:
+
+$$
+\left[\begin{array}{cc|c}20&10&100\\10&20&80\\0&0&0\end{array}\right].
+$$
+
+El tercer renglón no agrega una condición: la masa total repite la suma de las masas de los dos polvos. $(4,2)$ es admisible; produce $100$ g de alúmina, $80$ g de sílice y $180$ g en total.
+
+**3. c.** $[0\ \ 0\mid10]$. Sistema inconsistente; no se pueden satisfacer las tres cantidades requeridas.
+
+**4. a.** $2y=40$, $x+y=50$, con $x,y>0$.
+
+$$
+[A\mid b]=\left[\begin{array}{cc|c}0&2&40\\1&1&50\end{array}\right].
+$$
+
+**4. b.** Intercambio $R_1\leftrightarrow R_2$; pivote $1$. Matriz final:
+
+$$
+\left[\begin{array}{cc|c}1&1&50\\0&1&20\end{array}\right].
+$$
+
+**4. c.** Una probeta B pesa $20$ g. La propuesta es admisible: $30$ g por probeta A y $20$ g por probeta B; reproduce las pesadas de $40$ g y $50$ g.
+
+**5.** No se dividió entre $2$ el término independiente del primer renglón. Matriz correcta final:
+
+$$
+\left[\begin{array}{cc|c}1&2&3\\0&1&1\end{array}\right].
+$$
+
+Solución $(1,1)$. La propuesta $(10,-2)$ falla en la primera ecuación: su lado izquierdo vale $12$, en lugar de $6$; sí satisface la segunda.
+
+**6. a.** No: es una desigualdad. $S=(-\infty,5]$.
+
+**6. b.** No: contiene el término no lineal $x^2$. $S=\{2,3\}$.
+
+**6. c.** Sí:
+
+$$
+\left[\begin{array}{cc|c}\frac12&\frac13&1\\1&-1&0\end{array}\right].
+$$
+
+:::
+
+## Conclusiones del aprendizaje
+
+La matriz aumentada conserva la información de las ecuaciones cuando se fija el orden de las incógnitas. Las operaciones elementales modifican su escritura mediante transformaciones reversibles. El trabajo realizado permite comprobar si puede:
+
+- Traducir en ambos sentidos e identificar coeficientes, términos independientes y dimensiones, como en la Actividad 1 y los ejercicios 1–2.
+- Aplicar intercambios, multiplicaciones no nulas y sumas de renglones completos, justificando la equivalencia, como en las Actividades 1–2.
+- Elegir un pivote no nulo y producir ceros debajo de él, como en el Ejemplo 3, la Actividad 3 y el ejercicio 4.
+- Interpretar una contradicción o un renglón nulo a partir del sistema completo y del contexto, como en la Actividad 3 y el ejercicio 3.
