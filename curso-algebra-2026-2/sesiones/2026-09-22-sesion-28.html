@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Propiedades de orden, resolución de inecuaciones lineales, intervalos y valor absoluto como distancia.">
+<meta name="description" content="Sustitución y eliminación, clasificación de sistemas lineales de dos ecuaciones e interpretación mediante rectas.">
 
-<title>Sesión 06. Inecuaciones lineales y valor absoluto como distancia – Álgebra</title>
+<title>Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-08-18-sesion-07.html" rel="next">
-<link href="../sesiones/2026-08-14-sesion-05.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../sesiones/2026-09-21-sesion-27.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 06. Inecuaciones lineales y valor absoluto como distancia – Álgebra">
-<meta property="og:description" content="Propiedades de orden, resolución de inecuaciones lineales, intervalos y valor absoluto como distancia.">
+<meta property="og:title" content="Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia – Álgebra">
+<meta property="og:description" content="Sustitución y eliminación, clasificación de sistemas lineales de dos ecuaciones e interpretación mediante rectas.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-17-sesion-06.html"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-22-sesion-28.html"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -197,13 +197,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
@@ -236,7 +236,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,13 +359,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
@@ -378,7 +378,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
+  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
   </div>
 </li>
       </ul>
@@ -462,28 +462,32 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#inecuaciones-y-conjuntos-solución" id="toc-inecuaciones-y-conjuntos-solución" class="nav-link active" data-scroll-target="#inecuaciones-y-conjuntos-solución">Inecuaciones y conjuntos solución</a></li>
-  <li><a href="#propiedades-de-orden-y-equivalencia" id="toc-propiedades-de-orden-y-equivalencia" class="nav-link" data-scroll-target="#propiedades-de-orden-y-equivalencia">Propiedades de orden y equivalencia</a></li>
-  <li><a href="#el-valor-absoluto-como-distancia" id="toc-el-valor-absoluto-como-distancia" class="nav-link" data-scroll-target="#el-valor-absoluto-como-distancia">El valor absoluto como distancia</a></li>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#sistemas-equivalentes-y-métodos-de-resolución" id="toc-sistemas-equivalentes-y-métodos-de-resolución" class="nav-link" data-scroll-target="#sistemas-equivalentes-y-métodos-de-resolución">Sistemas equivalentes y métodos de resolución</a>
+  <ul class="collapse">
+  <li><a href="#método-de-sustitución" id="toc-método-de-sustitución" class="nav-link" data-scroll-target="#método-de-sustitución">Método de sustitución</a></li>
+  <li><a href="#método-de-eliminación" id="toc-método-de-eliminación" class="nav-link" data-scroll-target="#método-de-eliminación">Método de eliminación</a></li>
+  </ul></li>
+  <li><a href="#clasificación-e-interpretación-geométrica" id="toc-clasificación-e-interpretación-geométrica" class="nav-link" data-scroll-target="#clasificación-e-interpretación-geométrica">Clasificación e interpretación geométrica</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-incógnita-en-ambos-miembros" id="toc-ejemplo-1.-incógnita-en-ambos-miembros" class="nav-link" data-scroll-target="#ejemplo-1.-incógnita-en-ambos-miembros">Ejemplo 1. Incógnita en ambos miembros</a></li>
-  <li><a href="#ejemplo-2.-división-entre-una-constante-negativa" id="toc-ejemplo-2.-división-entre-una-constante-negativa" class="nav-link" data-scroll-target="#ejemplo-2.-división-entre-una-constante-negativa">Ejemplo 2. División entre una constante negativa</a></li>
-  <li><a href="#ejemplo-3.-denominadores-numéricos" id="toc-ejemplo-3.-denominadores-numéricos" class="nav-link" data-scroll-target="#ejemplo-3.-denominadores-numéricos">Ejemplo 3. Denominadores numéricos</a></li>
-  <li><a href="#ejemplo-4.-desigualdad-doble" id="toc-ejemplo-4.-desigualdad-doble" class="nav-link" data-scroll-target="#ejemplo-4.-desigualdad-doble">Ejemplo 4. Desigualdad doble</a></li>
+  <li><a href="#ejemplo-1.-una-mezcla-con-solución-única" id="toc-ejemplo-1.-una-mezcla-con-solución-única" class="nav-link" data-scroll-target="#ejemplo-1.-una-mezcla-con-solución-única">Ejemplo 1. Una mezcla con solución única</a></li>
+  <li><a href="#ejemplo-2.-un-sistema-inconsistente" id="toc-ejemplo-2.-un-sistema-inconsistente" class="nav-link" data-scroll-target="#ejemplo-2.-un-sistema-inconsistente">Ejemplo 2. Un sistema inconsistente</a></li>
+  <li><a href="#ejemplo-3.-un-sistema-con-infinitas-soluciones" id="toc-ejemplo-3.-un-sistema-con-infinitas-soluciones" class="nav-link" data-scroll-target="#ejemplo-3.-un-sistema-con-infinitas-soluciones">Ejemplo 3. Un sistema con infinitas soluciones</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/01-reales-complejos.html">Unidad 1. Números reales y complejos</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-08-17-sesion-06.html"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-22-sesion-28.html"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></h1>
 </div>
 
 
@@ -494,7 +498,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">17 de agosto de 2026</p>
+      <p class="date">22 de septiembre de 2026</p>
     </div>
   </div>
   
@@ -506,10 +510,34 @@ window.Quarto = {
 </header>
 
 
-<section id="inecuaciones-y-conjuntos-solución" class="level2">
-<h2 class="anchored" data-anchor-id="inecuaciones-y-conjuntos-solución">Inecuaciones y conjuntos solución</h2>
-<p>Una <strong>desigualdad</strong> compara dos expresiones mediante alguno de los signos <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> o <span class="math inline">\(\ge\)</span>. Una <strong>inecuación</strong> es una desigualdad que contiene una incógnita. Una solución es un valor de la incógnita que hace verdadera la desigualdad, y el <strong>conjunto solución</strong> <span class="math inline">\(S\)</span> reúne todas las soluciones.</p>
-<p>En los casos no degenerados, una inecuación lineal tiene infinitas soluciones que forman una semirrecta. También puede tener como conjunto solución a <span class="math inline">\(\mathbb R\)</span> o a <span class="math inline">\(\varnothing\)</span>. Los conjuntos solución no vacíos se expresan mediante intervalos y se representan en la recta real.</p>
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá resolver y clasificar un sistema lineal de dos ecuaciones con dos incógnitas mediante sustitución o eliminación, e interpretar sus soluciones como puntos comunes de dos rectas. Podrá comprobarlo al justificar los tres casos de la Actividad 1 y explicar qué información proporcionan las condiciones del problema de la Actividad 2.</p>
+</section>
+<section id="sistemas-equivalentes-y-métodos-de-resolución" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-equivalentes-y-métodos-de-resolución">Sistemas equivalentes y métodos de resolución</h2>
+<p>En la <a href="../sesiones/2026-09-21-sesion-27.html">Sesión 27</a> se verificaron soluciones propuestas. <strong>Resolver un sistema</strong> significa determinar todas sus soluciones. Dos sistemas son <strong>equivalentes</strong> cuando tienen el mismo conjunto solución; transformar uno en otro equivalente permite resolver sin perder ni agregar soluciones.</p>
+<p>Trabajaremos con ecuaciones <span class="math inline">\(ax+by=c\)</span>, con coeficientes reales y con <span class="math inline">\(a,b\)</span> no ambos cero. Esta condición permite despejar al menos una incógnita y garantiza que la ecuación representa una recta.</p>
+<section id="método-de-sustitución" class="level3">
+<h3 class="anchored" data-anchor-id="método-de-sustitución">Método de sustitución</h3>
+<ol type="1">
+<li>Despeje una incógnita cuyo coeficiente sea distinto de cero en una de las ecuaciones.</li>
+<li>Sustituya esa expresión en la otra ecuación y simplifique.</li>
+<li>Si obtiene un valor para la incógnita restante, recupere la despejada y verifique la pareja en ambas ecuaciones originales. Si obtiene una igualdad sin incógnitas, decida si es verdadera o falsa.</li>
+</ol>
+<p>Por ejemplo, de <span class="math inline">\(x+y=500\)</span> se obtiene <span class="math inline">\(y=500-x\)</span>. Sustituir esta expresión en otra ecuación permite trabajar solo con <span class="math inline">\(x\)</span>, conservando la condición <span class="math inline">\(y=500-x\)</span>.</p>
+</section>
+<section id="método-de-eliminación" class="level3">
+<h3 class="anchored" data-anchor-id="método-de-eliminación">Método de eliminación</h3>
+<p>Se conserva una ecuación y se reemplaza la otra por su suma con un múltiplo de la conservada, elegido para cancelar una incógnita. Si es necesario multiplicar una ecuación, se multiplican <strong>ambos lados por el mismo número distinto de cero</strong>, incluido el término independiente.</p>
+<p>La transformación es reversible: si se conserva la primera ecuación y a la segunda se le suma un múltiplo de la primera, la segunda original se recupera restando ese mismo múltiplo. Por ello, el sistema nuevo tiene exactamente las mismas soluciones.</p>
+<p><strong>Conserve una ecuación que permita recuperar la incógnita eliminada.</strong> La ecuación obtenida al sumar, por sí sola, no sustituye al sistema completo. Si una incógnita no aparece en ninguna ecuación, se despeja la que sí aparece y se comprueba si las dos condiciones son compatibles; la incógnita ausente queda sin restricción.</p>
+</section>
+</section>
+<section id="clasificación-e-interpretación-geométrica" class="level2">
+<h2 class="anchored" data-anchor-id="clasificación-e-interpretación-geométrica">Clasificación e interpretación geométrica</h2>
+<p>Un sistema es <strong>consistente</strong> si tiene al menos una solución e <strong>inconsistente</strong> si no tiene ninguna. Un sistema lineal de dos ecuaciones con dos incógnitas puede tener una solución, ninguna o infinitas; no puede tener exactamente dos.</p>
+<p>Suponga que se despejó <span class="math inline">\(y\)</span> en una ecuación y se sustituyó en la otra, o que se eliminó <span class="math inline">\(y\)</span> conservando una ecuación con coeficiente de <span class="math inline">\(y\)</span> distinto de cero. El resultado se interpreta así; si se elimina <span class="math inline">\(x\)</span>, se intercambian los papeles de las incógnitas.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -518,246 +546,159 @@ window.Quarto = {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Desigualdad</th>
-<th>Intervalo</th>
-<th>Representación en la recta real</th>
+<th>Igualdad obtenida</th>
+<th>Qué permite concluir</th>
+<th>Clasificación</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(x&lt;b\)</span></td>
-<td><span class="math inline">\((-\infty,\,b)\)</span></td>
-<td>Semirrecta hacia la izquierda de <span class="math inline">\(b\)</span>, con extremo abierto</td>
+<td><span class="math inline">\(d\,x=e\)</span>, con <span class="math inline">\(d\ne0\)</span></td>
+<td><span class="math inline">\(x=e/d\)</span> y la ecuación conservada determina <span class="math inline">\(y\)</span></td>
+<td>Consistente con solución única</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(x\le b\)</span></td>
-<td><span class="math inline">\((-\infty,\,b]\)</span></td>
-<td>Semirrecta hacia la izquierda de <span class="math inline">\(b\)</span>, con extremo cerrado</td>
+<td><span class="math inline">\(0=e\)</span>, con <span class="math inline">\(e\ne0\)</span></td>
+<td>Ninguna pareja puede cumplir una igualdad falsa</td>
+<td>Inconsistente; <span class="math inline">\(S=\varnothing\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(x&gt;a\)</span></td>
-<td><span class="math inline">\((a,\,\infty)\)</span></td>
-<td>Semirrecta hacia la derecha de <span class="math inline">\(a\)</span>, con extremo abierto</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(x\ge a\)</span></td>
-<td><span class="math inline">\([a,\,\infty)\)</span></td>
-<td>Semirrecta hacia la derecha de <span class="math inline">\(a\)</span>, con extremo cerrado</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(a&lt;x\le b\)</span></td>
-<td><span class="math inline">\((a,\,b]\)</span></td>
-<td>Segmento abierto en <span class="math inline">\(a\)</span> y cerrado en <span class="math inline">\(b\)</span></td>
+<td><span class="math inline">\(0=0\)</span></td>
+<td>Solo queda la condición de la ecuación conservada</td>
+<td>Consistente con infinitas soluciones</td>
 </tr>
 </tbody>
 </table>
-<p>En la última fila se supone que <span class="math inline">\(a,b\in\mathbb R\)</span> y <span class="math inline">\(a&lt;b\)</span>. Un extremo abierto no pertenece al conjunto solución; un extremo cerrado sí. Los símbolos <span class="math inline">\(\infty\)</span> y <span class="math inline">\(-\infty\)</span> no representan números, por lo que siempre se escriben junto a un paréntesis.</p>
-<p>Una inecuación lineal puede escribirse, después de simplificar, como</p>
+<p>En el último caso, no todas las parejas son soluciones: deben satisfacer la ecuación conservada.</p>
+<p>La gráfica de <span class="math inline">\(ax+by=c\)</span>, con <span class="math inline">\(a,b\)</span> no ambos cero, es una recta. Si <span class="math inline">\(b\ne0\)</span>, se puede escribir</p>
 <p><span class="math display">\[
-ax+b&lt;cx+d,
-\qquad
-a,b,c,d\in\mathbb R.
+y=-\frac{a}{b}x+\frac{c}{b},
 \]</span></p>
-<p>Al reunir términos se obtiene</p>
-<p><span class="math display">\[
-(a-c)x&lt;d-b.
-\]</span></p>
-<p>Si <span class="math inline">\(a-c\ne0\)</span>, se obtiene una semirrecta al dividir entre ese coeficiente. Si la incógnita desaparece, queda una proposición numérica: cuando es verdadera, <span class="math inline">\(S=\mathbb R\)</span>; cuando es falsa, <span class="math inline">\(S=\varnothing\)</span>, donde <span class="math inline">\(\varnothing\)</span> denota el conjunto vacío. El mismo criterio se aplica a los signos <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> y <span class="math inline">\(\ge\)</span>.</p>
-</section>
-<section id="propiedades-de-orden-y-equivalencia" class="level2">
-<h2 class="anchored" data-anchor-id="propiedades-de-orden-y-equivalencia">Propiedades de orden y equivalencia</h2>
-<p>Dos inecuaciones son <strong>equivalentes</strong> cuando tienen el mismo conjunto solución. Para <span class="math inline">\(u,v,c,k\in\mathbb R\)</span> se cumplen las siguientes propiedades:</p>
-<ul>
-<li>si <span class="math inline">\(u&lt;v\)</span>, entonces <span class="math inline">\(u+c&lt;v+c\)</span>;</li>
-<li>si <span class="math inline">\(u&lt;v\)</span> y <span class="math inline">\(k&gt;0\)</span>, entonces <span class="math inline">\(ku&lt;kv\)</span>;</li>
-<li>si <span class="math inline">\(u&lt;v\)</span> y <span class="math inline">\(k&lt;0\)</span>, entonces <span class="math inline">\(ku&gt;kv\)</span>.</li>
-</ul>
-<p>Las propiedades correspondientes son válidas para <span class="math inline">\(\le\)</span>, <span class="math inline">\(&gt;\)</span> y <span class="math inline">\(\ge\)</span>. Por tanto:</p>
+<p>donde <span class="math inline">\(-a/b\)</span> es la <strong>pendiente</strong>. Si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(a\ne0\)</span> y la recta es vertical: <span class="math inline">\(x=c/a\)</span>.</p>
+<p>Las soluciones del sistema son los puntos comunes de las dos rectas:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Operación aplicada en ambos miembros</th>
-<th>Efecto sobre el signo de orden</th>
+<th>Rectas</th>
+<th>Puntos comunes</th>
+<th>Tipo de solución</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Sumar o restar una misma cantidad</td>
-<td>Se conserva</td>
+<td>Secantes</td>
+<td>Un punto</td>
+<td>Única</td>
 </tr>
 <tr class="even">
-<td>Multiplicar o dividir por una constante positiva</td>
-<td>Se conserva</td>
+<td>Paralelas distintas</td>
+<td>Ninguno</td>
+<td>Sin solución</td>
 </tr>
 <tr class="odd">
-<td>Multiplicar o dividir por una constante negativa</td>
-<td>Se invierte</td>
+<td>Coincidentes</td>
+<td>Todos los puntos de una misma recta</td>
+<td>Infinitas</td>
 </tr>
 </tbody>
 </table>
-<p>La inversión del signo al multiplicar por un número negativo refleja el orden en la recta real: aunque <span class="math inline">\(2&lt;5\)</span>, se tiene <span class="math inline">\(-2&gt;-5\)</span>.</p>
-<p>Multiplicar por cero no conserva, en general, el conjunto solución, y dividir entre cero no está definido. Tampoco se debe multiplicar o dividir una inecuación por una expresión que contiene la incógnita sin haber establecido que no se anula y cuál es su signo en el dominio considerado, pues este puede variar y determinar si el signo de orden se conserva o se invierte.</p>
-</section>
-<section id="el-valor-absoluto-como-distancia" class="level2">
-<h2 class="anchored" data-anchor-id="el-valor-absoluto-como-distancia">El valor absoluto como distancia</h2>
-<p>El valor absoluto de un número real <span class="math inline">\(a\)</span> se define por</p>
-<p><span class="math display">\[
-|a|=
-\begin{cases}
-a, &amp; a\ge0,\\
--a, &amp; a&lt;0.
-\end{cases}
-\]</span></p>
-<p>Geométricamente, <span class="math inline">\(|a|\)</span> es la distancia entre <span class="math inline">\(a\)</span> y <span class="math inline">\(0\)</span>. En general,</p>
-<p><span class="math display">\[
-|x-y|
-\]</span></p>
-<p>es la distancia entre <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> en la recta real. Por ejemplo,</p>
-<p><span class="math display">\[
-|4-9|=|-5|=5=|9-4|.
-\]</span></p>
-<p>Para <span class="math inline">\(r&gt;0\)</span>, la condición <span class="math inline">\(|x-a|&lt;r\)</span> describe los números cuya distancia a <span class="math inline">\(a\)</span> es menor que <span class="math inline">\(r\)</span>:</p>
-<p><span class="math display">\[
-|x-a|&lt;r
-\quad\Longleftrightarrow\quad
-a-r&lt;x&lt;a+r.
-\]</span></p>
-<p>Del mismo modo,</p>
-<p><span class="math display">\[
-|x-a|\le r
-\quad\Longleftrightarrow\quad
-a-r\le x\le a+r.
-\]</span></p>
-<p>Así, <span class="math inline">\(|x-2|&lt;3\)</span> tiene como conjunto solución <span class="math inline">\((-1,\,5)\)</span>. La desigualdad debe acotar por ambos lados: conservar únicamente <span class="math inline">\(x-2&lt;3\)</span> admitiría valores cuya distancia a <span class="math inline">\(2\)</span> es mayor que <span class="math inline">\(3\)</span>.</p>
-<p>La misma equivalencia permite resolver una expresión lineal dentro del valor absoluto. Por ejemplo,</p>
-<p><span class="math display">\[
-\begin{aligned}
-|2x+7|\le9
-&amp;\quad\Longleftrightarrow\quad -9\le2x+7\le9,\\
-&amp;\quad\Longleftrightarrow\quad -16\le2x\le2,\\
-&amp;\quad\Longleftrightarrow\quad -8\le x\le1.
-\end{aligned}
-\]</span></p>
-<p>Por tanto, el conjunto solución es <span class="math inline">\(S=[-8,\,1]\)</span>.</p>
-<p>Una tolerancia puede expresarse con esta notación. Por ejemplo, <span class="math inline">\(|L-50|\le0.2\)</span> indica que la longitud <span class="math inline">\(L\)</span> difiere de <span class="math inline">\(50\)</span> en no más de <span class="math inline">\(0.2\)</span> unidades.</p>
+<p>Cuando ambas rectas tienen pendiente definida, pendientes distintas indican rectas secantes; pendientes iguales exigen comparar además las ordenadas al origen para distinguir paralelas distintas de coincidentes. El dibujo permite interpretar el resultado, pero la clasificación se justifica algebraicamente: una intersección puede quedar fuera de la región dibujada.</p>
+<p>Si al simplificar una ecuación original desaparecen <strong>ambas</strong> incógnitas, se revisa por separado: <span class="math inline">\(0=0\)</span> no impone ninguna condición y <span class="math inline">\(0=c\)</span>, con <span class="math inline">\(c\ne0\)</span>, hace inconsistente al sistema. Esas ecuaciones no representan rectas.</p>
+<figure style="margin: 1.5rem auto; max-width: 720px;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 720 300" role="img" aria-labelledby="s28-rectas-titulo s28-rectas-desc" style="display: block; width: 100%; height: auto;">
+<title id="s28-rectas-titulo">
+Tres sistemas 2 por 2 y sus rectas
+</title>
+<desc id="s28-rectas-desc">Panel izquierdo: las rectas x + y = 500 y 0.80x + 0.50y = 310 se cortan en el punto (200, 300), única solución. Panel central: las rectas x - 2y = 4 y -2x + 4y = 3 son paralelas y distintas, sin punto en común. Panel derecho: las ecuaciones 3x + 2y = 6 y 6x + 4y = 12 tienen la misma recta como gráfica; todos sus puntos son soluciones, entre ellos (0, 3) y (2, 0).</desc> <rect x="1" y="1" width="718" height="298" rx="12" fill="#f8fafc" stroke="#dbe4ee"></rect> <g font-family="system-ui, sans-serif" font-size="14" fill="#334155"> <text x="30" y="30" font-weight="650">Secantes: una solución</text> <text x="265" y="30" font-weight="650">Paralelas: ninguna solución</text> <text x="500" y="30" font-weight="650">Coincidentes: infinitas</text> </g> <g stroke="#cbd5e1" stroke-width="1"> <line x1="88.5" y1="252.0" x2="88.5" y2="62.0" stroke-dasharray="3 4"></line> <line x1="30.0" y1="193.5" x2="220.0" y2="193.5" stroke-dasharray="3 4"></line> <line x1="146.9" y1="252.0" x2="146.9" y2="62.0" stroke-dasharray="3 4"></line> <line x1="30.0" y1="135.1" x2="220.0" y2="135.1" stroke-dasharray="3 4"></line> <line x1="205.4" y1="252.0" x2="205.4" y2="62.0" stroke-dasharray="3 4"></line> <line x1="30.0" y1="76.6" x2="220.0" y2="76.6" stroke-dasharray="3 4"></line> </g> <g stroke="#334155" stroke-width="1.5"> <line x1="30.0" y1="252.0" x2="220.0" y2="252.0"></line> <line x1="30.0" y1="252.0" x2="30.0" y2="62.0"></line> </g> <g font-family="system-ui, sans-serif" font-size="11" fill="#334155"> <text x="88.5" y="266.0" text-anchor="middle">200</text> <text x="26.0" y="197.5" text-anchor="end">200</text> <text x="146.9" y="266.0" text-anchor="middle">400</text> <text x="26.0" y="139.1" text-anchor="end">400</text> <text x="205.4" y="266.0" text-anchor="middle">600</text> <text x="26.0" y="80.6" text-anchor="end">600</text> <text x="222.0" y="256.0" font-style="italic">x</text> <text x="35.0" y="58.0" font-style="italic">y</text> </g> <line x1="30.0" y1="105.8" x2="176.2" y2="252.0" stroke="#0f766e" stroke-width="2.5"></line> <line x1="30.0" y1="70.8" x2="143.3" y2="252.0" stroke="#1d4ed8" stroke-width="2.5"></line> <circle cx="88.5" cy="164.3" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"></circle> <text x="96.5" y="158.3" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(200, 300)</text> <g stroke="#cbd5e1" stroke-width="1"> <line x1="265.0" y1="252.0" x2="265.0" y2="62.0" stroke-dasharray="3 4"></line> <line x1="265.0" y1="233.0" x2="455.0" y2="233.0" stroke-dasharray="3 4"></line> <line x1="303.0" y1="252.0" x2="303.0" y2="62.0" stroke-dasharray="3 4"></line> <line x1="265.0" y1="195.0" x2="455.0" y2="195.0" stroke-dasharray="3 4"></line> <line x1="379.0" y1="252.0" x2="379.0" y2="62.0" stroke-dasharray="3 4"></line> <line x1="265.0" y1="119.0" x2="455.0" y2="119.0" stroke-dasharray="3 4"></line> <line x1="417.0" y1="252.0" x2="417.0" y2="62.0" stroke-dasharray="3 4"></line> <line x1="265.0" y1="81.0" x2="455.0" y2="81.0" stroke-dasharray="3 4"></line> </g> <g stroke="#334155" stroke-width="1.5"> <line x1="265.0" y1="157.0" x2="455.0" y2="157.0"></line> <line x1="341.0" y1="252.0" x2="341.0" y2="62.0"></line> </g> <g font-family="system-ui, sans-serif" font-size="11" fill="#334155"> <text x="265.0" y="266.0" text-anchor="middle">-4</text> <text x="261.0" y="237.0" text-anchor="end">-4</text> <text x="303.0" y="266.0" text-anchor="middle">-2</text> <text x="261.0" y="199.0" text-anchor="end">-2</text> <text x="379.0" y="266.0" text-anchor="middle">2</text> <text x="261.0" y="123.0" text-anchor="end">2</text> <text x="417.0" y="266.0" text-anchor="middle">4</text> <text x="261.0" y="85.0" text-anchor="end">4</text> <text x="457.0" y="161.0" font-style="italic">x</text> <text x="346.0" y="58.0" font-style="italic">y</text> </g> <line x1="265.0" y1="233.0" x2="455.0" y2="138.0" stroke="#0f766e" stroke-width="2.5"></line> <line x1="265.0" y1="180.8" x2="455.0" y2="85.8" stroke="#1d4ed8" stroke-width="2.5"></line> <g stroke="#cbd5e1" stroke-width="1"> <line x1="500.0" y1="252.0" x2="500.0" y2="62.0" stroke-dasharray="3 4"></line> <line x1="500.0" y1="224.9" x2="690.0" y2="224.9" stroke-dasharray="3 4"></line> <line x1="608.6" y1="252.0" x2="608.6" y2="62.0" stroke-dasharray="3 4"></line> <line x1="500.0" y1="116.3" x2="690.0" y2="116.3" stroke-dasharray="3 4"></line> <line x1="662.9" y1="252.0" x2="662.9" y2="62.0" stroke-dasharray="3 4"></line> <line x1="500.0" y1="62.0" x2="690.0" y2="62.0" stroke-dasharray="3 4"></line> </g> <g stroke="#334155" stroke-width="1.5"> <line x1="500.0" y1="170.6" x2="690.0" y2="170.6"></line> <line x1="554.3" y1="252.0" x2="554.3" y2="62.0"></line> </g> <g font-family="system-ui, sans-serif" font-size="11" fill="#334155"> <text x="500.0" y="266.0" text-anchor="middle">-2</text> <text x="496.0" y="228.9" text-anchor="end">-2</text> <text x="608.6" y="266.0" text-anchor="middle">2</text> <text x="496.0" y="120.3" text-anchor="end">2</text> <text x="662.9" y="266.0" text-anchor="middle">4</text> <text x="692.0" y="174.6" font-style="italic">x</text> <text x="559.3" y="58.0" font-style="italic">y</text> </g> <line x1="536.2" y1="62.0" x2="662.9" y2="252.0" stroke="#0f766e" stroke-width="5"></line> <line x1="536.2" y1="62.0" x2="662.9" y2="252.0" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 6"></line> <circle cx="554.3" cy="89.1" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"></circle> <text x="562.3" y="83.1" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(0, 3)</text> <circle cx="608.6" cy="170.6" r="4.5" fill="#b91c1c" stroke="white" stroke-width="1.5"></circle> <text x="616.6" y="164.6" font-family="system-ui, sans-serif" font-size="12" fill="#b91c1c" font-weight="650">(2, 0)</text> <g font-family="system-ui, sans-serif" font-size="12"> <line x1="30" y1="276" x2="52" y2="276" stroke="#0f766e" stroke-width="2.5"></line> <text x="58" y="280" fill="#334155">x + y = 500</text> <line x1="30" y1="292" x2="52" y2="292" stroke="#1d4ed8" stroke-width="2.5"></line> <text x="58" y="296" fill="#334155">0.80x + 0.50y = 310</text> <line x1="265" y1="276" x2="287" y2="276" stroke="#0f766e" stroke-width="2.5"></line> <text x="293" y="280" fill="#334155">x − 2y = 4</text> <line x1="265" y1="292" x2="287" y2="292" stroke="#1d4ed8" stroke-width="2.5"></line> <text x="293" y="296" fill="#334155">−2x + 4y = 3</text> <line x1="500" y1="276" x2="522" y2="276" stroke="#0f766e" stroke-width="5"></line> <text x="528" y="280" fill="#334155">3x + 2y = 6</text> <line x1="500" y1="292" x2="522" y2="292" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="7 6"></line> <text x="528" y="296" fill="#334155">6x + 4y = 12</text> </g>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">
+Los tres sistemas de los ejemplos: un punto común, ninguno o todos los puntos de una misma recta.
+</figcaption>
+</figure>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-incógnita-en-ambos-miembros" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-incógnita-en-ambos-miembros">Ejemplo 1. Incógnita en ambos miembros</h3>
-<p>Resolver</p>
+<section id="ejemplo-1.-una-mezcla-con-solución-única" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-una-mezcla-con-solución-única">Ejemplo 1. Una mezcla con solución única</h3>
+<p>Se retoma la mezcla de la <a href="../sesiones/2026-09-21-sesion-27.html">Sesión 27</a>. Una aleación A contiene <span class="math inline">\(80\,\%\)</span> de cobre en masa y otra B, <span class="math inline">\(50\,\%\)</span>. Se requieren <span class="math inline">\(500\)</span> g con <span class="math inline">\(62\,\%\)</span> de cobre. Suponiendo que las masas se suman sin pérdidas, las masas <span class="math inline">\(x,y\)</span> de A y B, en gramos, deben satisfacer</p>
 <p><span class="math display">\[
-3x-5&lt;7+x.
+\left\{\begin{aligned}
+x+y&amp;=500\\
+0.80x+0.50y&amp;=310.
+\end{aligned}\right.
 \]</span></p>
-<p>Se aplican operaciones equivalentes hasta aislar <span class="math inline">\(x\)</span>:</p>
+<p>Por sustitución, <span class="math inline">\(y=500-x\)</span>. Entonces</p>
 <p><span class="math display">\[
 \begin{aligned}
-3x-5 &amp;&lt; 7+x,\\
-2x-5 &amp;&lt; 7,\\
-2x &amp;&lt; 12,\\
-x &amp;&lt; 6.
+0.80x+0.50(500-x)&amp;=310,\\
+0.30x+250&amp;=310,\\
+0.30x&amp;=60,\\
+x&amp;=200.
 \end{aligned}
 \]</span></p>
-<p>En el último paso se dividió entre <span class="math inline">\(2&gt;0\)</span>, por lo que el signo se conservó. El conjunto solución es</p>
-<p><span class="math display">\[
-S=(-\infty,\,6).
-\]</span></p>
-<p>En la recta real se representa mediante una semirrecta hacia la izquierda, con extremo abierto en <span class="math inline">\(6\)</span>.</p>
-<p>El valor <span class="math inline">\(x=0\)</span> satisface la inecuación original, mientras que <span class="math inline">\(x=10\)</span> no la satisface. Estas sustituciones no demuestran el resultado, pero permiten detectar algunos errores de cálculo.</p>
+<p>Se recupera <span class="math inline">\(y=500-200=300\)</span>. La verificación da <span class="math inline">\(200+300=500\)</span> y <span class="math inline">\(0.80(200)+0.50(300)=310\)</span>. El sistema es <strong>consistente con solución única</strong>: <span class="math inline">\(S=\{(200,300)\}\)</span>. Ambas masas son positivas, por lo que se pueden usar <span class="math inline">\(200\)</span> g de A y <span class="math inline">\(300\)</span> g de B.</p>
+<p>La eliminación conduce al mismo resultado: multiplicar la segunda ecuación por <span class="math inline">\(10\)</span> da <span class="math inline">\(8x+5y=3\,100\)</span>; restar cinco veces la primera da <span class="math inline">\(3x=600\)</span>. Al conservar <span class="math inline">\(x+y=500\)</span>, se recupera también <span class="math inline">\(y=300\)</span>.</p>
+<p>Las rectas son secantes y su punto común es <span class="math inline">\((200,300)\)</span>.</p>
 </section>
-<section id="ejemplo-2.-división-entre-una-constante-negativa" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-división-entre-una-constante-negativa">Ejemplo 2. División entre una constante negativa</h3>
-<p>Resolver</p>
+<section id="ejemplo-2.-un-sistema-inconsistente" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-un-sistema-inconsistente">Ejemplo 2. Un sistema inconsistente</h3>
+<p>Considere</p>
 <p><span class="math display">\[
-4-2x\le10.
+\left\{\begin{aligned}
+x-2y&amp;=4\\
+-2x+4y&amp;=3.
+\end{aligned}\right.
 \]</span></p>
-<p>Se obtiene</p>
+<p>Se conserva la primera ecuación y se suma su doble a la segunda:</p>
 <p><span class="math display">\[
-\begin{aligned}
-4-2x &amp;\le 10,\\
--2x &amp;\le 6,\\
-x &amp;\ge -3.
-\end{aligned}
+(-2x+4y)+2(x-2y)=3+2(4)
+\quad\Longrightarrow\quad 0=11.
 \]</span></p>
-<p>Al dividir entre <span class="math inline">\(-2&lt;0\)</span>, el signo se invirtió. Por tanto,</p>
-<p><span class="math display">\[
-S=[-3,\,\infty).
-\]</span></p>
-<p>También puede evitarse la división entre una constante negativa:</p>
-<p><span class="math display">\[
-4-2x\le10
-\quad\Longleftrightarrow\quad
-4\le10+2x
-\quad\Longleftrightarrow\quad
--3\le x.
-\]</span></p>
+<p>Como esta igualdad es falsa, el sistema es <strong>inconsistente</strong> y <span class="math inline">\(S=\varnothing\)</span>. Al despejar <span class="math inline">\(y\)</span>, las rectas son <span class="math inline">\(y=\frac12x-2\)</span> y <span class="math inline">\(y=\frac12x+\frac34\)</span>: tienen la misma pendiente y distintas ordenadas al origen, de modo que son paralelas distintas.</p>
 </section>
-<section id="ejemplo-3.-denominadores-numéricos" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-3.-denominadores-numéricos">Ejemplo 3. Denominadores numéricos</h3>
-<p>Resolver</p>
+<section id="ejemplo-3.-un-sistema-con-infinitas-soluciones" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-3.-un-sistema-con-infinitas-soluciones">Ejemplo 3. Un sistema con infinitas soluciones</h3>
+<p>Considere</p>
 <p><span class="math display">\[
-\frac{x-1}{3}-\frac{x}{4}\ge1.
+\left\{\begin{aligned}
+3x+2y&amp;=6\\
+6x+4y&amp;=12.
+\end{aligned}\right.
 \]</span></p>
-<p>El mínimo común múltiplo de <span class="math inline">\(3\)</span> y <span class="math inline">\(4\)</span> es <span class="math inline">\(12\)</span>. Como <span class="math inline">\(12&gt;0\)</span>, al multiplicar todos los términos por esta cantidad el signo se conserva:</p>
+<p>Restar el doble de la primera ecuación a la segunda produce <span class="math inline">\(0=0\)</span>. La segunda ecuación repite la condición de la primera: las rectas son coincidentes y el sistema es <strong>consistente con infinitas soluciones</strong>.</p>
+<p>Se conserva <span class="math inline">\(3x+2y=6\)</span>, de donde <span class="math inline">\(y=3-\frac32x\)</span>. Por tanto,</p>
 <p><span class="math display">\[
-\begin{aligned}
-4(x-1)-3x &amp;\ge 12,\\
-x-4 &amp;\ge 12,\\
-x &amp;\ge 16.
-\end{aligned}
+S=\left\{\left(x,3-\frac32x\right):x\in\mathbb R\right\}
+=\{(x,y)\in\mathbb R^2:3x+2y=6\}.
 \]</span></p>
-<p>Así,</p>
-<p><span class="math display">\[
-S=[16,\,\infty).
-\]</span></p>
-<p>El extremo pertenece al conjunto solución porque, para <span class="math inline">\(x=16\)</span>,</p>
-<p><span class="math display">\[
-\frac{16-1}{3}-\frac{16}{4}=1.
-\]</span></p>
-</section>
-<section id="ejemplo-4.-desigualdad-doble" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-4.-desigualdad-doble">Ejemplo 4. Desigualdad doble</h3>
-<p>Resolver</p>
-<p><span class="math display">\[
--3&lt;2x+1\le5.
-\]</span></p>
-<p>Las mismas operaciones deben aplicarse en los tres miembros:</p>
-<p><span class="math display">\[
-\begin{aligned}
--3 &amp;&lt; 2x+1\le 5,\\
--4 &amp;&lt; 2x\le 4,\\
--2 &amp;&lt; x\le 2.
-\end{aligned}
-\]</span></p>
-<p>Por tanto,</p>
-<p><span class="math display">\[
-S=(-2,\,2].
-\]</span></p>
-<p>En la recta real se representa mediante un segmento abierto en <span class="math inline">\(-2\)</span> y cerrado en <span class="math inline">\(2\)</span>.</p>
-<p>El extremo <span class="math inline">\(2\)</span> está incluido porque <span class="math inline">\(2(2)+1=5\)</span>; el extremo <span class="math inline">\(-2\)</span> está excluido porque <span class="math inline">\(2(-2)+1=-3\)</span> no satisface la desigualdad estricta <span class="math inline">\(-3&lt;2x+1\)</span>.</p>
+<p>Cada valor real de <span class="math inline">\(x\)</span> determina una pareja. Por ejemplo, <span class="math inline">\((0,3)\)</span>, <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((4,-3)\)</span> son soluciones. Para la última, <span class="math inline">\(3(4)+2(-3)=6\)</span> y <span class="math inline">\(6(4)+4(-3)=12\)</span>. En cambio, <span class="math inline">\((1,1)\)</span> no es solución, pues <span class="math inline">\(3+2\ne6\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>No invertir el signo al dividir entre una constante negativa.</strong> De <span class="math inline">\(-2x&lt;6\)</span> se obtiene <span class="math inline">\(x&gt;-3\)</span>, no <span class="math inline">\(x&lt;-3\)</span>.</li>
-<li><strong>Invertir el signo al sumar o restar.</strong> De <span class="math inline">\(x+5&lt;8\)</span> se obtiene <span class="math inline">\(x&lt;3\)</span>; sumar o restar conserva el orden.</li>
-<li><strong>Descuidar los extremos.</strong> La solución de <span class="math inline">\(x\ge-3\)</span> es <span class="math inline">\([-3,\,\infty)\)</span>, mientras que la de <span class="math inline">\(x&gt;-3\)</span> es <span class="math inline">\((-3,\,\infty)\)</span>.</li>
-<li><strong>Confundir la frontera con el conjunto solución.</strong> En <span class="math inline">\(2x&lt;10\)</span>, el número <span class="math inline">\(5\)</span> es la frontera y no pertenece a <span class="math inline">\(S=(-\infty,\,5)\)</span>.</li>
-<li><strong>Resolver una desigualdad con valor absoluto por un solo lado.</strong> La condición <span class="math inline">\(|x-a|&lt;r\)</span> exige simultáneamente <span class="math inline">\(a-r&lt;x\)</span> y <span class="math inline">\(x&lt;a+r\)</span>.</li>
+<li><strong>Confundir una identidad con una contradicción.</strong> <span class="math inline">\(0=0\)</span> no impone otra condición; <span class="math inline">\(0=11\)</span> es imposible. En el primer caso se debe conservar la ecuación que aún relaciona las incógnitas.</li>
+<li><strong>Multiplicar solo el lado izquierdo.</strong> El doble de <span class="math inline">\(x+y=500\)</span> es <span class="math inline">\(2x+2y=1\,000\)</span>; el término independiente también se multiplica.</li>
+<li><strong>Conservar únicamente la suma de las ecuaciones.</strong> De <span class="math inline">\(x+y=5\)</span> y <span class="math inline">\(x-y=1\)</span> se obtiene <span class="math inline">\(2x=6\)</span>, pero todavía se necesita una ecuación original para determinar <span class="math inline">\(y=2\)</span>.</li>
+<li><strong>Afirmar que cualquier pareja sirve si hay infinitas soluciones.</strong> En el Ejemplo 3 todas deben cumplir <span class="math inline">\(3x+2y=6\)</span>; <span class="math inline">\((1,1)\)</span> no cumple esa condición.</li>
+<li><strong>Decidir solo por la apariencia del dibujo.</strong> Para <span class="math inline">\(2x-3y=1\)</span> y <span class="math inline">\(4x-6y=3\)</span>, restar el doble de la primera ecuación a la segunda da <span class="math inline">\(0=1\)</span>: las rectas son paralelas distintas aunque parezcan casi superpuestas.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva los siguientes ejercicios.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada clasificación con una igualdad obtenida por sustitución o eliminación.</p>
 <ol type="1">
-<li>Resuelva <span class="math inline">\(4-3(2x-1)\ge2(x+5)\)</span>; exprese el conjunto solución como intervalo y represéntelo en la recta real.</li>
-<li>Construya una inecuación lineal cuyo conjunto solución sea <span class="math inline">\([-2,\,\infty)\)</span>. Resuélvala para verificar su propuesta y describa su representación en la recta real.</li>
-<li>Un procedimiento propone que, de <span class="math inline">\(6-2x&lt;18\)</span>, se obtiene <span class="math inline">\(x&lt;-6\)</span>. Identifique el error, corrija la solución y compruebe con un valor concreto que el resultado corregido es coherente.</li>
+<li><p>Clasifique los siguientes sistemas e indique si sus rectas son secantes, paralelas distintas o coincidentes. Si hay solución única, determínela y verifíquela; si hay infinitas, describa todas las soluciones y dé dos parejas particulares.</p>
+<ol type="a">
+<li><p><span class="math inline">\(2x+y=7\)</span>, <span class="math inline">\(x-y=-1\)</span>.</p></li>
+<li><p><span class="math inline">\(x-3y=2\)</span>, <span class="math inline">\(-2x+6y=5\)</span>.</p></li>
+<li><p><span class="math inline">\(4x-6y=2\)</span>, <span class="math inline">\(-2x+3y=-1\)</span>.</p></li>
+</ol></li>
+<li><p>En el registro de una mezcla de dos polvos para fabricar cerámica se anotan estas condiciones: la masa total es <span class="math inline">\(500\)</span> g; la mitad de la masa del primer polvo más la mitad de la masa del segundo es <span class="math inline">\(250\)</span> g. Las masas se suman sin pérdidas y se admiten cantidades no negativas.</p>
+<ol type="a">
+<li><p>Defina las variables, plantee el sistema y clasifíquelo. ¿La segunda anotación permite determinar por separado las dos masas? Describa todas las parejas admisibles y dé dos ejemplos.</p></li>
+<li><p>Si la segunda anotación dijera <span class="math inline">\(260\)</span> g, clasifique el sistema e interprete el resultado en el contexto del registro.</p></li>
+</ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -771,42 +712,23 @@ S=(-2,\,2].
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> La propiedad distributiva da <span class="math inline">\(-3(2x-1)=-6x+3\)</span> y <span class="math inline">\(2(x+5)=2x+10\)</span>. Al desarrollar y reunir términos se obtiene</p>
+<p><strong>1. a.</strong> Al sumar las ecuaciones se obtiene <span class="math inline">\(3x=6\)</span>, de donde <span class="math inline">\(x=2\)</span>. De <span class="math inline">\(x-y=-1\)</span> resulta <span class="math inline">\(y=3\)</span>. La pareja verifica <span class="math inline">\(2(2)+3=7\)</span> y <span class="math inline">\(2-3=-1\)</span>. El sistema es consistente con solución única, <span class="math inline">\(S=\{(2,3)\}\)</span>; sus rectas son secantes.</p>
+<p><strong>1. b.</strong> Sumar el doble de la primera ecuación a la segunda da <span class="math inline">\(0=9\)</span>. Es una contradicción: sistema inconsistente, <span class="math inline">\(S=\varnothing\)</span>; rectas paralelas distintas.</p>
+<p><strong>1. c.</strong> Sumar la primera ecuación al doble de la segunda da <span class="math inline">\(0=0\)</span>. Las dos condiciones son equivalentes, así que hay infinitas soluciones y las rectas coinciden. De <span class="math inline">\(4x-6y=2\)</span> se obtiene <span class="math inline">\(y=(2x-1)/3\)</span>:</p>
 <p><span class="math display">\[
-\begin{aligned}
-4-3(2x-1)&amp;\ge2(x+5),\\
-7-6x&amp;\ge2x+10,\\
--8x&amp;\ge3,\\
-x&amp;\le-\frac38.
-\end{aligned}
+S=\left\{\left(x,\frac{2x-1}{3}\right):x\in\mathbb R\right\}.
 \]</span></p>
-<p>En el último paso se dividió entre <span class="math inline">\(-8&lt;0\)</span>, por lo que el signo se invirtió. Así,</p>
+<p>Dos soluciones son <span class="math inline">\((2,1)\)</span> y <span class="math inline">\((-1,-1)\)</span>. La primera cumple <span class="math inline">\(8-6=2\)</span> y <span class="math inline">\(-4+3=-1\)</span>; la segunda cumple <span class="math inline">\(-4+6=2\)</span> y <span class="math inline">\(2-3=-1\)</span>.</p>
+<p><strong>2. a.</strong> Sean <span class="math inline">\(x,y\)</span> las masas de los dos polvos, en gramos, con <span class="math inline">\(x,y\ge0\)</span>. El sistema es</p>
 <p><span class="math display">\[
-S=\left(-\infty,\,-\frac38\right].
+\left\{\begin{aligned}
+x+y&amp;=500\\
+0.5x+0.5y&amp;=250.
+\end{aligned}\right.
 \]</span></p>
-<p>En la recta real se representa con extremo cerrado en <span class="math inline">\(-\dfrac38\)</span> y una semirrecta hacia la izquierda.</p>
-<p><strong>2.</strong> Hay distintas respuestas posibles. Por ejemplo,</p>
-<p><span class="math display">\[
-2x+4\ge0
-\]</span></p>
-<p>tiene como solución</p>
-<p><span class="math display">\[
-2x\ge-4
-\quad\Longleftrightarrow\quad
-x\ge-2,
-\qquad
-S=[-2,\,\infty).
-\]</span></p>
-<p>En la recta real se representa con extremo cerrado en <span class="math inline">\(-2\)</span> y una semirrecta hacia la derecha.</p>
-<p><strong>3.</strong> El error consiste en no invertir el signo al dividir entre <span class="math inline">\(-2\)</span>. El procedimiento correcto es</p>
-<p><span class="math display">\[
-6-2x&lt;18
-\quad\Longleftrightarrow\quad
--2x&lt;12
-\quad\Longleftrightarrow\quad
-x&gt;-6.
-\]</span></p>
-<p>Así, <span class="math inline">\(S=(-6,\,\infty)\)</span>. El valor <span class="math inline">\(x=0\)</span> satisface la inecuación original y pertenece a este intervalo. En cambio, <span class="math inline">\(x=-10\)</span> pertenece al conjunto incorrecto <span class="math inline">\((-\infty,\,-6)\)</span>, pero no satisface la inecuación original.</p>
+<p>Restar la mitad de la primera ecuación a la segunda da <span class="math inline">\(0=0\)</span>. El sistema es consistente con infinitas soluciones; la segunda anotación repite la información de masa total y no determina las masas individuales.</p>
+<p>Al conservar <span class="math inline">\(y=500-x\)</span>, las restricciones dan <span class="math inline">\(0\le x\le500\)</span>. Las parejas admisibles son <span class="math inline">\((x,500-x)\)</span> con <span class="math inline">\(x\)</span> en ese intervalo; por ejemplo, <span class="math inline">\((100,400)\)</span> y <span class="math inline">\((250,250)\)</span>, cuyas masas suman <span class="math inline">\(500\)</span> g y cuyas semisumas son <span class="math inline">\(250\)</span> g.</p>
+<p><strong>2. b.</strong> Ahora la segunda ecuación es <span class="math inline">\(0.5x+0.5y=260\)</span>. Restar la mitad de la primera produce <span class="math inline">\(0=10\)</span>, una contradicción. El sistema es inconsistente: las dos anotaciones no pueden ser correctas simultáneamente.</p>
 </div>
 </div>
 </div>
@@ -814,15 +736,98 @@ x&gt;-6.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li>Resuelva <span class="math inline">\(2x+9&lt;3\)</span> y represente el conjunto solución en la recta real.</li>
-<li>Resuelva <span class="math inline">\(4-x\ge9\)</span>.</li>
-<li>Resuelva <span class="math inline">\(\dfrac{2x+1}{5}\le\dfrac{x-2}{2}\)</span>.</li>
-<li>Resuelva <span class="math inline">\(-7&lt;3x-1\le8\)</span> y exprese el conjunto solución como intervalo.</li>
-<li>Escriba una inecuación lineal cuyo conjunto solución sea exactamente <span class="math inline">\([4,\,\infty)\)</span> y compruebe su propuesta.</li>
-<li>Resuelva <span class="math inline">\(3(x+2)&lt;3x+1\)</span> y <span class="math inline">\(2(x+1)\ge2x-5\)</span>. Explique por qué en un caso el conjunto solución es vacío y en el otro es <span class="math inline">\(\mathbb R\)</span>.</li>
-<li>Exprese la condición «la distancia de <span class="math inline">\(x\)</span> a <span class="math inline">\(5\)</span> es menor que <span class="math inline">\(2\)</span>» mediante valor absoluto y determine el intervalo correspondiente.</li>
-<li>Una longitud <span class="math inline">\(L\)</span>, medida en milímetros, es admisible cuando <span class="math inline">\(|L-50|\le0.2\)</span>. Exprese esta condición como un intervalo e interprete sus extremos.</li>
+<li><p>Clasifique cada sistema, indique una igualdad que justifique la clasificación y describa cómo son sus rectas. Escriba la solución única o, si hay infinitas, el conjunto solución por comprensión.</p>
+<ol type="a">
+<li><p><span class="math inline">\(3x-y=5\)</span>, <span class="math inline">\(x+2y=4\)</span>.</p></li>
+<li><p><span class="math inline">\(2x+4y=6\)</span>, <span class="math inline">\(x+2y=3\)</span>.</p></li>
+<li><p><span class="math inline">\(x-y=2\)</span>, <span class="math inline">\(2x-2y=1\)</span>.</p></li>
+</ol></li>
+<li><p>Se dispone de dos aleaciones, es decir, mezclas que contienen elementos metálicos: E tiene <span class="math inline">\(30\,\%\)</span> de níquel en masa y F, <span class="math inline">\(70\,\%\)</span>. Se supone que las masas totales y las de níquel se suman sin pérdidas. La masa de níquel de una porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.</p>
+<ol type="a">
+<li><p>Defina las variables con sus unidades y restricciones. Plantee y resuelva el sistema para obtener <span class="math inline">\(800\)</span> g con <span class="math inline">\(45\,\%\)</span> de níquel; clasifíquelo e interprete la solución.</p></li>
+<li><p>Plantee y resuelva el sistema para obtener <span class="math inline">\(800\)</span> g con <span class="math inline">\(80\,\%\)</span> de níquel. Clasifíquelo sobre <span class="math inline">\(\mathbb R\)</span> y decida si la mezcla puede prepararse con E y F.</p></li>
+</ol></li>
+<li><p>Una <strong>probeta</strong> es una muestra preparada para un ensayo. Todas las probetas de un mismo tipo tienen igual masa, estrictamente positiva. Se registran estas pesadas:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pesada</th>
+<th style="text-align: right;">Probetas de tipo A</th>
+<th style="text-align: right;">Probetas de tipo B</th>
+<th style="text-align: right;">Masa total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primera</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(520\)</span> g</td>
+</tr>
+<tr class="even">
+<td>Segunda</td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(6\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\,040\)</span> g</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Sean <span class="math inline">\(x,y\)</span> las masas, en gramos, de una probeta de tipo A y B, respectivamente. Plantee el sistema, clasifíquelo y describa las parejas de masas admisibles. ¿Las pesadas determinan las masas individuales?</p></li>
+<li><p>Se puede añadir uno de dos datos: “la segunda masa total es el doble de la primera” o “una probeta B pesa <span class="math inline">\(40\)</span> g más que una A”. ¿Cuál permite determinar las masas individuales? Escriba su ecuación y obtenga esas masas.</p></li>
+</ol></li>
+<li><p>Elija sustitución o eliminación, justifique brevemente su elección y resuelva.</p>
+<ol type="a">
+<li><p><span class="math inline">\(y=2x-3\)</span>, <span class="math inline">\(3x+2y=8\)</span>.</p></li>
+<li><p><span class="math inline">\(5x-3y=7\)</span>, <span class="math inline">\(5x+2y=-3\)</span>.</p></li>
+</ol></li>
+<li><p>Para resolver <span class="math inline">\(2x+3y=12\)</span>, <span class="math inline">\(x-y=1\)</span>, un estudiante multiplica la segunda ecuación por <span class="math inline">\(3\)</span>, pero escribe <span class="math inline">\(3x-3y=1\)</span>. Después suma y propone <span class="math inline">\((13/5,8/5)\)</span>. Identifique el error, corrija la solución y compruebe si la propuesta satisface las ecuaciones originales.</p></li>
+<li><p>Escriba una segunda ecuación que, junto con <span class="math inline">\(x+y=500\)</span>, forme un sistema con la condición indicada. Justifique cada elección con una igualdad obtenida por eliminación.</p>
+<ol type="a">
+<li><p>Infinitas soluciones.</p></li>
+<li><p>Ninguna solución.</p></li>
+<li><p><span class="math inline">\((100,400)\)</span> como única solución.</p></li>
+</ol></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\(7x=14\)</span>; consistente con solución única, <span class="math inline">\(S=\{(2,1)\}\)</span>; rectas secantes.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(0=0\)</span>; consistente con infinitas soluciones; rectas coincidentes. <span class="math inline">\(S=\{(x,y)\in\mathbb R^2:x+2y=3\}\)</span>.</p>
+<p><strong>1. c.</strong> <span class="math inline">\(0=-3\)</span>; inconsistente, <span class="math inline">\(S=\varnothing\)</span>; rectas paralelas distintas.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x\)</span>: masa de E, en g; <span class="math inline">\(y\)</span>: masa de F, en g, con <span class="math inline">\(x,y\ge0\)</span>. Sistema: <span class="math inline">\(x+y=800\)</span>, <span class="math inline">\(0.30x+0.70y=360\)</span>. Consistente con solución única <span class="math inline">\((500,300)\)</span>: <span class="math inline">\(500\)</span> g de E y <span class="math inline">\(300\)</span> g de F.</p>
+<p><strong>2. b.</strong> Sistema: <span class="math inline">\(x+y=800\)</span>, <span class="math inline">\(0.30x+0.70y=640\)</span>. Consistente sobre <span class="math inline">\(\mathbb R\)</span> con solución única <span class="math inline">\((-200,1\,000)\)</span>. La mezcla no puede prepararse: la masa de E sería negativa.</p>
+<p><strong>3. a.</strong> Sistema: <span class="math inline">\(2x+3y=520\)</span>, <span class="math inline">\(4x+6y=1\,040\)</span>. Consistente con infinitas soluciones; las pesadas no determinan las masas individuales. Parejas admisibles: <span class="math inline">\(\left(x,(520-2x)/3\right)\)</span> con <span class="math inline">\(0&lt;x&lt;260\)</span>; por ejemplo, <span class="math inline">\((80,120)\)</span> y <span class="math inline">\((200,40)\)</span>, en gramos.</p>
+<p><strong>3. b.</strong> El segundo dato, <span class="math inline">\(y-x=40\)</span>, permite determinar las masas: <span class="math inline">\(x=80\)</span> g y <span class="math inline">\(y=120\)</span> g. El primero repite la proporción ya registrada.</p>
+<p><strong>4. a.</strong> Sustitución, porque <span class="math inline">\(y\)</span> ya está despejada; solución <span class="math inline">\((2,1)\)</span>.</p>
+<p><strong>4. b.</strong> Eliminación, porque los coeficientes de <span class="math inline">\(x\)</span> son iguales; solución <span class="math inline">\((1/5,-2)\)</span>.</p>
+<p><strong>5.</strong> No se multiplicó el término independiente: la ecuación correcta es <span class="math inline">\(3x-3y=3\)</span>. La solución del sistema es <span class="math inline">\((3,2)\)</span>. La propuesta del estudiante satisface <span class="math inline">\(x-y=1\)</span>, pero el lado izquierdo de la primera ecuación vale <span class="math inline">\(10\)</span>, no <span class="math inline">\(12\)</span>.</p>
+<p><strong>6.</strong> Una respuesta posible en cada inciso:</p>
+<p><strong>6. a.</strong> <span class="math inline">\(2x+2y=1\,000\)</span>; igualdad <span class="math inline">\(0=0\)</span>.</p>
+<p><strong>6. b.</strong> <span class="math inline">\(x+y=600\)</span>; igualdad <span class="math inline">\(0=100\)</span>.</p>
+<p><strong>6. c.</strong> <span class="math inline">\(x-y=-300\)</span>; igualdad <span class="math inline">\(2x=200\)</span>, con solución única <span class="math inline">\((100,400)\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El trabajo realizado permite comprobar si puede:</p>
+<ul>
+<li>Resolver un sistema por sustitución o eliminación y verificar una solución única en las ecuaciones originales.</li>
+<li>Distinguir una igualdad que determina una incógnita, una contradicción y una identidad, conservando las condiciones necesarias para describir todo el conjunto solución.</li>
+<li>Relacionar solución única, ausencia de soluciones e infinitas soluciones con rectas secantes, paralelas distintas y coincidentes.</li>
+<li>Explicar si los datos de un problema determinan cantidades, repiten información o son incompatibles, y distinguir una solución algebraica de una solución admisible en el contexto.</li>
+</ul>
 
 
 </section>
@@ -1237,13 +1242,13 @@ x&gt;-6.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-08-14-sesion-05.html" class="pagination-link" aria-label="Sesión 05. Ecuaciones lineales y despeje de fórmulas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></span>
+      <a href="../sesiones/2026-09-21-sesion-27.html" class="pagination-link" aria-label="Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-08-18-sesion-07.html" class="pagination-link" aria-label="Sesión 07. Números complejos: forma cartesiana, plano, suma y resta">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
