@@ -514,7 +514,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá traducir entre un sistema lineal y su matriz aumentada, aplicar las tres operaciones elementales de renglón e iniciar la eliminación debajo de un pivote. Podrá comprobarlo en la <a href="#actividad">Actividad</a>, al conservar el orden de las incógnitas, operar también los términos independientes e interpretar las ecuaciones obtenidas.</p>
+<p>Al finalizar la sesión podrá traducir entre un sistema lineal y su matriz aumentada, aplicar las tres operaciones elementales de renglón e iniciar la eliminación debajo de un pivote. Podrá comprobarlo al traducir sin ayuda los sistemas de la <a href="#actividad">Actividad 1</a>, ejecutar las operaciones de la Actividad 2 sobre renglones completos y justificar la clasificación de la Actividad 3.</p>
 </section>
 <section id="matriz-de-coeficientes-y-matriz-aumentada" class="level2">
 <h2 class="anchored" data-anchor-id="matriz-de-coeficientes-y-matriz-aumentada">Matriz de coeficientes y matriz aumentada</h2>
@@ -598,7 +598,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td><span class="math inline">\([0\ \cdots\ 0\mid c]\)</span>, con <span class="math inline">\(c\ne0\)</span></td>
-<td><span class="math inline">\(0=c\)</span>: contradicción; el sistema no tiene solución</td>
+<td><span class="math inline">\(0=c\)</span>: una <strong>contradicción</strong>, es decir, una igualdad falsa; el sistema no tiene solución</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\([0\ \cdots\ 0\mid0]\)</span></td>
@@ -693,9 +693,9 @@ Traducir un sistema a su matriz aumentada: mismo orden de incógnitas en todas l
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
 <li><strong>Omitir un coeficiente cero.</strong> Para <span class="math inline">\(x-3z=0\)</span>, en el orden <span class="math inline">\(x,y,z\)</span>, se necesita <span class="math inline">\([1\ \ 0\ \ {-3}\mid0]\)</span>. El renglón <span class="math inline">\([1\ \ {-3}\mid0]\)</span> tiene una columna de coeficientes menos y no representa la ecuación con ese orden de tres incógnitas.</li>
-<li><strong>Cambiar el orden de las incógnitas.</strong> Para <span class="math inline">\(y+2x=7\)</span>, la fila de coeficientes en el orden <span class="math inline">\(x,y\)</span> es <span class="math inline">\([2\ \ 1]\)</span>, no <span class="math inline">\([1\ \ 2]\)</span>.</li>
+<li><strong>Cambiar el orden de las incógnitas.</strong> En el orden <span class="math inline">\(x,y\)</span>, la ecuación <span class="math inline">\(y+2x=7\)</span> produce el renglón <span class="math inline">\([2\ \ 1\mid7]\)</span>. Escribir <span class="math inline">\([1\ \ 2\mid7]\)</span> cambia la ecuación por <span class="math inline">\(x+2y=7\)</span>: <span class="math inline">\((2,3)\)</span> satisface la primera, pero en la segunda da <span class="math inline">\(8\ne7\)</span>.</li>
 <li><strong>Dejar fijo el término independiente.</strong> Multiplicar por <span class="math inline">\(\frac12\)</span> el renglón <span class="math inline">\([2\ \ 4\mid6]\)</span> produce <span class="math inline">\([1\ \ 2\mid3]\)</span>, no <span class="math inline">\([1\ \ 2\mid6]\)</span>.</li>
-<li><strong>Usar cero como pivote.</strong> Si la entrada elegida es cero, no se puede dividir entre ella. Se busca una entrada no nula en esa columna y se intercambian renglones; si toda la columna es nula, se pasa a la siguiente.</li>
+<li><strong>Usar cero como pivote.</strong> En <span class="math inline">\(\left[\begin{array}{cc|c}0&amp;2&amp;6\\1&amp;-1&amp;1\end{array}\right]\)</span>, la entrada <span class="math inline">\(a_{11}=0\)</span> no puede ser el pivote: no se puede dividir entre ella. El intercambio <span class="math inline">\(R_1\leftrightarrow R_2\)</span> coloca el <span class="math inline">\(1\)</span> en el primer renglón y permite usarlo como pivote. Si toda la columna fuera nula, se pasaría a la siguiente.</li>
 <li><strong>Concluir que un renglón nulo implica infinitas soluciones.</strong> La matriz <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;0&amp;3\\0&amp;1&amp;2\\0&amp;0&amp;0\end{array}\right]\)</span> representa <span class="math inline">\(x=3\)</span>, <span class="math inline">\(y=2\)</span>, <span class="math inline">\(0=0\)</span>. Tiene solución única <span class="math inline">\((3,2)\)</span>.</li>
 </ul>
 </section>
