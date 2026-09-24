@@ -1,0 +1,368 @@
+---
+title: "Sesión 30. Eliminación de Gauss y sustitución regresiva"
+date: 2026-09-24
+description: "Forma escalonada, elección de pivotes, eliminación de Gauss y sustitución regresiva en sistemas con solución única."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá resolver un sistema $3\times3$ con solución única mediante Gauss, registrar las operaciones de renglón y verificar la solución en las ecuaciones originales. Podrá comprobarlo al resolver los problemas de la [Actividad](#actividad) y explicar cómo los pivotes permiten determinar las incógnitas por sustitución regresiva.
+
+## Forma escalonada
+
+En la [Sesión 29](2026-09-23-sesion-29.qmd) se representaron sistemas mediante matrices aumentadas y se obtuvieron ceros debajo del primer pivote. El escalonamiento continúa hacia las columnas siguientes, trabajando con los renglones inferiores y conservando los ceros ya obtenidos.
+
+Una matriz está en **forma escalonada por renglones** cuando:
+
+1. Los renglones nulos, si los hay, están al final.
+2. La primera entrada no nula de cada renglón no nulo está a la derecha de la primera entrada no nula del renglón anterior.
+3. Debajo de cada una de esas primeras entradas no nulas hay solamente ceros.
+
+En una matriz escalonada, esas primeras entradas no nulas son sus **pivotes**. No se exige que valgan $1$. La tercera condición hace explícita una consecuencia de las dos primeras.
+
+Por ejemplo, la matriz
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\0&2&0&80\end{array}\right]
+$$
+
+no está escalonada: los renglones segundo y tercero comienzan en la misma columna. En cambio,
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\0&0&-8&-120\end{array}\right]
+$$
+
+sí está escalonada. Sus pivotes $1,-1,-8$ están en las columnas de $x,y,z$, respectivamente. El Ejemplo 1 muestra la operación que conecta ambas matrices.
+
+## Método de Gauss y sustitución regresiva
+
+El **método de eliminación de Gauss** transforma la matriz aumentada mediante [operaciones elementales de renglón](2026-09-23-sesion-29.qmd). Al ser reversibles, estas operaciones conservan exactamente el conjunto solución. Para un sistema $3\times3$ **con solución única**, el procedimiento es:
+
+1. Escriba la matriz aumentada con las incógnitas en un orden fijo e incluya los coeficientes cero.
+2. Coloque una entrada no nula de la primera columna en el primer renglón. Si $a_{11}=0$, intercambie $R_1$ con un renglón que tenga una entrada no nula en esa columna. Use ese pivote para anular las entradas inferiores.
+3. Trabaje ahora con los renglones segundo y tercero. Si la entrada de la segunda columna del segundo renglón es cero, intercambie esos renglones para colocar allí una entrada no nula. Anule la entrada situada debajo, conservando los ceros de la primera columna.
+4. Compruebe que obtuvo una matriz escalonada con tres pivotes, uno en cada columna de coeficientes. No se divide entre cero: si falta uno de esos pivotes, no se cumple el caso de solución única aquí descrito.
+5. Recupere las ecuaciones y aplique **sustitución regresiva**: determine $z$ en la última ecuación, sustituya ese valor para obtener $y$ en la segunda y use ambos para obtener $x$ en la primera.
+6. Verifique la terna en las tres **ecuaciones originales**. En un problema de masas, compruebe también las unidades y las restricciones del enunciado.
+
+Para anular una entrada $a$ debajo de un pivote $p\ne0$ situado en el renglón $j$, se aplica
+
+$$
+R_i\to R_i-\frac{a}{p}R_j,
+\qquad a-\frac{a}{p}p=0.
+$$
+
+La operación afecta al **renglón completo**, incluido el término independiente. Un intercambio también puede servir para elegir un pivote $1$ o $-1$ y simplificar los cálculos; las fracciones, por sí mismas, no indican un error.
+
+La sustitución regresiva determina una sola terna porque la última ecuación tiene una incógnita con coeficiente no nulo. Una vez conocido su valor, la segunda determina otra incógnita; después, la primera determina la restante. En cada paso se resuelve una [ecuación lineal en una incógnita](2026-08-14-sesion-05.qmd) con coeficiente distinto de cero. No es necesario anular las entradas situadas arriba de los pivotes para obtener la solución de este modo.
+
+## Ejemplos
+
+### Ejemplo 1. Terminar el escalonamiento de la mezcla cerámica
+
+Se retoma el [Ejemplo 3 de la Sesión 29](2026-09-23-sesion-29.qmd): $100$ g de una mezcla cerámica con $x$ g de alúmina, $y$ g de sílice y $z$ g de magnesia, con $x,y,z\ge0$. Las masas se suman sin pérdidas; la masa de alúmina es el triple de la de magnesia y la de sílice es $20$ g menor que la suma de las otras dos:
+
+$$
+\left\{\begin{aligned} x+y+z&=100\\ x-3z&=0\\ -x+y-z&=-20 \end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}1&1&1&100\\1&0&-3&0\\-1&1&-1&-20\end{array}\right].
+$$
+
+Con $R_2\to R_2-R_1$ y $R_3\to R_3+R_1$ se obtuvieron ceros debajo del primer pivote y se llegó a
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\0&2&0&80\end{array}\right].
+$$
+
+**Columna 2.** El pivote del renglón $2$ es $-1$. Para anular el $2$ del renglón $3$ se aplica $R_3\to R_3-\frac{2}{-1}R_2$, es decir, $R_3\to R_3+2R_2$: a cada entrada del renglón $3$ se le suma el doble de la del renglón $2$, incluido el término independiente: $80+2(-100)=-120$.
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-4&-100\\0&0&-8&-120\end{array}\right].
+$$
+
+La matriz está en forma escalonada, con pivotes $1$, $-1$ y $-8$.
+
+**Sustitución regresiva.** Las ecuaciones son $x+y+z=100$, $-y-4z=-100$ y $-8z=-120$. De la tercera, $z=15$. En la segunda, $-y-4(15)=-100$, de donde $-y=-40$ y $y=40$. En la primera, $x+40+15=100$ y $x=45$.
+
+**Verificación en el sistema original** (la [comprobación por sustitución](2026-09-21-sesion-27.qmd) de la Sesión 27): $45+40+15=100$; $45-3(15)=0$; $-45+40-15=-20$. La terna $(45,40,15)$ cumple las tres ecuaciones. La mezcla lleva $45$ g de alúmina, $40$ g de sílice y $15$ g de magnesia: cantidades no negativas con suma $100$.
+
+<figure style="margin: 1.5rem auto; max-width: 720px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="s30-escalonada-titulo s30-escalonada-desc" style="display: block; width: 100%; height: auto;">
+<title id="s30-escalonada-titulo">Forma escalonada y sustitución regresiva</title>
+<desc id="s30-escalonada-desc">A la izquierda, la matriz aumentada escalonada 1 1 1 | 100, 0 −1 −4 | −100, 0 0 −8 | −120, con sus tres pivotes 1, −1 y −8 resaltados y la región de ceros debajo de la escalera sombreada. A la derecha, las tres ecuaciones que representan sus renglones, leídas de abajo hacia arriba: −8z = −120 da z = 15; −y − 4z = −100 da y = 40; x + y + z = 100 da x = 45. Las flechas indican el orden de la sustitución regresiva.</desc>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#f8fafc" stroke="#dbe4ee"/>
+<g font-family="system-ui, sans-serif" font-size="13" fill="#334155">
+<text x="30" y="30" font-weight="650">Forma escalonada [A | b]</text>
+<text x="380" y="30" font-weight="650">Sustitución regresiva, de abajo hacia arriba</text>
+</g>
+<rect x="64" y="114" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"/>
+<rect x="64" y="159" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"/>
+<rect x="122" y="159" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"/>
+<rect x="64" y="69" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"/>
+<rect x="122" y="114" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"/>
+<rect x="180" y="159" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"/>
+<g stroke="#334155" stroke-width="2.5" fill="none">
+<polyline points="70,68 58,68 58,206 70,206"/>
+<polyline points="306,68 318,68 318,206 306,206"/>
+</g>
+<line x1="246" y1="70" x2="246" y2="204" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 4"/>
+<g font-family="system-ui, sans-serif" font-size="18" fill="#334155" text-anchor="middle">
+<text x="90" y="95" font-weight="700" fill="#0f766e">1</text>
+<text x="148" y="95">1</text>
+<text x="206" y="95">1</text>
+<text x="282" y="95">100</text>
+<text x="90" y="140" fill="#64748b">0</text>
+<text x="148" y="140" font-weight="700" fill="#0f766e">−1</text>
+<text x="206" y="140">−4</text>
+<text x="282" y="140">−100</text>
+<text x="90" y="185" fill="#64748b">0</text>
+<text x="148" y="185" fill="#64748b">0</text>
+<text x="206" y="185" font-weight="700" fill="#0f766e">−8</text>
+<text x="282" y="185">−120</text>
+</g>
+<g font-family="system-ui, sans-serif" font-size="12" fill="#334155">
+<text x="58" y="232">Pivotes en <tspan fill="#0f766e" font-weight="650">verde</tspan>; debajo de ellos, solo ceros.</text>
+</g>
+<g font-family="system-ui, sans-serif" font-size="17" fill="#334155">
+<text x="380" y="95">x + y + z = 100</text>
+<text x="380" y="140">−y − 4z = −100</text>
+<text x="380" y="185">−8z = −120</text>
+</g>
+<g font-family="system-ui, sans-serif" font-size="17" fill="#1d4ed8" font-weight="650">
+<text x="600" y="95">x = 45</text>
+<text x="600" y="140">y = 40</text>
+<text x="600" y="185">z = 15</text>
+</g>
+<g stroke="#1d4ed8" stroke-width="2" fill="none">
+<line x1="585" y1="178" x2="585" y2="150"/>
+<polyline points="579,157 585,149 591,157"/>
+<line x1="585" y1="133" x2="585" y2="105"/>
+<polyline points="579,112 585,104 591,112"/>
+</g>
+<g font-family="system-ui, sans-serif" font-size="12" fill="#334155">
+<text x="380" y="232">Cada renglón aporta una incógnita nueva.</text>
+</g>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">Forma escalonada de la mezcla cerámica del Ejemplo 1 y lectura de la solución por sustitución regresiva: primero $z$, después $y$ y por último $x$.</figcaption>
+</figure>
+
+### Ejemplo 2. Pivote inicial cero: intercambiar antes de eliminar
+
+Resolver
+
+$$
+\left\{\begin{aligned} 2y+3z&=4\\ x+y-z&=0\\ 2x-2y+z&=10 \end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}0&2&3&4\\1&1&-1&0\\2&-2&1&10\end{array}\right].
+$$
+
+La primera ecuación no contiene a $x$, así que $a_{11}=0$ y no puede ser pivote. Se intercambia $R_1\leftrightarrow R_2$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&-1&0\\0&2&3&4\\2&-2&1&10\end{array}\right].
+$$
+
+**Columna 1.** El pivote es $1$. El renglón $2$ ya tiene $0$; para el renglón $3$, $R_3\to R_3-2R_1$: $\bigl[\,2-2(1)\ \ \ -2-2(1)\ \ \ 1-2(-1)\mid 10-2(0)\,\bigr]=[\,0\ \ -4\ \ 3\mid10\,]$.
+
+**Columna 2.** El pivote del renglón $2$ es $2$. Para anular el $-4$ del renglón $3$, $R_3\to R_3+2R_2$: $[\,0\ \ 0\ \ 3+2(3)\mid 10+2(4)\,]=[\,0\ \ 0\ \ 9\mid18\,]$.
+
+$$
+\left[\begin{array}{ccc|c}1&1&-1&0\\0&2&3&4\\0&0&9&18\end{array}\right].
+$$
+
+**Sustitución regresiva.** $9z=18$ da $z=2$; $2y+3(2)=4$ da $2y=-2$ y $y=-1$; $x+(-1)-2=0$ da $x=3$.
+
+**Verificación en el sistema original:** $2(-1)+3(2)=4$; $3+(-1)-2=0$; $2(3)-2(-1)+2=10$. La solución es $(3,-1,2)$. El intercambio inicial no la alteró: solo cambió el orden en que se escriben las ecuaciones.
+
+## Errores frecuentes
+
+- **Dejar fijo el término independiente.** En el Ejemplo 1, $R_2\to R_2-R_1$ produce $[0\ \ {-1}\ \ {-4}\mid-100]$, porque también se calcula $0-100=-100$.
+- **Omitir una incógnita al sustituir.** El renglón $[0\ \ {-1}\ \ {-4}\mid-100]$ representa $-y-4z=-100$. Con $z=15$ se obtiene $y=40$; leer únicamente $-y=-100$ daría un valor incorrecto.
+- **Perder el signo de un múltiplo.** En $R_3\to R_3+2R_2$, el término independiente del Ejemplo 1 es $80+2(-100)=-120$, no $280$.
+- **Concluir que un primer coeficiente cero impide resolver.** En el Ejemplo 2, $a_{11}=0$, pero $R_1\leftrightarrow R_2$ coloca un pivote $1$ y permite continuar. Un cero aislado no determina el tipo de solución.
+- **Comprobar únicamente en una matriz que contiene un error.** Si el último renglón del Ejemplo 1 se escribiera $[0\ \ 0\ \ {-8}\mid280]$, el sistema resultante daría $(-105,240,-35)$. Esa terna satisface la matriz errónea, pero en la tercera ecuación original produce $380\ne-20$. La verificación original permite detectar el fallo.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre cada operación y verifique cada solución en las ecuaciones originales.
+
+1. Considere el sistema
+
+   $$
+   \left\{\begin{aligned}x+2y+z&=3\\2x+3y-z&=-2\\-x+y+2z&=3.\end{aligned}\right.
+   $$
+
+   a. Escriba su matriz aumentada y llévela a la forma escalonada, anotando cada operación.
+
+   b. Obtenga la solución por sustitución regresiva y verifíquela en las tres ecuaciones originales.
+
+2. Un laboratorio dispone de tres lotes de polvo metálico con las composiciones en masa de la tabla. Se quieren preparar $1\,000$ g de una mezcla con $75\,\%$ de hierro, $16\,\%$ de cromo y $9\,\%$ de níquel, usando $x$ g del lote A, $y$ g del lote B y $z$ g del lote C. Las masas de la mezcla y de cada metal se suman sin pérdidas; $x,y,z\ge0$. La masa de un metal en cada porción se obtiene multiplicando la masa de polvo por su porcentaje expresado como fracción.
+
+   | Lote | Hierro | Cromo | Níquel |
+   |---|---:|---:|---:|
+   | A | $90\,\%$ | $10\,\%$ | $0\,\%$ |
+   | B | $70\,\%$ | $20\,\%$ | $10\,\%$ |
+   | C | $60\,\%$ | $20\,\%$ | $20\,\%$ |
+
+   a. Plantee tres ecuaciones: la masa total y las masas de cromo y níquel. Multiplique por $10$ las dos últimas para trabajar con enteros y escriba la matriz aumentada.
+
+   b. Resuelva por Gauss y verifique las tres ecuaciones originales. Interprete las cantidades obtenidas.
+
+   c. Compruebe que la mezcla contiene $750$ g de hierro. ¿Por qué esta condición se cumple al satisfacer las otras tres?
+
+3. La matriz aumentada de un sistema en $x,y,z$ es
+
+   $$
+   \left[\begin{array}{ccc|c}2&-1&3&9\\0&3&1&5\\0&0&4&8\end{array}\right].
+   $$
+
+   a. Identifique los pivotes, escriba las tres ecuaciones y resuelva por sustitución regresiva.
+
+   b. Explique por qué hay exactamente una solución. ¿El primer renglón, por sí solo, permite determinar un valor numérico de $x$ antes de conocer $y$ y $z$?
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** La matriz aumentada es
+
+$$
+\left[\begin{array}{ccc|c}1&2&1&3\\2&3&-1&-2\\-1&1&2&3\end{array}\right].
+$$
+
+Al aplicar $R_2\to R_2-2R_1$ y $R_3\to R_3+R_1$, se obtiene
+
+$$
+\left[\begin{array}{ccc|c}1&2&1&3\\0&-1&-3&-8\\0&3&3&6\end{array}\right].
+$$
+
+Después, $R_3\to R_3+3R_2$ produce la forma escalonada
+
+$$
+\left[\begin{array}{ccc|c}1&2&1&3\\0&-1&-3&-8\\0&0&-6&-18\end{array}\right].
+$$
+
+**1. b.** De $-6z=-18$ se obtiene $z=3$. Entonces $-y-3(3)=-8$ da $y=-1$ y $x+2(-1)+3=3$ da $x=2$. La terna $(2,-1,3)$ verifica $2+2(-1)+3=3$, $2(2)+3(-1)-3=-2$ y $-2+(-1)+2(3)=3$.
+
+**2. a.** Las ecuaciones originales son
+
+$$
+\left\{\begin{aligned}
+x+y+z&=1\,000\\
+0.10x+0.20y+0.20z&=160\\
+0.10y+0.20z&=90.
+\end{aligned}\right.
+$$
+
+Multiplicar las dos últimas por $10$ da $x+2y+2z=1\,600$ y $y+2z=900$. La matriz aumentada correspondiente es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&1000\\1&2&2&1600\\0&1&2&900\end{array}\right].
+$$
+
+**2. b.** Con $R_2\to R_2-R_1$ se obtiene
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&1000\\0&1&1&600\\0&1&2&900\end{array}\right].
+$$
+
+Usando este nuevo segundo renglón, $R_3\to R_3-R_2$ produce
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&1000\\0&1&1&600\\0&0&1&300\end{array}\right].
+$$
+
+La sustitución regresiva da $z=300$, $y=600-300=300$ y $x=1\,000-300-300=400$. Se requieren $400$ g de A, $300$ g de B y $300$ g de C; son cantidades no negativas. Se verifica
+
+$$
+\begin{aligned}
+400+300+300&=1\,000,\\
+0.10(400)+0.20(300)+0.20(300)&=160,\\
+0.10(300)+0.20(300)&=90.
+\end{aligned}
+$$
+
+**2. c.** La masa de hierro es $0.90(400)+0.70(300)+0.60(300)=750$ g. En cada lote los tres porcentajes suman $100\,\%$ y no hay otros componentes; por ello, al fijar la masa total y las de cromo y níquel, la de hierro queda determinada: $1\,000-160-90=750$ g.
+
+**3. a.** Los pivotes son $2,3,4$. Las ecuaciones son $2x-y+3z=9$, $3y+z=5$ y $4z=8$. Se obtiene $z=2$, luego $3y+2=5$ da $y=1$ y, por último, $2x-1+6=9$ da $x=2$. La solución $(2,1,2)$ verifica $4-1+6=9$, $3+2=5$ y $8=8$.
+
+**3. b.** La última ecuación determina un único valor de $z$ porque su coeficiente es distinto de cero. Sustituirlo en la segunda determina un único $y$ y sustituir ambos en la primera determina un único $x$. El primer renglón permite despejar simbólicamente $x=(9+y-3z)/2$, pero por sí solo no determina su valor numérico.
+
+:::
+
+## Ejercicios para practicar
+
+1. Resuelva por Gauss, registrando las operaciones y verificando en el sistema original: $x+y+z=2$, $2x+3y+z=7$, $x+3y-2z=9$.
+
+2. Para fabricar $600$ g de un material compuesto se combinan $x$ g de fibra de vidrio, $y$ g de resina y $z$ g de un polvo llamado carga mineral. Las masas se suman sin pérdidas y deben ser no negativas. La masa de resina debe ser el doble de la de carga, y la masa de fibra debe ser igual a la suma de las otras dos.
+
+   a. Plantee el sistema, resuélvalo por Gauss e indique el porcentaje en masa de fibra.
+
+   b. Si solo hay disponibles $180$ g de resina y suficientes cantidades de los otros dos componentes, ¿pueden prepararse los $600$ g con esas proporciones? Justifique.
+
+3. Una **probeta** es una muestra preparada para un ensayo. Tres probetas P, Q y R, de masas positivas, se pesan sin recipientes: Q y R pesan juntas $90$ g; P y Q, $110$ g; las tres juntas, $150$ g.
+
+   a. Defina las incógnitas y escriba la matriz aumentada, conservando el orden de las tres pesadas y el orden P, Q, R de las incógnitas.
+
+   b. Escalone con un intercambio inicial, determine la masa de cada probeta y compruebe las pesadas.
+
+4. Para resolver $x+2y-z=3$, $2x+y+z=6$, $x-y+3z=4$, un estudiante anotó $R_2\to R_2-2R_1$, $R_3\to R_3-R_1$ y $R_3\to R_3-R_2$, y obtuvo
+
+   $$
+   \left[\begin{array}{ccc|c}1&2&-1&3\\0&-3&3&6\\0&0&1&-5\end{array}\right]
+   $$
+
+   y la terna $(12,-7,-5)$. Localice el error, indique en cuáles ecuaciones originales falla la terna, corrija el procedimiento y obtenga la solución.
+
+5. Para $x+3y=7$, $2x-y=0$, elija [sustitución o eliminación](2026-09-22-sesion-28.qmd), justifique su elección en una oración y resuelva. Compruebe la pareja en las dos ecuaciones.
+
+6. Un polinomio de grado a lo sumo dos, $p(t)=at^2+bt+c$, tiene los valores $p(1)=2$, $p(-1)=6$ y $p(2)=9$. Plantee un sistema en las incógnitas $a,b,c$, resuélvalo por Gauss, escriba $p(t)$ y compruebe los tres valores. Use la [evaluación de polinomios](2026-09-01-sesion-15.qmd): los argumentos $1,-1,2$ son datos, mientras que los coeficientes son las incógnitas.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1.** Solución $(x,y,z)=(1,2,-1)$. Una forma escalonada es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&2\\0&1&-1&3\\0&0&-1&1\end{array}\right].
+$$
+
+Los lados izquierdos originales valen $2,7,9$, respectivamente.
+
+**2. a.** Sistema: $x+y+z=600$, $y-2z=0$, $x-y-z=0$, con $x,y,z\ge0$. Se requieren $300$ g de fibra, $200$ g de resina y $100$ g de carga mineral. La fibra representa el $50\,\%$ de la masa total.
+
+**2. b.** No. La solución única requiere $200$ g de resina, $20$ g más que la cantidad disponible; no satisface la restricción adicional $y\le180$.
+
+**3. a.** $x,y,z$ son las masas de P, Q y R, en gramos; $x,y,z>0$.
+
+$$
+[A\mid b]=\left[\begin{array}{ccc|c}0&1&1&90\\1&1&0&110\\1&1&1&150\end{array}\right].
+$$
+
+**3. b.** Un intercambio inicial válido es $R_1\leftrightarrow R_2$. Una forma escalonada es
+
+$$
+\left[\begin{array}{ccc|c}1&1&0&110\\0&1&1&90\\0&0&1&40\end{array}\right].
+$$
+
+P pesa $60$ g; Q, $50$ g; R, $40$ g. Las pesadas dan $90$, $110$ y $150$ g, respectivamente; las tres masas son positivas.
+
+**4.** El primer error está en el término independiente de $R_2\to R_2-2R_1$: debe quedar $0$, no $6$. La propuesta cumple la primera y la tercera ecuaciones, pero en la segunda el lado izquierdo vale $12$, en lugar de $6$. La forma escalonada corregida es
+
+$$
+\left[\begin{array}{ccc|c}1&2&-1&3\\0&-3&3&0\\0&0&1&1\end{array}\right],
+$$
+
+y la solución es $(2,1,1)$.
+
+**5.** Una elección posible es sustitución, porque la segunda ecuación permite expresar $y=2x$ sin fracciones. Solución $(1,2)$; los lados izquierdos valen $7$ y $0$. También es válida una elección de eliminación bien justificada.
+
+**6.** Sistema: $a+b+c=2$, $a-b+c=6$, $4a+2b+c=9$. Solución $(a,b,c)=(3,-2,1)$; $p(t)=3t^2-2t+1$. Los valores son $p(1)=2$, $p(-1)=6$ y $p(2)=9$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+El trabajo realizado permite comprobar si puede:
+
+- Reconocer la forma escalonada y localizar sus pivotes, como en la Actividad 3.
+- Escalonar mediante operaciones registradas sobre renglones completos y resolver un pivote inicial cero con un intercambio, como en el Ejemplo 2 y el ejercicio 3.
+- Determinar las incógnitas por sustitución regresiva y justificar la unicidad cuando hay un pivote en cada columna de coeficientes, como en las Actividades 1 y 3.
+- Verificar la solución en las ecuaciones originales e interpretar si cumple las condiciones del problema, como en la Actividad 2 y los ejercicios 2–4.
