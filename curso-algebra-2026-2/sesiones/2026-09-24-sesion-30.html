@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Resolución de ecuaciones cúbicas con una raíz racional, solución de la cuadrática resultante y límites del procedimiento.">
+<meta name="description" content="Forma escalonada, elección de pivotes, eliminación de Gauss y sustitución regresiva en sistemas con solución única.">
 
-<title>Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante – Álgebra</title>
+<title>Sesión 30. Eliminación de Gauss y sustitución regresiva – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-09-08-sesion-20.html" rel="next">
-<link href="../sesiones/2026-09-04-sesion-18.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../sesiones/2026-09-23-sesion-29.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante – Álgebra">
-<meta property="og:description" content="Resolución de ecuaciones cúbicas con una raíz racional, solución de la cuadrática resultante y límites del procedimiento.">
+<meta property="og:title" content="Sesión 30. Eliminación de Gauss y sustitución regresiva – Álgebra">
+<meta property="og:description" content="Forma escalonada, elección de pivotes, eliminación de Gauss y sustitución regresiva en sistemas con solución única.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-07-sesion-19.html"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-24-sesion-30.html"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -283,13 +283,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -317,7 +317,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,13 +359,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
@@ -388,7 +388,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
+  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
   </div>
 </li>
       </ul>
@@ -472,25 +472,27 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#de-una-raíz-racional-a-la-solución-completa" id="toc-de-una-raíz-racional-a-la-solución-completa" class="nav-link active" data-scroll-target="#de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</a></li>
-  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#forma-escalonada" id="toc-forma-escalonada" class="nav-link" data-scroll-target="#forma-escalonada">Forma escalonada</a></li>
+  <li><a href="#método-de-gauss-y-sustitución-regresiva" id="toc-método-de-gauss-y-sustitución-regresiva" class="nav-link" data-scroll-target="#método-de-gauss-y-sustitución-regresiva">Método de Gauss y sustitución regresiva</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" id="toc-ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" class="nav-link" data-scroll-target="#ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo 1. Una raíz racional y dos raíces irracionales</a></li>
-  <li><a href="#ejemplo-2.-límite-del-procedimiento" id="toc-ejemplo-2.-límite-del-procedimiento" class="nav-link" data-scroll-target="#ejemplo-2.-límite-del-procedimiento">Ejemplo 2. Límite del procedimiento</a></li>
+  <li><a href="#ejemplo-1.-terminar-el-escalonamiento-de-la-mezcla-cerámica" id="toc-ejemplo-1.-terminar-el-escalonamiento-de-la-mezcla-cerámica" class="nav-link" data-scroll-target="#ejemplo-1.-terminar-el-escalonamiento-de-la-mezcla-cerámica">Ejemplo 1. Terminar el escalonamiento de la mezcla cerámica</a></li>
+  <li><a href="#ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar" id="toc-ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar" class="nav-link" data-scroll-target="#ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar">Ejemplo 2. Pivote inicial cero: intercambiar antes de eliminar</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-07-sesion-19.html"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-24-sesion-30.html"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></h1>
 </div>
 
 
@@ -501,7 +503,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">7 de septiembre de 2026</p>
+      <p class="date">24 de septiembre de 2026</p>
     </div>
   </div>
   
@@ -513,149 +515,169 @@ window.Quarto = {
 </header>
 
 
-<section id="de-una-raíz-racional-a-la-solución-completa" class="level2">
-<h2 class="anchored" data-anchor-id="de-una-raíz-racional-a-la-solución-completa">De una raíz racional a la solución completa</h2>
-<p>Una <strong>ecuación cúbica</strong> tiene la forma <span class="math inline">\(p(x)=0\)</span>, donde <span class="math inline">\(p(x)\)</span> es un polinomio de <a href="../sesiones/2026-09-01-sesion-15.html">grado</a> <span class="math inline">\(3\)</span>. Cuando sus coeficientes son racionales y se encuentra una raíz racional, es posible resolverla mediante el teorema de la raíz racional, la regla de Ruffini y la resolución de una ecuación cuadrática.</p>
-<p>En la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a> se obtuvieron factorizaciones parciales. Si <span class="math inline">\(c\)</span> es una raíz de una cúbica, el <a href="../sesiones/2026-09-03-sesion-17.html">teorema del factor</a> permite escribir</p>
-<p><span class="math display">\[
-p(x)=(x-c)q(x),
-\]</span></p>
-<p>donde <span class="math inline">\(q(x)\)</span> tiene grado <span class="math inline">\(2\)</span>. Por la <a href="../sesiones/2026-09-02-sesion-16.html">propiedad del producto cero</a>, para todo <span class="math inline">\(x\in\mathbb C\)</span>,</p>
-<p><span class="math display">\[
-p(x)=0
-\quad\Longleftrightarrow\quad
-x=c\quad\text{o}\quad q(x)=0.
-\]</span></p>
-<p>Por tanto, se conserva la raíz <span class="math inline">\(c\)</span> y se resuelve la <strong>cuadrática resultante</strong> <span class="math inline">\(q(x)=0\)</span>. Esto proporciona todas las soluciones: cualquier número distinto de <span class="math inline">\(c\)</span> que anule <span class="math inline">\(p(x)\)</span> debe anular <span class="math inline">\(q(x)\)</span>.</p>
-<p>Una cúbica con coeficientes racionales es <strong>reducible sobre <span class="math inline">\(\mathbb Q\)</span></strong> si puede escribirse como producto de un factor lineal y uno cuadrático con coeficientes racionales. En grado <span class="math inline">\(3\)</span>, esto equivale a tener una raíz racional: dicha raíz permite extraer el factor lineal, y un factor lineal con coeficientes racionales tiene una raíz racional.</p>
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá resolver un sistema <span class="math inline">\(3\times3\)</span> con solución única mediante Gauss, registrar las operaciones de renglón y verificar la solución en las ecuaciones originales. Podrá comprobarlo al resolver los problemas de la <a href="#actividad">Actividad</a> y explicar cómo los pivotes permiten determinar las incógnitas por sustitución regresiva.</p>
 </section>
-<section id="procedimiento" class="level2">
-<h2 class="anchored" data-anchor-id="procedimiento">Procedimiento</h2>
+<section id="forma-escalonada" class="level2">
+<h2 class="anchored" data-anchor-id="forma-escalonada">Forma escalonada</h2>
+<p>En la <a href="../sesiones/2026-09-23-sesion-29.html">Sesión 29</a> se representaron sistemas mediante matrices aumentadas y se obtuvieron ceros debajo del primer pivote. El escalonamiento continúa hacia las columnas siguientes, trabajando con los renglones inferiores y conservando los ceros ya obtenidos.</p>
+<p>Una matriz está en <strong>forma escalonada por renglones</strong> cuando:</p>
 <ol type="1">
-<li>Ordene el polinomio. Si sus coeficientes son racionales, elimine los denominadores multiplicando la ecuación por una constante distinta de cero; esta operación <a href="../sesiones/2026-08-14-sesion-05.html">conserva las soluciones</a>. Si el término independiente es cero, <span class="math inline">\(c=0\)</span> es una raíz: extraiga <span class="math inline">\(x\)</span> como factor común y pase al paso 4 con la cuadrática restante.</li>
-<li>Si el término independiente es distinto de cero, forme la lista de candidatos a raíz racional. Pruébelos por evaluación directa o Ruffini, en el orden de la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a>: <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, los demás enteros por valor absoluto creciente y, al final, las fracciones, hasta encontrar una raíz <span class="math inline">\(c\)</span>.</li>
-<li>Use Ruffini para dividir entre <span class="math inline">\(x-c\)</span>, incluyendo un coeficiente <span class="math inline">\(0\)</span> por cada potencia ausente. El residuo debe ser cero y el cociente debe tener grado <span class="math inline">\(2\)</span>.</li>
-<li>Resuelva la cuadrática resultante por factorización o mediante la fórmula general de la <a href="../sesiones/2026-09-02-sesion-16.html">Sesión 16</a>. Su discriminante permite decidir si sus raíces son reales o complejas no reales. Para una cuadrática con coeficientes enteros, un discriminante que sea un cuadrado perfecto no negativo da raíces racionales; si es positivo y no es un cuadrado perfecto, da raíces irracionales.</li>
-<li>Reúna la raíz <span class="math inline">\(c\)</span> y las soluciones de la cuadrática. Verifique la factorización desarrollando el producto y compruebe las soluciones en la ecuación original.</li>
+<li>Los renglones nulos, si los hay, están al final.</li>
+<li>La primera entrada no nula de cada renglón no nulo está a la derecha de la primera entrada no nula del renglón anterior.</li>
+<li>Debajo de cada una de esas primeras entradas no nulas hay solamente ceros.</li>
 </ol>
-<p>Una vez resuelta la cuadrática, no hace falta probar los candidatos restantes. Si ninguno de los candidatos es raíz, esta reducción mediante una raíz racional no puede iniciarse.</p>
-<p>Si la cuadrática tiene discriminante negativo, se resuelve en <span class="math inline">\(\mathbb C\)</span>: no admite factores lineales reales, pero sí complejos. Esto no impide completar las soluciones de la cúbica.</p>
+<p>En una matriz escalonada, esas primeras entradas no nulas son sus <strong>pivotes</strong>. No se exige que valgan <span class="math inline">\(1\)</span>. La tercera condición hace explícita una consecuencia de las dos primeras.</p>
+<p>Por ejemplo, la matriz</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\0&amp;2&amp;0&amp;80\end{array}\right]
+\]</span></p>
+<p>no está escalonada: los renglones segundo y tercero comienzan en la misma columna. En cambio,</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\0&amp;0&amp;-8&amp;-120\end{array}\right]
+\]</span></p>
+<p>sí está escalonada. Sus pivotes <span class="math inline">\(1,-1,-8\)</span> están en las columnas de <span class="math inline">\(x,y,z\)</span>, respectivamente. El Ejemplo 1 muestra la operación que conecta ambas matrices.</p>
+</section>
+<section id="método-de-gauss-y-sustitución-regresiva" class="level2">
+<h2 class="anchored" data-anchor-id="método-de-gauss-y-sustitución-regresiva">Método de Gauss y sustitución regresiva</h2>
+<p>El <strong>método de eliminación de Gauss</strong> transforma la matriz aumentada mediante <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales de renglón</a>. Al ser reversibles, estas operaciones conservan exactamente el conjunto solución. Para un sistema <span class="math inline">\(3\times3\)</span> <strong>con solución única</strong>, el procedimiento es:</p>
+<ol type="1">
+<li>Escriba la matriz aumentada con las incógnitas en un orden fijo e incluya los coeficientes cero.</li>
+<li>Coloque una entrada no nula de la primera columna en el primer renglón. Si <span class="math inline">\(a_{11}=0\)</span>, intercambie <span class="math inline">\(R_1\)</span> con un renglón que tenga una entrada no nula en esa columna. Use ese pivote para anular las entradas inferiores.</li>
+<li>Trabaje ahora con los renglones segundo y tercero. Si la entrada de la segunda columna del segundo renglón es cero, intercambie esos renglones para colocar allí una entrada no nula. Anule la entrada situada debajo, conservando los ceros de la primera columna.</li>
+<li>Compruebe que obtuvo una matriz escalonada con tres pivotes, uno en cada columna de coeficientes. No se divide entre cero: si falta uno de esos pivotes, no se cumple el caso de solución única aquí descrito.</li>
+<li>Recupere las ecuaciones y aplique <strong>sustitución regresiva</strong>: determine <span class="math inline">\(z\)</span> en la última ecuación, sustituya ese valor para obtener <span class="math inline">\(y\)</span> en la segunda y use ambos para obtener <span class="math inline">\(x\)</span> en la primera.</li>
+<li>Verifique la terna en las tres <strong>ecuaciones originales</strong>. En un problema de masas, compruebe también las unidades y las restricciones del enunciado.</li>
+</ol>
+<p>Para anular una entrada <span class="math inline">\(a\)</span> debajo de un pivote <span class="math inline">\(p\ne0\)</span> situado en el renglón <span class="math inline">\(j\)</span>, se aplica</p>
+<p><span class="math display">\[
+R_i\to R_i-\frac{a}{p}R_j,
+\qquad a-\frac{a}{p}p=0.
+\]</span></p>
+<p>La operación afecta al <strong>renglón completo</strong>, incluido el término independiente. Un intercambio también puede servir para elegir un pivote <span class="math inline">\(1\)</span> o <span class="math inline">\(-1\)</span> y simplificar los cálculos; las fracciones, por sí mismas, no indican un error.</p>
+<p>La sustitución regresiva determina una sola terna porque la última ecuación tiene una incógnita con coeficiente no nulo. Una vez conocido su valor, la segunda determina otra incógnita; después, la primera determina la restante. En cada paso se resuelve una <a href="../sesiones/2026-08-14-sesion-05.html">ecuación lineal en una incógnita</a> con coeficiente distinto de cero. No es necesario anular las entradas situadas arriba de los pivotes para obtener la solución de este modo.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-una-raíz-racional-y-dos-raíces-irracionales">Ejemplo 1. Una raíz racional y dos raíces irracionales</h3>
-<p>Resolvamos</p>
+<section id="ejemplo-1.-terminar-el-escalonamiento-de-la-mezcla-cerámica" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-terminar-el-escalonamiento-de-la-mezcla-cerámica">Ejemplo 1. Terminar el escalonamiento de la mezcla cerámica</h3>
+<p>Se retoma el <a href="../sesiones/2026-09-23-sesion-29.html">Ejemplo 3 de la Sesión 29</a>: <span class="math inline">\(100\)</span> g de una mezcla cerámica con <span class="math inline">\(x\)</span> g de alúmina, <span class="math inline">\(y\)</span> g de sílice y <span class="math inline">\(z\)</span> g de magnesia, con <span class="math inline">\(x,y,z\ge0\)</span>. Las masas se suman sin pérdidas; la masa de alúmina es el triple de la de magnesia y la de sílice es <span class="math inline">\(20\)</span> g menor que la suma de las otras dos:</p>
 <p><span class="math display">\[
-x^3-4x^2+3x+2=0.
+\left\{\begin{aligned} x+y+z&amp;=100\\ x-3z&amp;=0\\ -x+y-z&amp;=-20 \end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\1&amp;0&amp;-3&amp;0\\-1&amp;1&amp;-1&amp;-20\end{array}\right].
 \]</span></p>
-<p><strong>Encontrar una raíz racional.</strong></p>
-<p>El polinomio <span class="math inline">\(p(x)=x^3-4x^2+3x+2\)</span> es mónico y su término independiente es <span class="math inline">\(2\)</span>. Los candidatos son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm2\)</span>. Se prueban los valores más sencillos:</p>
+<p>Con <span class="math inline">\(R_2\to R_2-R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_1\)</span> se obtuvieron ceros debajo del primer pivote y se llegó a</p>
 <p><span class="math display">\[
-\begin{aligned}
-p(1)&amp;=1-4+3+2=2,\\
-p(-1)&amp;=-1-4-3+2=-6,\\
-p(2)&amp;=8-16+6+2=0.
-\end{aligned}
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\0&amp;2&amp;0&amp;80\end{array}\right].
 \]</span></p>
-<p>Así, <span class="math inline">\(c=2\)</span> es raíz y <span class="math inline">\(x-2\)</span> es factor.</p>
-<p><strong>Reducir el grado mediante Ruffini.</strong></p>
-<p>Se divide entre <span class="math inline">\(x-2\)</span>:</p>
+<p><strong>Columna 2.</strong> El pivote del renglón <span class="math inline">\(2\)</span> es <span class="math inline">\(-1\)</span>. Para anular el <span class="math inline">\(2\)</span> del renglón <span class="math inline">\(3\)</span> se aplica <span class="math inline">\(R_3\to R_3-\frac{2}{-1}R_2\)</span>, es decir, <span class="math inline">\(R_3\to R_3+2R_2\)</span>: a cada entrada del renglón <span class="math inline">\(3\)</span> se le suma el doble de la del renglón <span class="math inline">\(2\)</span>, incluido el término independiente: <span class="math inline">\(80+2(-100)=-120\)</span>.</p>
 <p><span class="math display">\[
-\begin{array}{r|rrrr}
-2 &amp; 1 &amp; -4 &amp; 3 &amp; 2\\
-  &amp;   &amp; 2 &amp; -4 &amp; -2\\
-\hline
-  &amp; 1 &amp; -2 &amp; -1 &amp; \mathbf{0}
-\end{array}
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-4&amp;-100\\0&amp;0&amp;-8&amp;-120\end{array}\right].
 \]</span></p>
-<p>Se baja <span class="math inline">\(1\)</span>; se multiplica <span class="math inline">\(1(2)=2\)</span> y se suma <span class="math inline">\(-4+2=-2\)</span>; después, <span class="math inline">\((-2)(2)=-4\)</span> y <span class="math inline">\(3-4=-1\)</span>; finalmente, <span class="math inline">\((-1)(2)=-2\)</span> y <span class="math inline">\(2-2=0\)</span>.</p>
-<p>Los tres primeros números de la última fila son los coeficientes de <span class="math inline">\(x^2\)</span>, <span class="math inline">\(x\)</span> y el término independiente. El último <span class="math inline">\(0\)</span> es el residuo y no pertenece al cociente.</p>
-<p>El cociente es <span class="math inline">\(q(x)=x^2-2x-1\)</span>, por lo que</p>
-<p><span class="math display">\[
-p(x)=(x-2)(x^2-2x-1).
-\]</span></p>
-<p>La ecuación original equivale a</p>
-<p><span class="math display">\[
-x=2\quad\text{o}\quad x^2-2x-1=0.
-\]</span></p>
-<p><strong>Resolver la cuadrática resultante.</strong></p>
-<p>Los coeficientes de la cuadrática son <span class="math inline">\(a=1\)</span>, <span class="math inline">\(b=-2\)</span> y <span class="math inline">\(c=-1\)</span>; en particular, <span class="math inline">\(-b=-(-2)=2\)</span>. Su discriminante es</p>
-<p><span class="math display">\[
-\Delta=(-2)^2-4(1)(-1)=8&gt;0.
-\]</span></p>
-<p>Como <span class="math inline">\(8\)</span> no es un cuadrado perfecto, las raíces de la cuadrática son irracionales. La fórmula general da</p>
-<p><span class="math display">\[
-x=\frac{2\pm\sqrt8}{2}
-=\frac{2\pm2\sqrt2}{2}
-=1\pm\sqrt2.
-\]</span></p>
-<p>Se simplificó <span class="math inline">\(\sqrt8=\sqrt{4\cdot2}=2\sqrt2\)</span> mediante las <a href="../sesiones/2026-08-12-sesion-03.html">propiedades de los radicales</a>. Por tanto, el conjunto solución es</p>
-<p><span class="math display">\[
-S=\{1-\sqrt2,\ 2,\ 1+\sqrt2\}.
-\]</span></p>
-<p>La raíz racional <span class="math inline">\(2\)</span> permitió encontrar también las dos raíces irracionales. Estas últimas no aparecen en la lista de candidatos racionales.</p>
-<p>Sobre <span class="math inline">\(\mathbb Q\)</span>, el factor <span class="math inline">\(x^2-2x-1\)</span> es irreducible porque no tiene raíces racionales. Así, <span class="math inline">\((x-2)(x^2-2x-1)\)</span> ya es una factorización en factores irreducibles sobre <span class="math inline">\(\mathbb Q\)</span>. Sobre <span class="math inline">\(\mathbb R\)</span>, se puede continuar:</p>
-<p><span class="math display">\[
-p(x)=(x-2)\bigl(x-(1+\sqrt2)\bigr)\bigl(x-(1-\sqrt2)\bigr).
-\]</span></p>
-<p>Cada factor resta la raíz completa. La irreducibilidad sobre <span class="math inline">\(\mathbb Q\)</span> no impide hallar las soluciones irracionales.</p>
-<p>En general, si <span class="math inline">\(r_1,r_2\)</span> son las raíces de <span class="math inline">\(ax^2+bx+c\)</span>, con <span class="math inline">\(a\ne0\)</span>, su factorización es <span class="math inline">\(a(x-r_1)(x-r_2)\)</span>; se conserva el coeficiente principal.</p>
-<p><strong>Verificar el resultado.</strong></p>
-<p>El producto recupera el polinomio original:</p>
-<p><span class="math display">\[
-\begin{aligned}
-(x-2)(x^2-2x-1)
-&amp;=x^3-2x^2-x-2x^2+4x+2\\
-&amp;=x^3-4x^2+3x+2.
-\end{aligned}
-\]</span></p>
-<p>Ya se comprobó que <span class="math inline">\(p(2)=0\)</span>. Para <span class="math inline">\(r=1+\sqrt2\)</span> o <span class="math inline">\(r=1-\sqrt2\)</span>, se tiene <span class="math inline">\(r^2=3\pm2\sqrt2\)</span> y</p>
-<p><span class="math display">\[
-q(r)=(3\pm2\sqrt2)-2(1\pm\sqrt2)-1=0,
-\]</span></p>
-<p>usando el mismo signo en cada caso. En consecuencia, <span class="math inline">\(p(r)=(r-2)q(r)=0\)</span>.</p>
-<p>Las expresiones <span class="math inline">\(1\pm\sqrt2\)</span> son <strong>soluciones exactas</strong>: estos valores irracionales se expresan exactamente mediante radicales. En cambio, <span class="math inline">\(2.41\)</span> es una aproximación a <span class="math inline">\(1+\sqrt2\)</span> y no satisface la ecuación:</p>
-<p><span class="math display">\[
-p(2.41)=(2.41-2)\bigl(2.41^2-2(2.41)-1\bigr)
-=(0.41)(-0.0119)=-0.004879\ne0.
-\]</span></p>
+<p>La matriz está en forma escalonada, con pivotes <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span> y <span class="math inline">\(-8\)</span>.</p>
+<p><strong>Sustitución regresiva.</strong> Las ecuaciones son <span class="math inline">\(x+y+z=100\)</span>, <span class="math inline">\(-y-4z=-100\)</span> y <span class="math inline">\(-8z=-120\)</span>. De la tercera, <span class="math inline">\(z=15\)</span>. En la segunda, <span class="math inline">\(-y-4(15)=-100\)</span>, de donde <span class="math inline">\(-y=-40\)</span> y <span class="math inline">\(y=40\)</span>. En la primera, <span class="math inline">\(x+40+15=100\)</span> y <span class="math inline">\(x=45\)</span>.</p>
+<p><strong>Verificación en el sistema original</strong> (la <a href="../sesiones/2026-09-21-sesion-27.html">comprobación por sustitución</a> de la Sesión 27): <span class="math inline">\(45+40+15=100\)</span>; <span class="math inline">\(45-3(15)=0\)</span>; <span class="math inline">\(-45+40-15=-20\)</span>. La terna <span class="math inline">\((45,40,15)\)</span> cumple las tres ecuaciones. La mezcla lleva <span class="math inline">\(45\)</span> g de alúmina, <span class="math inline">\(40\)</span> g de sílice y <span class="math inline">\(15\)</span> g de magnesia: cantidades no negativas con suma <span class="math inline">\(100\)</span>.</p>
+<figure style="margin: 1.5rem auto; max-width: 720px;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 720 260" role="img" aria-labelledby="s30-escalonada-titulo s30-escalonada-desc" style="display: block; width: 100%; height: auto;">
+<title id="s30-escalonada-titulo">
+Forma escalonada y sustitución regresiva
+</title>
+<desc id="s30-escalonada-desc">A la izquierda, la matriz aumentada escalonada 1 1 1 | 100, 0 −1 −4 | −100, 0 0 −8 | −120, con sus tres pivotes 1, −1 y −8 resaltados y la región de ceros debajo de la escalera sombreada. A la derecha, las tres ecuaciones que representan sus renglones, leídas de abajo hacia arriba: −8z = −120 da z = 15; −y − 4z = −100 da y = 40; x + y + z = 100 da x = 45. Las flechas indican el orden de la sustitución regresiva.</desc> <rect x="1" y="1" width="718" height="258" rx="12" fill="#f8fafc" stroke="#dbe4ee"></rect> <g font-family="system-ui, sans-serif" font-size="13" fill="#334155"> <text x="30" y="30" font-weight="650">Forma escalonada [A | b]</text> <text x="380" y="30" font-weight="650">Sustitución regresiva, de abajo hacia arriba</text> </g> <rect x="64" y="114" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"></rect> <rect x="64" y="159" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"></rect> <rect x="122" y="159" width="52" height="40" rx="5" fill="#64748b" fill-opacity="0.13"></rect> <rect x="64" y="69" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"></rect> <rect x="122" y="114" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"></rect> <rect x="180" y="159" width="52" height="40" rx="5" fill="#0f766e" fill-opacity="0.16" stroke="#0f766e" stroke-width="1.5"></rect> <g stroke="#334155" stroke-width="2.5" fill="none"> <polyline points="70,68 58,68 58,206 70,206"></polyline> <polyline points="306,68 318,68 318,206 306,206"></polyline> </g> <line x1="246" y1="70" x2="246" y2="204" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 4"></line> <g font-family="system-ui, sans-serif" font-size="18" fill="#334155" text-anchor="middle"> <text x="90" y="95" font-weight="700" fill="#0f766e">1</text> <text x="148" y="95">1</text> <text x="206" y="95">1</text> <text x="282" y="95">100</text> <text x="90" y="140" fill="#64748b">0</text> <text x="148" y="140" font-weight="700" fill="#0f766e">−1</text> <text x="206" y="140">−4</text> <text x="282" y="140">−100</text> <text x="90" y="185" fill="#64748b">0</text> <text x="148" y="185" fill="#64748b">0</text> <text x="206" y="185" font-weight="700" fill="#0f766e">−8</text> <text x="282" y="185">−120</text> </g> <g font-family="system-ui, sans-serif" font-size="12" fill="#334155"> <text x="58" y="232">Pivotes en <tspan fill="#0f766e" font-weight="650">verde</tspan>; debajo de ellos, solo ceros.</text> </g> <g font-family="system-ui, sans-serif" font-size="17" fill="#334155"> <text x="380" y="95">x + y + z = 100</text> <text x="380" y="140">−y − 4z = −100</text> <text x="380" y="185">−8z = −120</text> </g> <g font-family="system-ui, sans-serif" font-size="17" fill="#1d4ed8" font-weight="650"> <text x="600" y="95">x = 45</text> <text x="600" y="140">y = 40</text> <text x="600" y="185">z = 15</text> </g> <g stroke="#1d4ed8" stroke-width="2" fill="none"> <line x1="585" y1="178" x2="585" y2="150"></line> <polyline points="579,157 585,149 591,157"></polyline> <line x1="585" y1="133" x2="585" y2="105"></line> <polyline points="579,112 585,104 591,112"></polyline> </g> <g font-family="system-ui, sans-serif" font-size="12" fill="#334155"> <text x="380" y="232">Cada renglón aporta una incógnita nueva.</text> </g>
+</svg>
+<figcaption style="text-align: center; margin-top: .6rem;">
+Forma escalonada de la mezcla cerámica del Ejemplo 1 y lectura de la solución por sustitución regresiva: primero <span class="math inline">\(z\)</span>, después <span class="math inline">\(y\)</span> y por último <span class="math inline">\(x\)</span>.
+</figcaption>
+</figure>
 </section>
-<section id="ejemplo-2.-límite-del-procedimiento" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-límite-del-procedimiento">Ejemplo 2. Límite del procedimiento</h3>
-<p>Considere ahora</p>
+<section id="ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar">Ejemplo 2. Pivote inicial cero: intercambiar antes de eliminar</h3>
+<p>Resolver</p>
 <p><span class="math display">\[
-p(x)=x^3-x-1.
+\left\{\begin{aligned} 2y+3z&amp;=4\\ x+y-z&amp;=0\\ 2x-2y+z&amp;=10 \end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}0&amp;2&amp;3&amp;4\\1&amp;1&amp;-1&amp;0\\2&amp;-2&amp;1&amp;10\end{array}\right].
 \]</span></p>
-<p>Los únicos candidatos racionales son <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span>, pero</p>
+<p>La primera ecuación no contiene a <span class="math inline">\(x\)</span>, así que <span class="math inline">\(a_{11}=0\)</span> y no puede ser pivote. Se intercambia <span class="math inline">\(R_1\leftrightarrow R_2\)</span>:</p>
 <p><span class="math display">\[
-p(1)=-1,\qquad p(-1)=-1.
+\left[\begin{array}{ccc|c}1&amp;1&amp;-1&amp;0\\0&amp;2&amp;3&amp;4\\2&amp;-2&amp;1&amp;10\end{array}\right].
 \]</span></p>
-<p>Por tanto, no hay raíces racionales y no se puede iniciar el procedimiento anterior. Esto no significa que la ecuación carezca de soluciones reales: <span class="math inline">\(p(1)=-1&lt;0\)</span> y <span class="math inline">\(p(2)=5&gt;0\)</span>. Como los polinomios son continuos, sus valores pasan de negativo a positivo sin saltos; en algún punto del intervalo <span class="math inline">\((1,2)\)</span> el valor es cero.</p>
-<p>Hay, pues, al menos una raíz real entre <span class="math inline">\(1\)</span> y <span class="math inline">\(2\)</span>. La búsqueda de candidatos racionales no proporciona esa raíz. Para obtener un valor aproximado puede usarse la bisección, que se estudiará posteriormente. La ausencia de raíces racionales limita este procedimiento; por sí sola no descarta que otra estrategia permita obtener soluciones exactas.</p>
+<p><strong>Columna 1.</strong> El pivote es <span class="math inline">\(1\)</span>. El renglón <span class="math inline">\(2\)</span> ya tiene <span class="math inline">\(0\)</span>; para el renglón <span class="math inline">\(3\)</span>, <span class="math inline">\(R_3\to R_3-2R_1\)</span>: <span class="math inline">\(\bigl[\,2-2(1)\ \ \ -2-2(1)\ \ \ 1-2(-1)\mid 10-2(0)\,\bigr]=[\,0\ \ -4\ \ 3\mid10\,]\)</span>.</p>
+<p><strong>Columna 2.</strong> El pivote del renglón <span class="math inline">\(2\)</span> es <span class="math inline">\(2\)</span>. Para anular el <span class="math inline">\(-4\)</span> del renglón <span class="math inline">\(3\)</span>, <span class="math inline">\(R_3\to R_3+2R_2\)</span>: <span class="math inline">\([\,0\ \ 0\ \ 3+2(3)\mid 10+2(4)\,]=[\,0\ \ 0\ \ 9\mid18\,]\)</span>.</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;-1&amp;0\\0&amp;2&amp;3&amp;4\\0&amp;0&amp;9&amp;18\end{array}\right].
+\]</span></p>
+<p><strong>Sustitución regresiva.</strong> <span class="math inline">\(9z=18\)</span> da <span class="math inline">\(z=2\)</span>; <span class="math inline">\(2y+3(2)=4\)</span> da <span class="math inline">\(2y=-2\)</span> y <span class="math inline">\(y=-1\)</span>; <span class="math inline">\(x+(-1)-2=0\)</span> da <span class="math inline">\(x=3\)</span>.</p>
+<p><strong>Verificación en el sistema original:</strong> <span class="math inline">\(2(-1)+3(2)=4\)</span>; <span class="math inline">\(3+(-1)-2=0\)</span>; <span class="math inline">\(2(3)-2(-1)+2=10\)</span>. La solución es <span class="math inline">\((3,-1,2)\)</span>. El intercambio inicial no la alteró: solo cambió el orden en que se escriben las ecuaciones.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Detenerse después de encontrar una raíz.</strong> En el ejemplo 1, escribir <span class="math inline">\(S=\{2\}\)</span> omite las raíces de <span class="math inline">\(x^2-2x-1=0\)</span>. El conjunto completo es <span class="math inline">\(S=\{1-\sqrt2,2,1+\sqrt2\}\)</span>: además de conservar <span class="math inline">\(2\)</span>, se debe resolver la cuadrática.</li>
-<li><strong>Dividir la ecuación entre <span class="math inline">\(x-c\)</span> sin considerar <span class="math inline">\(x=c\)</span>.</strong> Esa división solo es válida cuando <span class="math inline">\(x\ne c\)</span>. Para <span class="math inline">\(x^3-4x^2+3x+2=0\)</span>, dividir entre <span class="math inline">\(x-2\)</span> y conservar solo <span class="math inline">\(S=\{1-\sqrt2,1+\sqrt2\}\)</span> pierde la solución <span class="math inline">\(2\)</span>. El conjunto correcto también incluye ese valor.</li>
-<li><strong>Aplicar la fórmula general al polinomio cúbico.</strong> Usar los tres primeros coeficientes de <span class="math inline">\(x^3-4x^2+3x+2\)</span> como si correspondieran a una cuadrática produce <span class="math inline">\(x=(4\pm\sqrt{16-12})/2\)</span>, es decir, <span class="math inline">\(1\)</span> y <span class="math inline">\(3\)</span>. Ninguno es raíz: <span class="math inline">\(p(1)=p(3)=2\)</span>. La fórmula debe aplicarse al cociente <span class="math inline">\(x^2-2x-1\)</span>, que da <span class="math inline">\(1\pm\sqrt2\)</span>, y conservarse además la raíz <span class="math inline">\(2\)</span>.</li>
-<li><strong>Confundir una expresión exacta con una aproximación.</strong> Sustituir <span class="math inline">\(1+\sqrt2\)</span> por <span class="math inline">\(2.41\)</span> en el conjunto solución no conserva la igualdad: <span class="math inline">\(p(1+\sqrt2)=0\)</span>, mientras que <span class="math inline">\(p(2.41)=-0.004879\ne0\)</span>. El radical representa la solución exacta.</li>
+<li><strong>Dejar fijo el término independiente.</strong> En el Ejemplo 1, <span class="math inline">\(R_2\to R_2-R_1\)</span> produce <span class="math inline">\([0\ \ {-1}\ \ {-4}\mid-100]\)</span>, porque también se calcula <span class="math inline">\(0-100=-100\)</span>.</li>
+<li><strong>Omitir una incógnita al sustituir.</strong> El renglón <span class="math inline">\([0\ \ {-1}\ \ {-4}\mid-100]\)</span> representa <span class="math inline">\(-y-4z=-100\)</span>. Con <span class="math inline">\(z=15\)</span> se obtiene <span class="math inline">\(y=40\)</span>; leer únicamente <span class="math inline">\(-y=-100\)</span> daría un valor incorrecto.</li>
+<li><strong>Perder el signo de un múltiplo.</strong> En <span class="math inline">\(R_3\to R_3+2R_2\)</span>, el término independiente del Ejemplo 1 es <span class="math inline">\(80+2(-100)=-120\)</span>, no <span class="math inline">\(280\)</span>.</li>
+<li><strong>Concluir que un primer coeficiente cero impide resolver.</strong> En el Ejemplo 2, <span class="math inline">\(a_{11}=0\)</span>, pero <span class="math inline">\(R_1\leftrightarrow R_2\)</span> coloca un pivote <span class="math inline">\(1\)</span> y permite continuar. Un cero aislado no determina el tipo de solución.</li>
+<li><strong>Comprobar únicamente en una matriz que contiene un error.</strong> Si el último renglón del Ejemplo 1 se escribiera <span class="math inline">\([0\ \ 0\ \ {-8}\mid280]\)</span>, el sistema resultante daría <span class="math inline">\((-105,240,-35)\)</span>. Esa terna satisface la matriz errónea, pero en la tercera ecuación original produce <span class="math inline">\(380\ne-20\)</span>. La verificación original permite detectar el fallo.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Justifique cada respuesta.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre cada operación y verifique cada solución en las ecuaciones originales.</p>
 <ol type="1">
-<li><p>Resuelva <span class="math inline">\(x^3-7x+6=0\)</span>. Escriba los candidatos racionales, use Ruffini para obtener una cuadrática y resuélvala. Verifique la factorización completa. Explique por qué dividir desde el principio entre <span class="math inline">\(x-1\)</span> y conservar solo las soluciones del cociente daría una respuesta incompleta. Justifique también por qué no hace falta probar los demás candidatos una vez resuelta la cuadrática.</p></li>
-<li><p>Para resolver <span class="math inline">\(x^3-x^2+3x+5=0\)</span>, un estudiante encontró la raíz <span class="math inline">\(-1\)</span> y escribió <span class="math inline">\(S=\{-1\}\)</span>.</p>
+<li><p>Considere el sistema</p>
+<p><span class="math display">\[
+\left\{\begin{aligned}x+2y+z&amp;=3\\2x+3y-z&amp;=-2\\-x+y+2z&amp;=3.\end{aligned}\right.
+\]</span></p>
 <ol type="a">
-<li><p>Use Ruffini para obtener el factor cuadrático que falta resolver.</p></li>
-<li><p>Complete el conjunto solución en <span class="math inline">\(\mathbb C\)</span> e indique cuáles soluciones son reales.</p></li>
-<li><p>Compruebe una raíz no real en la ecuación original, utilizando la factorización verificada.</p></li>
+<li><p>Escriba su matriz aumentada y llévela a la forma escalonada, anotando cada operación.</p></li>
+<li><p>Obtenga la solución por sustitución regresiva y verifíquela en las tres ecuaciones originales.</p></li>
 </ol></li>
-<li><p>Para <span class="math inline">\(x^3-2x-5=0\)</span>, determine si existe una raíz racional y explique si puede aplicarse el procedimiento de reducción de esta sesión. ¿Sería correcto concluir que no hay soluciones reales? Justifique usando los valores del polinomio en <span class="math inline">\(2\)</span> y en <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Un laboratorio dispone de tres lotes de polvo metálico con las composiciones en masa de la tabla. Se quieren preparar <span class="math inline">\(1\,000\)</span> g de una mezcla con <span class="math inline">\(75\,\%\)</span> de hierro, <span class="math inline">\(16\,\%\)</span> de cromo y <span class="math inline">\(9\,\%\)</span> de níquel, usando <span class="math inline">\(x\)</span> g del lote A, <span class="math inline">\(y\)</span> g del lote B y <span class="math inline">\(z\)</span> g del lote C. Las masas de la mezcla y de cada metal se suman sin pérdidas; <span class="math inline">\(x,y,z\ge0\)</span>. La masa de un metal en cada porción se obtiene multiplicando la masa de polvo por su porcentaje expresado como fracción.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lote</th>
+<th style="text-align: right;">Hierro</th>
+<th style="text-align: right;">Cromo</th>
+<th style="text-align: right;">Níquel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;"><span class="math inline">\(90\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\,\%\)</span></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;"><span class="math inline">\(70\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(20\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td style="text-align: right;"><span class="math inline">\(60\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(20\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(20\,\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Plantee tres ecuaciones: la masa total y las masas de cromo y níquel. Multiplique por <span class="math inline">\(10\)</span> las dos últimas para trabajar con enteros y escriba la matriz aumentada.</p></li>
+<li><p>Resuelva por Gauss y verifique las tres ecuaciones originales. Interprete las cantidades obtenidas.</p></li>
+<li><p>Compruebe que la mezcla contiene <span class="math inline">\(750\)</span> g de hierro. ¿Por qué esta condición se cumple al satisfacer las otras tres?</p></li>
+</ol></li>
+<li><p>La matriz aumentada de un sistema en <span class="math inline">\(x,y,z\)</span> es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}2&amp;-1&amp;3&amp;9\\0&amp;3&amp;1&amp;5\\0&amp;0&amp;4&amp;8\end{array}\right].
+\]</span></p>
+<ol type="a">
+<li><p>Identifique los pivotes, escriba las tres ecuaciones y resuelva por sustitución regresiva.</p></li>
+<li><p>Explique por qué hay exactamente una solución. ¿El primer renglón, por sí solo, permite determinar un valor numérico de <span class="math inline">\(x\)</span> antes de conocer <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span>?</p></li>
+</ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -669,61 +691,50 @@ p(1)=-1,\qquad p(-1)=-1.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> Para <span class="math inline">\(p(x)=x^3-7x+6\)</span>, los candidatos son <span class="math inline">\(\pm1\)</span>, <span class="math inline">\(\pm2\)</span>, <span class="math inline">\(\pm3\)</span> y <span class="math inline">\(\pm6\)</span>. Como <span class="math inline">\(p(1)=1-7+6=0\)</span>, se usa <span class="math inline">\(c=1\)</span>. El coeficiente de <span class="math inline">\(x^2\)</span> es cero:</p>
+<p><strong>1. a.</strong> La matriz aumentada es</p>
 <p><span class="math display">\[
-\begin{array}{r|rrrr}
-1 &amp; 1 &amp; 0 &amp; -7 &amp; 6\\
-  &amp;   &amp; 1 &amp; 1 &amp; -6\\
-\hline
-  &amp; 1 &amp; 1 &amp; -6 &amp; \mathbf{0}
-\end{array}
+\left[\begin{array}{ccc|c}1&amp;2&amp;1&amp;3\\2&amp;3&amp;-1&amp;-2\\-1&amp;1&amp;2&amp;3\end{array}\right].
 \]</span></p>
-<p>Se obtiene <span class="math inline">\(q(x)=x^2+x-6\)</span>, cuyo discriminante es <span class="math inline">\(\Delta=1+24=25\)</span>. Sus raíces son racionales. La <a href="../sesiones/2026-08-13-sesion-04.html">factorización del trinomio</a> da <span class="math inline">\(q(x)=(x+3)(x-2)\)</span>. Así,</p>
+<p>Al aplicar <span class="math inline">\(R_2\to R_2-2R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_1\)</span>, se obtiene</p>
 <p><span class="math display">\[
-p(x)=(x-1)(x+3)(x-2),
-\qquad S=\{-3,1,2\}.
+\left[\begin{array}{ccc|c}1&amp;2&amp;1&amp;3\\0&amp;-1&amp;-3&amp;-8\\0&amp;3&amp;3&amp;6\end{array}\right].
 \]</span></p>
-<p>La verificación es</p>
+<p>Después, <span class="math inline">\(R_3\to R_3+3R_2\)</span> produce la forma escalonada</p>
 <p><span class="math display">\[
-(x-1)(x^2+x-6)=x^3+x^2-6x-x^2-x+6=x^3-7x+6.
+\left[\begin{array}{ccc|c}1&amp;2&amp;1&amp;3\\0&amp;-1&amp;-3&amp;-8\\0&amp;0&amp;-6&amp;-18\end{array}\right].
 \]</span></p>
-<p>Cada valor de <span class="math inline">\(S\)</span> anula un factor y, por la identidad verificada, anula el polinomio original. Las soluciones del cociente son <span class="math inline">\(-3\)</span> y <span class="math inline">\(2\)</span>; conservar solo estas perdería la raíz <span class="math inline">\(1\)</span>, precisamente el valor para el cual no se puede dividir entre <span class="math inline">\(x-1\)</span>.</p>
-<p>La propiedad del producto cero también garantiza que cualquier raíz de <span class="math inline">\(p(x)\)</span> distinta de <span class="math inline">\(1\)</span> debe ser raíz de <span class="math inline">\(q(x)\)</span>. Como la cuadrática ya se resolvió por completo, no faltan soluciones ni hace falta probar los demás candidatos. Los cinco candidatos que no son raíces son <span class="math inline">\(-1\)</span>, <span class="math inline">\(-2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(6\)</span> y <span class="math inline">\(-6\)</span>.</p>
-<p><strong>2.</strong> Para <span class="math inline">\(p(x)=x^3-x^2+3x+5\)</span>, se verifica <span class="math inline">\(p(-1)=-1-1-3+5=0\)</span>. Se divide entre <span class="math inline">\(x+1=x-(-1)\)</span>:</p>
+<p><strong>1. b.</strong> De <span class="math inline">\(-6z=-18\)</span> se obtiene <span class="math inline">\(z=3\)</span>. Entonces <span class="math inline">\(-y-3(3)=-8\)</span> da <span class="math inline">\(y=-1\)</span> y <span class="math inline">\(x+2(-1)+3=3\)</span> da <span class="math inline">\(x=2\)</span>. La terna <span class="math inline">\((2,-1,3)\)</span> verifica <span class="math inline">\(2+2(-1)+3=3\)</span>, <span class="math inline">\(2(2)+3(-1)-3=-2\)</span> y <span class="math inline">\(-2+(-1)+2(3)=3\)</span>.</p>
+<p><strong>2. a.</strong> Las ecuaciones originales son</p>
 <p><span class="math display">\[
-\begin{array}{r|rrrr}
--1 &amp; 1 &amp; -1 &amp; 3 &amp; 5\\
-   &amp;   &amp; -1 &amp; 2 &amp; -5\\
-\hline
-   &amp; 1 &amp; -2 &amp; 5 &amp; \mathbf{0}
-\end{array}
+\left\{\begin{aligned}
+x+y+z&amp;=1\,000\\
+0.10x+0.20y+0.20z&amp;=160\\
+0.10y+0.20z&amp;=90.
+\end{aligned}\right.
 \]</span></p>
-<p>El cociente es <span class="math inline">\(q(x)=x^2-2x+5\)</span>. Su discriminante es <span class="math inline">\(\Delta=4-20=-16\)</span>, de modo que</p>
+<p>Multiplicar las dos últimas por <span class="math inline">\(10\)</span> da <span class="math inline">\(x+2y+2z=1\,600\)</span> y <span class="math inline">\(y+2z=900\)</span>. La matriz aumentada correspondiente es</p>
 <p><span class="math display">\[
-x=\frac{2\pm4i}{2}=1\pm2i.
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;1000\\1&amp;2&amp;2&amp;1600\\0&amp;1&amp;2&amp;900\end{array}\right].
 \]</span></p>
-<p>Por tanto,</p>
+<p><strong>2. b.</strong> Con <span class="math inline">\(R_2\to R_2-R_1\)</span> se obtiene</p>
 <p><span class="math display">\[
-S=\{-1,\ 1+2i,\ 1-2i\}.
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;1000\\0&amp;1&amp;1&amp;600\\0&amp;1&amp;2&amp;900\end{array}\right].
 \]</span></p>
-<p>La única solución real es <span class="math inline">\(-1\)</span>. Se comprueba la factorización:</p>
+<p>Usando este nuevo segundo renglón, <span class="math inline">\(R_3\to R_3-R_2\)</span> produce</p>
 <p><span class="math display">\[
-(x+1)(x^2-2x+5)=x^3-x^2+3x+5.
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;1000\\0&amp;1&amp;1&amp;600\\0&amp;0&amp;1&amp;300\end{array}\right].
 \]</span></p>
-<p>Para <span class="math inline">\(r=1+2i\)</span>, el <a href="../sesiones/2026-08-19-sesion-08.html">producto de números complejos</a> da <span class="math inline">\(r^2=-3+4i\)</span> y</p>
+<p>La sustitución regresiva da <span class="math inline">\(z=300\)</span>, <span class="math inline">\(y=600-300=300\)</span> y <span class="math inline">\(x=1\,000-300-300=400\)</span>. Se requieren <span class="math inline">\(400\)</span> g de A, <span class="math inline">\(300\)</span> g de B y <span class="math inline">\(300\)</span> g de C; son cantidades no negativas. Se verifica</p>
 <p><span class="math display">\[
-q(r)=(-3+4i)-2(1+2i)+5=0.
+\begin{aligned}
+400+300+300&amp;=1\,000,\\
+0.10(400)+0.20(300)+0.20(300)&amp;=160,\\
+0.10(300)+0.20(300)&amp;=90.
+\end{aligned}
 \]</span></p>
-<p>Así, en el polinomio original, <span class="math inline">\(p(r)=(r+1)q(r)=(2+2i)0=0\)</span>. Para <span class="math inline">\(1-2i\)</span>, el mismo cálculo con los signos cambiados también da cero.</p>
-<p><strong>3.</strong> Los candidatos de <span class="math inline">\(p(x)=x^3-2x-5\)</span> son <span class="math inline">\(\pm1\)</span> y <span class="math inline">\(\pm5\)</span>. Se obtiene</p>
-<p><span class="math display">\[
-p(1)=-6,\quad p(-1)=-4,\quad p(5)=110,\quad p(-5)=-120.
-\]</span></p>
-<p>Ninguno es raíz. La ecuación no tiene raíces racionales y el procedimiento de reducción mediante una raíz racional no puede iniciarse. Sin embargo,</p>
-<p><span class="math display">\[
-p(2)=-1&lt;0,\qquad p(3)=16&gt;0.
-\]</span></p>
-<p>La continuidad garantiza al menos una raíz real en <span class="math inline">\((2,3)\)</span>, necesariamente irracional. Por tanto, sería incorrecto afirmar que no hay soluciones reales. Una aproximación de esa raíz requiere un procedimiento adicional.</p>
+<p><strong>2. c.</strong> La masa de hierro es <span class="math inline">\(0.90(400)+0.70(300)+0.60(300)=750\)</span> g. En cada lote los tres porcentajes suman <span class="math inline">\(100\,\%\)</span> y no hay otros componentes; por ello, al fijar la masa total y las de cromo y níquel, la de hierro queda determinada: <span class="math inline">\(1\,000-160-90=750\)</span> g.</p>
+<p><strong>3. a.</strong> Los pivotes son <span class="math inline">\(2,3,4\)</span>. Las ecuaciones son <span class="math inline">\(2x-y+3z=9\)</span>, <span class="math inline">\(3y+z=5\)</span> y <span class="math inline">\(4z=8\)</span>. Se obtiene <span class="math inline">\(z=2\)</span>, luego <span class="math inline">\(3y+2=5\)</span> da <span class="math inline">\(y=1\)</span> y, por último, <span class="math inline">\(2x-1+6=9\)</span> da <span class="math inline">\(x=2\)</span>. La solución <span class="math inline">\((2,1,2)\)</span> verifica <span class="math inline">\(4-1+6=9\)</span>, <span class="math inline">\(3+2=5\)</span> y <span class="math inline">\(8=8\)</span>.</p>
+<p><strong>3. b.</strong> La última ecuación determina un único valor de <span class="math inline">\(z\)</span> porque su coeficiente es distinto de cero. Sustituirlo en la segunda determina un único <span class="math inline">\(y\)</span> y sustituir ambos en la primera determina un único <span class="math inline">\(x\)</span>. El primer renglón permite despejar simbólicamente <span class="math inline">\(x=(9+y-3z)/2\)</span>, pero por sí solo no determina su valor numérico.</p>
 </div>
 </div>
 </div>
@@ -731,16 +742,73 @@ p(2)=-1&lt;0,\qquad p(3)=16&gt;0.
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <ol type="1">
-<li><p>Complete las factorizaciones parciales solicitadas en la <a href="../sesiones/2026-09-04-sesion-18.html">Sesión 18</a>: resuelva <span class="math inline">\(x^3-4x^2+x+6=0\)</span> y <span class="math inline">\(3x^3+2x^2-7x+2=0\)</span>, y escriba cada polinomio como producto de factores lineales.</p></li>
-<li><p>Resuelva en <span class="math inline">\(\mathbb C\)</span> y clasifique las soluciones como racionales, irracionales o complejas no reales:</p>
+<li><p>Resuelva por Gauss, registrando las operaciones y verificando en el sistema original: <span class="math inline">\(x+y+z=2\)</span>, <span class="math inline">\(2x+3y+z=7\)</span>, <span class="math inline">\(x+3y-2z=9\)</span>.</p></li>
+<li><p>Para fabricar <span class="math inline">\(600\)</span> g de un material compuesto se combinan <span class="math inline">\(x\)</span> g de fibra de vidrio, <span class="math inline">\(y\)</span> g de resina y <span class="math inline">\(z\)</span> g de un polvo llamado carga mineral. Las masas se suman sin pérdidas y deben ser no negativas. La masa de resina debe ser el doble de la de carga, y la masa de fibra debe ser igual a la suma de las otras dos.</p>
 <ol type="a">
-<li><p><span class="math inline">\(x^3+x^2-3x-3=0\)</span>.</p></li>
-<li><p><span class="math inline">\(x^3-2x^2+x-2=0\)</span>.</p></li>
+<li><p>Plantee el sistema, resuélvalo por Gauss e indique el porcentaje en masa de fibra.</p></li>
+<li><p>Si solo hay disponibles <span class="math inline">\(180\)</span> g de resina y suficientes cantidades de los otros dos componentes, ¿pueden prepararse los <span class="math inline">\(600\)</span> g con esas proporciones? Justifique.</p></li>
 </ol></li>
-<li><p>Resuelva <span class="math inline">\(x^3-\dfrac32x^2-x+\dfrac32=0\)</span>. Elimine primero los denominadores y explique por qué la ecuación resultante tiene las mismas soluciones.</p></li>
-<li><p>Resuelva <span class="math inline">\(x^3-4x=0\)</span>. Justifique qué factorización permite comenzar sin generar candidatos racionales y explique por qué dividir entre <span class="math inline">\(x\)</span> sin considerar <span class="math inline">\(x=0\)</span> perdería una solución.</p></li>
-<li><p>Para resolver <span class="math inline">\(2x^3-x^2-2x+1=0\)</span>, un estudiante encontró la raíz <span class="math inline">\(1\)</span> y obtuvo el cociente <span class="math inline">\(2x^2+x-1\)</span>. Después lo sustituyó por <span class="math inline">\(x^2+x-1\)</span> al aplicar la fórmula general. Explique el error, obtenga el conjunto solución correcto y verifique una factorización que conserve el coeficiente principal del polinomio original.</p></li>
+<li><p>Una <strong>probeta</strong> es una muestra preparada para un ensayo. Tres probetas P, Q y R, de masas positivas, se pesan sin recipientes: Q y R pesan juntas <span class="math inline">\(90\)</span> g; P y Q, <span class="math inline">\(110\)</span> g; las tres juntas, <span class="math inline">\(150\)</span> g.</p>
+<ol type="a">
+<li><p>Defina las incógnitas y escriba la matriz aumentada, conservando el orden de las tres pesadas y el orden P, Q, R de las incógnitas.</p></li>
+<li><p>Escalone con un intercambio inicial, determine la masa de cada probeta y compruebe las pesadas.</p></li>
+</ol></li>
+<li><p>Para resolver <span class="math inline">\(x+2y-z=3\)</span>, <span class="math inline">\(2x+y+z=6\)</span>, <span class="math inline">\(x-y+3z=4\)</span>, un estudiante anotó <span class="math inline">\(R_2\to R_2-2R_1\)</span>, <span class="math inline">\(R_3\to R_3-R_1\)</span> y <span class="math inline">\(R_3\to R_3-R_2\)</span>, y obtuvo</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;3\\0&amp;-3&amp;3&amp;6\\0&amp;0&amp;1&amp;-5\end{array}\right]
+\]</span></p>
+<p>y la terna <span class="math inline">\((12,-7,-5)\)</span>. Localice el error, indique en cuáles ecuaciones originales falla la terna, corrija el procedimiento y obtenga la solución.</p></li>
+<li><p>Para <span class="math inline">\(x+3y=7\)</span>, <span class="math inline">\(2x-y=0\)</span>, elija <a href="../sesiones/2026-09-22-sesion-28.html">sustitución o eliminación</a>, justifique su elección en una oración y resuelva. Compruebe la pareja en las dos ecuaciones.</p></li>
+<li><p>Un polinomio de grado a lo sumo dos, <span class="math inline">\(p(t)=at^2+bt+c\)</span>, tiene los valores <span class="math inline">\(p(1)=2\)</span>, <span class="math inline">\(p(-1)=6\)</span> y <span class="math inline">\(p(2)=9\)</span>. Plantee un sistema en las incógnitas <span class="math inline">\(a,b,c\)</span>, resuélvalo por Gauss, escriba <span class="math inline">\(p(t)\)</span> y compruebe los tres valores. Use la <a href="../sesiones/2026-09-01-sesion-15.html">evaluación de polinomios</a>: los argumentos <span class="math inline">\(1,-1,2\)</span> son datos, mientras que los coeficientes son las incógnitas.</p></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> Solución <span class="math inline">\((x,y,z)=(1,2,-1)\)</span>. Una forma escalonada es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;-1&amp;1\end{array}\right].
+\]</span></p>
+<p>Los lados izquierdos originales valen <span class="math inline">\(2,7,9\)</span>, respectivamente.</p>
+<p><strong>2. a.</strong> Sistema: <span class="math inline">\(x+y+z=600\)</span>, <span class="math inline">\(y-2z=0\)</span>, <span class="math inline">\(x-y-z=0\)</span>, con <span class="math inline">\(x,y,z\ge0\)</span>. Se requieren <span class="math inline">\(300\)</span> g de fibra, <span class="math inline">\(200\)</span> g de resina y <span class="math inline">\(100\)</span> g de carga mineral. La fibra representa el <span class="math inline">\(50\,\%\)</span> de la masa total.</p>
+<p><strong>2. b.</strong> No.&nbsp;La solución única requiere <span class="math inline">\(200\)</span> g de resina, <span class="math inline">\(20\)</span> g más que la cantidad disponible; no satisface la restricción adicional <span class="math inline">\(y\le180\)</span>.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(x,y,z\)</span> son las masas de P, Q y R, en gramos; <span class="math inline">\(x,y,z&gt;0\)</span>.</p>
+<p><span class="math display">\[
+[A\mid b]=\left[\begin{array}{ccc|c}0&amp;1&amp;1&amp;90\\1&amp;1&amp;0&amp;110\\1&amp;1&amp;1&amp;150\end{array}\right].
+\]</span></p>
+<p><strong>3. b.</strong> Un intercambio inicial válido es <span class="math inline">\(R_1\leftrightarrow R_2\)</span>. Una forma escalonada es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;0&amp;110\\0&amp;1&amp;1&amp;90\\0&amp;0&amp;1&amp;40\end{array}\right].
+\]</span></p>
+<p>P pesa <span class="math inline">\(60\)</span> g; Q, <span class="math inline">\(50\)</span> g; R, <span class="math inline">\(40\)</span> g. Las pesadas dan <span class="math inline">\(90\)</span>, <span class="math inline">\(110\)</span> y <span class="math inline">\(150\)</span> g, respectivamente; las tres masas son positivas.</p>
+<p><strong>4.</strong> El primer error está en el término independiente de <span class="math inline">\(R_2\to R_2-2R_1\)</span>: debe quedar <span class="math inline">\(0\)</span>, no <span class="math inline">\(6\)</span>. La propuesta cumple la primera y la tercera ecuaciones, pero en la segunda el lado izquierdo vale <span class="math inline">\(12\)</span>, en lugar de <span class="math inline">\(6\)</span>. La forma escalonada corregida es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;3\\0&amp;-3&amp;3&amp;0\\0&amp;0&amp;1&amp;1\end{array}\right],
+\]</span></p>
+<p>y la solución es <span class="math inline">\((2,1,1)\)</span>.</p>
+<p><strong>5.</strong> Una elección posible es sustitución, porque la segunda ecuación permite expresar <span class="math inline">\(y=2x\)</span> sin fracciones. Solución <span class="math inline">\((1,2)\)</span>; los lados izquierdos valen <span class="math inline">\(7\)</span> y <span class="math inline">\(0\)</span>. También es válida una elección de eliminación bien justificada.</p>
+<p><strong>6.</strong> Sistema: <span class="math inline">\(a+b+c=2\)</span>, <span class="math inline">\(a-b+c=6\)</span>, <span class="math inline">\(4a+2b+c=9\)</span>. Solución <span class="math inline">\((a,b,c)=(3,-2,1)\)</span>; <span class="math inline">\(p(t)=3t^2-2t+1\)</span>. Los valores son <span class="math inline">\(p(1)=2\)</span>, <span class="math inline">\(p(-1)=6\)</span> y <span class="math inline">\(p(2)=9\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El trabajo realizado permite comprobar si puede:</p>
+<ul>
+<li>Reconocer la forma escalonada y localizar sus pivotes, como en la Actividad 3.</li>
+<li>Escalonar mediante operaciones registradas sobre renglones completos y resolver un pivote inicial cero con un intercambio, como en el Ejemplo 2 y el ejercicio 3.</li>
+<li>Determinar las incógnitas por sustitución regresiva y justificar la unicidad cuando hay un pivote en cada columna de coeficientes, como en las Actividades 1 y 3.</li>
+<li>Verificar la solución en las ecuaciones originales e interpretar si cumple las condiciones del problema, como en la Actividad 2 y los ejercicios 2–4.</li>
+</ul>
 
 
 </section>
@@ -1155,13 +1223,13 @@ p(2)=-1&lt;0,\qquad p(3)=16&gt;0.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-09-04-sesion-18.html" class="pagination-link" aria-label="Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></span>
+      <a href="../sesiones/2026-09-23-sesion-29.html" class="pagination-link" aria-label="Sesión 29. Matriz aumentada y operaciones elementales de renglón">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-09-08-sesion-20.html" class="pagination-link" aria-label="Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
