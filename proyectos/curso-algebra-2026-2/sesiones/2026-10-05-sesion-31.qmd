@@ -40,22 +40,22 @@ De $12z=24$, $z=2$; de $-y+3(2)=5$, $y=1$; de $x+2(1)-2=1$, $x=1$. Verificación
 
 El [método de Gauss](2026-09-24-sesion-30.qmd) no cambia: se lleva la matriz aumentada a la forma escalonada con [operaciones elementales de renglón](2026-09-23-sesion-29.qmd) y se resuelve por sustitución regresiva. Para revisar un resultado, se comprueba tanto la sustitución regresiva como la correspondencia entre cada operación anotada y la matriz obtenida.
 
-| Síntoma | Causa frecuente | Cómo detectarlo |
+| Resultado observado | Posible causa | Comprobación o corrección |
 |---|---|---|
-| La terna cumple la matriz escalonada, pero falla en una ecuación original | Término independiente sin operar o signo perdido al sumar un múltiplo | Recalcular cada operación entrada por entrada, incluido el término independiente |
-| La terna no cumple ni siquiera la matriz escalonada | Término omitido o signo cambiado en la sustitución regresiva | Rehacer la sustitución de abajo hacia arriba sobre la misma matriz |
-| Un cero ya obtenido desaparece | Se usó la versión anterior de un renglón, o se intercambió con un renglón de una columna ya terminada | Cada operación usa la matriz resultante de la anterior; solo se intercambian renglones que aún no se han usado como renglones pivote |
+| La terna satisface el sistema escalonado, pero no satisface alguna ecuación original | Término independiente sin operar o signo perdido al sumar un múltiplo | Recalcular cada operación entrada por entrada, incluido el término independiente |
+| La terna no satisface el sistema escalonado | Término omitido o signo cambiado en la sustitución regresiva | Rehacer la sustitución de abajo hacia arriba sobre la misma matriz |
+| Un cero ya obtenido desaparece | Se usó la versión anterior de un renglón, o se intercambió con un renglón de una columna ya terminada | Cada operación usa la matriz resultante de la anterior; solo se intercambian los renglones situados debajo de los pivotes ya utilizados |
 | Aparecen fracciones | No son por sí mismas un error: el cálculo puede producir resultados racionales no enteros | Conservarlas exactamente o multiplicar un renglón completo por un denominador común no nulo; un intercambio puede simplificar el cálculo |
 
-### Fracciones sencillas: tres caminos válidos
+### Fracciones sencillas: tres procedimientos válidos
 
-Para un pivote $p\ne0$, la regla $R_i\to R_i-\frac apR_j$ puede introducir fracciones. Estas se conservan exactamente; no se sustituyen por decimales redondeados. Con $R_1=[\,2\ \ 1\ \ -1\mid4\,]$ y $R_2=[\,3\ \ -2\ \ 1\mid1\,]$ hay tres caminos:
+Para un pivote $p\ne0$, la regla $R_i\to R_i-\frac apR_j$ puede introducir fracciones. Estas se conservan exactamente; no se sustituyen por decimales redondeados. Con $R_1=[\,2\ \ 1\ \ -1\mid4\,]$ y $R_2=[\,3\ \ -2\ \ 1\mid1\,]$ pueden emplearse los siguientes procedimientos:
 
 - **Conservar la fracción.** $R_2\to R_2-\frac32R_1$ produce $[\,0\ \ -\frac72\ \ \frac52\mid-5\,]$.
 - **Multiplicar antes.** $R_2\to2R_2$ da $[\,6\ \ -4\ \ 2\mid2\,]$ y después $R_2\to R_2-3R_1$ da $[\,0\ \ -7\ \ 5\mid-10\,]$: el doble del renglón anterior, es decir, la misma condición multiplicada por $2$, como cuando una [ecuación con denominadores](2026-08-14-sesion-05.qmd) se multiplica por un múltiplo común de ellos antes de despejar.
 - **Intercambiar.** Si otro renglón disponible tiene $1$ o $-1$ en esa columna, un intercambio lo coloca como pivote y evita introducir denominadores al eliminar esa columna si sus renglones tienen entradas enteras (Ejemplo 1).
 
-Los tres caminos producen [sistemas equivalentes](2026-09-22-sesion-28.qmd) y la misma solución, porque las operaciones son reversibles; solo cambia la comodidad del cálculo.
+Los tres procedimientos producen [sistemas equivalentes](2026-09-22-sesion-28.qmd) y la misma solución, porque las operaciones son reversibles; difieren únicamente las operaciones necesarias para realizar el cálculo.
 
 ### Cómo revisar un procedimiento cuando la verificación falla
 
@@ -64,7 +64,7 @@ Los tres caminos producen [sistemas equivalentes](2026-09-22-sesion-28.qmd) y la
 3. Revise la matriz aumentada inicial y recalcule las operaciones en el orden registrado, entrada por entrada, incluido el término independiente. La primera discrepancia permite localizar un paso que debe corregirse.
 4. Rehaga el procedimiento desde ese paso y verifique de nuevo en las ecuaciones originales.
 
-Puede haber errores en más de una etapa. Que una terna satisfaga una matriz escalonada solo prueba que resuelve ese sistema; no garantiza que la matriz se haya obtenido correctamente del original. Las ecuaciones que fallan tampoco identifican por sí solas la operación errónea, porque los renglones se han combinado o intercambiado.
+Puede haber errores en más de una etapa. Que una terna satisfaga las ecuaciones de una matriz escalonada solo prueba que resuelve ese sistema; no garantiza que la matriz se haya obtenido correctamente del original. Las ecuaciones que fallan tampoco identifican por sí solas la operación errónea, porque los renglones se han combinado o intercambiado.
 
 ## Ejemplos
 
@@ -94,7 +94,7 @@ $$
 \left[\begin{array}{ccc|c}1&1&1&500\\ 0&-4&-2&-500\\ 0&0&-\frac52&-125\end{array}\right].
 $$
 
-**Sustitución regresiva.** $-10z=-500$ y $-\frac52z=-125$ dan ambos $z=50$. En el primer camino, $y-2(50)=0$ da $y=100$; en el segundo, $-4y-2(50)=-500$ da también $y=100$. En ambos, $x+100+50=500$ da $x=350$.
+**Sustitución regresiva.** $-10z=-500$ y $-\frac52z=-125$ dan ambos $z=50$. En el primer procedimiento, $y-2(50)=0$ da $y=100$; en el segundo, $-4y-2(50)=-500$ da también $y=100$. En ambos, $x+100+50=500$ da $x=350$.
 
 **Verificación en el sistema original:** $350+100+50=500$; $350-3(100)-50=0$; $100-2(50)=0$. La aleación lleva $350$ g de cobre, $100$ g de zinc y $50$ g de estaño: $70\,\%$, $20\,\%$ y $10\,\%$ en masa. Las dos matrices escalonadas son distintas, pero representan sistemas equivalentes al original y determinan la misma terna.
 
@@ -110,25 +110,25 @@ y, por sustitución regresiva, $z=-2$, $y=5-2(-2)=9$ y $x=2+2(9)-(-2)=22$: la te
 
 **Paso 1: verificar en las ecuaciones originales.** $22-2(9)+(-2)=2$ y $2(22)-3(9)+4(-2)=9$ se cumplen, pero $-22+9-2(-2)=-9\ne-5$. Falla solo la tercera ecuación.
 
-**Paso 2: ¿cumple la matriz escalonada?** Sí: $22-18-2=2$, $9-4=5$ y $-2=-2$. La sustitución regresiva fue correcta; el error está en una operación.
+**Paso 2: verificar en el sistema escalonado.** La terna satisface las tres ecuaciones: $22-18-2=2$, $9-4=5$ y $-2=-2$. La sustitución regresiva fue correcta; el error está en una operación.
 
 **Paso 3: recalcular las operaciones registradas.** $R_2\to R_2-2R_1$ da $[\,2-2\ \ -3+4\ \ 4-2\mid9-4\,]=[\,0\ \ 1\ \ 2\mid5\,]$, que coincide. $R_3\to R_3+R_1$ da $[\,-1+1\ \ 1-2\ \ -2+1\mid-5+2\,]=[\,0\ \ -1\ \ -1\mid-3\,]$; el estudiante escribió $-7$ en el término independiente, porque restó $2$ en lugar de sumarlo. La comparación con el renglón intermedio registrado permite localizar aquí el error.
 
-**Paso 4: rehacer desde ahí.** Con $R_3=[\,0\ \ -1\ \ -1\mid-3\,]$, $R_3\to R_3+R_2$ da $[\,0\ \ 0\ \ 1\mid2\,]$ y
+**Paso 4: corregir el procedimiento a partir de la operación identificada.** Con $R_3=[\,0\ \ -1\ \ -1\mid-3\,]$, $R_3\to R_3+R_2$ da $[\,0\ \ 0\ \ 1\mid2\,]$ y
 
 $$
 \left[\begin{array}{ccc|c}1&-2&1&2\\ 0&1&2&5\\ 0&0&1&2\end{array}\right].
 $$
 
-Sustitución regresiva: $z=2$, $y=5-2(2)=1$ y $x=2+2(1)-2=2$. **Verificación:** $2-2+2=2$; $4-3+8=9$; $-2+1-4=-5$. La solución es $(2,1,2)$. La terna errónea $(22,9,-2)$ cumplía la matriz escalonada que la produjo: [comprobar en una matriz que contiene un error](2026-09-24-sesion-30.qmd) no lo detecta; las ecuaciones originales sí.
+Sustitución regresiva: $z=2$, $y=5-2(2)=1$ y $x=2+2(1)-2=2$. **Verificación:** $2-2+2=2$; $4-3+8=9$; $-2+1-4=-5$. La solución es $(2,1,2)$. La terna errónea $(22,9,-2)$ satisfacía el sistema escalonado del que se obtuvo: [comprobar en una matriz que contiene un error](2026-09-24-sesion-30.qmd) no lo detecta; las ecuaciones originales sí.
 
 ## Errores frecuentes
 
-- **Multiplicar un renglón sin incluir el término independiente.** Falso: $R_2\to2R_2$ sobre $[\,3\ \ -2\ \ 1\mid1\,]$ da $[\,6\ \ -4\ \ 2\mid1\,]$. Corrección: da $[\,6\ \ -4\ \ 2\mid2\,]$. La terna $(1,1,0)$ cumple $3x-2y+z=1$, pero en el renglón falso produce $6-4+0=2\ne1$: ese renglón ya no es equivalente al original.
+- **Multiplicar un renglón sin incluir el término independiente.** Falso: $R_2\to2R_2$ sobre $[\,3\ \ -2\ \ 1\mid1\,]$ da $[\,6\ \ -4\ \ 2\mid1\,]$. Corrección: da $[\,6\ \ -4\ \ 2\mid2\,]$. La terna $(1,1,0)$ cumple $3x-2y+z=1$, pero en el renglón incorrecto produce $6-4+0=2\ne1$: ese renglón ya no es equivalente al original.
 - **Perder el signo al sumar un múltiplo.** Falso: en el Ejemplo 2, el término independiente de $R_3\to R_3+R_1$ es $-5-2=-7$. Corrección: es $-5+2=-3$. Con $-7$ se obtiene $(22,9,-2)$, que en la tercera ecuación original da $-9\ne-5$.
-- **Usar la versión anterior de un renglón.** Falso: en el Ejemplo 1, tras el intercambio, aplicar $R_3\to R_3+4R_2$ con el renglón original $[\,1\ \ -3\ \ -1\mid0\,]$, lo que da $[\,4\ \ -16\ \ -6\mid-500\,]$ y destruye el cero de la primera columna. Corrección: cada operación usa la matriz resultante de la anterior; con $R_2=[\,0\ \ 1\ \ -2\mid0\,]$ se obtiene $[\,0\ \ 0\ \ -10\mid-500\,]$.
-- **Intercambiar con el primer renglón para elegir el pivote de la segunda columna.** Falso: en el Ejemplo 1, tomar el pivote $1$ de la segunda columna con $R_1\leftrightarrow R_3$, lo que deja $[\,0\ \ 1\ \ -2\mid0\,]$ como primer renglón y $[\,1\ \ 1\ \ 1\mid500\,]$ como tercero: $a_{11}=0$ y $a_{31}=1$, de modo que se deshace el trabajo de la primera columna. Corrección: el intercambio se hace entre los renglones aún no usados como pivote, $R_2\leftrightarrow R_3$, y conserva los ceros de la primera columna.
-- **Tomar las fracciones como señal de error.** Falso: en el Ejemplo 1, al obtener $\bigl[\,0\ \ 0\ \ -\frac52\mid-125\,\bigr]$, "hay fracciones, algo está mal". Corrección: $-\frac52z=-125$ da $z=50$, el mismo valor del camino sin fracciones. Un intercambio conveniente o la multiplicación de un renglón completo por un denominador común no nulo pueden simplificar el cálculo; obtener fracciones no demuestra que haya un error.
+- **Usar la versión anterior de un renglón.** Falso: en el Ejemplo 1, tras el intercambio, aplicar $R_3\to R_3+4R_2$ con el renglón original $[\,1\ \ -3\ \ -1\mid0\,]$, lo que da $[\,4\ \ -16\ \ -6\mid-500\,]$ y sustituye el cero de la primera columna por $4$. Corrección: cada operación usa la matriz resultante de la anterior; con $R_2=[\,0\ \ 1\ \ -2\mid0\,]$ se obtiene $[\,0\ \ 0\ \ -10\mid-500\,]$.
+- **Intercambiar con el primer renglón para elegir el pivote de la segunda columna.** Falso: en el Ejemplo 1, tomar el pivote $1$ de la segunda columna con $R_1\leftrightarrow R_3$, lo que deja $[\,0\ \ 1\ \ -2\mid0\,]$ como primer renglón y $[\,1\ \ 1\ \ 1\mid500\,]$ como tercero: $a_{11}=0$ y $a_{31}=1$, de modo que reaparece una entrada no nula debajo de la posición del primer pivote. Corrección: el intercambio se hace entre los renglones aún no usados como pivote, $R_2\leftrightarrow R_3$, y conserva los ceros de la primera columna.
+- **Tomar las fracciones como señal de error.** Falso: en el Ejemplo 1, al obtener $\bigl[\,0\ \ 0\ \ -\frac52\mid-125\,\bigr]$, concluir que el procedimiento es incorrecto únicamente por contener fracciones. Corrección: $-\frac52z=-125$ da $z=50$, el mismo valor del procedimiento sin fracciones. Un intercambio conveniente o la multiplicación de un renglón completo por un denominador común no nulo pueden simplificar el cálculo; obtener fracciones no demuestra que haya un error.
 
 ## Actividad
 
@@ -140,25 +140,27 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
    \left\{\begin{aligned}2x+y-z&=4\\ 3x-2y+z&=-2\\ x+y+z&=5.\end{aligned}\right.
    $$
 
-   a. Escriba su matriz aumentada y llévela a la forma escalonada por el camino que prefiera: conservando las fracciones, multiplicando renglones antes de eliminar o intercambiando $R_1\leftrightarrow R_3$ para empezar con el pivote $1$. Anote cada operación.
+   a. Escriba su matriz aumentada y llévela a la forma escalonada mediante el procedimiento que prefiera: conservando las fracciones, multiplicando renglones antes de eliminar o intercambiando $R_1\leftrightarrow R_3$ para empezar con el pivote $1$. Anote cada operación.
 
    b. Obtenga la solución por sustitución regresiva y verifíquela en las tres ecuaciones originales.
 
-   c. Compare con un compañero que haya seguido otro camino: ¿coinciden las matrices escalonadas? ¿Coinciden las soluciones? Explique.
+   c. Compare con un compañero que haya seguido otro procedimiento: ¿coinciden las matrices escalonadas? ¿Coinciden las soluciones? Explique.
 
-2. Una **probeta** es una muestra preparada para un ensayo. En un laboratorio se pesan probetas de tres tipos, A, B y C. Todas las de un mismo tipo tienen igual masa positiva. Las pesadas excluyen los recipientes y se consideran exactas:
+2. En un laboratorio se desea determinar la masa de las probetas de tres tipos: A, B y C. Una **probeta** es una muestra de material preparada para realizar un ensayo. Todas las probetas de un mismo tipo tienen la misma masa.
 
-   | Pesada | Número de A | Número de B | Número de C | Masa total |
+   Se mide la masa total de tres conjuntos de probetas. La tabla indica la cantidad de probetas de cada tipo que contiene cada conjunto y su masa total. La masa del recipiente no está incluida. Para este ejercicio, considere exactos los datos de la tabla.
+
+   | Conjunto | Probetas de tipo A | Probetas de tipo B | Probetas de tipo C | Masa total (g) |
    |---|---:|---:|---:|---:|
-   | Primera | $1$ | $1$ | $1$ | $100$ g |
-   | Segunda | $4$ | $1$ | $3$ | $260$ g |
-   | Tercera | $2$ | $1$ | $3$ | $220$ g |
+   | 1 | $1$ | $1$ | $1$ | $100$ |
+   | 2 | $4$ | $1$ | $3$ | $260$ |
+   | 3 | $2$ | $1$ | $3$ | $220$ |
 
-   a. Defina las incógnitas con sus unidades, plantee el sistema en el orden de la tabla y escriba la matriz aumentada.
+   a. Denote por $x$, $y$ y $z$ las masas, en gramos, de una probeta de tipo A, B y C, respectivamente, con $x,y,z>0$. Plantee una ecuación para cada conjunto y escriba la matriz aumentada, siguiendo el orden de la tabla y el orden $x,y,z$ de las incógnitas.
 
-   b. Resuelva por Gauss. Al llegar a la segunda columna, explique cómo eligió el pivote o trató las fracciones.
+   b. Determine las tres masas mediante eliminación de Gauss y sustitución regresiva. Registre las operaciones elementales y justifique la elección del pivote de la segunda columna.
 
-   c. Compruebe las tres pesadas y determine la masa de un lote con dos probetas de cada tipo.
+   c. Verifique que las masas obtenidas reproducen las tres mediciones de la tabla. Calcule la masa total de un conjunto formado por dos probetas de tipo A, dos de tipo B y dos de tipo C.
 
 3. Para resolver $x+y-2z=-3$, $2x-y+z=3$, $-x+2y+z=6$, un compañero anotó $R_2\to R_2-2R_1$, $R_3\to R_3+R_1$ y $R_3\to R_3+R_2$, obtuvo
 
@@ -196,7 +198,7 @@ $$
 
 **1. c.** Las matrices escalonadas son distintas, pero la solución es la misma: cada operación produce un sistema equivalente al original, de modo que los tres sistemas escalonados tienen exactamente el mismo conjunto solución. En este sistema de solución única, dos resultados finales distintos no pueden ser ambos correctos.
 
-**2. a.** Sean $x,y,z>0$ las masas, en gramos por probeta, de los tipos A, B y C, respectivamente. El sistema y su matriz aumentada son
+**2. a.** Sean $x,y,z>0$ las masas, en gramos, de una probeta de tipo A, B y C, respectivamente. El sistema y su matriz aumentada son
 
 $$
 \left\{\begin{aligned}x+y+z&=100\\4x+y+3z&=260\\2x+y+3z&=220.\end{aligned}\right.
@@ -218,7 +220,7 @@ $$
 
 La sustitución regresiva da $z=50$, $-y+50=20$ y $x+30+50=100$, por lo que $(x,y,z)=(20,30,50)$. Sin intercambio, también es válido $R_3\to R_3-\frac13R_2$, que produce $[\,0\ \ 0\ \ \frac43\mid\frac{200}{3}\,]$ y conduce al mismo resultado.
 
-**2. c.** Las pesadas se verifican: $20+30+50=100$, $4(20)+30+3(50)=260$ y $2(20)+30+3(50)=220$. Cada probeta A pesa $20$ g; cada B, $30$ g; cada C, $50$ g. Todas las masas son positivas. Dos de cada tipo pesan $2(20)+2(30)+2(50)=200$ g.
+**2. c.** Las masas calculadas reproducen las tres mediciones: $20+30+50=100$, $4(20)+30+3(50)=260$ y $2(20)+30+3(50)=220$. La masa de una probeta de tipo A es $20$ g; la de una probeta de tipo B, $30$ g; y la de una probeta de tipo C, $50$ g. Las tres masas son positivas. El conjunto formado por dos probetas de cada tipo tiene una masa total de $2(20)+2(30)+2(50)=200$ g.
 
 **3. a.** $-4+1-2(0)=-3$ y $4+2+0=6$ se cumplen; $2(-4)-1+0=-9\ne3$. Falla solo la segunda ecuación.
 
@@ -301,4 +303,5 @@ Las operaciones elementales correctamente ejecutadas conservan el conjunto soluc
 - Resolver un sistema con solución única mediante Gauss y sustitución regresiva, conservando valores exactos.
 - Elegir intercambios o multiplicaciones de renglones completos para facilitar los cálculos.
 - Revisar la terna en las ecuaciones originales y las operaciones registradas para localizar y corregir errores.
-- Interpretar soluciones de problemas de mezclas y pesadas de muestras, comprobando sus restricciones de masa.
+- Interpretar soluciones de problemas de mezclas y mediciones de masa, comprobando sus restricciones de masa.
+
