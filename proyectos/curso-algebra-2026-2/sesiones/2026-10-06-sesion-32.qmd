@@ -6,7 +6,7 @@ description: "Reducción por renglones, contraste con la sustitución regresiva 
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá completar la reducción de una matriz escalonada mediante Gauss-Jordan, leer y verificar una solución única y reconocer una contradicción. Podrá distinguir esos casos de un sistema consistente con una columna de coeficientes sin pivote, justificando su respuesta mediante las ecuaciones representadas por la matriz.
+Al finalizar la sesión podrá completar la reducción de una matriz escalonada mediante Gauss-Jordan, leer y verificar una solución única, reconocer una contradicción y distinguir esos casos de un sistema consistente con una columna de coeficientes sin pivote. Podrá comprobarlo al resolver el ejercicio 1 de la [Actividad](#actividad) y justificar la clasificación de las matrices del ejercicio 3 mediante las ecuaciones que representan.
 
 ## Forma escalonada reducida
 
@@ -42,7 +42,7 @@ Para continuar desde una matriz escalonada:
 4. Repita los pasos 2 y 3 con el pivote anterior y continúe de abajo hacia arriba. Al usar un nuevo renglón pivote, las columnas de pivotes ya reducidas tienen un cero en ese renglón, por lo que se conservan sus ceros y sus unos.
 5. Compruebe las condiciones de la forma reducida e interprete sus ecuaciones. Verifique los valores obtenidos en el sistema original.
 
-También es válido convertir todos los pivotes en $1$ antes de anular las entradas superiores. En cualquiera de los dos procedimientos, las fracciones se conservan exactas.
+También es válido convertir todos los pivotes en $1$ antes de anular las entradas superiores. En cualquiera de los dos procedimientos, las fracciones se conservan exactas, como se trabajó en la [Sesión 31](2026-10-05-sesion-31.qmd).
 
 ### Contraste con la sustitución regresiva
 
@@ -58,15 +58,14 @@ La **consistencia se revisa primero**. Un pivote en cada columna de coeficientes
 |---|---|
 | Hay un renglón $[\,0\ \cdots\ 0\mid c\,]$, con $c\ne0$ | El sistema es inconsistente: no tiene solución |
 | No hay contradicción y cada columna de coeficientes tiene pivote | El sistema tiene solución única; en la forma reducida se lee el valor de cada incógnita |
-| No hay contradicción y alguna columna de coeficientes no tiene pivote | El sistema tiene infinitas soluciones |
 
-En el último caso, una incógnita no queda determinada por las demás ecuaciones. Por ejemplo,
+También puede aparecer una columna de coeficientes sin pivote. Observe esta matriz ya reducida:
 
 $$
 \left[\begin{array}{ccc|c}1&0&2&1\\0&1&-1&3\\0&0&0&0\end{array}\right]
 $$
 
-está reducida y representa $x+2z=1$, $y-z=3$ y $0=0$. La columna de $z$ no tiene pivote. Para cualquier valor real de $z$, las dos primeras ecuaciones determinan $x$ y $y$: con $z=0$ se obtiene $(1,3,0)$; con $z=1$, $(-1,4,1)$. Ambas ternas son soluciones, y no hay una ecuación adicional que determine un único valor de $z$.
+Representa $x+2z=1$, $y-z=3$ y $0=0$. La columna de $z$ no tiene pivote. Para cualquier valor real de $z$, las dos primeras ecuaciones determinan $x$ y $y$: con $z=0$ se obtiene $(1,3,0)$; con $z=1$, $(-1,4,1)$. Ambas ternas son soluciones, y no hay una ecuación adicional que determine un único valor de $z$. Como $z$ puede tomar cualquier valor real, este sistema tiene infinitas soluciones.
 
 ## Ejemplos
 
@@ -127,16 +126,16 @@ La matriz está escalonada, aunque todavía no reducida. Es válido multiplicar 
 ## Errores frecuentes
 
 - **Dividir el pivote sin dividir el término independiente.** En el Ejemplo 1, $R_3\to-\frac1{10}R_3$ transforma $[\,0\ \ 0\ \ -10\mid-500\,]$ en $[\,0\ \ 0\ \ 1\mid50\,]$, no en $[\,0\ \ 0\ \ 1\mid-500\,]$.
-- **Modificar el renglón equivocado.** Para anular el coeficiente de $z$ en el primer renglón se usa $R_1\to R_1-R_3$. La operación $R_3\to R_3-R_1$ modificaría el renglón que ya representa $z=50$ y volvería a introducir coeficientes de $x$ y $y$.
+- **Modificar el renglón equivocado.** En el Ejemplo 1, después de obtener $[\,0\ \ 0\ \ 1\mid50\,]$, se usa $R_1\to R_1-R_3$ para anular el coeficiente de $z$ en el primer renglón. Aplicar $R_3\to R_3-R_1$ produciría $[\,-1\ \ -1\ \ 0\mid-450\,]$. Esta operación es válida y conserva las soluciones, pero vuelve a introducir coeficientes de $x$ y $y$ en el tercer renglón, que deja de representar directamente $z=50$.
 - **Leer los términos independientes antes de terminar la reducción.** El renglón $[\,1\ \ 1\ \ 0\mid450\,]$ representa $x+y=450$, no $x=450$. Con $y=100$, se obtiene $x=350$.
 - **Confundir la columna de términos independientes con una incógnita.** El renglón $[\,0\ \ 0\ \ 0\mid1\,]$ representa $0=1$, no $z=1$. Su pivote está a la derecha de la separación vertical, fuera de las columnas de coeficientes.
-- **Asignar cero a una incógnita sin justificar unicidad.** En el ejemplo reducido con $x+2z=1$ y $y-z=3$, elegir $z=0$ produce una solución particular. La terna $(-1,4,1)$ muestra que esa solución no es única.
+- **Asignar cero a una incógnita sin justificar unicidad.** En el ejemplo reducido con $x+2z=1$ y $y-z=3$, elegir $z=0$ produce una solución. La terna $(-1,4,1)$ muestra que esa solución no es única.
 
 ## Actividad
 
-Registre las operaciones elementales y compruebe la forma de la matriz antes de interpretar la solución. Compare sus procedimientos con los de un compañero o compañera de grupo.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre las operaciones elementales y compruebe la forma de la matriz antes de interpretar la solución.
 
-1. El sistema de la [Actividad 1 de la Sesión 30](2026-09-24-sesion-30.qmd), $x+2y+z=3$, $2x+4y-z=-3$, $-x+y+2z=3$, tiene la forma escalonada
+1. El sistema del [ejercicio 1 de la Actividad de la Sesión 30](2026-09-24-sesion-30.qmd#actividad), $x+2y+z=3$, $2x+4y-z=-3$, $-x+y+2z=3$, tiene la forma escalonada
 
    $$
    \left[\begin{array}{ccc|c}1&2&1&3\\0&3&3&6\\0&0&-3&-9\end{array}\right].
@@ -260,7 +259,7 @@ Resuelva estos ejercicios como práctica autónoma y consulte las respuestas des
 
    b. Se descarta el registro del conjunto 3. Una nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de $160$ g. Conserve los registros 1 y 2 y sustituya el tercero por esta nueva condición. Resuelva por Gauss-Jordan y compruebe las tres mediciones.
 
-4. Para resolver $2x+y-z=2$, $3x+2y+z=5$, $x-y+2z=5$, un estudiante partió de la matriz escalonada
+4. Para resolver el sistema $2x+y-z=2$, $3x+2y+z=5$, $x-y+2z=5$ del [ejercicio 1 de la práctica de la Sesión 31](2026-10-05-sesion-31.qmd#ejercicios-para-practicar), un estudiante partió de la matriz escalonada
 
    $$
    \left[\begin{array}{ccc|c}2&1&-1&2\\0&\frac12&\frac52&2\\0&0&10&10\end{array}\right].
@@ -268,7 +267,7 @@ Resuelva estos ejercicios como práctica autónoma y consulte las respuestas des
 
    Al aplicar $R_3\to\frac1{10}R_3$, escribió $[\,0\ \ 0\ \ 1\mid10\,]$. Continuó correctamente desde esa matriz y obtuvo $(29,-46,10)$. Determine cuáles ecuaciones originales satisface esa terna, localice y corrija el error, y escriba la forma reducida correcta y su solución.
 
-5. Resuelva $x+2y=5$, $3x-y=1$ por Gauss-Jordan y por sustitución. Escriba la forma reducida, verifique la pareja obtenida e indique qué método prefiere en este caso, con una justificación.
+5. Resuelva $x+2y=5$, $3x-y=1$ por Gauss-Jordan y por [sustitución](2026-09-22-sesion-28.qmd#método-de-sustitución). Escriba la forma reducida, verifique la pareja obtenida e indique qué método prefiere en este caso, con una justificación.
 
 6. Las siguientes matrices aumentadas están reducidas. Clasifique cada sistema y escriba su solución única o, cuando haya infinitas soluciones, dos soluciones distintas. Justifique cada clasificación.
 
@@ -344,7 +343,7 @@ Una preferencia justificada es sustitución, porque la primera ecuación permite
 
 El trabajo realizado permite comprobar si puede:
 
-- Reconocer la forma escalonada reducida y obtenerla mediante operaciones sobre renglones completos.
-- Explicar cómo la eliminación de entradas superiores realiza, dentro de la matriz, las sustituciones de un sistema con solución única.
-- Revisar primero la consistencia y distinguir una solución única, una contradicción y un sistema consistente con una columna de coeficientes sin pivote.
-- Verificar una solución en las ecuaciones originales e interpretar las masas y restricciones de los problemas planteados.
+- Reconocer la forma escalonada reducida y obtenerla mediante operaciones sobre renglones completos, como en el ejercicio 1 de la [Actividad](#actividad).
+- Explicar cómo la eliminación de entradas superiores realiza, dentro de la matriz, las sustituciones de un sistema con solución única, como en el inciso 1c de la Actividad.
+- Revisar primero la consistencia y distinguir una solución única, una contradicción y un sistema consistente con una columna de coeficientes sin pivote, como en el ejercicio 3 de la Actividad y el ejercicio 6 de la práctica.
+- Verificar una solución en las ecuaciones originales e interpretar las masas y restricciones de los problemas planteados, como en el ejercicio 2 de la Actividad y los ejercicios 2 y 3 de la [práctica](#ejercicios-para-practicar).
