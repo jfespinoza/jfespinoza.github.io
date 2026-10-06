@@ -1,0 +1,350 @@
+---
+title: "Sesión 32. Método de Gauss-Jordan y forma escalonada reducida"
+date: 2026-10-06
+description: "Reducción por renglones, contraste con la sustitución regresiva y lectura del tipo de solución de un sistema lineal."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá completar la reducción de una matriz escalonada mediante Gauss-Jordan, leer y verificar una solución única y reconocer una contradicción. Podrá distinguir esos casos de un sistema consistente con una columna de coeficientes sin pivote, justificando su respuesta mediante las ecuaciones representadas por la matriz.
+
+## Forma escalonada reducida
+
+En el [método de Gauss](2026-09-24-sesion-30.qmd), la matriz aumentada se lleva a la forma escalonada y el sistema se resuelve por sustitución regresiva. Los pivotes pueden ser distintos de $1$ y puede haber entradas no nulas arriba de ellos.
+
+Una matriz está en **forma escalonada reducida por renglones** cuando cumple las siguientes condiciones:
+
+1. Está en forma escalonada: los renglones nulos están al final y el pivote de cada renglón no nulo se encuentra a la derecha del pivote del renglón anterior.
+2. Cada pivote vale $1$.
+3. Cada pivote es la única entrada no nula de su columna.
+
+El **pivote** de un renglón no nulo de una matriz escalonada es su primera entrada no nula. En una matriz aumentada, la línea vertical separa los coeficientes de los términos independientes; esa separación no elimina la última columna al comprobar las condiciones anteriores.
+
+Por ejemplo, la primera matriz está escalonada, pero no reducida; la segunda está reducida:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&500\\0&1&-2&0\\0&0&-10&-500\end{array}\right],
+\qquad
+\left[\begin{array}{ccc|c}1&0&0&350\\0&1&0&100\\0&0&1&50\end{array}\right].
+$$
+
+La segunda representa directamente $x=350$, $y=100$ y $z=50$. El Ejemplo 1 muestra las operaciones que relacionan ambas matrices. Las operaciones elementales pueden producir distintas formas escalonadas de una misma matriz, pero su forma escalonada reducida es única.
+
+## Método de Gauss-Jordan
+
+El **método de Gauss-Jordan** utiliza [operaciones elementales de renglón](2026-09-23-sesion-29.qmd) para obtener la forma escalonada reducida. Estas operaciones conservan el conjunto solución.
+
+Para continuar desde una matriz escalonada:
+
+1. Revise si hay un renglón $[\,0\ \cdots\ 0\mid c\,]$ con $c\ne0$. Representa $0=c$, por lo que el sistema no tiene solución. Para establecer esa conclusión no es necesario completar la reducción.
+2. Si no hay contradicción, comience con el último renglón no nulo. Convierta su pivote $p\ne0$ en $1$ mediante $R_j\to\frac1pR_j$.
+3. Anule las entradas situadas arriba de ese pivote. Si una entrada vale $a$, use $R_k\to R_k-aR_j$. La operación se aplica al renglón completo, incluido su término independiente.
+4. Repita los pasos 2 y 3 con el pivote anterior y continúe de abajo hacia arriba. Al usar un nuevo renglón pivote, las columnas de pivotes ya reducidas tienen un cero en ese renglón, por lo que se conservan sus ceros y sus unos.
+5. Compruebe las condiciones de la forma reducida e interprete sus ecuaciones. Verifique los valores obtenidos en el sistema original.
+
+También es válido convertir todos los pivotes en $1$ antes de anular las entradas superiores. En cualquiera de los dos procedimientos, las fracciones se conservan exactas.
+
+### Contraste con la sustitución regresiva
+
+Para un sistema con solución única, ambos métodos producen los mismos valores. La diferencia está en cómo se utilizan las ecuaciones ya resueltas. Si el tercer renglón representa $z=50$ y el segundo representa $y-2z=0$, la sustitución regresiva da $y-2(50)=0$. En Gauss-Jordan, $R_2\to R_2+2R_3$ transforma esas mismas ecuaciones en $y=100$ y $z=50$.
+
+Gauss resuelve el sistema escalonado mediante sustitución regresiva. Gauss-Jordan realiza operaciones adicionales sobre la matriz hasta que las ecuaciones permiten leer directamente los valores de las incógnitas.
+
+### Lectura del tipo de solución
+
+La **consistencia se revisa primero**. Un pivote en cada columna de coeficientes solo garantiza una solución única si no existe contradicción.
+
+| Condición en la matriz aumentada escalonada | Conclusión |
+|---|---|
+| Hay un renglón $[\,0\ \cdots\ 0\mid c\,]$, con $c\ne0$ | El sistema es inconsistente: no tiene solución |
+| No hay contradicción y cada columna de coeficientes tiene pivote | El sistema tiene solución única; en la forma reducida se lee el valor de cada incógnita |
+| No hay contradicción y alguna columna de coeficientes no tiene pivote | El sistema tiene infinitas soluciones |
+
+En el último caso, una incógnita no queda determinada por las demás ecuaciones. Por ejemplo,
+
+$$
+\left[\begin{array}{ccc|c}1&0&2&1\\0&1&-1&3\\0&0&0&0\end{array}\right]
+$$
+
+está reducida y representa $x+2z=1$, $y-z=3$ y $0=0$. La columna de $z$ no tiene pivote. Para cualquier valor real de $z$, las dos primeras ecuaciones determinan $x$ y $y$: con $z=0$ se obtiene $(1,3,0)$; con $z=1$, $(-1,4,1)$. Ambas ternas son soluciones, y no hay una ecuación adicional que determine un único valor de $z$.
+
+## Ejemplos
+
+### Ejemplo 1. Reducción de un sistema ya escalonado
+
+Se retoma la mezcla de metales del [Ejemplo 1 de la Sesión 31](2026-10-05-sesion-31.qmd). Las masas de cobre, zinc y estaño, expresadas en gramos mediante $x,y,z\ge0$, satisfacen
+
+$$
+x+y+z=500,\qquad x-3y-z=0,\qquad y-2z=0.
+$$
+
+Una forma escalonada de su matriz aumentada es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&500\\0&1&-2&0\\0&0&-10&-500\end{array}\right].
+$$
+
+**Pivote de la tercera columna.** Con $R_3\to-\frac1{10}R_3$, el tercer renglón queda $[\,0\ \ 0\ \ 1\mid50\,]$. Después se aplican $R_2\to R_2+2R_3$ y $R_1\to R_1-R_3$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&0&450\\0&1&0&100\\0&0&1&50\end{array}\right].
+$$
+
+**Pivote de la segunda columna.** Ya vale $1$. La operación $R_1\to R_1-R_2$ anula la entrada situada arriba:
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&350\\0&1&0&100\\0&0&1&50\end{array}\right].
+$$
+
+La matriz está reducida y la solución es $(x,y,z)=(350,100,50)$. Se requieren $350$ g de cobre, $100$ g de zinc y $50$ g de estaño. La verificación en las ecuaciones originales da $350+100+50=500$, $350-3(100)-50=0$ y $100-2(50)=0$; las masas son no negativas.
+
+La otra forma escalonada obtenida en la sesión anterior fue
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&500\\0&-4&-2&-500\\0&0&-\frac52&-125\end{array}\right].
+$$
+
+Desde ella, $R_3\to-\frac25R_3$ da $z=50$. Las operaciones $R_2\to-\frac14R_2$ y $R_2\to R_2-\frac12R_3$ producen $[\,0\ \ 1\ \ 0\mid100\,]$. Finalmente, $R_1\to R_1-R_3$ y $R_1\to R_1-R_2$ producen $[\,1\ \ 0\ \ 0\mid350\,]$. Se obtiene la misma forma reducida.
+
+### Ejemplo 2. Reconocer una contradicción
+
+Considere el sistema
+
+$$
+\left\{\begin{aligned}x+y+z&=100\\2x+y+z&=130\\3x+2y+2z&=240.\end{aligned}\right.
+$$
+
+Al aplicar $R_2\to R_2-2R_1$ y $R_3\to R_3-3R_1$, y después $R_3\to R_3-R_2$, se obtiene
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&100\\0&-1&-1&-70\\0&0&0&10\end{array}\right].
+$$
+
+El tercer renglón representa $0=10$. El sistema no tiene solución. Esto también se comprueba al sumar las dos primeras ecuaciones: su lado izquierdo coincide con el de la tercera, pero la suma de sus términos independientes es $230$, no $240$.
+
+La matriz está escalonada, aunque todavía no reducida. Es válido multiplicar el tercer renglón por $\frac1{10}$ para obtener $[\,0\ \ 0\ \ 0\mid1\,]$: su pivote queda en la columna de términos independientes y sigue representando una contradicción, $0=1$. Las operaciones elementales pueden modificar las entradas de ese renglón, pero no convierten un sistema inconsistente en uno consistente.
+
+## Errores frecuentes
+
+- **Dividir el pivote sin dividir el término independiente.** En el Ejemplo 1, $R_3\to-\frac1{10}R_3$ transforma $[\,0\ \ 0\ \ -10\mid-500\,]$ en $[\,0\ \ 0\ \ 1\mid50\,]$, no en $[\,0\ \ 0\ \ 1\mid-500\,]$.
+- **Modificar el renglón equivocado.** Para anular el coeficiente de $z$ en el primer renglón se usa $R_1\to R_1-R_3$. La operación $R_3\to R_3-R_1$ modificaría el renglón que ya representa $z=50$ y volvería a introducir coeficientes de $x$ y $y$.
+- **Leer los términos independientes antes de terminar la reducción.** El renglón $[\,1\ \ 1\ \ 0\mid450\,]$ representa $x+y=450$, no $x=450$. Con $y=100$, se obtiene $x=350$.
+- **Confundir la columna de términos independientes con una incógnita.** El renglón $[\,0\ \ 0\ \ 0\mid1\,]$ representa $0=1$, no $z=1$. Su pivote está a la derecha de la separación vertical, fuera de las columnas de coeficientes.
+- **Asignar cero a una incógnita sin justificar unicidad.** En el ejemplo reducido con $x+2z=1$ y $y-z=3$, elegir $z=0$ produce una solución particular. La terna $(-1,4,1)$ muestra que esa solución no es única.
+
+## Actividad
+
+Registre las operaciones elementales y compruebe la forma de la matriz antes de interpretar la solución. Compare sus procedimientos con los de un compañero o compañera de grupo.
+
+1. El sistema de la [Actividad 1 de la Sesión 30](2026-09-24-sesion-30.qmd), $x+2y+z=3$, $2x+4y-z=-3$, $-x+y+2z=3$, tiene la forma escalonada
+
+   $$
+   \left[\begin{array}{ccc|c}1&2&1&3\\0&3&3&6\\0&0&-3&-9\end{array}\right].
+   $$
+
+   a. Continúe con Gauss-Jordan hasta la forma escalonada reducida.
+
+   b. Lea la solución y verifíquela en las tres ecuaciones originales.
+
+   c. Identifique la operación que equivale a sustituir $z=3$ en la ecuación del segundo renglón y explique su efecto.
+
+2. Para preparar una pasta cerámica se mezclan arcilla y dos minerales: feldespato y cuarzo. Se requieren $300$ g en total. La masa de arcilla debe ser igual a la suma de las masas de feldespato y cuarzo; la masa de feldespato debe superar en $30$ g a la de cuarzo. Suponga que las masas se suman sin pérdidas.
+
+   a. Denote por $x,y,z$ las masas, en gramos, de arcilla, feldespato y cuarzo, respectivamente, con $x,y,z\ge0$. Plantee el sistema y obtenga una matriz aumentada escalonada. Justifique la elección del pivote de la segunda columna.
+
+   b. Complete la reducción por Gauss-Jordan y determine la masa de cada componente. Verifique las tres condiciones y calcule los porcentajes en masa, usando $\frac{\text{masa del componente}}{\text{masa total}}\cdot100\,\%$.
+
+   c. ¿Es posible preparar la mezcla con $70$ g de cuarzo y conservar las tres condiciones? Justifique a partir de la solución obtenida.
+
+3. Las siguientes matrices aumentadas están en forma escalonada reducida. En cada caso, determine si el sistema en $x,y,z$ tiene solución única, ninguna o infinitas soluciones. Justifique mediante sus renglones y pivotes. Si hay solución única, escríbala; si hay infinitas, proporcione dos ternas distintas que satisfagan el sistema.
+
+   a.
+
+      $$
+      \left[\begin{array}{ccc|c}1&0&0&2\\0&1&0&-1\\0&0&1&4\end{array}\right].
+      $$
+
+   b.
+
+      $$
+      \left[\begin{array}{ccc|c}1&0&-1&0\\0&1&2&0\\0&0&0&1\end{array}\right].
+      $$
+
+   c.
+
+      $$
+      \left[\begin{array}{ccc|c}1&0&-1&4\\0&1&2&-1\\0&0&0&0\end{array}\right].
+      $$
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Las operaciones $R_2\to\frac13R_2$ y $R_3\to-\frac13R_3$ producen los renglones $[\,0\ \ 1\ \ 1\mid2\,]$ y $[\,0\ \ 0\ \ 1\mid3\,]$. Después, $R_2\to R_2-R_3$ da $[\,0\ \ 1\ \ 0\mid-1\,]$ y $R_1\to R_1-R_3$ da $[\,1\ \ 2\ \ 0\mid0\,]$. Finalmente, $R_1\to R_1-2R_2$ produce
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&2\\0&1&0&-1\\0&0&1&3\end{array}\right].
+$$
+
+**1. b.** La solución es $(2,-1,3)$. Se verifica $2-2+3=3$, $4-4-3=-3$ y $-2-1+6=3$.
+
+**1. c.** Después de dividir el segundo renglón entre $3$, su ecuación es $y+z=2$. La operación $R_2\to R_2-R_3$ resta la ecuación $z=3$ y deja $y=-1$. Equivale a sustituir ese valor de $z$ en la ecuación.
+
+**2. a.** El sistema y la matriz aumentada son
+
+$$
+\left\{\begin{aligned}x+y+z&=300\\x-y-z&=0\\y-z&=30,\end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}1&1&1&300\\1&-1&-1&0\\0&1&-1&30\end{array}\right].
+$$
+
+Con $R_2\to R_2-R_1$ se obtiene $[\,0\ \ -2\ \ -2\mid-300\,]$. El intercambio $R_2\leftrightarrow R_3$ permite usar el pivote $1$ de la segunda columna. Luego, $R_3\to R_3+2R_2$ produce
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&300\\0&1&-1&30\\0&0&-4&-240\end{array}\right].
+$$
+
+También es válido conservar el pivote $-2$ y usar $R_3\to R_3+\frac12R_2$ sin efectuar el intercambio; el último renglón sería $[\,0\ \ 0\ \ -2\mid-120\,]$.
+
+**2. b.** Desde la matriz mostrada, $R_3\to-\frac14R_3$ da $[\,0\ \ 0\ \ 1\mid60\,]$. Después, $R_2\to R_2+R_3$ y $R_1\to R_1-R_3$ producen $[\,0\ \ 1\ \ 0\mid90\,]$ y $[\,1\ \ 1\ \ 0\mid240\,]$. La operación $R_1\to R_1-R_2$ completa la reducción:
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&150\\0&1&0&90\\0&0&1&60\end{array}\right].
+$$
+
+Se requieren $150$ g de arcilla, $90$ g de feldespato y $60$ g de cuarzo. Se verifica $150+90+60=300$, $150=90+60$ y $90-60=30$. Las masas son no negativas y representan, respectivamente, el $50\,\%$, el $30\,\%$ y el $20\,\%$ de la mezcla.
+
+**2. c.** No. El sistema es consistente y tiene un pivote en cada columna de coeficientes; por tanto, su solución es única y exige $60$ g de cuarzo. Con $70$ g no pueden cumplirse simultáneamente las tres condiciones.
+
+**3. a.** Solución única $(2,-1,4)$: no hay contradicción y las tres columnas de coeficientes tienen pivote.
+
+**3. b.** No hay solución: el tercer renglón representa $0=1$. Su pivote está en la columna de términos independientes.
+
+**3. c.** Hay infinitas soluciones: no hay contradicción y la columna de $z$ no tiene pivote. Las ecuaciones son $x-z=4$ y $y+2z=-1$. Dos soluciones son $(4,-1,0)$ y $(5,-3,1)$, que dan, respectivamente, $4-0=4$, $-1+2(0)=-1$ y $5-1=4$, $-3+2(1)=-1$.
+
+:::
+
+## Ejercicios para practicar
+
+Resuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.
+
+1. El sistema $x+y+z=2$, $2x+3y+z=7$, $x+3y-2z=9$ tiene la matriz escalonada
+
+   $$
+   \left[\begin{array}{ccc|c}1&1&1&2\\0&1&-1&3\\0&0&-1&1\end{array}\right].
+   $$
+
+   Complete Gauss-Jordan, escriba la forma reducida y verifique la solución en las ecuaciones originales. Compare con la respuesta del [ejercicio 1 de la Sesión 30](2026-09-24-sesion-30.qmd).
+
+2. Un laboratorio dispone de tres lotes de polvo metálico formados únicamente por cobre, estaño y zinc, con las composiciones en masa de la tabla. Se quieren preparar $500$ g de una mezcla con $80\,\%$ de cobre, $12\,\%$ de estaño y $8\,\%$ de zinc. Se usarán $x$ g del lote A, $y$ g del lote B y $z$ g del lote C, con $x,y,z\ge0$. Las masas se suman sin pérdidas. La masa de cada metal se calcula multiplicando la masa de polvo por su porcentaje expresado como fracción.
+
+   | Lote | Cobre | Estaño | Zinc |
+   |---|---:|---:|---:|
+   | A | $90\,\%$ | $10\,\%$ | $0\,\%$ |
+   | B | $80\,\%$ | $10\,\%$ | $10\,\%$ |
+   | C | $70\,\%$ | $20\,\%$ | $10\,\%$ |
+
+   a. Plantee las ecuaciones de masa total, masa de estaño y masa de zinc. Escriba también el sistema equivalente con coeficientes enteros.
+
+   b. Resuelva mediante Gauss-Jordan e indique la masa que debe tomarse de cada lote.
+
+   c. Compruebe la masa de cobre y explique por qué queda determinada al satisfacer las otras tres condiciones.
+
+3. Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se forman tres conjuntos y se registran las masas indicadas, sin incluir recipientes:
+
+   | Conjunto | Placas de tipo A | Placas de tipo B | Placas de tipo C | Masa registrada (g) |
+   |---|---:|---:|---:|---:|
+   | 1 | $1$ | $1$ | $1$ | $120$ |
+   | 2 | $2$ | $1$ | $1$ | $150$ |
+   | 3 | $3$ | $2$ | $2$ | $280$ |
+
+   a. Denote por $x,y,z>0$ las masas, en gramos, de una placa de tipo A, B y C, respectivamente. Trate los valores registrados como datos exactos, plantee el sistema y escalone su matriz aumentada. Determine si esos datos son compatibles y justifique.
+
+   b. Se descarta el registro del conjunto 3. Una nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de $160$ g. Conserve los registros 1 y 2 y sustituya el tercero por esta nueva condición. Resuelva por Gauss-Jordan y compruebe las tres mediciones.
+
+4. Para resolver $2x+y-z=2$, $3x+2y+z=5$, $x-y+2z=5$, un estudiante partió de la matriz escalonada
+
+   $$
+   \left[\begin{array}{ccc|c}2&1&-1&2\\0&\frac12&\frac52&2\\0&0&10&10\end{array}\right].
+   $$
+
+   Al aplicar $R_3\to\frac1{10}R_3$, escribió $[\,0\ \ 0\ \ 1\mid10\,]$. Continuó correctamente desde esa matriz y obtuvo $(29,-46,10)$. Determine cuáles ecuaciones originales satisface esa terna, localice y corrija el error, y escriba la forma reducida correcta y su solución.
+
+5. Resuelva $x+2y=5$, $3x-y=1$ por Gauss-Jordan y por sustitución. Escriba la forma reducida, verifique la pareja obtenida e indique qué método prefiere en este caso, con una justificación.
+
+6. Las siguientes matrices aumentadas están reducidas. Clasifique cada sistema y escriba su solución única o, cuando haya infinitas soluciones, dos soluciones distintas. Justifique cada clasificación.
+
+   a. Sistema en $x,y$:
+
+      $$
+      \left[\begin{array}{cc|c}1&0&4\\0&1&-3\end{array}\right].
+      $$
+
+   b. Sistema en $x,y$:
+
+      $$
+      \left[\begin{array}{cc|c}1&-2&0\\0&0&1\end{array}\right].
+      $$
+
+   c. Sistema en $x,y,z$:
+
+      $$
+      \left[\begin{array}{ccc|c}1&0&-3&2\\0&1&1&0\\0&0&0&0\end{array}\right].
+      $$
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1.** Forma reducida:
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&1\\0&1&0&2\\0&0&1&-1\end{array}\right].
+$$
+
+Solución $(1,2,-1)$, coincidente con la obtenida por sustitución regresiva. Los lados izquierdos originales valen $2$, $7$ y $9$, respectivamente.
+
+**2. a.** $x+y+z=500$, $0.10x+0.10y+0.20z=60$, $0.10y+0.10z=40$. Sistema equivalente: $x+y+z=500$, $x+y+2z=600$, $y+z=400$.
+
+**2. b.** $100$ g del lote A, $300$ g del lote B y $100$ g del lote C.
+
+**2. c.** La mezcla contiene $400$ g de cobre. Como los tres metales constituyen toda la masa, la del cobre es la masa total menos las masas de estaño y zinc.
+
+**3. a.** Sistema: $x+y+z=120$, $2x+y+z=150$, $3x+2y+2z=280$. Una forma escalonada es
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&120\\0&-1&-1&-90\\0&0&0&10\end{array}\right].
+$$
+
+Los datos son incompatibles: el último renglón representa $0=10$. Si los registros 1 y 2 son correctos, el conjunto 3 tendría una masa de $270$ g.
+
+**3. b.** La nueva condición es $x+2y+z=160$. Las masas son $30$ g para una placa A, $40$ g para una B y $50$ g para una C. Las masas totales de los conjuntos 1, 2 y del nuevo conjunto son $120$, $150$ y $160$ g, respectivamente.
+
+**4.** La terna propuesta satisface las dos primeras ecuaciones; sus lados izquierdos valen $2$ y $5$. En la tercera da $95$, en lugar de $5$. La operación incorrecta debe producir $[\,0\ \ 0\ \ 1\mid1\,]$. Forma reducida correcta:
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&2\\0&1&0&-1\\0&0&1&1\end{array}\right].
+$$
+
+Solución $(2,-1,1)$.
+
+**5.** Ambos métodos dan $(x,y)=(1,2)$; los lados izquierdos originales valen $5$ y $1$. Forma reducida:
+
+$$
+\left[\begin{array}{cc|c}1&0&1\\0&1&2\end{array}\right].
+$$
+
+Una preferencia justificada es sustitución, porque la primera ecuación permite despejar $x=5-2y$ directamente. También es válida la elección de Gauss-Jordan, porque organiza las operaciones en la matriz.
+
+**6. a.** Única solución $(4,-3)$: hay un pivote en cada columna de coeficientes y no hay contradicción.
+
+**6. b.** Ninguna solución: el segundo renglón representa $0=1$.
+
+**6. c.** Infinitas soluciones: no hay contradicción y la columna de $z$ no tiene pivote. Dos soluciones son $(2,0,0)$ y $(5,-1,1)$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+El trabajo realizado permite comprobar si puede:
+
+- Reconocer la forma escalonada reducida y obtenerla mediante operaciones sobre renglones completos.
+- Explicar cómo la eliminación de entradas superiores realiza, dentro de la matriz, las sustituciones de un sistema con solución única.
+- Revisar primero la consistencia y distinguir una solución única, una contradicción y un sistema consistente con una columna de coeficientes sin pivote.
+- Verificar una solución en las ecuaciones originales e interpretar las masas y restricciones de los problemas planteados.
