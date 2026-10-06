@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Práctica de eliminación de Gauss, tratamiento de fracciones y verificación de soluciones para corregir errores.">
+<meta name="description" content="Reducción por renglones, contraste con la sustitución regresiva y lectura del tipo de solución de un sistema lineal.">
 
-<title>Sesión 31. Método de Gauss: fracciones y corrección de errores – Álgebra</title>
+<title>Sesión 32. Método de Gauss-Jordan y forma escalonada reducida – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-10-06-sesion-32.html" rel="next">
-<link href="../sesiones/2026-09-24-sesion-30.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../sesiones/2026-10-05-sesion-31.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 31. Método de Gauss: fracciones y corrección de errores – Álgebra">
-<meta property="og:description" content="Práctica de eliminación de Gauss, tratamiento de fracciones y verificación de soluciones para corregir errores.">
+<meta property="og:title" content="Sesión 32. Método de Gauss-Jordan y forma escalonada reducida – Álgebra">
+<meta property="og:description" content="Reducción por renglones, contraste con la sustitución regresiva y lectura del tipo de solución de un sistema lineal.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-05-sesion-31.html"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-06-sesion-32.html"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -393,12 +393,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
+  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
+  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
   </div>
 </li>
       </ul>
@@ -483,16 +483,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
-  <li><a href="#diagnóstico-breve" id="toc-diagnóstico-breve" class="nav-link" data-scroll-target="#diagnóstico-breve">Diagnóstico breve</a></li>
-  <li><a href="#revisión-focalizada" id="toc-revisión-focalizada" class="nav-link" data-scroll-target="#revisión-focalizada">Revisión focalizada</a>
+  <li><a href="#forma-escalonada-reducida" id="toc-forma-escalonada-reducida" class="nav-link" data-scroll-target="#forma-escalonada-reducida">Forma escalonada reducida</a></li>
+  <li><a href="#método-de-gauss-jordan" id="toc-método-de-gauss-jordan" class="nav-link" data-scroll-target="#método-de-gauss-jordan">Método de Gauss-Jordan</a>
   <ul class="collapse">
-  <li><a href="#fracciones-sencillas-tres-procedimientos-válidos" id="toc-fracciones-sencillas-tres-procedimientos-válidos" class="nav-link" data-scroll-target="#fracciones-sencillas-tres-procedimientos-válidos">Fracciones sencillas: tres procedimientos válidos</a></li>
-  <li><a href="#cómo-revisar-un-procedimiento-cuando-la-verificación-falla" id="toc-cómo-revisar-un-procedimiento-cuando-la-verificación-falla" class="nav-link" data-scroll-target="#cómo-revisar-un-procedimiento-cuando-la-verificación-falla">Cómo revisar un procedimiento cuando la verificación falla</a></li>
+  <li><a href="#contraste-con-la-sustitución-regresiva" id="toc-contraste-con-la-sustitución-regresiva" class="nav-link" data-scroll-target="#contraste-con-la-sustitución-regresiva">Contraste con la sustitución regresiva</a></li>
+  <li><a href="#lectura-del-tipo-de-solución" id="toc-lectura-del-tipo-de-solución" class="nav-link" data-scroll-target="#lectura-del-tipo-de-solución">Lectura del tipo de solución</a></li>
   </ul></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-elegir-el-pivote-de-la-segunda-columna-con-intercambio-o-con-fracciones" id="toc-ejemplo-1.-elegir-el-pivote-de-la-segunda-columna-con-intercambio-o-con-fracciones" class="nav-link" data-scroll-target="#ejemplo-1.-elegir-el-pivote-de-la-segunda-columna-con-intercambio-o-con-fracciones">Ejemplo 1. Elegir el pivote de la segunda columna: con intercambio o con fracciones</a></li>
-  <li><a href="#ejemplo-2.-localizar-el-error-a-partir-de-la-verificación" id="toc-ejemplo-2.-localizar-el-error-a-partir-de-la-verificación" class="nav-link" data-scroll-target="#ejemplo-2.-localizar-el-error-a-partir-de-la-verificación">Ejemplo 2. Localizar el error a partir de la verificación</a></li>
+  <li><a href="#ejemplo-1.-reducción-de-un-sistema-ya-escalonado" id="toc-ejemplo-1.-reducción-de-un-sistema-ya-escalonado" class="nav-link" data-scroll-target="#ejemplo-1.-reducción-de-un-sistema-ya-escalonado">Ejemplo 1. Reducción de un sistema ya escalonado</a></li>
+  <li><a href="#ejemplo-2.-reconocer-una-contradicción" id="toc-ejemplo-2.-reconocer-una-contradicción" class="nav-link" data-scroll-target="#ejemplo-2.-reconocer-una-contradicción">Ejemplo 2. Reconocer una contradicción</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -504,9 +504,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-05-sesion-31.html"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-06-sesion-32.html"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></h1>
 </div>
 
 
@@ -517,7 +517,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">5 de octubre de 2026</p>
+      <p class="date">6 de octubre de 2026</p>
     </div>
   </div>
   
@@ -531,166 +531,250 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá resolver por Gauss y sustitución regresiva un sistema <span class="math inline">\(3\times3\)</span> con solución única, usando fracciones exactas o intercambios para facilitar los cálculos. Podrá comprobar su resultado en las ecuaciones originales y corregir un procedimiento defectuoso revisando las operaciones registradas.</p>
+<p>Al finalizar la sesión podrá completar la reducción de una matriz escalonada mediante Gauss-Jordan, leer y verificar una solución única y reconocer una contradicción. Podrá distinguir esos casos de un sistema consistente con una columna de coeficientes sin pivote, justificando su respuesta mediante las ecuaciones representadas por la matriz.</p>
 </section>
-<section id="diagnóstico-breve" class="level2">
-<h2 class="anchored" data-anchor-id="diagnóstico-breve">Diagnóstico breve</h2>
-<p>Antes de leer el resto de la página, resuelva individualmente estos dos puntos con lo que recuerda de la <a href="../sesiones/2026-09-24-sesion-30.html">Sesión 30</a>. Sus respuestas indican qué conviene repasar.</p>
+<section id="forma-escalonada-reducida" class="level2">
+<h2 class="anchored" data-anchor-id="forma-escalonada-reducida">Forma escalonada reducida</h2>
+<p>En el <a href="../sesiones/2026-09-24-sesion-30.html">método de Gauss</a>, la matriz aumentada se lleva a la forma escalonada y el sistema se resuelve por sustitución regresiva. Los pivotes pueden ser distintos de <span class="math inline">\(1\)</span> y puede haber entradas no nulas arriba de ellos.</p>
+<p>Una matriz está en <strong>forma escalonada reducida por renglones</strong> cuando cumple las siguientes condiciones:</p>
 <ol type="1">
-<li><p>Para el sistema <span class="math inline">\(x+2y-z=1\)</span>, <span class="math inline">\(2x+3y+z=7\)</span>, <span class="math inline">\(-x+y+4z=8\)</span> se aplicaron <span class="math inline">\(R_2\to R_2-2R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_1\)</span> y se obtuvo</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;1\\ 0&amp;-1&amp;3&amp;5\\ 0&amp;3&amp;3&amp;9\end{array}\right].
-\]</span></p>
-<p>Complete el escalonamiento, obtenga la solución por sustitución regresiva y verifíquela en las tres ecuaciones originales.</p></li>
-<li><p>A partir de <span class="math inline">\(R_1=[\,2\ \ -1\ \ 1\mid5\,]\)</span> y <span class="math inline">\(R_2=[\,1\ \ 3\ \ -2\mid4\,]\)</span>, un estudiante escribió que <span class="math inline">\(R_2\to R_2-\frac12R_1\)</span> produce <span class="math inline">\([\,0\ \ \frac72\ \ -\frac52\mid4\,]\)</span>. Indique qué entrada es incorrecta y por qué.</p></li>
+<li>Está en forma escalonada: los renglones nulos están al final y el pivote de cada renglón no nulo se encuentra a la derecha del pivote del renglón anterior.</li>
+<li>Cada pivote vale <span class="math inline">\(1\)</span>.</li>
+<li>Cada pivote es la única entrada no nula de su columna.</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled" title="Soluciones del diagnóstico">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Soluciones del diagnóstico
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>1.</strong> El pivote de la segunda columna es <span class="math inline">\(-1\)</span>. Con <span class="math inline">\(R_3\to R_3+3R_2\)</span> se obtiene <span class="math inline">\([\,0\ \ 0\ \ 12\mid24\,]\)</span> y la matriz escalonada</p>
+<p>El <strong>pivote</strong> de un renglón no nulo de una matriz escalonada es su primera entrada no nula. En una matriz aumentada, la línea vertical separa los coeficientes de los términos independientes; esa separación no elimina la última columna al comprobar las condiciones anteriores.</p>
+<p>Por ejemplo, la primera matriz está escalonada, pero no reducida; la segunda está reducida:</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;1\\ 0&amp;-1&amp;3&amp;5\\ 0&amp;0&amp;12&amp;24\end{array}\right].
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\0&amp;1&amp;-2&amp;0\\0&amp;0&amp;-10&amp;-500\end{array}\right],
+\qquad
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;350\\0&amp;1&amp;0&amp;100\\0&amp;0&amp;1&amp;50\end{array}\right].
 \]</span></p>
-<p>De <span class="math inline">\(12z=24\)</span>, <span class="math inline">\(z=2\)</span>; de <span class="math inline">\(-y+3(2)=5\)</span>, <span class="math inline">\(y=1\)</span>; de <span class="math inline">\(x+2(1)-2=1\)</span>, <span class="math inline">\(x=1\)</span>. Verificación: <span class="math inline">\(1+2-2=1\)</span>, <span class="math inline">\(2+3+2=7\)</span> y <span class="math inline">\(-1+1+8=8\)</span>. La solución es <span class="math inline">\((1,1,2)\)</span>.</p>
-<p><strong>2.</strong> El término independiente no se operó: debe ser <span class="math inline">\(4-\frac12(5)=\frac32\)</span>, no <span class="math inline">\(4\)</span>. Las otras entradas son correctas: <span class="math inline">\(1-\frac12(2)=0\)</span>, <span class="math inline">\(3-\frac12(-1)=\frac72\)</span> y <span class="math inline">\(-2-\frac12(1)=-\frac52\)</span>. La operación afecta al renglón completo, incluido el término independiente.</p>
-</div>
-</div>
-</div>
+<p>La segunda representa directamente <span class="math inline">\(x=350\)</span>, <span class="math inline">\(y=100\)</span> y <span class="math inline">\(z=50\)</span>. El Ejemplo 1 muestra las operaciones que relacionan ambas matrices. Las operaciones elementales pueden producir distintas formas escalonadas de una misma matriz, pero su forma escalonada reducida es única.</p>
 </section>
-<section id="revisión-focalizada" class="level2">
-<h2 class="anchored" data-anchor-id="revisión-focalizada">Revisión focalizada</h2>
-<p>El <a href="../sesiones/2026-09-24-sesion-30.html">método de Gauss</a> no cambia: se lleva la matriz aumentada a la forma escalonada con <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales de renglón</a> y se resuelve por sustitución regresiva. Para revisar un resultado, se comprueba tanto la sustitución regresiva como la correspondencia entre cada operación anotada y la matriz obtenida.</p>
+<section id="método-de-gauss-jordan" class="level2">
+<h2 class="anchored" data-anchor-id="método-de-gauss-jordan">Método de Gauss-Jordan</h2>
+<p>El <strong>método de Gauss-Jordan</strong> utiliza <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales de renglón</a> para obtener la forma escalonada reducida. Estas operaciones conservan el conjunto solución.</p>
+<p>Para continuar desde una matriz escalonada:</p>
+<ol type="1">
+<li>Revise si hay un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid c\,]\)</span> con <span class="math inline">\(c\ne0\)</span>. Representa <span class="math inline">\(0=c\)</span>, por lo que el sistema no tiene solución. Para establecer esa conclusión no es necesario completar la reducción.</li>
+<li>Si no hay contradicción, comience con el último renglón no nulo. Convierta su pivote <span class="math inline">\(p\ne0\)</span> en <span class="math inline">\(1\)</span> mediante <span class="math inline">\(R_j\to\frac1pR_j\)</span>.</li>
+<li>Anule las entradas situadas arriba de ese pivote. Si una entrada vale <span class="math inline">\(a\)</span>, use <span class="math inline">\(R_k\to R_k-aR_j\)</span>. La operación se aplica al renglón completo, incluido su término independiente.</li>
+<li>Repita los pasos 2 y 3 con el pivote anterior y continúe de abajo hacia arriba. Al usar un nuevo renglón pivote, las columnas de pivotes ya reducidas tienen un cero en ese renglón, por lo que se conservan sus ceros y sus unos.</li>
+<li>Compruebe las condiciones de la forma reducida e interprete sus ecuaciones. Verifique los valores obtenidos en el sistema original.</li>
+</ol>
+<p>También es válido convertir todos los pivotes en <span class="math inline">\(1\)</span> antes de anular las entradas superiores. En cualquiera de los dos procedimientos, las fracciones se conservan exactas.</p>
+<section id="contraste-con-la-sustitución-regresiva" class="level3">
+<h3 class="anchored" data-anchor-id="contraste-con-la-sustitución-regresiva">Contraste con la sustitución regresiva</h3>
+<p>Para un sistema con solución única, ambos métodos producen los mismos valores. La diferencia está en cómo se utilizan las ecuaciones ya resueltas. Si el tercer renglón representa <span class="math inline">\(z=50\)</span> y el segundo representa <span class="math inline">\(y-2z=0\)</span>, la sustitución regresiva da <span class="math inline">\(y-2(50)=0\)</span>. En Gauss-Jordan, <span class="math inline">\(R_2\to R_2+2R_3\)</span> transforma esas mismas ecuaciones en <span class="math inline">\(y=100\)</span> y <span class="math inline">\(z=50\)</span>.</p>
+<p>Gauss resuelve el sistema escalonado mediante sustitución regresiva. Gauss-Jordan realiza operaciones adicionales sobre la matriz hasta que las ecuaciones permiten leer directamente los valores de las incógnitas.</p>
+</section>
+<section id="lectura-del-tipo-de-solución" class="level3">
+<h3 class="anchored" data-anchor-id="lectura-del-tipo-de-solución">Lectura del tipo de solución</h3>
+<p>La <strong>consistencia se revisa primero</strong>. Un pivote en cada columna de coeficientes solo garantiza una solución única si no existe contradicción.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Resultado observado</th>
-<th>Posible causa</th>
-<th>Comprobación o corrección</th>
+<th>Condición en la matriz aumentada escalonada</th>
+<th>Conclusión</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>La terna satisface el sistema escalonado, pero no satisface alguna ecuación original</td>
-<td>Término independiente sin operar o signo perdido al sumar un múltiplo</td>
-<td>Recalcular cada operación entrada por entrada, incluido el término independiente</td>
+<td>Hay un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid c\,]\)</span>, con <span class="math inline">\(c\ne0\)</span></td>
+<td>El sistema es inconsistente: no tiene solución</td>
 </tr>
 <tr class="even">
-<td>La terna no satisface el sistema escalonado</td>
-<td>Término omitido o signo cambiado en la sustitución regresiva</td>
-<td>Rehacer la sustitución de abajo hacia arriba sobre la misma matriz</td>
+<td>No hay contradicción y cada columna de coeficientes tiene pivote</td>
+<td>El sistema tiene solución única; en la forma reducida se lee el valor de cada incógnita</td>
 </tr>
 <tr class="odd">
-<td>Un cero ya obtenido desaparece</td>
-<td>Se usó la versión anterior de un renglón, o se intercambió con un renglón de una columna ya terminada</td>
-<td>Cada operación usa la matriz resultante de la anterior; solo se intercambian los renglones situados debajo de los pivotes ya utilizados</td>
-</tr>
-<tr class="even">
-<td>Aparecen fracciones</td>
-<td>No son por sí mismas un error: el cálculo puede producir resultados racionales no enteros</td>
-<td>Conservarlas exactamente o multiplicar un renglón completo por un denominador común no nulo; un intercambio puede simplificar el cálculo</td>
+<td>No hay contradicción y alguna columna de coeficientes no tiene pivote</td>
+<td>El sistema tiene infinitas soluciones</td>
 </tr>
 </tbody>
 </table>
-<section id="fracciones-sencillas-tres-procedimientos-válidos" class="level3">
-<h3 class="anchored" data-anchor-id="fracciones-sencillas-tres-procedimientos-válidos">Fracciones sencillas: tres procedimientos válidos</h3>
-<p>Para un pivote <span class="math inline">\(p\ne0\)</span>, la regla <span class="math inline">\(R_i\to R_i-\frac apR_j\)</span> puede introducir fracciones. Estas se conservan exactamente; no se sustituyen por decimales redondeados. Con <span class="math inline">\(R_1=[\,2\ \ 1\ \ -1\mid4\,]\)</span> y <span class="math inline">\(R_2=[\,3\ \ -2\ \ 1\mid1\,]\)</span> pueden emplearse los siguientes procedimientos:</p>
-<ul>
-<li><strong>Conservar la fracción.</strong> <span class="math inline">\(R_2\to R_2-\frac32R_1\)</span> produce <span class="math inline">\([\,0\ \ -\frac72\ \ \frac52\mid-5\,]\)</span>.</li>
-<li><strong>Multiplicar antes.</strong> <span class="math inline">\(R_2\to2R_2\)</span> da <span class="math inline">\([\,6\ \ -4\ \ 2\mid2\,]\)</span> y después <span class="math inline">\(R_2\to R_2-3R_1\)</span> da <span class="math inline">\([\,0\ \ -7\ \ 5\mid-10\,]\)</span>: el doble del renglón anterior, es decir, la misma condición multiplicada por <span class="math inline">\(2\)</span>, como cuando una <a href="../sesiones/2026-08-14-sesion-05.html">ecuación con denominadores</a> se multiplica por un múltiplo común de ellos antes de despejar.</li>
-<li><strong>Intercambiar.</strong> Si otro renglón disponible tiene <span class="math inline">\(1\)</span> o <span class="math inline">\(-1\)</span> en esa columna, un intercambio lo coloca como pivote y evita introducir denominadores al eliminar esa columna si sus renglones tienen entradas enteras (Ejemplo 1).</li>
-</ul>
-<p>Los tres procedimientos producen <a href="../sesiones/2026-09-22-sesion-28.html">sistemas equivalentes</a> y la misma solución, porque las operaciones son reversibles; difieren únicamente las operaciones necesarias para realizar el cálculo.</p>
-</section>
-<section id="cómo-revisar-un-procedimiento-cuando-la-verificación-falla" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-revisar-un-procedimiento-cuando-la-verificación-falla">Cómo revisar un procedimiento cuando la verificación falla</h3>
-<ol type="1">
-<li>Sustituya la terna en las <strong>tres ecuaciones originales</strong> y anote cuáles no satisface.</li>
-<li>Compruebe también las ecuaciones de la matriz escalonada obtenida. Si la terna no las satisface, hay un error en la sustitución regresiva o en la copia del resultado; corríjalo.</li>
-<li>Revise la matriz aumentada inicial y recalcule las operaciones en el orden registrado, entrada por entrada, incluido el término independiente. La primera discrepancia permite localizar un paso que debe corregirse.</li>
-<li>Rehaga el procedimiento desde ese paso y verifique de nuevo en las ecuaciones originales.</li>
-</ol>
-<p>Puede haber errores en más de una etapa. Que una terna satisfaga las ecuaciones de una matriz escalonada solo prueba que resuelve ese sistema; no garantiza que la matriz se haya obtenido correctamente del original. Las ecuaciones que fallan tampoco identifican por sí solas la operación errónea, porque los renglones se han combinado o intercambiado.</p>
+<p>En el último caso, una incógnita no queda determinada por las demás ecuaciones. Por ejemplo,</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;2&amp;1\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;0&amp;0\end{array}\right]
+\]</span></p>
+<p>está reducida y representa <span class="math inline">\(x+2z=1\)</span>, <span class="math inline">\(y-z=3\)</span> y <span class="math inline">\(0=0\)</span>. La columna de <span class="math inline">\(z\)</span> no tiene pivote. Para cualquier valor real de <span class="math inline">\(z\)</span>, las dos primeras ecuaciones determinan <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>: con <span class="math inline">\(z=0\)</span> se obtiene <span class="math inline">\((1,3,0)\)</span>; con <span class="math inline">\(z=1\)</span>, <span class="math inline">\((-1,4,1)\)</span>. Ambas ternas son soluciones, y no hay una ecuación adicional que determine un único valor de <span class="math inline">\(z\)</span>.</p>
 </section>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<section id="ejemplo-1.-elegir-el-pivote-de-la-segunda-columna-con-intercambio-o-con-fracciones" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-elegir-el-pivote-de-la-segunda-columna-con-intercambio-o-con-fracciones">Ejemplo 1. Elegir el pivote de la segunda columna: con intercambio o con fracciones</h3>
-<p>Se preparan <span class="math inline">\(500\)</span> g de una <a href="../sesiones/2026-09-23-sesion-29.html">aleación</a> con <span class="math inline">\(x\)</span> g de cobre, <span class="math inline">\(y\)</span> g de zinc y <span class="math inline">\(z\)</span> g de estaño; las masas se suman sin pérdidas y <span class="math inline">\(x,y,z\ge0\)</span>. La masa de cobre es la suma del triple de la masa de zinc y la masa de estaño, y la de zinc es el doble de la de estaño:</p>
+<section id="ejemplo-1.-reducción-de-un-sistema-ya-escalonado" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-reducción-de-un-sistema-ya-escalonado">Ejemplo 1. Reducción de un sistema ya escalonado</h3>
+<p>Se retoma la mezcla de metales del <a href="../sesiones/2026-10-05-sesion-31.html">Ejemplo 1 de la Sesión 31</a>. Las masas de cobre, zinc y estaño, expresadas en gramos mediante <span class="math inline">\(x,y,z\ge0\)</span>, satisfacen</p>
 <p><span class="math display">\[
-\left\{\begin{aligned} x+y+z&amp;=500\\ x-3y-z&amp;=0\\ y-2z&amp;=0 \end{aligned}\right.
-\qquad
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\ 1&amp;-3&amp;-1&amp;0\\ 0&amp;1&amp;-2&amp;0\end{array}\right].
+x+y+z=500,\qquad x-3y-z=0,\qquad y-2z=0.
 \]</span></p>
-<p><strong>Columna 1.</strong> <span class="math inline">\(R_2\to R_2-R_1\)</span> da <span class="math inline">\([\,0\ \ -4\ \ -2\mid-500\,]\)</span>; el renglón <span class="math inline">\(3\)</span> ya tiene <span class="math inline">\(0\)</span> en la primera columna.</p>
-<p><strong>Columna 2.</strong> Hay dos candidatos a pivote: <span class="math inline">\(-4\)</span> en el renglón <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span> en el renglón <span class="math inline">\(3\)</span>.</p>
-<p><em>Con intercambio.</em> <span class="math inline">\(R_2\leftrightarrow R_3\)</span> coloca el <span class="math inline">\(1\)</span> como pivote. Después, <span class="math inline">\(R_3\to R_3+4R_2\)</span>: <span class="math inline">\([\,0\ \ -4+4(1)\ \ -2+4(-2)\mid-500+4(0)\,]=[\,0\ \ 0\ \ -10\mid-500\,]\)</span>.</p>
+<p>Una forma escalonada de su matriz aumentada es</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\ 0&amp;1&amp;-2&amp;0\\ 0&amp;0&amp;-10&amp;-500\end{array}\right].
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\0&amp;1&amp;-2&amp;0\\0&amp;0&amp;-10&amp;-500\end{array}\right].
 \]</span></p>
-<p><em>Sin intercambio.</em> El pivote es <span class="math inline">\(-4\)</span> y la entrada por anular es <span class="math inline">\(1\)</span>: <span class="math inline">\(R_3\to R_3-\frac{1}{-4}R_2\)</span>, es decir, <span class="math inline">\(R_3\to R_3+\frac14R_2\)</span>: <span class="math inline">\(\bigl[\,0\ \ 1+\frac14(-4)\ \ -2+\frac14(-2)\mid0+\frac14(-500)\,\bigr]=\bigl[\,0\ \ 0\ \ -\frac52\mid-125\,\bigr]\)</span>.</p>
+<p><strong>Pivote de la tercera columna.</strong> Con <span class="math inline">\(R_3\to-\frac1{10}R_3\)</span>, el tercer renglón queda <span class="math inline">\([\,0\ \ 0\ \ 1\mid50\,]\)</span>. Después se aplican <span class="math inline">\(R_2\to R_2+2R_3\)</span> y <span class="math inline">\(R_1\to R_1-R_3\)</span>:</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\ 0&amp;-4&amp;-2&amp;-500\\ 0&amp;0&amp;-\frac52&amp;-125\end{array}\right].
+\left[\begin{array}{ccc|c}1&amp;1&amp;0&amp;450\\0&amp;1&amp;0&amp;100\\0&amp;0&amp;1&amp;50\end{array}\right].
 \]</span></p>
-<p><strong>Sustitución regresiva.</strong> <span class="math inline">\(-10z=-500\)</span> y <span class="math inline">\(-\frac52z=-125\)</span> dan ambos <span class="math inline">\(z=50\)</span>. En el primer procedimiento, <span class="math inline">\(y-2(50)=0\)</span> da <span class="math inline">\(y=100\)</span>; en el segundo, <span class="math inline">\(-4y-2(50)=-500\)</span> da también <span class="math inline">\(y=100\)</span>. En ambos, <span class="math inline">\(x+100+50=500\)</span> da <span class="math inline">\(x=350\)</span>.</p>
-<p><strong>Verificación en el sistema original:</strong> <span class="math inline">\(350+100+50=500\)</span>; <span class="math inline">\(350-3(100)-50=0\)</span>; <span class="math inline">\(100-2(50)=0\)</span>. La aleación lleva <span class="math inline">\(350\)</span> g de cobre, <span class="math inline">\(100\)</span> g de zinc y <span class="math inline">\(50\)</span> g de estaño: <span class="math inline">\(70\,\%\)</span>, <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(10\,\%\)</span> en masa. Las dos matrices escalonadas son distintas, pero representan sistemas equivalentes al original y determinan la misma terna.</p>
+<p><strong>Pivote de la segunda columna.</strong> Ya vale <span class="math inline">\(1\)</span>. La operación <span class="math inline">\(R_1\to R_1-R_2\)</span> anula la entrada situada arriba:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;350\\0&amp;1&amp;0&amp;100\\0&amp;0&amp;1&amp;50\end{array}\right].
+\]</span></p>
+<p>La matriz está reducida y la solución es <span class="math inline">\((x,y,z)=(350,100,50)\)</span>. Se requieren <span class="math inline">\(350\)</span> g de cobre, <span class="math inline">\(100\)</span> g de zinc y <span class="math inline">\(50\)</span> g de estaño. La verificación en las ecuaciones originales da <span class="math inline">\(350+100+50=500\)</span>, <span class="math inline">\(350-3(100)-50=0\)</span> y <span class="math inline">\(100-2(50)=0\)</span>; las masas son no negativas.</p>
+<p>La otra forma escalonada obtenida en la sesión anterior fue</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;500\\0&amp;-4&amp;-2&amp;-500\\0&amp;0&amp;-\frac52&amp;-125\end{array}\right].
+\]</span></p>
+<p>Desde ella, <span class="math inline">\(R_3\to-\frac25R_3\)</span> da <span class="math inline">\(z=50\)</span>. Las operaciones <span class="math inline">\(R_2\to-\frac14R_2\)</span> y <span class="math inline">\(R_2\to R_2-\frac12R_3\)</span> producen <span class="math inline">\([\,0\ \ 1\ \ 0\mid100\,]\)</span>. Finalmente, <span class="math inline">\(R_1\to R_1-R_3\)</span> y <span class="math inline">\(R_1\to R_1-R_2\)</span> producen <span class="math inline">\([\,1\ \ 0\ \ 0\mid350\,]\)</span>. Se obtiene la misma forma reducida.</p>
 </section>
-<section id="ejemplo-2.-localizar-el-error-a-partir-de-la-verificación" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-localizar-el-error-a-partir-de-la-verificación">Ejemplo 2. Localizar el error a partir de la verificación</h3>
-<p>Para resolver <span class="math inline">\(x-2y+z=2\)</span>, <span class="math inline">\(2x-3y+4z=9\)</span>, <span class="math inline">\(-x+y-2z=-5\)</span>, un estudiante anotó <span class="math inline">\(R_2\to R_2-2R_1\)</span>, <span class="math inline">\(R_3\to R_3+R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_2\)</span>. Después de las dos primeras operaciones registró <span class="math inline">\(R_2=[\,0\ \ 1\ \ 2\mid5\,]\)</span> y <span class="math inline">\(R_3=[\,0\ \ -1\ \ -1\mid-7\,]\)</span>. Al aplicar la tercera obtuvo</p>
+<section id="ejemplo-2.-reconocer-una-contradicción" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-reconocer-una-contradicción">Ejemplo 2. Reconocer una contradicción</h3>
+<p>Considere el sistema</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;-2&amp;1&amp;2\\ 0&amp;1&amp;2&amp;5\\ 0&amp;0&amp;1&amp;-2\end{array}\right]
+\left\{\begin{aligned}x+y+z&amp;=100\\2x+y+z&amp;=130\\3x+2y+2z&amp;=240.\end{aligned}\right.
 \]</span></p>
-<p>y, por sustitución regresiva, <span class="math inline">\(z=-2\)</span>, <span class="math inline">\(y=5-2(-2)=9\)</span> y <span class="math inline">\(x=2+2(9)-(-2)=22\)</span>: la terna <span class="math inline">\((22,9,-2)\)</span>.</p>
-<p><strong>Paso 1: verificar en las ecuaciones originales.</strong> <span class="math inline">\(22-2(9)+(-2)=2\)</span> y <span class="math inline">\(2(22)-3(9)+4(-2)=9\)</span> se cumplen, pero <span class="math inline">\(-22+9-2(-2)=-9\ne-5\)</span>. Falla solo la tercera ecuación.</p>
-<p><strong>Paso 2: verificar en el sistema escalonado.</strong> La terna satisface las tres ecuaciones: <span class="math inline">\(22-18-2=2\)</span>, <span class="math inline">\(9-4=5\)</span> y <span class="math inline">\(-2=-2\)</span>. La sustitución regresiva fue correcta; el error está en una operación.</p>
-<p><strong>Paso 3: recalcular las operaciones registradas.</strong> <span class="math inline">\(R_2\to R_2-2R_1\)</span> da <span class="math inline">\([\,2-2\ \ -3+4\ \ 4-2\mid9-4\,]=[\,0\ \ 1\ \ 2\mid5\,]\)</span>, que coincide. <span class="math inline">\(R_3\to R_3+R_1\)</span> da <span class="math inline">\([\,-1+1\ \ 1-2\ \ -2+1\mid-5+2\,]=[\,0\ \ -1\ \ -1\mid-3\,]\)</span>; el estudiante escribió <span class="math inline">\(-7\)</span> en el término independiente, porque restó <span class="math inline">\(2\)</span> en lugar de sumarlo. La comparación con el renglón intermedio registrado permite localizar aquí el error.</p>
-<p><strong>Paso 4: corregir el procedimiento a partir de la operación identificada.</strong> Con <span class="math inline">\(R_3=[\,0\ \ -1\ \ -1\mid-3\,]\)</span>, <span class="math inline">\(R_3\to R_3+R_2\)</span> da <span class="math inline">\([\,0\ \ 0\ \ 1\mid2\,]\)</span> y</p>
+<p>Al aplicar <span class="math inline">\(R_2\to R_2-2R_1\)</span> y <span class="math inline">\(R_3\to R_3-3R_1\)</span>, y después <span class="math inline">\(R_3\to R_3-R_2\)</span>, se obtiene</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;-2&amp;1&amp;2\\ 0&amp;1&amp;2&amp;5\\ 0&amp;0&amp;1&amp;2\end{array}\right].
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;-1&amp;-70\\0&amp;0&amp;0&amp;10\end{array}\right].
 \]</span></p>
-<p>Sustitución regresiva: <span class="math inline">\(z=2\)</span>, <span class="math inline">\(y=5-2(2)=1\)</span> y <span class="math inline">\(x=2+2(1)-2=2\)</span>. <strong>Verificación:</strong> <span class="math inline">\(2-2+2=2\)</span>; <span class="math inline">\(4-3+8=9\)</span>; <span class="math inline">\(-2+1-4=-5\)</span>. La solución es <span class="math inline">\((2,1,2)\)</span>. La terna errónea <span class="math inline">\((22,9,-2)\)</span> satisfacía el sistema escalonado del que se obtuvo: <a href="../sesiones/2026-09-24-sesion-30.html">comprobar en una matriz que contiene un error</a> no lo detecta; las ecuaciones originales sí.</p>
+<p>El tercer renglón representa <span class="math inline">\(0=10\)</span>. El sistema no tiene solución. Esto también se comprueba al sumar las dos primeras ecuaciones: su lado izquierdo coincide con el de la tercera, pero la suma de sus términos independientes es <span class="math inline">\(230\)</span>, no <span class="math inline">\(240\)</span>.</p>
+<p>La matriz está escalonada, aunque todavía no reducida. Es válido multiplicar el tercer renglón por <span class="math inline">\(\frac1{10}\)</span> para obtener <span class="math inline">\([\,0\ \ 0\ \ 0\mid1\,]\)</span>: su pivote queda en la columna de términos independientes y sigue representando una contradicción, <span class="math inline">\(0=1\)</span>. Las operaciones elementales pueden modificar las entradas de ese renglón, pero no convierten un sistema inconsistente en uno consistente.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Multiplicar un renglón sin incluir el término independiente.</strong> Falso: <span class="math inline">\(R_2\to2R_2\)</span> sobre <span class="math inline">\([\,3\ \ -2\ \ 1\mid1\,]\)</span> da <span class="math inline">\([\,6\ \ -4\ \ 2\mid1\,]\)</span>. Corrección: da <span class="math inline">\([\,6\ \ -4\ \ 2\mid2\,]\)</span>. La terna <span class="math inline">\((1,1,0)\)</span> cumple <span class="math inline">\(3x-2y+z=1\)</span>, pero en el renglón incorrecto produce <span class="math inline">\(6-4+0=2\ne1\)</span>: ese renglón ya no es equivalente al original.</li>
-<li><strong>Perder el signo al sumar un múltiplo.</strong> Falso: en el Ejemplo 2, el término independiente de <span class="math inline">\(R_3\to R_3+R_1\)</span> es <span class="math inline">\(-5-2=-7\)</span>. Corrección: es <span class="math inline">\(-5+2=-3\)</span>. Con <span class="math inline">\(-7\)</span> se obtiene <span class="math inline">\((22,9,-2)\)</span>, que en la tercera ecuación original da <span class="math inline">\(-9\ne-5\)</span>.</li>
-<li><strong>Usar la versión anterior de un renglón.</strong> Falso: en el Ejemplo 1, tras el intercambio, aplicar <span class="math inline">\(R_3\to R_3+4R_2\)</span> con el renglón original <span class="math inline">\([\,1\ \ -3\ \ -1\mid0\,]\)</span>, lo que da <span class="math inline">\([\,4\ \ -16\ \ -6\mid-500\,]\)</span> y sustituye el cero de la primera columna por <span class="math inline">\(4\)</span>. Corrección: cada operación usa la matriz resultante de la anterior; con <span class="math inline">\(R_2=[\,0\ \ 1\ \ -2\mid0\,]\)</span> se obtiene <span class="math inline">\([\,0\ \ 0\ \ -10\mid-500\,]\)</span>.</li>
-<li><strong>Intercambiar con el primer renglón para elegir el pivote de la segunda columna.</strong> Falso: en el Ejemplo 1, tomar el pivote <span class="math inline">\(1\)</span> de la segunda columna con <span class="math inline">\(R_1\leftrightarrow R_3\)</span>, lo que deja <span class="math inline">\([\,0\ \ 1\ \ -2\mid0\,]\)</span> como primer renglón y <span class="math inline">\([\,1\ \ 1\ \ 1\mid500\,]\)</span> como tercero: <span class="math inline">\(a_{11}=0\)</span> y <span class="math inline">\(a_{31}=1\)</span>, de modo que reaparece una entrada no nula debajo de la posición del primer pivote. Corrección: el intercambio se hace entre los renglones aún no usados como pivote, <span class="math inline">\(R_2\leftrightarrow R_3\)</span>, y conserva los ceros de la primera columna.</li>
-<li><strong>Tomar las fracciones como señal de error.</strong> Falso: en el Ejemplo 1, al obtener <span class="math inline">\(\bigl[\,0\ \ 0\ \ -\frac52\mid-125\,\bigr]\)</span>, concluir que el procedimiento es incorrecto únicamente por contener fracciones. Corrección: <span class="math inline">\(-\frac52z=-125\)</span> da <span class="math inline">\(z=50\)</span>, el mismo valor del procedimiento sin fracciones. Un intercambio conveniente o la multiplicación de un renglón completo por un denominador común no nulo pueden simplificar el cálculo; obtener fracciones no demuestra que haya un error.</li>
+<li><strong>Dividir el pivote sin dividir el término independiente.</strong> En el Ejemplo 1, <span class="math inline">\(R_3\to-\frac1{10}R_3\)</span> transforma <span class="math inline">\([\,0\ \ 0\ \ -10\mid-500\,]\)</span> en <span class="math inline">\([\,0\ \ 0\ \ 1\mid50\,]\)</span>, no en <span class="math inline">\([\,0\ \ 0\ \ 1\mid-500\,]\)</span>.</li>
+<li><strong>Modificar el renglón equivocado.</strong> Para anular el coeficiente de <span class="math inline">\(z\)</span> en el primer renglón se usa <span class="math inline">\(R_1\to R_1-R_3\)</span>. La operación <span class="math inline">\(R_3\to R_3-R_1\)</span> modificaría el renglón que ya representa <span class="math inline">\(z=50\)</span> y volvería a introducir coeficientes de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</li>
+<li><strong>Leer los términos independientes antes de terminar la reducción.</strong> El renglón <span class="math inline">\([\,1\ \ 1\ \ 0\mid450\,]\)</span> representa <span class="math inline">\(x+y=450\)</span>, no <span class="math inline">\(x=450\)</span>. Con <span class="math inline">\(y=100\)</span>, se obtiene <span class="math inline">\(x=350\)</span>.</li>
+<li><strong>Confundir la columna de términos independientes con una incógnita.</strong> El renglón <span class="math inline">\([\,0\ \ 0\ \ 0\mid1\,]\)</span> representa <span class="math inline">\(0=1\)</span>, no <span class="math inline">\(z=1\)</span>. Su pivote está a la derecha de la separación vertical, fuera de las columnas de coeficientes.</li>
+<li><strong>Asignar cero a una incógnita sin justificar unicidad.</strong> En el ejemplo reducido con <span class="math inline">\(x+2z=1\)</span> y <span class="math inline">\(y-z=3\)</span>, elegir <span class="math inline">\(z=0\)</span> produce una solución particular. La terna <span class="math inline">\((-1,4,1)\)</span> muestra que esa solución no es única.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Anote cada operación antes de ejecutarla y, cuando una verificación falle, localice la operación errónea antes de rehacer todo el procedimiento.</p>
+<p>Registre las operaciones elementales y compruebe la forma de la matriz antes de interpretar la solución. Compare sus procedimientos con los de un compañero o compañera de grupo.</p>
 <ol type="1">
-<li><p>Considere el sistema</p>
+<li><p>El sistema de la <a href="../sesiones/2026-09-24-sesion-30.html">Actividad 1 de la Sesión 30</a>, <span class="math inline">\(x+2y+z=3\)</span>, <span class="math inline">\(2x+4y-z=-3\)</span>, <span class="math inline">\(-x+y+2z=3\)</span>, tiene la forma escalonada</p>
 <p><span class="math display">\[
-\left\{\begin{aligned}2x+y-z&amp;=4\\ 3x-2y+z&amp;=-2\\ x+y+z&amp;=5.\end{aligned}\right.
+\left[\begin{array}{ccc|c}1&amp;2&amp;1&amp;3\\0&amp;3&amp;3&amp;6\\0&amp;0&amp;-3&amp;-9\end{array}\right].
 \]</span></p>
 <ol type="a">
-<li><p>Escriba su matriz aumentada y llévela a la forma escalonada mediante el procedimiento que prefiera: conservando las fracciones, multiplicando renglones antes de eliminar o intercambiando <span class="math inline">\(R_1\leftrightarrow R_3\)</span> para empezar con el pivote <span class="math inline">\(1\)</span>. Anote cada operación.</p></li>
-<li><p>Obtenga la solución por sustitución regresiva y verifíquela en las tres ecuaciones originales.</p></li>
-<li><p>Compare con un compañero que haya seguido otro procedimiento: ¿coinciden las matrices escalonadas? ¿Coinciden las soluciones? Explique.</p></li>
+<li><p>Continúe con Gauss-Jordan hasta la forma escalonada reducida.</p></li>
+<li><p>Lea la solución y verifíquela en las tres ecuaciones originales.</p></li>
+<li><p>Identifique la operación que equivale a sustituir <span class="math inline">\(z=3\)</span> en la ecuación del segundo renglón y explique su efecto.</p></li>
 </ol></li>
-<li><p>En un laboratorio se desea determinar la masa de las probetas de tres tipos: A, B y C. Una <strong>probeta</strong> es una muestra de material preparada para realizar un ensayo. Todas las probetas de un mismo tipo tienen la misma masa.</p>
-<p>Se mide la masa total de tres conjuntos de probetas. La tabla indica la cantidad de probetas de cada tipo que contiene cada conjunto y su masa total. La masa del recipiente no está incluida. Para este ejercicio, considere exactos los datos de la tabla.</p>
+<li><p>Para preparar una pasta cerámica se mezclan arcilla y dos minerales: feldespato y cuarzo. Se requieren <span class="math inline">\(300\)</span> g en total. La masa de arcilla debe ser igual a la suma de las masas de feldespato y cuarzo; la masa de feldespato debe superar en <span class="math inline">\(30\)</span> g a la de cuarzo. Suponga que las masas se suman sin pérdidas.</p>
+<ol type="a">
+<li><p>Denote por <span class="math inline">\(x,y,z\)</span> las masas, en gramos, de arcilla, feldespato y cuarzo, respectivamente, con <span class="math inline">\(x,y,z\ge0\)</span>. Plantee el sistema y obtenga una matriz aumentada escalonada. Justifique la elección del pivote de la segunda columna.</p></li>
+<li><p>Complete la reducción por Gauss-Jordan y determine la masa de cada componente. Verifique las tres condiciones y calcule los porcentajes en masa, usando <span class="math inline">\(\frac{\text{masa del componente}}{\text{masa total}}\cdot100\,\%\)</span>.</p></li>
+<li><p>¿Es posible preparar la mezcla con <span class="math inline">\(70\)</span> g de cuarzo y conservar las tres condiciones? Justifique a partir de la solución obtenida.</p></li>
+</ol></li>
+<li><p>Las siguientes matrices aumentadas están en forma escalonada reducida. En cada caso, determine si el sistema en <span class="math inline">\(x,y,z\)</span> tiene solución única, ninguna o infinitas soluciones. Justifique mediante sus renglones y pivotes. Si hay solución única, escríbala; si hay infinitas, proporcione dos ternas distintas que satisfagan el sistema.</p>
+<ol type="a">
+<li><p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;2\\0&amp;1&amp;0&amp;-1\\0&amp;0&amp;1&amp;4\end{array}\right].
+\]</span></p></li>
+<li><p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-1&amp;0\\0&amp;1&amp;2&amp;0\\0&amp;0&amp;0&amp;1\end{array}\right].
+\]</span></p></li>
+<li><p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-1&amp;4\\0&amp;1&amp;2&amp;-1\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> Las operaciones <span class="math inline">\(R_2\to\frac13R_2\)</span> y <span class="math inline">\(R_3\to-\frac13R_3\)</span> producen los renglones <span class="math inline">\([\,0\ \ 1\ \ 1\mid2\,]\)</span> y <span class="math inline">\([\,0\ \ 0\ \ 1\mid3\,]\)</span>. Después, <span class="math inline">\(R_2\to R_2-R_3\)</span> da <span class="math inline">\([\,0\ \ 1\ \ 0\mid-1\,]\)</span> y <span class="math inline">\(R_1\to R_1-R_3\)</span> da <span class="math inline">\([\,1\ \ 2\ \ 0\mid0\,]\)</span>. Finalmente, <span class="math inline">\(R_1\to R_1-2R_2\)</span> produce</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;2\\0&amp;1&amp;0&amp;-1\\0&amp;0&amp;1&amp;3\end{array}\right].
+\]</span></p>
+<p><strong>1. b.</strong> La solución es <span class="math inline">\((2,-1,3)\)</span>. Se verifica <span class="math inline">\(2-2+3=3\)</span>, <span class="math inline">\(4-4-3=-3\)</span> y <span class="math inline">\(-2-1+6=3\)</span>.</p>
+<p><strong>1. c.</strong> Después de dividir el segundo renglón entre <span class="math inline">\(3\)</span>, su ecuación es <span class="math inline">\(y+z=2\)</span>. La operación <span class="math inline">\(R_2\to R_2-R_3\)</span> resta la ecuación <span class="math inline">\(z=3\)</span> y deja <span class="math inline">\(y=-1\)</span>. Equivale a sustituir ese valor de <span class="math inline">\(z\)</span> en la ecuación.</p>
+<p><strong>2. a.</strong> El sistema y la matriz aumentada son</p>
+<p><span class="math display">\[
+\left\{\begin{aligned}x+y+z&amp;=300\\x-y-z&amp;=0\\y-z&amp;=30,\end{aligned}\right.
+\qquad
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;300\\1&amp;-1&amp;-1&amp;0\\0&amp;1&amp;-1&amp;30\end{array}\right].
+\]</span></p>
+<p>Con <span class="math inline">\(R_2\to R_2-R_1\)</span> se obtiene <span class="math inline">\([\,0\ \ -2\ \ -2\mid-300\,]\)</span>. El intercambio <span class="math inline">\(R_2\leftrightarrow R_3\)</span> permite usar el pivote <span class="math inline">\(1\)</span> de la segunda columna. Luego, <span class="math inline">\(R_3\to R_3+2R_2\)</span> produce</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;300\\0&amp;1&amp;-1&amp;30\\0&amp;0&amp;-4&amp;-240\end{array}\right].
+\]</span></p>
+<p>También es válido conservar el pivote <span class="math inline">\(-2\)</span> y usar <span class="math inline">\(R_3\to R_3+\frac12R_2\)</span> sin efectuar el intercambio; el último renglón sería <span class="math inline">\([\,0\ \ 0\ \ -2\mid-120\,]\)</span>.</p>
+<p><strong>2. b.</strong> Desde la matriz mostrada, <span class="math inline">\(R_3\to-\frac14R_3\)</span> da <span class="math inline">\([\,0\ \ 0\ \ 1\mid60\,]\)</span>. Después, <span class="math inline">\(R_2\to R_2+R_3\)</span> y <span class="math inline">\(R_1\to R_1-R_3\)</span> producen <span class="math inline">\([\,0\ \ 1\ \ 0\mid90\,]\)</span> y <span class="math inline">\([\,1\ \ 1\ \ 0\mid240\,]\)</span>. La operación <span class="math inline">\(R_1\to R_1-R_2\)</span> completa la reducción:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;150\\0&amp;1&amp;0&amp;90\\0&amp;0&amp;1&amp;60\end{array}\right].
+\]</span></p>
+<p>Se requieren <span class="math inline">\(150\)</span> g de arcilla, <span class="math inline">\(90\)</span> g de feldespato y <span class="math inline">\(60\)</span> g de cuarzo. Se verifica <span class="math inline">\(150+90+60=300\)</span>, <span class="math inline">\(150=90+60\)</span> y <span class="math inline">\(90-60=30\)</span>. Las masas son no negativas y representan, respectivamente, el <span class="math inline">\(50\,\%\)</span>, el <span class="math inline">\(30\,\%\)</span> y el <span class="math inline">\(20\,\%\)</span> de la mezcla.</p>
+<p><strong>2. c.</strong> No.&nbsp;El sistema es consistente y tiene un pivote en cada columna de coeficientes; por tanto, su solución es única y exige <span class="math inline">\(60\)</span> g de cuarzo. Con <span class="math inline">\(70\)</span> g no pueden cumplirse simultáneamente las tres condiciones.</p>
+<p><strong>3. a.</strong> Solución única <span class="math inline">\((2,-1,4)\)</span>: no hay contradicción y las tres columnas de coeficientes tienen pivote.</p>
+<p><strong>3. b.</strong> No hay solución: el tercer renglón representa <span class="math inline">\(0=1\)</span>. Su pivote está en la columna de términos independientes.</p>
+<p><strong>3. c.</strong> Hay infinitas soluciones: no hay contradicción y la columna de <span class="math inline">\(z\)</span> no tiene pivote. Las ecuaciones son <span class="math inline">\(x-z=4\)</span> y <span class="math inline">\(y+2z=-1\)</span>. Dos soluciones son <span class="math inline">\((4,-1,0)\)</span> y <span class="math inline">\((5,-3,1)\)</span>, que dan, respectivamente, <span class="math inline">\(4-0=4\)</span>, <span class="math inline">\(-1+2(0)=-1\)</span> y <span class="math inline">\(5-1=4\)</span>, <span class="math inline">\(-3+2(1)=-1\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Resuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.</p>
+<ol type="1">
+<li><p>El sistema <span class="math inline">\(x+y+z=2\)</span>, <span class="math inline">\(2x+3y+z=7\)</span>, <span class="math inline">\(x+3y-2z=9\)</span> tiene la matriz escalonada</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;2\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;-1&amp;1\end{array}\right].
+\]</span></p>
+<p>Complete Gauss-Jordan, escriba la forma reducida y verifique la solución en las ecuaciones originales. Compare con la respuesta del <a href="../sesiones/2026-09-24-sesion-30.html">ejercicio 1 de la Sesión 30</a>.</p></li>
+<li><p>Un laboratorio dispone de tres lotes de polvo metálico formados únicamente por cobre, estaño y zinc, con las composiciones en masa de la tabla. Se quieren preparar <span class="math inline">\(500\)</span> g de una mezcla con <span class="math inline">\(80\,\%\)</span> de cobre, <span class="math inline">\(12\,\%\)</span> de estaño y <span class="math inline">\(8\,\%\)</span> de zinc. Se usarán <span class="math inline">\(x\)</span> g del lote A, <span class="math inline">\(y\)</span> g del lote B y <span class="math inline">\(z\)</span> g del lote C, con <span class="math inline">\(x,y,z\ge0\)</span>. Las masas se suman sin pérdidas. La masa de cada metal se calcula multiplicando la masa de polvo por su porcentaje expresado como fracción.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lote</th>
+<th style="text-align: right;">Cobre</th>
+<th style="text-align: right;">Estaño</th>
+<th style="text-align: right;">Zinc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td style="text-align: right;"><span class="math inline">\(90\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\,\%\)</span></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td style="text-align: right;"><span class="math inline">\(80\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td style="text-align: right;"><span class="math inline">\(70\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(20\,\%\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10\,\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Plantee las ecuaciones de masa total, masa de estaño y masa de zinc. Escriba también el sistema equivalente con coeficientes enteros.</p></li>
+<li><p>Resuelva mediante Gauss-Jordan e indique la masa que debe tomarse de cada lote.</p></li>
+<li><p>Compruebe la masa de cobre y explique por qué queda determinada al satisfacer las otras tres condiciones.</p></li>
+</ol></li>
+<li><p>Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se forman tres conjuntos y se registran las masas indicadas, sin incluir recipientes:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
@@ -702,10 +786,10 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th>Conjunto</th>
-<th style="text-align: right;">Probetas de tipo A</th>
-<th style="text-align: right;">Probetas de tipo B</th>
-<th style="text-align: right;">Probetas de tipo C</th>
-<th style="text-align: right;">Masa total (g)</th>
+<th style="text-align: right;">Placas de tipo A</th>
+<th style="text-align: right;">Placas de tipo B</th>
+<th style="text-align: right;">Placas de tipo C</th>
+<th style="text-align: right;">Masa registrada (g)</th>
 </tr>
 </thead>
 <tbody>
@@ -714,117 +798,52 @@ window.Quarto = {
 <td style="text-align: right;"><span class="math inline">\(1\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(1\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(100\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(120\)</span></td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(260\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(150\)</span></td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(220\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(280\)</span></td>
 </tr>
 </tbody>
 </table>
 <ol type="a">
-<li><p>Denote por <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> las masas, en gramos, de una probeta de tipo A, B y C, respectivamente, con <span class="math inline">\(x,y,z&gt;0\)</span>. Plantee una ecuación para cada conjunto y escriba la matriz aumentada, siguiendo el orden de la tabla y el orden <span class="math inline">\(x,y,z\)</span> de las incógnitas.</p></li>
-<li><p>Determine las tres masas mediante eliminación de Gauss y sustitución regresiva. Registre las operaciones elementales y justifique la elección del pivote de la segunda columna.</p></li>
-<li><p>Verifique que las masas obtenidas reproducen las tres mediciones de la tabla. Calcule la masa total de un conjunto formado por dos probetas de tipo A, dos de tipo B y dos de tipo C.</p></li>
+<li><p>Denote por <span class="math inline">\(x,y,z&gt;0\)</span> las masas, en gramos, de una placa de tipo A, B y C, respectivamente. Trate los valores registrados como datos exactos, plantee el sistema y escalone su matriz aumentada. Determine si esos datos son compatibles y justifique.</p></li>
+<li><p>Se descarta el registro del conjunto 3. Una nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de <span class="math inline">\(160\)</span> g. Conserve los registros 1 y 2 y sustituya el tercero por esta nueva condición. Resuelva por Gauss-Jordan y compruebe las tres mediciones.</p></li>
 </ol></li>
-<li><p>Para resolver <span class="math inline">\(x+y-2z=-3\)</span>, <span class="math inline">\(2x-y+z=3\)</span>, <span class="math inline">\(-x+2y+z=6\)</span>, un compañero anotó <span class="math inline">\(R_2\to R_2-2R_1\)</span>, <span class="math inline">\(R_3\to R_3+R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_2\)</span>, obtuvo</p>
+<li><p>Para resolver <span class="math inline">\(2x+y-z=2\)</span>, <span class="math inline">\(3x+2y+z=5\)</span>, <span class="math inline">\(x-y+2z=5\)</span>, un estudiante partió de la matriz escalonada</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;-2&amp;-3\\ 0&amp;-3&amp;5&amp;-3\\ 0&amp;0&amp;4&amp;0\end{array}\right]
+\left[\begin{array}{ccc|c}2&amp;1&amp;-1&amp;2\\0&amp;\frac12&amp;\frac52&amp;2\\0&amp;0&amp;10&amp;10\end{array}\right].
 \]</span></p>
-<p>y la terna <span class="math inline">\((-4,1,0)\)</span>.</p>
+<p>Al aplicar <span class="math inline">\(R_3\to\frac1{10}R_3\)</span>, escribió <span class="math inline">\([\,0\ \ 0\ \ 1\mid10\,]\)</span>. Continuó correctamente desde esa matriz y obtuvo <span class="math inline">\((29,-46,10)\)</span>. Determine cuáles ecuaciones originales satisface esa terna, localice y corrija el error, y escriba la forma reducida correcta y su solución.</p></li>
+<li><p>Resuelva <span class="math inline">\(x+2y=5\)</span>, <span class="math inline">\(3x-y=1\)</span> por Gauss-Jordan y por sustitución. Escriba la forma reducida, verifique la pareja obtenida e indique qué método prefiere en este caso, con una justificación.</p></li>
+<li><p>Las siguientes matrices aumentadas están reducidas. Clasifique cada sistema y escriba su solución única o, cuando haya infinitas soluciones, dos soluciones distintas. Justifique cada clasificación.</p>
 <ol type="a">
-<li><p>Verifique la terna en las tres ecuaciones originales e indique cuál falla.</p></li>
-<li><p>Localice la operación errónea, corríjala y obtenga la solución.</p></li>
-<li><p>Explique en una o dos oraciones por qué verificar la terna en la matriz escalonada de su compañero no detecta el error.</p></li>
+<li><p>Sistema en <span class="math inline">\(x,y\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;0&amp;4\\0&amp;1&amp;-3\end{array}\right].
+\]</span></p></li>
+<li><p>Sistema en <span class="math inline">\(x,y\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;-2&amp;0\\0&amp;0&amp;1\end{array}\right].
+\]</span></p></li>
+<li><p>Sistema en <span class="math inline">\(x,y,z\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-3&amp;2\\0&amp;1&amp;1&amp;0\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p></li>
 </ol></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Soluciones de la actividad
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> La matriz aumentada es</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}2&amp;1&amp;-1&amp;4\\ 3&amp;-2&amp;1&amp;-2\\ 1&amp;1&amp;1&amp;5\end{array}\right].
-\]</span></p>
-<p><em>Conservando las fracciones:</em> <span class="math inline">\(R_2\to R_2-\frac32R_1\)</span> y <span class="math inline">\(R_3\to R_3-\frac12R_1\)</span> dan <span class="math inline">\([\,0\ \ -\frac72\ \ \frac52\mid-8\,]\)</span> y <span class="math inline">\([\,0\ \ \frac12\ \ \frac32\mid3\,]\)</span>; después <span class="math inline">\(R_3\to R_3+\frac17R_2\)</span> da <span class="math inline">\([\,0\ \ 0\ \ \frac{13}{7}\mid\frac{13}{7}\,]\)</span>.</p>
-<p><em>Multiplicando antes:</em> <span class="math inline">\(R_2\to2R_2\)</span>, <span class="math inline">\(R_2\to R_2-3R_1\)</span>, <span class="math inline">\(R_3\to2R_3\)</span> y <span class="math inline">\(R_3\to R_3-R_1\)</span> dan <span class="math inline">\([\,0\ \ -7\ \ 5\mid-16\,]\)</span> y <span class="math inline">\([\,0\ \ 1\ \ 3\mid6\,]\)</span>; después <span class="math inline">\(R_3\to7R_3\)</span> y <span class="math inline">\(R_3\to R_3+R_2\)</span> dan <span class="math inline">\([\,0\ \ 0\ \ 26\mid26\,]\)</span>.</p>
-<p><em>Con intercambio inicial:</em> <span class="math inline">\(R_1\leftrightarrow R_3\)</span>, <span class="math inline">\(R_2\to R_2-3R_1\)</span> y <span class="math inline">\(R_3\to R_3-2R_1\)</span> dan <span class="math inline">\([\,0\ \ -5\ \ -2\mid-17\,]\)</span> y <span class="math inline">\([\,0\ \ -1\ \ -3\mid-6\,]\)</span>; con <span class="math inline">\(R_2\leftrightarrow R_3\)</span> y <span class="math inline">\(R_3\to R_3-5R_2\)</span> se llega a</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;5\\ 0&amp;-1&amp;-3&amp;-6\\ 0&amp;0&amp;13&amp;13\end{array}\right].
-\]</span></p>
-<p><strong>1. b.</strong> En los tres caminos, <span class="math inline">\(z=1\)</span>. En el tercero, <span class="math inline">\(-y-3(1)=-6\)</span> da <span class="math inline">\(y=3\)</span> y <span class="math inline">\(x+3+1=5\)</span> da <span class="math inline">\(x=1\)</span>. Verificación: <span class="math inline">\(2(1)+3-1=4\)</span>; <span class="math inline">\(3(1)-2(3)+1=-2\)</span>; <span class="math inline">\(1+3+1=5\)</span>. La solución es <span class="math inline">\((1,3,1)\)</span>.</p>
-<p><strong>1. c.</strong> Las matrices escalonadas son distintas, pero la solución es la misma: cada operación produce un sistema equivalente al original, de modo que los tres sistemas escalonados tienen exactamente el mismo conjunto solución. En este sistema de solución única, dos resultados finales distintos no pueden ser ambos correctos.</p>
-<p><strong>2. a.</strong> Sean <span class="math inline">\(x,y,z&gt;0\)</span> las masas, en gramos, de una probeta de tipo A, B y C, respectivamente. El sistema y su matriz aumentada son</p>
-<p><span class="math display">\[
-\left\{\begin{aligned}x+y+z&amp;=100\\4x+y+3z&amp;=260\\2x+y+3z&amp;=220.\end{aligned}\right.
-\qquad
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\4&amp;1&amp;3&amp;260\\2&amp;1&amp;3&amp;220\end{array}\right].
-\]</span></p>
-<p><strong>2. b.</strong> Después de <span class="math inline">\(R_2\to R_2-4R_1\)</span> y <span class="math inline">\(R_3\to R_3-2R_1\)</span> se obtiene</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-3&amp;-1&amp;-140\\0&amp;-1&amp;1&amp;20\end{array}\right].
-\]</span></p>
-<p>El intercambio <span class="math inline">\(R_2\leftrightarrow R_3\)</span> coloca el pivote <span class="math inline">\(-1\)</span> en el segundo renglón y permite continuar con enteros. Aplicando <span class="math inline">\(R_3\to R_3-3R_2\)</span> se llega a</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;100\\0&amp;-1&amp;1&amp;20\\0&amp;0&amp;-4&amp;-200\end{array}\right].
-\]</span></p>
-<p>La sustitución regresiva da <span class="math inline">\(z=50\)</span>, <span class="math inline">\(-y+50=20\)</span> y <span class="math inline">\(x+30+50=100\)</span>, por lo que <span class="math inline">\((x,y,z)=(20,30,50)\)</span>. Sin intercambio, también es válido <span class="math inline">\(R_3\to R_3-\frac13R_2\)</span>, que produce <span class="math inline">\([\,0\ \ 0\ \ \frac43\mid\frac{200}{3}\,]\)</span> y conduce al mismo resultado.</p>
-<p><strong>2. c.</strong> Las masas calculadas reproducen las tres mediciones: <span class="math inline">\(20+30+50=100\)</span>, <span class="math inline">\(4(20)+30+3(50)=260\)</span> y <span class="math inline">\(2(20)+30+3(50)=220\)</span>. La masa de una probeta de tipo A es <span class="math inline">\(20\)</span> g; la de una probeta de tipo B, <span class="math inline">\(30\)</span> g; y la de una probeta de tipo C, <span class="math inline">\(50\)</span> g. Las tres masas son positivas. El conjunto formado por dos probetas de cada tipo tiene una masa total de <span class="math inline">\(2(20)+2(30)+2(50)=200\)</span> g.</p>
-<p><strong>3. a.</strong> <span class="math inline">\(-4+1-2(0)=-3\)</span> y <span class="math inline">\(4+2+0=6\)</span> se cumplen; <span class="math inline">\(2(-4)-1+0=-9\ne3\)</span>. Falla solo la segunda ecuación.</p>
-<p><strong>3. b.</strong> La terna cumple la matriz escalonada (<span class="math inline">\(-4+1-0=-3\)</span>, <span class="math inline">\(-3+0=-3\)</span>, <span class="math inline">\(0=0\)</span>), así que el error está en una operación. Al recalcular <span class="math inline">\(R_2\to R_2-2R_1\)</span>, el término independiente es <span class="math inline">\(3-2(-3)=9\)</span>, no <span class="math inline">\(-3\)</span>: se restó <span class="math inline">\(6\)</span> en lugar de sumarlo. Con <span class="math inline">\(R_2=[\,0\ \ -3\ \ 5\mid9\,]\)</span>, las operaciones <span class="math inline">\(R_3\to R_3+R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_2\)</span> dan <span class="math inline">\([\,0\ \ 3\ \ -1\mid3\,]\)</span> y <span class="math inline">\([\,0\ \ 0\ \ 4\mid12\,]\)</span>:</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;1&amp;-2&amp;-3\\ 0&amp;-3&amp;5&amp;9\\ 0&amp;0&amp;4&amp;12\end{array}\right].
-\]</span></p>
-<p>De <span class="math inline">\(4z=12\)</span>, <span class="math inline">\(z=3\)</span>; de <span class="math inline">\(-3y+5(3)=9\)</span>, <span class="math inline">\(y=2\)</span>; de <span class="math inline">\(x+2-6=-3\)</span>, <span class="math inline">\(x=1\)</span>. Verificación: <span class="math inline">\(1+2-6=-3\)</span>; <span class="math inline">\(2-2+3=3\)</span>; <span class="math inline">\(-1+4+3=6\)</span>. La solución es <span class="math inline">\((1,2,3)\)</span>.</p>
-<p><strong>3. c.</strong> La terna <span class="math inline">\((-4,1,0)\)</span> se obtuvo de esa matriz y la satisface: la matriz y la terna son coherentes entre sí. Aquí la sustitución regresiva es correcta, pero la matriz proviene de una operación mal ejecutada. La verificación original revela el fallo; recalcular las operaciones permite localizarlo.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="ejercicios-para-practicar" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
-<p>Esta práctica puede resolverse de manera autónoma en varias ocasiones. Intente cada ejercicio antes de abrir las respuestas, registre las operaciones y anote las dudas que persistan.</p>
-<ol type="1">
-<li><p>Resuelva por Gauss <span class="math inline">\(2x+y-z=2\)</span>, <span class="math inline">\(3x+2y+z=5\)</span>, <span class="math inline">\(x-y+2z=5\)</span>, registrando las operaciones. Indique cómo trató las fracciones y verifique en el sistema original.</p></li>
-<li><p>Tres disoluciones de la misma sal tienen concentraciones de <span class="math inline">\(10\,\%\)</span>, <span class="math inline">\(25\,\%\)</span> y <span class="math inline">\(40\,\%\)</span> en masa. Se desea preparar <span class="math inline">\(500\)</span> g de disolución al <span class="math inline">\(22\,\%\)</span> con <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> gramos de cada una, de modo que la masa de la disolución al <span class="math inline">\(10\,\%\)</span> sea igual a la suma de las otras dos. La masa de sal de cada porción es su masa por la concentración como fracción; las masas se suman sin pérdidas y <span class="math inline">\(x,y,z\ge0\)</span>. Plantee el sistema, multiplique la ecuación de la sal por un número conveniente para trabajar con enteros, resuelva por Gauss y verifique.</p></li>
-<li><p>Dos aleaciones de cobre y níquel contienen <span class="math inline">\(30\,\%\)</span> y <span class="math inline">\(50\,\%\)</span> de cobre en masa. Se quieren obtener <span class="math inline">\(200\)</span> g de una aleación con <span class="math inline">\(42\,\%\)</span> de cobre usando <span class="math inline">\(x\)</span> g de la primera e <span class="math inline">\(y\)</span> g de la segunda; la masa de cobre de cada porción es su masa por el porcentaje como fracción. Las masas se suman sin pérdidas y se exige <span class="math inline">\(x,y\ge0\)</span>.</p>
-<ol type="a">
-<li><p>Plantee el sistema, <a href="../sesiones/2026-09-22-sesion-28.html">clasifíquelo y resuélvalo</a>.</p></li>
-<li><p>Si se pidiera una aleación con <span class="math inline">\(25\,\%\)</span> de cobre, ¿qué solución tiene el sistema? ¿Puede prepararse esa aleación con estas dos? Justifique.</p></li>
-</ol></li>
-<li><p>Para resolver <span class="math inline">\(x+2y+z=4\)</span>, <span class="math inline">\(2x+5y+3z=10\)</span>, <span class="math inline">\(-x+y+4z=8\)</span>, un estudiante llegó a la matriz escalonada</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}1&amp;2&amp;1&amp;4\\ 0&amp;1&amp;1&amp;2\\ 0&amp;0&amp;2&amp;6\end{array}\right]
-\]</span></p>
-<p>y a la terna <span class="math inline">\((-1,-1,3)\)</span>. Verifique la terna en las ecuaciones originales y en la matriz escalonada, decida en qué etapa del procedimiento está el error y obtenga la solución.</p></li>
-<li><p>Cuando <span class="math inline">\(\frac{a^2}{4}+\frac{b^2}{4}-c&gt;0\)</span>, la ecuación <span class="math inline">\(x^2+y^2+ax+by+c=0\)</span> representa una circunferencia con centro <span class="math inline">\(\left(-\frac a2,-\frac b2\right)\)</span> y radio <span class="math inline">\(\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}\)</span>. Determine <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> para que la circunferencia pase por <span class="math inline">\((1,0)\)</span>, <span class="math inline">\((0,1)\)</span> y <span class="math inline">\((2,1)\)</span>: plantee el sistema en las incógnitas <span class="math inline">\(a,b,c\)</span>, explique por qué es <a href="../sesiones/2026-09-21-sesion-27.html">lineal</a> aunque la ecuación de la circunferencia no lo sea, resuélvalo por Gauss y compruebe que los tres puntos la satisfacen.</p></li>
-<li><p>Resuelva <span class="math inline">\(\dfrac x2-\dfrac{x-1}3=1\)</span> multiplicando primero por <span class="math inline">\(6\)</span>, como en la <a href="../sesiones/2026-08-14-sesion-05.html">Sesión 05</a>. ¿A cuál operación elemental de renglón corresponde ese paso y por qué no altera las soluciones?</p></li>
-<li><p>La matriz aumentada</p>
-<p><span class="math display">\[
-\left[\begin{array}{ccc|c}2&amp;-1&amp;3&amp;1\\ 0&amp;\frac32&amp;-\frac12&amp;\frac32\\ 0&amp;0&amp;\frac53&amp;5\end{array}\right]
-\]</span></p>
-<p>está en forma escalonada. Obtenga la solución por sustitución regresiva. ¿Las fracciones indican que hubo un error al escalonar? Justifique.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -833,32 +852,47 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> <span class="math inline">\((x,y,z)=(2,-1,1)\)</span>. Una forma escalonada, conservando las fracciones, es</p>
+<p><strong>1.</strong> Forma reducida:</p>
 <p><span class="math display">\[
-\left[\begin{array}{ccc|c}2&amp;1&amp;-1&amp;2\\ 0&amp;\frac12&amp;\frac52&amp;2\\ 0&amp;0&amp;10&amp;10\end{array}\right].
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;1\\0&amp;1&amp;0&amp;2\\0&amp;0&amp;1&amp;-1\end{array}\right].
 \]</span></p>
-<p>Los lados izquierdos originales valen <span class="math inline">\(2\)</span>, <span class="math inline">\(5\)</span> y <span class="math inline">\(5\)</span>, respectivamente.</p>
-<p><strong>2.</strong> Sistema: <span class="math inline">\(x+y+z=500\)</span>, <span class="math inline">\(0.10x+0.25y+0.40z=110\)</span>, <span class="math inline">\(x-y-z=0\)</span>. Factor elegido: <span class="math inline">\(20\)</span>. Ecuación equivalente con coeficientes enteros: <span class="math inline">\(2x+5y+8z=2\,200\)</span>. Solución: <span class="math inline">\(250\)</span> g al <span class="math inline">\(10\,\%\)</span>, <span class="math inline">\(100\)</span> g al <span class="math inline">\(25\,\%\)</span> y <span class="math inline">\(150\)</span> g al <span class="math inline">\(40\,\%\)</span>; masa total <span class="math inline">\(500\)</span> g y masa de sal <span class="math inline">\(110\)</span> g. La condición <span class="math inline">\(x-y-z=0\)</span> también se cumple y las tres masas son positivas.</p>
-<p><strong>3. a.</strong> <span class="math inline">\(x+y=200\)</span>, <span class="math inline">\(0.30x+0.50y=84\)</span>. Consistente con solución única: <span class="math inline">\(80\)</span> g de la primera y <span class="math inline">\(120\)</span> g de la segunda.</p>
-<p><strong>3. b.</strong> Solución única <span class="math inline">\((250,-50)\)</span>: el sistema es consistente, pero una masa negativa no es admisible. No puede prepararse, porque <span class="math inline">\(25\,\%\)</span> queda fuera del intervalo de <span class="math inline">\(30\,\%\)</span> a <span class="math inline">\(50\,\%\)</span> que permiten las dos aleaciones.</p>
-<p><strong>4.</strong> La terna falla en las tres ecuaciones originales y tampoco cumple el primer renglón de la matriz escalonada (<span class="math inline">\(-1-2+3=0\ne4\)</span>); la matriz es correcta y el error está en la sustitución regresiva, en el valor de <span class="math inline">\(x\)</span>. Solución: <span class="math inline">\((3,-1,3)\)</span>.</p>
-<p><strong>5.</strong> Sistema: <span class="math inline">\(a+c=-1\)</span>, <span class="math inline">\(b+c=-1\)</span>, <span class="math inline">\(2a+b+c=-5\)</span>. Es lineal porque las incógnitas son <span class="math inline">\(a,b,c\)</span>; los valores <span class="math inline">\(x^2+y^2\)</span> de cada punto son números. Solución: <span class="math inline">\(a=-2\)</span>, <span class="math inline">\(b=-2\)</span>, <span class="math inline">\(c=1\)</span>; circunferencia <span class="math inline">\(x^2+y^2-2x-2y+1=0\)</span>, con centro <span class="math inline">\((1,1)\)</span> y radio <span class="math inline">\(1\)</span>. El lado izquierdo de la ecuación de la circunferencia vale <span class="math inline">\(0\)</span> en cada uno de los tres puntos.</p>
-<p><strong>6.</strong> <span class="math inline">\(x=4\)</span>. Corresponde a <span class="math inline">\(R_i\to6R_i\)</span>, con <span class="math inline">\(c=6\ne0\)</span>; es reversible (se deshace multiplicando por <span class="math inline">\(\frac16\)</span>), así que la ecuación obtenida tiene las mismas soluciones.</p>
-<p><strong>7.</strong> <span class="math inline">\((x,y,z)=(-3,2,3)\)</span>. No.&nbsp;Las fracciones son compatibles con un escalonamiento correcto; esta matriz, sin el sistema original ni las operaciones, no permite juzgar si hubo errores previos.</p>
+<p>Solución <span class="math inline">\((1,2,-1)\)</span>, coincidente con la obtenida por sustitución regresiva. Los lados izquierdos originales valen <span class="math inline">\(2\)</span>, <span class="math inline">\(7\)</span> y <span class="math inline">\(9\)</span>, respectivamente.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x+y+z=500\)</span>, <span class="math inline">\(0.10x+0.10y+0.20z=60\)</span>, <span class="math inline">\(0.10y+0.10z=40\)</span>. Sistema equivalente: <span class="math inline">\(x+y+z=500\)</span>, <span class="math inline">\(x+y+2z=600\)</span>, <span class="math inline">\(y+z=400\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(100\)</span> g del lote A, <span class="math inline">\(300\)</span> g del lote B y <span class="math inline">\(100\)</span> g del lote C.</p>
+<p><strong>2. c.</strong> La mezcla contiene <span class="math inline">\(400\)</span> g de cobre. Como los tres metales constituyen toda la masa, la del cobre es la masa total menos las masas de estaño y zinc.</p>
+<p><strong>3. a.</strong> Sistema: <span class="math inline">\(x+y+z=120\)</span>, <span class="math inline">\(2x+y+z=150\)</span>, <span class="math inline">\(3x+2y+2z=280\)</span>. Una forma escalonada es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;120\\0&amp;-1&amp;-1&amp;-90\\0&amp;0&amp;0&amp;10\end{array}\right].
+\]</span></p>
+<p>Los datos son incompatibles: el último renglón representa <span class="math inline">\(0=10\)</span>. Si los registros 1 y 2 son correctos, el conjunto 3 tendría una masa de <span class="math inline">\(270\)</span> g.</p>
+<p><strong>3. b.</strong> La nueva condición es <span class="math inline">\(x+2y+z=160\)</span>. Las masas son <span class="math inline">\(30\)</span> g para una placa A, <span class="math inline">\(40\)</span> g para una B y <span class="math inline">\(50\)</span> g para una C. Las masas totales de los conjuntos 1, 2 y del nuevo conjunto son <span class="math inline">\(120\)</span>, <span class="math inline">\(150\)</span> y <span class="math inline">\(160\)</span> g, respectivamente.</p>
+<p><strong>4.</strong> La terna propuesta satisface las dos primeras ecuaciones; sus lados izquierdos valen <span class="math inline">\(2\)</span> y <span class="math inline">\(5\)</span>. En la tercera da <span class="math inline">\(95\)</span>, en lugar de <span class="math inline">\(5\)</span>. La operación incorrecta debe producir <span class="math inline">\([\,0\ \ 0\ \ 1\mid1\,]\)</span>. Forma reducida correcta:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;2\\0&amp;1&amp;0&amp;-1\\0&amp;0&amp;1&amp;1\end{array}\right].
+\]</span></p>
+<p>Solución <span class="math inline">\((2,-1,1)\)</span>.</p>
+<p><strong>5.</strong> Ambos métodos dan <span class="math inline">\((x,y)=(1,2)\)</span>; los lados izquierdos originales valen <span class="math inline">\(5\)</span> y <span class="math inline">\(1\)</span>. Forma reducida:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;0&amp;1\\0&amp;1&amp;2\end{array}\right].
+\]</span></p>
+<p>Una preferencia justificada es sustitución, porque la primera ecuación permite despejar <span class="math inline">\(x=5-2y\)</span> directamente. También es válida la elección de Gauss-Jordan, porque organiza las operaciones en la matriz.</p>
+<p><strong>6. a.</strong> Única solución <span class="math inline">\((4,-3)\)</span>: hay un pivote en cada columna de coeficientes y no hay contradicción.</p>
+<p><strong>6. b.</strong> Ninguna solución: el segundo renglón representa <span class="math inline">\(0=1\)</span>.</p>
+<p><strong>6. c.</strong> Infinitas soluciones: no hay contradicción y la columna de <span class="math inline">\(z\)</span> no tiene pivote. Dos soluciones son <span class="math inline">\((2,0,0)\)</span> y <span class="math inline">\((5,-1,1)\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>Las operaciones elementales correctamente ejecutadas conservan el conjunto solución. Una matriz escalonada puede contener fracciones y no necesita coincidir con la obtenida mediante otro camino válido. El trabajo realizado permite comprobar si puede:</p>
+<p>El trabajo realizado permite comprobar si puede:</p>
 <ul>
-<li>Resolver un sistema con solución única mediante Gauss y sustitución regresiva, conservando valores exactos.</li>
-<li>Elegir intercambios o multiplicaciones de renglones completos para facilitar los cálculos.</li>
-<li>Revisar la terna en las ecuaciones originales y las operaciones registradas para localizar y corregir errores.</li>
-<li>Interpretar soluciones de problemas de mezclas y mediciones de masa, comprobando sus restricciones de masa.</li>
+<li>Reconocer la forma escalonada reducida y obtenerla mediante operaciones sobre renglones completos.</li>
+<li>Explicar cómo la eliminación de entradas superiores realiza, dentro de la matriz, las sustituciones de un sistema con solución única.</li>
+<li>Revisar primero la consistencia y distinguir una solución única, una contradicción y un sistema consistente con una columna de coeficientes sin pivote.</li>
+<li>Verificar una solución en las ecuaciones originales e interpretar las masas y restricciones de los problemas planteados.</li>
 </ul>
 
 
@@ -1274,13 +1308,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sesiones/2026-09-24-sesion-30.html" class="pagination-link" aria-label="Sesión 30. Eliminación de Gauss y sustitución regresiva">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></span>
+      <a href="../sesiones/2026-10-05-sesion-31.html" class="pagination-link" aria-label="Sesión 31. Método de Gauss: fracciones y corrección de errores">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-10-06-sesion-32.html" class="pagination-link" aria-label="Sesión 32. Método de Gauss-Jordan y forma escalonada reducida">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
