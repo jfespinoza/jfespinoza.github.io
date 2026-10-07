@@ -537,7 +537,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá describir por componentes, mediante un parámetro, el conjunto solución de un sistema consistente con una sola variable libre y verificarlo en las ecuaciones originales. Podrá comprobarlo al resolver el ejercicio 1 de la <a href="#actividad">Actividad</a>, interpretar las restricciones del ejercicio 2 y justificar por qué un renglón nulo no determina por sí solo el número de soluciones.</p>
+<p>Al finalizar la sesión podrá describir por componentes, mediante un parámetro, el conjunto solución de un sistema consistente con una sola variable libre y verificarlo en las ecuaciones originales. Podrá comprobarlo al resolver el ejercicio 1 de la <a href="#actividad">Actividad</a>, interpretar las restricciones del ejercicio 2 y justificar, en el ejercicio 3, por qué un renglón nulo no determina por sí solo el número de soluciones.</p>
 </section>
 <section id="variables-con-pivote-y-variables-libres" class="level2">
 <h2 class="anchored" data-anchor-id="variables-con-pivote-y-variables-libres">Variables con pivote y variables libres</h2>
@@ -546,7 +546,7 @@ window.Quarto = {
 \left[\begin{array}{ccc|c}1&amp;0&amp;2&amp;1\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;0&amp;0\end{array}\right].
 \]</span></p>
 <p>Sus ecuaciones son <span class="math inline">\(x+2z=1\)</span>, <span class="math inline">\(y-z=3\)</span> y <span class="math inline">\(0=0\)</span>. Para cada valor real de <span class="math inline">\(z\)</span>, las dos primeras ecuaciones determinan <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</p>
-<p>En la forma escalonada reducida de la matriz aumentada de un sistema <strong>consistente</strong>, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman <strong>variables con pivote</strong>. Las demás son <strong>variables libres</strong>. En este ejemplo, <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tienen pivote y <span class="math inline">\(z\)</span> es libre.</p>
+<p>En la forma escalonada reducida de la matriz aumentada de un sistema <strong><a href="../sesiones/2026-09-22-sesion-28.html#clasificación-e-interpretación-geométrica">consistente</a></strong>, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman <strong>variables con pivote</strong>. Las demás son <strong>variables libres</strong>. En este ejemplo, <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tienen pivote y <span class="math inline">\(z\)</span> es libre.</p>
 <p>La <strong>consistencia se revisa primero</strong>. Si aparece un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid c\,]\)</span> con <span class="math inline">\(c\ne0\)</span>, el sistema no tiene solución: ninguna elección de valores para las incógnitas puede satisfacer <span class="math inline">\(0=c\)</span>.</p>
 <p>El <strong>rango</strong> de una matriz es el número de pivotes de una forma escalonada; ese número no depende de las operaciones elementales elegidas. En el ejemplo, la matriz de coeficientes tiene rango <span class="math inline">\(2\)</span>. Como el sistema es consistente y tiene tres incógnitas, hay dos variables con pivote y una libre. La columna de términos independientes no se cuenta entre las columnas de coeficientes.</p>
 </section>
@@ -574,7 +574,7 @@ S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
 </section>
 <section id="por-qué-se-obtienen-todas-las-soluciones" class="level3">
 <h3 class="anchored" data-anchor-id="por-qué-se-obtienen-todas-las-soluciones">Por qué se obtienen todas las soluciones</h3>
-<p>La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que <strong>cada terna descrita es solución</strong>. Comprobar solamente uno o dos valores del parámetro no sustituye esta verificación.</p>
+<p>La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que <strong>cada terna descrita es solución</strong>. Comprobar un solo valor del parámetro no garantiza la validez de toda la descripción: una expresión con un error de signo puede coincidir con la correcta en ese valor, como en el <a href="#ejercicios-para-practicar">ejercicio 4 de la práctica</a>.</p>
 <p>Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales</a> conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, <strong>ninguna solución queda fuera de la descripción</strong>.</p>
 </section>
 </section>
@@ -628,8 +628,8 @@ S=\{(2+7t,\ 1-3t,\ t):t\in\mathbb R\}.
 <p><strong>Verificación en las ecuaciones originales:</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
-(2+7t)+2(1-3t)-t&amp;=4,\\
-2(2+7t)+5(1-3t)+t&amp;=9.
+(2+7t)+2(1-3t)-t&amp;=2+7t+2-6t-t=4,\\
+2(2+7t)+5(1-3t)+t&amp;=4+14t+5-15t+t=9.
 \end{aligned}
 \]</span></p>
 <p>Ambas igualdades se cumplen para todo <span class="math inline">\(t\)</span>. Con <span class="math inline">\(t=0\)</span> se obtiene <span class="math inline">\((2,1,0)\)</span>; con <span class="math inline">\(t=1\)</span>, <span class="math inline">\((9,-2,1)\)</span>. Ninguna de estas ternas, por sí sola, representa el conjunto completo.</p>
@@ -672,7 +672,7 @@ x+y+z=500,\qquad 0.60x+0.70y+0.90z=360.
 </tr>
 </tbody>
 </table>
-<p>Las tres condiciones se cumplen simultáneamente si y solo si <span class="math inline">\(50\le t\le200\)</span>. Así, las mezclas admisibles están descritas por</p>
+<p>Las tres condiciones se cumplen simultáneamente si y solo si <span class="math inline">\(50\le t\le200\)</span>, una <a href="../sesiones/2026-08-17-sesion-06.html#ejemplo-4.-desigualdad-doble">desigualdad doble</a> cuyo conjunto solución es el intervalo <span class="math inline">\([50,200]\)</span>. Así, las mezclas admisibles están descritas por</p>
 <p><span class="math display">\[
 \{(-100+2t,\ 600-3t,\ t):50\le t\le200\}.
 \]</span></p>
@@ -685,8 +685,8 @@ x+y+z=500,\qquad 0.60x+0.70y+0.90z=360.
 <li><strong>Concluir que hay infinitas soluciones sin revisar la consistencia.</strong> La matriz (iii) tiene una columna de coeficientes sin pivote, pero el renglón <span class="math inline">\(0=1\)</span> impide cualquier solución.</li>
 <li><strong>Atribuir el número de soluciones al renglón nulo.</strong> La matriz (i) tiene un renglón nulo y solución única. Deben revisarse también la consistencia y las columnas con pivote.</li>
 <li><strong>Confundir una solución particular con el conjunto solución.</strong> En el Ejemplo 1, <span class="math inline">\((2,1,0)\)</span> corresponde a <span class="math inline">\(t=0\)</span>; también hay soluciones con otros valores de <span class="math inline">\(t\)</span>, como <span class="math inline">\((9,-2,1)\)</span>.</li>
-<li><strong>Cambiar incorrectamente el signo al despejar.</strong> De <span class="math inline">\(x-7z=2\)</span> y <span class="math inline">\(z=t\)</span> se obtiene <span class="math inline">\(x=2+7t\)</span>. La expresión <span class="math inline">\(x=2-7t\)</span> no satisface la ecuación para todo <span class="math inline">\(t\)</span>.</li>
-<li><strong>Omitir las restricciones del problema.</strong> En el Ejemplo 2, el sistema admite cualquier <span class="math inline">\(t\in\mathbb R\)</span>, pero las mezclas admisibles exigen <span class="math inline">\(50\le t\le200\)</span>.</li>
+<li><strong>Cambiar incorrectamente el signo al despejar.</strong> De <span class="math inline">\(x-7z=2\)</span> y <span class="math inline">\(z=t\)</span> se obtiene <span class="math inline">\(x=2+7t\)</span>. Usar <span class="math inline">\(x=2-7t\)</span> produciría, con <span class="math inline">\(t=1\)</span>, la terna <span class="math inline">\((-5,-2,1)\)</span>, que en la primera ecuación original da <span class="math inline">\(-5-4-1=-10\ne4\)</span>. La terna correcta, <span class="math inline">\((9,-2,1)\)</span>, satisface ambas ecuaciones.</li>
+<li><strong>Omitir las restricciones del problema.</strong> En el Ejemplo 2, <span class="math inline">\(t=0\)</span> satisface las ecuaciones, pero exige <span class="math inline">\(-100\)</span> g del lote A. Las mezclas admisibles requieren <span class="math inline">\(50\le t\le200\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -775,7 +775,7 @@ S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
 <p>Resuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.</p>
 <ol type="1">
 <li><p>Describa por componentes el conjunto solución de <span class="math inline">\(2x+4y-2z=6\)</span>, <span class="math inline">\(3x+7y+z=4\)</span>, usando <span class="math inline">\(z=t\)</span>. Indique el rango de la matriz de coeficientes y verifique la descripción en las ecuaciones originales.</p></li>
-<li><p>Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se registran las masas de tres conjuntos, sin incluir recipientes. Considere exactos los datos:</p>
+<li><p>Este ejercicio retoma el <a href="../sesiones/2026-10-06-sesion-32.html#ejercicios-para-practicar">ejercicio 3 de la práctica de la Sesión 32</a>, con otro registro en el tercer conjunto. Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se registran las masas de tres conjuntos, sin incluir recipientes. Considere exactos los datos:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -826,7 +826,7 @@ S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
 \left[\begin{array}{ccc|c}1&amp;0&amp;1&amp;2\\0&amp;1&amp;1&amp;1\end{array}\right].
 \]</span></p>
 <p>Un estudiante escribió <span class="math inline">\(S=\{(2+t,\ 1+t,\ t):t\in\mathbb R\}\)</span> y lo comprobó solamente con <span class="math inline">\(t=0\)</span>. Sustituya la terna correspondiente a <span class="math inline">\(t=1\)</span> en las ecuaciones originales, localice el error, corrija la descripción y explique por qué la comprobación con <span class="math inline">\(t=0\)</span> no lo detectó.</p></li>
-<li><p>Considere el sistema <span class="math inline">\(3x+2y=6\)</span>, <span class="math inline">\(6x+4y=12\)</span>.</p>
+<li><p>Considere el sistema <span class="math inline">\(3x+2y=6\)</span>, <span class="math inline">\(6x+4y=12\)</span> del <a href="../sesiones/2026-09-22-sesion-28.html#ejemplo-3.-un-sistema-con-infinitas-soluciones">Ejemplo 3 de la Sesión 28</a>.</p>
 <ol type="a">
 <li><p>Obtenga su forma reducida, identifique la variable libre y describa el conjunto solución con <span class="math inline">\(y=t\)</span>. Indique el rango de la matriz de coeficientes.</p></li>
 <li><p>Otra descripción es <span class="math inline">\(\{(u,\ 3-\frac32u):u\in\mathbb R\}\)</span>. Determine la relación entre <span class="math inline">\(u\)</span> y <span class="math inline">\(t\)</span> y decida si ambas descripciones representan el mismo conjunto. Indique los valores de ambos parámetros para la pareja <span class="math inline">\((4,-3)\)</span>.</p></li>
@@ -834,8 +834,8 @@ S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
 <li><p>Se busca un polinomio <span class="math inline">\(p(x)=ax^2+bx+c\)</span> cuya gráfica pase por <span class="math inline">\((1,4)\)</span> y <span class="math inline">\((-1,0)\)</span>.</p>
 <ol type="a">
 <li><p>Plantee el sistema en las incógnitas <span class="math inline">\(a,b,c\)</span> y describa sus soluciones con <span class="math inline">\(c=t\)</span>.</p></li>
-<li><p>¿Para qué valor de <span class="math inline">\(t\)</span> el polinomio obtenido no tiene grado <span class="math inline">\(2\)</span>? ¿Qué polinomio resulta?</p></li>
-<li><p>Determine el polinomio que además pasa por <span class="math inline">\((0,1)\)</span>, factorícelo e identifique su raíz doble.</p></li>
+<li><p>¿Para qué valor de <span class="math inline">\(t\)</span> el polinomio obtenido no tiene <a href="../sesiones/2026-09-01-sesion-15.html#grado-y-coeficiente-principal">grado</a> <span class="math inline">\(2\)</span>? ¿Qué polinomio resulta?</p></li>
+<li><p>Determine el polinomio que además pasa por <span class="math inline">\((0,1)\)</span>, factorícelo e identifique su <a href="../sesiones/2026-09-02-sesion-16.html#resolución-por-factorización">raíz doble</a>.</p></li>
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
@@ -877,12 +877,13 @@ S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>En un sistema consistente con una variable libre, la forma reducida permite describir todas las soluciones mediante un parámetro. La sustitución verifica que cada terna descrita satisface las ecuaciones originales; las restricciones del contexto pueden limitar los valores admisibles del parámetro.</p>
 <p>El trabajo realizado permite comprobar si puede:</p>
 <ul>
-<li>Revisar la consistencia e identificar las variables con pivote y la variable libre, incluso cuando esta no ocupa la última columna de coeficientes.</li>
-<li>Describir todas las soluciones por componentes mediante un parámetro y verificar la descripción en las ecuaciones originales.</li>
-<li>Explicar, mediante los casos comparados, por qué un renglón nulo no determina por sí solo el número de soluciones.</li>
-<li>Distinguir las soluciones de un sistema de las que satisfacen las restricciones de masa de un problema, y determinar cómo una condición adicional puede seleccionar una sola solución.</li>
+<li>Revisar la consistencia e identificar las variables con pivote y la variable libre, incluso cuando esta no ocupa la última columna de coeficientes, como en los ejercicios 1a y 3 de la <a href="#actividad">Actividad</a>.</li>
+<li>Describir todas las soluciones por componentes mediante un parámetro y verificar la descripción en las ecuaciones originales, como en el ejercicio 1b de la Actividad y los ejercicios 1 y 4 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
+<li>Explicar, mediante los casos comparados, por qué un renglón nulo no determina por sí solo el número de soluciones, como en el ejercicio 3 de la <a href="#actividad">Actividad</a>.</li>
+<li>Distinguir las soluciones de un sistema de las que satisfacen las restricciones de masa de un problema, y determinar cómo una condición adicional puede seleccionar una sola solución, como en el ejercicio 2 de la Actividad y los ejercicios 2 y 3 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
