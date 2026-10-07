@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa.">
+<meta name="description" content="Consistencia, variables con pivote y variables libres, descripción paramétrica por componentes y restricciones en problemas de mezclas.">
 
-<title>Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra</title>
+<title>Sesión 33. Variables libres y descripción paramétrica del conjunto solución – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sesiones/2026-09-02-sesion-16.html" rel="next">
-<link href="../unidades/02-polinomios-raices.html" rel="prev">
+<link href="../unidades/04-matrices.html" rel="next">
+<link href="../sesiones/2026-10-06-sesion-32.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 15. Polinomios: estructura, operaciones y evaluación – Álgebra">
-<meta property="og:description" content="Definición y estructura de los polinomios en una variable, grado y coeficiente principal, operaciones y evaluación directa.">
+<meta property="og:title" content="Sesión 33. Variables libres y descripción paramétrica del conjunto solución – Álgebra">
+<meta property="og:description" content="Consistencia, variables con pivote y variables libres, descripción paramétrica por componentes y restricciones en problemas de mezclas.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-01-sesion-15.html"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-07-sesion-33.html"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -283,13 +283,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
@@ -297,7 +297,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,13 +359,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
@@ -403,7 +403,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
+  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
   </div>
 </li>
       </ul>
@@ -487,28 +487,32 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#polinomios-en-una-variable" id="toc-polinomios-en-una-variable" class="nav-link active" data-scroll-target="#polinomios-en-una-variable">Polinomios en una variable</a>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#variables-con-pivote-y-variables-libres" id="toc-variables-con-pivote-y-variables-libres" class="nav-link" data-scroll-target="#variables-con-pivote-y-variables-libres">Variables con pivote y variables libres</a></li>
+  <li><a href="#descripción-paramétrica-del-conjunto-solución" id="toc-descripción-paramétrica-del-conjunto-solución" class="nav-link" data-scroll-target="#descripción-paramétrica-del-conjunto-solución">Descripción paramétrica del conjunto solución</a>
   <ul class="collapse">
-  <li><a href="#forma-ordenada-e-igualdad" id="toc-forma-ordenada-e-igualdad" class="nav-link" data-scroll-target="#forma-ordenada-e-igualdad">Forma ordenada e igualdad</a></li>
-  <li><a href="#grado-y-coeficiente-principal" id="toc-grado-y-coeficiente-principal" class="nav-link" data-scroll-target="#grado-y-coeficiente-principal">Grado y coeficiente principal</a></li>
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">Procedimiento</a></li>
+  <li><a href="#por-qué-se-obtienen-todas-las-soluciones" id="toc-por-qué-se-obtienen-todas-las-soluciones" class="nav-link" data-scroll-target="#por-qué-se-obtienen-todas-las-soluciones">Por qué se obtienen todas las soluciones</a></li>
   </ul></li>
-  <li><a href="#suma-resta-y-producto" id="toc-suma-resta-y-producto" class="nav-link" data-scroll-target="#suma-resta-y-producto">Suma, resta y producto</a></li>
-  <li><a href="#evaluación-de-un-polinomio" id="toc-evaluación-de-un-polinomio" class="nav-link" data-scroll-target="#evaluación-de-un-polinomio">Evaluación de un polinomio</a>
+  <li><a href="#un-renglón-nulo-no-determina-el-número-de-soluciones" id="toc-un-renglón-nulo-no-determina-el-número-de-soluciones" class="nav-link" data-scroll-target="#un-renglón-nulo-no-determina-el-número-de-soluciones">Un renglón nulo no determina el número de soluciones</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#evaluación-directa" id="toc-evaluación-directa" class="nav-link" data-scroll-target="#evaluación-directa">Evaluación directa</a></li>
+  <li><a href="#ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas" id="toc-ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas" class="nav-link" data-scroll-target="#ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas">Ejemplo 1. Un sistema de dos ecuaciones con tres incógnitas</a></li>
+  <li><a href="#ejemplo-2.-restricciones-de-masa-en-una-mezcla" id="toc-ejemplo-2.-restricciones-de-masa-en-una-mezcla" class="nav-link" data-scroll-target="#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2. Restricciones de masa en una mezcla</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/02-polinomios-raices.html">Unidad 2. Polinomios y raíces</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-09-01-sesion-15.html"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/03-sistemas-ecuaciones.html">Unidad 3. Sistemas de ecuaciones lineales</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-07-sesion-33.html"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></h1>
 </div>
 
 
@@ -519,7 +523,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">1 de septiembre de 2026</p>
+      <p class="date">7 de octubre de 2026</p>
     </div>
   </div>
   
@@ -531,211 +535,196 @@ window.Quarto = {
 </header>
 
 
-<section id="polinomios-en-una-variable" class="level2">
-<h2 class="anchored" data-anchor-id="polinomios-en-una-variable">Polinomios en una variable</h2>
-<p>Las expresiones <span class="math inline">\(x^2-9\)</span>, <span class="math inline">\(x^2+bx+c\)</span> y <span class="math inline">\(ax+b\)</span> estudiadas en las <a href="../sesiones/2026-08-13-sesion-04.html">Sesiones 04</a> y <a href="../sesiones/2026-08-14-sesion-05.html">05</a> de la <a href="../unidades/01-reales-complejos.html">Unidad 1</a> comparten una estructura: se obtienen a partir de números y de una variable mediante sumas, restas y productos, y la variable aparece únicamente elevada a exponentes enteros no negativos.</p>
-<p>Un <strong>polinomio en la variable <span class="math inline">\(x\)</span> con coeficientes reales</strong> es una suma finita de la forma</p>
-<p><span class="math display">\[
-p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
-\]</span></p>
-<p>donde <span class="math inline">\(n\in\mathbb N\)</span> y <span class="math inline">\(a_0,a_1,\ldots,a_n\in\mathbb R\)</span>. Si <span class="math inline">\(p(x)\ne0\)</span>, se elige <span class="math inline">\(n\)</span> de modo que <span class="math inline">\(a_n\ne0\)</span>. Los números <span class="math inline">\(a_k\)</span> son los <strong>coeficientes</strong>; cada término no nulo <span class="math inline">\(a_kx^k\)</span> tiene grado <span class="math inline">\(k\)</span>, y <span class="math inline">\(a_0\)</span> es el <strong>término independiente</strong>. Como <span class="math inline">\(0\in\mathbb N\)</span> según la convención adoptada en la <a href="../sesiones/2026-08-11-sesion-02.html">Sesión 02</a>, la definición incluye los polinomios constantes.</p>
-<p>En la forma polinómica, toda potencia de <span class="math inline">\(x\)</span> tiene un exponente entero no negativo. Por ello, una expresión que contiene <span class="math inline">\(x^{-1}\)</span> o <span class="math inline">\(x^{1/2}\)</span> no es un polinomio en <span class="math inline">\(x\)</span>; véanse las leyes de los exponentes de la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a>. Los coeficientes, en cambio, pueden ser cualesquiera números reales. Por ejemplo,</p>
-<p><span class="math display">\[
-\frac12x^3-\sqrt2\,x+1
-\]</span></p>
-<p>sí es un polinomio, mientras que <span class="math inline">\(x^2+\dfrac1x\)</span> y <span class="math inline">\(\sqrt{x}-1\)</span> no lo son.</p>
-<section id="forma-ordenada-e-igualdad" class="level3">
-<h3 class="anchored" data-anchor-id="forma-ordenada-e-igualdad">Forma ordenada e igualdad</h3>
-<p>Dos términos son <strong>semejantes</strong> cuando contienen la misma potencia de <span class="math inline">\(x\)</span>. Un polinomio está en <strong>forma ordenada</strong> cuando sus términos semejantes se han reunido y las potencias se escriben en orden decreciente. Si una potencia no aparece, su coeficiente es <span class="math inline">\(0\)</span>.</p>
-<p>Dos polinomios son iguales cuando tienen el mismo coeficiente en cada potencia de <span class="math inline">\(x\)</span>. Por ello, conviene simplificarlos y ordenarlos antes de compararlos. Por ejemplo, el producto notable estudiado en la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a> da</p>
-<p><span class="math display">\[
-(x-1)^2=x^2-2x+1.
-\]</span></p>
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá describir por componentes, mediante un parámetro, el conjunto solución de un sistema consistente con una sola variable libre y verificarlo en las ecuaciones originales. Podrá comprobarlo al resolver el ejercicio 1 de la <a href="#actividad">Actividad</a>, interpretar las restricciones del ejercicio 2 y justificar por qué un renglón nulo no determina por sí solo el número de soluciones.</p>
 </section>
-<section id="grado-y-coeficiente-principal" class="level3">
-<h3 class="anchored" data-anchor-id="grado-y-coeficiente-principal">Grado y coeficiente principal</h3>
-<p>Si <span class="math inline">\(p(x)\)</span> no es el polinomio cero, su <strong>grado</strong>, denotado <span class="math inline">\(\operatorname{gr}(p)\)</span>, es el mayor exponente cuyo coeficiente es distinto de cero. El coeficiente de esa potencia es el <strong>coeficiente principal</strong>. Un polinomio es <strong>mónico</strong> cuando su coeficiente principal es <span class="math inline">\(1\)</span>.</p>
-<p>Un polinomio constante distinto de cero tiene grado <span class="math inline">\(0\)</span>. El <strong>polinomio cero</strong> tiene todos sus coeficientes iguales a cero y, en este curso, su grado no está definido.</p>
+<section id="variables-con-pivote-y-variables-libres" class="level2">
+<h2 class="anchored" data-anchor-id="variables-con-pivote-y-variables-libres">Variables con pivote y variables libres</h2>
+<p>Se consideran sistemas con coeficientes e incógnitas reales. En la <a href="../sesiones/2026-10-06-sesion-32.html">Sesión 32</a> se interpretó la matriz reducida</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;2&amp;1\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>Sus ecuaciones son <span class="math inline">\(x+2z=1\)</span>, <span class="math inline">\(y-z=3\)</span> y <span class="math inline">\(0=0\)</span>. Para cada valor real de <span class="math inline">\(z\)</span>, las dos primeras ecuaciones determinan <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</p>
+<p>En la forma escalonada reducida de la matriz aumentada de un sistema <strong>consistente</strong>, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman <strong>variables con pivote</strong>. Las demás son <strong>variables libres</strong>. En este ejemplo, <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> tienen pivote y <span class="math inline">\(z\)</span> es libre.</p>
+<p>La <strong>consistencia se revisa primero</strong>. Si aparece un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid c\,]\)</span> con <span class="math inline">\(c\ne0\)</span>, el sistema no tiene solución: ninguna elección de valores para las incógnitas puede satisfacer <span class="math inline">\(0=c\)</span>.</p>
+<p>El <strong>rango</strong> de una matriz es el número de pivotes de una forma escalonada; ese número no depende de las operaciones elementales elegidas. En el ejemplo, la matriz de coeficientes tiene rango <span class="math inline">\(2\)</span>. Como el sistema es consistente y tiene tres incógnitas, hay dos variables con pivote y una libre. La columna de términos independientes no se cuenta entre las columnas de coeficientes.</p>
+</section>
+<section id="descripción-paramétrica-del-conjunto-solución" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-paramétrica-del-conjunto-solución">Descripción paramétrica del conjunto solución</h2>
+<p>Un <strong>parámetro</strong> representa un número real arbitrario. Para la matriz anterior, se escribe <span class="math inline">\(z=t\)</span>, con <span class="math inline">\(t\in\mathbb R\)</span>. Las ecuaciones reducidas dan</p>
+<p><span class="math display">\[
+x=1-2t,\qquad y=3+t,\qquad z=t.
+\]</span></p>
+<p>Estas son las <strong>ecuaciones paramétricas</strong> del conjunto solución. Por componentes, el mismo conjunto se escribe</p>
+<p><span class="math display">\[
+S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
+\]</span></p>
+<p>Con <span class="math inline">\(t=0\)</span> se obtiene <span class="math inline">\((1,3,0)\)</span>; con <span class="math inline">\(t=1\)</span>, <span class="math inline">\((-1,4,1)\)</span>. Son dos soluciones particulares. Cada valor de <span class="math inline">\(t\)</span> produce una terna distinta, porque su tercera componente es <span class="math inline">\(t\)</span>; por tanto, el sistema tiene infinitas soluciones.</p>
+<section id="procedimiento" class="level3">
+<h3 class="anchored" data-anchor-id="procedimiento">Procedimiento</h3>
+<ol type="1">
+<li>Obtenga la forma escalonada reducida mediante <a href="../sesiones/2026-10-06-sesion-32.html">Gauss-Jordan</a>. Si aparece una contradicción, concluya <span class="math inline">\(S=\varnothing\)</span>; para esa conclusión no necesita terminar la reducción.</li>
+<li>Si el sistema es consistente, identifique las columnas de coeficientes con pivote y sin pivote.</li>
+<li>Asigne un parámetro a la variable libre. Despeje las variables con pivote en función de ese parámetro.</li>
+<li>Escriba las ecuaciones paramétricas y el conjunto solución, indicando que el parámetro recorre <span class="math inline">\(\mathbb R\)</span>.</li>
+<li>Sustituya las expresiones en las ecuaciones originales y compruebe que las igualdades se cumplen para todo valor del parámetro.</li>
+</ol>
+<p>Si el problema impone restricciones adicionales, como masas no negativas, determine después cuáles soluciones del sistema las satisfacen. Esas restricciones pueden limitar los valores admisibles del parámetro.</p>
+</section>
+<section id="por-qué-se-obtienen-todas-las-soluciones" class="level3">
+<h3 class="anchored" data-anchor-id="por-qué-se-obtienen-todas-las-soluciones">Por qué se obtienen todas las soluciones</h3>
+<p>La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que <strong>cada terna descrita es solución</strong>. Comprobar solamente uno o dos valores del parámetro no sustituye esta verificación.</p>
+<p>Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales</a> conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, <strong>ninguna solución queda fuera de la descripción</strong>.</p>
+</section>
+</section>
+<section id="un-renglón-nulo-no-determina-el-número-de-soluciones" class="level2">
+<h2 class="anchored" data-anchor-id="un-renglón-nulo-no-determina-el-número-de-soluciones">Un renglón nulo no determina el número de soluciones</h2>
+<p>Un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid0\,]\)</span> representa <span class="math inline">\(0=0\)</span> y no impone una condición adicional. Las siguientes matrices están reducidas y contienen un renglón nulo:</p>
+<p><strong>(i) Sistema en <span class="math inline">\(x,y\)</span>: solución única.</strong></p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;0&amp;2\\0&amp;1&amp;-1\\0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>No hay contradicción y ambas columnas de coeficientes tienen pivote. La única solución es <span class="math inline">\((2,-1)\)</span>.</p>
+<p><strong>(ii) Sistema en <span class="math inline">\(x,y,z\)</span>: infinitas soluciones.</strong></p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;2&amp;1\\0&amp;1&amp;-1&amp;3\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>No hay contradicción y <span class="math inline">\(z\)</span> es libre. Su conjunto solución es <span class="math inline">\(S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}\)</span>.</p>
+<p><strong>(iii) Sistema en <span class="math inline">\(x,y\)</span>: ninguna solución.</strong></p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;2&amp;0\\0&amp;0&amp;1\\0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>El segundo renglón representa <span class="math inline">\(0=1\)</span>. El sistema es inconsistente, aunque también tenga un renglón nulo y una columna de coeficientes sin pivote.</p>
+<p>El número de soluciones depende de la consistencia y de los pivotes en las columnas de coeficientes. Un renglón nulo, considerado aisladamente, no permite decidirlo.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas">Ejemplo 1. Un sistema de dos ecuaciones con tres incógnitas</h3>
+<p>Describa el conjunto solución de</p>
+<p><span class="math display">\[
+\left\{\begin{aligned}x+2y-z&amp;=4\\2x+5y+z&amp;=9.\end{aligned}\right.
+\]</span></p>
+<p>Con <span class="math inline">\(R_2\to R_2-2R_1\)</span> se obtiene la forma escalonada:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;4\\2&amp;5&amp;1&amp;9\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&amp;2&amp;-1&amp;4\\0&amp;1&amp;3&amp;1\end{array}\right].
+\]</span></p>
+<p>Después, <span class="math inline">\(R_1\to R_1-2R_2\)</span> completa la reducción:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-7&amp;2\\0&amp;1&amp;3&amp;1\end{array}\right].
+\]</span></p>
+<p>El sistema es consistente. Las variables con pivote son <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>; la variable libre es <span class="math inline">\(z\)</span>. La matriz de coeficientes tiene rango <span class="math inline">\(2\)</span>.</p>
+<p>Las ecuaciones reducidas son <span class="math inline">\(x-7z=2\)</span> y <span class="math inline">\(y+3z=1\)</span>. Con <span class="math inline">\(z=t\)</span>:</p>
+<p><span class="math display">\[
+x=2+7t,\qquad y=1-3t,\qquad z=t,\qquad t\in\mathbb R.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+S=\{(2+7t,\ 1-3t,\ t):t\in\mathbb R\}.
+\]</span></p>
+<p><strong>Verificación en las ecuaciones originales:</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+(2+7t)+2(1-3t)-t&amp;=4,\\
+2(2+7t)+5(1-3t)+t&amp;=9.
+\end{aligned}
+\]</span></p>
+<p>Ambas igualdades se cumplen para todo <span class="math inline">\(t\)</span>. Con <span class="math inline">\(t=0\)</span> se obtiene <span class="math inline">\((2,1,0)\)</span>; con <span class="math inline">\(t=1\)</span>, <span class="math inline">\((9,-2,1)\)</span>. Ninguna de estas ternas, por sí sola, representa el conjunto completo.</p>
+</section>
+<section id="ejemplo-2.-restricciones-de-masa-en-una-mezcla" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2. Restricciones de masa en una mezcla</h3>
+<p>Tres lotes de polvo metálico, A, B y C, contienen <span class="math inline">\(60\,\%\)</span>, <span class="math inline">\(70\,\%\)</span> y <span class="math inline">\(90\,\%\)</span> de cobre en masa. Se quieren preparar <span class="math inline">\(500\)</span> g de mezcla con <span class="math inline">\(72\,\%\)</span> de cobre usando <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> gramos de los lotes A, B y C, respectivamente. Las masas se suman sin pérdidas; la masa de cobre de cada porción es su masa multiplicada por el porcentaje expresado como fracción. Se exige <span class="math inline">\(x,y,z\ge0\)</span>.</p>
+<p>Las ecuaciones de masa total y masa de cobre son</p>
+<p><span class="math display">\[
+x+y+z=500,\qquad 0.60x+0.70y+0.90z=360.
+\]</span></p>
+<p>La forma reducida de la matriz aumentada es</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-2&amp;-100\\0&amp;1&amp;3&amp;600\end{array}\right].
+\]</span></p>
+<p>Con <span class="math inline">\(z=t\)</span>, las soluciones del sistema son <span class="math inline">\(x=-100+2t\)</span>, <span class="math inline">\(y=600-3t\)</span> y <span class="math inline">\(z=t\)</span>, para <span class="math inline">\(t\in\mathbb R\)</span>. La sustitución da una masa total de <span class="math inline">\(500\)</span> g y una masa de cobre de</p>
+<p><span class="math display">\[
+0.60(-100+2t)+0.70(600-3t)+0.90t=360
+\]</span></p>
+<p>para todo <span class="math inline">\(t\)</span>. Sin embargo, una mezcla exige además masas no negativas:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 26%">
-<col style="width: 15%">
-<col style="width: 21%">
-<col style="width: 21%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Expresión</th>
-<th style="text-align: center;">¿Es polinomio?</th>
-<th>Forma ordenada</th>
-<th style="text-align: right;">Grado</th>
-<th style="text-align: right;">Coeficiente principal</th>
+<th>Condición de masa</th>
+<th>Restricción sobre <span class="math inline">\(t\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(7x-3x^4+1\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(-3x^4+7x+1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-3\)</span></td>
+<td><span class="math inline">\(x=-100+2t\ge0\)</span></td>
+<td><span class="math inline">\(t\ge50\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(\sqrt2\,x^2-x\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(\sqrt2\,x^2-x\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(\sqrt2\)</span></td>
+<td><span class="math inline">\(y=600-3t\ge0\)</span></td>
+<td><span class="math inline">\(t\le200\)</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(x^2+\dfrac1x\)</span></td>
-<td style="text-align: center;">No</td>
-<td>—</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\sqrt{x}-1\)</span></td>
-<td style="text-align: center;">No</td>
-<td>—</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\((2x+1)^2-4x^2\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(4x+1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(-6\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(-6\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;"><span class="math inline">\(-6\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;">Sí</td>
-<td><span class="math inline">\(0\)</span></td>
-<td style="text-align: right;">no está definido</td>
-<td style="text-align: right;">—</td>
+<td><span class="math inline">\(z=t\ge0\)</span></td>
+<td><span class="math inline">\(t\ge0\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>El grado se determina después de simplificar. Aunque <span class="math inline">\((2x+1)^2-4x^2\)</span> contiene términos cuadráticos antes de reunir términos semejantes, estos se cancelan:</p>
+<p>Las tres condiciones se cumplen simultáneamente si y solo si <span class="math inline">\(50\le t\le200\)</span>. Así, las mezclas admisibles están descritas por</p>
 <p><span class="math display">\[
-(2x+1)^2-4x^2=4x^2+4x+1-4x^2=4x+1.
+\{(-100+2t,\ 600-3t,\ t):50\le t\le200\}.
 \]</span></p>
-</section>
-</section>
-<section id="suma-resta-y-producto" class="level2">
-<h2 class="anchored" data-anchor-id="suma-resta-y-producto">Suma, resta y producto</h2>
-<p>Para sumar polinomios se reúnen términos semejantes. Para restarlos se cambia el signo de todos los términos del sustraendo y se suma. En el producto se aplica la propiedad distributiva de la <a href="../sesiones/2026-08-13-sesion-04.html">Sesión 04</a>, se usa <span class="math inline">\(x^mx^n=x^{m+n}\)</span> de la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a> y después se reúnen términos semejantes.</p>
-<p>Sean</p>
-<p><span class="math display">\[
-p(x)=x^2-2x+3,
-\qquad
-q(x)=2x-1.
-\]</span></p>
-<p>Entonces</p>
-<p><span class="math display">\[
-\begin{aligned}
-p(x)+q(x)&amp;=x^2+2,\\
-p(x)-q(x)&amp;=x^2-4x+4,
-\end{aligned}
-\]</span></p>
-<p>y</p>
-<p><span class="math display">\[
-\begin{aligned}
-p(x)q(x)
-&amp;=(x^2-2x+3)(2x-1)\\
-&amp;=2x^3-x^2-4x^2+2x+6x-3\\
-&amp;=2x^3-5x^2+8x-3.
-\end{aligned}
-\]</span></p>
-<p>Si <span class="math inline">\(p(x)\)</span> y <span class="math inline">\(q(x)\)</span> son polinomios distintos de cero, se cumplen las siguientes reglas:</p>
-<ul>
-<li><p><span class="math inline">\(\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)\)</span>. El coeficiente principal y el término independiente del producto son, respectivamente, los productos de los coeficientes principales y de los términos independientes de los factores.</p></li>
-<li><p>Si <span class="math inline">\(p(x)+q(x)\)</span> no es el polinomio cero, entonces</p>
-<p><span class="math display">\[
-\operatorname{gr}(p+q)\le \max\{\operatorname{gr}(p),\operatorname{gr}(q)\}.
-\]</span></p>
-<p>Cuando los grados son distintos, se obtiene la igualdad. Si son iguales, los términos principales pueden cancelarse y el grado puede disminuir.</p></li>
-</ul>
-<p>Por ejemplo,</p>
-<p><span class="math display">\[
-(x^3+x)+(-x^3+2)=x+2.
-\]</span></p>
-<p>Los dos sumandos tienen grado <span class="math inline">\(3\)</span>, pero la suma tiene grado <span class="math inline">\(1\)</span>. Si la suma fuera el polinomio cero, su grado no estaría definido.</p>
-</section>
-<section id="evaluación-de-un-polinomio" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación-de-un-polinomio">Evaluación de un polinomio</h2>
-<p>Si <span class="math inline">\(c\)</span> es un número real o complejo, <span class="math inline">\(p(c)\)</span> es el número que resulta de sustituir <span class="math inline">\(x\)</span> por <span class="math inline">\(c\)</span> y efectuar las operaciones. Si</p>
-<p><span class="math display">\[
-p(x)=2x^3-x+4,
-\]</span></p>
-<p>entonces</p>
-<p><span class="math display">\[
-p(-1)=2(-1)^3-(-1)+4=3,
-\qquad
-p(0)=4.
-\]</span></p>
-<p>En general, <span class="math inline">\(p(0)=a_0\)</span>. Al sustituir un número negativo, la base de cada potencia debe escribirse entre paréntesis, como se estableció en la <a href="../sesiones/2026-08-12-sesion-03.html">Sesión 03</a>.</p>
-<section id="evaluación-directa" class="level3">
-<h3 class="anchored" data-anchor-id="evaluación-directa">Evaluación directa</h3>
-<p>La evaluación directa consiste en calcular las potencias de <span class="math inline">\(c\)</span>, multiplicarlas por sus coeficientes y sumar los resultados. Para</p>
-<p><span class="math display">\[
-r(x)=2x^4-3x^3+5x-7,
-\]</span></p>
-<p>se obtiene</p>
-<p><span class="math display">\[
-r(3)=2(3)^4-3(3)^3+5(3)-7=162-81+15-7=89.
-\]</span></p>
+<p>Por ejemplo, <span class="math inline">\(t=100\)</span> da <span class="math inline">\(100\)</span> g del lote A, <span class="math inline">\(300\)</span> g del B y <span class="math inline">\(100\)</span> g del C. En cambio, <span class="math inline">\(t=0\)</span> satisface las ecuaciones, pero exige <span class="math inline">\(-100\)</span> g del lote A y no representa una mezcla admisible.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li>El grado no se lee antes de ordenar y simplificar. En <span class="math inline">\((2x+1)^2-4x^2\)</span>, los términos cuadráticos se cancelan y el resultado tiene grado <span class="math inline">\(1\)</span>.</li>
-<li>Los términos no semejantes no se combinan: la fórmula <span class="math inline">\(x^2+x=x^3\)</span> no es una identidad.</li>
-<li>Al restar polinomios se cambia el signo de todos los términos del sustraendo.</li>
-<li>La regla <span class="math inline">\(\operatorname{gr}(pq)=\operatorname{gr}(p)+\operatorname{gr}(q)\)</span> corresponde al producto, no a la suma.</li>
-<li>Al evaluar en un número negativo, omitir los paréntesis puede cambiar el resultado. Para <span class="math inline">\(p(x)=x^2-3x\)</span>, escribir <span class="math inline">\(p(-2)=-2^2-3(-2)=2\)</span> es incorrecto; el valor correcto es <span class="math inline">\(p(-2)=(-2)^2-3(-2)=10\)</span>.</li>
+<li><strong>Concluir que hay infinitas soluciones sin revisar la consistencia.</strong> La matriz (iii) tiene una columna de coeficientes sin pivote, pero el renglón <span class="math inline">\(0=1\)</span> impide cualquier solución.</li>
+<li><strong>Atribuir el número de soluciones al renglón nulo.</strong> La matriz (i) tiene un renglón nulo y solución única. Deben revisarse también la consistencia y las columnas con pivote.</li>
+<li><strong>Confundir una solución particular con el conjunto solución.</strong> En el Ejemplo 1, <span class="math inline">\((2,1,0)\)</span> corresponde a <span class="math inline">\(t=0\)</span>; también hay soluciones con otros valores de <span class="math inline">\(t\)</span>, como <span class="math inline">\((9,-2,1)\)</span>.</li>
+<li><strong>Cambiar incorrectamente el signo al despejar.</strong> De <span class="math inline">\(x-7z=2\)</span> y <span class="math inline">\(z=t\)</span> se obtiene <span class="math inline">\(x=2+7t\)</span>. La expresión <span class="math inline">\(x=2-7t\)</span> no satisface la ecuación para todo <span class="math inline">\(t\)</span>.</li>
+<li><strong>Omitir las restricciones del problema.</strong> En el Ejemplo 2, el sistema admite cualquier <span class="math inline">\(t\in\mathbb R\)</span>, pero las mezclas admisibles exigen <span class="math inline">\(50\le t\le200\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Revise la consistencia antes de describir las soluciones y compruebe cada parametrización en las ecuaciones originales.</p>
 <ol type="1">
-<li><p>Resuelva los siguientes problemas sobre estructura y grado.</p>
-<ol type="a">
-<li><p>Simplifique</p>
+<li><p>Considere el sistema</p>
 <p><span class="math display">\[
-s(x)=(x+2)(x-2)-x(x+1)+5x
-\]</span></p>
-<p>y determine su grado, coeficiente principal y término independiente.</p></li>
-<li><p>Construya dos polinomios de grado <span class="math inline">\(4\)</span> cuya suma tenga grado <span class="math inline">\(2\)</span>. Explique qué coeficientes deben cancelarse.</p></li>
-</ol></li>
-<li><p>Sean</p>
-<p><span class="math display">\[
-p(x)=3x^3-2x^2+x-5,
-\qquad
-q(x)=-3x^3+x^2+4.
+\left\{\begin{aligned}x-y+2z&amp;=1\\2x-y+5z&amp;=4.\end{aligned}\right.
 \]</span></p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(p(x)+q(x)\)</span> y <span class="math inline">\(p(x)-q(x)\)</span>, e indique el grado de cada resultado.</p></li>
-<li><p>Sin desarrollar completamente <span class="math inline">\(p(x)q(x)\)</span>, determine su grado, su coeficiente principal, su término independiente y el coeficiente de <span class="math inline">\(x^2\)</span>.</p></li>
+<li><p>Obtenga la forma escalonada reducida de su matriz aumentada y registre las operaciones. Identifique las variables con pivote, la variable libre y el rango de la matriz de coeficientes.</p></li>
+<li><p>Escriba las ecuaciones paramétricas y el conjunto solución, con <span class="math inline">\(z=t\)</span>. Verifique la descripción en las dos ecuaciones originales.</p></li>
+<li><p>Determine la solución que cumple <span class="math inline">\(y=0\)</span>.</p></li>
 </ol></li>
-<li><p>Sea</p>
+<li><p>Tres lotes de polvo cerámico, A, B y C, contienen <span class="math inline">\(20\,\%\)</span>, <span class="math inline">\(50\,\%\)</span> y <span class="math inline">\(80\,\%\)</span> en masa de un mismo componente. Se preparan <span class="math inline">\(600\)</span> g de mezcla con <span class="math inline">\(60\,\%\)</span> de ese componente, usando <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> gramos de los lotes A, B y C. Las masas se suman sin pérdidas y <span class="math inline">\(x,y,z\ge0\)</span>. La masa del componente en cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.</p>
+<p>Las ecuaciones y la forma reducida correspondiente son</p>
 <p><span class="math display">\[
-r(x)=x^4-2x^3+3x-5.
+x+y+z=600,\qquad 0.20x+0.50y+0.80z=360,
+\]</span></p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;-1&amp;-200\\0&amp;1&amp;2&amp;800\end{array}\right].
 \]</span></p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(r(-1)\)</span> por evaluación directa y justifique el signo de cada término.</p></li>
-<li><p>Calcule <span class="math inline">\(r(i)\)</span> usando las potencias de <span class="math inline">\(i\)</span> estudiadas en la <a href="../sesiones/2026-08-19-sesion-08.html">Sesión 08</a>.</p></li>
+<li><p>Describa las soluciones con <span class="math inline">\(z=t\)</span> y determine los valores de <span class="math inline">\(t\)</span> que producen mezclas admisibles.</p></li>
+<li><p>Determine la mezcla admisible que utiliza la menor masa del lote C. ¿Puede prepararse una mezcla sin ese lote?</p></li>
+<li><p>Si además se exige que la masa del lote B sea el doble de la del lote A, ¿cuántas mezclas cumplen todas las condiciones? Determine las masas y verifique su respuesta.</p></li>
 </ol></li>
+<li><p>Las siguientes matrices aumentadas están reducidas y corresponden a sistemas en <span class="math inline">\(x,y,z\)</span>:</p>
+<ol type="a">
+<li><p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;-2&amp;0&amp;3\\0&amp;0&amp;1&amp;-2\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p></li>
+<li><p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;4&amp;0&amp;0\\0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;1\end{array}\right].
+\]</span></p></li>
+</ol>
+<p>En cada caso, determine la consistencia y el rango de la matriz de coeficientes, y escriba el conjunto solución. Si el sistema es consistente, identifique la variable libre. Explique por qué la presencia de un renglón nulo no basta para justificar la clasificación del inciso a; compare con la matriz (i) de esta página.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -749,83 +738,152 @@ r(x)=x^4-2x^3+3x-5.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> En el primer inciso,</p>
+<p><strong>1. a.</strong> Las operaciones <span class="math inline">\(R_2\to R_2-2R_1\)</span> y después <span class="math inline">\(R_1\to R_1+R_2\)</span> producen</p>
 <p><span class="math display">\[
-\begin{aligned}
-s(x)
-&amp;=(x^2-4)-(x^2+x)+5x\\
-&amp;=4x-4.
-\end{aligned}
+\left[\begin{array}{ccc|c}1&amp;-1&amp;2&amp;1\\2&amp;-1&amp;5&amp;4\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&amp;-1&amp;2&amp;1\\0&amp;1&amp;1&amp;2\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&amp;0&amp;3&amp;3\\0&amp;1&amp;1&amp;2\end{array}\right].
 \]</span></p>
-<p>Por tanto, <span class="math inline">\(s(x)\)</span> tiene grado <span class="math inline">\(1\)</span>, coeficiente principal <span class="math inline">\(4\)</span> y término independiente <span class="math inline">\(-4\)</span>.</p>
-<p>Para el segundo inciso hay muchas respuestas posibles. Por ejemplo,</p>
+<p>El sistema es consistente. Las variables con pivote son <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>; <span class="math inline">\(z\)</span> es libre. El rango de la matriz de coeficientes es <span class="math inline">\(2\)</span>.</p>
+<p><strong>1. b.</strong> Con <span class="math inline">\(z=t\)</span>, las ecuaciones reducidas dan <span class="math inline">\(x=3-3t\)</span> y <span class="math inline">\(y=2-t\)</span>. Por tanto,</p>
 <p><span class="math display">\[
-p(x)=x^4+2x^3+x^2,
-\qquad
-q(x)=-x^4-2x^3+3x+1.
+S=\{(3-3t,\ 2-t,\ t):t\in\mathbb R\}.
 \]</span></p>
-<p>Ambos polinomios tienen grado <span class="math inline">\(4\)</span>, pero</p>
+<p>La verificación da <span class="math inline">\((3-3t)-(2-t)+2t=1\)</span> y <span class="math inline">\(2(3-3t)-(2-t)+5t=4\)</span> para todo <span class="math inline">\(t\)</span>.</p>
+<p><strong>1. c.</strong> La condición <span class="math inline">\(y=2-t=0\)</span> exige <span class="math inline">\(t=2\)</span>. La solución es <span class="math inline">\((-3,0,2)\)</span>; satisface <span class="math inline">\(-3-0+4=1\)</span> y <span class="math inline">\(-6-0+10=4\)</span>.</p>
+<p><strong>2. a.</strong> La matriz reducida representa <span class="math inline">\(x-z=-200\)</span> y <span class="math inline">\(y+2z=800\)</span>. Con <span class="math inline">\(z=t\)</span>:</p>
 <p><span class="math display">\[
-p(x)+q(x)=x^2+3x+1
+S=\{(t-200,\ 800-2t,\ t):t\in\mathbb R\}.
 \]</span></p>
-<p>tiene grado <span class="math inline">\(2\)</span>. Los coeficientes de <span class="math inline">\(x^4\)</span> y <span class="math inline">\(x^3\)</span> se cancelan, mientras que el coeficiente de <span class="math inline">\(x^2\)</span> permanece distinto de cero.</p>
-<p><strong>2.</strong> Al reunir términos semejantes,</p>
+<p>Las restricciones <span class="math inline">\(t-200\ge0\)</span>, <span class="math inline">\(800-2t\ge0\)</span> y <span class="math inline">\(t\ge0\)</span> se cumplen simultáneamente cuando <span class="math inline">\(200\le t\le400\)</span>. La parametrización satisface las ecuaciones originales: <span class="math inline">\((t-200)+(800-2t)+t=600\)</span> y <span class="math inline">\(0.20(t-200)+0.50(800-2t)+0.80t=360\)</span>.</p>
+<p><strong>2. b.</strong> La menor masa del lote C corresponde a <span class="math inline">\(t=200\)</span>: <span class="math inline">\(0\)</span> g del lote A, <span class="math inline">\(400\)</span> g del B y <span class="math inline">\(200\)</span> g del C. No puede prescindirse del lote C, porque <span class="math inline">\(t=0\)</span> está fuera del intervalo admisible y exigiría <span class="math inline">\(x=-200\)</span>.</p>
+<p><strong>2. c.</strong> La condición <span class="math inline">\(y=2x\)</span> exige <span class="math inline">\(800-2t=2(t-200)\)</span>, de donde <span class="math inline">\(t=300\)</span>. Hay una sola mezcla: <span class="math inline">\(100\)</span> g del lote A, <span class="math inline">\(200\)</span> g del B y <span class="math inline">\(300\)</span> g del C. Se verifica <span class="math inline">\(100+200+300=600\)</span>, <span class="math inline">\(0.20(100)+0.50(200)+0.80(300)=360\)</span> y <span class="math inline">\(200=2(100)\)</span>. Las masas son no negativas.</p>
+<p><strong>3. a.</strong> El sistema es consistente. Las variables con pivote son <span class="math inline">\(x\)</span> y <span class="math inline">\(z\)</span>; la variable libre es <span class="math inline">\(y\)</span>. El rango de la matriz de coeficientes es <span class="math inline">\(2\)</span>. Tomando <span class="math inline">\(y=t\)</span>:</p>
 <p><span class="math display">\[
-p(x)+q(x)=-x^2+x-1,
+S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
 \]</span></p>
-<p>de grado <span class="math inline">\(2\)</span>. Al cambiar el signo de todos los términos de <span class="math inline">\(q(x)\)</span>,</p>
-<p><span class="math display">\[
-p(x)-q(x)=6x^3-3x^2+x-9,
-\]</span></p>
-<p>de grado <span class="math inline">\(3\)</span>.</p>
-<p>El producto tiene grado <span class="math inline">\(3+3=6\)</span>, coeficiente principal <span class="math inline">\(3(-3)=-9\)</span> y término independiente <span class="math inline">\((-5)(4)=-20\)</span>. Para obtener un término de grado <span class="math inline">\(2\)</span>, los grados de los factores deben sumar <span class="math inline">\(2\)</span>. Por tanto, su coeficiente es</p>
-<p><span class="math display">\[
-(-2)(4)+(1)(0)+(-5)(1)=-13.
-\]</span></p>
-<p><strong>3.</strong> Por evaluación directa,</p>
-<p><span class="math display">\[
-r(-1)=(-1)^4-2(-1)^3+3(-1)-5=1+2-3-5=-5.
-\]</span></p>
-<p>Los signos se obtienen de <span class="math inline">\((-1)^4=1\)</span> y <span class="math inline">\((-1)^3=-1\)</span>. Finalmente, como <span class="math inline">\(i^4=1\)</span> e <span class="math inline">\(i^3=-i\)</span>,</p>
-<p><span class="math display">\[
-r(i)=i^4-2i^3+3i-5=1+2i+3i-5=-4+5i.
-\]</span></p>
+<p>Hay infinitas soluciones porque el sistema es consistente y tiene una variable libre. El renglón nulo no basta para justificarlo: la matriz (i) también tiene uno y su solución es única.</p>
+<p><strong>3. b.</strong> El tercer renglón representa <span class="math inline">\(0=1\)</span>, por lo que el sistema es inconsistente y <span class="math inline">\(S=\varnothing\)</span>. El rango de la matriz de coeficientes es <span class="math inline">\(2\)</span>; el pivote de la última columna pertenece a la matriz aumentada, no a la matriz de coeficientes.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Resuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.</p>
 <ol type="1">
-<li><p>Decida cuáles expresiones son polinomios. Para cada polinomio, escriba su forma ordenada e indique grado, coeficiente principal y término independiente:</p>
+<li><p>Describa por componentes el conjunto solución de <span class="math inline">\(2x+4y-2z=6\)</span>, <span class="math inline">\(3x+7y+z=4\)</span>, usando <span class="math inline">\(z=t\)</span>. Indique el rango de la matriz de coeficientes y verifique la descripción en las ecuaciones originales.</p></li>
+<li><p>Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se registran las masas de tres conjuntos, sin incluir recipientes. Considere exactos los datos:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Conjunto</th>
+<th style="text-align: right;">Placas A</th>
+<th style="text-align: right;">Placas B</th>
+<th style="text-align: right;">Placas C</th>
+<th style="text-align: right;">Masa total (g)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(120\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(150\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(270\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Denote por <span class="math inline">\(x,y,z&gt;0\)</span> las masas, en gramos, de una placa A, B y C, respectivamente. Plantee el sistema, resuélvalo por Gauss-Jordan y describa sus soluciones con <span class="math inline">\(z=t\)</span>. Determine el intervalo admisible de <span class="math inline">\(t\)</span>.</p></li>
+<li><p>Indique qué masas quedan determinadas y cuáles no. Explique por qué el tercer registro no aporta una condición adicional.</p></li>
+<li><p>Una nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de <span class="math inline">\(160\)</span> g. Determine las tres masas y compruebe los cuatro registros.</p></li>
+</ol></li>
+<li><p>Para preparar una disolución que se utilizará en el lavado de muestras de material, se dispone de tres disoluciones de la misma sal, con concentraciones de <span class="math inline">\(10\,\%\)</span>, <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(30\,\%\)</span> en masa. Se desea obtener <span class="math inline">\(300\)</span> g al <span class="math inline">\(22\,\%\)</span>, mezclando <span class="math inline">\(x,y,z\ge0\)</span> gramos de cada una, respectivamente. Las masas se suman sin pérdidas; la masa de sal de cada porción es su masa por la concentración expresada como fracción.</p>
+<ol type="a">
+<li><p>Plantee las dos ecuaciones, describa las soluciones con <span class="math inline">\(z=t\)</span> y determine los valores admisibles de <span class="math inline">\(t\)</span>.</p></li>
+<li><p>Obtenga la mezcla que no utiliza la disolución al <span class="math inline">\(10\,\%\)</span>.</p></li>
+<li><p>¿Puede prepararse la mezcla con masas iguales de las tres disoluciones? Justifique.</p></li>
+</ol></li>
+<li><p>La forma reducida de <span class="math inline">\(x+y+2z=3\)</span>, <span class="math inline">\(2x+3y+5z=7\)</span> es</p>
 <p><span class="math display">\[
-2x^3-7,
-\qquad
-\frac{1}{x^2}+1,
-\qquad
-x^2(x-1),
-\qquad
-\sqrt3\,x^2-\sqrt{2x},
-\qquad
-(x-3)^2-(x+3)^2,
-\qquad
-\pi.
-\]</span></p></li>
-<li><p>Sean <span class="math inline">\(p(x)=x^2-2x+3\)</span> y <span class="math inline">\(q(x)=2x^2+x-1\)</span>. Calcule <span class="math inline">\(p(x)+q(x)\)</span>, <span class="math inline">\(p(x)-q(x)\)</span> y <span class="math inline">\(p(x)q(x)\)</span>; indique el grado de cada resultado y verifique el producto evaluando en <span class="math inline">\(x=1\)</span>.</p></li>
-<li><p>Proponga dos polinomios de grado <span class="math inline">\(3\)</span> cuya suma tenga grado <span class="math inline">\(1\)</span>. Explique por qué el producto de dos polinomios de grado <span class="math inline">\(3\)</span> con coeficientes reales siempre tiene grado <span class="math inline">\(6\)</span>.</p></li>
-<li><p>Sea <span class="math inline">\(p(x)=3x^4-5x^2+2x-8\)</span>. Calcule <span class="math inline">\(p(2)\)</span>, <span class="math inline">\(p(-3)\)</span> y <span class="math inline">\(p(0.5)\)</span> por evaluación directa.</p></li>
-<li><p>Un sensor entrega un voltaje <span class="math inline">\(V\)</span>, en voltios, y la temperatura estimada, en grados Celsius, está dada por</p>
-<p><span class="math display">\[
-T(V)=2V^3-5V^2+20V+15,
-\qquad 0\le V\le3.
+\left[\begin{array}{ccc|c}1&amp;0&amp;1&amp;2\\0&amp;1&amp;1&amp;1\end{array}\right].
 \]</span></p>
-<p>Calcule <span class="math inline">\(T(1.5)\)</span> y <span class="math inline">\(T(2.5)\)</span> por evaluación directa.</p></li>
-<li><p>Para evaluar <span class="math inline">\(p(x)=x^4-3x^2+2\)</span> en <span class="math inline">\(x=-2\)</span>, se escribió</p>
-<p><span class="math display">\[
-p(-2)=-2^4-3(-2)^2+2=-26.
-\]</span></p>
-<p>Identifique el error y calcule el valor correcto.</p></li>
+<p>Un estudiante escribió <span class="math inline">\(S=\{(2+t,\ 1+t,\ t):t\in\mathbb R\}\)</span> y lo comprobó solamente con <span class="math inline">\(t=0\)</span>. Sustituya la terna correspondiente a <span class="math inline">\(t=1\)</span> en las ecuaciones originales, localice el error, corrija la descripción y explique por qué la comprobación con <span class="math inline">\(t=0\)</span> no lo detectó.</p></li>
+<li><p>Considere el sistema <span class="math inline">\(3x+2y=6\)</span>, <span class="math inline">\(6x+4y=12\)</span>.</p>
+<ol type="a">
+<li><p>Obtenga su forma reducida, identifique la variable libre y describa el conjunto solución con <span class="math inline">\(y=t\)</span>. Indique el rango de la matriz de coeficientes.</p></li>
+<li><p>Otra descripción es <span class="math inline">\(\{(u,\ 3-\frac32u):u\in\mathbb R\}\)</span>. Determine la relación entre <span class="math inline">\(u\)</span> y <span class="math inline">\(t\)</span> y decida si ambas descripciones representan el mismo conjunto. Indique los valores de ambos parámetros para la pareja <span class="math inline">\((4,-3)\)</span>.</p></li>
+</ol></li>
+<li><p>Se busca un polinomio <span class="math inline">\(p(x)=ax^2+bx+c\)</span> cuya gráfica pase por <span class="math inline">\((1,4)\)</span> y <span class="math inline">\((-1,0)\)</span>.</p>
+<ol type="a">
+<li><p>Plantee el sistema en las incógnitas <span class="math inline">\(a,b,c\)</span> y describa sus soluciones con <span class="math inline">\(c=t\)</span>.</p></li>
+<li><p>¿Para qué valor de <span class="math inline">\(t\)</span> el polinomio obtenido no tiene grado <span class="math inline">\(2\)</span>? ¿Qué polinomio resulta?</p></li>
+<li><p>Determine el polinomio que además pasa por <span class="math inline">\((0,1)\)</span>, factorícelo e identifique su raíz doble.</p></li>
+</ol></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> <span class="math inline">\(S=\{(13+9t,\ -5-4t,\ t):t\in\mathbb R\}\)</span>; rango <span class="math inline">\(2\)</span>. Los lados izquierdos originales valen <span class="math inline">\(6\)</span> y <span class="math inline">\(4\)</span>, respectivamente, para todo <span class="math inline">\(t\)</span>.</p>
+<p><strong>2. a.</strong> Sistema: <span class="math inline">\(x+y+z=120\)</span>, <span class="math inline">\(2x+y+z=150\)</span>, <span class="math inline">\(3x+2y+2z=270\)</span>. Forma reducida:</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;0&amp;0&amp;30\\0&amp;1&amp;1&amp;90\\0&amp;0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p><span class="math inline">\(S=\{(30,\ 90-t,\ t):t\in\mathbb R\}\)</span>. Intervalo admisible: <span class="math inline">\(0&lt;t&lt;90\)</span>.</p>
+<p><strong>2. b.</strong> Queda determinada la masa de una placa A: <span class="math inline">\(30\)</span> g. Las masas de B y C no quedan determinadas individualmente; su suma es <span class="math inline">\(90\)</span> g. El tercer registro es la suma de los dos primeros, tanto en las cantidades de placas como en la masa total.</p>
+<p><strong>2. c.</strong> Las masas son <span class="math inline">\(30\)</span> g, <span class="math inline">\(40\)</span> g y <span class="math inline">\(50\)</span> g, respectivamente. Las masas totales de los cuatro conjuntos son <span class="math inline">\(120\)</span>, <span class="math inline">\(150\)</span>, <span class="math inline">\(270\)</span> y <span class="math inline">\(160\)</span> g.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(x+y+z=300\)</span>, <span class="math inline">\(0.10x+0.20y+0.30z=66\)</span>. <span class="math inline">\(S=\{(t-60,\ 360-2t,\ t):t\in\mathbb R\}\)</span>. Valores admisibles: <span class="math inline">\(60\le t\le180\)</span>.</p>
+<p><strong>3. b.</strong> <span class="math inline">\(0\)</span> g al <span class="math inline">\(10\,\%\)</span>, <span class="math inline">\(240\)</span> g al <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\)</span> g al <span class="math inline">\(30\,\%\)</span>.</p>
+<p><strong>3. c.</strong> No.&nbsp;Con <span class="math inline">\(100\)</span> g de cada disolución, la mezcla contiene <span class="math inline">\(60\)</span> g de sal y su concentración es <span class="math inline">\(20\,\%\)</span>, en lugar de <span class="math inline">\(22\,\%\)</span>.</p>
+<p><strong>4.</strong> Con <span class="math inline">\(t=1\)</span>, la terna propuesta es <span class="math inline">\((3,2,1)\)</span>; los lados izquierdos valen <span class="math inline">\(7\)</span> y <span class="math inline">\(17\)</span>, en lugar de <span class="math inline">\(3\)</span> y <span class="math inline">\(7\)</span>. Hay un error de signo al despejar. La descripción correcta es <span class="math inline">\(S=\{(2-t,\ 1-t,\ t):t\in\mathbb R\}\)</span>. Con <span class="math inline">\(t=0\)</span>, ambas descripciones producen <span class="math inline">\((2,1,0)\)</span> y el error no se manifiesta.</p>
+<p><strong>5. a.</strong> Forma reducida:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;\frac23&amp;2\\0&amp;0&amp;0\end{array}\right].
+\]</span></p>
+<p>La variable libre es <span class="math inline">\(y\)</span>; el rango es <span class="math inline">\(1\)</span>. <span class="math inline">\(S=\{(2-\frac23t,\ t):t\in\mathbb R\}\)</span>.</p>
+<p><strong>5. b.</strong> <span class="math inline">\(u=2-\frac23t\)</span> y <span class="math inline">\(t=3-\frac32u\)</span>; ambas descripciones representan el mismo conjunto. Para <span class="math inline">\((4,-3)\)</span>, los valores son <span class="math inline">\(u=4\)</span> y <span class="math inline">\(t=-3\)</span>.</p>
+<p><strong>6. a.</strong> <span class="math inline">\(a+b+c=4\)</span>, <span class="math inline">\(a-b+c=0\)</span>. <span class="math inline">\(a=2-t\)</span>, <span class="math inline">\(b=2\)</span>, <span class="math inline">\(c=t\)</span>, con <span class="math inline">\(t\in\mathbb R\)</span>.</p>
+<p><strong>6. b.</strong> <span class="math inline">\(t=2\)</span>: <span class="math inline">\(p(x)=2x+2\)</span>, de grado <span class="math inline">\(1\)</span>.</p>
+<p><strong>6. c.</strong> <span class="math inline">\(t=1\)</span>: <span class="math inline">\(p(x)=x^2+2x+1=(x+1)^2\)</span>; su raíz doble es <span class="math inline">\(-1\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El trabajo realizado permite comprobar si puede:</p>
+<ul>
+<li>Revisar la consistencia e identificar las variables con pivote y la variable libre, incluso cuando esta no ocupa la última columna de coeficientes.</li>
+<li>Describir todas las soluciones por componentes mediante un parámetro y verificar la descripción en las ecuaciones originales.</li>
+<li>Explicar, mediante los casos comparados, por qué un renglón nulo no determina por sí solo el número de soluciones.</li>
+<li>Distinguir las soluciones de un sistema de las que satisfacen las restricciones de masa de un problema, y determinar cómo una condición adicional puede seleccionar una sola solución.</li>
+</ul>
 
 
 </section>
@@ -1240,13 +1298,13 @@ p(-2)=-2^4-3(-2)^2+2=-26.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../unidades/02-polinomios-raices.html" class="pagination-link" aria-label="Unidad 2. Polinomios y raíces">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></span>
+      <a href="../sesiones/2026-10-06-sesion-32.html" class="pagination-link" aria-label="Sesión 32. Método de Gauss-Jordan y forma escalonada reducida">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sesiones/2026-09-02-sesion-16.html" class="pagination-link" aria-label="Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante">
-        <span class="nav-page-text"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../unidades/04-matrices.html" class="pagination-link" aria-label="Unidad 4. Matrices">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 4. Matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -3097,6 +3097,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-10-07-sesion-33.html",
+    "href": "sesiones/2026-10-07-sesion-33.html",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá describir por componentes, mediante un parámetro, el conjunto solución de un sistema consistente con una sola variable libre y verificarlo en las ecuaciones originales. Podrá comprobarlo al resolver el ejercicio 1 de la Actividad, interpretar las restricciones del ejercicio 2 y justificar por qué un renglón nulo no determina por sí solo el número de soluciones.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#variables-con-pivote-y-variables-libres",
+    "href": "sesiones/2026-10-07-sesion-33.html#variables-con-pivote-y-variables-libres",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Variables con pivote y variables libres",
+    "text": "Variables con pivote y variables libres\nSe consideran sistemas con coeficientes e incógnitas reales. En la Sesión 32 se interpretó la matriz reducida\n\\[\n\\left[\\begin{array}{ccc|c}1&0&2&1\\\\0&1&-1&3\\\\0&0&0&0\\end{array}\\right].\n\\]\nSus ecuaciones son \\(x+2z=1\\), \\(y-z=3\\) y \\(0=0\\). Para cada valor real de \\(z\\), las dos primeras ecuaciones determinan \\(x\\) y \\(y\\).\nEn la forma escalonada reducida de la matriz aumentada de un sistema consistente, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman variables con pivote. Las demás son variables libres. En este ejemplo, \\(x\\) y \\(y\\) tienen pivote y \\(z\\) es libre.\nLa consistencia se revisa primero. Si aparece un renglón \\([\\,0\\ \\cdots\\ 0\\mid c\\,]\\) con \\(c\\ne0\\), el sistema no tiene solución: ninguna elección de valores para las incógnitas puede satisfacer \\(0=c\\).\nEl rango de una matriz es el número de pivotes de una forma escalonada; ese número no depende de las operaciones elementales elegidas. En el ejemplo, la matriz de coeficientes tiene rango \\(2\\). Como el sistema es consistente y tiene tres incógnitas, hay dos variables con pivote y una libre. La columna de términos independientes no se cuenta entre las columnas de coeficientes.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#descripción-paramétrica-del-conjunto-solución",
+    "href": "sesiones/2026-10-07-sesion-33.html#descripción-paramétrica-del-conjunto-solución",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Descripción paramétrica del conjunto solución",
+    "text": "Descripción paramétrica del conjunto solución\nUn parámetro representa un número real arbitrario. Para la matriz anterior, se escribe \\(z=t\\), con \\(t\\in\\mathbb R\\). Las ecuaciones reducidas dan\n\\[\nx=1-2t,\\qquad y=3+t,\\qquad z=t.\n\\]\nEstas son las ecuaciones paramétricas del conjunto solución. Por componentes, el mismo conjunto se escribe\n\\[\nS=\\{(1-2t,\\ 3+t,\\ t):t\\in\\mathbb R\\}.\n\\]\nCon \\(t=0\\) se obtiene \\((1,3,0)\\); con \\(t=1\\), \\((-1,4,1)\\). Son dos soluciones particulares. Cada valor de \\(t\\) produce una terna distinta, porque su tercera componente es \\(t\\); por tanto, el sistema tiene infinitas soluciones.\n\nProcedimiento\n\nObtenga la forma escalonada reducida mediante Gauss-Jordan. Si aparece una contradicción, concluya \\(S=\\varnothing\\); para esa conclusión no necesita terminar la reducción.\nSi el sistema es consistente, identifique las columnas de coeficientes con pivote y sin pivote.\nAsigne un parámetro a la variable libre. Despeje las variables con pivote en función de ese parámetro.\nEscriba las ecuaciones paramétricas y el conjunto solución, indicando que el parámetro recorre \\(\\mathbb R\\).\nSustituya las expresiones en las ecuaciones originales y compruebe que las igualdades se cumplen para todo valor del parámetro.\n\nSi el problema impone restricciones adicionales, como masas no negativas, determine después cuáles soluciones del sistema las satisfacen. Esas restricciones pueden limitar los valores admisibles del parámetro.\n\n\nPor qué se obtienen todas las soluciones\nLa justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que cada terna descrita es solución. Comprobar solamente uno o dos valores del parámetro no sustituye esta verificación.\nRecíprocamente, toda solución del sistema original satisface el sistema reducido, porque las operaciones elementales conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, ninguna solución queda fuera de la descripción.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#un-renglón-nulo-no-determina-el-número-de-soluciones",
+    "href": "sesiones/2026-10-07-sesion-33.html#un-renglón-nulo-no-determina-el-número-de-soluciones",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Un renglón nulo no determina el número de soluciones",
+    "text": "Un renglón nulo no determina el número de soluciones\nUn renglón \\([\\,0\\ \\cdots\\ 0\\mid0\\,]\\) representa \\(0=0\\) y no impone una condición adicional. Las siguientes matrices están reducidas y contienen un renglón nulo:\n(i) Sistema en \\(x,y\\): solución única.\n\\[\n\\left[\\begin{array}{cc|c}1&0&2\\\\0&1&-1\\\\0&0&0\\end{array}\\right].\n\\]\nNo hay contradicción y ambas columnas de coeficientes tienen pivote. La única solución es \\((2,-1)\\).\n(ii) Sistema en \\(x,y,z\\): infinitas soluciones.\n\\[\n\\left[\\begin{array}{ccc|c}1&0&2&1\\\\0&1&-1&3\\\\0&0&0&0\\end{array}\\right].\n\\]\nNo hay contradicción y \\(z\\) es libre. Su conjunto solución es \\(S=\\{(1-2t,\\ 3+t,\\ t):t\\in\\mathbb R\\}\\).\n(iii) Sistema en \\(x,y\\): ninguna solución.\n\\[\n\\left[\\begin{array}{cc|c}1&2&0\\\\0&0&1\\\\0&0&0\\end{array}\\right].\n\\]\nEl segundo renglón representa \\(0=1\\). El sistema es inconsistente, aunque también tenga un renglón nulo y una columna de coeficientes sin pivote.\nEl número de soluciones depende de la consistencia y de los pivotes en las columnas de coeficientes. Un renglón nulo, considerado aisladamente, no permite decidirlo.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#ejemplos",
+    "href": "sesiones/2026-10-07-sesion-33.html#ejemplos",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Un sistema de dos ecuaciones con tres incógnitas\nDescriba el conjunto solución de\n\\[\n\\left\\{\\begin{aligned}x+2y-z&=4\\\\2x+5y+z&=9.\\end{aligned}\\right.\n\\]\nCon \\(R_2\\to R_2-2R_1\\) se obtiene la forma escalonada:\n\\[\n\\left[\\begin{array}{ccc|c}1&2&-1&4\\\\2&5&1&9\\end{array}\\right]\n\\longrightarrow\n\\left[\\begin{array}{ccc|c}1&2&-1&4\\\\0&1&3&1\\end{array}\\right].\n\\]\nDespués, \\(R_1\\to R_1-2R_2\\) completa la reducción:\n\\[\n\\left[\\begin{array}{ccc|c}1&0&-7&2\\\\0&1&3&1\\end{array}\\right].\n\\]\nEl sistema es consistente. Las variables con pivote son \\(x\\) y \\(y\\); la variable libre es \\(z\\). La matriz de coeficientes tiene rango \\(2\\).\nLas ecuaciones reducidas son \\(x-7z=2\\) y \\(y+3z=1\\). Con \\(z=t\\):\n\\[\nx=2+7t,\\qquad y=1-3t,\\qquad z=t,\\qquad t\\in\\mathbb R.\n\\]\nPor tanto,\n\\[\nS=\\{(2+7t,\\ 1-3t,\\ t):t\\in\\mathbb R\\}.\n\\]\nVerificación en las ecuaciones originales:\n\\[\n\\begin{aligned}\n(2+7t)+2(1-3t)-t&=4,\\\\\n2(2+7t)+5(1-3t)+t&=9.\n\\end{aligned}\n\\]\nAmbas igualdades se cumplen para todo \\(t\\). Con \\(t=0\\) se obtiene \\((2,1,0)\\); con \\(t=1\\), \\((9,-2,1)\\). Ninguna de estas ternas, por sí sola, representa el conjunto completo.\n\n\nEjemplo 2. Restricciones de masa en una mezcla\nTres lotes de polvo metálico, A, B y C, contienen \\(60\\,\\%\\), \\(70\\,\\%\\) y \\(90\\,\\%\\) de cobre en masa. Se quieren preparar \\(500\\) g de mezcla con \\(72\\,\\%\\) de cobre usando \\(x\\), \\(y\\) y \\(z\\) gramos de los lotes A, B y C, respectivamente. Las masas se suman sin pérdidas; la masa de cobre de cada porción es su masa multiplicada por el porcentaje expresado como fracción. Se exige \\(x,y,z\\ge0\\).\nLas ecuaciones de masa total y masa de cobre son\n\\[\nx+y+z=500,\\qquad 0.60x+0.70y+0.90z=360.\n\\]\nLa forma reducida de la matriz aumentada es\n\\[\n\\left[\\begin{array}{ccc|c}1&0&-2&-100\\\\0&1&3&600\\end{array}\\right].\n\\]\nCon \\(z=t\\), las soluciones del sistema son \\(x=-100+2t\\), \\(y=600-3t\\) y \\(z=t\\), para \\(t\\in\\mathbb R\\). La sustitución da una masa total de \\(500\\) g y una masa de cobre de\n\\[\n0.60(-100+2t)+0.70(600-3t)+0.90t=360\n\\]\npara todo \\(t\\). Sin embargo, una mezcla exige además masas no negativas:\n\n\n\nCondición de masa\nRestricción sobre \\(t\\)\n\n\n\n\n\\(x=-100+2t\\ge0\\)\n\\(t\\ge50\\)\n\n\n\\(y=600-3t\\ge0\\)\n\\(t\\le200\\)\n\n\n\\(z=t\\ge0\\)\n\\(t\\ge0\\)\n\n\n\nLas tres condiciones se cumplen simultáneamente si y solo si \\(50\\le t\\le200\\). Así, las mezclas admisibles están descritas por\n\\[\n\\{(-100+2t,\\ 600-3t,\\ t):50\\le t\\le200\\}.\n\\]\nPor ejemplo, \\(t=100\\) da \\(100\\) g del lote A, \\(300\\) g del B y \\(100\\) g del C. En cambio, \\(t=0\\) satisface las ecuaciones, pero exige \\(-100\\) g del lote A y no representa una mezcla admisible.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#errores-frecuentes",
+    "href": "sesiones/2026-10-07-sesion-33.html#errores-frecuentes",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nConcluir que hay infinitas soluciones sin revisar la consistencia. La matriz (iii) tiene una columna de coeficientes sin pivote, pero el renglón \\(0=1\\) impide cualquier solución.\nAtribuir el número de soluciones al renglón nulo. La matriz (i) tiene un renglón nulo y solución única. Deben revisarse también la consistencia y las columnas con pivote.\nConfundir una solución particular con el conjunto solución. En el Ejemplo 1, \\((2,1,0)\\) corresponde a \\(t=0\\); también hay soluciones con otros valores de \\(t\\), como \\((9,-2,1)\\).\nCambiar incorrectamente el signo al despejar. De \\(x-7z=2\\) y \\(z=t\\) se obtiene \\(x=2+7t\\). La expresión \\(x=2-7t\\) no satisface la ecuación para todo \\(t\\).\nOmitir las restricciones del problema. En el Ejemplo 2, el sistema admite cualquier \\(t\\in\\mathbb R\\), pero las mezclas admisibles exigen \\(50\\le t\\le200\\).",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#actividad",
+    "href": "sesiones/2026-10-07-sesion-33.html#actividad",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Revise la consistencia antes de describir las soluciones y compruebe cada parametrización en las ecuaciones originales.\n\nConsidere el sistema\n\\[\n\\left\\{\\begin{aligned}x-y+2z&=1\\\\2x-y+5z&=4.\\end{aligned}\\right.\n\\]\n\nObtenga la forma escalonada reducida de su matriz aumentada y registre las operaciones. Identifique las variables con pivote, la variable libre y el rango de la matriz de coeficientes.\nEscriba las ecuaciones paramétricas y el conjunto solución, con \\(z=t\\). Verifique la descripción en las dos ecuaciones originales.\nDetermine la solución que cumple \\(y=0\\).\n\nTres lotes de polvo cerámico, A, B y C, contienen \\(20\\,\\%\\), \\(50\\,\\%\\) y \\(80\\,\\%\\) en masa de un mismo componente. Se preparan \\(600\\) g de mezcla con \\(60\\,\\%\\) de ese componente, usando \\(x\\), \\(y\\) y \\(z\\) gramos de los lotes A, B y C. Las masas se suman sin pérdidas y \\(x,y,z\\ge0\\). La masa del componente en cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.\nLas ecuaciones y la forma reducida correspondiente son\n\\[\nx+y+z=600,\\qquad 0.20x+0.50y+0.80z=360,\n\\]\n\\[\n\\left[\\begin{array}{ccc|c}1&0&-1&-200\\\\0&1&2&800\\end{array}\\right].\n\\]\n\nDescriba las soluciones con \\(z=t\\) y determine los valores de \\(t\\) que producen mezclas admisibles.\nDetermine la mezcla admisible que utiliza la menor masa del lote C. ¿Puede prepararse una mezcla sin ese lote?\nSi además se exige que la masa del lote B sea el doble de la del lote A, ¿cuántas mezclas cumplen todas las condiciones? Determine las masas y verifique su respuesta.\n\nLas siguientes matrices aumentadas están reducidas y corresponden a sistemas en \\(x,y,z\\):\n\n\\[\n\\left[\\begin{array}{ccc|c}1&-2&0&3\\\\0&0&1&-2\\\\0&0&0&0\\end{array}\\right].\n\\]\n\\[\n\\left[\\begin{array}{ccc|c}1&4&0&0\\\\0&0&1&0\\\\0&0&0&1\\end{array}\\right].\n\\]\n\nEn cada caso, determine la consistencia y el rango de la matriz de coeficientes, y escriba el conjunto solución. Si el sistema es consistente, identifique la variable libre. Explique por qué la presencia de un renglón nulo no basta para justificar la clasificación del inciso a; compare con la matriz (i) de esta página.\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. Las operaciones \\(R_2\\to R_2-2R_1\\) y después \\(R_1\\to R_1+R_2\\) producen\n\\[\n\\left[\\begin{array}{ccc|c}1&-1&2&1\\\\2&-1&5&4\\end{array}\\right]\n\\longrightarrow\n\\left[\\begin{array}{ccc|c}1&-1&2&1\\\\0&1&1&2\\end{array}\\right]\n\\longrightarrow\n\\left[\\begin{array}{ccc|c}1&0&3&3\\\\0&1&1&2\\end{array}\\right].\n\\]\nEl sistema es consistente. Las variables con pivote son \\(x\\) y \\(y\\); \\(z\\) es libre. El rango de la matriz de coeficientes es \\(2\\).\n1. b. Con \\(z=t\\), las ecuaciones reducidas dan \\(x=3-3t\\) y \\(y=2-t\\). Por tanto,\n\\[\nS=\\{(3-3t,\\ 2-t,\\ t):t\\in\\mathbb R\\}.\n\\]\nLa verificación da \\((3-3t)-(2-t)+2t=1\\) y \\(2(3-3t)-(2-t)+5t=4\\) para todo \\(t\\).\n1. c. La condición \\(y=2-t=0\\) exige \\(t=2\\). La solución es \\((-3,0,2)\\); satisface \\(-3-0+4=1\\) y \\(-6-0+10=4\\).\n2. a. La matriz reducida representa \\(x-z=-200\\) y \\(y+2z=800\\). Con \\(z=t\\):\n\\[\nS=\\{(t-200,\\ 800-2t,\\ t):t\\in\\mathbb R\\}.\n\\]\nLas restricciones \\(t-200\\ge0\\), \\(800-2t\\ge0\\) y \\(t\\ge0\\) se cumplen simultáneamente cuando \\(200\\le t\\le400\\). La parametrización satisface las ecuaciones originales: \\((t-200)+(800-2t)+t=600\\) y \\(0.20(t-200)+0.50(800-2t)+0.80t=360\\).\n2. b. La menor masa del lote C corresponde a \\(t=200\\): \\(0\\) g del lote A, \\(400\\) g del B y \\(200\\) g del C. No puede prescindirse del lote C, porque \\(t=0\\) está fuera del intervalo admisible y exigiría \\(x=-200\\).\n2. c. La condición \\(y=2x\\) exige \\(800-2t=2(t-200)\\), de donde \\(t=300\\). Hay una sola mezcla: \\(100\\) g del lote A, \\(200\\) g del B y \\(300\\) g del C. Se verifica \\(100+200+300=600\\), \\(0.20(100)+0.50(200)+0.80(300)=360\\) y \\(200=2(100)\\). Las masas son no negativas.\n3. a. El sistema es consistente. Las variables con pivote son \\(x\\) y \\(z\\); la variable libre es \\(y\\). El rango de la matriz de coeficientes es \\(2\\). Tomando \\(y=t\\):\n\\[\nS=\\{(3+2t,\\ t,\\ -2):t\\in\\mathbb R\\}.\n\\]\nHay infinitas soluciones porque el sistema es consistente y tiene una variable libre. El renglón nulo no basta para justificarlo: la matriz (i) también tiene uno y su solución es única.\n3. b. El tercer renglón representa \\(0=1\\), por lo que el sistema es inconsistente y \\(S=\\varnothing\\). El rango de la matriz de coeficientes es \\(2\\); el pivote de la última columna pertenece a la matriz aumentada, no a la matriz de coeficientes.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-10-07-sesion-33.html#ejercicios-para-practicar",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nResuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.\n\nDescriba por componentes el conjunto solución de \\(2x+4y-2z=6\\), \\(3x+7y+z=4\\), usando \\(z=t\\). Indique el rango de la matriz de coeficientes y verifique la descripción en las ecuaciones originales.\nSe desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se registran las masas de tres conjuntos, sin incluir recipientes. Considere exactos los datos:\n\n\n\nConjunto\nPlacas A\nPlacas B\nPlacas C\nMasa total (g)\n\n\n\n\n1\n\\(1\\)\n\\(1\\)\n\\(1\\)\n\\(120\\)\n\n\n2\n\\(2\\)\n\\(1\\)\n\\(1\\)\n\\(150\\)\n\n\n3\n\\(3\\)\n\\(2\\)\n\\(2\\)\n\\(270\\)\n\n\n\n\nDenote por \\(x,y,z&gt;0\\) las masas, en gramos, de una placa A, B y C, respectivamente. Plantee el sistema, resuélvalo por Gauss-Jordan y describa sus soluciones con \\(z=t\\). Determine el intervalo admisible de \\(t\\).\nIndique qué masas quedan determinadas y cuáles no. Explique por qué el tercer registro no aporta una condición adicional.\nUna nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de \\(160\\) g. Determine las tres masas y compruebe los cuatro registros.\n\nPara preparar una disolución que se utilizará en el lavado de muestras de material, se dispone de tres disoluciones de la misma sal, con concentraciones de \\(10\\,\\%\\), \\(20\\,\\%\\) y \\(30\\,\\%\\) en masa. Se desea obtener \\(300\\) g al \\(22\\,\\%\\), mezclando \\(x,y,z\\ge0\\) gramos de cada una, respectivamente. Las masas se suman sin pérdidas; la masa de sal de cada porción es su masa por la concentración expresada como fracción.\n\nPlantee las dos ecuaciones, describa las soluciones con \\(z=t\\) y determine los valores admisibles de \\(t\\).\nObtenga la mezcla que no utiliza la disolución al \\(10\\,\\%\\).\n¿Puede prepararse la mezcla con masas iguales de las tres disoluciones? Justifique.\n\nLa forma reducida de \\(x+y+2z=3\\), \\(2x+3y+5z=7\\) es\n\\[\n\\left[\\begin{array}{ccc|c}1&0&1&2\\\\0&1&1&1\\end{array}\\right].\n\\]\nUn estudiante escribió \\(S=\\{(2+t,\\ 1+t,\\ t):t\\in\\mathbb R\\}\\) y lo comprobó solamente con \\(t=0\\). Sustituya la terna correspondiente a \\(t=1\\) en las ecuaciones originales, localice el error, corrija la descripción y explique por qué la comprobación con \\(t=0\\) no lo detectó.\nConsidere el sistema \\(3x+2y=6\\), \\(6x+4y=12\\).\n\nObtenga su forma reducida, identifique la variable libre y describa el conjunto solución con \\(y=t\\). Indique el rango de la matriz de coeficientes.\nOtra descripción es \\(\\{(u,\\ 3-\\frac32u):u\\in\\mathbb R\\}\\). Determine la relación entre \\(u\\) y \\(t\\) y decida si ambas descripciones representan el mismo conjunto. Indique los valores de ambos parámetros para la pareja \\((4,-3)\\).\n\nSe busca un polinomio \\(p(x)=ax^2+bx+c\\) cuya gráfica pase por \\((1,4)\\) y \\((-1,0)\\).\n\nPlantee el sistema en las incógnitas \\(a,b,c\\) y describa sus soluciones con \\(c=t\\).\n¿Para qué valor de \\(t\\) el polinomio obtenido no tiene grado \\(2\\)? ¿Qué polinomio resulta?\nDetermine el polinomio que además pasa por \\((0,1)\\), factorícelo e identifique su raíz doble.\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. \\(S=\\{(13+9t,\\ -5-4t,\\ t):t\\in\\mathbb R\\}\\); rango \\(2\\). Los lados izquierdos originales valen \\(6\\) y \\(4\\), respectivamente, para todo \\(t\\).\n2. a. Sistema: \\(x+y+z=120\\), \\(2x+y+z=150\\), \\(3x+2y+2z=270\\). Forma reducida:\n\\[\n\\left[\\begin{array}{ccc|c}1&0&0&30\\\\0&1&1&90\\\\0&0&0&0\\end{array}\\right].\n\\]\n\\(S=\\{(30,\\ 90-t,\\ t):t\\in\\mathbb R\\}\\). Intervalo admisible: \\(0&lt;t&lt;90\\).\n2. b. Queda determinada la masa de una placa A: \\(30\\) g. Las masas de B y C no quedan determinadas individualmente; su suma es \\(90\\) g. El tercer registro es la suma de los dos primeros, tanto en las cantidades de placas como en la masa total.\n2. c. Las masas son \\(30\\) g, \\(40\\) g y \\(50\\) g, respectivamente. Las masas totales de los cuatro conjuntos son \\(120\\), \\(150\\), \\(270\\) y \\(160\\) g.\n3. a. \\(x+y+z=300\\), \\(0.10x+0.20y+0.30z=66\\). \\(S=\\{(t-60,\\ 360-2t,\\ t):t\\in\\mathbb R\\}\\). Valores admisibles: \\(60\\le t\\le180\\).\n3. b. \\(0\\) g al \\(10\\,\\%\\), \\(240\\) g al \\(20\\,\\%\\) y \\(60\\) g al \\(30\\,\\%\\).\n3. c. No. Con \\(100\\) g de cada disolución, la mezcla contiene \\(60\\) g de sal y su concentración es \\(20\\,\\%\\), en lugar de \\(22\\,\\%\\).\n4. Con \\(t=1\\), la terna propuesta es \\((3,2,1)\\); los lados izquierdos valen \\(7\\) y \\(17\\), en lugar de \\(3\\) y \\(7\\). Hay un error de signo al despejar. La descripción correcta es \\(S=\\{(2-t,\\ 1-t,\\ t):t\\in\\mathbb R\\}\\). Con \\(t=0\\), ambas descripciones producen \\((2,1,0)\\) y el error no se manifiesta.\n5. a. Forma reducida:\n\\[\n\\left[\\begin{array}{cc|c}1&\\frac23&2\\\\0&0&0\\end{array}\\right].\n\\]\nLa variable libre es \\(y\\); el rango es \\(1\\). \\(S=\\{(2-\\frac23t,\\ t):t\\in\\mathbb R\\}\\).\n5. b. \\(u=2-\\frac23t\\) y \\(t=3-\\frac32u\\); ambas descripciones representan el mismo conjunto. Para \\((4,-3)\\), los valores son \\(u=4\\) y \\(t=-3\\).\n6. a. \\(a+b+c=4\\), \\(a-b+c=0\\). \\(a=2-t\\), \\(b=2\\), \\(c=t\\), con \\(t\\in\\mathbb R\\).\n6. b. \\(t=2\\): \\(p(x)=2x+2\\), de grado \\(1\\).\n6. c. \\(t=1\\): \\(p(x)=x^2+2x+1=(x+1)^2\\); su raíz doble es \\(-1\\).",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-07-sesion-33.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-10-07-sesion-33.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 33. Variables libres y descripción paramétrica del conjunto solución",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nEl trabajo realizado permite comprobar si puede:\n\nRevisar la consistencia e identificar las variables con pivote y la variable libre, incluso cuando esta no ocupa la última columna de coeficientes.\nDescribir todas las soluciones por componentes mediante un parámetro y verificar la descripción en las ecuaciones originales.\nExplicar, mediante los casos comparados, por qué un renglón nulo no determina por sí solo el número de soluciones.\nDistinguir las soluciones de un sistema de las que satisfacen las restricciones de masa de un problema, y determinar cómo una condición adicional puede seleccionar una sola solución.",
+    "crumbs": [
+      "Unidad 3. Sistemas de ecuaciones lineales",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span>"
+    ]
+  },
+  {
     "objectID": "unidades/04-matrices.html",
     "href": "unidades/04-matrices.html",
     "title": "Unidad 4. Matrices",
@@ -3104,7 +3203,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -3115,7 +3214,7 @@
     "text": "Operaciones con matrices y sus propiedades.\nRepresentación matricial de un sistema de ecuaciones lineales.\nMatriz inversa en la resolución de sistemas.\nDeterminantes y regla de Cramer.",
     "crumbs": [
       "Unidad 4. Matrices",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Unidad 4. Matrices</span>"
     ]
   },
   {
@@ -3126,7 +3225,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3137,7 +3236,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3148,7 +3247,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -3159,7 +3258,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -3170,7 +3269,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3181,7 +3280,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3192,7 +3291,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3203,7 +3302,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3214,7 +3313,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3225,7 +3324,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3236,7 +3335,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3247,7 +3346,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -3258,7 +3357,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -3269,7 +3368,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
