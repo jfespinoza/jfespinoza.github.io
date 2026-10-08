@@ -6,14 +6,14 @@ description: "Identificación de pivotes y variables libres, rango, conjuntos so
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá identificar las variables con pivote y las variables libres, clasificar un sistema y describir sus soluciones mediante un parámetro. Podrá comprobarlo al justificar las respuestas de los ejercicios 1 a 4 de la [Actividad](#actividad) y determinar las soluciones admisibles de los problemas 5 y 6.
+Al finalizar la sesión podrá identificar las variables con pivote y las variables libres, clasificar un sistema, describir sus soluciones mediante un parámetro y verificarlas en las ecuaciones originales. Podrá comprobarlo al justificar las respuestas de los ejercicios 1 a 4 de la [Actividad](#actividad) y determinar las soluciones admisibles de los problemas 5 y 6.
 
 ## Recordatorio
 
 Los conceptos y ejemplos se desarrollan en la [Sesión 33](2026-10-07-sesion-33.qmd). Para resolver los ejercicios:
 
 - Revise primero la consistencia: un renglón $[\,0\ \cdots\ 0\mid c\,]$, con $c\ne0$, representa una contradicción.
-- En un sistema consistente, identifique las columnas de coeficientes con pivote y sin pivote. El rango de la matriz de coeficientes es su número de pivotes.
+- En un sistema consistente, identifique las columnas de coeficientes con pivote y sin pivote. El rango de la matriz de coeficientes es el número de pivotes de su forma escalonada.
 - Asigne un parámetro a la variable libre, despeje las demás variables y verifique la descripción en las ecuaciones originales. Si existen restricciones, determine cuáles valores del parámetro las satisfacen simultáneamente.
 
 ## Errores frecuentes
@@ -81,7 +81,7 @@ Trabajen en equipos de dos o tres estudiantes y resuelvan los ejercicios en orde
 
    a. Obtengan la forma escalonada reducida mediante [Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) y registren las operaciones. Indiquen el rango de la matriz de coeficientes y la variable libre.
 
-   b. Escriban las ecuaciones paramétricas con $z=t$ y el conjunto solución. Comprueben las dos ecuaciones originales para un valor arbitrario de $t$.
+   b. Escriban las ecuaciones paramétricas con $z=t$ y el conjunto solución. Comprueben mediante sustitución que las dos ecuaciones originales se cumplen para todo $t\in\mathbb R$, conservando el parámetro en los cálculos y simplificando las expresiones.
 
    c. Otra propuesta fue $(x,y,z)=(4+2t,2+t,t)$ y se comprobó únicamente con $t=0$. Examínenla con $t=1$, localicen el error y expliquen por qué no apareció en la primera comprobación.
 
@@ -389,7 +389,7 @@ $$
 x=t,\qquad y=400-2t,\qquad z=t.
 $$
 
-La no negatividad exige $t\ge0$ y $t\le200$. La existencia de C añade $t\le80$. Por tanto, las mezclas admisibles son
+La no negatividad exige $t\ge0$ y $t\le200$. La disponibilidad de C impone $t\le80$. Por tanto, las mezclas admisibles son
 
 $$
 \{(t,\ 400-2t,\ t):0\le t\le80\}.
