@@ -531,14 +531,14 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá identificar las variables con pivote y las variables libres, clasificar un sistema y describir sus soluciones mediante un parámetro. Podrá comprobarlo al justificar las respuestas de los ejercicios 1 a 4 de la <a href="#actividad">Actividad</a> y determinar las soluciones admisibles de los problemas 5 y 6.</p>
+<p>Al finalizar la sesión podrá identificar las variables con pivote y las variables libres, clasificar un sistema, describir sus soluciones mediante un parámetro y verificarlas en las ecuaciones originales. Podrá comprobarlo al justificar las respuestas de los ejercicios 1 a 4 de la <a href="#actividad">Actividad</a> y determinar las soluciones admisibles de los problemas 5 y 6.</p>
 </section>
 <section id="recordatorio" class="level2">
 <h2 class="anchored" data-anchor-id="recordatorio">Recordatorio</h2>
 <p>Los conceptos y ejemplos se desarrollan en la <a href="../sesiones/2026-10-07-sesion-33.html">Sesión 33</a>. Para resolver los ejercicios:</p>
 <ul>
 <li>Revise primero la consistencia: un renglón <span class="math inline">\([\,0\ \cdots\ 0\mid c\,]\)</span>, con <span class="math inline">\(c\ne0\)</span>, representa una contradicción.</li>
-<li>En un sistema consistente, identifique las columnas de coeficientes con pivote y sin pivote. El rango de la matriz de coeficientes es su número de pivotes.</li>
+<li>En un sistema consistente, identifique las columnas de coeficientes con pivote y sin pivote. El rango de la matriz de coeficientes es el número de pivotes de su forma escalonada.</li>
 <li>Asigne un parámetro a la variable libre, despeje las demás variables y verifique la descripción en las ecuaciones originales. Si existen restricciones, determine cuáles valores del parámetro las satisfacen simultáneamente.</li>
 </ul>
 </section>
@@ -593,7 +593,7 @@ window.Quarto = {
 \]</span></p>
 <ol type="a">
 <li><p>Obtengan la forma escalonada reducida mediante <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">Gauss-Jordan</a> y registren las operaciones. Indiquen el rango de la matriz de coeficientes y la variable libre.</p></li>
-<li><p>Escriban las ecuaciones paramétricas con <span class="math inline">\(z=t\)</span> y el conjunto solución. Comprueben las dos ecuaciones originales para un valor arbitrario de <span class="math inline">\(t\)</span>.</p></li>
+<li><p>Escriban las ecuaciones paramétricas con <span class="math inline">\(z=t\)</span> y el conjunto solución. Comprueben mediante sustitución que las dos ecuaciones originales se cumplen para todo <span class="math inline">\(t\in\mathbb R\)</span>, conservando el parámetro en los cálculos y simplificando las expresiones.</p></li>
 <li><p>Otra propuesta fue <span class="math inline">\((x,y,z)=(4+2t,2+t,t)\)</span> y se comprobó únicamente con <span class="math inline">\(t=0\)</span>. Examínenla con <span class="math inline">\(t=1\)</span>, localicen el error y expliquen por qué no apareció en la primera comprobación.</p></li>
 </ol></li>
 <li><p>Para un montaje de ensayo se cortan tres tiras de materiales distintos, A, B y C, de longitudes <span class="math inline">\(x,y,z\)</span> centímetros. Deben cumplir <span class="math inline">\(x+y+z=18\)</span> y <span class="math inline">\(x+z=10\)</span>. Las soluciones de esas ecuaciones ya se describieron como</p>
@@ -865,7 +865,7 @@ x+y+z=400,\qquad 0.10x+0.30y+0.50z=120.
 <p><span class="math display">\[
 x=t,\qquad y=400-2t,\qquad z=t.
 \]</span></p>
-<p>La no negatividad exige <span class="math inline">\(t\ge0\)</span> y <span class="math inline">\(t\le200\)</span>. La existencia de C añade <span class="math inline">\(t\le80\)</span>. Por tanto, las mezclas admisibles son</p>
+<p>La no negatividad exige <span class="math inline">\(t\ge0\)</span> y <span class="math inline">\(t\le200\)</span>. La disponibilidad de C impone <span class="math inline">\(t\le80\)</span>. Por tanto, las mezclas admisibles son</p>
 <p><span class="math display">\[
 \{(t,\ 400-2t,\ t):0\le t\le80\}.
 \]</span></p>

@@ -588,7 +588,7 @@ S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
 <h3 class="anchored" data-anchor-id="procedimiento">Procedimiento</h3>
 <p>Para describir las soluciones de un sistema con una sola variable libre:</p>
 <ol type="1">
-<li>Obtenga la forma escalonada reducida mediante <a href="../sesiones/2026-10-06-sesion-32.html">Gauss-Jordan</a>. Si aparece una contradicción, concluya <span class="math inline">\(S=\varnothing\)</span>; para esa conclusión no necesita terminar la reducción.</li>
+<li>Obtenga la forma escalonada reducida mediante <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">Gauss-Jordan</a>. Si aparece una contradicción, concluya <span class="math inline">\(S=\varnothing\)</span>; para esa conclusión no necesita terminar la reducción.</li>
 <li>Si el sistema es consistente, identifique las columnas de coeficientes con pivote y sin pivote.</li>
 <li>Asigne un parámetro a la variable libre. Despeje las variables con pivote en función de ese parámetro.</li>
 <li>Escriba las ecuaciones paramétricas y el conjunto solución, indicando que el parámetro recorre <span class="math inline">\(\mathbb R\)</span>.</li>
@@ -599,7 +599,7 @@ S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
 <section id="por-qué-se-obtienen-todas-las-soluciones" class="level3">
 <h3 class="anchored" data-anchor-id="por-qué-se-obtienen-todas-las-soluciones">Por qué se obtienen todas las soluciones</h3>
 <p>La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que <strong>cada terna descrita es solución</strong>. Para esta verificación se conservan las expresiones en función del parámetro y se simplifican ambos lados, como en el Ejemplo 1.</p>
-<p>Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las <a href="../sesiones/2026-09-23-sesion-29.html">operaciones elementales</a> conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, <strong>ninguna solución queda fuera de la descripción</strong>.</p>
+<p>Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las <a href="../sesiones/2026-09-23-sesion-29.html#operaciones-elementales-de-renglón">operaciones elementales</a> conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, <strong>ninguna solución queda fuera de la descripción</strong>.</p>
 </section>
 </section>
 <section id="ejemplos" class="level2">
@@ -732,7 +732,7 @@ x+y+z=500,\qquad 0.60x+0.70y+0.90z=360.
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>La práctica de estos conceptos se encuentra en la <a href="../sesiones/2026-10-08-sesion-34.html#actividad">Sesión 34</a>.</p>
+<p>La práctica de estos conceptos se encuentra en la <a href="../sesiones/2026-10-08-sesion-34.html#actividad">Sesión 34</a>. Al revisar los ejemplos, compruebe si puede:</p>
 <ul>
 <li>Explicar por qué un renglón nulo no determina por sí solo el número de soluciones, revisando la consistencia y las columnas con pivote en los <a href="#un-renglón-nulo-no-determina-el-número-de-soluciones">tres casos estudiados</a>.</li>
 <li>Reconstruir y verificar una parametrización: expresar las variables con pivote en función de la variable libre, justificar que se describen todas las soluciones y sustituir en las ecuaciones originales, como en el <a href="#ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas">Ejemplo 1</a>.</li>
