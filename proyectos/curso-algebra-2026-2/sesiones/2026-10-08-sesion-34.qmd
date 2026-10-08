@@ -1,0 +1,417 @@
+---
+title: "Sesión 34. Práctica de variables libres y ecuaciones paramétricas"
+date: 2026-10-08
+description: "Identificación de pivotes y variables libres, rango, conjuntos solución y restricciones en problemas de materiales."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá identificar las variables con pivote y las variables libres, clasificar un sistema y describir sus soluciones mediante un parámetro. Podrá comprobarlo al justificar las respuestas de los ejercicios 1 a 4 de la [Actividad](#actividad) y determinar las soluciones admisibles de los problemas 5 y 6.
+
+## Recordatorio
+
+Los conceptos y ejemplos se desarrollan en la [Sesión 33](2026-10-07-sesion-33.qmd). Para resolver los ejercicios:
+
+- Revise primero la consistencia: un renglón $[\,0\ \cdots\ 0\mid c\,]$, con $c\ne0$, representa una contradicción.
+- En un sistema consistente, identifique las columnas de coeficientes con pivote y sin pivote. El rango de la matriz de coeficientes es su número de pivotes.
+- Asigne un parámetro a la variable libre, despeje las demás variables y verifique la descripción en las ecuaciones originales. Si existen restricciones, determine cuáles valores del parámetro las satisfacen simultáneamente.
+
+## Errores frecuentes
+
+- **Decidir por un renglón nulo.** El renglón $0=0$ no impone condiciones; la clasificación requiere examinar el sistema completo.
+- **Identificar cualquier entrada igual a uno como un pivote.** El pivote es la primera entrada no nula de un renglón no nulo de la forma escalonada; la última columna de una matriz aumentada no corresponde a una incógnita.
+- **Suponer que la variable libre siempre es la última.** Se identifica por su columna, no por el nombre ni por su posición al final de la lista de incógnitas.
+- **Dar una sola solución cuando se pide el conjunto solución.** Una terna corresponde a una elección del parámetro; la descripción paramétrica debe indicar todos sus valores admisibles.
+
+## Actividad
+
+Trabajen en equipos de dos o tres estudiantes y resuelvan los ejercicios en orden. En cada ejercicio, una persona explique el procedimiento y otra compruebe los cálculos; alternen estas funciones. Registren las justificaciones y consulten las soluciones después de discutir sus respuestas.
+
+1. La siguiente matriz aumentada está en forma escalonada reducida y corresponde a un sistema en $x,y,z$:
+
+   $$
+   \left[\begin{array}{ccc|c}1&0&1&4\\0&1&-2&1\end{array}\right].
+   $$
+
+   a. Escriban las dos ecuaciones que representa. Indiquen cuántas incógnitas tiene el sistema y cuál es la columna de términos independientes.
+
+   b. Señalen los pivotes, las variables con pivote, la variable libre y el rango de la matriz de coeficientes. ¿La entrada $1$ de la tercera columna es un pivote? Justifiquen.
+
+   c. Si se elige $z=0$, ¿qué valores deben tomar $x$ y $y$? ¿Esa terna es la única solución? Justifiquen sin efectuar operaciones entre renglones.
+
+2. Las siguientes matrices aumentadas están en forma escalonada reducida. Las columnas de coeficientes corresponden a las incógnitas indicadas:
+
+   **(a) Incógnitas $x,y$.**
+
+   $$
+   \left[\begin{array}{cc|c}1&0&3\\0&1&-2\\0&0&0\end{array}\right].
+   $$
+
+   **(b) Incógnitas $x,y,z$.**
+
+   $$
+   \left[\begin{array}{ccc|c}1&0&1&4\\0&1&-2&1\\0&0&0&0\end{array}\right].
+   $$
+
+   **(c) Incógnitas $x,y$.**
+
+   $$
+   \left[\begin{array}{cc|c}1&2&0\\0&0&1\\0&0&0\end{array}\right].
+   $$
+
+   En cada caso, determinen si el sistema es consistente, indiquen el rango de la matriz de coeficientes y clasifiquen el conjunto solución como vacío, de un solo elemento o infinito. Justifiquen por qué los tres casos tienen un renglón nulo, pero no el mismo número de soluciones.
+
+3. Consideren el sistema cuya matriz aumentada reducida es
+
+   $$
+   \left[\begin{array}{ccc|c}1&-2&0&3\\0&0&1&-2\end{array}\right].
+   $$
+
+   a. Identifiquen las variables con pivote y la variable libre. ¿Puede tomarse $z=t$ con $t$ recorriendo todos los números reales? Expliquen.
+
+   b. Asignen un parámetro a la variable libre y escriban las ecuaciones paramétricas y el conjunto solución.
+
+   c. Obtengan las ternas correspondientes a los valores $0$ y $1$ del parámetro. Verifiquen la descripción general en las ecuaciones que representa la matriz.
+
+4. Resuelvan el sistema
+
+   $$
+   \left\{\begin{aligned}x+y+z&=6\\2x+y+3z&=10.\end{aligned}\right.
+   $$
+
+   a. Obtengan la forma escalonada reducida mediante [Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) y registren las operaciones. Indiquen el rango de la matriz de coeficientes y la variable libre.
+
+   b. Escriban las ecuaciones paramétricas con $z=t$ y el conjunto solución. Comprueben las dos ecuaciones originales para un valor arbitrario de $t$.
+
+   c. Otra propuesta fue $(x,y,z)=(4+2t,2+t,t)$ y se comprobó únicamente con $t=0$. Examínenla con $t=1$, localicen el error y expliquen por qué no apareció en la primera comprobación.
+
+5. Para un montaje de ensayo se cortan tres tiras de materiales distintos, A, B y C, de longitudes $x,y,z$ centímetros. Deben cumplir $x+y+z=18$ y $x+z=10$. Las soluciones de esas ecuaciones ya se describieron como
+
+   $$
+   (x,y,z)=(10-t,\ 8,\ t),\qquad t\in\mathbb R.
+   $$
+
+   Las tres longitudes deben ser positivas. Además, la tira A debe medir al menos $5$ cm y la tira C debe medir entre $3$ y $6$ cm, incluidos los extremos.
+
+   a. Traduzcan las restricciones a condiciones sobre $t$ y determinen el intervalo admisible, como en las [desigualdades de la Sesión 06](2026-08-17-sesion-06.qmd#ejemplo-4.-desigualdad-doble).
+
+   b. Propongan un conjunto admisible de longitudes y comprueben las ecuaciones y las restricciones. Expliquen por qué $t=6$ satisface las ecuaciones, pero no todos los requisitos del montaje.
+
+6. Para preparar una muestra de material cerámico se mezclan tres lotes de polvo, A, B y C, que contienen $20\,\%$, $40\,\%$ y $80\,\%$ en masa de un mismo componente. Se requieren $600$ g de mezcla con $50\,\%$ de ese componente. Sean $x,y,z$ las masas en gramos de los lotes A, B y C, respectivamente. Las masas se suman sin pérdidas y se permite omitir un lote, de modo que $x,y,z\ge0$. La masa del componente en cada porción es su masa multiplicada por el porcentaje expresado como fracción.
+
+   a. Planteen las ecuaciones de masa total y masa del componente. Para continuar, pueden utilizar su forma reducida:
+
+      $$
+      \left[\begin{array}{ccc|c}1&0&-2&-300\\0&1&3&900\end{array}\right].
+      $$
+
+   b. Describan las soluciones con $z=t$ y determinen el intervalo de valores de $t$ que permite preparar la mezcla. Interpreten las mezclas de los dos extremos del intervalo.
+
+   c. Se solicita además utilizar la misma masa de los lotes A y B. Determinen si existe una mezcla admisible con esa condición, obtengan sus masas y verifiquen todos los requisitos.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Las ecuaciones son $x+z=4$ y $y-2z=1$. Hay tres incógnitas. La cuarta columna, situada después de la barra vertical, contiene los términos independientes $4$ y $1$.
+
+**1. b.** Los pivotes están en las posiciones $(1,1)$ y $(2,2)$. Por tanto, $x$ y $y$ tienen pivote, $z$ es libre y el rango de la matriz de coeficientes es $2$. El $1$ de la tercera columna no es pivote: no es la primera entrada no nula de su renglón.
+
+**1. c.** Con $z=0$, las ecuaciones dan $x=4$ y $y=1$, por lo que se obtiene $(4,1,0)$. No es la única solución: por ejemplo, $z=1$ da $(3,3,1)$. En general, cada valor de $z$ determina $x=4-z$ y $y=1+2z$; no aparece ninguna contradicción.
+
+**2. a.** El sistema es consistente y el rango de la matriz de coeficientes es $2$. Ambas incógnitas tienen pivote. Su conjunto solución es $S=\{(3,-2)\}$; el tercer renglón expresa $0=0$ y no modifica la solución.
+
+**2. b.** El sistema es consistente y el rango de la matriz de coeficientes es $2$. Como $z$ es libre, hay infinitas soluciones:
+
+$$
+S=\{(4-t,\ 1+2t,\ t):t\in\mathbb R\}.
+$$
+
+**2. c.** El segundo renglón expresa $0=1$. El sistema es inconsistente y $S=\varnothing$. El rango de la matriz de coeficientes es $1$: el pivote situado después de la barra pertenece a la matriz aumentada, pero no a la matriz de coeficientes. La presencia de un renglón nulo en los tres casos no determina la clasificación; es necesario revisar la consistencia y las columnas de coeficientes con pivote.
+
+**3. a.** Las ecuaciones son $x-2y=3$ y $z=-2$. Las variables con pivote son $x$ y $z$; la variable libre es $y$. No puede elegirse $z$ arbitrariamente, porque debe valer $-2$ en toda solución.
+
+**3. b.** Al tomar $y=t$, con $t\in\mathbb R$, se obtiene
+
+$$
+x=3+2t,\qquad y=t,\qquad z=-2.
+$$
+
+Por tanto,
+
+$$
+S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
+$$
+
+**3. c.** Con $t=0$ se obtiene $(3,0,-2)$ y con $t=1$, $(5,1,-2)$. Para cualquier valor del parámetro, $(3+2t)-2t=3$ y la tercera componente es $-2$, de modo que ambas ecuaciones se cumplen. Recíprocamente, en cualquier solución el valor de $y$ determina $x=3+2y$ y $z=-2$; la descripción incluye todas las soluciones.
+
+**4. a.** Primero, $R_2\to R_2-2R_1$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&6\\2&1&3&10\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&1&1&6\\0&-1&1&-2\end{array}\right]
+.
+$$
+
+Después, $R_2\to-R_2$ y $R_1\to R_1-R_2$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&6\\0&1&-1&2\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&0&2&4\\0&1&-1&2\end{array}\right].
+$$
+
+El rango de la matriz de coeficientes es $2$ y $z$ es la variable libre.
+
+**4. b.** Las ecuaciones reducidas son $x+2z=4$ y $y-z=2$. Por tanto,
+
+$$
+x=4-2t,\qquad y=2+t,\qquad z=t,
+$$
+
+$$
+S=\{(4-2t,\ 2+t,\ t):t\in\mathbb R\}.
+$$
+
+La verificación en las ecuaciones originales es
+
+$$
+\begin{aligned}
+(4-2t)+(2+t)+t&=6,\\
+2(4-2t)+(2+t)+3t&=10.
+\end{aligned}
+$$
+
+Las operaciones elementales conservan el conjunto solución y, para cualquier solución, el valor de $z$ determina las otras dos componentes mediante las ecuaciones reducidas.
+
+**4. c.** Con $t=1$, la propuesta incorrecta da $(6,3,1)$. Al sustituir, $6+3+1=10\ne6$ y $2(6)+3+3(1)=18\ne10$. El error está en despejar $x+2t=4$: debe obtenerse $x=4-2t$, no $4+2t$. Para $t=0$, ambas expresiones dan $x=4$ y ambas ternas son $(4,2,0)$; por eso esa sola comprobación no detecta el error.
+
+**5. a.** La positividad exige $10-t>0$, $8>0$ y $t>0$, de donde $0<t<10$. La condición para A es $10-t\ge5$, es decir, $t\le5$. La condición para C es $3\le t\le6$. Todas se cumplen simultáneamente si y solo si $3\le t\le5$.
+
+**5. b.** Una respuesta posible es $t=4$, que produce longitudes $(6,8,4)$ cm. Se verifica $6+8+4=18$, $6+4=10$, las longitudes son positivas, $6\ge5$ y $3\le4\le6$. Con $t=6$ se obtienen $(4,8,6)$ cm: las ecuaciones se cumplen, pero la tira A mide $4$ cm y no alcanza los $5$ cm requeridos.
+
+**6. a.** La masa total requerida es $600$ g y la masa del componente debe ser $0.50(600)=300$ g. El sistema es
+
+$$
+x+y+z=600,\qquad 0.20x+0.40y+0.80z=300.
+$$
+
+Multiplicando la segunda ecuación por $5$ y restándole la primera, se obtiene $y+3z=900$. Al restar esta ecuación de $x+y+z=600$ resulta $x-2z=-300$, lo que confirma la forma reducida proporcionada.
+
+**6. b.** Con $z=t$, las ecuaciones reducidas dan
+
+$$
+x=2t-300,\qquad y=900-3t,\qquad z=t.
+$$
+
+Las condiciones de no negatividad son
+
+$$
+2t-300\ge0\iff t\ge150,\qquad
+900-3t\ge0\iff t\le300,\qquad t\ge0.
+$$
+
+Su intersección es $150\le t\le300$. Las mezclas admisibles quedan descritas por
+
+$$
+\{(2t-300,\ 900-3t,\ t):150\le t\le300\}.
+$$
+
+En $t=150$, la mezcla es $(0,450,150)$ g y no utiliza el lote A. En $t=300$, es $(300,0,300)$ g y no utiliza el lote B. No se puede omitir el lote C, pues siempre se requieren al menos $150$ g.
+
+La parametrización satisface las ecuaciones de masa:
+
+$$
+\begin{aligned}
+(2t-300)+(900-3t)+t&=600,\\
+0.20(2t-300)+0.40(900-3t)+0.80t&=-60+360=300.
+\end{aligned}
+$$
+
+**6. c.** La condición $x=y$ exige $2t-300=900-3t$. De aquí $5t=1200$ y $t=240$, que pertenece al intervalo admisible. Hay una sola mezcla con esa condición: $180$ g del lote A, $180$ g del B y $240$ g del C. Las masas son no negativas, suman $600$ g, las dos primeras son iguales y la masa del componente es
+
+$$
+0.20(180)+0.40(180)+0.80(240)=36+72+192=300\text{ g}.
+$$
+
+:::
+
+## Ejercicios para practicar
+
+Resuelva estos ejercicios como práctica autónoma. Registre el procedimiento y consulte las respuestas después de completar su intento.
+
+1. La matriz aumentada reducida de un sistema en $x,y,z$ es
+
+   $$
+   \left[\begin{array}{ccc|c}1&-3&0&4\\0&0&1&2\\0&0&0&0\end{array}\right].
+   $$
+
+   a. Determine la consistencia, el rango de la matriz de coeficientes, las variables con pivote y la variable libre.
+
+   b. Describa el conjunto solución mediante un parámetro y verifique las ecuaciones representadas por la matriz.
+
+   c. Determine la solución que satisface $x=1$.
+
+2. Considere el sistema $2x-y+z=3$, $x+y+2z=6$.
+
+   a. Obtenga la forma escalonada reducida, registre las operaciones y describa las soluciones con $z=t$.
+
+   b. Verifique la parametrización en las ecuaciones originales y encuentre la solución que cumple $y=0$.
+
+3. Se pesan conjuntos de placas de tres tipos de material, A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Las mediciones, consideradas exactas y sin incluir recipientes, son:
+
+   | Conjunto | Placas A | Placas B | Placas C | Masa total (g) |
+   |---|---:|---:|---:|---:|
+   | 1 | $1$ | $1$ | $1$ | $90$ |
+   | 2 | $2$ | $1$ | $1$ | $110$ |
+   | 3 | $3$ | $2$ | $2$ | $200$ |
+
+   a. Sean $x,y,z>0$ las masas, en gramos, de una placa A, B y C, respectivamente. Plantee el sistema y describa sus soluciones con $z=t$, indicando el intervalo admisible.
+
+   b. Explique qué masa queda determinada y por qué el tercer registro no aporta una condición adicional.
+
+   c. Un nuevo conjunto con una placa A, dos B y una C tiene una masa exacta de $130$ g. Determine las tres masas y compruebe los cuatro registros.
+
+4. Para preparar una muestra de material se combinan tres preparados, A, B y C, que contienen $10\,\%$, $30\,\%$ y $50\,\%$ en masa de un mismo aditivo. Se necesitan $400$ g de mezcla con $30\,\%$ de ese aditivo. Las masas se suman sin pérdidas y la masa de aditivo de cada porción es su masa por la fracción indicada. Sean $x,y,z\ge0$ las masas en gramos de los preparados A, B y C, respectivamente. Se dispone de suficiente cantidad de A y B, pero únicamente de $80$ g de C.
+
+   a. Plantee el sistema, describa sus soluciones con $z=t$ y determine los valores admisibles del parámetro considerando la disponibilidad de C.
+
+   b. Determine la mezcla que utiliza la menor cantidad de B y verifique sus masas y su composición.
+
+   c. ¿Puede prepararse una mezcla con exactamente $200$ g de B y las existencias disponibles? Justifique.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** Las ecuaciones son $x-3y=4$, $z=2$ y $0=0$. No hay contradicción. El sistema es consistente, el rango de la matriz de coeficientes es $2$, $x$ y $z$ tienen pivote y $y$ es libre.
+
+**1. b.** Al elegir $y=t$, con $t\in\mathbb R$, se obtiene $x=4+3t$ y $z=2$. Así,
+
+$$
+S=\{(4+3t,\ t,\ 2):t\in\mathbb R\}.
+$$
+
+La sustitución da $(4+3t)-3t=4$, $z=2$ y $0=0$. Toda solución tiene esta forma, porque las ecuaciones fijan $z$ y expresan $x$ en función de $y$.
+
+**1. c.** La condición $x=1$ se convierte en $4+3t=1$, de donde $t=-1$. La solución es $(1,-1,2)$; se verifica $1-3(-1)=4$ y $z=2$.
+
+**2. a.** Al intercambiar los renglones se obtiene
+
+$$
+\left[\begin{array}{ccc|c}2&-1&1&3\\1&1&2&6\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&1&2&6\\2&-1&1&3\end{array}\right]
+.
+$$
+
+La operación $R_2\to R_2-2R_1$ produce
+
+$$
+\left[\begin{array}{ccc|c}1&1&2&6\\0&-3&-3&-9\end{array}\right]
+.
+$$
+
+Finalmente, $R_2\to-\frac13R_2$ y $R_1\to R_1-R_2$ dan
+
+$$
+\left[\begin{array}{ccc|c}1&1&2&6\\0&1&1&3\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&0&1&3\\0&1&1&3\end{array}\right].
+$$
+
+El sistema es consistente, la matriz de coeficientes tiene rango $2$ y $z$ es libre. Las ecuaciones reducidas son $x+z=3$ y $y+z=3$. Con $z=t$:
+
+$$
+x=3-t,\qquad y=3-t,\qquad z=t,
+$$
+
+$$
+S=\{(3-t,\ 3-t,\ t):t\in\mathbb R\}.
+$$
+
+**2. b.** Las ecuaciones originales se verifican para todo valor de $t$:
+
+$$
+\begin{aligned}
+2(3-t)-(3-t)+t&=3,\\
+(3-t)+(3-t)+2t&=6.
+\end{aligned}
+$$
+
+La condición $y=0$ exige $3-t=0$, por lo que $t=3$ y la solución es $(0,0,3)$. En las ecuaciones originales se obtiene $0-0+3=3$ y $0+0+2(3)=6$.
+
+**3. a.** El sistema es
+
+$$
+x+y+z=90,\qquad 2x+y+z=110,\qquad 3x+2y+2z=200.
+$$
+
+Restando la primera ecuación de la segunda se obtiene $x=20$. La tercera es la suma de las dos primeras. Una reducción de la matriz aumentada se obtiene con $R_3\to R_3-R_1$, después $R_3\to R_3-R_2$, $R_2\to R_2-R_1$, $R_1\leftrightarrow R_2$ y $R_2\to R_2-R_1$. El resultado es
+
+$$
+\left[\begin{array}{ccc|c}1&0&0&20\\0&1&1&70\\0&0&0&0\end{array}\right].
+$$
+
+Con $z=t$, se obtiene $x=20$ y $y=70-t$. Las masas de las placas deben ser estrictamente positivas, por lo que $t>0$ y $70-t>0$. En consecuencia, las soluciones admisibles son
+
+$$
+\{(20,\ 70-t,\ t):0<t<70\}.
+$$
+
+**3. b.** La masa de una placa A queda fijada en $20$ g. Las otras dos masas pueden variar, pero su suma debe ser $70$ g. El tercer conjunto tiene exactamente la suma de las cantidades de placas de los dos primeros y también $90+110=200$ g; no aporta otra condición.
+
+**3. c.** La medición adicional da $x+2y+z=130$. Al sustituir la parametrización:
+
+$$
+20+2(70-t)+t=130
+\iff160-t=130
+\iff t=30.
+$$
+
+Las masas son $x=20$ g, $y=40$ g y $z=30$ g. Todas son positivas y verifican
+
+$$
+\begin{aligned}
+20+40+30&=90,\\
+2(20)+40+30&=110,\\
+3(20)+2(40)+2(30)&=200,\\
+20+2(40)+30&=130.
+\end{aligned}
+$$
+
+**4. a.** La mezcla debe contener $0.30(400)=120$ g de aditivo. Las ecuaciones son
+
+$$
+x+y+z=400,\qquad 0.10x+0.30y+0.50z=120.
+$$
+
+Multiplicando la segunda ecuación por $10$ y restándole la primera se obtiene $2y+4z=800$, es decir, $y+2z=400$. Al restar esta última ecuación de la primera resulta $x-z=0$. Con $z=t$:
+
+$$
+x=t,\qquad y=400-2t,\qquad z=t.
+$$
+
+La no negatividad exige $t\ge0$ y $t\le200$. La existencia de C añade $t\le80$. Por tanto, las mezclas admisibles son
+
+$$
+\{(t,\ 400-2t,\ t):0\le t\le80\}.
+$$
+
+**4. b.** La masa de B, $y=400-2t$, disminuye cuando aumenta $t$. Su menor valor admisible corresponde a $t=80$. La mezcla utiliza $80$ g de A, $240$ g de B y $80$ g de C. Las masas suman $400$ g y la masa de aditivo es
+
+$$
+0.10(80)+0.30(240)+0.50(80)=8+72+40=120\text{ g},
+$$
+
+que representa el $30\,\%$ de $400$ g. Se utilizan exactamente los $80$ g disponibles de C.
+
+**4. c.** No. La condición $y=200$ exigiría $400-2t=200$, por lo que $t=100$. Esa mezcla sería $(100,200,100)$ g y satisfaría las ecuaciones, pero requeriría $100$ g de C; solo hay $80$ g disponibles.
+
+:::
+
+## Conclusiones del aprendizaje
+
+El trabajo realizado permite comprobar si puede:
+
+- Identificar pivotes, variables libres y rango, y justificar la clasificación de un sistema sin depender de un renglón nulo aislado, como en los ejercicios 1 y 2 de la [Actividad](#actividad).
+- Describir todas las soluciones con un parámetro, incluso cuando la variable libre no es $z$, y verificar las ecuaciones originales, como en los ejercicios 3 y 4 de la Actividad.
+- Distinguir una solución particular de una descripción paramétrica y detectar un error que una comprobación aislada no revela, como en el ejercicio 4c de la Actividad.
+- Traducir restricciones de longitud, masa y disponibilidad en condiciones sobre el parámetro y decidir si una solución es admisible, como en los ejercicios 5 y 6 de la Actividad y los ejercicios 3 y 4 de la [práctica](#ejercicios-para-practicar).

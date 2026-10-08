@@ -6,11 +6,11 @@ description: "Consistencia, variables con pivote y variables libres, descripció
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá describir por componentes, mediante un parámetro, el conjunto solución de un sistema consistente con una sola variable libre y verificarlo en las ecuaciones originales. Podrá comprobarlo al resolver el ejercicio 1 de la [Actividad](#actividad), interpretar las restricciones del ejercicio 2 y justificar, en el ejercicio 3, por qué un renglón nulo no determina por sí solo el número de soluciones.
+Al finalizar la sesión podrá explicar cómo la consistencia y los pivotes determinan el tipo de solución, describir por componentes las soluciones de un sistema con una variable libre e interpretar las restricciones del parámetro. Podrá comprobarlo al reconstruir la parametrización del Ejemplo 1 y justificar el intervalo de masas admisibles del Ejemplo 2.
 
 ## Variables con pivote y variables libres
 
-Se consideran sistemas con coeficientes e incógnitas reales. En la [Sesión 32](2026-10-06-sesion-32.qmd) se interpretó la matriz reducida
+Se consideran sistemas con coeficientes e incógnitas reales. Como en la [Sesión 32](2026-10-06-sesion-32.qmd), un **pivote** es la primera entrada no nula de un renglón no nulo de una matriz escalonada. En la forma reducida, cada pivote vale $1$ y es la única entrada no nula de su columna. Por ejemplo,
 
 $$
 \left[\begin{array}{ccc|c}1&0&2&1\\0&1&-1&3\\0&0&0&0\end{array}\right].
@@ -18,47 +18,15 @@ $$
 
 Sus ecuaciones son $x+2z=1$, $y-z=3$ y $0=0$. Para cada valor real de $z$, las dos primeras ecuaciones determinan $x$ y $y$.
 
-En la forma escalonada reducida de la matriz aumentada de un sistema **[consistente](2026-09-22-sesion-28.qmd#clasificación-e-interpretación-geométrica)**, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman **variables con pivote**. Las demás son **variables libres**. En este ejemplo, $x$ y $y$ tienen pivote y $z$ es libre.
+En la forma escalonada reducida de la matriz aumentada de un sistema **[consistente](2026-09-22-sesion-28.qmd#clasificación-e-interpretación-geométrica)**, las incógnitas cuyas columnas de coeficientes tienen pivote se llaman **variables con pivote**. Las demás son **variables libres**. En este ejemplo, $x$ y $y$ tienen pivote y $z$ es libre. La columna de $z$ contiene $2,-1,0$: una variable libre se reconoce porque su columna **no tiene pivote**, no porque todos sus coeficientes sean cero. Tampoco basta encontrar un $1$ cualquiera para identificar un pivote.
 
 La **consistencia se revisa primero**. Si aparece un renglón $[\,0\ \cdots\ 0\mid c\,]$ con $c\ne0$, el sistema no tiene solución: ninguna elección de valores para las incógnitas puede satisfacer $0=c$.
 
 El **rango** de una matriz es el número de pivotes de una forma escalonada; ese número no depende de las operaciones elementales elegidas. En el ejemplo, la matriz de coeficientes tiene rango $2$. Como el sistema es consistente y tiene tres incógnitas, hay dos variables con pivote y una libre. La columna de términos independientes no se cuenta entre las columnas de coeficientes.
 
-## Descripción paramétrica del conjunto solución
-
-Un **parámetro** representa un número real arbitrario. Para la matriz anterior, se escribe $z=t$, con $t\in\mathbb R$. Las ecuaciones reducidas dan
-
-$$
-x=1-2t,\qquad y=3+t,\qquad z=t.
-$$
-
-Estas son las **ecuaciones paramétricas** del conjunto solución. Por componentes, el mismo conjunto se escribe
-
-$$
-S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
-$$
-
-Con $t=0$ se obtiene $(1,3,0)$; con $t=1$, $(-1,4,1)$. Son dos soluciones particulares. Cada valor de $t$ produce una terna distinta, porque su tercera componente es $t$; por tanto, el sistema tiene infinitas soluciones.
-
-### Procedimiento
-
-1. Obtenga la forma escalonada reducida mediante [Gauss-Jordan](2026-10-06-sesion-32.qmd). Si aparece una contradicción, concluya $S=\varnothing$; para esa conclusión no necesita terminar la reducción.
-2. Si el sistema es consistente, identifique las columnas de coeficientes con pivote y sin pivote.
-3. Asigne un parámetro a la variable libre. Despeje las variables con pivote en función de ese parámetro.
-4. Escriba las ecuaciones paramétricas y el conjunto solución, indicando que el parámetro recorre $\mathbb R$.
-5. Sustituya las expresiones en las ecuaciones originales y compruebe que las igualdades se cumplen para todo valor del parámetro.
-
-Si el problema impone restricciones adicionales, como masas no negativas, determine después cuáles soluciones del sistema las satisfacen. Esas restricciones pueden limitar los valores admisibles del parámetro.
-
-### Por qué se obtienen todas las soluciones
-
-La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que **cada terna descrita es solución**. Comprobar un solo valor del parámetro no garantiza la validez de toda la descripción: una expresión con un error de signo puede coincidir con la correcta en ese valor, como en el [ejercicio 4 de la práctica](#ejercicios-para-practicar).
-
-Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las [operaciones elementales](2026-09-23-sesion-29.qmd) conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, **ninguna solución queda fuera de la descripción**.
-
 ## Un renglón nulo no determina el número de soluciones
 
-Un renglón $[\,0\ \cdots\ 0\mid0\,]$ representa $0=0$ y no impone una condición adicional. Las siguientes matrices están reducidas y contienen un renglón nulo:
+Un sistema lineal real puede ser inconsistente, tener solución única o tener infinitas soluciones. Un renglón $[\,0\ \cdots\ 0\mid0\,]$ representa $0=0$ y no impone una condición adicional. Las siguientes matrices están reducidas y contienen un renglón nulo:
 
 **(i) Sistema en $x,y$: solución única.**
 
@@ -74,7 +42,7 @@ $$
 \left[\begin{array}{ccc|c}1&0&2&1\\0&1&-1&3\\0&0&0&0\end{array}\right].
 $$
 
-No hay contradicción y $z$ es libre. Su conjunto solución es $S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}$.
+No hay contradicción y la columna de $z$ no tiene pivote. Para cada valor real de $z$ se obtienen valores de $x$ y $y$ que cumplen las ecuaciones; por ello hay infinitas soluciones.
 
 **(iii) Sistema en $x,y$: ninguna solución.**
 
@@ -85,6 +53,40 @@ $$
 El segundo renglón representa $0=1$. El sistema es inconsistente, aunque también tenga un renglón nulo y una columna de coeficientes sin pivote.
 
 El número de soluciones depende de la consistencia y de los pivotes en las columnas de coeficientes. Un renglón nulo, considerado aisladamente, no permite decidirlo.
+
+## Descripción paramétrica del conjunto solución
+
+Un **parámetro** representa aquí un número real arbitrario. Para la matriz del caso (ii), se escribe $z=t$, con $t\in\mathbb R$. Esto expresa que se puede elegir cualquier valor real de $z$; no agrega una ecuación que determine un único valor de $t$. Una vez elegido ese valor, las ecuaciones reducidas determinan las otras incógnitas:
+
+$$
+x=1-2t,\qquad y=3+t,\qquad z=t.
+$$
+
+Estas son las **ecuaciones paramétricas** del conjunto solución. Por componentes, el mismo conjunto se escribe
+
+$$
+S=\{(1-2t,\ 3+t,\ t):t\in\mathbb R\}.
+$$
+
+Con $t=0$ se obtiene $(1,3,0)$; con $t=1$, $(-1,4,1)$. Son dos soluciones particulares. Cada valor de $t$ produce una terna distinta, porque su tercera componente es $t$; por tanto, el sistema tiene infinitas soluciones.
+
+### Procedimiento
+
+Para describir las soluciones de un sistema con una sola variable libre:
+
+1. Obtenga la forma escalonada reducida mediante [Gauss-Jordan](2026-10-06-sesion-32.qmd). Si aparece una contradicción, concluya $S=\varnothing$; para esa conclusión no necesita terminar la reducción.
+2. Si el sistema es consistente, identifique las columnas de coeficientes con pivote y sin pivote.
+3. Asigne un parámetro a la variable libre. Despeje las variables con pivote en función de ese parámetro.
+4. Escriba las ecuaciones paramétricas y el conjunto solución, indicando que el parámetro recorre $\mathbb R$.
+5. Sustituya las expresiones en las ecuaciones originales y compruebe que las igualdades se cumplen para todo valor del parámetro.
+
+Si el problema impone restricciones adicionales, como masas no negativas, determine después cuáles soluciones del sistema las satisfacen. Esas restricciones pueden limitar los valores admisibles del parámetro.
+
+### Por qué se obtienen todas las soluciones
+
+La justificación tiene dos partes. Al sustituir la terna paramétrica en las ecuaciones originales y obtener identidades, se prueba que **cada terna descrita es solución**. Para esta verificación se conservan las expresiones en función del parámetro y se simplifican ambos lados, como en el Ejemplo 1.
+
+Recíprocamente, toda solución del sistema original satisface el sistema reducido, porque las [operaciones elementales](2026-09-23-sesion-29.qmd) conservan el conjunto solución. Al tomar el parámetro igual al valor de la variable libre, las ecuaciones reducidas determinan las otras componentes. Por ello, **ninguna solución queda fuera de la descripción**.
 
 ## Ejemplos
 
@@ -110,9 +112,11 @@ $$
 \left[\begin{array}{ccc|c}1&0&-7&2\\0&1&3&1\end{array}\right].
 $$
 
+La matriz ya está reducida: los pivotes de las columnas de $x$ y $y$ valen $1$ y tienen ceros arriba y abajo. Las entradas $-7$ y $3$ de la columna sin pivote pueden permanecer distintas de cero.
+
 El sistema es consistente. Las variables con pivote son $x$ y $y$; la variable libre es $z$. La matriz de coeficientes tiene rango $2$.
 
-Las ecuaciones reducidas son $x-7z=2$ y $y+3z=1$. Con $z=t$:
+Las ecuaciones reducidas son $x-7z=2$ y $y+3z=1$. Al tomar $z=t$, se obtiene $y+3t=1$, de donde $y=1-3t$; también $x-7t=2$, de donde $x=2+7t$. Las ecuaciones paramétricas son
 
 $$
 x=2+7t,\qquad y=1-3t,\qquad z=t,\qquad t\in\mathbb R.
@@ -133,7 +137,15 @@ $$
 \end{aligned}
 $$
 
-Ambas igualdades se cumplen para todo $t$. Con $t=0$ se obtiene $(2,1,0)$; con $t=1$, $(9,-2,1)$. Ninguna de estas ternas, por sí sola, representa el conjunto completo.
+Ambas igualdades se cumplen para todo $t$. Algunos valores del parámetro producen las siguientes soluciones particulares:
+
+| Valor de $t$ | Terna $(x,y,z)$ |
+|---|---|
+| $2$ | $(16,-5,2)$ |
+| $0$ | $(2,1,0)$ |
+| $-1$ | $(-5,4,-1)$ |
+
+Cada valor real de $t$ produce una terna distinta, porque su tercera componente es $t$. Hay infinitas soluciones; ninguna terna particular representa por sí sola el conjunto completo.
 
 ### Ejemplo 2. Restricciones de masa en una mezcla
 
@@ -145,7 +157,23 @@ $$
 x+y+z=500,\qquad 0.60x+0.70y+0.90z=360.
 $$
 
-La forma reducida de la matriz aumentada es
+La primera ecuación suma las masas de los tres lotes. En la segunda, $0.60x$, $0.70y$ y $0.90z$ son sus aportaciones de cobre, y $360=0.72(500)$ es la masa de cobre requerida.
+
+La matriz aumentada se reduce en tres operaciones. Primero, $R_2\to R_2-0.60R_1$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&500\\0.60&0.70&0.90&360\end{array}\right]
+\longrightarrow
+\left[\begin{array}{ccc|c}1&1&1&500\\0&0.10&0.30&60\end{array}\right].
+$$
+
+Después, $R_2\to10R_2$:
+
+$$
+\left[\begin{array}{ccc|c}1&1&1&500\\0&1&3&600\end{array}\right].
+$$
+
+Finalmente, $R_1\to R_1-R_2$ produce la forma reducida:
 
 $$
 \left[\begin{array}{ccc|c}1&0&-2&-100\\0&1&3&600\end{array}\right].
@@ -165,13 +193,17 @@ para todo $t$. Sin embargo, una mezcla exige además masas no negativas:
 | $y=600-3t\ge0$ | $t\le200$ |
 | $z=t\ge0$ | $t\ge0$ |
 
+Por ejemplo, $600-3t\ge0$ equivale a $600\ge3t$ y, al dividir entre $3>0$, a $t\le200$. Si se divide directamente $-3t\ge-600$ entre $-3$, debe invertirse el sentido de la desigualdad.
+
 Las tres condiciones se cumplen simultáneamente si y solo si $50\le t\le200$, una [desigualdad doble](2026-08-17-sesion-06.qmd#ejemplo-4.-desigualdad-doble) cuyo conjunto solución es el intervalo $[50,200]$. Así, las mezclas admisibles están descritas por
 
 $$
 \{(-100+2t,\ 600-3t,\ t):50\le t\le200\}.
 $$
 
-Por ejemplo, $t=100$ da $100$ g del lote A, $300$ g del B y $100$ g del C. En cambio, $t=0$ satisface las ecuaciones, pero exige $-100$ g del lote A y no representa una mezcla admisible.
+Por ejemplo, $t=100$ da $100$ g del lote A, $300$ g del B y $100$ g del C. En los extremos, $t=50$ da $(0,450,50)$ y $t=200$ da $(300,0,200)$, en gramos. Ambos extremos se incluyen porque se permiten masas iguales a cero: no es obligatorio utilizar los tres lotes.
+
+En cambio, $t=0$ satisface las ecuaciones, pero exige $-100$ g del lote A y no representa una mezcla admisible. Las restricciones seleccionan una parte del conjunto solución del sistema.
 
 ## Errores frecuentes
 
@@ -181,203 +213,10 @@ Por ejemplo, $t=100$ da $100$ g del lote A, $300$ g del B y $100$ g del C. En ca
 - **Cambiar incorrectamente el signo al despejar.** De $x-7z=2$ y $z=t$ se obtiene $x=2+7t$. Usar $x=2-7t$ produciría, con $t=1$, la terna $(-5,-2,1)$, que en la primera ecuación original da $-5-4-1=-10\ne4$. La terna correcta, $(9,-2,1)$, satisface ambas ecuaciones.
 - **Omitir las restricciones del problema.** En el Ejemplo 2, $t=0$ satisface las ecuaciones, pero exige $-100$ g del lote A. Las mezclas admisibles requieren $50\le t\le200$.
 
-## Actividad
-
-Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Revise la consistencia antes de describir las soluciones y compruebe cada parametrización en las ecuaciones originales.
-
-1. Considere el sistema
-
-   $$
-   \left\{\begin{aligned}x-y+2z&=1\\2x-y+5z&=4.\end{aligned}\right.
-   $$
-
-   a. Obtenga la forma escalonada reducida de su matriz aumentada y registre las operaciones. Identifique las variables con pivote, la variable libre y el rango de la matriz de coeficientes.
-
-   b. Escriba las ecuaciones paramétricas y el conjunto solución, con $z=t$. Verifique la descripción en las dos ecuaciones originales.
-
-   c. Determine la solución que cumple $y=0$.
-
-2. Tres lotes de polvo cerámico, A, B y C, contienen $20\,\%$, $50\,\%$ y $80\,\%$ en masa de un mismo componente. Se preparan $600$ g de mezcla con $60\,\%$ de ese componente, usando $x$, $y$ y $z$ gramos de los lotes A, B y C. Las masas se suman sin pérdidas y $x,y,z\ge0$. La masa del componente en cada porción se obtiene multiplicando su masa por el porcentaje expresado como fracción.
-
-   Las ecuaciones y la forma reducida correspondiente son
-
-   $$
-   x+y+z=600,\qquad 0.20x+0.50y+0.80z=360,
-   $$
-
-   $$
-   \left[\begin{array}{ccc|c}1&0&-1&-200\\0&1&2&800\end{array}\right].
-   $$
-
-   a. Describa las soluciones con $z=t$ y determine los valores de $t$ que producen mezclas admisibles.
-
-   b. Determine la mezcla admisible que utiliza la menor masa del lote C. ¿Puede prepararse una mezcla sin ese lote?
-
-   c. Si además se exige que la masa del lote B sea el doble de la del lote A, ¿cuántas mezclas cumplen todas las condiciones? Determine las masas y verifique su respuesta.
-
-3. Las siguientes matrices aumentadas están reducidas y corresponden a sistemas en $x,y,z$:
-
-   a.
-
-      $$
-      \left[\begin{array}{ccc|c}1&-2&0&3\\0&0&1&-2\\0&0&0&0\end{array}\right].
-      $$
-
-   b.
-
-      $$
-      \left[\begin{array}{ccc|c}1&4&0&0\\0&0&1&0\\0&0&0&1\end{array}\right].
-      $$
-
-   En cada caso, determine la consistencia y el rango de la matriz de coeficientes, y escriba el conjunto solución. Si el sistema es consistente, identifique la variable libre. Explique por qué la presencia de un renglón nulo no basta para justificar la clasificación del inciso a; compare con la matriz (i) de esta página.
-
-::: {.callout-note collapse="true" title="Soluciones de la actividad"}
-
-**1. a.** Las operaciones $R_2\to R_2-2R_1$ y después $R_1\to R_1+R_2$ producen
-
-$$
-\left[\begin{array}{ccc|c}1&-1&2&1\\2&-1&5&4\end{array}\right]
-\longrightarrow
-\left[\begin{array}{ccc|c}1&-1&2&1\\0&1&1&2\end{array}\right]
-\longrightarrow
-\left[\begin{array}{ccc|c}1&0&3&3\\0&1&1&2\end{array}\right].
-$$
-
-El sistema es consistente. Las variables con pivote son $x$ y $y$; $z$ es libre. El rango de la matriz de coeficientes es $2$.
-
-**1. b.** Con $z=t$, las ecuaciones reducidas dan $x=3-3t$ y $y=2-t$. Por tanto,
-
-$$
-S=\{(3-3t,\ 2-t,\ t):t\in\mathbb R\}.
-$$
-
-La verificación da $(3-3t)-(2-t)+2t=1$ y $2(3-3t)-(2-t)+5t=4$ para todo $t$.
-
-**1. c.** La condición $y=2-t=0$ exige $t=2$. La solución es $(-3,0,2)$; satisface $-3-0+4=1$ y $-6-0+10=4$.
-
-**2. a.** La matriz reducida representa $x-z=-200$ y $y+2z=800$. Con $z=t$:
-
-$$
-S=\{(t-200,\ 800-2t,\ t):t\in\mathbb R\}.
-$$
-
-Las restricciones $t-200\ge0$, $800-2t\ge0$ y $t\ge0$ se cumplen simultáneamente cuando $200\le t\le400$. La parametrización satisface las ecuaciones originales: $(t-200)+(800-2t)+t=600$ y $0.20(t-200)+0.50(800-2t)+0.80t=360$.
-
-**2. b.** La menor masa del lote C corresponde a $t=200$: $0$ g del lote A, $400$ g del B y $200$ g del C. No puede prescindirse del lote C, porque $t=0$ está fuera del intervalo admisible y exigiría $x=-200$.
-
-**2. c.** La condición $y=2x$ exige $800-2t=2(t-200)$, de donde $t=300$. Hay una sola mezcla: $100$ g del lote A, $200$ g del B y $300$ g del C. Se verifica $100+200+300=600$, $0.20(100)+0.50(200)+0.80(300)=360$ y $200=2(100)$. Las masas son no negativas.
-
-**3. a.** El sistema es consistente. Las variables con pivote son $x$ y $z$; la variable libre es $y$. El rango de la matriz de coeficientes es $2$. Tomando $y=t$:
-
-$$
-S=\{(3+2t,\ t,\ -2):t\in\mathbb R\}.
-$$
-
-Hay infinitas soluciones porque el sistema es consistente y tiene una variable libre. El renglón nulo no basta para justificarlo: la matriz (i) también tiene uno y su solución es única.
-
-**3. b.** El tercer renglón representa $0=1$, por lo que el sistema es inconsistente y $S=\varnothing$. El rango de la matriz de coeficientes es $2$; el pivote de la última columna pertenece a la matriz aumentada, no a la matriz de coeficientes.
-
-:::
-
-## Ejercicios para practicar
-
-Resuelva estos ejercicios como práctica autónoma y consulte las respuestas después de completar sus procedimientos.
-
-1. Describa por componentes el conjunto solución de $2x+4y-2z=6$, $3x+7y+z=4$, usando $z=t$. Indique el rango de la matriz de coeficientes y verifique la descripción en las ecuaciones originales.
-
-2. Este ejercicio retoma el [ejercicio 3 de la práctica de la Sesión 32](2026-10-06-sesion-32.qmd#ejercicios-para-practicar), con otro registro en el tercer conjunto. Se desea determinar la masa de placas de tres tipos: A, B y C. Todas las placas de un mismo tipo tienen la misma masa. Se registran las masas de tres conjuntos, sin incluir recipientes. Considere exactos los datos:
-
-   | Conjunto | Placas A | Placas B | Placas C | Masa total (g) |
-   |---|---:|---:|---:|---:|
-   | 1 | $1$ | $1$ | $1$ | $120$ |
-   | 2 | $2$ | $1$ | $1$ | $150$ |
-   | 3 | $3$ | $2$ | $2$ | $270$ |
-
-   a. Denote por $x,y,z>0$ las masas, en gramos, de una placa A, B y C, respectivamente. Plantee el sistema, resuélvalo por Gauss-Jordan y describa sus soluciones con $z=t$. Determine el intervalo admisible de $t$.
-
-   b. Indique qué masas quedan determinadas y cuáles no. Explique por qué el tercer registro no aporta una condición adicional.
-
-   c. Una nueva medición, considerada exacta, indica que un conjunto con una placa A, dos B y una C tiene una masa de $160$ g. Determine las tres masas y compruebe los cuatro registros.
-
-3. Para preparar una disolución que se utilizará en el lavado de muestras de material, se dispone de tres disoluciones de la misma sal, con concentraciones de $10\,\%$, $20\,\%$ y $30\,\%$ en masa. Se desea obtener $300$ g al $22\,\%$, mezclando $x,y,z\ge0$ gramos de cada una, respectivamente. Las masas se suman sin pérdidas; la masa de sal de cada porción es su masa por la concentración expresada como fracción.
-
-   a. Plantee las dos ecuaciones, describa las soluciones con $z=t$ y determine los valores admisibles de $t$.
-
-   b. Obtenga la mezcla que no utiliza la disolución al $10\,\%$.
-
-   c. ¿Puede prepararse la mezcla con masas iguales de las tres disoluciones? Justifique.
-
-4. La forma reducida de $x+y+2z=3$, $2x+3y+5z=7$ es
-
-   $$
-   \left[\begin{array}{ccc|c}1&0&1&2\\0&1&1&1\end{array}\right].
-   $$
-
-   Un estudiante escribió $S=\{(2+t,\ 1+t,\ t):t\in\mathbb R\}$ y lo comprobó solamente con $t=0$. Sustituya la terna correspondiente a $t=1$ en las ecuaciones originales, localice el error, corrija la descripción y explique por qué la comprobación con $t=0$ no lo detectó.
-
-5. Considere el sistema $3x+2y=6$, $6x+4y=12$ del [Ejemplo 3 de la Sesión 28](2026-09-22-sesion-28.qmd#ejemplo-3.-un-sistema-con-infinitas-soluciones).
-
-   a. Obtenga su forma reducida, identifique la variable libre y describa el conjunto solución con $y=t$. Indique el rango de la matriz de coeficientes.
-
-   b. Otra descripción es $\{(u,\ 3-\frac32u):u\in\mathbb R\}$. Determine la relación entre $u$ y $t$ y decida si ambas descripciones representan el mismo conjunto. Indique los valores de ambos parámetros para la pareja $(4,-3)$.
-
-6. Se busca un polinomio $p(x)=ax^2+bx+c$ cuya gráfica pase por $(1,4)$ y $(-1,0)$.
-
-   a. Plantee el sistema en las incógnitas $a,b,c$ y describa sus soluciones con $c=t$.
-
-   b. ¿Para qué valor de $t$ el polinomio obtenido no tiene [grado](2026-09-01-sesion-15.qmd#grado-y-coeficiente-principal) $2$? ¿Qué polinomio resulta?
-
-   c. Determine el polinomio que además pasa por $(0,1)$, factorícelo e identifique su [raíz doble](2026-09-02-sesion-16.qmd#resolución-por-factorización).
-
-::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
-
-**1.** $S=\{(13+9t,\ -5-4t,\ t):t\in\mathbb R\}$; rango $2$. Los lados izquierdos originales valen $6$ y $4$, respectivamente, para todo $t$.
-
-**2. a.** Sistema: $x+y+z=120$, $2x+y+z=150$, $3x+2y+2z=270$. Forma reducida:
-
-$$
-\left[\begin{array}{ccc|c}1&0&0&30\\0&1&1&90\\0&0&0&0\end{array}\right].
-$$
-
-$S=\{(30,\ 90-t,\ t):t\in\mathbb R\}$. Intervalo admisible: $0<t<90$.
-
-**2. b.** Queda determinada la masa de una placa A: $30$ g. Las masas de B y C no quedan determinadas individualmente; su suma es $90$ g. El tercer registro es la suma de los dos primeros, tanto en las cantidades de placas como en la masa total.
-
-**2. c.** Las masas son $30$ g, $40$ g y $50$ g, respectivamente. Las masas totales de los cuatro conjuntos son $120$, $150$, $270$ y $160$ g.
-
-**3. a.** $x+y+z=300$, $0.10x+0.20y+0.30z=66$. $S=\{(t-60,\ 360-2t,\ t):t\in\mathbb R\}$. Valores admisibles: $60\le t\le180$.
-
-**3. b.** $0$ g al $10\,\%$, $240$ g al $20\,\%$ y $60$ g al $30\,\%$.
-
-**3. c.** No. Con $100$ g de cada disolución, la mezcla contiene $60$ g de sal y su concentración es $20\,\%$, en lugar de $22\,\%$.
-
-**4.** Con $t=1$, la terna propuesta es $(3,2,1)$; los lados izquierdos valen $7$ y $17$, en lugar de $3$ y $7$. Hay un error de signo al despejar. La descripción correcta es $S=\{(2-t,\ 1-t,\ t):t\in\mathbb R\}$. Con $t=0$, ambas descripciones producen $(2,1,0)$ y el error no se manifiesta.
-
-**5. a.** Forma reducida:
-
-$$
-\left[\begin{array}{cc|c}1&\frac23&2\\0&0&0\end{array}\right].
-$$
-
-La variable libre es $y$; el rango es $1$. $S=\{(2-\frac23t,\ t):t\in\mathbb R\}$.
-
-**5. b.** $u=2-\frac23t$ y $t=3-\frac32u$; ambas descripciones representan el mismo conjunto. Para $(4,-3)$, los valores son $u=4$ y $t=-3$.
-
-**6. a.** $a+b+c=4$, $a-b+c=0$. $a=2-t$, $b=2$, $c=t$, con $t\in\mathbb R$.
-
-**6. b.** $t=2$: $p(x)=2x+2$, de grado $1$.
-
-**6. c.** $t=1$: $p(x)=x^2+2x+1=(x+1)^2$; su raíz doble es $-1$.
-
-:::
-
 ## Conclusiones del aprendizaje
 
-En un sistema consistente con una variable libre, la forma reducida permite describir todas las soluciones mediante un parámetro. La sustitución verifica que cada terna descrita satisface las ecuaciones originales; las restricciones del contexto pueden limitar los valores admisibles del parámetro.
+La práctica de estos conceptos se encuentra en la [Sesión 34](2026-10-08-sesion-34.qmd#actividad).
 
-El trabajo realizado permite comprobar si puede:
-
-- Revisar la consistencia e identificar las variables con pivote y la variable libre, incluso cuando esta no ocupa la última columna de coeficientes, como en los ejercicios 1a y 3 de la [Actividad](#actividad).
-- Describir todas las soluciones por componentes mediante un parámetro y verificar la descripción en las ecuaciones originales, como en el ejercicio 1b de la Actividad y los ejercicios 1 y 4 de la [práctica](#ejercicios-para-practicar).
-- Explicar, mediante los casos comparados, por qué un renglón nulo no determina por sí solo el número de soluciones, como en el ejercicio 3 de la [Actividad](#actividad).
-- Distinguir las soluciones de un sistema de las que satisfacen las restricciones de masa de un problema, y determinar cómo una condición adicional puede seleccionar una sola solución, como en el ejercicio 2 de la Actividad y los ejercicios 2 y 3 de la [práctica](#ejercicios-para-practicar).
+- Explicar por qué un renglón nulo no determina por sí solo el número de soluciones, revisando la consistencia y las columnas con pivote en los [tres casos estudiados](#un-renglón-nulo-no-determina-el-número-de-soluciones).
+- Reconstruir y verificar una parametrización: expresar las variables con pivote en función de la variable libre, justificar que se describen todas las soluciones y sustituir en las ecuaciones originales, como en el [Ejemplo 1](#ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas).
+- Interpretar las restricciones de un problema como condiciones sobre el parámetro. En el [Ejemplo 2](#ejemplo-2.-restricciones-de-masa-en-una-mezcla), las masas no negativas restringen el parámetro al intervalo $[50,200]$.

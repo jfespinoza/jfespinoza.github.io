@@ -76,6 +76,7 @@ book:
         - sesiones/2026-10-05-sesion-31.qmd
         - sesiones/2026-10-06-sesion-32.qmd
         - sesiones/2026-10-07-sesion-33.qmd
+        - sesiones/2026-10-08-sesion-34.qmd
     - part: "Unidad 4. Matrices"
       chapters:
         - unidades/04-matrices.qmd
