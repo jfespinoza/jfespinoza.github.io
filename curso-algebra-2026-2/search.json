@@ -3262,6 +3262,127 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-10-09-sesion-35.html",
+    "href": "sesiones/2026-10-09-sesion-35.html",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá decidir qué sumas y restas de matrices están definidas, calcularlas junto con múltiplos escalares y transpuestas, e interpretar una suma de columnas ponderadas en un balance de masa. Podrá comprobarlo al resolver los ejercicios de la Actividad y justificar la comprobación individual del cierre.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#para-comenzar-lectura-de-una-forma-reducida",
+    "href": "sesiones/2026-10-09-sesion-35.html#para-comenzar-lectura-de-una-forma-reducida",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Para comenzar: lectura de una forma reducida",
+    "text": "Para comenzar: lectura de una forma reducida\nLa siguiente matriz aumentada de un sistema en \\(x,y,z\\) está en forma escalonada reducida:\n\\[\n\\left[\\begin{array}{ccc|c}1&0&-2&3\\\\0&1&1&4\\end{array}\\right].\n\\]\nIdentifique la variable libre y escriba la solución que corresponde al valor \\(1\\) de esa variable, como en la descripción paramétrica de la Sesión 33.\n\n\n\n\n\n\nNotaRespuesta\n\n\n\n\n\nNo hay contradicción y la columna de \\(z\\) no tiene pivote: \\(z\\) es la variable libre. Las ecuaciones son \\(x-2z=3\\) y \\(y+z=4\\). Con \\(z=1\\) se obtiene \\((5,3,1)\\), que cumple \\(5-2(1)=3\\) y \\(3+1=4\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#tamaño-e-igualdad-de-matrices",
+    "href": "sesiones/2026-10-09-sesion-35.html#tamaño-e-igualdad-de-matrices",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Tamaño e igualdad de matrices",
+    "text": "Tamaño e igualdad de matrices\nUna matriz de tamaño \\(m\\times n\\) tiene \\(m\\) renglones y \\(n\\) columnas. Su orden o tamaño se escribe siempre en ese orden. Como en la Sesión 29, se denota por \\(a_{ij}\\) la entrada del renglón \\(i\\) y la columna \\(j\\) de \\(A=[a_{ij}]\\). Todas las entradas consideradas aquí son reales.\nDos matrices son iguales si tienen el mismo tamaño y sus entradas correspondientes son iguales. Por ejemplo, \\(\\begin{bmatrix}1&2\\end{bmatrix}\\) y \\(\\begin{bmatrix}1\\\\2\\end{bmatrix}\\) tienen los mismos números, pero son matrices distintas: sus tamaños son \\(1\\times2\\) y \\(2\\times1\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar",
+    "href": "sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Suma, resta y producto por un escalar",
+    "text": "Suma, resta y producto por un escalar\nSean \\(A=[a_{ij}]\\) y \\(B=[b_{ij}]\\) matrices del mismo tamaño \\(m\\times n\\), y sea \\(c\\) un número real; en este contexto, un número real se llama escalar.\n\nLa suma \\(A+B\\) es la matriz \\(m\\times n\\) con entradas \\((A+B)_{ij}=a_{ij}+b_{ij}\\).\nEl producto por un escalar \\(cA\\) es la matriz \\(m\\times n\\) con entradas \\((cA)_{ij}=c\\,a_{ij}\\): el escalar multiplica todas las entradas.\nLa resta es \\(A-B=A+(-1)B\\); sus entradas son \\(a_{ij}-b_{ij}\\).\n\nSi \\(A\\) y \\(B\\) tienen tamaños distintos, \\(A+B\\) y \\(A-B\\) no están definidas: alguna posición \\((i,j)\\) existe en una de las matrices y no en la otra. No se completa con ceros ni se reacomodan las entradas.\nLa matriz cero de tamaño \\(m\\times n\\) tiene todas sus entradas iguales a cero. Se escribe \\(0\\), o \\(0_{m\\times n}\\) cuando conviene indicar su tamaño.\nLas propiedades de los números reales se aplican entrada por entrada. Para matrices \\(A\\) y \\(B\\) del mismo tamaño y un escalar real \\(c\\), se tiene\n\\[\nA+0=A,\\qquad c(A+B)=cA+cB,\n\\]\ncon la matriz cero del mismo tamaño que \\(A\\). En la segunda igualdad, cada entrada cumple \\(c(a_{ij}+b_{ij})=ca_{ij}+cb_{ij}\\).\nLa suma de matrices combina dos arreglos entrada por entrada. Una operación elemental de renglón actúa sobre una misma matriz aumentada y conserva las soluciones del sistema; sumar otra matriz a la matriz aumentada no ofrece esa garantía.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#transpuesta",
+    "href": "sesiones/2026-10-09-sesion-35.html#transpuesta",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Transpuesta",
+    "text": "Transpuesta\nLa transpuesta de una matriz \\(A=[a_{ij}]\\) de tamaño \\(m\\times n\\) es la matriz \\(A^{\\mathsf T}\\), de tamaño \\(n\\times m\\), cuyas entradas son\n\\[\n(A^{\\mathsf T})_{ij}=a_{ji}.\n\\]\nLos renglones de \\(A\\) se convierten en las columnas de \\(A^{\\mathsf T}\\), en el mismo orden. Si \\(m\\ne n\\), el tamaño cambia: la transpuesta de una matriz \\(2\\times3\\) es \\(3\\times2\\). Al transponer dos veces se recupera la matriz original: \\((A^{\\mathsf T})^{\\mathsf T}=A\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#una-tabla-de-composición-como-matriz",
+    "href": "sesiones/2026-10-09-sesion-35.html#una-tabla-de-composición-como-matriz",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Una tabla de composición como matriz",
+    "text": "Una tabla de composición como matriz\nRetome los tres lotes de polvo metálico del Ejemplo 2 de la Sesión 33, con \\(60\\,\\%\\), \\(70\\,\\%\\) y \\(90\\,\\%\\) de cobre en masa. Se agrupa como material restante todo lo que no es cobre, sin especificar su composición. La tabla de fracciones en masa es la matriz \\(2\\times3\\)\n\\[\nK=\\begin{bmatrix}0.60&0.70&0.90\\\\0.40&0.30&0.10\\end{bmatrix},\n\\]\ncuyos renglones corresponden al cobre y al resto, y cuyas columnas corresponden a los lotes A, B y C. Cada columna suma \\(1\\), es decir, el \\(100\\,\\%\\) del lote.\nCada columna de \\(K\\) es una matriz \\(2\\times1\\). Si se mezclan sin pérdidas \\(m_A\\), \\(m_B\\) y \\(m_C\\) gramos de los lotes A, B y C, las masas de cobre y de resto en la mezcla son las entradas de\n\\[\nm_A\\begin{bmatrix}0.60\\\\0.40\\end{bmatrix}+m_B\\begin{bmatrix}0.70\\\\0.30\\end{bmatrix}+m_C\\begin{bmatrix}0.90\\\\0.10\\end{bmatrix}.\n\\]\nSe trata de tres productos por un escalar y dos sumas de matrices \\(2\\times1\\). Cada masa multiplica la columna de su propio lote.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#ejemplos",
+    "href": "sesiones/2026-10-09-sesion-35.html#ejemplos",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Suma, múltiplo escalar y resta\nSean\n\\[\nA=\\begin{bmatrix}1&-1\\\\2&0\\end{bmatrix},\\qquad B=\\begin{bmatrix}2&3\\\\-1&4\\end{bmatrix}.\n\\]\nAmbas son \\(2\\times2\\); por tanto, \\(A+B\\) y \\(2A-B\\) están definidas. Entrada por entrada,\n\\[\nA+B=\\begin{bmatrix}1+2&-1+3\\\\2+(-1)&0+4\\end{bmatrix}=\\begin{bmatrix}3&2\\\\1&4\\end{bmatrix}.\n\\]\nPara \\(2A-B\\), primero se multiplica cada entrada de \\(A\\) por \\(2\\) y después se resta cada entrada de \\(B\\):\n\\[\n2A=\\begin{bmatrix}2&-2\\\\4&0\\end{bmatrix},\\qquad\n2A-B=\\begin{bmatrix}2-2&-2-3\\\\4-(-1)&0-4\\end{bmatrix}=\\begin{bmatrix}0&-5\\\\5&-4\\end{bmatrix}.\n\\]\nComprobación. Si el cálculo es correcto, \\((2A-B)+B\\) debe ser igual a \\(2A\\):\n\\[\n\\begin{bmatrix}0&-5\\\\5&-4\\end{bmatrix}+\\begin{bmatrix}2&3\\\\-1&4\\end{bmatrix}=\\begin{bmatrix}2&-2\\\\4&0\\end{bmatrix}=2A.\n\\]\n\n\nEjemplo 2. Transpuesta de la tabla de composición\nLa matriz \\(K\\) es \\(2\\times3\\); su transpuesta es \\(3\\times2\\):\n\\[\nK^{\\mathsf T}=\\begin{bmatrix}0.60&0.40\\\\0.70&0.30\\\\0.90&0.10\\end{bmatrix}.\n\\]\nEl primer renglón de \\(K\\), con las fracciones de cobre \\(0.60\\), \\(0.70\\) y \\(0.90\\), es ahora la primera columna. \\(K^{\\mathsf T}\\) contiene la misma información con otra organización: sus renglones corresponden a los lotes A, B y C, y sus columnas, al cobre y al resto.\nComprobación. La fracción de cobre del lote C ocupa la posición \\((1,3)\\) en \\(K\\) y la posición \\((3,1)\\) en \\(K^{\\mathsf T}\\): \\((K^{\\mathsf T})_{31}=k_{13}=0.90\\). Cada renglón de \\(K^{\\mathsf T}\\) suma \\(1\\), como cada columna de \\(K\\), y al transponer \\(K^{\\mathsf T}\\) se recupera \\(K\\).\n\n\nEjemplo 3. Masas de cobre y de resto en una mezcla\nSe mezclan sin pérdidas \\(100\\) g del lote A, \\(300\\) g del lote B y \\(100\\) g del lote C. Con las columnas de \\(K\\):\n\\[\n100\\begin{bmatrix}0.60\\\\0.40\\end{bmatrix}+300\\begin{bmatrix}0.70\\\\0.30\\end{bmatrix}+100\\begin{bmatrix}0.90\\\\0.10\\end{bmatrix}\n=\\begin{bmatrix}60\\\\40\\end{bmatrix}+\\begin{bmatrix}210\\\\90\\end{bmatrix}+\\begin{bmatrix}90\\\\10\\end{bmatrix}\n=\\begin{bmatrix}360\\\\140\\end{bmatrix}.\n\\]\nLa mezcla contiene \\(360\\) g de cobre y \\(140\\) g de resto.\nComprobación. \\(360+140=500\\) g, que coincide con \\(100+300+100\\), la suma de las masas de los lotes. La fracción de cobre es \\(360/500=0.72\\), es decir, \\(72\\,\\%\\): es la mezcla admisible que el Ejemplo 2 de la Sesión 33 obtiene con \\(t=100\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#errores-frecuentes",
+    "href": "sesiones/2026-10-09-sesion-35.html#errores-frecuentes",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nSumar matrices de tamaños distintos. Tener el mismo número total de entradas no basta: una matriz \\(1\\times2\\) no puede sumarse con una \\(2\\times1\\).\nMultiplicar solo algunas entradas por el escalar. En el Ejemplo 1, el escalar \\(2\\) también multiplica la entrada \\(-1\\): esta pasa a ser \\(-2\\).\nCambiar el signo de la resta. En el Ejemplo 1, \\((2A-B)_{12}=2(-1)-3=-5\\).\nTransponer sin intercambiar renglones y columnas. Una matriz \\(2\\times3\\) produce una transpuesta \\(3\\times2\\); la entrada \\((i,j)\\) pasa a la posición \\((j,i)\\).\nAsociar una masa con la columna de otro lote. En el Ejemplo 3, los \\(300\\) g multiplican la columna del lote B. Comprobar solo la masa total no detecta siempre una asociación incorrecta.\nConfundir la suma de matrices con una operación elemental. Si a la matriz aumentada \\([1\\ \\ 1\\mid3]\\) de la ecuación aislada \\(x+y=3\\) se le suma otra matriz \\([0\\ \\ 0\\mid1]\\), resulta \\([1\\ \\ 1\\mid4]\\). La ecuación pasa a ser \\(x+y=4\\) y la pareja \\((1,2)\\) deja de satisfacerla.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#actividad",
+    "href": "sesiones/2026-10-09-sesion-35.html#actividad",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.\n\nConsidere las matrices\n\\[\nC=\\begin{bmatrix}3&-2\\\\1&4\\end{bmatrix},\\qquad D=\\begin{bmatrix}1&5\\\\-2&0\\end{bmatrix},\\qquad E=\\begin{bmatrix}1&0&2\\\\-1&3&0\\end{bmatrix}.\n\\]\n\nCalcule \\(C+D\\).\nCalcule \\(2C-D\\) y compruebe su resultado verificando que \\((2C-D)+D=2C\\).\n¿Está definida \\(C+E\\)? Justifique con los tamaños.\n\nSea \\(F=\\begin{bmatrix}4&-1&7\\\\0&2&-3\\end{bmatrix}\\).\n\nEscriba \\(F^{\\mathsf T}\\) e indique su tamaño.\nLa entrada \\(7\\) ocupa la posición \\((1,3)\\) de \\(F\\). ¿Qué posición ocupa en \\(F^{\\mathsf T}\\)?\n¿En qué posición de \\(F^{\\mathsf T}\\) aparece la entrada \\(-3\\) de \\(F\\)? Escríbala con la notación \\((F^{\\mathsf T})_{ij}\\).\n\nCon los lotes A, B y C y la matriz \\(K\\) de esta sesión, se mezclan sin pérdidas \\(200\\) g del lote A, \\(200\\) g del lote B y \\(100\\) g del lote C.\n\nEscriba la suma de las columnas de \\(K\\) multiplicadas por las masas correspondientes, antes de efectuar operaciones.\nCalcule las masas de cobre y de resto en la mezcla e interprete cada una.\nCompruebe la masa total y calcule el porcentaje de cobre de la mezcla.\n\n\nComprobación individual. Sin consultar las soluciones ni comparar respuestas, considere una matriz \\(G\\) de tamaño \\(2\\times3\\) cuya entrada \\((1,2)\\) es \\(g_{12}=-3\\).\n\n¿Qué tamaño tiene \\(G^{\\mathsf T}\\)? ¿Está definida \\(G+G^{\\mathsf T}\\)? Justifique.\nDetermine la entrada \\((1,2)\\) de \\(-2G\\) y la entrada \\((2,1)\\) de \\(G^{\\mathsf T}\\).\n\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. Ambas matrices son \\(2\\times2\\). Entrada por entrada,\n\\[\nC+D=\\begin{bmatrix}3+1&-2+5\\\\1+(-2)&4+0\\end{bmatrix}=\\begin{bmatrix}4&3\\\\-1&4\\end{bmatrix}.\n\\]\n1. b. Primero \\(2C\\) y después la resta:\n\\[\n2C=\\begin{bmatrix}6&-4\\\\2&8\\end{bmatrix},\\qquad\n2C-D=\\begin{bmatrix}6-1&-4-5\\\\2-(-2)&8-0\\end{bmatrix}=\\begin{bmatrix}5&-9\\\\4&8\\end{bmatrix}.\n\\]\nComprobación:\n\\[\n(2C-D)+D=\\begin{bmatrix}5+1&-9+5\\\\4+(-2)&8+0\\end{bmatrix}=\\begin{bmatrix}6&-4\\\\2&8\\end{bmatrix}=2C.\n\\]\n1. c. No. \\(C\\) es \\(2\\times2\\) y \\(E\\) es \\(2\\times3\\): la posición \\((1,3)\\) existe en \\(E\\) y no en \\(C\\), de modo que la suma no está definida.\n2. a. Los renglones de \\(F\\) pasan a ser las columnas de \\(F^{\\mathsf T}\\):\n\\[\nF^{\\mathsf T}=\\begin{bmatrix}4&0\\\\-1&2\\\\7&-3\\end{bmatrix},\n\\]\nde tamaño \\(3\\times2\\).\n2. b. La posición \\((3,1)\\): \\((F^{\\mathsf T})_{31}=f_{13}=7\\).\n2. c. En \\(F\\), la entrada \\(-3\\) ocupa la posición \\((2,3)\\); en \\(F^{\\mathsf T}\\) ocupa la posición \\((3,2)\\): \\((F^{\\mathsf T})_{32}=f_{23}=-3\\).\n3. a. Cada masa multiplica la columna de su lote:\n\\[\n200\\begin{bmatrix}0.60\\\\0.40\\end{bmatrix}+200\\begin{bmatrix}0.70\\\\0.30\\end{bmatrix}+100\\begin{bmatrix}0.90\\\\0.10\\end{bmatrix}.\n\\]\n3. b. Al efectuar los productos y las sumas:\n\\[\n\\begin{bmatrix}120\\\\80\\end{bmatrix}+\\begin{bmatrix}140\\\\60\\end{bmatrix}+\\begin{bmatrix}90\\\\10\\end{bmatrix}=\\begin{bmatrix}350\\\\150\\end{bmatrix}.\n\\]\nLa mezcla contiene \\(350\\) g de cobre y \\(150\\) g de resto.\n3. c. \\(350+150=500\\) g, igual a \\(200+200+100\\). La fracción de cobre es \\(350/500=0.70\\); la mezcla tiene \\(70\\,\\%\\) de cobre.\nComprobación individual, a. \\(G^{\\mathsf T}\\) es \\(3\\times2\\). La suma \\(G+G^{\\mathsf T}\\) no está definida, porque \\(G\\) es \\(2\\times3\\) y \\(G^{\\mathsf T}\\) es \\(3\\times2\\): por ejemplo, la posición \\((1,3)\\) existe en \\(G\\) y no en \\(G^{\\mathsf T}\\).\nComprobación individual, b. \\((-2G)_{12}=-2\\,g_{12}=-2(-3)=6\\) y \\((G^{\\mathsf T})_{21}=g_{12}=-3\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-10-09-sesion-35.html#ejercicios-para-practicar",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3; los ejercicios 4 y 5 permiten reforzar la transpuesta y la descripción paramétrica, según lo necesite. Consulte las respuestas después de completar su intento.\n\nUna probeta es una muestra de material preparada con forma y medidas fijas para un ensayo. En un modelo de preparación sin pérdidas, un laboratorio usa solamente cobre y estaño para fabricar tres tipos de probetas, A, B y C. Registra las masas de ambos componentes, en gramos, en cada probeta. La matriz \\(P\\) corresponde a las probetas preparadas el lunes y \\(Q\\) a las del martes; en ambas, el primer renglón corresponde al cobre, el segundo al estaño y las columnas a las probetas A, B y C:\n\\[\nP=\\begin{bmatrix}44&36&45\\\\6&4&5\\end{bmatrix},\\qquad Q=\\begin{bmatrix}22&27&36\\\\3&3&4\\end{bmatrix}.\n\\]\n\nCalcule \\(P+Q\\) e interprete la entrada \\((P+Q)_{21}\\).\nSe preparan cuatro juegos de probetas idénticos al del lunes. Calcule \\(4P\\) e interprete la entrada \\((4P)_{12}\\).\nSume las dos entradas de cada columna de \\(P+Q\\). ¿Qué representan esas tres sumas?\n\nSe pesan paquetes con piezas de tres materiales: A, metálicas; B, poliméricas, y C, cerámicas. Todas las piezas de un mismo tipo tienen la misma masa. Un paquete con una pieza de cada tipo tiene una masa de \\(30\\) g; uno con una pieza A, dos B y una C, de \\(38\\) g; y uno con dos piezas A, una B y tres C, de \\(64\\) g. Plantee el sistema para las masas \\(x,y,z\\), en gramos, de una pieza A, B y C, resuélvalo por el método de Gauss y verifique la solución en los tres registros.\nUn estudiante obtiene la forma escalonada reducida\n\\[\n\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&0&3\\\\0&0&1&-1\\\\0&0&0&0\\end{array}\\right]\n\\]\nde un sistema en \\(x,y,z\\) y concluye: “Como hay un renglón nulo, el sistema tiene infinitas soluciones”.\n\nExplique el error, como en los tres casos de la Sesión 33.\nEscriba el conjunto solución.\n¿Qué debe observarse en una forma escalonada reducida para concluir que un sistema tiene infinitas soluciones?\n\nSea \\(L=\\begin{bmatrix}2&-1&0\\\\5&3&-4\\end{bmatrix}\\).\n\nEscriba \\(L^{\\mathsf T}\\) e indique su tamaño.\nDetermine \\((L^{\\mathsf T})_{32}\\) y la entrada de \\(L\\) que le corresponde.\nDecida cuáles de las expresiones \\(L+L^{\\mathsf T}\\), \\(L^{\\mathsf T}+L^{\\mathsf T}\\) y \\((L^{\\mathsf T})^{\\mathsf T}-L\\) están definidas y calcule las que lo estén.\n\nLa forma escalonada reducida de un sistema en \\(x,y,z\\) es\n\\[\n\\left[\\begin{array}{ccc|c}1&0&3&5\\\\0&1&-1&2\\end{array}\\right].\n\\]\nDescriba el conjunto solución con \\(z=t\\), verifique la descripción en las dos ecuaciones, como en la Sesión 34, y obtenga la solución que cumple \\(x=-1\\).\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a. \\(P+Q=\\begin{bmatrix}66&63&81\\\\9&7&9\\end{bmatrix}\\); \\((P+Q)_{21}=9\\): las dos probetas A contienen en total \\(9\\) g de estaño.\n1. b. \\(4P=\\begin{bmatrix}176&144&180\\\\24&16&20\\end{bmatrix}\\); \\((4P)_{12}=144\\): las cuatro probetas B contienen en total \\(144\\) g de cobre.\n1. c. \\(75\\), \\(70\\) y \\(90\\) g: las masas totales de las dos probetas A, de las dos B y de las dos C, respectivamente.\n2. \\(x+y+z=30\\), \\(x+2y+z=38\\), \\(2x+y+3z=64\\); solución única \\((x,y,z)=(10,8,12)\\): \\(10\\) g, \\(8\\) g y \\(12\\) g. Las masas de los tres paquetes son \\(30\\), \\(38\\) y \\(64\\) g, respectivamente, y las tres masas por pieza son positivas.\n3. a. Cada columna de coeficientes tiene pivote y no hay contradicción; el renglón nulo representa \\(0=0\\). El sistema tiene solución única.\n3. b. \\(S=\\{(2,3,-1)\\}\\).\n3. c. Que no haya contradicción y que al menos una columna de coeficientes no tenga pivote.\n4. a. \\(L^{\\mathsf T}=\\begin{bmatrix}2&5\\\\-1&3\\\\0&-4\\end{bmatrix}\\), de tamaño \\(3\\times2\\).\n4. b. \\((L^{\\mathsf T})_{32}=l_{23}=-4\\).\n4. c. \\(L+L^{\\mathsf T}\\) no está definida; \\(L^{\\mathsf T}+L^{\\mathsf T}=\\begin{bmatrix}4&10\\\\-2&6\\\\0&-8\\end{bmatrix}\\); \\((L^{\\mathsf T})^{\\mathsf T}-L=0_{2\\times3}\\).\n5. \\(x=5-3t\\), \\(y=2+t\\), \\(z=t\\), con \\(t\\in\\mathbb R\\); \\(S=\\{(5-3t,\\ 2+t,\\ t):t\\in\\mathbb R\\}\\). Las dos ecuaciones se cumplen para todo \\(t\\); la solución con \\(x=-1\\) es \\((-1,4,2)\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-09-sesion-35.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-10-09-sesion-35.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nAl revisar su trabajo, compruebe si puede:\n\nDecidir si una suma o una resta está definida a partir de los tamaños de las matrices, como en el ejercicio 1c y la comprobación individual de la Actividad.\nCalcular sumas, restas y productos por un escalar entrada por entrada, y comprobar una resta mediante la suma correspondiente.\nTransponer una matriz rectangular, indicar el tamaño resultante y localizar una entrada antes y después de la operación.\nAsociar cada masa con la columna de su lote, interpretar las masas de los componentes de una mezcla y verificar la masa total.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span>"
+    ]
+  },
+  {
     "objectID": "unidades/05-conceptos-algebra-lineal.html",
     "href": "unidades/05-conceptos-algebra-lineal.html",
     "title": "Unidad 5. Conceptos básicos de álgebra lineal",
@@ -3269,7 +3390,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3280,7 +3401,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3291,7 +3412,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -3302,7 +3423,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -3313,7 +3434,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3324,7 +3445,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3335,7 +3456,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3346,7 +3467,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3357,7 +3478,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3368,7 +3489,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3379,7 +3500,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -3390,7 +3511,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -3401,7 +3522,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -3412,7 +3533,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
