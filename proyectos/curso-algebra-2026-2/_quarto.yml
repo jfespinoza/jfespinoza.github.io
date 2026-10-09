@@ -80,6 +80,7 @@ book:
     - part: "Unidad 4. Matrices"
       chapters:
         - unidades/04-matrices.qmd
+        - sesiones/2026-10-09-sesion-35.qmd
     - part: "Unidad 5. Conceptos básicos de álgebra lineal"
       chapters:
         - unidades/05-conceptos-algebra-lineal.qmd
