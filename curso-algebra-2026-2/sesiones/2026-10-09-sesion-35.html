@@ -546,7 +546,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá decidir qué sumas y restas de matrices están definidas, calcularlas junto con múltiplos escalares y transpuestas, e interpretar una suma de columnas ponderadas en un balance de masa. Podrá comprobarlo al resolver los ejercicios de la <a href="#actividad">Actividad</a> y justificar la comprobación individual del cierre.</p>
+<p>Al finalizar la sesión podrá decidir qué sumas y restas de matrices están definidas, calcularlas junto con múltiplos escalares y transpuestas, e interpretar una suma de columnas ponderadas en un balance de masa. Podrá comprobarlo al resolver los ejercicios 1 a 3 de la <a href="#actividad">Actividad</a> y explicar, en la comprobación individual, por qué una matriz de tamaño <span class="math inline">\(2\times3\)</span> no puede sumarse con su transpuesta.</p>
 </section>
 <section id="para-comenzar-lectura-de-una-forma-reducida" class="level2">
 <h2 class="anchored" data-anchor-id="para-comenzar-lectura-de-una-forma-reducida">Para comenzar: lectura de una forma reducida</h2>
@@ -574,7 +574,7 @@ window.Quarto = {
 </section>
 <section id="tamaño-e-igualdad-de-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="tamaño-e-igualdad-de-matrices">Tamaño e igualdad de matrices</h2>
-<p>Una matriz de tamaño <span class="math inline">\(m\times n\)</span> tiene <span class="math inline">\(m\)</span> renglones y <span class="math inline">\(n\)</span> columnas. Su <strong>orden</strong> o <strong>tamaño</strong> se escribe siempre en ese orden. Como en la <a href="../sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada">Sesión 29</a>, se denota por <span class="math inline">\(a_{ij}\)</span> la entrada del renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A=[a_{ij}]\)</span>. Todas las entradas consideradas aquí son reales.</p>
+<p>Una matriz de <strong>tamaño</strong> u <strong>orden</strong> <span class="math inline">\(m\times n\)</span> tiene <span class="math inline">\(m\)</span> renglones y <span class="math inline">\(n\)</span> columnas: primero se indica el número de renglones. Son las dimensiones utilizadas en la <a href="../sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada">Sesión 29</a>. La entrada del renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span> se denota con la letra minúscula correspondiente a la matriz: <span class="math inline">\(a_{ij}\)</span> para <span class="math inline">\(A=[a_{ij}]\)</span>, <span class="math inline">\(k_{ij}\)</span> para <span class="math inline">\(K\)</span>, etc. Todas las entradas consideradas aquí son reales.</p>
 <p>Dos matrices son <strong>iguales</strong> si tienen el mismo tamaño y sus entradas correspondientes son iguales. Por ejemplo, <span class="math inline">\(\begin{bmatrix}1&amp;2\end{bmatrix}\)</span> y <span class="math inline">\(\begin{bmatrix}1\\2\end{bmatrix}\)</span> tienen los mismos números, pero son matrices distintas: sus tamaños son <span class="math inline">\(1\times2\)</span> y <span class="math inline">\(2\times1\)</span>.</p>
 </section>
 <section id="suma-resta-y-producto-por-un-escalar" class="level2">
@@ -604,7 +604,7 @@ A+0=A,\qquad c(A+B)=cA+cB,
 </section>
 <section id="una-tabla-de-composición-como-matriz" class="level2">
 <h2 class="anchored" data-anchor-id="una-tabla-de-composición-como-matriz">Una tabla de composición como matriz</h2>
-<p>Retome los tres lotes de polvo metálico del <a href="../sesiones/2026-10-07-sesion-33.html#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2 de la Sesión 33</a>, con <span class="math inline">\(60\,\%\)</span>, <span class="math inline">\(70\,\%\)</span> y <span class="math inline">\(90\,\%\)</span> de cobre en masa. Se agrupa como <strong>material restante</strong> todo lo que no es cobre, sin especificar su composición. La tabla de fracciones en masa es la matriz <span class="math inline">\(2\times3\)</span></p>
+<p>Retome los tres lotes de polvo metálico del <a href="../sesiones/2026-10-07-sesion-33.html#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2 de la Sesión 33</a>, con <span class="math inline">\(60\,\%\)</span>, <span class="math inline">\(70\,\%\)</span> y <span class="math inline">\(90\,\%\)</span> de cobre en masa. Se agrupa como <strong>material restante</strong> o <strong>resto</strong> todo lo que no es cobre, sin especificar su composición. La tabla de fracciones en masa es la matriz <span class="math inline">\(2\times3\)</span></p>
 <p><span class="math display">\[
 K=\begin{bmatrix}0.60&amp;0.70&amp;0.90\\0.40&amp;0.30&amp;0.10\end{bmatrix},
 \]</span></p>
@@ -655,18 +655,18 @@ K^{\mathsf T}=\begin{bmatrix}0.60&amp;0.40\\0.70&amp;0.30\\0.90&amp;0.10\end{bma
 =\begin{bmatrix}360\\140\end{bmatrix}.
 \]</span></p>
 <p>La mezcla contiene <span class="math inline">\(360\)</span> g de cobre y <span class="math inline">\(140\)</span> g de resto.</p>
-<p><strong>Comprobación.</strong> <span class="math inline">\(360+140=500\)</span> g, que coincide con <span class="math inline">\(100+300+100\)</span>, la suma de las masas de los lotes. La fracción de cobre es <span class="math inline">\(360/500=0.72\)</span>, es decir, <span class="math inline">\(72\,\%\)</span>: es la mezcla admisible que el <a href="../sesiones/2026-10-07-sesion-33.html#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2 de la Sesión 33</a> obtiene con <span class="math inline">\(t=100\)</span>.</p>
+<p><strong>Comprobación.</strong> <span class="math inline">\(360+140=500\)</span> g, que coincide con <span class="math inline">\(100+300+100\)</span>, la suma de las masas de los lotes. Esta igualdad comprueba el balance total, pero no la asociación de cada masa con su lote. La fracción de cobre es <span class="math inline">\(360/500=0.72\)</span>, es decir, <span class="math inline">\(72\,\%\)</span>: es la mezcla admisible que el <a href="../sesiones/2026-10-07-sesion-33.html#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2 de la Sesión 33</a> obtiene con <span class="math inline">\(t=100\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Sumar matrices de tamaños distintos.</strong> Tener el mismo número total de entradas no basta: una matriz <span class="math inline">\(1\times2\)</span> no puede sumarse con una <span class="math inline">\(2\times1\)</span>.</li>
-<li><strong>Multiplicar solo algunas entradas por el escalar.</strong> En el Ejemplo 1, el escalar <span class="math inline">\(2\)</span> también multiplica la entrada <span class="math inline">\(-1\)</span>: esta pasa a ser <span class="math inline">\(-2\)</span>.</li>
-<li><strong>Cambiar el signo de la resta.</strong> En el Ejemplo 1, <span class="math inline">\((2A-B)_{12}=2(-1)-3=-5\)</span>.</li>
-<li><strong>Transponer sin intercambiar renglones y columnas.</strong> Una matriz <span class="math inline">\(2\times3\)</span> produce una transpuesta <span class="math inline">\(3\times2\)</span>; la entrada <span class="math inline">\((i,j)\)</span> pasa a la posición <span class="math inline">\((j,i)\)</span>.</li>
-<li><strong>Asociar una masa con la columna de otro lote.</strong> En el Ejemplo 3, los <span class="math inline">\(300\)</span> g multiplican la columna del lote B. Comprobar solo la masa total no detecta siempre una asociación incorrecta.</li>
-<li><strong>Confundir la suma de matrices con una operación elemental.</strong> Si a la matriz aumentada <span class="math inline">\([1\ \ 1\mid3]\)</span> de la ecuación aislada <span class="math inline">\(x+y=3\)</span> se le suma otra matriz <span class="math inline">\([0\ \ 0\mid1]\)</span>, resulta <span class="math inline">\([1\ \ 1\mid4]\)</span>. La ecuación pasa a ser <span class="math inline">\(x+y=4\)</span> y la pareja <span class="math inline">\((1,2)\)</span> deja de satisfacerla.</li>
+<li><strong>Sumar matrices de tamaños distintos.</strong> Falso: <span class="math inline">\(\begin{bmatrix}1&amp;2\end{bmatrix}+\begin{bmatrix}1\\2\end{bmatrix}=\begin{bmatrix}2&amp;4\end{bmatrix}\)</span>. Corrección: sus tamaños son <span class="math inline">\(1\times2\)</span> y <span class="math inline">\(2\times1\)</span>; tener el mismo número de entradas no basta y la suma no está definida.</li>
+<li><strong>Multiplicar solo algunas entradas por el escalar.</strong> Falso: en el Ejemplo 1, <span class="math inline">\((2A)_{12}=-1\)</span>. Corrección: el escalar multiplica todas las entradas, de modo que <span class="math inline">\((2A)_{12}=2(-1)=-2\)</span>.</li>
+<li><strong>Cambiar el signo de la resta.</strong> Falso: en el Ejemplo 1, <span class="math inline">\((2A-B)_{12}=2(-1)+3=1\)</span>. Corrección: se resta la entrada de <span class="math inline">\(B\)</span>; <span class="math inline">\((2A-B)_{12}=2(-1)-3=-5\)</span>.</li>
+<li><strong>Transponer sin intercambiar renglones y columnas.</strong> Falso: al transponer <span class="math inline">\(K\)</span>, la entrada <span class="math inline">\(0.90\)</span> permanece en la posición <span class="math inline">\((1,3)\)</span>. Corrección: pasa a la posición <span class="math inline">\((3,1)\)</span>, con <span class="math inline">\((K^{\mathsf T})_{31}=k_{13}=0.90\)</span>; <span class="math inline">\(K^{\mathsf T}\)</span> es <span class="math inline">\(3\times2\)</span>. En general, la posición <span class="math inline">\((i,j)\)</span> pasa a ser <span class="math inline">\((j,i)\)</span>.</li>
+<li><strong>Asociar una masa con la columna de otro lote.</strong> Falso: la mezcla del Ejemplo 3 contiene <span class="math inline">\(400\)</span> g de cobre y <span class="math inline">\(100\)</span> g de resto. Corrección: contiene <span class="math inline">\(360\)</span> g y <span class="math inline">\(140\)</span> g, respectivamente. El resultado incorrecto se obtiene al intercambiar las masas de B y C y también suma <span class="math inline">\(500\)</span> g. Como cada columna de <span class="math inline">\(K\)</span> suma <span class="math inline">\(1\)</span>, permutar las masas entre columnas conserva el total; esa comprobación no detecta la confusión. Antes de operar, revise que cada masa multiplique la columna de su lote: los <span class="math inline">\(300\)</span> g corresponden a B.</li>
+<li><strong>Confundir la suma de matrices con una operación elemental.</strong> Falso: sumar <span class="math inline">\([0\ \ 0\mid1]\)</span> a la matriz aumentada <span class="math inline">\([1\ \ 1\mid3]\)</span> de la ecuación aislada <span class="math inline">\(x+y=3\)</span> conserva sus soluciones. Corrección: resulta <span class="math inline">\([1\ \ 1\mid4]\)</span>, es decir, <span class="math inline">\(x+y=4\)</span>; la pareja <span class="math inline">\((1,2)\)</span> satisface la ecuación original, pero no la nueva, porque <span class="math inline">\(1+2=3\ne4\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -692,7 +692,7 @@ C=\begin{bmatrix}3&amp;-2\\1&amp;4\end{bmatrix},\qquad D=\begin{bmatrix}1&amp;5\
 <ol type="a">
 <li><p>Escriba la suma de las columnas de <span class="math inline">\(K\)</span> multiplicadas por las masas correspondientes, antes de efectuar operaciones.</p></li>
 <li><p>Calcule las masas de cobre y de resto en la mezcla e interprete cada una.</p></li>
-<li><p>Compruebe la masa total y calcule el porcentaje de cobre de la mezcla.</p></li>
+<li><p>Compruebe la masa total y calcule el porcentaje de cobre de la mezcla. ¿Basta comprobar el total para asegurar que cada masa se asoció con el lote correcto? Justifique.</p></li>
 </ol></li>
 </ol>
 <p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas, considere una matriz <span class="math inline">\(G\)</span> de tamaño <span class="math inline">\(2\times3\)</span> cuya entrada <span class="math inline">\((1,2)\)</span> es <span class="math inline">\(g_{12}=-3\)</span>.</p>
@@ -742,7 +742,7 @@ F^{\mathsf T}=\begin{bmatrix}4&amp;0\\-1&amp;2\\7&amp;-3\end{bmatrix},
 \begin{bmatrix}120\\80\end{bmatrix}+\begin{bmatrix}140\\60\end{bmatrix}+\begin{bmatrix}90\\10\end{bmatrix}=\begin{bmatrix}350\\150\end{bmatrix}.
 \]</span></p>
 <p>La mezcla contiene <span class="math inline">\(350\)</span> g de cobre y <span class="math inline">\(150\)</span> g de resto.</p>
-<p><strong>3. c.</strong> <span class="math inline">\(350+150=500\)</span> g, igual a <span class="math inline">\(200+200+100\)</span>. La fracción de cobre es <span class="math inline">\(350/500=0.70\)</span>; la mezcla tiene <span class="math inline">\(70\,\%\)</span> de cobre.</p>
+<p><strong>3. c.</strong> <span class="math inline">\(350+150=500\)</span> g, igual a <span class="math inline">\(200+200+100\)</span>. La fracción de cobre es <span class="math inline">\(350/500=0.70\)</span>; la mezcla tiene <span class="math inline">\(70\,\%\)</span> de cobre. El total no basta: como cada columna de <span class="math inline">\(K\)</span> suma <span class="math inline">\(1\)</span>, intercambiar las masas entre lotes conserva los <span class="math inline">\(500\)</span> g. La asociación se comprueba revisando en el inciso a que <span class="math inline">\(200\)</span>, <span class="math inline">\(200\)</span> y <span class="math inline">\(100\)</span> multipliquen las columnas de A, B y C, respectivamente.</p>
 <p><strong>Comprobación individual, a.</strong> <span class="math inline">\(G^{\mathsf T}\)</span> es <span class="math inline">\(3\times2\)</span>. La suma <span class="math inline">\(G+G^{\mathsf T}\)</span> no está definida, porque <span class="math inline">\(G\)</span> es <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(G^{\mathsf T}\)</span> es <span class="math inline">\(3\times2\)</span>: por ejemplo, la posición <span class="math inline">\((1,3)\)</span> existe en <span class="math inline">\(G\)</span> y no en <span class="math inline">\(G^{\mathsf T}\)</span>.</p>
 <p><strong>Comprobación individual, b.</strong> <span class="math inline">\((-2G)_{12}=-2\,g_{12}=-2(-3)=6\)</span> y <span class="math inline">\((G^{\mathsf T})_{21}=g_{12}=-3\)</span>.</p>
 </div>
@@ -814,12 +814,13 @@ P=\begin{bmatrix}44&amp;36&amp;45\\6&amp;4&amp;5\end{bmatrix},\qquad Q=\begin{bm
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>La suma y la resta requieren matrices del mismo tamaño; el producto por un escalar multiplica todas las entradas y la transpuesta intercambia renglones y columnas. La suma de columnas ponderadas permite interpretar las masas de los componentes de una mezcla.</p>
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
 <li>Decidir si una suma o una resta está definida a partir de los tamaños de las matrices, como en el ejercicio 1c y la comprobación individual de la <a href="#actividad">Actividad</a>.</li>
-<li>Calcular sumas, restas y productos por un escalar entrada por entrada, y comprobar una resta mediante la suma correspondiente.</li>
-<li>Transponer una matriz rectangular, indicar el tamaño resultante y localizar una entrada antes y después de la operación.</li>
-<li>Asociar cada masa con la columna de su lote, interpretar las masas de los componentes de una mezcla y verificar la masa total.</li>
+<li>Calcular sumas, restas y productos por un escalar entrada por entrada, y comprobar una resta mediante la suma correspondiente, como en el ejercicio 1 de la <a href="#actividad">Actividad</a>.</li>
+<li>Transponer una matriz rectangular, indicar el tamaño resultante y localizar una entrada antes y después de la operación, como en el ejercicio 2 de la <a href="#actividad">Actividad</a>.</li>
+<li>Asociar cada masa con la columna de su lote e interpretar las masas de los componentes de una mezcla, como en el ejercicio 3 de la <a href="#actividad">Actividad</a>. La comprobación del total debe acompañarse de la revisión de esa asociación.</li>
 </ul>
 
 
