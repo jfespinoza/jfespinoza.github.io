@@ -84,5 +84,6 @@ El significado de la barra superior depende del contexto: en $\overline z$ indic
 |---|---|
 | $D$ | Dominio o conjunto de valores considerado, según se declare en el contexto. |
 | $S$ | Conjunto solución de la ecuación o inecuación considerada. |
+| $\mathbf{x},\mathbf{b},\mathbf{v}$; $\mathbf{0}$ | Vectores columna; las componentes se escriben sin negrita. Por ejemplo, $\mathbf{x}=(x,y,z)^{\mathsf T}$ y $\mathbf{0}=(0,0,0)^{\mathsf T}$, con la dimensión determinada por el contexto. |
 
 Cuando $S$ denota un conjunto solución, $S=\varnothing$ indica que no hay soluciones, mientras que $S=\{0\}$ indica que el cero es la única solución.

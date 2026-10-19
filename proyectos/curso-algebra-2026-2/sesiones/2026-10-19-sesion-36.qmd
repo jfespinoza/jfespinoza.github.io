@@ -1,0 +1,345 @@
+---
+title: "Sesión 36. Representación matricial de un sistema y sistemas homogéneos"
+date: 2026-10-19
+description: "Producto matriz-vector, representaciones de un sistema y soluciones de sistemas homogéneos."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá representar un sistema como ecuaciones, matriz aumentada y ecuación matricial; verificar soluciones mediante un producto matriz-vector; y decidir por los pivotes si un sistema homogéneo tiene soluciones no triviales. Compruebe estas capacidades al resolver los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
+
+## Para comenzar: una suma de columnas
+
+Los lotes A, B y C de la [Sesión 35](2026-10-09-sesion-35.qmd#una-tabla-de-composición-como-matriz) contienen $60\,\%$, $70\,\%$ y $90\,\%$ de cobre en masa. En la tabla $K$, el primer renglón corresponde a la fracción de cobre y el segundo a la del material restante. Calcule
+
+$$
+200\begin{bmatrix}0.60\\0.40\end{bmatrix}+100\begin{bmatrix}0.70\\0.30\end{bmatrix}+200\begin{bmatrix}0.90\\0.10\end{bmatrix}
+$$
+
+e indique qué representa cada una de las dos entradas del resultado.
+
+::: {.callout-note collapse="true" title="Respuesta"}
+
+Los tres productos por un escalar son $\begin{bmatrix}120\\80\end{bmatrix}$, $\begin{bmatrix}70\\30\end{bmatrix}$ y $\begin{bmatrix}180\\20\end{bmatrix}$; su suma es $\begin{bmatrix}370\\130\end{bmatrix}$. Al mezclar sin pérdidas $200$ g del lote A, $100$ g del B y $200$ g del C se obtienen $370$ g de cobre y $130$ g de resto; en total, $500$ g.
+
+:::
+
+## Vectores columna
+
+Un **vector columna** con $n$ componentes es una matriz de tamaño $n\times1$. Se denota con una letra minúscula en **negrita**; sus **componentes**, que son números reales, se escriben sin negrita:
+
+$$
+\mathbf{x}=\begin{bmatrix}x\\y\\z\end{bmatrix}=(x,y,z)^{\mathsf T}.
+$$
+
+La escritura con la [transpuesta](2026-10-09-sesion-35.qmd#transpuesta), $(x,y,z)^{\mathsf T}$, ahorra espacio en el texto. La negrita distingue el vector $\mathbf{x}$ de su primera componente, el número $x$; a mano, donde la negrita no se distingue, se escribe $\vec{x}$. El **vector cero**, $\mathbf{0}$, tiene todas sus componentes iguales a cero; su número de componentes lo determina el contexto.
+
+Dos vectores son iguales si lo son como matrices: mismo número de componentes y componentes correspondientes iguales, según la [igualdad de matrices](2026-10-09-sesion-35.qmd#tamaño-e-igualdad-de-matrices). Las soluciones se siguen escribiendo como ternas; por ejemplo, $(2,1,0)$. El vector $(2,1,0)^{\mathsf T}$ dispone esos números en columna para multiplicarlos por una matriz.
+
+## Producto de una matriz por un vector
+
+Sea $A$ una matriz de tamaño $m\times n$ con columnas $\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_n$, y sea $\mathbf{x}=(x_1,x_2,\ldots,x_n)^{\mathsf T}$. El **producto** $A\mathbf{x}$ es el vector con $m$ componentes que resulta de multiplicar cada columna de $A$ por la componente de $\mathbf{x}$ que le corresponde y sumar:
+
+$$
+A\mathbf{x}=x_1\mathbf{a}_1+x_2\mathbf{a}_2+\cdots+x_n\mathbf{a}_n.
+$$
+
+**Lectura por columnas.** Es la suma de la apertura: con $\mathbf{q}=(200,100,200)^{\mathsf T}$, el producto $K\mathbf{q}$ suma $200$ veces la columna del lote A, $100$ veces la del B y $200$ veces la del C, y da $K\mathbf{q}=(370,130)^{\mathsf T}$.
+
+**Lectura por renglones.** La componente $i$ de esa suma es
+
+$$
+(A\mathbf{x})_i=a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n.
+$$
+
+Cada renglón de $A$, multiplicado entrada por entrada por las componentes de $\mathbf{x}$ y sumado, produce una componente. Para $K\mathbf{q}$:
+
+$$
+\begin{bmatrix}0.60&0.70&0.90\\0.40&0.30&0.10\end{bmatrix}\begin{bmatrix}200\\100\\200\end{bmatrix}=\begin{bmatrix}0.60(200)+0.70(100)+0.90(200)\\0.40(200)+0.30(100)+0.10(200)\end{bmatrix}=\begin{bmatrix}370\\130\end{bmatrix}.
+$$
+
+Las dos lecturas agrupan la misma suma de dos maneras; por eso coinciden.
+
+**Tamaños.** $A\mathbf{x}$ está definido solo si $A$ tiene tantas columnas como componentes tiene $\mathbf{x}$, y el resultado tiene tantas componentes como renglones tiene $A$. Si $A$ es $2\times3$, el vector debe tener tres componentes y $A\mathbf{x}$ tiene dos.
+
+## Tres representaciones de un sistema
+
+Un sistema de $m$ ecuaciones lineales con $n$ incógnitas tiene una [matriz de coeficientes](2026-09-23-sesion-29.qmd#matriz-de-coeficientes-y-matriz-aumentada) $A$, de tamaño $m\times n$. Su columna de términos independientes es el vector $\mathbf{b}$, con $m$ componentes. Con el **vector de incógnitas** $\mathbf{x}$, cuyas componentes son las incógnitas en su orden fijo, el sistema se escribe como la **ecuación matricial** $A\mathbf{x}=\mathbf{b}$.
+
+La componente $i$ de $A\mathbf{x}$, leída por renglones, es el lado izquierdo de la ecuación $i$; por la igualdad de vectores, $A\mathbf{x}=\mathbf{b}$ afirma que todas las ecuaciones se cumplen a la vez. Por tanto, **verificar una solución equivale a calcular un producto y compararlo con $\mathbf{b}$**.
+
+| Representación | Qué es | Tamaños, con $m$ ecuaciones y $n$ incógnitas |
+|---|---|---|
+| Ecuaciones | Igualdades que contienen las incógnitas | $m$ ecuaciones |
+| Matriz aumentada $[A\mid\mathbf{b}]$ | Una matriz con coeficientes y términos independientes, sin incógnitas | $m\times(n+1)$ |
+| Ecuación matricial $A\mathbf{x}=\mathbf{b}$ | Una igualdad entre dos vectores | $A$: $m\times n$; $\mathbf{x}$: $n$ componentes; $\mathbf{b}$: $m$ componentes |
+
+Las tres contienen la misma información: la matriz aumentada se usa para reducir; la ecuación matricial, para escribir el sistema de forma compacta y verificar soluciones.
+
+## Sistemas homogéneos
+
+Un sistema es **homogéneo** si todos sus términos independientes son cero; en forma matricial, $A\mathbf{x}=\mathbf{0}$. El **homogéneo asociado** a $A\mathbf{x}=\mathbf{b}$ tiene la misma matriz $A$ y el vector $\mathbf{0}$ en lugar de $\mathbf{b}$.
+
+Todo sistema homogéneo es **[consistente](2026-09-22-sesion-28.qmd#clasificación-e-interpretación-geométrica)**: el vector cero lo satisface, porque cada término de $A\mathbf{0}$ tiene un factor $0$. Esa solución, $\mathbf{x}=\mathbf{0}$, es la **solución trivial**. Una **solución no trivial** tiene al menos una componente distinta de cero; no se exige que todas lo sean.
+
+Al reducir $[A\mid\mathbf{0}]$, la última columna permanece nula, porque cada [operación elemental](2026-09-23-sesion-29.qmd#operaciones-elementales-de-renglón) intercambia, multiplica o suma ceros; basta reducir $A$. Como el sistema es consistente, el caso lo decide la presencia de [variables libres](2026-10-07-sesion-33.qmd#variables-con-pivote-y-variables-libres):
+
+- Si cada columna de $A$ tiene pivote, la única solución es la trivial.
+- Si la columna de alguna variable no tiene pivote, esa variable es libre. Al darle el valor $1$ (y $0$ a las demás libres, si las hubiera) se obtiene una solución con una componente igual a $1$, que es no trivial. Además, como en la Sesión 33, hay infinitas soluciones.
+
+En resumen, con coeficientes e incógnitas reales, un sistema homogéneo tiene soluciones no triviales **si y solo si** tiene variables libres.
+
+## Ejemplos
+
+### Ejemplo 1. Tres representaciones y verificación de una solución
+
+El sistema del [Ejemplo 1 de la Sesión 33](2026-10-07-sesion-33.qmd#ejemplo-1.-un-sistema-de-dos-ecuaciones-con-tres-incógnitas),
+
+$$
+\left\{\begin{aligned}x+2y-z&=4\\2x+5y+z&=9,\end{aligned}\right.
+$$
+
+tiene la matriz aumentada de tamaño $2\times4$
+
+$$
+[A\mid\mathbf{b}]=\left[\begin{array}{ccc|c}1&2&-1&4\\2&5&1&9\end{array}\right]
+$$
+
+y la ecuación matricial
+
+$$
+\begin{bmatrix}1&2&-1\\2&5&1\end{bmatrix}\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}4\\9\end{bmatrix},
+$$
+
+con $A$ de tamaño $2\times3$, $\mathbf{x}$ con tres componentes y $\mathbf{b}$ con dos. En la Sesión 33 se obtuvo la solución particular $(2,1,0)$, con $t=0$. Se verifica con el producto, sin repetir la eliminación.
+
+**Por renglones:**
+
+$$
+\begin{bmatrix}1&2&-1\\2&5&1\end{bmatrix}\begin{bmatrix}2\\1\\0\end{bmatrix}=\begin{bmatrix}1(2)+2(1)+(-1)(0)\\2(2)+5(1)+1(0)\end{bmatrix}=\begin{bmatrix}4\\9\end{bmatrix}=\mathbf{b}.
+$$
+
+**Por columnas:**
+
+$$
+2\begin{bmatrix}1\\2\end{bmatrix}+1\begin{bmatrix}2\\5\end{bmatrix}+0\begin{bmatrix}-1\\1\end{bmatrix}=\begin{bmatrix}4\\9\end{bmatrix}=\mathbf{b}.
+$$
+
+**Comprobación.** Las dos lecturas coinciden y reproducen $\mathbf{b}$: $(2,1,0)$ cumple ambas ecuaciones. En cambio, $A(1,1,1)^{\mathsf T}=(2,8)^{\mathsf T}\ne\mathbf{b}$, de modo que $(1,1,1)$ no es solución; basta que una componente difiera para descartar una propuesta.
+
+### Ejemplo 2. El sistema homogéneo asociado
+
+Con la misma matriz $A$, el homogéneo asociado es $A\mathbf{x}=\mathbf{0}$:
+
+$$
+\left\{\begin{aligned}x+2y-z&=0\\2x+5y+z&=0.\end{aligned}\right.
+$$
+
+Se reduce $A$ con las mismas operaciones de la Sesión 33, $R_2\to R_2-2R_1$ y después $R_1\to R_1-2R_2$:
+
+$$
+\begin{bmatrix}1&2&-1\\2&5&1\end{bmatrix}\longrightarrow\begin{bmatrix}1&2&-1\\0&1&3\end{bmatrix}\longrightarrow\begin{bmatrix}1&0&-7\\0&1&3\end{bmatrix}.
+$$
+
+Las columnas de $x$ y $y$ tienen pivote; la de $z$ no. Como los términos independientes son cero, las ecuaciones reducidas son $x-7z=0$ y $y+3z=0$. Con $z=t$:
+
+$$
+x=7t,\qquad y=-3t,\qquad z=t,\qquad t\in\mathbb R;\qquad S=\{(7t,\ -3t,\ t):t\in\mathbb R\}.
+$$
+
+Con $t=0$ se obtiene la solución trivial $(0,0,0)$; con $t=1$, la solución no trivial $(7,-3,1)$.
+
+**Comprobación.** Por renglones, $A(7t,-3t,t)^{\mathsf T}=(7t-6t-t,\ 14t-15t+t)^{\mathsf T}=(0,0)^{\mathsf T}$ para todo $t$. En particular, $7+2(-3)-1=0$ y $2(7)+5(-3)+1=0$.
+
+**Contraste.** Si la matriz de coeficientes de un homogéneo en $x,y$ tiene forma reducida $\begin{bmatrix}1&0\\0&1\end{bmatrix}$, ambas columnas tienen pivote. Las ecuaciones reducidas son $x=0$ y $y=0$: la única solución es la trivial.
+
+## Errores frecuentes
+
+- **Multiplicar con tamaños incompatibles.** Falso: con la matriz $A$ del Ejemplo 1, $A(2,1)^{\mathsf T}=(4,9)^{\mathsf T}$, porque $1(2)+2(1)=4$ y $2(2)+5(1)=9$. Corrección: $A$ tiene tres columnas y $(2,1)^{\mathsf T}$, dos componentes; el producto no está definido. La solución es $(2,1,0)^{\mathsf T}$: el $0$ de $z$ también se escribe.
+- **Multiplicar las componentes por los renglones.** Falso: $\begin{bmatrix}3&1\\0&2\end{bmatrix}\begin{bmatrix}1\\2\end{bmatrix}=1\begin{bmatrix}3\\1\end{bmatrix}+2\begin{bmatrix}0\\2\end{bmatrix}=\begin{bmatrix}3\\5\end{bmatrix}$. Corrección: cada componente multiplica una columna, $1\begin{bmatrix}3\\0\end{bmatrix}+2\begin{bmatrix}1\\2\end{bmatrix}=\begin{bmatrix}5\\4\end{bmatrix}$; por renglones se obtiene lo mismo: $3(1)+1(2)=5$ y $0(1)+2(2)=4$.
+- **Confundir la matriz de coeficientes con la matriz aumentada.** Falso: en el Ejemplo 1, $A=\left[\begin{array}{ccc|c}1&2&-1&4\\2&5&1&9\end{array}\right]$, de tamaño $2\times4$. Corrección: esa matriz es $[A\mid\mathbf{b}]$; $A$ es $2\times3$. Con una matriz $2\times4$, el producto exigiría cuatro componentes para tres incógnitas.
+- **Afirmar que un sistema homogéneo solo tiene la solución trivial.** Falso: el homogéneo del Ejemplo 2 solo admite $(0,0,0)$. Corrección: la columna de $z$ no tiene pivote, y $(7,-3,1)$ también es solución, pues $7+2(-3)-1=0$ y $2(7)+5(-3)+1=0$.
+- **Exigir que una solución no trivial no tenga ceros.** Falso: $(-1,0,1)$ no es una solución no trivial del homogéneo $x+z=0$, $y=0$, porque tiene una componente nula. Corrección: «no trivial» significa que no todas las componentes son cero; $(-1,0,1)$ cumple $-1+1=0$ y $0=0$, y es no trivial.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.
+
+1. Dos lotes de polvo metálico contienen $20\,\%$ y $60\,\%$ de cobre en masa. Se desea preparar una muestra de $500$ g con $44\,\%$ de cobre. Las masas se suman sin pérdidas, y la masa de cobre de cada porción es su masa multiplicada por el porcentaje expresado como fracción. Sean $x,y\ge0$ las masas, en gramos, que se toman del primer y del segundo lote.
+
+   a. Plantee las ecuaciones de masa total y de masa de cobre.
+
+   b. Escriba la matriz aumentada y la ecuación matricial $A\mathbf{x}=\mathbf{b}$ del sistema. Indique el tamaño de $A$ y el número de componentes de $\mathbf{x}$ y de $\mathbf{b}$.
+
+   c. Resuelva el sistema con el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan), registrando cada operación, y clasifíquelo.
+
+   d. Verifique la solución calculando $A\mathbf{x}$ por columnas e interprete cada componente del resultado.
+
+2. Las siguientes matrices son las formas escalonadas reducidas de las matrices de coeficientes de dos sistemas homogéneos: $M$ corresponde a un sistema en $x,y,z$, y $N$, a uno en $x,y$.
+
+   $$
+   M=\begin{bmatrix}1&0&2\\0&1&-1\end{bmatrix},\qquad N=\begin{bmatrix}1&0\\0&1\end{bmatrix}.
+   $$
+
+   a. Escriba la matriz aumentada de cada sistema reducido. ¿Qué contiene su última columna?
+
+   b. Decida, a partir de los pivotes, cuál de los dos sistemas tiene soluciones no triviales.
+
+   c. Describa por componentes el conjunto solución de cada sistema y dé una solución no trivial cuando exista.
+
+3. Sean $C=\begin{bmatrix}1&-1\\2&1\end{bmatrix}$ y $\mathbf{u}=(2,1)^{\mathsf T}$.
+
+   a. Calcule $C\mathbf{u}$ por renglones.
+
+   b. Escriba $C\mathbf{u}$ como la suma de las columnas de $C$ multiplicadas por las componentes de $\mathbf{u}$, y compruebe que obtiene el mismo vector.
+
+**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas: la matriz de coeficientes de un sistema homogéneo tiene tres columnas, y su forma escalonada reducida tiene dos pivotes.
+
+a. ¿El sistema es consistente? Justifique.
+
+b. ¿Cuántas variables libres tiene? ¿Admite soluciones no triviales? Justifique con los pivotes.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** Masa total: $x+y=500$. Masa de cobre: $0.20x+0.60y=220$, porque $0.44(500)=220$.
+
+**1. b.** La matriz aumentada y la ecuación matricial son
+
+$$
+\left[\begin{array}{cc|c}1&1&500\\0.20&0.60&220\end{array}\right],\qquad
+\begin{bmatrix}1&1\\0.20&0.60\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}500\\220\end{bmatrix}.
+$$
+
+$A$ es $2\times2$; $\mathbf{x}=(x,y)^{\mathsf T}$ y $\mathbf{b}=(500,220)^{\mathsf T}$ tienen dos componentes cada uno.
+
+**1. c.** Con $R_2\to5R_2$, después $R_2\to R_2-R_1$, después $R_2\to\frac12R_2$ y, por último, $R_1\to R_1-R_2$:
+
+$$
+\left[\begin{array}{cc|c}1&1&500\\1&3&1100\end{array}\right]\longrightarrow
+\left[\begin{array}{cc|c}1&1&500\\0&2&600\end{array}\right]\longrightarrow
+\left[\begin{array}{cc|c}1&1&500\\0&1&300\end{array}\right]\longrightarrow
+\left[\begin{array}{cc|c}1&0&200\\0&1&300\end{array}\right].
+$$
+
+No hay contradicción y cada columna de coeficientes tiene pivote: el sistema es consistente y tiene solución única, $(x,y)=(200,300)$. Ambas masas son no negativas, así que la mezcla es admisible.
+
+**1. d.** Por columnas,
+
+$$
+200\begin{bmatrix}1\\0.20\end{bmatrix}+300\begin{bmatrix}1\\0.60\end{bmatrix}=\begin{bmatrix}200+300\\40+180\end{bmatrix}=\begin{bmatrix}500\\220\end{bmatrix}=\mathbf{b}.
+$$
+
+La primera componente es la masa total, $500$ g; la segunda, la masa de cobre, $220$ g, que es el $44\,\%$ de $500$ g. Cada columna de $A$ indica lo que aporta un gramo de su lote: $1$ g de masa y $0.20$ g o $0.60$ g de cobre.
+
+**2. a.** $\left[\begin{array}{ccc|c}1&0&2&0\\0&1&-1&0\end{array}\right]$ y $\left[\begin{array}{cc|c}1&0&0\\0&1&0\end{array}\right]$. La última columna contiene solo ceros: los términos independientes de un homogéneo son cero y las operaciones elementales los conservan.
+
+**2. b.** En $M$, la columna de $z$ no tiene pivote: hay una variable libre y existen soluciones no triviales. En $N$, cada columna tiene pivote: solo existe la solución trivial.
+
+**2. c.** Para $M$, las ecuaciones son $x+2z=0$ y $y-z=0$; con $z=t$, $S=\{(-2t,\ t,\ t):t\in\mathbb R\}$. Con $t=1$ se obtiene la solución no trivial $(-2,1,1)$, que cumple $-2+2(1)=0$ y $1-1=0$. Para $N$, las ecuaciones son $x=0$ y $y=0$; $S=\{(0,0)\}$.
+
+**3. a.** $C\mathbf{u}=\begin{bmatrix}1(2)+(-1)(1)\\2(2)+1(1)\end{bmatrix}=\begin{bmatrix}1\\5\end{bmatrix}$.
+
+**3. b.** $2\begin{bmatrix}1\\2\end{bmatrix}+1\begin{bmatrix}-1\\1\end{bmatrix}=\begin{bmatrix}2-1\\4+1\end{bmatrix}=\begin{bmatrix}1\\5\end{bmatrix}$, el mismo vector.
+
+**Comprobación individual, a.** Sí. El vector cero satisface todas las ecuaciones, porque todos los términos independientes son cero.
+
+**Comprobación individual, b.** Una: con tres columnas y dos pivotes queda una columna sin pivote. Sí admite soluciones no triviales: al dar el valor $1$ a la variable libre se obtiene una solución con esa componente igual a $1$.
+
+:::
+
+## Ejercicios para practicar
+
+Se recomiendan los ejercicios 1, 2 y 3; los ejercicios 4 y 5 permiten reforzar la decisión sobre sistemas homogéneos y el producto de una matriz por un vector, según lo necesite. Consulte las respuestas después de completar su intento.
+
+1. Una pasta cerámica se prepara con dos mezclas previas, P y Q. Cada kilogramo de P contiene $0.5$ kg de arcilla, $0.3$ kg de feldespato y $0.2$ kg de cuarzo; cada kilogramo de Q, $0.2$ kg, $0.3$ kg y $0.5$ kg, respectivamente. Según su registro, un lote preparado sin pérdidas contiene $9$ kg de arcilla, $9$ kg de feldespato y $12$ kg de cuarzo. Sean $x$ y $y$ los kilogramos de P y de Q utilizados.
+
+   a. Escriba el sistema como $A\mathbf{x}=\mathbf{b}$ e indique el tamaño de $A$.
+
+   b. Un técnico propone $x=10$ y $y=20$. Verifique la propuesta con un producto por columnas e interprete el resultado.
+
+   c. Otro técnico propone $x=20$ y $y=10$. ¿Es compatible con el registro? Justifique con el producto.
+
+2. Tres lotes de polvo de bronce, A, B y C, contienen $4\,\%$, $8\,\%$ y $12\,\%$ de estaño en masa. Se quieren preparar $400$ g de mezcla con $9\,\%$ de estaño con $x$, $y$ y $z$ gramos de los lotes A, B y C, respectivamente, sin pérdidas y con $x,y,z\ge0$. El sistema $x+y+z=400$, $0.04x+0.08y+0.12z=36$ tiene la forma escalonada reducida
+
+   $$
+   \left[\begin{array}{ccc|c}1&0&-1&-100\\0&1&2&500\end{array}\right].
+   $$
+
+   a. Describa el conjunto solución del sistema con $z=t$ y verifique la descripción en las dos ecuaciones originales.
+
+   b. Determine los valores admisibles de $t$, como en el [Ejemplo 2 de la Sesión 33](2026-10-07-sesion-33.qmd#ejemplo-2.-restricciones-de-masa-en-una-mezcla).
+
+   c. Obtenga la mezcla que usa $200$ g del lote C y verifique su masa de estaño.
+
+3. Al resolver el sistema $x+2y=5$, $3x+7y=17$, un estudiante escribe
+
+   $$
+   \left[\begin{array}{cc|c}1&2&5\\3&7&17\end{array}\right]\xrightarrow{R_2\to R_2-3R_1}\left[\begin{array}{cc|c}1&2&5\\0&1&2\end{array}\right]\xrightarrow{R_1\to R_1-2R_2}\left[\begin{array}{cc|c}1&0&5\\0&1&2\end{array}\right]
+   $$
+
+   y concluye que la solución es $(5,2)$.
+
+   a. Localice el paso erróneo y explique qué se omitió.
+
+   b. Corrija la reducción y escriba la solución.
+
+   c. Escriba el sistema como $A\mathbf{x}=\mathbf{b}$ y calcule $A\mathbf{x}$ para la propuesta $(5,2)$ y para la solución corregida. ¿Qué muestra cada producto?
+
+4. Considere los sistemas homogéneos
+
+   $$
+   \text{(H1)}\ \left\{\begin{aligned}x+y-z&=0\\2x+3y+z&=0\end{aligned}\right.
+   \qquad\qquad
+   \text{(H2)}\ \left\{\begin{aligned}x+y&=0\\2x+3y&=0.\end{aligned}\right.
+   $$
+
+   a. Reduzca la matriz de coeficientes de cada uno y decida cuál tiene soluciones no triviales.
+
+   b. Describa por componentes el conjunto solución de cada sistema.
+
+5. Sea $F=\begin{bmatrix}2&-1\\0&3\\1&4\end{bmatrix}$.
+
+   a. Calcule $F(3,-2)^{\mathsf T}$ por renglones y por columnas.
+
+   b. ¿Está definido $F(1,0,2)^{\mathsf T}$? Justifique con los tamaños.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $\begin{bmatrix}0.5&0.2\\0.3&0.3\\0.2&0.5\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}9\\9\\12\end{bmatrix}$; $A$ es $3\times2$.
+
+**1. b.** $10(0.5,0.3,0.2)^{\mathsf T}+20(0.2,0.3,0.5)^{\mathsf T}=(9,9,12)^{\mathsf T}=\mathbf{b}$: la propuesta reproduce las tres masas del registro.
+
+**1. c.** No: $A(20,10)^{\mathsf T}=(12,9,9)^{\mathsf T}\ne\mathbf{b}$; falla en la arcilla y en el cuarzo.
+
+**2. a.** $S=\{(-100+t,\ 500-2t,\ t):t\in\mathbb R\}$; masa total: $400$ g; masa de estaño: $36$ g, para todo $t$.
+
+**2. b.** $100\le t\le250$.
+
+**2. c.** $(100,100,200)$ g; masa de estaño: $36$ g, el $9\,\%$ de $400$ g.
+
+**3. a.** En $R_1\to R_1-2R_2$ se omitió operar el término independiente del primer renglón; su valor correcto es $1$.
+
+**3. b.** $\left[\begin{array}{cc|c}1&0&1\\0&1&2\end{array}\right]$; la solución es $(1,2)$.
+
+**3. c.** $A=\begin{bmatrix}1&2\\3&7\end{bmatrix}$ y $\mathbf{b}=(5,17)^{\mathsf T}$; la ecuación es $A\mathbf{x}=\mathbf{b}$, con $\mathbf{x}=(x,y)^{\mathsf T}$. $A(5,2)^{\mathsf T}=(9,29)^{\mathsf T}\ne\mathbf{b}$: la propuesta no es solución. $A(1,2)^{\mathsf T}=(5,17)^{\mathsf T}=\mathbf{b}$: la solución corregida sí lo es.
+
+**4. a.** (H1) se reduce a $\begin{bmatrix}1&0&-4\\0&1&3\end{bmatrix}$: la columna de $z$ no tiene pivote y hay soluciones no triviales. (H2) se reduce a $\begin{bmatrix}1&0\\0&1\end{bmatrix}$: solo tiene la solución trivial.
+
+**4. b.** (H1): $\{(4t,\ -3t,\ t):t\in\mathbb R\}$. (H2): $\{(0,0)\}$.
+
+**5. a.** $F(3,-2)^{\mathsf T}=(8,-6,-5)^{\mathsf T}$.
+
+**5. b.** No: $F$ tiene dos columnas y el vector, tres componentes.
+
+:::
+
+## Conclusiones del aprendizaje
+
+Un sistema lineal puede escribirse como ecuaciones, como matriz aumentada o como ecuación matricial $A\mathbf{x}=\mathbf{b}$, con la misma información. El producto de una matriz por un vector, leído por renglones o por columnas, verifica una solución sin repetir la eliminación. Un sistema homogéneo siempre tiene la solución trivial, y tiene soluciones no triviales exactamente cuando tiene variables libres.
+
+Al concluir esta sesión, usted debe poder:
+
+- Decidir si el producto de una matriz por un vector está definido y calcularlo por renglones y por columnas, como en el [Ejemplo 1](#ejemplo-1.-tres-representaciones-y-verificación-de-una-solución) y el ejercicio 3 de la [Actividad](#actividad).
+- Traducir un sistema entre ecuaciones, matriz aumentada y ecuación matricial, indicando los tamaños, como en el ejercicio 1b de la Actividad y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
+- Verificar una solución propuesta mediante un producto y su comparación con $\mathbf{b}$, como en el ejercicio 1d de la Actividad y el ejercicio 3c de la práctica.
+- Decidir, a partir de los pivotes, si un sistema homogéneo tiene soluciones no triviales y describirlas por componentes, como en el [Ejemplo 2](#ejemplo-2.-el-sistema-homogéneo-asociado), el ejercicio 2 y la comprobación individual de la Actividad.
