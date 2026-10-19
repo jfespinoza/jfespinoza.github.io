@@ -6,7 +6,7 @@ description: "Producto matriz-vector, representaciones de un sistema y solucione
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá representar un sistema como ecuaciones, matriz aumentada y ecuación matricial; verificar soluciones mediante un producto matriz-vector; y decidir por los pivotes si un sistema homogéneo tiene soluciones no triviales. Compruebe estas capacidades al resolver los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
+Al finalizar la sesión podrá representar un sistema como ecuaciones, matriz aumentada y ecuación matricial; verificar soluciones mediante el producto de una matriz por un vector; y decidir por los pivotes si un sistema homogéneo tiene soluciones distintas de la solución cero. Compruebe estas capacidades al resolver los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
 
 ## Para comenzar: una suma de columnas
 
@@ -34,7 +34,7 @@ $$
 
 La escritura con la [transpuesta](2026-10-09-sesion-35.qmd#transpuesta), $(x,y,z)^{\mathsf T}$, ahorra espacio en el texto. La negrita distingue el vector $\mathbf{x}$ de su primera componente, el número $x$; a mano, donde la negrita no se distingue, se escribe $\vec{x}$. El **vector cero**, $\mathbf{0}$, tiene todas sus componentes iguales a cero; su número de componentes lo determina el contexto.
 
-Dos vectores son iguales si lo son como matrices: mismo número de componentes y componentes correspondientes iguales, según la [igualdad de matrices](2026-10-09-sesion-35.qmd#tamaño-e-igualdad-de-matrices). Las soluciones se siguen escribiendo como ternas; por ejemplo, $(2,1,0)$. El vector $(2,1,0)^{\mathsf T}$ dispone esos números en columna para multiplicarlos por una matriz.
+Dos vectores son iguales si lo son como matrices: mismo número de componentes y componentes correspondientes iguales, según la [igualdad de matrices](2026-10-09-sesion-35.qmd#tamaño-e-igualdad-de-matrices). Las soluciones de los sistemas de dos o tres incógnitas se siguen escribiendo como parejas o ternas, respectivamente; por ejemplo, $(2,1,0)$. El vector $(2,1,0)^{\mathsf T}$ dispone esos números en columna para multiplicarlos por una matriz.
 
 ## Producto de una matriz por un vector
 
@@ -84,7 +84,7 @@ Todo sistema homogéneo es **[consistente](2026-09-22-sesion-28.qmd#clasificaci�
 
 Al reducir $[A\mid\mathbf{0}]$, la última columna permanece nula, porque cada [operación elemental](2026-09-23-sesion-29.qmd#operaciones-elementales-de-renglón) intercambia, multiplica o suma ceros; basta reducir $A$. Como el sistema es consistente, el caso lo decide la presencia de [variables libres](2026-10-07-sesion-33.qmd#variables-con-pivote-y-variables-libres):
 
-- Si cada columna de $A$ tiene pivote, la única solución es la trivial.
+- Si cada columna de la forma escalonada reducida de $A$ tiene pivote, la única solución es la trivial.
 - Si la columna de alguna variable no tiene pivote, esa variable es libre. Al darle el valor $1$ (y $0$ a las demás libres, si las hubiera) se obtiene una solución con una componente igual a $1$, que es no trivial. Además, como en la Sesión 33, hay infinitas soluciones.
 
 En resumen, con coeficientes e incógnitas reales, un sistema homogéneo tiene soluciones no triviales **si y solo si** tiene variables libres.
@@ -155,7 +155,7 @@ Con $t=0$ se obtiene la solución trivial $(0,0,0)$; con $t=1$, la solución no 
 
 ## Errores frecuentes
 
-- **Multiplicar con tamaños incompatibles.** Falso: con la matriz $A$ del Ejemplo 1, $A(2,1)^{\mathsf T}=(4,9)^{\mathsf T}$, porque $1(2)+2(1)=4$ y $2(2)+5(1)=9$. Corrección: $A$ tiene tres columnas y $(2,1)^{\mathsf T}$, dos componentes; el producto no está definido. La solución es $(2,1,0)^{\mathsf T}$: el $0$ de $z$ también se escribe.
+- **Multiplicar con tamaños incompatibles.** Falso: con la matriz $A$ del Ejemplo 1, $A(2,1)^{\mathsf T}=(4,9)^{\mathsf T}$, porque $1(2)+2(1)=4$ y $2(2)+5(1)=9$. Corrección: $A$ tiene tres columnas y $(2,1)^{\mathsf T}$, dos componentes; el producto no está definido. Una solución particular es la terna $(2,1,0)$; como vector, $(2,1,0)^{\mathsf T}$ tiene tres componentes: el $0$ de $z$ también se escribe.
 - **Multiplicar las componentes por los renglones.** Falso: $\begin{bmatrix}3&1\\0&2\end{bmatrix}\begin{bmatrix}1\\2\end{bmatrix}=1\begin{bmatrix}3\\1\end{bmatrix}+2\begin{bmatrix}0\\2\end{bmatrix}=\begin{bmatrix}3\\5\end{bmatrix}$. Corrección: cada componente multiplica una columna, $1\begin{bmatrix}3\\0\end{bmatrix}+2\begin{bmatrix}1\\2\end{bmatrix}=\begin{bmatrix}5\\4\end{bmatrix}$; por renglones se obtiene lo mismo: $3(1)+1(2)=5$ y $0(1)+2(2)=4$.
 - **Confundir la matriz de coeficientes con la matriz aumentada.** Falso: en el Ejemplo 1, $A=\left[\begin{array}{ccc|c}1&2&-1&4\\2&5&1&9\end{array}\right]$, de tamaño $2\times4$. Corrección: esa matriz es $[A\mid\mathbf{b}]$; $A$ es $2\times3$. Con una matriz $2\times4$, el producto exigiría cuatro componentes para tres incógnitas.
 - **Afirmar que un sistema homogéneo solo tiene la solución trivial.** Falso: el homogéneo del Ejemplo 2 solo admite $(0,0,0)$. Corrección: la columna de $z$ no tiene pivote, y $(7,-3,1)$ también es solución, pues $7+2(-3)-1=0$ y $2(7)+5(-3)+1=0$.
@@ -175,10 +175,10 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    d. Verifique la solución calculando $A\mathbf{x}$ por columnas e interprete cada componente del resultado.
 
-2. Las siguientes matrices son las formas escalonadas reducidas de las matrices de coeficientes de dos sistemas homogéneos: $M$ corresponde a un sistema en $x,y,z$, y $N$, a uno en $x,y$.
+2. Las siguientes matrices son las formas escalonadas reducidas de las matrices de coeficientes de dos sistemas homogéneos: $M$ corresponde a un sistema de dos ecuaciones en $x,y,z$, y $N$, a uno de tres ecuaciones en $x,y$.
 
    $$
-   M=\begin{bmatrix}1&0&2\\0&1&-1\end{bmatrix},\qquad N=\begin{bmatrix}1&0\\0&1\end{bmatrix}.
+   M=\begin{bmatrix}1&0&2\\0&1&-1\end{bmatrix},\qquad N=\begin{bmatrix}1&0\\0&1\\0&0\end{bmatrix}.
    $$
 
    a. Escriba la matriz aumentada de cada sistema reducido. ¿Qué contiene su última columna?
@@ -212,7 +212,7 @@ $$
 
 $A$ es $2\times2$; $\mathbf{x}=(x,y)^{\mathsf T}$ y $\mathbf{b}=(500,220)^{\mathsf T}$ tienen dos componentes cada uno.
 
-**1. c.** Con $R_2\to5R_2$, después $R_2\to R_2-R_1$, después $R_2\to\frac12R_2$ y, por último, $R_1\to R_1-R_2$:
+**1. c.** La operación $R_2\to5R_2$ produce la primera matriz; después se aplican $R_2\to R_2-R_1$, $R_2\to\frac12R_2$ y, por último, $R_1\to R_1-R_2$:
 
 $$
 \left[\begin{array}{cc|c}1&1&500\\1&3&1100\end{array}\right]\longrightarrow
@@ -231,17 +231,17 @@ $$
 
 La primera componente es la masa total, $500$ g; la segunda, la masa de cobre, $220$ g, que es el $44\,\%$ de $500$ g. Cada columna de $A$ indica lo que aporta un gramo de su lote: $1$ g de masa y $0.20$ g o $0.60$ g de cobre.
 
-**2. a.** $\left[\begin{array}{ccc|c}1&0&2&0\\0&1&-1&0\end{array}\right]$ y $\left[\begin{array}{cc|c}1&0&0\\0&1&0\end{array}\right]$. La última columna contiene solo ceros: los términos independientes de un homogéneo son cero y las operaciones elementales los conservan.
+**2. a.** $\left[\begin{array}{ccc|c}1&0&2&0\\0&1&-1&0\end{array}\right]$ y $\left[\begin{array}{cc|c}1&0&0\\0&1&0\\0&0&0\end{array}\right]$. La última columna contiene solo ceros: los términos independientes de un homogéneo son cero y las operaciones elementales los conservan.
 
-**2. b.** En $M$, la columna de $z$ no tiene pivote: hay una variable libre y existen soluciones no triviales. En $N$, cada columna tiene pivote: solo existe la solución trivial.
+**2. b.** En $M$, la columna de $z$ no tiene pivote: hay una variable libre y existen soluciones no triviales. En $N$, cada columna tiene pivote: solo existe la solución trivial. Su renglón nulo representa $0=0$ y no crea una variable libre.
 
-**2. c.** Para $M$, las ecuaciones son $x+2z=0$ y $y-z=0$; con $z=t$, $S=\{(-2t,\ t,\ t):t\in\mathbb R\}$. Con $t=1$ se obtiene la solución no trivial $(-2,1,1)$, que cumple $-2+2(1)=0$ y $1-1=0$. Para $N$, las ecuaciones son $x=0$ y $y=0$; $S=\{(0,0)\}$.
+**2. c.** Para $M$, las ecuaciones son $x+2z=0$ y $y-z=0$; con $z=t$, $S=\{(-2t,\ t,\ t):t\in\mathbb R\}$. Con $t=1$ se obtiene la solución no trivial $(-2,1,1)$, que cumple $-2+2(1)=0$ y $1-1=0$. Para $N$, las ecuaciones son $x=0$, $y=0$ y $0=0$; $S=\{(0,0)\}$.
 
 **3. a.** $C\mathbf{u}=\begin{bmatrix}1(2)+(-1)(1)\\2(2)+1(1)\end{bmatrix}=\begin{bmatrix}1\\5\end{bmatrix}$.
 
 **3. b.** $2\begin{bmatrix}1\\2\end{bmatrix}+1\begin{bmatrix}-1\\1\end{bmatrix}=\begin{bmatrix}2-1\\4+1\end{bmatrix}=\begin{bmatrix}1\\5\end{bmatrix}$, el mismo vector.
 
-**Comprobación individual, a.** Sí. El vector cero satisface todas las ecuaciones, porque todos los términos independientes son cero.
+**Comprobación individual, a.** Sí. Si todas las incógnitas valen cero, el lado izquierdo de cada ecuación vale $0$, que es su término independiente: el vector cero es solución.
 
 **Comprobación individual, b.** Una: con tres columnas y dos pivotes queda una columna sin pivote. Sí admite soluciones no triviales: al dar el valor $1$ a la variable libre se obtiene una solución con esa componente igual a $1$.
 
@@ -259,7 +259,7 @@ Se recomiendan los ejercicios 1, 2 y 3; los ejercicios 4 y 5 permiten reforzar l
 
    c. Otro técnico propone $x=20$ y $y=10$. ¿Es compatible con el registro? Justifique con el producto.
 
-2. Tres lotes de polvo de bronce, A, B y C, contienen $4\,\%$, $8\,\%$ y $12\,\%$ de estaño en masa. Se quieren preparar $400$ g de mezcla con $9\,\%$ de estaño con $x$, $y$ y $z$ gramos de los lotes A, B y C, respectivamente, sin pérdidas y con $x,y,z\ge0$. El sistema $x+y+z=400$, $0.04x+0.08y+0.12z=36$ tiene la forma escalonada reducida
+2. Tres lotes de polvo de bronce, A, B y C, contienen $4\,\%$, $8\,\%$ y $12\,\%$ de estaño en masa. Se quieren preparar $400$ g de mezcla con $9\,\%$ de estaño con $x$, $y$ y $z$ gramos de los lotes A, B y C, respectivamente, sin pérdidas y con $x,y,z\ge0$. La matriz aumentada del sistema $x+y+z=400$, $0.04x+0.08y+0.12z=36$ tiene la forma escalonada reducida
 
    $$
    \left[\begin{array}{ccc|c}1&0&-1&-100\\0&1&2&500\end{array}\right].
@@ -339,7 +339,7 @@ Un sistema lineal puede escribirse como ecuaciones, como matriz aumentada o como
 
 Al concluir esta sesión, usted debe poder:
 
-- Decidir si el producto de una matriz por un vector está definido y calcularlo por renglones y por columnas, como en el [Ejemplo 1](#ejemplo-1.-tres-representaciones-y-verificación-de-una-solución) y el ejercicio 3 de la [Actividad](#actividad).
+- Decidir si el producto de una matriz por un vector está definido y calcularlo por renglones y por columnas, como en el [Ejemplo 1](#ejemplo-1.-tres-representaciones-y-verificación-de-una-solución), el ejercicio 3 de la [Actividad](#actividad) y el ejercicio 5 de la [práctica](#ejercicios-para-practicar).
 - Traducir un sistema entre ecuaciones, matriz aumentada y ecuación matricial, indicando los tamaños, como en el ejercicio 1b de la Actividad y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
 - Verificar una solución propuesta mediante un producto y su comparación con $\mathbf{b}$, como en el ejercicio 1d de la Actividad y el ejercicio 3c de la práctica.
 - Decidir, a partir de los pivotes, si un sistema homogéneo tiene soluciones no triviales y describirlas por componentes, como en el [Ejemplo 2](#ejemplo-2.-el-sistema-homogéneo-asociado), el ejercicio 2 y la comprobación individual de la Actividad.
