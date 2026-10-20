@@ -515,6 +515,7 @@ window.Quarto = {
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
   <li><a href="#ejemplo-1.-un-producto-calculado-de-dos-maneras" id="toc-ejemplo-1.-un-producto-calculado-de-dos-maneras" class="nav-link" data-scroll-target="#ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1. Un producto calculado de dos maneras</a></li>
+  <li><a href="#ejemplo-2.-las-columnas-de-un-producto-rectangular" id="toc-ejemplo-2.-las-columnas-de-un-producto-rectangular" class="nav-link" data-scroll-target="#ejemplo-2.-las-columnas-de-un-producto-rectangular">Ejemplo 2. Las columnas de un producto rectangular</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -553,7 +554,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas, conservando el orden de los factores al asociar y distribuir. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
+<p>Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas; justificar con un contraejemplo por qué no puede cambiarse arbitrariamente el orden de los factores; y usar la identidad, la asociatividad y la distributividad con tamaños compatibles. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="para-comenzar-el-producto-de-una-matriz-por-un-vector" class="level2">
 <h2 class="anchored" data-anchor-id="para-comenzar-el-producto-de-una-matriz-por-un-vector">Para comenzar: el producto de una matriz por un vector</h2>
@@ -580,7 +581,7 @@ window.Quarto = {
 </section>
 <section id="producto-de-dos-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="producto-de-dos-matrices">Producto de dos matrices</h2>
-<p>En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz <span class="math inline">\(B\)</span>, cuyas columnas son vectores, la matriz <span class="math inline">\(A\)</span> se aplica a cada columna de <span class="math inline">\(B\)</span>.</p>
+<p>En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz cuyas columnas son vectores, la primera matriz multiplica a cada una de esas columnas.</p>
 <p>Sean <span class="math inline">\(A\)</span> una matriz real de tamaño <span class="math inline">\(m\times n\)</span> y <span class="math inline">\(B\)</span> otra matriz real de tamaño <span class="math inline">\(n\times p\)</span>, con columnas <span class="math inline">\(\mathbf{b}_1,\mathbf{b}_2,\ldots,\mathbf{b}_p\)</span>. El <strong>producto</strong> <span class="math inline">\(AB\)</span> es la matriz de tamaño <span class="math inline">\(m\times p\)</span> cuya columna <span class="math inline">\(j\)</span> es <span class="math inline">\(A\mathbf{b}_j\)</span>:</p>
 <p><span class="math display">\[
 AB=\begin{bmatrix}A\mathbf{b}_1&amp;A\mathbf{b}_2&amp;\cdots&amp;A\mathbf{b}_p\end{bmatrix}.
@@ -609,7 +610,8 @@ AB=\begin{bmatrix}A\mathbf{b}_1&amp;A\mathbf{b}_2&amp;\cdots&amp;A\mathbf{b}_p\e
 <p><span class="math display">\[
 I_2=\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix},\qquad I_3=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{bmatrix}.
 \]</span></p>
-<p>Al multiplicar por una columna de <span class="math inline">\(I_n\)</span>, se selecciona la columna correspondiente de <span class="math inline">\(A\)</span>; al multiplicar por un renglón de <span class="math inline">\(I_m\)</span>, se selecciona el renglón correspondiente de <span class="math inline">\(A\)</span>. Por tanto, para <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(m\times n\)</span>,</p>
+<p>Sea <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(m\times n\)</span>. La columna <span class="math inline">\(j\)</span> de <span class="math inline">\(I_n\)</span> tiene un <span class="math inline">\(1\)</span> en la posición <span class="math inline">\(j\)</span> y ceros en las demás; al multiplicar <span class="math inline">\(A\)</span> por esa columna, se obtiene la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span>. Por ello, <span class="math inline">\(AI_n=A\)</span>.</p>
+<p>En el otro orden, el renglón <span class="math inline">\(i\)</span> de <span class="math inline">\(I_m\)</span> tiene un <span class="math inline">\(1\)</span> en la posición <span class="math inline">\(i\)</span> y ceros en las demás. Al combinar ese renglón con la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span> mediante la regla renglón-columna, solo contribuye la entrada <span class="math inline">\(a_{ij}\)</span>: <span class="math inline">\((I_mA)_{ij}=a_{ij}\)</span>. Así, <span class="math inline">\(I_mA=A\)</span>. Las dos igualdades son</p>
 <p><span class="math display">\[
 AI_n=A,\qquad I_mA=A.
 \]</span></p>
@@ -617,7 +619,7 @@ AI_n=A,\qquad I_mA=A.
 </section>
 <section id="propiedades-del-producto" class="level2">
 <h2 class="anchored" data-anchor-id="propiedades-del-producto">Propiedades del producto</h2>
-<p>Si los tamaños permiten las operaciones, se cumplen</p>
+<p>Con tamaños compatibles, el producto cumple la <strong>asociatividad</strong> y la <strong>distributividad</strong>:</p>
 <p><span class="math display">\[
 (AB)C=A(BC),\qquad A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
 \]</span></p>
@@ -653,6 +655,23 @@ PQ=\begin{bmatrix}1(1)+2(1)&amp;1(0)+2(1)\\0(1)+1(1)&amp;0(0)+1(1)\end{bmatrix}=
 <p><span class="math display">\[
 P(Q+I_2)=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}+\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix}=\begin{bmatrix}4&amp;4\\1&amp;2\end{bmatrix}.
 \]</span></p>
+</section>
+<section id="ejemplo-2.-las-columnas-de-un-producto-rectangular" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-las-columnas-de-un-producto-rectangular">Ejemplo 2. Las columnas de un producto rectangular</h3>
+<p>Retome la matriz del <a href="../sesiones/2026-10-19-sesion-36.html#ejemplo-1.-tres-representaciones-y-verificación-de-una-solución">Ejemplo 1 de la Sesión 36</a>:</p>
+<p><span class="math display">\[
+A=\begin{bmatrix}1&amp;2&amp;-1\\2&amp;5&amp;1\end{bmatrix},\qquad
+B=\begin{bmatrix}2&amp;9\\1&amp;-2\\0&amp;1\end{bmatrix}.
+\]</span></p>
+<p><span class="math inline">\(A\)</span> es <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(B\)</span> es <span class="math inline">\(3\times2\)</span>, de modo que <span class="math inline">\(AB\)</span> es <span class="math inline">\(2\times2\)</span>. La primera columna es <span class="math inline">\(A(2,1,0)^{\mathsf T}=(4,9)^{\mathsf T}\)</span>, calculada en la Sesión 36. La segunda es</p>
+<p><span class="math display">\[
+A\begin{bmatrix}9\\-2\\1\end{bmatrix}
+=\begin{bmatrix}9-4-1\\18-10+1\end{bmatrix}
+=\begin{bmatrix}4\\9\end{bmatrix},
+\qquad
+AB=\begin{bmatrix}4&amp;4\\9&amp;9\end{bmatrix}.
+\]</span></p>
+<p>Cada columna del producto verifica una solución del sistema <span class="math inline">\(A\mathbf{x}=(4,9)^{\mathsf T}\)</span>: las dos ternas de <span class="math inline">\(B\)</span> son distintas y dan el mismo resultado. En el otro orden, <span class="math inline">\(BA\)</span> también está definido, pero es <span class="math inline">\(3\times3\)</span>; por su tamaño, no puede ser igual a <span class="math inline">\(AB\)</span>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
@@ -800,8 +819,8 @@ R=\begin{bmatrix}1&amp;-2&amp;0\\0&amp;0&amp;1\end{bmatrix}.
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
 <li>Decidir si un producto está definido e indicar su tamaño, como en el ejercicio 1a y la comprobación individual de la <a href="#actividad">Actividad</a>.</li>
-<li>Calcular un producto por columnas y con la regla renglón-columna, como en el <a href="#ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1</a> y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el ejercicio 3 y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
-<li>Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en los ejercicios 1b y 2c de la Actividad y el ejercicio 5 de la práctica.</li>
+<li>Calcular un producto por columnas y con la regla renglón-columna, como en el <a href="#ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1</a> y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el <a href="#ejemplo-2.-las-columnas-de-un-producto-rectangular">Ejemplo 2</a>, el ejercicio 3 de la Actividad y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
+<li>Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en el Ejemplo 1, los ejercicios 1b y 2c y el inciso b de la comprobación individual de la Actividad.</li>
 </ul>
 
 
