@@ -1,0 +1,289 @@
+---
+title: "Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores"
+date: 2026-10-20
+description: "Compatibilidad y cálculo del producto de matrices, interpretación por columnas, identidad y orden de los factores."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas, conservando el orden de los factores al asociar y distribuir. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
+
+## Para comenzar: el producto de una matriz por un vector
+
+Calcule, por renglones y por columnas, como en la [Sesión 36](2026-10-19-sesion-36.qmd#producto-de-una-matriz-por-un-vector),
+
+$$
+\begin{bmatrix}2&-1\\1&3\end{bmatrix}\begin{bmatrix}1\\2\end{bmatrix}.
+$$
+
+::: {.callout-note collapse="true" title="Respuesta"}
+
+Por renglones: $2(1)+(-1)(2)=0$ y $1(1)+3(2)=7$. Por columnas: $1\begin{bmatrix}2\\1\end{bmatrix}+2\begin{bmatrix}-1\\3\end{bmatrix}=\begin{bmatrix}0\\7\end{bmatrix}$. El resultado es $(0,7)^{\mathsf T}$.
+
+:::
+
+## Producto de dos matrices
+
+En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz $B$, cuyas columnas son vectores, la matriz $A$ se aplica a cada columna de $B$.
+
+Sean $A$ una matriz real de tamaño $m\times n$ y $B$ otra matriz real de tamaño $n\times p$, con columnas $\mathbf{b}_1,\mathbf{b}_2,\ldots,\mathbf{b}_p$. El **producto** $AB$ es la matriz de tamaño $m\times p$ cuya columna $j$ es $A\mathbf{b}_j$:
+
+$$
+AB=\begin{bmatrix}A\mathbf{b}_1&A\mathbf{b}_2&\cdots&A\mathbf{b}_p\end{bmatrix}.
+$$
+
+**Regla renglón-columna.** Al calcular $A\mathbf{b}_j$ por renglones, la entrada $(i,j)$ de $AB$ resulta de multiplicar, en orden, las entradas del renglón $i$ de $A$ por las de la columna $j$ de $B$ y sumar:
+
+$$
+(AB)_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots+a_{in}b_{nj}.
+$$
+
+Las dos formas dan la misma matriz: la regla renglón-columna calcula, entrada por entrada, las columnas $A\mathbf{b}_j$.
+
+**Tamaños.** $AB$ está definido si y solo si el número de columnas de $A$ es igual al número de renglones de $B$: cada columna de $B$ debe tener tantas componentes como columnas tiene $A$. El producto tiene tantos renglones como $A$ y tantas columnas como $B$:
+
+$$
+(m\times n)\,(n\times p)\ \longrightarrow\ m\times p.
+$$
+
+Por ejemplo, una matriz $2\times3$ por una $3\times4$ da una $2\times4$, y una $2\times3$ por otra $2\times3$ no está definida, aunque esas dos matrices sí puedan [sumarse](2026-10-09-sesion-35.qmd#suma-resta-y-producto-por-un-escalar).
+
+## Orden de los factores y matriz identidad
+
+En el producto de números reales, $ab=ba$. En el producto de matrices, el orden importa:
+
+- $AB$ puede estar definido y $BA$ no: con $A$ de $2\times3$ y $B$ de $3\times4$, $BA$ requeriría que $B$ tuviera $2$ columnas.
+- Si $A$ es $2\times3$ y $B$ es $3\times2$, ambos productos están definidos, pero $AB$ es $2\times2$ y $BA$ es $3\times3$.
+- Aun con matrices **cuadradas** (con tantos renglones como columnas) del mismo tamaño, $AB$ y $BA$ pueden ser distintas, como muestra el Ejemplo 1.
+
+Por eso se dice que el producto de matrices **no es conmutativo en general**. Esto no significa que dos matrices nunca conmuten: algunos pares sí lo hacen, como una matriz cuadrada y la matriz identidad del mismo tamaño, que se define a continuación.
+
+La **matriz identidad** $I_n$ es la matriz $n\times n$ cuyas entradas $(1,1),(2,2),\ldots,(n,n)$ valen $1$ y todas las demás valen $0$; se escribe $I$ cuando el tamaño es claro:
+
+$$
+I_2=\begin{bmatrix}1&0\\0&1\end{bmatrix},\qquad I_3=\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}.
+$$
+
+Al multiplicar por una columna de $I_n$, se selecciona la columna correspondiente de $A$; al multiplicar por un renglón de $I_m$, se selecciona el renglón correspondiente de $A$. Por tanto, para $A$ de tamaño $m\times n$,
+
+$$
+AI_n=A,\qquad I_mA=A.
+$$
+
+Si $A$ no es cuadrada, las identidades de ambos lados tienen tamaños distintos.
+
+## Propiedades del producto
+
+Si los tamaños permiten las operaciones, se cumplen
+
+$$
+(AB)C=A(BC),\qquad A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
+$$
+
+Ninguna de estas propiedades cambia el orden de los factores: al **asociar** solo se mueven los paréntesis, y al **distribuir** cada matriz conserva su lugar, a la izquierda o a la derecha. Por ejemplo, $A(B+C)$ no es, en general, igual a $BA+CA$.
+
+Para vectores con el número de componentes adecuado y un escalar $c$, la lectura por columnas da
+
+$$
+A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v},\qquad A(c\mathbf{u})=c(A\mathbf{u}).
+$$
+
+Si $\mathbf{u}=(u_1,\ldots,u_n)^{\mathsf T}$ y $\mathbf{v}=(v_1,\ldots,v_n)^{\mathsf T}$, en la primera igualdad la columna $j$ de $A$ queda multiplicada por $u_j+v_j$, y en la segunda, por $cu_j$; esos factores se reparten como en las [propiedades de los números reales aplicadas entrada por entrada](2026-10-09-sesion-35.qmd#suma-resta-y-producto-por-un-escalar).
+
+## Ejemplos
+
+### Ejemplo 1. Un producto calculado de dos maneras
+
+Sean
+
+$$
+P=\begin{bmatrix}1&2\\0&1\end{bmatrix},\qquad Q=\begin{bmatrix}1&0\\1&1\end{bmatrix}.
+$$
+
+Ambas son $2\times2$: $PQ$ está definido y es $2\times2$.
+
+**Por columnas.** Se aplica $P$ a cada columna de $Q$:
+
+$$
+P\begin{bmatrix}1\\1\end{bmatrix}=1\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}2\\1\end{bmatrix}=\begin{bmatrix}3\\1\end{bmatrix},\qquad
+P\begin{bmatrix}0\\1\end{bmatrix}=0\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}2\\1\end{bmatrix}=\begin{bmatrix}2\\1\end{bmatrix}.
+$$
+
+**Con la regla renglón-columna:**
+
+$$
+PQ=\begin{bmatrix}1(1)+2(1)&1(0)+2(1)\\0(1)+1(1)&0(0)+1(1)\end{bmatrix}=\begin{bmatrix}3&2\\1&1\end{bmatrix}.
+$$
+
+Las columnas coinciden con las del cálculo anterior.
+
+**Orden.** Para mostrar que $QP\ne PQ$ basta una entrada distinta: con el renglón 1 de $Q$ y la columna 1 de $P$, $(QP)_{11}=1(1)+0(0)=1$, mientras que $(PQ)_{11}=3$. En cambio, una entrada igual no basta para concluir que dos productos son iguales: hay que comparar todas.
+
+**Asociación.** Con $\mathbf{w}=(1,1)^{\mathsf T}$, se tiene $Q\mathbf{w}=(1,2)^{\mathsf T}$ y $P(Q\mathbf{w})=(1+4,\ 0+2)^{\mathsf T}=(5,2)^{\mathsf T}$. Con la matriz ya calculada, $(PQ)\mathbf{w}=(3+2,\ 1+1)^{\mathsf T}=(5,2)^{\mathsf T}$. Los dos caminos dan el mismo vector, y el orden $P$, $Q$, $\mathbf{w}$ no cambió.
+
+**Distribución con la identidad.** Como $PQ$ ya se conoce, $P(Q+I_2)=PQ+PI_2=PQ+P$:
+
+$$
+P(Q+I_2)=\begin{bmatrix}3&2\\1&1\end{bmatrix}+\begin{bmatrix}1&2\\0&1\end{bmatrix}=\begin{bmatrix}4&4\\1&2\end{bmatrix}.
+$$
+
+## Errores frecuentes
+
+- **Multiplicar entrada por entrada.** Falso: $\begin{bmatrix}1&2\\0&1\end{bmatrix}\begin{bmatrix}1&0\\1&1\end{bmatrix}=\begin{bmatrix}1(1)&2(0)\\0(1)&1(1)\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}$. Corrección: cada entrada combina un renglón completo de $P$ con una columna completa de $Q$; $PQ=\begin{bmatrix}3&2\\1&1\end{bmatrix}$, como en el Ejemplo 1.
+- **Cambiar el orden de los factores.** Falso: en el Ejemplo 1, $QP=PQ=\begin{bmatrix}3&2\\1&1\end{bmatrix}$. Corrección: $QP=\begin{bmatrix}1&2\\1&3\end{bmatrix}$; basta $(QP)_{11}=1\ne3=(PQ)_{11}$ para concluir $QP\ne PQ$.
+- **Tomar los números interiores como tamaño del producto.** Falso: si $A$ es $2\times3$ y $B$ es $3\times4$, $AB$ es $3\times3$. Corrección: los números interiores, $3$ y $3$, solo deciden si el producto está definido; los exteriores dan su tamaño, y $AB$ es $2\times4$.
+- **Cambiar de lugar una matriz al distribuir.** Falso: $P(Q+I_2)=QP+P=\begin{bmatrix}2&4\\1&4\end{bmatrix}$. Corrección: $P$ queda a la izquierda en cada término: $P(Q+I_2)=PQ+P=\begin{bmatrix}4&4\\1&2\end{bmatrix}$. La expresión $QP+P$ es igual a $(Q+I_2)P$, que es otro producto.
+- **Usar una identidad del tamaño equivocado.** Falso: con $A=\begin{bmatrix}1&2&-1\\2&5&1\end{bmatrix}$, $AI_2=A$. Corrección: $A$ tiene $3$ columnas e $I_2$ tiene $2$ renglones, así que $AI_2$ no está definido; las igualdades correctas son $AI_3=A$ e $I_2A=A$.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.
+
+1. Tamaños y propiedades.
+
+   a. Si $A$ es $4\times2$ y $B$ es $2\times3$, decida si $AB$ y $BA$ están definidos e indique el tamaño de los que lo estén.
+
+   b. Para $G=\begin{bmatrix}1&1\\0&2\end{bmatrix}$ y $H=\begin{bmatrix}2&0\\1&1\end{bmatrix}$ se sabe que $GH=\begin{bmatrix}3&1\\2&2\end{bmatrix}$. Calcule $G(H+I_2)$ sin efectuar otro producto e indique qué propiedades usó.
+
+2. Sean $C=\begin{bmatrix}1&3\\0&2\end{bmatrix}$ y $D=\begin{bmatrix}2&0\\1&1\end{bmatrix}$.
+
+   a. La primera columna de $CD$ es $C(2,1)^{\mathsf T}=(5,2)^{\mathsf T}$. Compruébelo, calcule la segunda columna y escriba $CD$.
+
+   b. Calcule $(CD)_{12}$ con la regla renglón-columna y compárelo con el inciso a.
+
+   c. Calcule únicamente la entrada $(DC)_{11}$. ¿Es $DC=CD$? Justifique.
+
+3. Tres lotes de polvo metálico, A, B y C, contienen $60\,\%$, $70\,\%$ y $90\,\%$ de cobre en masa. Se llama **resto** a todo el material que no es cobre. En la matriz $K$, cada columna corresponde a un lote, en ese orden; el primer renglón contiene las fracciones en masa de cobre y el segundo, las del resto. Se preparan sin pérdidas dos mezclas. Cada columna de $M$ contiene las masas, en gramos, tomadas de los lotes A, B y C para una mezcla:
+
+   $$
+   K=\begin{bmatrix}0.60&0.70&0.90\\0.40&0.30&0.10\end{bmatrix},\qquad
+   M=\begin{bmatrix}100&300\\300&0\\100&200\end{bmatrix}.
+   $$
+
+   a. Explique por qué $KM$ está definido, indique su tamaño y diga qué representa cada columna de $M$.
+
+   b. La primera columna de $KM$ es $K(100,300,100)^{\mathsf T}=(360,140)^{\mathsf T}$, calculada en el [Ejemplo 3 de la Sesión 35](2026-10-09-sesion-35.qmd#ejemplo-3.-masas-de-cobre-y-de-resto-en-una-mezcla). Calcule la segunda columna y escriba $KM$.
+
+   c. Compare las dos columnas de $KM$ e interprételas. ¿Bastan las masas de cobre y de resto de una mezcla para saber cuánto se tomó de cada lote? Justifique.
+
+**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas: $A$ es $3\times2$ y $B$ es $2\times4$.
+
+a. ¿Están definidos $AB$ y $BA$? Indique el tamaño de los que lo estén.
+
+b. Si además $C$ es $4\times1$, ¿qué tamaño tiene $(AB)C$? Al escribirlo como $A(BC)$, ¿qué se conserva?
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** $AB$ está definido, porque $A$ tiene $2$ columnas y $B$ tiene $2$ renglones; es $4\times3$. $BA$ no está definido: $B$ tiene $3$ columnas y $A$ tiene $4$ renglones.
+
+**1. b.** Por la distributividad y la identidad, $G(H+I_2)=GH+GI_2=GH+G$:
+
+$$
+G(H+I_2)=\begin{bmatrix}3&1\\2&2\end{bmatrix}+\begin{bmatrix}1&1\\0&2\end{bmatrix}=\begin{bmatrix}4&2\\2&4\end{bmatrix}.
+$$
+
+**2. a.** $C(2,1)^{\mathsf T}=2\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}3\\2\end{bmatrix}=\begin{bmatrix}5\\2\end{bmatrix}$ y $C(0,1)^{\mathsf T}=0\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}3\\2\end{bmatrix}=\begin{bmatrix}3\\2\end{bmatrix}$. Por tanto, $CD=\begin{bmatrix}5&3\\2&2\end{bmatrix}$.
+
+**2. b.** $(CD)_{12}=1(0)+3(1)=3$, que coincide con la entrada $(1,2)$ obtenida en el inciso a.
+
+**2. c.** $(DC)_{11}=2(1)+0(0)=2$, mientras que $(CD)_{11}=5$. Como esas entradas son distintas, $DC\ne CD$.
+
+**3. a.** $K$ es $2\times3$ y $M$ es $3\times2$: $K$ tiene $3$ columnas y $M$ tiene $3$ renglones, así que $KM$ está definido y es $2\times2$. La primera columna de $M$ es una mezcla con $100$ g de A, $300$ g de B y $100$ g de C; la segunda, otra con $300$ g de A, nada de B y $200$ g de C.
+
+**3. b.** $K(300,0,200)^{\mathsf T}=\begin{bmatrix}0.60(300)+0.70(0)+0.90(200)\\0.40(300)+0.30(0)+0.10(200)\end{bmatrix}=\begin{bmatrix}360\\140\end{bmatrix}$, de modo que $KM=\begin{bmatrix}360&360\\140&140\end{bmatrix}$.
+
+**3. c.** Cada columna de $KM$ da las masas de cobre y de resto de una mezcla. Las dos columnas son iguales: las dos mezclas toman cantidades distintas de los lotes y, sin embargo, ambas producen $360$ g de cobre y $140$ g de resto. Por tanto, esas masas no bastan para saber cuánto se tomó de cada lote. Las dos mezclas son admisibles en el [Ejemplo 2 de la Sesión 33](2026-10-07-sesion-33.qmd#ejemplo-2.-restricciones-de-masa-en-una-mezcla), con $t=100$ y $t=200$.
+
+**Comprobación individual, a.** $AB$ está definido, porque $A$ tiene $2$ columnas y $B$ tiene $2$ renglones; es $3\times4$. $BA$ no está definido: $B$ tiene $4$ columnas y $A$ tiene $3$ renglones.
+
+**Comprobación individual, b.** $(AB)C$ es $3\times1$, porque $AB$ es $3\times4$ y $C$ es $4\times1$. Al pasar a $A(BC)$ se conserva el orden de los factores, $A$, $B$, $C$; solo cambian los paréntesis.
+
+:::
+
+## Ejercicios para practicar
+
+Se recomiendan los ejercicios 1, 2 y 3; los ejercicios 4 y 5 permiten reforzar la traducción entre representaciones, la compatibilidad y la asociatividad, según lo necesite. Consulte las respuestas después de completar su intento.
+
+1. Una **probeta** es una muestra de material con forma y medidas fijas para un ensayo. Un laboratorio prepara sin pérdidas probetas de cobre y estaño de dos tipos, A y B. La matriz $U$ da los gramos de cada metal en una probeta (renglones: cobre y estaño; columnas: tipos A y B), y $L$, el número de probetas de cada tipo en dos lotes (renglones: tipos A y B; columnas: lotes 1 y 2):
+
+   $$
+   U=\begin{bmatrix}44&36\\6&4\end{bmatrix},\qquad L=\begin{bmatrix}3&2\\1&4\end{bmatrix}.
+   $$
+
+   a. ¿Qué tamaño tiene $UL$? ¿Qué representa la primera columna de $L$?
+
+   b. Calcule $UL$.
+
+   c. Interprete $(UL)_{12}$ y compruebe la masa total del lote 1 de dos maneras: con la primera columna de $UL$ y con las masas de las probetas.
+
+2. Se pesan placas de tres materiales: A, polimérico; B, metálico, y C, cerámico. Todas las placas de un mismo material tienen la misma masa. Sean $x$, $y$ y $z$ las masas, en gramos, de una placa A, B y C. Tres registros exactos dan: una placa de cada tipo, $60$ g; una A, dos B y tres C, $140$ g; dos A, una B y una C, $70$ g. Tras $R_2\to R_2-R_1$, $R_3\to R_3-2R_1$ y $R_3\to R_3+R_2$, la matriz aumentada queda
+
+   $$
+   \left[\begin{array}{ccc|c}1&1&1&60\\0&1&2&80\\0&0&1&30\end{array}\right].
+   $$
+
+   a. Complete la reducción con el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) y obtenga las masas.
+
+   b. Escriba el sistema original como $A\mathbf{x}=\mathbf{b}$ y verifique la solución con un solo producto.
+
+3. Un estudiante afirma: «Todo sistema homogéneo tiene únicamente la solución cero». La forma escalonada reducida de la matriz de coeficientes de un sistema homogéneo en $x,y,z$ es
+
+   $$
+   R=\begin{bmatrix}1&-2&0\\0&0&1\end{bmatrix}.
+   $$
+
+   a. Identifique la variable libre.
+
+   b. Dé una solución no trivial que refute la afirmación y verifíquela.
+
+   c. Corrija la afirmación, como en la sección de [sistemas homogéneos de la Sesión 36](2026-10-19-sesion-36.qmd#sistemas-homogéneos).
+
+4. La matriz aumentada de un sistema en $x,y,z$ es $\left[\begin{array}{ccc|c}2&0&-1&3\\1&1&0&4\end{array}\right]$.
+
+   a. Escriba las ecuaciones y la ecuación matricial $A\mathbf{x}=\mathbf{b}$.
+
+   b. Decida con un producto si $(2,2,1)$ y $(1,2,0)$ son soluciones.
+
+5. Sean $A=\begin{bmatrix}1&1\\0&1\end{bmatrix}$, $B=\begin{bmatrix}1&0&2\\0&1&1\end{bmatrix}$ y $\mathbf{c}=(1,0,1)^{\mathsf T}$.
+
+   a. Decida cuáles de $AB$, $BA$, $B\mathbf{c}$ y $A(B\mathbf{c})$ están definidos e indique sus tamaños.
+
+   b. Calcule $A(B\mathbf{c})$ y escriba un producto equivalente mediante la asociatividad. Indique qué se conserva al cambiar los paréntesis.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $UL$ es $2\times2$. La primera columna de $L$ indica que el lote 1 tiene $3$ probetas A y $1$ probeta B.
+
+**1. b.** $UL=\begin{bmatrix}168&232\\22&28\end{bmatrix}$.
+
+**1. c.** $(UL)_{12}=232$: el lote 2 contiene $232$ g de cobre. Masa del lote 1: $168+22=190$ g, igual a $3(50)+1(40)=190$ g.
+
+**2. a.** $x=10$, $y=20$ y $z=30$: una placa A, B o C tiene $10$, $20$ o $30$ g, respectivamente.
+
+**2. b.** $\begin{bmatrix}1&1&1\\1&2&3\\2&1&1\end{bmatrix}\begin{bmatrix}10\\20\\30\end{bmatrix}=\begin{bmatrix}60\\140\\70\end{bmatrix}=\mathbf{b}$.
+
+**3. a.** $y$.
+
+**3. b.** $(2,1,0)$: cumple $2-2(1)=0$ y $0=0$.
+
+**3. c.** Todo sistema homogéneo tiene la solución cero, y tiene soluciones no triviales si y solo si tiene variables libres.
+
+**4. a.** $2x-z=3$, $x+y=4$; $\begin{bmatrix}2&0&-1\\1&1&0\end{bmatrix}\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}3\\4\end{bmatrix}$.
+
+**4. b.** $(2,2,1)$ sí: $A(2,2,1)^{\mathsf T}=(3,4)^{\mathsf T}$. $(1,2,0)$ no: $A(1,2,0)^{\mathsf T}=(2,3)^{\mathsf T}\ne(3,4)^{\mathsf T}$.
+
+**5. a.** $AB$: $2\times3$; $BA$: no definido; $B\mathbf{c}$: vector con $2$ componentes; $A(B\mathbf{c})$: vector con $2$ componentes.
+
+**5. b.** $A(B\mathbf{c})=(4,1)^{\mathsf T}=(AB)\mathbf{c}$. Se conserva el orden de los factores $A$, $B$, $\mathbf{c}$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+El producto $AB$ requiere que el número de columnas de $A$ coincida con el de renglones de $B$. Cada columna de $AB$ es $A$ multiplicada por una columna de $B$; cada entrada combina un renglón de $A$ con una columna de $B$.
+
+Al revisar su trabajo, compruebe si puede:
+
+- Decidir si un producto está definido e indicar su tamaño, como en el ejercicio 1a y la comprobación individual de la [Actividad](#actividad).
+- Calcular un producto por columnas y con la regla renglón-columna, como en el [Ejemplo 1](#ejemplo-1.-un-producto-calculado-de-dos-maneras) y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el ejercicio 3 y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
+- Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en los ejercicios 1b y 2c de la Actividad y el ejercicio 5 de la práctica.
