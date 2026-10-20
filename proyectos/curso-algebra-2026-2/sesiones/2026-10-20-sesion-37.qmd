@@ -6,7 +6,7 @@ description: "Compatibilidad y cálculo del producto de matrices, interpretació
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas, conservando el orden de los factores al asociar y distribuir. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
+Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas; justificar con un contraejemplo por qué no puede cambiarse arbitrariamente el orden de los factores; y usar la identidad, la asociatividad y la distributividad con tamaños compatibles. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la [Actividad](#actividad).
 
 ## Para comenzar: el producto de una matriz por un vector
 
@@ -24,7 +24,7 @@ Por renglones: $2(1)+(-1)(2)=0$ y $1(1)+3(2)=7$. Por columnas: $1\begin{bmatrix}
 
 ## Producto de dos matrices
 
-En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz $B$, cuyas columnas son vectores, la matriz $A$ se aplica a cada columna de $B$.
+En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz cuyas columnas son vectores, la primera matriz multiplica a cada una de esas columnas.
 
 Sean $A$ una matriz real de tamaño $m\times n$ y $B$ otra matriz real de tamaño $n\times p$, con columnas $\mathbf{b}_1,\mathbf{b}_2,\ldots,\mathbf{b}_p$. El **producto** $AB$ es la matriz de tamaño $m\times p$ cuya columna $j$ es $A\mathbf{b}_j$:
 
@@ -64,7 +64,9 @@ $$
 I_2=\begin{bmatrix}1&0\\0&1\end{bmatrix},\qquad I_3=\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}.
 $$
 
-Al multiplicar por una columna de $I_n$, se selecciona la columna correspondiente de $A$; al multiplicar por un renglón de $I_m$, se selecciona el renglón correspondiente de $A$. Por tanto, para $A$ de tamaño $m\times n$,
+Sea $A$ de tamaño $m\times n$. La columna $j$ de $I_n$ tiene un $1$ en la posición $j$ y ceros en las demás; al multiplicar $A$ por esa columna, se obtiene la columna $j$ de $A$. Por ello, $AI_n=A$.
+
+En el otro orden, el renglón $i$ de $I_m$ tiene un $1$ en la posición $i$ y ceros en las demás. Al combinar ese renglón con la columna $j$ de $A$ mediante la regla renglón-columna, solo contribuye la entrada $a_{ij}$: $(I_mA)_{ij}=a_{ij}$. Así, $I_mA=A$. Las dos igualdades son
 
 $$
 AI_n=A,\qquad I_mA=A.
@@ -74,7 +76,7 @@ Si $A$ no es cuadrada, las identidades de ambos lados tienen tamaños distintos.
 
 ## Propiedades del producto
 
-Si los tamaños permiten las operaciones, se cumplen
+Con tamaños compatibles, el producto cumple la **asociatividad** y la **distributividad**:
 
 $$
 (AB)C=A(BC),\qquad A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
@@ -126,6 +128,27 @@ Las columnas coinciden con las del cálculo anterior.
 $$
 P(Q+I_2)=\begin{bmatrix}3&2\\1&1\end{bmatrix}+\begin{bmatrix}1&2\\0&1\end{bmatrix}=\begin{bmatrix}4&4\\1&2\end{bmatrix}.
 $$
+
+### Ejemplo 2. Las columnas de un producto rectangular
+
+Retome la matriz del [Ejemplo 1 de la Sesión 36](2026-10-19-sesion-36.qmd#ejemplo-1.-tres-representaciones-y-verificación-de-una-solución):
+
+$$
+A=\begin{bmatrix}1&2&-1\\2&5&1\end{bmatrix},\qquad
+B=\begin{bmatrix}2&9\\1&-2\\0&1\end{bmatrix}.
+$$
+
+$A$ es $2\times3$ y $B$ es $3\times2$, de modo que $AB$ es $2\times2$. La primera columna es $A(2,1,0)^{\mathsf T}=(4,9)^{\mathsf T}$, calculada en la Sesión 36. La segunda es
+
+$$
+A\begin{bmatrix}9\\-2\\1\end{bmatrix}
+=\begin{bmatrix}9-4-1\\18-10+1\end{bmatrix}
+=\begin{bmatrix}4\\9\end{bmatrix},
+\qquad
+AB=\begin{bmatrix}4&4\\9&9\end{bmatrix}.
+$$
+
+Cada columna del producto verifica una solución del sistema $A\mathbf{x}=(4,9)^{\mathsf T}$: las dos ternas de $B$ son distintas y dan el mismo resultado. En el otro orden, $BA$ también está definido, pero es $3\times3$; por su tamaño, no puede ser igual a $AB$.
 
 ## Errores frecuentes
 
@@ -285,5 +308,5 @@ El producto $AB$ requiere que el número de columnas de $A$ coincida con el de r
 Al revisar su trabajo, compruebe si puede:
 
 - Decidir si un producto está definido e indicar su tamaño, como en el ejercicio 1a y la comprobación individual de la [Actividad](#actividad).
-- Calcular un producto por columnas y con la regla renglón-columna, como en el [Ejemplo 1](#ejemplo-1.-un-producto-calculado-de-dos-maneras) y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el ejercicio 3 y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
-- Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en los ejercicios 1b y 2c de la Actividad y el ejercicio 5 de la práctica.
+- Calcular un producto por columnas y con la regla renglón-columna, como en el [Ejemplo 1](#ejemplo-1.-un-producto-calculado-de-dos-maneras) y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el [Ejemplo 2](#ejemplo-2.-las-columnas-de-un-producto-rectangular), el ejercicio 3 de la Actividad y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
+- Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en el Ejemplo 1, los ejercicios 1b y 2c y el inciso b de la comprobación individual de la Actividad.
