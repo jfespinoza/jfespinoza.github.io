@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Compatibilidad y cálculo del producto de matrices, interpretación por columnas, identidad y orden de los factores.">
+
+<title>Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores – Álgebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../unidades/05-conceptos-algebra-lineal.html" rel="next">
+<link href="../sesiones/2026-10-19-sesion-36.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cbef226a6bbf61280124ae9022e33d09.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores – Álgebra">
+<meta property="og:description" content="Compatibilidad y cálculo del producto de matrices, interpretación por columnas, identidad y orden de los factores.">
+<meta property="og:site_name" content="Álgebra">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-20-sesion-37.html"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Álgebra</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/jfespinoza/jfespinoza.github.io/tree/main/proyectos/curso-algebra-2026-2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Álgebra 22017</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Información del curso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Forma de trabajo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/evaluacion-asistencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluación y asistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calendario del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/acceso-teams.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acceso temporal a Teams</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-11-sesion-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 02. Números reales: clasificación, orden e intervalos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-24-sesion-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-26-sesion-13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 13. Práctica integradora de números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-28-sesion-14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-10-sesion-22.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-15-sesion-25.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 25. Práctica integradora de polinomios y sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-18-sesion-26.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 26. Examen parcial 2: polinomios y sus raíces</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-08-sesion-34.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 34. Práctica de variables libres y ecuaciones paramétricas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unidad 4. Matrices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-09-sesion-35.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-19-sesion-36.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 36. Representación matricial de un sistema y sistemas homogéneos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-20-sesion-37.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/05-conceptos-algebra-lineal.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 6. Transformaciones lineales en el plano</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursos de consulta</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/notacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#para-comenzar-el-producto-de-una-matriz-por-un-vector" id="toc-para-comenzar-el-producto-de-una-matriz-por-un-vector" class="nav-link" data-scroll-target="#para-comenzar-el-producto-de-una-matriz-por-un-vector">Para comenzar: el producto de una matriz por un vector</a></li>
+  <li><a href="#producto-de-dos-matrices" id="toc-producto-de-dos-matrices" class="nav-link" data-scroll-target="#producto-de-dos-matrices">Producto de dos matrices</a></li>
+  <li><a href="#orden-de-los-factores-y-matriz-identidad" id="toc-orden-de-los-factores-y-matriz-identidad" class="nav-link" data-scroll-target="#orden-de-los-factores-y-matriz-identidad">Orden de los factores y matriz identidad</a></li>
+  <li><a href="#propiedades-del-producto" id="toc-propiedades-del-producto" class="nav-link" data-scroll-target="#propiedades-del-producto">Propiedades del producto</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-un-producto-calculado-de-dos-maneras" id="toc-ejemplo-1.-un-producto-calculado-de-dos-maneras" class="nav-link" data-scroll-target="#ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1. Un producto calculado de dos maneras</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-20-sesion-37.html"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">20 de octubre de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá decidir si un producto de matrices está definido, indicar su tamaño, calcularlo e interpretar sus columnas, conservando el orden de los factores al asociar y distribuir. Compruebe estas capacidades con los ejercicios 1 a 3 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
+</section>
+<section id="para-comenzar-el-producto-de-una-matriz-por-un-vector" class="level2">
+<h2 class="anchored" data-anchor-id="para-comenzar-el-producto-de-una-matriz-por-un-vector">Para comenzar: el producto de una matriz por un vector</h2>
+<p>Calcule, por renglones y por columnas, como en la <a href="../sesiones/2026-10-19-sesion-36.html#producto-de-una-matriz-por-un-vector">Sesión 36</a>,</p>
+<p><span class="math display">\[
+\begin{bmatrix}2&amp;-1\\1&amp;3\end{bmatrix}\begin{bmatrix}1\\2\end{bmatrix}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuesta">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuesta
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Por renglones: <span class="math inline">\(2(1)+(-1)(2)=0\)</span> y <span class="math inline">\(1(1)+3(2)=7\)</span>. Por columnas: <span class="math inline">\(1\begin{bmatrix}2\\1\end{bmatrix}+2\begin{bmatrix}-1\\3\end{bmatrix}=\begin{bmatrix}0\\7\end{bmatrix}\)</span>. El resultado es <span class="math inline">\((0,7)^{\mathsf T}\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="producto-de-dos-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="producto-de-dos-matrices">Producto de dos matrices</h2>
+<p>En la Sesión 36, una matriz multiplicó a un vector. Si en lugar de un vector se tiene una matriz <span class="math inline">\(B\)</span>, cuyas columnas son vectores, la matriz <span class="math inline">\(A\)</span> se aplica a cada columna de <span class="math inline">\(B\)</span>.</p>
+<p>Sean <span class="math inline">\(A\)</span> una matriz real de tamaño <span class="math inline">\(m\times n\)</span> y <span class="math inline">\(B\)</span> otra matriz real de tamaño <span class="math inline">\(n\times p\)</span>, con columnas <span class="math inline">\(\mathbf{b}_1,\mathbf{b}_2,\ldots,\mathbf{b}_p\)</span>. El <strong>producto</strong> <span class="math inline">\(AB\)</span> es la matriz de tamaño <span class="math inline">\(m\times p\)</span> cuya columna <span class="math inline">\(j\)</span> es <span class="math inline">\(A\mathbf{b}_j\)</span>:</p>
+<p><span class="math display">\[
+AB=\begin{bmatrix}A\mathbf{b}_1&amp;A\mathbf{b}_2&amp;\cdots&amp;A\mathbf{b}_p\end{bmatrix}.
+\]</span></p>
+<p><strong>Regla renglón-columna.</strong> Al calcular <span class="math inline">\(A\mathbf{b}_j\)</span> por renglones, la entrada <span class="math inline">\((i,j)\)</span> de <span class="math inline">\(AB\)</span> resulta de multiplicar, en orden, las entradas del renglón <span class="math inline">\(i\)</span> de <span class="math inline">\(A\)</span> por las de la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(B\)</span> y sumar:</p>
+<p><span class="math display">\[
+(AB)_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots+a_{in}b_{nj}.
+\]</span></p>
+<p>Las dos formas dan la misma matriz: la regla renglón-columna calcula, entrada por entrada, las columnas <span class="math inline">\(A\mathbf{b}_j\)</span>.</p>
+<p><strong>Tamaños.</strong> <span class="math inline">\(AB\)</span> está definido si y solo si el número de columnas de <span class="math inline">\(A\)</span> es igual al número de renglones de <span class="math inline">\(B\)</span>: cada columna de <span class="math inline">\(B\)</span> debe tener tantas componentes como columnas tiene <span class="math inline">\(A\)</span>. El producto tiene tantos renglones como <span class="math inline">\(A\)</span> y tantas columnas como <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[
+(m\times n)\,(n\times p)\ \longrightarrow\ m\times p.
+\]</span></p>
+<p>Por ejemplo, una matriz <span class="math inline">\(2\times3\)</span> por una <span class="math inline">\(3\times4\)</span> da una <span class="math inline">\(2\times4\)</span>, y una <span class="math inline">\(2\times3\)</span> por otra <span class="math inline">\(2\times3\)</span> no está definida, aunque esas dos matrices sí puedan <a href="../sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar">sumarse</a>.</p>
+</section>
+<section id="orden-de-los-factores-y-matriz-identidad" class="level2">
+<h2 class="anchored" data-anchor-id="orden-de-los-factores-y-matriz-identidad">Orden de los factores y matriz identidad</h2>
+<p>En el producto de números reales, <span class="math inline">\(ab=ba\)</span>. En el producto de matrices, el orden importa:</p>
+<ul>
+<li><span class="math inline">\(AB\)</span> puede estar definido y <span class="math inline">\(BA\)</span> no: con <span class="math inline">\(A\)</span> de <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(B\)</span> de <span class="math inline">\(3\times4\)</span>, <span class="math inline">\(BA\)</span> requeriría que <span class="math inline">\(B\)</span> tuviera <span class="math inline">\(2\)</span> columnas.</li>
+<li>Si <span class="math inline">\(A\)</span> es <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(B\)</span> es <span class="math inline">\(3\times2\)</span>, ambos productos están definidos, pero <span class="math inline">\(AB\)</span> es <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(BA\)</span> es <span class="math inline">\(3\times3\)</span>.</li>
+<li>Aun con matrices <strong>cuadradas</strong> (con tantos renglones como columnas) del mismo tamaño, <span class="math inline">\(AB\)</span> y <span class="math inline">\(BA\)</span> pueden ser distintas, como muestra el Ejemplo 1.</li>
+</ul>
+<p>Por eso se dice que el producto de matrices <strong>no es conmutativo en general</strong>. Esto no significa que dos matrices nunca conmuten: algunos pares sí lo hacen, como una matriz cuadrada y la matriz identidad del mismo tamaño, que se define a continuación.</p>
+<p>La <strong>matriz identidad</strong> <span class="math inline">\(I_n\)</span> es la matriz <span class="math inline">\(n\times n\)</span> cuyas entradas <span class="math inline">\((1,1),(2,2),\ldots,(n,n)\)</span> valen <span class="math inline">\(1\)</span> y todas las demás valen <span class="math inline">\(0\)</span>; se escribe <span class="math inline">\(I\)</span> cuando el tamaño es claro:</p>
+<p><span class="math display">\[
+I_2=\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix},\qquad I_3=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\0&amp;0&amp;1\end{bmatrix}.
+\]</span></p>
+<p>Al multiplicar por una columna de <span class="math inline">\(I_n\)</span>, se selecciona la columna correspondiente de <span class="math inline">\(A\)</span>; al multiplicar por un renglón de <span class="math inline">\(I_m\)</span>, se selecciona el renglón correspondiente de <span class="math inline">\(A\)</span>. Por tanto, para <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(m\times n\)</span>,</p>
+<p><span class="math display">\[
+AI_n=A,\qquad I_mA=A.
+\]</span></p>
+<p>Si <span class="math inline">\(A\)</span> no es cuadrada, las identidades de ambos lados tienen tamaños distintos.</p>
+</section>
+<section id="propiedades-del-producto" class="level2">
+<h2 class="anchored" data-anchor-id="propiedades-del-producto">Propiedades del producto</h2>
+<p>Si los tamaños permiten las operaciones, se cumplen</p>
+<p><span class="math display">\[
+(AB)C=A(BC),\qquad A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
+\]</span></p>
+<p>Ninguna de estas propiedades cambia el orden de los factores: al <strong>asociar</strong> solo se mueven los paréntesis, y al <strong>distribuir</strong> cada matriz conserva su lugar, a la izquierda o a la derecha. Por ejemplo, <span class="math inline">\(A(B+C)\)</span> no es, en general, igual a <span class="math inline">\(BA+CA\)</span>.</p>
+<p>Para vectores con el número de componentes adecuado y un escalar <span class="math inline">\(c\)</span>, la lectura por columnas da</p>
+<p><span class="math display">\[
+A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v},\qquad A(c\mathbf{u})=c(A\mathbf{u}).
+\]</span></p>
+<p>Si <span class="math inline">\(\mathbf{u}=(u_1,\ldots,u_n)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf{v}=(v_1,\ldots,v_n)^{\mathsf T}\)</span>, en la primera igualdad la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span> queda multiplicada por <span class="math inline">\(u_j+v_j\)</span>, y en la segunda, por <span class="math inline">\(cu_j\)</span>; esos factores se reparten como en las <a href="../sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar">propiedades de los números reales aplicadas entrada por entrada</a>.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-un-producto-calculado-de-dos-maneras" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1. Un producto calculado de dos maneras</h3>
+<p>Sean</p>
+<p><span class="math display">\[
+P=\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix},\qquad Q=\begin{bmatrix}1&amp;0\\1&amp;1\end{bmatrix}.
+\]</span></p>
+<p>Ambas son <span class="math inline">\(2\times2\)</span>: <span class="math inline">\(PQ\)</span> está definido y es <span class="math inline">\(2\times2\)</span>.</p>
+<p><strong>Por columnas.</strong> Se aplica <span class="math inline">\(P\)</span> a cada columna de <span class="math inline">\(Q\)</span>:</p>
+<p><span class="math display">\[
+P\begin{bmatrix}1\\1\end{bmatrix}=1\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}2\\1\end{bmatrix}=\begin{bmatrix}3\\1\end{bmatrix},\qquad
+P\begin{bmatrix}0\\1\end{bmatrix}=0\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}2\\1\end{bmatrix}=\begin{bmatrix}2\\1\end{bmatrix}.
+\]</span></p>
+<p><strong>Con la regla renglón-columna:</strong></p>
+<p><span class="math display">\[
+PQ=\begin{bmatrix}1(1)+2(1)&amp;1(0)+2(1)\\0(1)+1(1)&amp;0(0)+1(1)\end{bmatrix}=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}.
+\]</span></p>
+<p>Las columnas coinciden con las del cálculo anterior.</p>
+<p><strong>Orden.</strong> Para mostrar que <span class="math inline">\(QP\ne PQ\)</span> basta una entrada distinta: con el renglón 1 de <span class="math inline">\(Q\)</span> y la columna 1 de <span class="math inline">\(P\)</span>, <span class="math inline">\((QP)_{11}=1(1)+0(0)=1\)</span>, mientras que <span class="math inline">\((PQ)_{11}=3\)</span>. En cambio, una entrada igual no basta para concluir que dos productos son iguales: hay que comparar todas.</p>
+<p><strong>Asociación.</strong> Con <span class="math inline">\(\mathbf{w}=(1,1)^{\mathsf T}\)</span>, se tiene <span class="math inline">\(Q\mathbf{w}=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(P(Q\mathbf{w})=(1+4,\ 0+2)^{\mathsf T}=(5,2)^{\mathsf T}\)</span>. Con la matriz ya calculada, <span class="math inline">\((PQ)\mathbf{w}=(3+2,\ 1+1)^{\mathsf T}=(5,2)^{\mathsf T}\)</span>. Los dos caminos dan el mismo vector, y el orden <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>, <span class="math inline">\(\mathbf{w}\)</span> no cambió.</p>
+<p><strong>Distribución con la identidad.</strong> Como <span class="math inline">\(PQ\)</span> ya se conoce, <span class="math inline">\(P(Q+I_2)=PQ+PI_2=PQ+P\)</span>:</p>
+<p><span class="math display">\[
+P(Q+I_2)=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}+\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix}=\begin{bmatrix}4&amp;4\\1&amp;2\end{bmatrix}.
+\]</span></p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Multiplicar entrada por entrada.</strong> Falso: <span class="math inline">\(\begin{bmatrix}1&amp;2\\0&amp;1\end{bmatrix}\begin{bmatrix}1&amp;0\\1&amp;1\end{bmatrix}=\begin{bmatrix}1(1)&amp;2(0)\\0(1)&amp;1(1)\end{bmatrix}=\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix}\)</span>. Corrección: cada entrada combina un renglón completo de <span class="math inline">\(P\)</span> con una columna completa de <span class="math inline">\(Q\)</span>; <span class="math inline">\(PQ=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}\)</span>, como en el Ejemplo 1.</li>
+<li><strong>Cambiar el orden de los factores.</strong> Falso: en el Ejemplo 1, <span class="math inline">\(QP=PQ=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}\)</span>. Corrección: <span class="math inline">\(QP=\begin{bmatrix}1&amp;2\\1&amp;3\end{bmatrix}\)</span>; basta <span class="math inline">\((QP)_{11}=1\ne3=(PQ)_{11}\)</span> para concluir <span class="math inline">\(QP\ne PQ\)</span>.</li>
+<li><strong>Tomar los números interiores como tamaño del producto.</strong> Falso: si <span class="math inline">\(A\)</span> es <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(B\)</span> es <span class="math inline">\(3\times4\)</span>, <span class="math inline">\(AB\)</span> es <span class="math inline">\(3\times3\)</span>. Corrección: los números interiores, <span class="math inline">\(3\)</span> y <span class="math inline">\(3\)</span>, solo deciden si el producto está definido; los exteriores dan su tamaño, y <span class="math inline">\(AB\)</span> es <span class="math inline">\(2\times4\)</span>.</li>
+<li><strong>Cambiar de lugar una matriz al distribuir.</strong> Falso: <span class="math inline">\(P(Q+I_2)=QP+P=\begin{bmatrix}2&amp;4\\1&amp;4\end{bmatrix}\)</span>. Corrección: <span class="math inline">\(P\)</span> queda a la izquierda en cada término: <span class="math inline">\(P(Q+I_2)=PQ+P=\begin{bmatrix}4&amp;4\\1&amp;2\end{bmatrix}\)</span>. La expresión <span class="math inline">\(QP+P\)</span> es igual a <span class="math inline">\((Q+I_2)P\)</span>, que es otro producto.</li>
+<li><strong>Usar una identidad del tamaño equivocado.</strong> Falso: con <span class="math inline">\(A=\begin{bmatrix}1&amp;2&amp;-1\\2&amp;5&amp;1\end{bmatrix}\)</span>, <span class="math inline">\(AI_2=A\)</span>. Corrección: <span class="math inline">\(A\)</span> tiene <span class="math inline">\(3\)</span> columnas e <span class="math inline">\(I_2\)</span> tiene <span class="math inline">\(2\)</span> renglones, así que <span class="math inline">\(AI_2\)</span> no está definido; las igualdades correctas son <span class="math inline">\(AI_3=A\)</span> e <span class="math inline">\(I_2A=A\)</span>.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.</p>
+<ol type="1">
+<li><p>Tamaños y propiedades.</p>
+<ol type="a">
+<li><p>Si <span class="math inline">\(A\)</span> es <span class="math inline">\(4\times2\)</span> y <span class="math inline">\(B\)</span> es <span class="math inline">\(2\times3\)</span>, decida si <span class="math inline">\(AB\)</span> y <span class="math inline">\(BA\)</span> están definidos e indique el tamaño de los que lo estén.</p></li>
+<li><p>Para <span class="math inline">\(G=\begin{bmatrix}1&amp;1\\0&amp;2\end{bmatrix}\)</span> y <span class="math inline">\(H=\begin{bmatrix}2&amp;0\\1&amp;1\end{bmatrix}\)</span> se sabe que <span class="math inline">\(GH=\begin{bmatrix}3&amp;1\\2&amp;2\end{bmatrix}\)</span>. Calcule <span class="math inline">\(G(H+I_2)\)</span> sin efectuar otro producto e indique qué propiedades usó.</p></li>
+</ol></li>
+<li><p>Sean <span class="math inline">\(C=\begin{bmatrix}1&amp;3\\0&amp;2\end{bmatrix}\)</span> y <span class="math inline">\(D=\begin{bmatrix}2&amp;0\\1&amp;1\end{bmatrix}\)</span>.</p>
+<ol type="a">
+<li><p>La primera columna de <span class="math inline">\(CD\)</span> es <span class="math inline">\(C(2,1)^{\mathsf T}=(5,2)^{\mathsf T}\)</span>. Compruébelo, calcule la segunda columna y escriba <span class="math inline">\(CD\)</span>.</p></li>
+<li><p>Calcule <span class="math inline">\((CD)_{12}\)</span> con la regla renglón-columna y compárelo con el inciso a.</p></li>
+<li><p>Calcule únicamente la entrada <span class="math inline">\((DC)_{11}\)</span>. ¿Es <span class="math inline">\(DC=CD\)</span>? Justifique.</p></li>
+</ol></li>
+<li><p>Tres lotes de polvo metálico, A, B y C, contienen <span class="math inline">\(60\,\%\)</span>, <span class="math inline">\(70\,\%\)</span> y <span class="math inline">\(90\,\%\)</span> de cobre en masa. Se llama <strong>resto</strong> a todo el material que no es cobre. En la matriz <span class="math inline">\(K\)</span>, cada columna corresponde a un lote, en ese orden; el primer renglón contiene las fracciones en masa de cobre y el segundo, las del resto. Se preparan sin pérdidas dos mezclas. Cada columna de <span class="math inline">\(M\)</span> contiene las masas, en gramos, tomadas de los lotes A, B y C para una mezcla:</p>
+<p><span class="math display">\[
+K=\begin{bmatrix}0.60&amp;0.70&amp;0.90\\0.40&amp;0.30&amp;0.10\end{bmatrix},\qquad
+M=\begin{bmatrix}100&amp;300\\300&amp;0\\100&amp;200\end{bmatrix}.
+\]</span></p>
+<ol type="a">
+<li><p>Explique por qué <span class="math inline">\(KM\)</span> está definido, indique su tamaño y diga qué representa cada columna de <span class="math inline">\(M\)</span>.</p></li>
+<li><p>La primera columna de <span class="math inline">\(KM\)</span> es <span class="math inline">\(K(100,300,100)^{\mathsf T}=(360,140)^{\mathsf T}\)</span>, calculada en el <a href="../sesiones/2026-10-09-sesion-35.html#ejemplo-3.-masas-de-cobre-y-de-resto-en-una-mezcla">Ejemplo 3 de la Sesión 35</a>. Calcule la segunda columna y escriba <span class="math inline">\(KM\)</span>.</p></li>
+<li><p>Compare las dos columnas de <span class="math inline">\(KM\)</span> e interprételas. ¿Bastan las masas de cobre y de resto de una mezcla para saber cuánto se tomó de cada lote? Justifique.</p></li>
+</ol></li>
+</ol>
+<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas: <span class="math inline">\(A\)</span> es <span class="math inline">\(3\times2\)</span> y <span class="math inline">\(B\)</span> es <span class="math inline">\(2\times4\)</span>.</p>
+<ol type="a">
+<li><p>¿Están definidos <span class="math inline">\(AB\)</span> y <span class="math inline">\(BA\)</span>? Indique el tamaño de los que lo estén.</p></li>
+<li><p>Si además <span class="math inline">\(C\)</span> es <span class="math inline">\(4\times1\)</span>, ¿qué tamaño tiene <span class="math inline">\((AB)C\)</span>? Al escribirlo como <span class="math inline">\(A(BC)\)</span>, ¿qué se conserva?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\(AB\)</span> está definido, porque <span class="math inline">\(A\)</span> tiene <span class="math inline">\(2\)</span> columnas y <span class="math inline">\(B\)</span> tiene <span class="math inline">\(2\)</span> renglones; es <span class="math inline">\(4\times3\)</span>. <span class="math inline">\(BA\)</span> no está definido: <span class="math inline">\(B\)</span> tiene <span class="math inline">\(3\)</span> columnas y <span class="math inline">\(A\)</span> tiene <span class="math inline">\(4\)</span> renglones.</p>
+<p><strong>1. b.</strong> Por la distributividad y la identidad, <span class="math inline">\(G(H+I_2)=GH+GI_2=GH+G\)</span>:</p>
+<p><span class="math display">\[
+G(H+I_2)=\begin{bmatrix}3&amp;1\\2&amp;2\end{bmatrix}+\begin{bmatrix}1&amp;1\\0&amp;2\end{bmatrix}=\begin{bmatrix}4&amp;2\\2&amp;4\end{bmatrix}.
+\]</span></p>
+<p><strong>2. a.</strong> <span class="math inline">\(C(2,1)^{\mathsf T}=2\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}3\\2\end{bmatrix}=\begin{bmatrix}5\\2\end{bmatrix}\)</span> y <span class="math inline">\(C(0,1)^{\mathsf T}=0\begin{bmatrix}1\\0\end{bmatrix}+1\begin{bmatrix}3\\2\end{bmatrix}=\begin{bmatrix}3\\2\end{bmatrix}\)</span>. Por tanto, <span class="math inline">\(CD=\begin{bmatrix}5&amp;3\\2&amp;2\end{bmatrix}\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\((CD)_{12}=1(0)+3(1)=3\)</span>, que coincide con la entrada <span class="math inline">\((1,2)\)</span> obtenida en el inciso a.</p>
+<p><strong>2. c.</strong> <span class="math inline">\((DC)_{11}=2(1)+0(0)=2\)</span>, mientras que <span class="math inline">\((CD)_{11}=5\)</span>. Como esas entradas son distintas, <span class="math inline">\(DC\ne CD\)</span>.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(K\)</span> es <span class="math inline">\(2\times3\)</span> y <span class="math inline">\(M\)</span> es <span class="math inline">\(3\times2\)</span>: <span class="math inline">\(K\)</span> tiene <span class="math inline">\(3\)</span> columnas y <span class="math inline">\(M\)</span> tiene <span class="math inline">\(3\)</span> renglones, así que <span class="math inline">\(KM\)</span> está definido y es <span class="math inline">\(2\times2\)</span>. La primera columna de <span class="math inline">\(M\)</span> es una mezcla con <span class="math inline">\(100\)</span> g de A, <span class="math inline">\(300\)</span> g de B y <span class="math inline">\(100\)</span> g de C; la segunda, otra con <span class="math inline">\(300\)</span> g de A, nada de B y <span class="math inline">\(200\)</span> g de C.</p>
+<p><strong>3. b.</strong> <span class="math inline">\(K(300,0,200)^{\mathsf T}=\begin{bmatrix}0.60(300)+0.70(0)+0.90(200)\\0.40(300)+0.30(0)+0.10(200)\end{bmatrix}=\begin{bmatrix}360\\140\end{bmatrix}\)</span>, de modo que <span class="math inline">\(KM=\begin{bmatrix}360&amp;360\\140&amp;140\end{bmatrix}\)</span>.</p>
+<p><strong>3. c.</strong> Cada columna de <span class="math inline">\(KM\)</span> da las masas de cobre y de resto de una mezcla. Las dos columnas son iguales: las dos mezclas toman cantidades distintas de los lotes y, sin embargo, ambas producen <span class="math inline">\(360\)</span> g de cobre y <span class="math inline">\(140\)</span> g de resto. Por tanto, esas masas no bastan para saber cuánto se tomó de cada lote. Las dos mezclas son admisibles en el <a href="../sesiones/2026-10-07-sesion-33.html#ejemplo-2.-restricciones-de-masa-en-una-mezcla">Ejemplo 2 de la Sesión 33</a>, con <span class="math inline">\(t=100\)</span> y <span class="math inline">\(t=200\)</span>.</p>
+<p><strong>Comprobación individual, a.</strong> <span class="math inline">\(AB\)</span> está definido, porque <span class="math inline">\(A\)</span> tiene <span class="math inline">\(2\)</span> columnas y <span class="math inline">\(B\)</span> tiene <span class="math inline">\(2\)</span> renglones; es <span class="math inline">\(3\times4\)</span>. <span class="math inline">\(BA\)</span> no está definido: <span class="math inline">\(B\)</span> tiene <span class="math inline">\(4\)</span> columnas y <span class="math inline">\(A\)</span> tiene <span class="math inline">\(3\)</span> renglones.</p>
+<p><strong>Comprobación individual, b.</strong> <span class="math inline">\((AB)C\)</span> es <span class="math inline">\(3\times1\)</span>, porque <span class="math inline">\(AB\)</span> es <span class="math inline">\(3\times4\)</span> y <span class="math inline">\(C\)</span> es <span class="math inline">\(4\times1\)</span>. Al pasar a <span class="math inline">\(A(BC)\)</span> se conserva el orden de los factores, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>; solo cambian los paréntesis.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Se recomiendan los ejercicios 1, 2 y 3; los ejercicios 4 y 5 permiten reforzar la traducción entre representaciones, la compatibilidad y la asociatividad, según lo necesite. Consulte las respuestas después de completar su intento.</p>
+<ol type="1">
+<li><p>Una <strong>probeta</strong> es una muestra de material con forma y medidas fijas para un ensayo. Un laboratorio prepara sin pérdidas probetas de cobre y estaño de dos tipos, A y B. La matriz <span class="math inline">\(U\)</span> da los gramos de cada metal en una probeta (renglones: cobre y estaño; columnas: tipos A y B), y <span class="math inline">\(L\)</span>, el número de probetas de cada tipo en dos lotes (renglones: tipos A y B; columnas: lotes 1 y 2):</p>
+<p><span class="math display">\[
+U=\begin{bmatrix}44&amp;36\\6&amp;4\end{bmatrix},\qquad L=\begin{bmatrix}3&amp;2\\1&amp;4\end{bmatrix}.
+\]</span></p>
+<ol type="a">
+<li><p>¿Qué tamaño tiene <span class="math inline">\(UL\)</span>? ¿Qué representa la primera columna de <span class="math inline">\(L\)</span>?</p></li>
+<li><p>Calcule <span class="math inline">\(UL\)</span>.</p></li>
+<li><p>Interprete <span class="math inline">\((UL)_{12}\)</span> y compruebe la masa total del lote 1 de dos maneras: con la primera columna de <span class="math inline">\(UL\)</span> y con las masas de las probetas.</p></li>
+</ol></li>
+<li><p>Se pesan placas de tres materiales: A, polimérico; B, metálico, y C, cerámico. Todas las placas de un mismo material tienen la misma masa. Sean <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> las masas, en gramos, de una placa A, B y C. Tres registros exactos dan: una placa de cada tipo, <span class="math inline">\(60\)</span> g; una A, dos B y tres C, <span class="math inline">\(140\)</span> g; dos A, una B y una C, <span class="math inline">\(70\)</span> g. Tras <span class="math inline">\(R_2\to R_2-R_1\)</span>, <span class="math inline">\(R_3\to R_3-2R_1\)</span> y <span class="math inline">\(R_3\to R_3+R_2\)</span>, la matriz aumentada queda</p>
+<p><span class="math display">\[
+\left[\begin{array}{ccc|c}1&amp;1&amp;1&amp;60\\0&amp;1&amp;2&amp;80\\0&amp;0&amp;1&amp;30\end{array}\right].
+\]</span></p>
+<ol type="a">
+<li><p>Complete la reducción con el <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">método de Gauss-Jordan</a> y obtenga las masas.</p></li>
+<li><p>Escriba el sistema original como <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> y verifique la solución con un solo producto.</p></li>
+</ol></li>
+<li><p>Un estudiante afirma: «Todo sistema homogéneo tiene únicamente la solución cero». La forma escalonada reducida de la matriz de coeficientes de un sistema homogéneo en <span class="math inline">\(x,y,z\)</span> es</p>
+<p><span class="math display">\[
+R=\begin{bmatrix}1&amp;-2&amp;0\\0&amp;0&amp;1\end{bmatrix}.
+\]</span></p>
+<ol type="a">
+<li><p>Identifique la variable libre.</p></li>
+<li><p>Dé una solución no trivial que refute la afirmación y verifíquela.</p></li>
+<li><p>Corrija la afirmación, como en la sección de <a href="../sesiones/2026-10-19-sesion-36.html#sistemas-homogéneos">sistemas homogéneos de la Sesión 36</a>.</p></li>
+</ol></li>
+<li><p>La matriz aumentada de un sistema en <span class="math inline">\(x,y,z\)</span> es <span class="math inline">\(\left[\begin{array}{ccc|c}2&amp;0&amp;-1&amp;3\\1&amp;1&amp;0&amp;4\end{array}\right]\)</span>.</p>
+<ol type="a">
+<li><p>Escriba las ecuaciones y la ecuación matricial <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>.</p></li>
+<li><p>Decida con un producto si <span class="math inline">\((2,2,1)\)</span> y <span class="math inline">\((1,2,0)\)</span> son soluciones.</p></li>
+</ol></li>
+<li><p>Sean <span class="math inline">\(A=\begin{bmatrix}1&amp;1\\0&amp;1\end{bmatrix}\)</span>, <span class="math inline">\(B=\begin{bmatrix}1&amp;0&amp;2\\0&amp;1&amp;1\end{bmatrix}\)</span> y <span class="math inline">\(\mathbf{c}=(1,0,1)^{\mathsf T}\)</span>.</p>
+<ol type="a">
+<li><p>Decida cuáles de <span class="math inline">\(AB\)</span>, <span class="math inline">\(BA\)</span>, <span class="math inline">\(B\mathbf{c}\)</span> y <span class="math inline">\(A(B\mathbf{c})\)</span> están definidos e indique sus tamaños.</p></li>
+<li><p>Calcule <span class="math inline">\(A(B\mathbf{c})\)</span> y escriba un producto equivalente mediante la asociatividad. Indique qué se conserva al cambiar los paréntesis.</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\(UL\)</span> es <span class="math inline">\(2\times2\)</span>. La primera columna de <span class="math inline">\(L\)</span> indica que el lote 1 tiene <span class="math inline">\(3\)</span> probetas A y <span class="math inline">\(1\)</span> probeta B.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(UL=\begin{bmatrix}168&amp;232\\22&amp;28\end{bmatrix}\)</span>.</p>
+<p><strong>1. c.</strong> <span class="math inline">\((UL)_{12}=232\)</span>: el lote 2 contiene <span class="math inline">\(232\)</span> g de cobre. Masa del lote 1: <span class="math inline">\(168+22=190\)</span> g, igual a <span class="math inline">\(3(50)+1(40)=190\)</span> g.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x=10\)</span>, <span class="math inline">\(y=20\)</span> y <span class="math inline">\(z=30\)</span>: una placa A, B o C tiene <span class="math inline">\(10\)</span>, <span class="math inline">\(20\)</span> o <span class="math inline">\(30\)</span> g, respectivamente.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(\begin{bmatrix}1&amp;1&amp;1\\1&amp;2&amp;3\\2&amp;1&amp;1\end{bmatrix}\begin{bmatrix}10\\20\\30\end{bmatrix}=\begin{bmatrix}60\\140\\70\end{bmatrix}=\mathbf{b}\)</span>.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(y\)</span>.</p>
+<p><strong>3. b.</strong> <span class="math inline">\((2,1,0)\)</span>: cumple <span class="math inline">\(2-2(1)=0\)</span> y <span class="math inline">\(0=0\)</span>.</p>
+<p><strong>3. c.</strong> Todo sistema homogéneo tiene la solución cero, y tiene soluciones no triviales si y solo si tiene variables libres.</p>
+<p><strong>4. a.</strong> <span class="math inline">\(2x-z=3\)</span>, <span class="math inline">\(x+y=4\)</span>; <span class="math inline">\(\begin{bmatrix}2&amp;0&amp;-1\\1&amp;1&amp;0\end{bmatrix}\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}3\\4\end{bmatrix}\)</span>.</p>
+<p><strong>4. b.</strong> <span class="math inline">\((2,2,1)\)</span> sí: <span class="math inline">\(A(2,2,1)^{\mathsf T}=(3,4)^{\mathsf T}\)</span>. <span class="math inline">\((1,2,0)\)</span> no: <span class="math inline">\(A(1,2,0)^{\mathsf T}=(2,3)^{\mathsf T}\ne(3,4)^{\mathsf T}\)</span>.</p>
+<p><strong>5. a.</strong> <span class="math inline">\(AB\)</span>: <span class="math inline">\(2\times3\)</span>; <span class="math inline">\(BA\)</span>: no definido; <span class="math inline">\(B\mathbf{c}\)</span>: vector con <span class="math inline">\(2\)</span> componentes; <span class="math inline">\(A(B\mathbf{c})\)</span>: vector con <span class="math inline">\(2\)</span> componentes.</p>
+<p><strong>5. b.</strong> <span class="math inline">\(A(B\mathbf{c})=(4,1)^{\mathsf T}=(AB)\mathbf{c}\)</span>. Se conserva el orden de los factores <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(\mathbf{c}\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El producto <span class="math inline">\(AB\)</span> requiere que el número de columnas de <span class="math inline">\(A\)</span> coincida con el de renglones de <span class="math inline">\(B\)</span>. Cada columna de <span class="math inline">\(AB\)</span> es <span class="math inline">\(A\)</span> multiplicada por una columna de <span class="math inline">\(B\)</span>; cada entrada combina un renglón de <span class="math inline">\(A\)</span> con una columna de <span class="math inline">\(B\)</span>.</p>
+<p>Al revisar su trabajo, compruebe si puede:</p>
+<ul>
+<li>Decidir si un producto está definido e indicar su tamaño, como en el ejercicio 1a y la comprobación individual de la <a href="#actividad">Actividad</a>.</li>
+<li>Calcular un producto por columnas y con la regla renglón-columna, como en el <a href="#ejemplo-1.-un-producto-calculado-de-dos-maneras">Ejemplo 1</a> y el ejercicio 2 de la Actividad, e interpretar sus columnas, como en el ejercicio 3 y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
+<li>Refutar la conmutatividad de un par concreto con una entrada distinta y usar identidad, asociatividad y distributividad conservando el orden de los factores, como en los ejercicios 1b y 2c de la Actividad y el ejercicio 5 de la práctica.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jfespinoza\.github\.io\/curso-algebra-2026-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sesiones/2026-10-19-sesion-36.html" class="pagination-link" aria-label="Sesión 36. Representación matricial de un sistema y sistemas homogéneos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 36. Representación matricial de un sistema y sistemas homogéneos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Álgebra 22017 · Departamento de Matemáticas · Universidad de Sonora</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2026-2</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
