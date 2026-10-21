@@ -10,7 +10,7 @@ Al finalizar la actividad podrá resolver un ejercicio de cada una de las diez s
 
 ## Actividad
 
-Descargue la versión asignada. El simulacro integra sistemas en forma matricial, como $A\mathbf{x}=\mathbf{b}$, la interpretación de sus soluciones y operaciones con matrices. Cada versión contiene cinco alternativas en cada sección; **resuelva solo una alternativa de cada sección**, para entregar diez soluciones en total. Trabaje individualmente y sin calculadora. Escriba los pasos que justifican cada respuesta y marque las dudas para retomarlas durante la corrección. No consulte soluciones durante el intento.
+Descargue la versión asignada. El simulacro integra sistemas en forma matricial, como $A\mathbf{x}=\mathbf{b}$, la interpretación de sus soluciones y operaciones con matrices. Cada versión contiene cinco alternativas en cada sección; **resuelva solo una alternativa de cada sección**, para entregar diez soluciones en total. Trabaje individualmente y sin calculadora. Escriba los pasos que justifican cada respuesta y marque las dudas para retomarlas durante la corrección. Después de resolver cada ejercicio, compare su resultado con la respuesta en azul que aparece enseguida; úsela para verificar su procedimiento.
 
 ## Simulacros para descargar
 
@@ -23,3 +23,4 @@ Descargue la versión asignada. El simulacro integra sistemas en forma matricial
 ## Conclusiones del aprendizaje
 
 Al terminar, podrá distinguir las secciones que resolvió con un procedimiento completo de aquellas donde necesita revisar operaciones, interpretación o verificación. Sus desarrollos escritos permitirán localizar y corregir esos errores en la revisión del simulacro.
+
