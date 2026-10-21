@@ -1,0 +1,25 @@
+---
+title: "Sesión 38. Práctica integradora para el Parcial 3"
+date: 2026-10-21
+description: "Simulacro de sistemas lineales y matrices para diagnosticar procedimientos y temas por repasar."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la actividad podrá resolver un ejercicio de cada una de las diez secciones del simulacro y dejar un procedimiento verificable. Al concluir el intento, podrá señalar qué pasos y temas necesita revisar durante la corrección.
+
+## Actividad
+
+Descargue la versión asignada. Cada versión contiene cinco alternativas en cada sección; **resuelva solo una alternativa de cada sección**, para entregar diez soluciones en total. Trabaje individualmente y sin calculadora. Escriba los pasos que justifican cada respuesta y marque las dudas para retomarlas durante la corrección. No consulte soluciones durante el intento.
+
+## Simulacros para descargar
+
+| Versión | Archivo |
+|:---:|---|
+| 1 | [Descargar simulacro del Parcial 3, versión 1 (PDF)](../examenes/parcial-3/simulacros/IMA-simulacro-parcial-3-version-01.pdf){download="IMA-simulacro-parcial-3-version-01.pdf"} |
+| 2 | [Descargar simulacro del Parcial 3, versión 2 (PDF)](../examenes/parcial-3/simulacros/IMA-simulacro-parcial-3-version-02.pdf){download="IMA-simulacro-parcial-3-version-02.pdf"} |
+| 3 | [Descargar simulacro del Parcial 3, versión 3 (PDF)](../examenes/parcial-3/simulacros/IMA-simulacro-parcial-3-version-03.pdf){download="IMA-simulacro-parcial-3-version-03.pdf"} |
+
+## Conclusiones del aprendizaje
+
+Al terminar, podrá distinguir las secciones que resolvió con un procedimiento completo de aquellas donde necesita revisar operaciones, interpretación o verificación. Sus desarrollos escritos permitirán localizar y corregir esos errores en la revisión del simulacro.

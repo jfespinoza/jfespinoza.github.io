@@ -83,6 +83,7 @@ book:
         - sesiones/2026-10-09-sesion-35.qmd
         - sesiones/2026-10-19-sesion-36.qmd
         - sesiones/2026-10-20-sesion-37.qmd
+        - sesiones/2026-10-21-sesion-38.qmd
     - part: "Unidad 5. Conceptos básicos de álgebra lineal"
       chapters:
         - unidades/05-conceptos-algebra-lineal.qmd
