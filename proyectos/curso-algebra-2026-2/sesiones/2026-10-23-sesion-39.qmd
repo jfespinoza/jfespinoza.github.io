@@ -1,0 +1,13 @@
+---
+title: "Sesión 39. Examen parcial 3: sistemas lineales y matrices"
+date: 2026-10-23
+description: "Examen del tercer parcial del grupo IMA, con las respuestas correctas señaladas."
+---
+
+## Exámenes aplicados
+
+El siguiente documento reúne las 40 versiones del tercer examen parcial. En el PDF, las respuestas correctas están señaladas en color rojo.
+
+### IMA — Ingeniería en Materiales
+
+[Consultar el examen aplicado al grupo IMA, con respuestas correctas (PDF)](../examenes/parcial-3/IMA-Examen-respuestas.pdf){.btn .btn-primary target="_blank"}
