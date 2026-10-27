@@ -1,0 +1,293 @@
+---
+title: "Sesión 40. Matriz inversa: definición, verificación y uso en un sistema"
+date: 2026-10-27
+description: "Definición y unicidad de la inversa, verificación por producto, resolución de sistemas y condiciones para cancelar una matriz."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá verificar una inversa propuesta mediante un producto, resolver un sistema $2\times2$ con una inversa dada y comprobar su solución, y explicar con un ejemplo por qué de $AB=AC$ no siempre se deduce $B=C$. Compruebe estas capacidades con la [Actividad](#actividad) y su comprobación individual.
+
+## Para comenzar: un producto de dos matrices
+
+Calcule con la [regla renglón-columna](2026-10-20-sesion-37.qmd#producto-de-dos-matrices) e identifique la matriz obtenida:
+
+$$
+\begin{bmatrix}2&1\\5&3\end{bmatrix}\begin{bmatrix}3&-1\\-5&2\end{bmatrix}.
+$$
+
+::: {.callout-note collapse="true" title="Respuesta"}
+
+$$
+\begin{bmatrix}2(3)+1(-5)&2(-1)+1(2)\\5(3)+3(-5)&5(-1)+3(2)\end{bmatrix}
+=\begin{bmatrix}1&0\\0&1\end{bmatrix}=I_2.
+$$
+
+El resultado es la matriz identidad de tamaño $2\times2$.
+
+:::
+
+## Matriz inversa
+
+Para un número real $a\ne0$, su inverso $a^{-1}=1/a$ cumple $aa^{-1}=a^{-1}a=1$. En el producto de matrices, la [identidad](2026-10-20-sesion-37.qmd#orden-de-los-factores-y-matriz-identidad) desempeña el papel del $1$.
+
+Sea $A$ una matriz real **cuadrada** de tamaño $n\times n$. Se dice que $A$ es **invertible** si existe una matriz $B$ del mismo tamaño tal que
+
+$$
+AB=BA=I_n.
+$$
+
+La matriz $B$ se llama **inversa** de $A$. Una matriz cuadrada que no tiene inversa se llama **singular**.
+
+**Verificación.** Para matrices cuadradas del mismo tamaño, si $AB=I_n$, entonces también $BA=I_n$; se acepta este hecho sin demostración. Por tanto, basta calcular uno de los dos productos y comprobar que **todas** sus entradas coinciden con las de $I_n$. Una sola entrada distinta permite descartar una candidata.
+
+**Unicidad.** Si $B$ y $C$ son inversas de $A$, la identidad y la [asociatividad](2026-10-20-sesion-37.qmd#propiedades-del-producto) dan
+
+$$
+B=BI_n=B(AC)=(BA)C=I_nC=C.
+$$
+
+Así, la inversa es única. Se denota $A^{-1}$ y se lee «$A$ inversa»:
+
+$$
+AA^{-1}=A^{-1}A=I_n.
+$$
+
+La notación $A^{-1}$ no significa invertir cada entrada ni dividir entre una matriz.
+
+## Resolver un sistema con la inversa
+
+Sean $A$ invertible de tamaño $n\times n$ y $\mathbf{x},\mathbf{b}$ vectores columna con $n$ componentes. Si $A\mathbf{x}=\mathbf{b}$, multiplicar ambos lados por $A^{-1}$ **por la izquierda** da
+
+$$
+A^{-1}(A\mathbf{x})=A^{-1}\mathbf{b},\qquad
+(A^{-1}A)\mathbf{x}=A^{-1}\mathbf{b},\qquad
+\mathbf{x}=A^{-1}\mathbf{b}.
+$$
+
+Recíprocamente, ese vector es solución, porque
+
+$$
+A(A^{-1}\mathbf{b})=(AA^{-1})\mathbf{b}=I_n\mathbf{b}=\mathbf{b}.
+$$
+
+Por tanto, si $A$ es invertible, el sistema tiene **exactamente una solución**, $\mathbf{x}=A^{-1}\mathbf{b}$. El [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) permite resolver también sistemas cuya matriz de coeficientes no es cuadrada o no tiene inversa; calcular una inversa no es un requisito para resolver un sistema.
+
+## Cancelar una matriz
+
+Si $A$ es invertible y $AB=AC$, con tamaños compatibles, multiplicar por $A^{-1}$ por la izquierda da
+
+$$
+(A^{-1}A)B=(A^{-1}A)C,\qquad B=C.
+$$
+
+Sin invertibilidad, esta cancelación puede fallar aunque $A$ no sea la matriz cero.
+
+## Ejemplos
+
+### Ejemplo 1. Verificar una inversa y resolver un sistema
+
+Sean
+
+$$
+P=\begin{bmatrix}2&1\\5&3\end{bmatrix},\qquad Q=\begin{bmatrix}3&-1\\-5&2\end{bmatrix}.
+$$
+
+En la apertura se obtuvo $PQ=I_2$; por tanto, $Q=P^{-1}$. El sistema
+
+$$
+\left\{\begin{aligned}2x+y&=4\\5x+3y&=11\end{aligned}\right.
+$$
+
+se escribe $P\mathbf{x}=\mathbf{b}$, con $\mathbf{x}=(x,y)^{\mathsf T}$ y $\mathbf{b}=(4,11)^{\mathsf T}$. Entonces
+
+$$
+\mathbf{x}=P^{-1}\mathbf{b}
+=\begin{bmatrix}3&-1\\-5&2\end{bmatrix}\begin{bmatrix}4\\11\end{bmatrix}
+=\begin{bmatrix}12-11\\-20+22\end{bmatrix}
+=\begin{bmatrix}1\\2\end{bmatrix}.
+$$
+
+**Comprobación.** $P(1,2)^{\mathsf T}=(2+2,\ 5+6)^{\mathsf T}=(4,11)^{\mathsf T}=\mathbf{b}$. La solución es $(x,y)=(1,2)$ y es única.
+
+### Ejemplo 2. Una cancelación que falla
+
+Sean
+
+$$
+A=\begin{bmatrix}1&1\\1&1\end{bmatrix},\qquad
+B=\begin{bmatrix}1&2\\0&1\end{bmatrix},\qquad
+C=\begin{bmatrix}0&3\\1&0\end{bmatrix}.
+$$
+
+Como los dos renglones de $A$ son $(1,1)$, cada entrada de $AB$ o $AC$ es la suma de las dos componentes de la columna correspondiente del factor derecho:
+
+$$
+AB=\begin{bmatrix}1+0&2+1\\1+0&2+1\end{bmatrix}
+=\begin{bmatrix}1&3\\1&3\end{bmatrix}
+=\begin{bmatrix}0+1&3+0\\0+1&3+0\end{bmatrix}=AC.
+$$
+
+Sin embargo, $B\ne C$. Así, $AB=AC$ no permite cancelar $A$. Además, $A$ es singular: si tuviera inversa, al multiplicar esa igualdad por $A^{-1}$ por la izquierda se obtendría $B=C$, una contradicción.
+
+## Errores frecuentes
+
+- **Invertir cada entrada.** La matriz $R=\begin{bmatrix}1/2&1\\1/5&1/3\end{bmatrix}$ no es $P^{-1}$: $(PR)_{11}=1+1/5=6/5\ne1$.
+- **Confundir inversa y transpuesta.** $(PP^{\mathsf T})_{11}=2(2)+1(1)=5\ne1$; por tanto, $P^{\mathsf T}$ no es la inversa de $P$.
+- **Revisar solo la diagonal.** Una matriz como $\begin{bmatrix}1&0\\3&1\end{bmatrix}$ no es $I_2$. Para aceptar una inversa hay que revisar también las entradas fuera de la diagonal.
+- **Multiplicar del lado equivocado.** En $P\mathbf{x}=\mathbf{b}$, la solución es $P^{-1}\mathbf{b}$. El producto $\mathbf{b}P^{-1}$ ni siquiera está definido: sus tamaños son $2\times1$ y $2\times2$.
+- **Cancelar solo porque la matriz no es cero.** El Ejemplo 2 muestra que esa condición no basta. La invertibilidad sí permite cancelar.
+
+## Actividad
+
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.
+
+1. Sean $D=\begin{bmatrix}3&2\\4&3\end{bmatrix}$ y $E=\begin{bmatrix}3&-2\\-4&3\end{bmatrix}$.
+
+   a. Verifique con un producto que $E=D^{-1}$.
+
+   b. Descarte la propuesta $D^{-1}=D^{\mathsf T}$ calculando una sola entrada de $DD^{\mathsf T}$.
+
+   c. Use $E$ para resolver $3x+2y=1$, $4x+3y=2$, y verifique la solución mediante un producto.
+
+2. Dos lotes de polvo metálico contienen $20\,\%$ y $60\,\%$ de cobre en masa. Se prepara sin pérdidas una muestra de $500$ g con $44\,\%$ de cobre, con $x,y\ge0$ gramos del primer y del segundo lote. Las ecuaciones de masa total y masa de cobre son $x+y=500$ y $0.20x+0.60y=220$. Sean
+
+   $$
+   A=\begin{bmatrix}1&1\\0.20&0.60\end{bmatrix},\qquad
+   W=\begin{bmatrix}1.5&-2.5\\-0.5&2.5\end{bmatrix}.
+   $$
+
+   a. Calcule las dos columnas de $AW$ y concluya si $W=A^{-1}$.
+
+   b. Calcule $\mathbf{x}=A^{-1}\mathbf{b}$, con $\mathbf{b}=(500,220)^{\mathsf T}$, e interprete cada componente. ¿Puede prepararse la muestra de otra manera con estos dos lotes? Justifique.
+
+   c. Verifique la solución calculando $A\mathbf{x}$ por columnas e interprete el resultado.
+
+**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas: sean $M=\begin{bmatrix}1&1\\1&2\end{bmatrix}$ y $N=\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$.
+
+a. Se sabe que $MN=I_2$. Use $N$ para resolver $x+y=3$, $x+2y=5$.
+
+b. Explique, usando el Ejemplo 2, por qué $AB=AC$ no siempre implica $B=C$ y qué condición sobre $A$ permite deducirlo.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** $DE=\begin{bmatrix}9-8&-6+6\\12-12&-8+9\end{bmatrix}=I_2$; por tanto, $E=D^{-1}$.
+
+**1. b.** $(DD^{\mathsf T})_{11}=3(3)+2(2)=13\ne1$. La transpuesta no es la inversa de $D$.
+
+**1. c.** Con $\mathbf{b}=(1,2)^{\mathsf T}$,
+
+$$
+\mathbf{x}=E\mathbf{b}=\begin{bmatrix}3-4\\-4+6\end{bmatrix}
+=\begin{bmatrix}-1\\2\end{bmatrix}.
+$$
+
+La comprobación es $D(-1,2)^{\mathsf T}=(-3+4,\ -4+6)^{\mathsf T}=(1,2)^{\mathsf T}$. La solución es $(x,y)=(-1,2)$.
+
+**2. a.** $A(1.5,-0.5)^{\mathsf T}=(1.5-0.5,\ 0.30-0.30)^{\mathsf T}=(1,0)^{\mathsf T}$ y $A(-2.5,2.5)^{\mathsf T}=(-2.5+2.5,\ -0.50+1.50)^{\mathsf T}=(0,1)^{\mathsf T}$. Así, $AW=I_2$ y $W=A^{-1}$.
+
+**2. b.**
+
+$$
+\mathbf{x}=W\mathbf{b}=\begin{bmatrix}1.5(500)-2.5(220)\\-0.5(500)+2.5(220)\end{bmatrix}
+=\begin{bmatrix}750-550\\-250+550\end{bmatrix}
+=\begin{bmatrix}200\\300\end{bmatrix}.
+$$
+
+Se toman $200$ g del primer lote y $300$ g del segundo. Ambas masas son no negativas. No existe otra distribución que cumpla las dos ecuaciones, porque $A$ es invertible y el sistema tiene solución única.
+
+**2. c.** Por columnas,
+
+$$
+200\begin{bmatrix}1\\0.20\end{bmatrix}+300\begin{bmatrix}1\\0.60\end{bmatrix}
+=\begin{bmatrix}200+300\\40+180\end{bmatrix}
+=\begin{bmatrix}500\\220\end{bmatrix}=\mathbf{b}.
+$$
+
+Son $500$ g de muestra y $220$ g de cobre; $220/500=0.44$, como se requería.
+
+**Comprobación individual, a.** Como $MN=I_2$, se tiene $N=M^{-1}$. Con $\mathbf{b}=(3,5)^{\mathsf T}$, $\mathbf{x}=N\mathbf{b}=(6-5,\ -3+5)^{\mathsf T}=(1,2)^{\mathsf T}$. En efecto, $1+2=3$ y $1+2(2)=5$.
+
+**Comprobación individual, b.** En el Ejemplo 2, $AB=AC$, pero $B\ne C$; por eso la igualdad de los productos no basta. Si $A$ es invertible, multiplicar por $A^{-1}$ por la izquierda permite concluir $B=C$.
+
+:::
+
+## Ejercicios para practicar
+
+Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar la verificación de inversas y su relación con los sistemas homogéneos, según lo necesite. Consulte las respuestas después de completar su intento.
+
+1. Una **probeta** es una muestra de material con forma y medidas fijas para un ensayo. Un laboratorio fabrica probetas de cobre y estaño de dos tipos, A y B. En $U$, las columnas corresponden a los tipos A y B, y los renglones dan los gramos de cobre y de estaño de una probeta:
+
+   $$
+   U=\begin{bmatrix}4&3\\1&1\end{bmatrix},\qquad V=\begin{bmatrix}1&-3\\-1&4\end{bmatrix}.
+   $$
+
+   a. Verifique con un producto que $V=U^{-1}$.
+
+   b. Un lote de probetas contiene $26$ g de cobre y $7$ g de estaño. Sean $x,y$ los números de probetas A y B. Escriba $U\mathbf{x}=\mathbf{b}$ y obtenga $x,y$ con $V$.
+
+   c. Verifique las masas de los dos metales con $U\mathbf{x}$. ¿Son admisibles los números de probetas obtenidos?
+
+2. Un polvo cerámico contiene $90\,\%$ de alúmina (óxido de aluminio) en masa, y otro, $60\,\%$. Se desean preparar sin pérdidas $300$ g de mezcla con $80\,\%$ de alúmina, con $x,y\ge0$ gramos del primer y del segundo polvo.
+
+   a. Plantee las ecuaciones de masa total y masa de alúmina y escriba la matriz aumentada.
+
+   b. Resuelva con el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan), registrando cada operación, y compruebe las dos masas requeridas.
+
+3. Para resolver $4x+3y=7$, $x+y=2$, un estudiante dispone de
+
+   $$
+   A=\begin{bmatrix}4&3\\1&1\end{bmatrix},\qquad A^{-1}=\begin{bmatrix}1&-3\\-1&4\end{bmatrix},\qquad \mathbf{b}=(7,2)^{\mathsf T}.
+   $$
+
+   Calcula $A\mathbf{b}=(34,9)^{\mathsf T}$ y concluye que la solución es $(34,9)$.
+
+   a. Localice el error y obtenga la solución correcta.
+
+   b. Compruebe con productos que la propuesta no es solución y que su respuesta sí lo es.
+
+4. Sea $F=\begin{bmatrix}1&3\\0&1\end{bmatrix}$.
+
+   a. Determine $k$ para que $H=\begin{bmatrix}1&k\\0&1\end{bmatrix}$ sea la inversa de $F$ y verifíquelo.
+
+   b. Explique por qué la matriz cero de tamaño $2\times2$ no tiene inversa.
+
+5. Sea $S=\begin{bmatrix}2&-1\\-4&2\end{bmatrix}$.
+
+   a. Compruebe que $(1,2)^{\mathsf T}$ es una solución no trivial del [sistema homogéneo](2026-10-19-sesion-36.qmd#sistemas-homogéneos) $S\mathbf{x}=\mathbf{0}$.
+
+   b. Si $S$ tuviera inversa, ¿cuál sería la única solución del homogéneo? Use el inciso anterior para concluir si $S$ es singular.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $UV=I_2$; por tanto, $V=U^{-1}$.
+
+**1. b.** $\begin{bmatrix}4&3\\1&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}26\\7\end{bmatrix}$; $(x,y)=(5,2)$: cinco probetas A y dos B.
+
+**1. c.** $U(5,2)^{\mathsf T}=(26,7)^{\mathsf T}$. Sí: ambos números son enteros no negativos y reproducen las masas del lote.
+
+**2. a.** $x+y=300$, $0.90x+0.60y=240$; $\left[\begin{array}{cc|c}1&1&300\\0.90&0.60&240\end{array}\right]$.
+
+**2. b.** $(x,y)=(200,100)$: $200$ g del primer polvo y $100$ g del segundo. Masa total: $300$ g; masa de alúmina: $240$ g, el $80\,\%$ del total.
+
+**3. a.** Usó $A\mathbf{b}$ en lugar de $A^{-1}\mathbf{b}$. La solución correcta es $(x,y)=(1,1)$.
+
+**3. b.** $A(34,9)^{\mathsf T}=(163,43)^{\mathsf T}\ne\mathbf{b}$ y $A(1,1)^{\mathsf T}=(7,2)^{\mathsf T}=\mathbf{b}$.
+
+**4. a.** $k=-3$; para ese valor, $FH=I_2$.
+
+**4. b.** Para toda matriz $B$ de tamaño $2\times2$, $0B=0\ne I_2$.
+
+**5. a.** $S(1,2)^{\mathsf T}=(0,0)^{\mathsf T}$ y $(1,2)^{\mathsf T}\ne\mathbf{0}$.
+
+**5. b.** La única solución sería $\mathbf{x}=\mathbf{0}$. La solución no trivial del inciso a contradice esa consecuencia; por tanto, $S$ es singular.
+
+:::
+
+## Conclusiones del aprendizaje
+
+Al revisar sus productos, soluciones y explicaciones, compruebe si puede:
+
+- Verificar una inversa propuesta comparando todas las entradas del producto con las de la identidad; la inversa, cuando existe, es única.
+- Resolver $A\mathbf{x}=\mathbf{b}$ mediante $\mathbf{x}=A^{-1}\mathbf{b}$ cuando $A$ es invertible, e interpretar y verificar la solución obtenida.
+- Explicar con el ejemplo singular por qué $AB=AC$ no basta para concluir $B=C$, y justificar la cancelación cuando $A$ es invertible.
