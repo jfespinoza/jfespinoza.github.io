@@ -569,7 +569,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá verificar una inversa propuesta mediante un producto, resolver un sistema <span class="math inline">\(2\times2\)</span> con una inversa dada y comprobar su solución, y explicar con un ejemplo por qué de <span class="math inline">\(AB=AC\)</span> no siempre se deduce <span class="math inline">\(B=C\)</span>. Compruebe estas capacidades con la <a href="#actividad">Actividad</a> y su comprobación individual.</p>
+<p>Al finalizar la sesión podrá verificar una inversa propuesta mediante un producto, resolver un sistema <span class="math inline">\(2\times2\)</span> con una inversa dada y comprobar su solución, y explicar con un ejemplo por qué de <span class="math inline">\(AB=AC\)</span> no siempre se deduce <span class="math inline">\(B=C\)</span>. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="para-comenzar-un-producto-de-dos-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="para-comenzar-un-producto-de-dos-matrices">Para comenzar: un producto de dos matrices</h2>
@@ -605,9 +605,9 @@ window.Quarto = {
 <p><span class="math display">\[
 AB=BA=I_n.
 \]</span></p>
-<p>La matriz <span class="math inline">\(B\)</span> se llama <strong>inversa</strong> de <span class="math inline">\(A\)</span>. Una matriz cuadrada que no tiene inversa se llama <strong>singular</strong>.</p>
+<p>Una matriz <span class="math inline">\(B\)</span> que cumple esas igualdades se llama <strong>inversa</strong> de <span class="math inline">\(A\)</span>. Una matriz cuadrada que no tiene inversa se llama <strong>singular</strong>.</p>
 <p><strong>Verificación.</strong> Para matrices cuadradas del mismo tamaño, si <span class="math inline">\(AB=I_n\)</span>, entonces también <span class="math inline">\(BA=I_n\)</span>; se acepta este hecho sin demostración. Por tanto, basta calcular uno de los dos productos y comprobar que <strong>todas</strong> sus entradas coinciden con las de <span class="math inline">\(I_n\)</span>. Una sola entrada distinta permite descartar una candidata.</p>
-<p><strong>Unicidad.</strong> Si <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> son inversas de <span class="math inline">\(A\)</span>, la identidad y la <a href="../sesiones/2026-10-20-sesion-37.html#propiedades-del-producto">asociatividad</a> dan</p>
+<p><strong>Unicidad.</strong> Si <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span> son inversas de <span class="math inline">\(A\)</span>, la identidad, la <a href="../sesiones/2026-10-20-sesion-37.html#propiedades-del-producto">asociatividad</a> y las igualdades <span class="math inline">\(AC=I_n\)</span> y <span class="math inline">\(BA=I_n\)</span> dan</p>
 <p><span class="math display">\[
 B=BI_n=B(AC)=(BA)C=I_nC=C.
 \]</span></p>
@@ -621,9 +621,11 @@ AA^{-1}=A^{-1}A=I_n.
 <h2 class="anchored" data-anchor-id="resolver-un-sistema-con-la-inversa">Resolver un sistema con la inversa</h2>
 <p>Sean <span class="math inline">\(A\)</span> invertible de tamaño <span class="math inline">\(n\times n\)</span> y <span class="math inline">\(\mathbf{x},\mathbf{b}\)</span> vectores columna con <span class="math inline">\(n\)</span> componentes. Si <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>, multiplicar ambos lados por <span class="math inline">\(A^{-1}\)</span> <strong>por la izquierda</strong> da</p>
 <p><span class="math display">\[
-A^{-1}(A\mathbf{x})=A^{-1}\mathbf{b},\qquad
-(A^{-1}A)\mathbf{x}=A^{-1}\mathbf{b},\qquad
-\mathbf{x}=A^{-1}\mathbf{b}.
+\begin{aligned}
+A^{-1}(A\mathbf{x})&amp;=A^{-1}\mathbf{b},\\
+(A^{-1}A)\mathbf{x}&amp;=A^{-1}\mathbf{b},\\
+I_n\mathbf{x}=\mathbf{x}&amp;=A^{-1}\mathbf{b}.
+\end{aligned}
 \]</span></p>
 <p>Recíprocamente, ese vector es solución, porque</p>
 <p><span class="math display">\[
@@ -680,11 +682,11 @@ AB=\begin{bmatrix}1+0&amp;2+1\\1+0&amp;2+1\end{bmatrix}
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Invertir cada entrada.</strong> La matriz <span class="math inline">\(R=\begin{bmatrix}1/2&amp;1\\1/5&amp;1/3\end{bmatrix}\)</span> no es <span class="math inline">\(P^{-1}\)</span>: <span class="math inline">\((PR)_{11}=1+1/5=6/5\ne1\)</span>.</li>
-<li><strong>Confundir inversa y transpuesta.</strong> <span class="math inline">\((PP^{\mathsf T})_{11}=2(2)+1(1)=5\ne1\)</span>; por tanto, <span class="math inline">\(P^{\mathsf T}\)</span> no es la inversa de <span class="math inline">\(P\)</span>.</li>
-<li><strong>Revisar solo la diagonal.</strong> Una matriz como <span class="math inline">\(\begin{bmatrix}1&amp;0\\3&amp;1\end{bmatrix}\)</span> no es <span class="math inline">\(I_2\)</span>. Para aceptar una inversa hay que revisar también las entradas fuera de la diagonal.</li>
-<li><strong>Multiplicar del lado equivocado.</strong> En <span class="math inline">\(P\mathbf{x}=\mathbf{b}\)</span>, la solución es <span class="math inline">\(P^{-1}\mathbf{b}\)</span>. El producto <span class="math inline">\(\mathbf{b}P^{-1}\)</span> ni siquiera está definido: sus tamaños son <span class="math inline">\(2\times1\)</span> y <span class="math inline">\(2\times2\)</span>.</li>
-<li><strong>Cancelar solo porque la matriz no es cero.</strong> El Ejemplo 2 muestra que esa condición no basta. La invertibilidad sí permite cancelar.</li>
+<li><strong>Invertir cada entrada.</strong> Falso: <span class="math inline">\(P^{-1}=R=\begin{bmatrix}1/2&amp;1\\1/5&amp;1/3\end{bmatrix}\)</span>. Corrección: <span class="math inline">\((PR)_{11}=2(1/2)+1(1/5)=6/5\ne1\)</span>; la inversa es <span class="math inline">\(Q\)</span>, como en el Ejemplo 1.</li>
+<li><strong>Confundir inversa y transpuesta.</strong> Falso: <span class="math inline">\(P^{-1}=P^{\mathsf T}=\begin{bmatrix}2&amp;5\\1&amp;3\end{bmatrix}\)</span>. Corrección: <span class="math inline">\((PP^{\mathsf T})_{11}=2(2)+1(1)=5\ne1\)</span>; la <a href="../sesiones/2026-10-09-sesion-35.html#transpuesta">transpuesta</a> no es la inversa en este caso.</li>
+<li><strong>Revisar solo la diagonal.</strong> Falso: <span class="math inline">\(L=\begin{bmatrix}0&amp;-1\\1&amp;2\end{bmatrix}\)</span> es <span class="math inline">\(P^{-1}\)</span>, porque las entradas <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,2)\)</span> de <span class="math inline">\(PL\)</span> valen <span class="math inline">\(1\)</span>. Corrección: <span class="math inline">\((PL)_{21}=5(0)+3(1)=3\ne0\)</span>, de modo que <span class="math inline">\(PL=\begin{bmatrix}1&amp;0\\3&amp;1\end{bmatrix}\ne I_2\)</span>.</li>
+<li><strong>Multiplicar del lado equivocado.</strong> Falso: de <span class="math inline">\(P\mathbf{x}=\mathbf{b}\)</span> se sigue <span class="math inline">\(\mathbf{x}=\mathbf{b}P^{-1}\)</span>. Corrección: <span class="math inline">\(\mathbf{b}P^{-1}\)</span> no está definido (<span class="math inline">\(2\times1\)</span> por <span class="math inline">\(2\times2\)</span>); <span class="math inline">\(\mathbf{x}=P^{-1}\mathbf{b}=(1,2)^{\mathsf T}\)</span>.</li>
+<li><strong>Cancelar solo porque la matriz no es cero.</strong> Falso: como <span class="math inline">\(A=\begin{bmatrix}1&amp;1\\1&amp;1\end{bmatrix}\ne0\)</span>, de <span class="math inline">\(AB=AC\)</span> se sigue <span class="math inline">\(B=C\)</span>. Corrección: en el Ejemplo 2, <span class="math inline">\(AB=AC\)</span>, pero <span class="math inline">\(b_{11}=1\ne0=c_{11}\)</span>; la invertibilidad sí permite cancelar.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -697,7 +699,7 @@ AB=\begin{bmatrix}1+0&amp;2+1\\1+0&amp;2+1\end{bmatrix}
 <li><p>Descarte la propuesta <span class="math inline">\(D^{-1}=D^{\mathsf T}\)</span> calculando una sola entrada de <span class="math inline">\(DD^{\mathsf T}\)</span>.</p></li>
 <li><p>Use <span class="math inline">\(E\)</span> para resolver <span class="math inline">\(3x+2y=1\)</span>, <span class="math inline">\(4x+3y=2\)</span>, y verifique la solución mediante un producto.</p></li>
 </ol></li>
-<li><p>Dos lotes de polvo metálico contienen <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\,\%\)</span> de cobre en masa. Se prepara sin pérdidas una muestra de <span class="math inline">\(500\)</span> g con <span class="math inline">\(44\,\%\)</span> de cobre, con <span class="math inline">\(x,y\ge0\)</span> gramos del primer y del segundo lote. Las ecuaciones de masa total y masa de cobre son <span class="math inline">\(x+y=500\)</span> y <span class="math inline">\(0.20x+0.60y=220\)</span>. Sean</p>
+<li><p>Dos lotes de polvo metálico contienen <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\,\%\)</span> de cobre en masa. Se prepara sin pérdidas una muestra de <span class="math inline">\(500\)</span> g con <span class="math inline">\(44\,\%\)</span> de cobre, con <span class="math inline">\(x,y\ge0\)</span> gramos del primer y del segundo lote. Las ecuaciones de masa total y masa de cobre son <span class="math inline">\(x+y=500\)</span> y <span class="math inline">\(0.20x+0.60y=220\)</span>, como en la <a href="../sesiones/2026-10-19-sesion-36.html#actividad">Actividad de la Sesión 36</a>. Sean</p>
 <p><span class="math display">\[
 A=\begin{bmatrix}1&amp;1\\0.20&amp;0.60\end{bmatrix},\qquad
 W=\begin{bmatrix}1.5&amp;-2.5\\-0.5&amp;2.5\end{bmatrix}.
@@ -708,10 +710,10 @@ W=\begin{bmatrix}1.5&amp;-2.5\\-0.5&amp;2.5\end{bmatrix}.
 <li><p>Verifique la solución calculando <span class="math inline">\(A\mathbf{x}\)</span> por columnas e interprete el resultado.</p></li>
 </ol></li>
 </ol>
-<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas: sean <span class="math inline">\(M=\begin{bmatrix}1&amp;1\\1&amp;2\end{bmatrix}\)</span> y <span class="math inline">\(N=\begin{bmatrix}2&amp;-1\\-1&amp;1\end{bmatrix}\)</span>.</p>
+<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas:</p>
 <ol type="a">
-<li><p>Se sabe que <span class="math inline">\(MN=I_2\)</span>. Use <span class="math inline">\(N\)</span> para resolver <span class="math inline">\(x+y=3\)</span>, <span class="math inline">\(x+2y=5\)</span>.</p></li>
-<li><p>Explique, usando el Ejemplo 2, por qué <span class="math inline">\(AB=AC\)</span> no siempre implica <span class="math inline">\(B=C\)</span> y qué condición sobre <span class="math inline">\(A\)</span> permite deducirlo.</p></li>
+<li><p>Sean <span class="math inline">\(M=\begin{bmatrix}1&amp;1\\0&amp;1\end{bmatrix}\)</span> y <span class="math inline">\(N=\begin{bmatrix}1&amp;-1\\0&amp;1\end{bmatrix}\)</span>. Verifique con un producto que <span class="math inline">\(N=M^{-1}\)</span> y úsela para resolver <span class="math inline">\(x+y=3\)</span>, <span class="math inline">\(y=2\)</span>.</p></li>
+<li><p>Sean <span class="math inline">\(G=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span>, <span class="math inline">\(B=\begin{bmatrix}1\\0\end{bmatrix}\)</span> y <span class="math inline">\(C=\begin{bmatrix}1\\1\end{bmatrix}\)</span>. Calcule <span class="math inline">\(GB\)</span> y <span class="math inline">\(GC\)</span> y explique por qué su igualdad no permite concluir <span class="math inline">\(B=C\)</span>. Indique qué condición sobre <span class="math inline">\(G\)</span> permite cancelar.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -748,8 +750,8 @@ W=\begin{bmatrix}1.5&amp;-2.5\\-0.5&amp;2.5\end{bmatrix}.
 =\begin{bmatrix}500\\220\end{bmatrix}=\mathbf{b}.
 \]</span></p>
 <p>Son <span class="math inline">\(500\)</span> g de muestra y <span class="math inline">\(220\)</span> g de cobre; <span class="math inline">\(220/500=0.44\)</span>, como se requería.</p>
-<p><strong>Comprobación individual, a.</strong> Como <span class="math inline">\(MN=I_2\)</span>, se tiene <span class="math inline">\(N=M^{-1}\)</span>. Con <span class="math inline">\(\mathbf{b}=(3,5)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf{x}=N\mathbf{b}=(6-5,\ -3+5)^{\mathsf T}=(1,2)^{\mathsf T}\)</span>. En efecto, <span class="math inline">\(1+2=3\)</span> y <span class="math inline">\(1+2(2)=5\)</span>.</p>
-<p><strong>Comprobación individual, b.</strong> En el Ejemplo 2, <span class="math inline">\(AB=AC\)</span>, pero <span class="math inline">\(B\ne C\)</span>; por eso la igualdad de los productos no basta. Si <span class="math inline">\(A\)</span> es invertible, multiplicar por <span class="math inline">\(A^{-1}\)</span> por la izquierda permite concluir <span class="math inline">\(B=C\)</span>.</p>
+<p><strong>Comprobación individual, a.</strong> <span class="math inline">\(MN=\begin{bmatrix}1&amp;-1+1\\0&amp;1\end{bmatrix}=I_2\)</span>, por lo que <span class="math inline">\(N=M^{-1}\)</span>. Con <span class="math inline">\(\mathbf{b}=(3,2)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf{x}=N\mathbf{b}=(3-2,\ 2)^{\mathsf T}=(1,2)^{\mathsf T}\)</span>. En efecto, <span class="math inline">\(1+2=3\)</span> y <span class="math inline">\(y=2\)</span>.</p>
+<p><strong>Comprobación individual, b.</strong> <span class="math inline">\(GB=GC=(1,0)^{\mathsf T}\)</span>, aunque <span class="math inline">\(B\ne C\)</span>: sus segundas entradas son distintas. La igualdad de los productos no basta para cancelar. Si <span class="math inline">\(G\)</span> es invertible, multiplicar por <span class="math inline">\(G^{-1}\)</span> por la izquierda permite concluir <span class="math inline">\(B=C\)</span>; este ejemplo muestra que <span class="math inline">\(G\)</span> no es invertible.</p>
 </div>
 </div>
 </div>
@@ -760,11 +762,11 @@ W=\begin{bmatrix}1.5&amp;-2.5\\-0.5&amp;2.5\end{bmatrix}.
 <ol type="1">
 <li><p>Una <strong>probeta</strong> es una muestra de material con forma y medidas fijas para un ensayo. Un laboratorio fabrica probetas de cobre y estaño de dos tipos, A y B. En <span class="math inline">\(U\)</span>, las columnas corresponden a los tipos A y B, y los renglones dan los gramos de cobre y de estaño de una probeta:</p>
 <p><span class="math display">\[
-U=\begin{bmatrix}4&amp;3\\1&amp;1\end{bmatrix},\qquad V=\begin{bmatrix}1&amp;-3\\-1&amp;4\end{bmatrix}.
+U=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix},\qquad V=\begin{bmatrix}1&amp;-2\\-1&amp;3\end{bmatrix}.
 \]</span></p>
 <ol type="a">
 <li><p>Verifique con un producto que <span class="math inline">\(V=U^{-1}\)</span>.</p></li>
-<li><p>Un lote de probetas contiene <span class="math inline">\(26\)</span> g de cobre y <span class="math inline">\(7\)</span> g de estaño. Sean <span class="math inline">\(x,y\)</span> los números de probetas A y B. Escriba <span class="math inline">\(U\mathbf{x}=\mathbf{b}\)</span> y obtenga <span class="math inline">\(x,y\)</span> con <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Un lote de probetas contiene <span class="math inline">\(19\)</span> g de cobre y <span class="math inline">\(7\)</span> g de estaño. Sean <span class="math inline">\(x,y\)</span> los números de probetas A y B. Escriba <span class="math inline">\(U\mathbf{x}=\mathbf{b}\)</span> y obtenga <span class="math inline">\(x,y\)</span> con <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Verifique las masas de los dos metales con <span class="math inline">\(U\mathbf{x}\)</span>. ¿Son admisibles los números de probetas obtenidos?</p></li>
 </ol></li>
 <li><p>Un polvo cerámico contiene <span class="math inline">\(90\,\%\)</span> de alúmina (óxido de aluminio) en masa, y otro, <span class="math inline">\(60\,\%\)</span>. Se desean preparar sin pérdidas <span class="math inline">\(300\)</span> g de mezcla con <span class="math inline">\(80\,\%\)</span> de alúmina, con <span class="math inline">\(x,y\ge0\)</span> gramos del primer y del segundo polvo.</p>
@@ -805,8 +807,8 @@ A=\begin{bmatrix}4&amp;3\\1&amp;1\end{bmatrix},\qquad A^{-1}=\begin{bmatrix}1&am
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>1. a.</strong> <span class="math inline">\(UV=I_2\)</span>; por tanto, <span class="math inline">\(V=U^{-1}\)</span>.</p>
-<p><strong>1. b.</strong> <span class="math inline">\(\begin{bmatrix}4&amp;3\\1&amp;1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}26\\7\end{bmatrix}\)</span>; <span class="math inline">\((x,y)=(5,2)\)</span>: cinco probetas A y dos B.</p>
-<p><strong>1. c.</strong> <span class="math inline">\(U(5,2)^{\mathsf T}=(26,7)^{\mathsf T}\)</span>. Sí: ambos números son enteros no negativos y reproducen las masas del lote.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}19\\7\end{bmatrix}\)</span>; <span class="math inline">\((x,y)=(5,2)\)</span>: cinco probetas A y dos B.</p>
+<p><strong>1. c.</strong> <span class="math inline">\(U(5,2)^{\mathsf T}=(19,7)^{\mathsf T}\)</span>. Sí: ambos números son enteros no negativos y reproducen las masas del lote.</p>
 <p><strong>2. a.</strong> <span class="math inline">\(x+y=300\)</span>, <span class="math inline">\(0.90x+0.60y=240\)</span>; <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;1&amp;300\\0.90&amp;0.60&amp;240\end{array}\right]\)</span>.</p>
 <p><strong>2. b.</strong> <span class="math inline">\((x,y)=(200,100)\)</span>: <span class="math inline">\(200\)</span> g del primer polvo y <span class="math inline">\(100\)</span> g del segundo. Masa total: <span class="math inline">\(300\)</span> g; masa de alúmina: <span class="math inline">\(240\)</span> g, el <span class="math inline">\(80\,\%\)</span> del total.</p>
 <p><strong>3. a.</strong> Usó <span class="math inline">\(A\mathbf{b}\)</span> en lugar de <span class="math inline">\(A^{-1}\mathbf{b}\)</span>. La solución correcta es <span class="math inline">\((x,y)=(1,1)\)</span>.</p>
@@ -821,11 +823,12 @@ A=\begin{bmatrix}4&amp;3\\1&amp;1\end{bmatrix},\qquad A^{-1}=\begin{bmatrix}1&am
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>Al revisar sus productos, soluciones y explicaciones, compruebe si puede:</p>
+<p>La inversa de una matriz cuadrada, cuando existe, es única y su producto con la matriz original da la identidad. Usarla en <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span> permite obtener y comprobar la única solución de <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>. La cancelación requiere una hipótesis que la justifique; la invertibilidad proporciona esa garantía.</p>
+<p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
-<li>Verificar una inversa propuesta comparando todas las entradas del producto con las de la identidad; la inversa, cuando existe, es única.</li>
-<li>Resolver <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> mediante <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span> cuando <span class="math inline">\(A\)</span> es invertible, e interpretar y verificar la solución obtenida.</li>
-<li>Explicar con el ejemplo singular por qué <span class="math inline">\(AB=AC\)</span> no basta para concluir <span class="math inline">\(B=C\)</span>, y justificar la cancelación cuando <span class="math inline">\(A\)</span> es invertible.</li>
+<li>Verificar una inversa propuesta comparando todas las entradas del producto con las de la identidad, como en el <a href="#ejemplo-1.-verificar-una-inversa-y-resolver-un-sistema">Ejemplo 1</a>, el ejercicio 1a y el inciso a de la comprobación individual de la <a href="#actividad">Actividad</a>.</li>
+<li>Resolver <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> mediante <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span> cuando <span class="math inline">\(A\)</span> es invertible, e interpretar y verificar la solución, como en el ejercicio 2 de la Actividad y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
+<li>Explicar con un ejemplo por qué <span class="math inline">\(AB=AC\)</span> no basta para concluir <span class="math inline">\(B=C\)</span> y justificar la cancelación cuando <span class="math inline">\(A\)</span> es invertible, como en el <a href="#ejemplo-2.-una-cancelación-que-falla">Ejemplo 2</a> y el inciso b de la comprobación individual.</li>
 </ul>
 
 
