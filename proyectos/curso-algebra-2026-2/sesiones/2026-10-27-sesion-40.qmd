@@ -6,7 +6,7 @@ description: "Definición y unicidad de la inversa, verificación por producto, 
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá verificar una inversa propuesta mediante un producto, resolver un sistema $2\times2$ con una inversa dada y comprobar su solución, y explicar con un ejemplo por qué de $AB=AC$ no siempre se deduce $B=C$. Compruebe estas capacidades con la [Actividad](#actividad) y su comprobación individual.
+Al finalizar la sesión podrá verificar una inversa propuesta mediante un producto, resolver un sistema $2\times2$ con una inversa dada y comprobar su solución, y explicar con un ejemplo por qué de $AB=AC$ no siempre se deduce $B=C$. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la [Actividad](#actividad).
 
 ## Para comenzar: un producto de dos matrices
 
@@ -37,11 +37,11 @@ $$
 AB=BA=I_n.
 $$
 
-La matriz $B$ se llama **inversa** de $A$. Una matriz cuadrada que no tiene inversa se llama **singular**.
+Una matriz $B$ que cumple esas igualdades se llama **inversa** de $A$. Una matriz cuadrada que no tiene inversa se llama **singular**.
 
 **Verificación.** Para matrices cuadradas del mismo tamaño, si $AB=I_n$, entonces también $BA=I_n$; se acepta este hecho sin demostración. Por tanto, basta calcular uno de los dos productos y comprobar que **todas** sus entradas coinciden con las de $I_n$. Una sola entrada distinta permite descartar una candidata.
 
-**Unicidad.** Si $B$ y $C$ son inversas de $A$, la identidad y la [asociatividad](2026-10-20-sesion-37.qmd#propiedades-del-producto) dan
+**Unicidad.** Si $B$ y $C$ son inversas de $A$, la identidad, la [asociatividad](2026-10-20-sesion-37.qmd#propiedades-del-producto) y las igualdades $AC=I_n$ y $BA=I_n$ dan
 
 $$
 B=BI_n=B(AC)=(BA)C=I_nC=C.
@@ -60,9 +60,11 @@ La notación $A^{-1}$ no significa invertir cada entrada ni dividir entre una ma
 Sean $A$ invertible de tamaño $n\times n$ y $\mathbf{x},\mathbf{b}$ vectores columna con $n$ componentes. Si $A\mathbf{x}=\mathbf{b}$, multiplicar ambos lados por $A^{-1}$ **por la izquierda** da
 
 $$
-A^{-1}(A\mathbf{x})=A^{-1}\mathbf{b},\qquad
-(A^{-1}A)\mathbf{x}=A^{-1}\mathbf{b},\qquad
-\mathbf{x}=A^{-1}\mathbf{b}.
+\begin{aligned}
+A^{-1}(A\mathbf{x})&=A^{-1}\mathbf{b},\\
+(A^{-1}A)\mathbf{x}&=A^{-1}\mathbf{b},\\
+I_n\mathbf{x}=\mathbf{x}&=A^{-1}\mathbf{b}.
+\end{aligned}
 $$
 
 Recíprocamente, ese vector es solución, porque
@@ -132,11 +134,11 @@ Sin embargo, $B\ne C$. Así, $AB=AC$ no permite cancelar $A$. Además, $A$ es si
 
 ## Errores frecuentes
 
-- **Invertir cada entrada.** La matriz $R=\begin{bmatrix}1/2&1\\1/5&1/3\end{bmatrix}$ no es $P^{-1}$: $(PR)_{11}=1+1/5=6/5\ne1$.
-- **Confundir inversa y transpuesta.** $(PP^{\mathsf T})_{11}=2(2)+1(1)=5\ne1$; por tanto, $P^{\mathsf T}$ no es la inversa de $P$.
-- **Revisar solo la diagonal.** Una matriz como $\begin{bmatrix}1&0\\3&1\end{bmatrix}$ no es $I_2$. Para aceptar una inversa hay que revisar también las entradas fuera de la diagonal.
-- **Multiplicar del lado equivocado.** En $P\mathbf{x}=\mathbf{b}$, la solución es $P^{-1}\mathbf{b}$. El producto $\mathbf{b}P^{-1}$ ni siquiera está definido: sus tamaños son $2\times1$ y $2\times2$.
-- **Cancelar solo porque la matriz no es cero.** El Ejemplo 2 muestra que esa condición no basta. La invertibilidad sí permite cancelar.
+- **Invertir cada entrada.** Falso: $P^{-1}=R=\begin{bmatrix}1/2&1\\1/5&1/3\end{bmatrix}$. Corrección: $(PR)_{11}=2(1/2)+1(1/5)=6/5\ne1$; la inversa es $Q$, como en el Ejemplo 1.
+- **Confundir inversa y transpuesta.** Falso: $P^{-1}=P^{\mathsf T}=\begin{bmatrix}2&5\\1&3\end{bmatrix}$. Corrección: $(PP^{\mathsf T})_{11}=2(2)+1(1)=5\ne1$; la [transpuesta](2026-10-09-sesion-35.qmd#transpuesta) no es la inversa en este caso.
+- **Revisar solo la diagonal.** Falso: $L=\begin{bmatrix}0&-1\\1&2\end{bmatrix}$ es $P^{-1}$, porque las entradas $(1,1)$ y $(2,2)$ de $PL$ valen $1$. Corrección: $(PL)_{21}=5(0)+3(1)=3\ne0$, de modo que $PL=\begin{bmatrix}1&0\\3&1\end{bmatrix}\ne I_2$.
+- **Multiplicar del lado equivocado.** Falso: de $P\mathbf{x}=\mathbf{b}$ se sigue $\mathbf{x}=\mathbf{b}P^{-1}$. Corrección: $\mathbf{b}P^{-1}$ no está definido ($2\times1$ por $2\times2$); $\mathbf{x}=P^{-1}\mathbf{b}=(1,2)^{\mathsf T}$.
+- **Cancelar solo porque la matriz no es cero.** Falso: como $A=\begin{bmatrix}1&1\\1&1\end{bmatrix}\ne0$, de $AB=AC$ se sigue $B=C$. Corrección: en el Ejemplo 2, $AB=AC$, pero $b_{11}=1\ne0=c_{11}$; la invertibilidad sí permite cancelar.
 
 ## Actividad
 
@@ -150,7 +152,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    c. Use $E$ para resolver $3x+2y=1$, $4x+3y=2$, y verifique la solución mediante un producto.
 
-2. Dos lotes de polvo metálico contienen $20\,\%$ y $60\,\%$ de cobre en masa. Se prepara sin pérdidas una muestra de $500$ g con $44\,\%$ de cobre, con $x,y\ge0$ gramos del primer y del segundo lote. Las ecuaciones de masa total y masa de cobre son $x+y=500$ y $0.20x+0.60y=220$. Sean
+2. Dos lotes de polvo metálico contienen $20\,\%$ y $60\,\%$ de cobre en masa. Se prepara sin pérdidas una muestra de $500$ g con $44\,\%$ de cobre, con $x,y\ge0$ gramos del primer y del segundo lote. Las ecuaciones de masa total y masa de cobre son $x+y=500$ y $0.20x+0.60y=220$, como en la [Actividad de la Sesión 36](2026-10-19-sesion-36.qmd#actividad). Sean
 
    $$
    A=\begin{bmatrix}1&1\\0.20&0.60\end{bmatrix},\qquad
@@ -163,11 +165,11 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    c. Verifique la solución calculando $A\mathbf{x}$ por columnas e interprete el resultado.
 
-**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas: sean $M=\begin{bmatrix}1&1\\1&2\end{bmatrix}$ y $N=\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$.
+**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas:
 
-a. Se sabe que $MN=I_2$. Use $N$ para resolver $x+y=3$, $x+2y=5$.
+a. Sean $M=\begin{bmatrix}1&1\\0&1\end{bmatrix}$ y $N=\begin{bmatrix}1&-1\\0&1\end{bmatrix}$. Verifique con un producto que $N=M^{-1}$ y úsela para resolver $x+y=3$, $y=2$.
 
-b. Explique, usando el Ejemplo 2, por qué $AB=AC$ no siempre implica $B=C$ y qué condición sobre $A$ permite deducirlo.
+b. Sean $G=\begin{bmatrix}1&0\\0&0\end{bmatrix}$, $B=\begin{bmatrix}1\\0\end{bmatrix}$ y $C=\begin{bmatrix}1\\1\end{bmatrix}$. Calcule $GB$ y $GC$ y explique por qué su igualdad no permite concluir $B=C$. Indique qué condición sobre $G$ permite cancelar.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
@@ -206,9 +208,9 @@ $$
 
 Son $500$ g de muestra y $220$ g de cobre; $220/500=0.44$, como se requería.
 
-**Comprobación individual, a.** Como $MN=I_2$, se tiene $N=M^{-1}$. Con $\mathbf{b}=(3,5)^{\mathsf T}$, $\mathbf{x}=N\mathbf{b}=(6-5,\ -3+5)^{\mathsf T}=(1,2)^{\mathsf T}$. En efecto, $1+2=3$ y $1+2(2)=5$.
+**Comprobación individual, a.** $MN=\begin{bmatrix}1&-1+1\\0&1\end{bmatrix}=I_2$, por lo que $N=M^{-1}$. Con $\mathbf{b}=(3,2)^{\mathsf T}$, $\mathbf{x}=N\mathbf{b}=(3-2,\ 2)^{\mathsf T}=(1,2)^{\mathsf T}$. En efecto, $1+2=3$ y $y=2$.
 
-**Comprobación individual, b.** En el Ejemplo 2, $AB=AC$, pero $B\ne C$; por eso la igualdad de los productos no basta. Si $A$ es invertible, multiplicar por $A^{-1}$ por la izquierda permite concluir $B=C$.
+**Comprobación individual, b.** $GB=GC=(1,0)^{\mathsf T}$, aunque $B\ne C$: sus segundas entradas son distintas. La igualdad de los productos no basta para cancelar. Si $G$ es invertible, multiplicar por $G^{-1}$ por la izquierda permite concluir $B=C$; este ejemplo muestra que $G$ no es invertible.
 
 :::
 
@@ -219,12 +221,12 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 1. Una **probeta** es una muestra de material con forma y medidas fijas para un ensayo. Un laboratorio fabrica probetas de cobre y estaño de dos tipos, A y B. En $U$, las columnas corresponden a los tipos A y B, y los renglones dan los gramos de cobre y de estaño de una probeta:
 
    $$
-   U=\begin{bmatrix}4&3\\1&1\end{bmatrix},\qquad V=\begin{bmatrix}1&-3\\-1&4\end{bmatrix}.
+   U=\begin{bmatrix}3&2\\1&1\end{bmatrix},\qquad V=\begin{bmatrix}1&-2\\-1&3\end{bmatrix}.
    $$
 
    a. Verifique con un producto que $V=U^{-1}$.
 
-   b. Un lote de probetas contiene $26$ g de cobre y $7$ g de estaño. Sean $x,y$ los números de probetas A y B. Escriba $U\mathbf{x}=\mathbf{b}$ y obtenga $x,y$ con $V$.
+   b. Un lote de probetas contiene $19$ g de cobre y $7$ g de estaño. Sean $x,y$ los números de probetas A y B. Escriba $U\mathbf{x}=\mathbf{b}$ y obtenga $x,y$ con $V$.
 
    c. Verifique las masas de los dos metales con $U\mathbf{x}$. ¿Son admisibles los números de probetas obtenidos?
 
@@ -262,9 +264,9 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 **1. a.** $UV=I_2$; por tanto, $V=U^{-1}$.
 
-**1. b.** $\begin{bmatrix}4&3\\1&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}26\\7\end{bmatrix}$; $(x,y)=(5,2)$: cinco probetas A y dos B.
+**1. b.** $\begin{bmatrix}3&2\\1&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}19\\7\end{bmatrix}$; $(x,y)=(5,2)$: cinco probetas A y dos B.
 
-**1. c.** $U(5,2)^{\mathsf T}=(26,7)^{\mathsf T}$. Sí: ambos números son enteros no negativos y reproducen las masas del lote.
+**1. c.** $U(5,2)^{\mathsf T}=(19,7)^{\mathsf T}$. Sí: ambos números son enteros no negativos y reproducen las masas del lote.
 
 **2. a.** $x+y=300$, $0.90x+0.60y=240$; $\left[\begin{array}{cc|c}1&1&300\\0.90&0.60&240\end{array}\right]$.
 
@@ -286,8 +288,10 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ## Conclusiones del aprendizaje
 
-Al revisar sus productos, soluciones y explicaciones, compruebe si puede:
+La inversa de una matriz cuadrada, cuando existe, es única y su producto con la matriz original da la identidad. Usarla en $\mathbf{x}=A^{-1}\mathbf{b}$ permite obtener y comprobar la única solución de $A\mathbf{x}=\mathbf{b}$. La cancelación requiere una hipótesis que la justifique; la invertibilidad proporciona esa garantía.
 
-- Verificar una inversa propuesta comparando todas las entradas del producto con las de la identidad; la inversa, cuando existe, es única.
-- Resolver $A\mathbf{x}=\mathbf{b}$ mediante $\mathbf{x}=A^{-1}\mathbf{b}$ cuando $A$ es invertible, e interpretar y verificar la solución obtenida.
-- Explicar con el ejemplo singular por qué $AB=AC$ no basta para concluir $B=C$, y justificar la cancelación cuando $A$ es invertible.
+Al revisar su trabajo, compruebe si puede:
+
+- Verificar una inversa propuesta comparando todas las entradas del producto con las de la identidad, como en el [Ejemplo 1](#ejemplo-1.-verificar-una-inversa-y-resolver-un-sistema), el ejercicio 1a y el inciso a de la comprobación individual de la [Actividad](#actividad).
+- Resolver $A\mathbf{x}=\mathbf{b}$ mediante $\mathbf{x}=A^{-1}\mathbf{b}$ cuando $A$ es invertible, e interpretar y verificar la solución, como en el ejercicio 2 de la Actividad y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
+- Explicar con un ejemplo por qué $AB=AC$ no basta para concluir $B=C$ y justificar la cancelación cuando $A$ es invertible, como en el [Ejemplo 2](#ejemplo-2.-una-cancelación-que-falla) y el inciso b de la comprobación individual.
