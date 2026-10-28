@@ -1,14 +1,14 @@
 ---
-title: "Sesión 41. Cálculo de la inversa por Gauss-Jordan"
+title: "Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan"
 date: 2026-10-28
-description: "Columnas de la inversa, cálculo de la inversa reduciendo la matriz con la identidad a su derecha, verificación por producto y matrices sin inversa."
+description: "Sistemas lineales asociados a la matriz inversa, procedimiento de inversión mediante Gauss-Jordan, verificación por producto y criterio de invertibilidad."
 ---
 
 ## Objetivo de la sesión
 
 Al finalizar la sesión podrá calcular la inversa de una matriz $2\times2$ o $3\times3$ llevando $[A\mid I]$ a $[I\mid A^{-1}]$ con el método de Gauss-Jordan, verificarla con un producto y justificar, por la falta de un pivote, que una matriz no tiene inversa. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la [Actividad](#actividad).
 
-## Para comenzar: un sistema con Gauss-Jordan
+## Reducción de un sistema mediante el método de Gauss-Jordan
 
 Al aplicar el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) al sistema $2x+y=1$, $5x+3y=0$, se obtuvo
 
@@ -26,7 +26,7 @@ Es la primera columna de $P^{-1}=\begin{bmatrix}3&-1\\-5&2\end{bmatrix}$, con $P
 
 :::
 
-## Las columnas de la inversa
+## Sistemas lineales asociados a la matriz inversa
 
 Sea $A$ una matriz real cuadrada de tamaño $n\times n$. Si $B$ es también $n\times n$ y tiene columnas $\mathbf{b}_1,\ldots,\mathbf{b}_n$, la [lectura por columnas del producto](2026-10-20-sesion-37.qmd#producto-de-dos-matrices) da
 
@@ -36,9 +36,9 @@ $$
 
 Para que $AB=I_n$, cada columna $\mathbf{b}_j$ debe resolver el sistema cuyo término independiente es la columna $j$ de $I_n$. En tamaño $2\times2$, la primera columna de la inversa resuelve $A\mathbf{x}=(1,0)^{\mathsf T}$ y la segunda resuelve $A\mathbf{x}=(0,1)^{\mathsf T}$.
 
-Todos esos sistemas tienen la misma matriz de coeficientes. Se pueden resolver a la vez escribiendo $[A\mid I_n]$: las columnas de $A$ a la izquierda y las de $I_n$ a la derecha. Cada operación se aplica a las $2n$ entradas del renglón completo.
+Estos sistemas tienen la misma matriz de coeficientes; por ello, una misma sucesión de operaciones elementales permite resolverlos simultáneamente. Se agrupan en la matriz $[A\mid I_n]$: las columnas de $A$ a la izquierda y las de $I_n$ a la derecha. Cada operación se aplica a las $2n$ entradas del renglón completo.
 
-## Cálculo de la inversa
+## Procedimiento de inversión mediante el método de Gauss-Jordan
 
 Sea $A$ una matriz de tamaño $n\times n$.
 
@@ -53,13 +53,13 @@ Sea $A$ una matriz de tamaño $n\times n$.
 
 5. Verifique con un producto que $A$ multiplicada por el resultado da $I_n$.
 
-**Por qué funciona.** Si el bloque izquierdo llega a $I_n$, cada columna del bloque derecho final es la solución de uno de los sistemas originales. Por la lectura por columnas, el bloque derecho, $B$, cumple $AB=I_n$ y es $A^{-1}$, según el criterio de verificación de la [Sesión 40](2026-10-27-sesion-40.qmd#matriz-inversa).
+**Justificación del procedimiento.** Si el bloque izquierdo llega a $I_n$, cada columna del bloque derecho final es la solución de uno de los sistemas originales, porque las operaciones elementales conservan sus soluciones. Por la lectura por columnas, el bloque derecho, $B$, cumple $AB=I_n$ y es $A^{-1}$, según el criterio de verificación de la [Sesión 40](2026-10-27-sesion-40.qmd#matriz-inversa).
 
 Una entrada inicial igual a cero puede requerir un intercambio de renglones. Las fracciones se conservan exactas: su aparición no impide que exista la inversa.
 
-## Cuándo no existe la inversa
+## Criterio de invertibilidad mediante pivotes
 
-Una matriz cuadrada es invertible si y solo si al escalonar sus coeficientes se obtiene un pivote en cada columna. Con todos los pivotes, Gauss-Jordan permite llegar a la identidad.
+Una matriz cuadrada es invertible si y solo si su forma escalonada tiene un pivote en cada columna. En ese caso, los pivotes ocupan las posiciones de la diagonal; al normalizarlos y anular las entradas superiores se obtiene la identidad.
 
 Si falta un pivote, el [sistema homogéneo](2026-10-19-sesion-36.qmd#sistemas-homogéneos) $A\mathbf{x}=\mathbf{0}$ tiene una variable libre y, por tanto, una solución no trivial. Esto impide que exista $A^{-1}$: si existiera, la única solución sería $A^{-1}\mathbf{0}=\mathbf{0}$.
 
@@ -98,7 +98,7 @@ $$
 P\begin{bmatrix}3&-1\\-5&2\end{bmatrix}=\begin{bmatrix}2(3)+1(-5)&2(-1)+1(2)\\5(3)+3(-5)&5(-1)+3(2)\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}.
 $$
 
-Es la matriz $Q$ que en la Sesión 40 se proporcionó; su primera columna es la solución de la apertura.
+Esta matriz coincide con $Q$, proporcionada en la Sesión 40; su primera columna es la solución del sistema inicial.
 
 ### Ejemplo 2. La inversa de una matriz 3×3
 
@@ -177,7 +177,7 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
 **Comprobación individual.** Sin consultar las soluciones ni comparar respuestas:
 
-a. Para calcular la inversa de $D=\begin{bmatrix}1&2\\1&3\end{bmatrix}$ se llegó a $\left[\begin{array}{cc|cc}1&2&1&0\\0&1&-1&1\end{array}\right]$. Complete la reducción con una operación y verifique la inversa mediante un producto.
+a. Calcule la inversa de $D=\begin{bmatrix}1&2\\1&3\end{bmatrix}$ mediante el método de Gauss-Jordan y verifíquela con un producto.
 
 b. Al reducir $[C\mid I_3]$, con $C=\begin{bmatrix}1&0&2\\0&1&-1\\1&1&1\end{bmatrix}$, se obtuvo
 
@@ -334,4 +334,5 @@ Al revisar su trabajo, compruebe si puede:
 
 - Calcular la inversa de una matriz $2\times2$ o $3\times3$ llevando $[A\mid I]$ a $[I\mid A^{-1}]$ y aplicando cada operación al renglón completo, como en los Ejemplos 1 y 2 y los ejercicios 1a y 2a de la [Actividad](#actividad).
 - Verificar con un producto la inversa obtenida, como en los Ejemplos 1 y 2, el inciso a de la comprobación individual y el ejercicio 3 de la [práctica](#ejercicios-para-practicar).
-- Justificar, por la falta de un pivote, que una matriz no tiene inversa, como en el Ejemplo 3, el ejercicio 1b y el inciso b de la comprobación individual de la Actividad.
+- Justificar, por la falta de un pivote, que una matriz no tiene inversa, como en el [Ejemplo 3](#ejemplo-3.-una-matriz-sin-inversa), el ejercicio 1b y el inciso b de la comprobación individual de la Actividad.
+
