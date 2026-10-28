@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Columnas de la inversa, cálculo de la inversa reduciendo la matriz con la identidad a su derecha, verificación por producto y matrices sin inversa.">
+<meta name="description" content="Sistemas lineales asociados a la matriz inversa, procedimiento de inversión mediante Gauss-Jordan, verificación por producto y criterio de invertibilidad.">
 
-<title>Sesión 41. Cálculo de la inversa por Gauss-Jordan – Álgebra</title>
+<title>Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 41. Cálculo de la inversa por Gauss-Jordan – Álgebra">
-<meta property="og:description" content="Columnas de la inversa, cálculo de la inversa reduciendo la matriz con la identidad a su derecha, verificación por producto y matrices sin inversa.">
+<meta property="og:title" content="Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan – Álgebra">
+<meta property="og:description" content="Sistemas lineales asociados a la matriz inversa, procedimiento de inversión mediante Gauss-Jordan, verificación por producto y criterio de invertibilidad.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-28-sesion-41.html"><span class="chapter-title">Sesión 41. Cálculo de la inversa por Gauss-Jordan</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-28-sesion-41.html"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -459,7 +459,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-10-28-sesion-41.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 41. Cálculo de la inversa por Gauss-Jordan</span></a>
+  <a href="../sesiones/2026-10-28-sesion-41.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a>
   </div>
 </li>
       </ul>
@@ -528,10 +528,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
-  <li><a href="#para-comenzar-un-sistema-con-gauss-jordan" id="toc-para-comenzar-un-sistema-con-gauss-jordan" class="nav-link" data-scroll-target="#para-comenzar-un-sistema-con-gauss-jordan">Para comenzar: un sistema con Gauss-Jordan</a></li>
-  <li><a href="#las-columnas-de-la-inversa" id="toc-las-columnas-de-la-inversa" class="nav-link" data-scroll-target="#las-columnas-de-la-inversa">Las columnas de la inversa</a></li>
-  <li><a href="#cálculo-de-la-inversa" id="toc-cálculo-de-la-inversa" class="nav-link" data-scroll-target="#cálculo-de-la-inversa">Cálculo de la inversa</a></li>
-  <li><a href="#cuándo-no-existe-la-inversa" id="toc-cuándo-no-existe-la-inversa" class="nav-link" data-scroll-target="#cuándo-no-existe-la-inversa">Cuándo no existe la inversa</a></li>
+  <li><a href="#reducción-de-un-sistema-mediante-el-método-de-gauss-jordan" id="toc-reducción-de-un-sistema-mediante-el-método-de-gauss-jordan" class="nav-link" data-scroll-target="#reducción-de-un-sistema-mediante-el-método-de-gauss-jordan">Reducción de un sistema mediante el método de Gauss-Jordan</a></li>
+  <li><a href="#sistemas-lineales-asociados-a-la-matriz-inversa" id="toc-sistemas-lineales-asociados-a-la-matriz-inversa" class="nav-link" data-scroll-target="#sistemas-lineales-asociados-a-la-matriz-inversa">Sistemas lineales asociados a la matriz inversa</a></li>
+  <li><a href="#procedimiento-de-inversión-mediante-el-método-de-gauss-jordan" id="toc-procedimiento-de-inversión-mediante-el-método-de-gauss-jordan" class="nav-link" data-scroll-target="#procedimiento-de-inversión-mediante-el-método-de-gauss-jordan">Procedimiento de inversión mediante el método de Gauss-Jordan</a></li>
+  <li><a href="#criterio-de-invertibilidad-mediante-pivotes" id="toc-criterio-de-invertibilidad-mediante-pivotes" class="nav-link" data-scroll-target="#criterio-de-invertibilidad-mediante-pivotes">Criterio de invertibilidad mediante pivotes</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
   <li><a href="#ejemplo-1.-la-inversa-de-una-matriz-22" id="toc-ejemplo-1.-la-inversa-de-una-matriz-22" class="nav-link" data-scroll-target="#ejemplo-1.-la-inversa-de-una-matriz-22">Ejemplo 1. La inversa de una matriz 2×2</a></li>
@@ -548,9 +548,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-28-sesion-41.html"><span class="chapter-title">Sesión 41. Cálculo de la inversa por Gauss-Jordan</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-28-sesion-41.html"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 41. Cálculo de la inversa por Gauss-Jordan</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></h1>
 </div>
 
 
@@ -577,8 +577,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
 <p>Al finalizar la sesión podrá calcular la inversa de una matriz <span class="math inline">\(2\times2\)</span> o <span class="math inline">\(3\times3\)</span> llevando <span class="math inline">\([A\mid I]\)</span> a <span class="math inline">\([I\mid A^{-1}]\)</span> con el método de Gauss-Jordan, verificarla con un producto y justificar, por la falta de un pivote, que una matriz no tiene inversa. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
-<section id="para-comenzar-un-sistema-con-gauss-jordan" class="level2">
-<h2 class="anchored" data-anchor-id="para-comenzar-un-sistema-con-gauss-jordan">Para comenzar: un sistema con Gauss-Jordan</h2>
+<section id="reducción-de-un-sistema-mediante-el-método-de-gauss-jordan" class="level2">
+<h2 class="anchored" data-anchor-id="reducción-de-un-sistema-mediante-el-método-de-gauss-jordan">Reducción de un sistema mediante el método de Gauss-Jordan</h2>
 <p>Al aplicar el <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">método de Gauss-Jordan</a> al sistema <span class="math inline">\(2x+y=1\)</span>, <span class="math inline">\(5x+3y=0\)</span>, se obtuvo</p>
 <p><span class="math display">\[
 \left[\begin{array}{cc|c}1&amp;1&amp;-2\\0&amp;1&amp;-5\end{array}\right].
@@ -602,17 +602,17 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="las-columnas-de-la-inversa" class="level2">
-<h2 class="anchored" data-anchor-id="las-columnas-de-la-inversa">Las columnas de la inversa</h2>
+<section id="sistemas-lineales-asociados-a-la-matriz-inversa" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-lineales-asociados-a-la-matriz-inversa">Sistemas lineales asociados a la matriz inversa</h2>
 <p>Sea <span class="math inline">\(A\)</span> una matriz real cuadrada de tamaño <span class="math inline">\(n\times n\)</span>. Si <span class="math inline">\(B\)</span> es también <span class="math inline">\(n\times n\)</span> y tiene columnas <span class="math inline">\(\mathbf{b}_1,\ldots,\mathbf{b}_n\)</span>, la <a href="../sesiones/2026-10-20-sesion-37.html#producto-de-dos-matrices">lectura por columnas del producto</a> da</p>
 <p><span class="math display">\[
 AB=\begin{bmatrix}A\mathbf{b}_1&amp;\cdots&amp;A\mathbf{b}_n\end{bmatrix}.
 \]</span></p>
 <p>Para que <span class="math inline">\(AB=I_n\)</span>, cada columna <span class="math inline">\(\mathbf{b}_j\)</span> debe resolver el sistema cuyo término independiente es la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(I_n\)</span>. En tamaño <span class="math inline">\(2\times2\)</span>, la primera columna de la inversa resuelve <span class="math inline">\(A\mathbf{x}=(1,0)^{\mathsf T}\)</span> y la segunda resuelve <span class="math inline">\(A\mathbf{x}=(0,1)^{\mathsf T}\)</span>.</p>
-<p>Todos esos sistemas tienen la misma matriz de coeficientes. Se pueden resolver a la vez escribiendo <span class="math inline">\([A\mid I_n]\)</span>: las columnas de <span class="math inline">\(A\)</span> a la izquierda y las de <span class="math inline">\(I_n\)</span> a la derecha. Cada operación se aplica a las <span class="math inline">\(2n\)</span> entradas del renglón completo.</p>
+<p>Estos sistemas tienen la misma matriz de coeficientes; por ello, una misma sucesión de operaciones elementales permite resolverlos simultáneamente. Se agrupan en la matriz <span class="math inline">\([A\mid I_n]\)</span>: las columnas de <span class="math inline">\(A\)</span> a la izquierda y las de <span class="math inline">\(I_n\)</span> a la derecha. Cada operación se aplica a las <span class="math inline">\(2n\)</span> entradas del renglón completo.</p>
 </section>
-<section id="cálculo-de-la-inversa" class="level2">
-<h2 class="anchored" data-anchor-id="cálculo-de-la-inversa">Cálculo de la inversa</h2>
+<section id="procedimiento-de-inversión-mediante-el-método-de-gauss-jordan" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento-de-inversión-mediante-el-método-de-gauss-jordan">Procedimiento de inversión mediante el método de Gauss-Jordan</h2>
 <p>Sea <span class="math inline">\(A\)</span> una matriz de tamaño <span class="math inline">\(n\times n\)</span>.</p>
 <ol type="1">
 <li><p>Escriba <span class="math inline">\([A\mid I_n]\)</span>.</p></li>
@@ -624,12 +624,12 @@ AB=\begin{bmatrix}A\mathbf{b}_1&amp;\cdots&amp;A\mathbf{b}_n\end{bmatrix}.
 \]</span></p></li>
 <li><p>Verifique con un producto que <span class="math inline">\(A\)</span> multiplicada por el resultado da <span class="math inline">\(I_n\)</span>.</p></li>
 </ol>
-<p><strong>Por qué funciona.</strong> Si el bloque izquierdo llega a <span class="math inline">\(I_n\)</span>, cada columna del bloque derecho final es la solución de uno de los sistemas originales. Por la lectura por columnas, el bloque derecho, <span class="math inline">\(B\)</span>, cumple <span class="math inline">\(AB=I_n\)</span> y es <span class="math inline">\(A^{-1}\)</span>, según el criterio de verificación de la <a href="../sesiones/2026-10-27-sesion-40.html#matriz-inversa">Sesión 40</a>.</p>
+<p><strong>Justificación del procedimiento.</strong> Si el bloque izquierdo llega a <span class="math inline">\(I_n\)</span>, cada columna del bloque derecho final es la solución de uno de los sistemas originales, porque las operaciones elementales conservan sus soluciones. Por la lectura por columnas, el bloque derecho, <span class="math inline">\(B\)</span>, cumple <span class="math inline">\(AB=I_n\)</span> y es <span class="math inline">\(A^{-1}\)</span>, según el criterio de verificación de la <a href="../sesiones/2026-10-27-sesion-40.html#matriz-inversa">Sesión 40</a>.</p>
 <p>Una entrada inicial igual a cero puede requerir un intercambio de renglones. Las fracciones se conservan exactas: su aparición no impide que exista la inversa.</p>
 </section>
-<section id="cuándo-no-existe-la-inversa" class="level2">
-<h2 class="anchored" data-anchor-id="cuándo-no-existe-la-inversa">Cuándo no existe la inversa</h2>
-<p>Una matriz cuadrada es invertible si y solo si al escalonar sus coeficientes se obtiene un pivote en cada columna. Con todos los pivotes, Gauss-Jordan permite llegar a la identidad.</p>
+<section id="criterio-de-invertibilidad-mediante-pivotes" class="level2">
+<h2 class="anchored" data-anchor-id="criterio-de-invertibilidad-mediante-pivotes">Criterio de invertibilidad mediante pivotes</h2>
+<p>Una matriz cuadrada es invertible si y solo si su forma escalonada tiene un pivote en cada columna. En ese caso, los pivotes ocupan las posiciones de la diagonal; al normalizarlos y anular las entradas superiores se obtiene la identidad.</p>
 <p>Si falta un pivote, el <a href="../sesiones/2026-10-19-sesion-36.html#sistemas-homogéneos">sistema homogéneo</a> <span class="math inline">\(A\mathbf{x}=\mathbf{0}\)</span> tiene una variable libre y, por tanto, una solución no trivial. Esto impide que exista <span class="math inline">\(A^{-1}\)</span>: si existiera, la única solución sería <span class="math inline">\(A^{-1}\mathbf{0}=\mathbf{0}\)</span>.</p>
 <p>En una matriz cuadrada escalonada, la falta de un pivote se reconoce por un renglón nulo. Si aparece en el <strong>bloque izquierdo</strong> de <span class="math inline">\([A\mid I_n]\)</span>, se puede detener el procedimiento: <span class="math inline">\(A\)</span> no tiene inversa, y el bloque derecho no debe leerse como tal.</p>
 </section>
@@ -659,7 +659,7 @@ AB=\begin{bmatrix}A\mathbf{b}_1&amp;\cdots&amp;A\mathbf{b}_n\end{bmatrix}.
 <p><span class="math display">\[
 P\begin{bmatrix}3&amp;-1\\-5&amp;2\end{bmatrix}=\begin{bmatrix}2(3)+1(-5)&amp;2(-1)+1(2)\\5(3)+3(-5)&amp;5(-1)+3(2)\end{bmatrix}=\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix}.
 \]</span></p>
-<p>Es la matriz <span class="math inline">\(Q\)</span> que en la Sesión 40 se proporcionó; su primera columna es la solución de la apertura.</p>
+<p>Esta matriz coincide con <span class="math inline">\(Q\)</span>, proporcionada en la Sesión 40; su primera columna es la solución del sistema inicial.</p>
 </section>
 <section id="ejemplo-2.-la-inversa-de-una-matriz-33" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-la-inversa-de-una-matriz-33">Ejemplo 2. La inversa de una matriz 3×3</h3>
@@ -728,7 +728,7 @@ M=\begin{bmatrix}1&amp;1&amp;1\\1&amp;2&amp;1\\1&amp;2&amp;2\end{bmatrix}.
 </ol>
 <p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas:</p>
 <ol type="a">
-<li><p>Para calcular la inversa de <span class="math inline">\(D=\begin{bmatrix}1&amp;2\\1&amp;3\end{bmatrix}\)</span> se llegó a <span class="math inline">\(\left[\begin{array}{cc|cc}1&amp;2&amp;1&amp;0\\0&amp;1&amp;-1&amp;1\end{array}\right]\)</span>. Complete la reducción con una operación y verifique la inversa mediante un producto.</p></li>
+<li><p>Calcule la inversa de <span class="math inline">\(D=\begin{bmatrix}1&amp;2\\1&amp;3\end{bmatrix}\)</span> mediante el método de Gauss-Jordan y verifíquela con un producto.</p></li>
 <li><p>Al reducir <span class="math inline">\([C\mid I_3]\)</span>, con <span class="math inline">\(C=\begin{bmatrix}1&amp;0&amp;2\\0&amp;1&amp;-1\\1&amp;1&amp;1\end{bmatrix}\)</span>, se obtuvo</p></li>
 </ol>
 <p><span class="math display">\[
@@ -868,7 +868,7 @@ L=\begin{bmatrix}2&amp;1\\3&amp;0\\4&amp;2\end{bmatrix}.
 <ul>
 <li>Calcular la inversa de una matriz <span class="math inline">\(2\times2\)</span> o <span class="math inline">\(3\times3\)</span> llevando <span class="math inline">\([A\mid I]\)</span> a <span class="math inline">\([I\mid A^{-1}]\)</span> y aplicando cada operación al renglón completo, como en los Ejemplos 1 y 2 y los ejercicios 1a y 2a de la <a href="#actividad">Actividad</a>.</li>
 <li>Verificar con un producto la inversa obtenida, como en los Ejemplos 1 y 2, el inciso a de la comprobación individual y el ejercicio 3 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
-<li>Justificar, por la falta de un pivote, que una matriz no tiene inversa, como en el Ejemplo 3, el ejercicio 1b y el inciso b de la comprobación individual de la Actividad.</li>
+<li>Justificar, por la falta de un pivote, que una matriz no tiene inversa, como en el <a href="#ejemplo-3.-una-matriz-sin-inversa">Ejemplo 3</a>, el ejercicio 1b y el inciso b de la comprobación individual de la Actividad.</li>
 </ul>
 
 
