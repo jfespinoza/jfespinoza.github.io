@@ -574,15 +574,15 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá resolver un sistema <span class="math inline">\(2\times2\)</span> mediante Gauss-Jordan y mediante la inversa, verificar la solución y justificar la elección de método cuando cambian los términos independientes. Podrá comprobarlo al comparar las dos resoluciones de la actividad y recuperar las masas de dos lotes a partir de su composición, interpretando si son admisibles.</p>
+<p>Al finalizar la sesión podrá resolver un sistema <span class="math inline">\(2\times2\)</span> mediante Gauss-Jordan y mediante la inversa, verificar la solución, justificar la elección de método cuando cambian los términos independientes o la matriz no tiene inversa, y recuperar masas a partir de una composición, decidiendo si son admisibles. Compruebe estas capacidades en los ejercicios 1 a 3 y en la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="recordatorio" class="level2">
 <h2 class="anchored" data-anchor-id="recordatorio">Recordatorio</h2>
 <p>Para resolver los ejercicios, recupere los procedimientos de las <a href="../sesiones/2026-10-27-sesion-40.html">sesiones 40</a> y <a href="../sesiones/2026-10-28-sesion-41.html">41</a>:</p>
 <ul>
-<li>Si <span class="math inline">\(A\)</span> es cuadrada e invertible, <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> tiene una única solución, <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span>; la inversa multiplica por la izquierda.</li>
-<li>Las operaciones elementales que llevan <span class="math inline">\([A\mid I_n]\)</span> a <span class="math inline">\([I_n\mid A^{-1}]\)</span> también reducen <span class="math inline">\([A\mid\mathbf{b}]\)</span>: se eligen según el bloque de coeficientes y se aplican al renglón completo.</li>
-<li>Si el bloque de coeficientes escalonado de una matriz cuadrada tiene una columna sin pivote, no existe la inversa. Gauss-Jordan permite decidir si un sistema con esa matriz tiene solución.</li>
+<li>Si <span class="math inline">\(A\)</span> es cuadrada e invertible, <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> tiene una única solución, <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span>; la inversa multiplica por la izquierda (<a href="../sesiones/2026-10-27-sesion-40.html#resolver-un-sistema-con-la-inversa">resolución con la inversa</a>).</li>
+<li>Las operaciones elementales que llevan <span class="math inline">\([A\mid I_n]\)</span> a <span class="math inline">\([I_n\mid A^{-1}]\)</span> también reducen <span class="math inline">\([A\mid\mathbf{b}]\)</span>: se eligen según el bloque de coeficientes y se aplican al renglón completo (<a href="../sesiones/2026-10-28-sesion-41.html#procedimiento-de-inversión-mediante-el-método-de-gauss-jordan">procedimiento de inversión</a>).</li>
+<li>Si el bloque de coeficientes escalonado de una matriz cuadrada tiene una columna sin pivote, no existe la inversa (<a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio de invertibilidad</a>). Gauss-Jordan permite decidir si un sistema con esa matriz tiene solución, mediante la <a href="../sesiones/2026-10-06-sesion-32.html#lectura-del-tipo-de-solución">lectura de la matriz reducida</a>.</li>
 <li>La verificación se hace en las ecuaciones originales o mediante <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>, conservando el orden de ecuaciones y variables. En un problema de masas, además se comprueban las unidades y la no negatividad.</li>
 </ul>
 <section id="comparación-de-métodos-de-resolución" class="level3">
@@ -623,10 +623,10 @@ window.Quarto = {
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Verificar con los datos en un orden incorrecto.</strong> Si el sistema es <span class="math inline">\(3x+y=5\)</span>, <span class="math inline">\(5x+2y=9\)</span>, el término independiente es <span class="math inline">\((5,9)^{\mathsf T}\)</span>, no <span class="math inline">\((9,5)^{\mathsf T}\)</span>. Un producto que reproduce datos intercambiados comprueba otro sistema.</li>
-<li><strong>Calcular la inversa para cada término independiente.</strong> La inversa depende de <span class="math inline">\(A\)</span>, no de <span class="math inline">\(\mathbf{b}\)</span>. Si <span class="math inline">\(A\)</span> no cambia y ya se obtuvo <span class="math inline">\(A^{-1}\)</span>, se reutiliza.</li>
-<li><strong>Concluir que una masa negativa demuestra un error aritmético.</strong> Primero se comprueba el resultado en el modelo. Una solución algebraica correcta con una masa negativa no es admisible como mezcla de esos lotes.</li>
-<li><strong>Concluir que no hay solución porque no existe la inversa.</strong> Si la matriz cuadrada es singular, el sistema puede tener infinitas soluciones o ninguna. La falta de inversa impide usar ese método; para decidir el tipo de solución, se examina la matriz aumentada.</li>
+<li><strong>Verificar con los datos en un orden incorrecto.</strong> Falso: para <span class="math inline">\(3x+y=5\)</span>, <span class="math inline">\(5x+2y=9\)</span>, se acepta <span class="math inline">\((13,-30)\)</span> porque produce <span class="math inline">\((9,5)^{\mathsf T}\)</span>. Corrección: el término independiente es <span class="math inline">\((5,9)^{\mathsf T}\)</span> y <span class="math inline">\(3(13)-30=9\ne5\)</span>. Reproducir los datos intercambiados comprueba otro sistema.</li>
+<li><strong>Calcular la inversa para cada término independiente.</strong> Falso: aun disponiendo de <span class="math inline">\(P^{-1}=\begin{bmatrix}3&amp;-1\\-5&amp;2\end{bmatrix}\)</span>, resolver <span class="math inline">\(2x+y=1\)</span>, <span class="math inline">\(5x+3y=0\)</span> exige invertir otra vez su matriz <span class="math inline">\(P\)</span>. Corrección: basta <span class="math inline">\(P^{-1}(1,0)^{\mathsf T}=(3,-5)^{\mathsf T}\)</span>; <span class="math inline">\(2(3)-5=1\)</span> y <span class="math inline">\(5(3)+3(-5)=0\)</span>. La inversa depende de <span class="math inline">\(P\)</span>, no de <span class="math inline">\(\mathbf{b}\)</span> (<a href="../sesiones/2026-10-27-sesion-40.html#ejemplo-1.-verificar-una-inversa-y-resolver-un-sistema">Ejemplo 1 de la Sesión 40</a>).</li>
+<li><strong>Concluir que una masa negativa demuestra un error aritmético.</strong> Falso: con lotes al <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\,\%\)</span> de cobre, obtener <span class="math inline">\((-25,225)\)</span> g para una muestra de <span class="math inline">\(200\)</span> g con <span class="math inline">\(130\)</span> g de cobre implica un cálculo erróneo. Corrección: <span class="math inline">\(-25+225=200\)</span> y <span class="math inline">\(0.20(-25)+0.60(225)=130\)</span>. El resultado satisface los balances, pero la masa negativa no es admisible (<a href="../sesiones/2026-10-27-sesion-40.html#actividad">Actividad 2 de la Sesión 40</a>).</li>
+<li><strong>Concluir que no hay solución porque no existe la inversa.</strong> Falso: <span class="math inline">\(S=\begin{bmatrix}1&amp;1\\1&amp;1\end{bmatrix}\)</span> no tiene inversa, así que <span class="math inline">\(x+y=2\)</span>, <span class="math inline">\(x+y=2\)</span> no tiene solución. Corrección: <span class="math inline">\((1,1)\)</span> satisface ambas ecuaciones; <span class="math inline">\(R_2\to R_2-R_1\)</span> produce <span class="math inline">\(0=0\)</span>. El sistema es consistente aunque <span class="math inline">\(S\)</span> sea singular (<a href="../sesiones/2026-10-28-sesion-41.html#ejemplo-3.-una-matriz-sin-inversa">Ejemplo 3 de la Sesión 41</a>).</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -640,9 +640,9 @@ window.Quarto = {
 <li><p>Compruebe la solución en las dos ecuaciones originales. Compare el trabajo de ambos procedimientos para este único sistema.</p></li>
 <li><p>Después se recibe el sistema <span class="math inline">\(3x+y=1\)</span>, <span class="math inline">\(5x+2y=1\)</span>. Elija un método aprovechando el trabajo anterior, resuelva y verifique. Justifique su elección.</p></li>
 </ol></li>
-<li><p>Dos lotes de polvo metálico, 1 y 2, contienen <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\,\%\)</span> de cobre en masa. Todo lo que no es cobre se registra como <strong>resto</strong>. Un laboratorio recibe muestras preparadas sin pérdidas con <span class="math inline">\(x\)</span> gramos del lote 1 y <span class="math inline">\(y\)</span> gramos del lote 2, con <span class="math inline">\(x,y\ge0\)</span>. La masa de cada componente aportada por un lote es la masa tomada de ese lote multiplicada por su fracción del componente.</p>
+<li><p>Dos lotes de polvo metálico, 1 y 2, contienen <span class="math inline">\(20\,\%\)</span> y <span class="math inline">\(60\,\%\)</span> de cobre en masa, como en la <a href="../sesiones/2026-10-19-sesion-36.html#actividad">Actividad de la Sesión 36</a>. Todo lo que no es cobre se registra como <strong>resto</strong>. Un laboratorio recibe muestras preparadas sin pérdidas con <span class="math inline">\(x\)</span> gramos del lote 1 y <span class="math inline">\(y\)</span> gramos del lote 2, con <span class="math inline">\(x,y\ge0\)</span>. La masa de cada componente aportada por un lote es la masa tomada de ese lote multiplicada por su fracción del componente.</p>
 <ol type="a">
-<li><p>Escriba la matriz de composición <span class="math inline">\(C\)</span>, con renglones cobre y resto y columnas lotes 1 y 2. Explique qué representa cada componente de <span class="math inline">\(C(x,y)^{\mathsf T}\)</span>.</p></li>
+<li><p>Escriba la matriz de composición <span class="math inline">\(C\)</span>, con renglones cobre y resto y columnas lotes 1 y 2. Explique qué representa cada componente de <span class="math inline">\(C(x,y)^{\mathsf T}\)</span> mediante la <a href="../sesiones/2026-10-19-sesion-36.html#producto-de-una-matriz-por-un-vector">lectura por columnas</a>.</p></li>
 <li><p>Se propone <span class="math inline">\(W=\begin{bmatrix}-1&amp;1.5\\2&amp;-0.5\end{bmatrix}\)</span>. Verifique con un producto que <span class="math inline">\(W=C^{-1}\)</span>.</p></li>
 <li><p>La muestra del lunes contiene <span class="math inline">\(220\)</span> g de cobre y <span class="math inline">\(280\)</span> g de resto; la del martes, <span class="math inline">\(180\)</span> g de cobre y <span class="math inline">\(220\)</span> g de resto. Obtenga con <span class="math inline">\(C^{-1}\)</span> las masas de los lotes de cada muestra y verifique la del martes mediante <span class="math inline">\(C\mathbf{x}\)</span>. Explique por qué conviene conservar la inversa para las muestras que lleguen después.</p></li>
 <li><p>Un registro indica <span class="math inline">\(350\)</span> g de cobre y <span class="math inline">\(150\)</span> g de resto. Obtenga <span class="math inline">\((x,y)\)</span> con <span class="math inline">\(C^{-1}\)</span>, compruebe el producto <span class="math inline">\(C\mathbf{x}\)</span> y decida si esa muestra pudo prepararse con estos lotes. Justifique.</p></li>
@@ -650,13 +650,13 @@ window.Quarto = {
 <li><p>Sea <span class="math inline">\(G=\begin{bmatrix}1&amp;2\\3&amp;6\end{bmatrix}\)</span>.</p>
 <ol type="a">
 <li><p>Aplique <span class="math inline">\(R_2\to R_2-3R_1\)</span> a <span class="math inline">\([G\mid I_2]\)</span> y decida si <span class="math inline">\(G\)</span> tiene inversa.</p></li>
-<li><p>La matriz <span class="math inline">\(\left[\begin{array}{cc|cc}1&amp;2&amp;4&amp;4\\3&amp;6&amp;12&amp;10\end{array}\right]\)</span> reúne los sistemas <span class="math inline">\(G\mathbf{x}=(4,12)^{\mathsf T}\)</span> y <span class="math inline">\(G\mathbf{x}=(4,10)^{\mathsf T}\)</span>. Redúzcala con la misma operación y clasifique cada sistema. Para el consistente, describa las soluciones por componentes con un parámetro y verifíquelas en las ecuaciones originales.</p></li>
+<li><p>La matriz <span class="math inline">\(\left[\begin{array}{cc|cc}1&amp;2&amp;4&amp;4\\3&amp;6&amp;12&amp;10\end{array}\right]\)</span> reúne los sistemas <span class="math inline">\(G\mathbf{x}=(4,12)^{\mathsf T}\)</span> y <span class="math inline">\(G\mathbf{x}=(4,10)^{\mathsf T}\)</span>. Redúzcala con la misma operación y clasifique cada sistema. Para el consistente, describa las soluciones por componentes con un parámetro, como en la <a href="../sesiones/2026-10-07-sesion-33.html#descripción-paramétrica-del-conjunto-solución">Sesión 33</a>, y verifíquelas en las ecuaciones originales.</p></li>
 <li><p>Explique por qué Gauss-Jordan permite decidir ambos sistemas aunque no esté disponible <span class="math inline">\(G^{-1}\mathbf{b}\)</span>.</p></li>
 </ol></li>
 </ol>
 <p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas:</p>
 <ol type="a">
-<li><p>Para resolver <span class="math inline">\(x+y=5\)</span>, <span class="math inline">\(x+2y=8\)</span>, se obtuvo <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;1&amp;5\\0&amp;1&amp;3\end{array}\right]\)</span>. Complete Gauss-Jordan y compruebe que coincide con <span class="math inline">\(\mathbf{x}=H^{-1}(5,8)^{\mathsf T}\)</span>, donde <span class="math inline">\(H^{-1}=\begin{bmatrix}2&amp;-1\\-1&amp;1\end{bmatrix}\)</span> y <span class="math inline">\(H=\begin{bmatrix}1&amp;1\\1&amp;2\end{bmatrix}\)</span>. Verifique en las ecuaciones originales.</p></li>
+<li><p>Resuelva <span class="math inline">\(x+y=5\)</span>, <span class="math inline">\(x+2y=8\)</span> por los dos métodos: Gauss-Jordan sobre <span class="math inline">\([H\mid\mathbf{b}]\)</span> y <span class="math inline">\(\mathbf{x}=H^{-1}\mathbf{b}\)</span>, con <span class="math inline">\(H=\begin{bmatrix}1&amp;1\\1&amp;2\end{bmatrix}\)</span> y <span class="math inline">\(\mathbf{b}=(5,8)^{\mathsf T}\)</span>. Obtenga <span class="math inline">\(H^{-1}\)</span> aplicando a <span class="math inline">\([H\mid I_2]\)</span> las mismas operaciones y verifique la solución en las ecuaciones originales.</p></li>
 <li><p>Un laboratorio recibirá diariamente nuevas muestras de los mismos dos lotes del ejercicio 2. ¿Qué procedimiento conviene conservar para recuperar sus masas? Justifique en una oración.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
@@ -698,7 +698,12 @@ A^{-1}\mathbf{b}=\begin{bmatrix}10-9\\-25+27\end{bmatrix}=\begin{bmatrix}1\\2\en
 A^{-1}\begin{bmatrix}1\\1\end{bmatrix}=\begin{bmatrix}2-1\\-5+3\end{bmatrix}=\begin{bmatrix}1\\-2\end{bmatrix}.
 \]</span></p>
 <p>La comprobación es <span class="math inline">\(3(1)-2=1\)</span> y <span class="math inline">\(5(1)+2(-2)=1\)</span>. No se repite la eliminación.</p>
-<p><strong>2. a.</strong> <span class="math inline">\(C=\begin{bmatrix}0.20&amp;0.60\\0.80&amp;0.40\end{bmatrix}\)</span>. La primera componente de <span class="math inline">\(C(x,y)^{\mathsf T}\)</span> es <span class="math inline">\(0.20x+0.60y\)</span>, la masa de cobre en gramos; la segunda es <span class="math inline">\(0.80x+0.40y\)</span>, la masa del resto. Cada columna suma <span class="math inline">\(1\)</span> porque registra toda la masa de su lote.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(C=\begin{bmatrix}0.20&amp;0.60\\0.80&amp;0.40\end{bmatrix}\)</span>. Por columnas,</p>
+<p><span class="math display">\[
+C\begin{bmatrix}x\\y\end{bmatrix}
+=x\begin{bmatrix}0.20\\0.80\end{bmatrix}+y\begin{bmatrix}0.60\\0.40\end{bmatrix}.
+\]</span></p>
+<p>Cada masa multiplica la composición de su propio lote. La primera componente es <span class="math inline">\(0.20x+0.60y\)</span>, la masa de cobre en gramos; la segunda es <span class="math inline">\(0.80x+0.40y\)</span>, la masa del resto. Cada columna suma <span class="math inline">\(1\)</span> porque registra toda la masa de su lote.</p>
 <p><strong>2. b.</strong></p>
 <p><span class="math display">\[
 CW=\begin{bmatrix}-0.20+1.20&amp;0.30-0.30\\-0.80+0.80&amp;1.20-0.20\end{bmatrix}=I_2.
@@ -731,7 +736,18 @@ x=4-2t,\qquad y=t,\qquad t\in\mathbb R.
 \]</span></p>
 <p>Son infinitas soluciones: <span class="math inline">\((4-2t)+2t=4\)</span> y <span class="math inline">\(3(4-2t)+6t=12\)</span> para todo <span class="math inline">\(t\)</span>. El segundo sistema contiene <span class="math inline">\(0=-2\)</span> y no tiene solución.</p>
 <p><strong>3. c.</strong> Las operaciones elementales conservan las soluciones de cada sistema sin exigir invertibilidad. Sus resultados distinguen infinitas soluciones de una contradicción; la falta de inversa por sí sola no permite esa distinción.</p>
-<p><strong>Comprobación individual, a.</strong> Falta <span class="math inline">\(R_1\to R_1-R_2\)</span>, que da <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;0&amp;2\\0&amp;1&amp;3\end{array}\right]\)</span>. También <span class="math inline">\(H^{-1}(5,8)^{\mathsf T}=(10-8,-5+8)^{\mathsf T}=(2,3)^{\mathsf T}\)</span>. La solución es <span class="math inline">\((2,3)\)</span> y satisface <span class="math inline">\(2+3=5\)</span> y <span class="math inline">\(2+2(3)=8\)</span>.</p>
+<p><strong>Comprobación individual, a.</strong> Con <span class="math inline">\(R_2\to R_2-R_1\)</span> y <span class="math inline">\(R_1\to R_1-R_2\)</span>:</p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|c}1&amp;1&amp;5\\1&amp;2&amp;8\end{array}\right]\to
+\left[\begin{array}{cc|c}1&amp;1&amp;5\\0&amp;1&amp;3\end{array}\right]\to
+\left[\begin{array}{cc|c}1&amp;0&amp;2\\0&amp;1&amp;3\end{array}\right],
+\]</span></p>
+<p><span class="math display">\[
+\left[\begin{array}{cc|cc}1&amp;1&amp;1&amp;0\\1&amp;2&amp;0&amp;1\end{array}\right]\to
+\left[\begin{array}{cc|cc}1&amp;1&amp;1&amp;0\\0&amp;1&amp;-1&amp;1\end{array}\right]\to
+\left[\begin{array}{cc|cc}1&amp;0&amp;2&amp;-1\\0&amp;1&amp;-1&amp;1\end{array}\right].
+\]</span></p>
+<p>Por el primer método, <span class="math inline">\((x,y)=(2,3)\)</span>. Por el segundo, <span class="math inline">\(H^{-1}=\begin{bmatrix}2&amp;-1\\-1&amp;1\end{bmatrix}\)</span>, con <span class="math inline">\(HH^{-1}=\begin{bmatrix}2-1&amp;-1+1\\2-2&amp;-1+2\end{bmatrix}=I_2\)</span>, y <span class="math inline">\(H^{-1}(5,8)^{\mathsf T}=(10-8,-5+8)^{\mathsf T}=(2,3)^{\mathsf T}\)</span>. La solución satisface <span class="math inline">\(2+3=5\)</span> y <span class="math inline">\(2+2(3)=8\)</span>.</p>
 <p><strong>Comprobación individual, b.</strong> Conviene conservar <span class="math inline">\(C^{-1}\)</span>: cada nueva muestra tiene la misma matriz de composición y se resuelve con un producto, sin repetir la eliminación.</p>
 </div>
 </div>
@@ -756,7 +772,7 @@ U=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix},\qquad
 L=\begin{bmatrix}2&amp;0\\3&amp;4\end{bmatrix}.
 \]</span></p>
 <ol type="a">
-<li><p>Indique el tamaño de <span class="math inline">\(UL\)</span> y qué representa cada columna.</p></li>
+<li><p>Indique el tamaño de <span class="math inline">\(UL\)</span> y qué representa cada columna, como en el <a href="../sesiones/2026-10-20-sesion-37.html#producto-de-dos-matrices">producto de matrices de la Sesión 37</a>.</p></li>
 <li><p>Calcule <span class="math inline">\(UL\)</span> e interprete su entrada <span class="math inline">\((1,2)\)</span>.</p></li>
 <li><p>Compruebe la masa total del pedido 2 usando la segunda columna de <span class="math inline">\(UL\)</span> y, por separado, las masas de las probetas que lo integran.</p></li>
 </ol></li>
@@ -766,8 +782,8 @@ E=\begin{bmatrix}0.20&amp;0.80\\0.60&amp;0.40\end{bmatrix}.
 \]</span></p>
 <p>Calcula correctamente <span class="math inline">\(E^{-1}=\begin{bmatrix}-1&amp;2\\1.5&amp;-0.5\end{bmatrix}\)</span> y obtiene <span class="math inline">\(E^{-1}(220,280)^{\mathsf T}=(340,190)^{\mathsf T}\)</span>. Como <span class="math inline">\(E(340,190)^{\mathsf T}=(220,280)^{\mathsf T}\)</span>, concluye que las masas son correctas.</p>
 <ol type="a">
-<li><p>Muestre con un balance de masa total que la propuesta no es admisible.</p></li>
-<li><p>Explique la relación entre <span class="math inline">\(E\)</span> y <span class="math inline">\(C\)</span>, y por qué la comprobación del estudiante no detectó el error.</p></li>
+<li><p>Muestre con un balance de masa total que la propuesta no puede ser correcta.</p></li>
+<li><p>Explique la relación entre <span class="math inline">\(E\)</span> y <span class="math inline">\(C\)</span>, recordando la <a href="../sesiones/2026-10-09-sesion-35.html#transpuesta">transpuesta</a>, y por qué la comprobación del estudiante no detectó el error.</p></li>
 <li><p>Obtenga las masas correctas de los dos lotes.</p></li>
 </ol></li>
 <li><p>Sea <span class="math inline">\(T=\begin{bmatrix}1&amp;2&amp;1\\1&amp;1&amp;1\\1&amp;1&amp;0\end{bmatrix}\)</span>.</p>
@@ -775,7 +791,7 @@ E=\begin{bmatrix}0.20&amp;0.80\\0.60&amp;0.40\end{bmatrix}.
 <li><p>Obtenga <span class="math inline">\(T^{-1}\)</span> mediante Gauss-Jordan y verifíquela con un producto.</p></li>
 <li><p>Use <span class="math inline">\(T^{-1}\)</span> para resolver <span class="math inline">\(T\mathbf{x}=(4,3,2)^{\mathsf T}\)</span> y <span class="math inline">\(T\mathbf{x}=(3,3,2)^{\mathsf T}\)</span>, y verifique una de las soluciones.</p></li>
 </ol></li>
-<li><p>Sea <span class="math inline">\(D=\begin{bmatrix}1&amp;2\\1&amp;3\end{bmatrix}\)</span>, con <span class="math inline">\(D^{-1}=\begin{bmatrix}3&amp;-2\\-1&amp;1\end{bmatrix}\)</span>.</p>
+<li><p>Sea <span class="math inline">\(D=\begin{bmatrix}1&amp;2\\1&amp;3\end{bmatrix}\)</span>, con <span class="math inline">\(D^{-1}=\begin{bmatrix}3&amp;-2\\-1&amp;1\end{bmatrix}\)</span>, obtenida en la <a href="../sesiones/2026-10-28-sesion-41.html#actividad">comprobación individual de la Sesión 41</a>.</p>
 <ol type="a">
 <li><p>Reduzca mediante Gauss-Jordan <span class="math inline">\([D\mid\mathbf{b}_1\ \mathbf{b}_2\ \mathbf{b}_3]\)</span>, con <span class="math inline">\(\mathbf{b}_1=(1,1)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf{b}_2=(2,3)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf{b}_3=(0,1)^{\mathsf T}\)</span>. Lea las soluciones de los tres sistemas.</p></li>
 <li><p>Compruebe las tres soluciones con <span class="math inline">\(D^{-1}\)</span>.</p></li>
@@ -814,11 +830,12 @@ E=\begin{bmatrix}0.20&amp;0.80\\0.60&amp;0.40\end{bmatrix}.
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>Si <span class="math inline">\(A\)</span> es cuadrada e invertible, Gauss-Jordan y el producto <span class="math inline">\(A^{-1}\mathbf{b}\)</span> dan la misma solución de <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>. Sin disponer de la inversa, reducir directamente la matriz aumentada evita trabajo para un solo sistema; conservar la inversa permite atender después nuevos términos independientes. Las soluciones se verifican en los datos originales y, en los problemas de masas, se comprueba además su admisibilidad.</p>
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
-<li>Resolver un sistema por Gauss-Jordan y mediante una inversa, obtener la misma solución y verificarla en las ecuaciones originales, como en el ejercicio 1 y la comprobación individual.</li>
-<li>Justificar la elección de método según se disponga de la inversa, se reciban nuevos términos independientes o la matriz carezca de inversa, como en los ejercicios 1 a 3 de la actividad.</li>
-<li>Recuperar masas a partir de una composición y distinguir una solución algebraica de una mezcla admisible, como en el ejercicio 2 de la actividad y el ejercicio 1 de práctica.</li>
+<li>Resolver un sistema por Gauss-Jordan y mediante una inversa, obtener la misma solución y verificarla en las ecuaciones originales, como en el ejercicio 1 y la comprobación individual de la <a href="#actividad">Actividad</a>.</li>
+<li>Justificar la elección de método según se disponga de la inversa, se reciban nuevos términos independientes o la matriz carezca de inversa, como en la <a href="#comparación-de-métodos-de-resolución">comparación de métodos</a> y los ejercicios 1 a 3 de la Actividad.</li>
+<li>Recuperar masas a partir de una composición y distinguir una solución algebraica de una mezcla admisible, como en el ejercicio 2 de la Actividad y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
