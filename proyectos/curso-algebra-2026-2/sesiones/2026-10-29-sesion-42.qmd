@@ -6,15 +6,15 @@ description: "Comparación de métodos, recuperación de masas a partir de una c
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá resolver un sistema $2\times2$ mediante Gauss-Jordan y mediante la inversa, verificar la solución y justificar la elección de método cuando cambian los términos independientes. Podrá comprobarlo al comparar las dos resoluciones de la actividad y recuperar las masas de dos lotes a partir de su composición, interpretando si son admisibles.
+Al finalizar la sesión podrá resolver un sistema $2\times2$ mediante Gauss-Jordan y mediante la inversa, verificar la solución, justificar la elección de método cuando cambian los términos independientes o la matriz no tiene inversa, y recuperar masas a partir de una composición, decidiendo si son admisibles. Compruebe estas capacidades en los ejercicios 1 a 3 y en la comprobación individual de la [Actividad](#actividad).
 
 ## Recordatorio
 
 Para resolver los ejercicios, recupere los procedimientos de las [sesiones 40](2026-10-27-sesion-40.qmd) y [41](2026-10-28-sesion-41.qmd):
 
-- Si $A$ es cuadrada e invertible, $A\mathbf{x}=\mathbf{b}$ tiene una única solución, $\mathbf{x}=A^{-1}\mathbf{b}$; la inversa multiplica por la izquierda.
-- Las operaciones elementales que llevan $[A\mid I_n]$ a $[I_n\mid A^{-1}]$ también reducen $[A\mid\mathbf{b}]$: se eligen según el bloque de coeficientes y se aplican al renglón completo.
-- Si el bloque de coeficientes escalonado de una matriz cuadrada tiene una columna sin pivote, no existe la inversa. Gauss-Jordan permite decidir si un sistema con esa matriz tiene solución.
+- Si $A$ es cuadrada e invertible, $A\mathbf{x}=\mathbf{b}$ tiene una única solución, $\mathbf{x}=A^{-1}\mathbf{b}$; la inversa multiplica por la izquierda ([resolución con la inversa](2026-10-27-sesion-40.qmd#resolver-un-sistema-con-la-inversa)).
+- Las operaciones elementales que llevan $[A\mid I_n]$ a $[I_n\mid A^{-1}]$ también reducen $[A\mid\mathbf{b}]$: se eligen según el bloque de coeficientes y se aplican al renglón completo ([procedimiento de inversión](2026-10-28-sesion-41.qmd#procedimiento-de-inversión-mediante-el-método-de-gauss-jordan)).
+- Si el bloque de coeficientes escalonado de una matriz cuadrada tiene una columna sin pivote, no existe la inversa ([criterio de invertibilidad](2026-10-28-sesion-41.qmd#criterio-de-invertibilidad-mediante-pivotes)). Gauss-Jordan permite decidir si un sistema con esa matriz tiene solución, mediante la [lectura de la matriz reducida](2026-10-06-sesion-32.qmd#lectura-del-tipo-de-solución).
 - La verificación se hace en las ecuaciones originales o mediante $A\mathbf{x}=\mathbf{b}$, conservando el orden de ecuaciones y variables. En un problema de masas, además se comprueban las unidades y la no negatividad.
 
 ### Comparación de métodos de resolución
@@ -28,10 +28,10 @@ Para resolver los ejercicios, recupere los procedimientos de las [sesiones 40](2
 
 ## Errores frecuentes
 
-- **Verificar con los datos en un orden incorrecto.** Si el sistema es $3x+y=5$, $5x+2y=9$, el término independiente es $(5,9)^{\mathsf T}$, no $(9,5)^{\mathsf T}$. Un producto que reproduce datos intercambiados comprueba otro sistema.
-- **Calcular la inversa para cada término independiente.** La inversa depende de $A$, no de $\mathbf{b}$. Si $A$ no cambia y ya se obtuvo $A^{-1}$, se reutiliza.
-- **Concluir que una masa negativa demuestra un error aritmético.** Primero se comprueba el resultado en el modelo. Una solución algebraica correcta con una masa negativa no es admisible como mezcla de esos lotes.
-- **Concluir que no hay solución porque no existe la inversa.** Si la matriz cuadrada es singular, el sistema puede tener infinitas soluciones o ninguna. La falta de inversa impide usar ese método; para decidir el tipo de solución, se examina la matriz aumentada.
+- **Verificar con los datos en un orden incorrecto.** Falso: para $3x+y=5$, $5x+2y=9$, se acepta $(13,-30)$ porque produce $(9,5)^{\mathsf T}$. Corrección: el término independiente es $(5,9)^{\mathsf T}$ y $3(13)-30=9\ne5$. Reproducir los datos intercambiados comprueba otro sistema.
+- **Calcular la inversa para cada término independiente.** Falso: aun disponiendo de $P^{-1}=\begin{bmatrix}3&-1\\-5&2\end{bmatrix}$, resolver $2x+y=1$, $5x+3y=0$ exige invertir otra vez su matriz $P$. Corrección: basta $P^{-1}(1,0)^{\mathsf T}=(3,-5)^{\mathsf T}$; $2(3)-5=1$ y $5(3)+3(-5)=0$. La inversa depende de $P$, no de $\mathbf{b}$ ([Ejemplo 1 de la Sesión 40](2026-10-27-sesion-40.qmd#ejemplo-1.-verificar-una-inversa-y-resolver-un-sistema)).
+- **Concluir que una masa negativa demuestra un error aritmético.** Falso: con lotes al $20\,\%$ y $60\,\%$ de cobre, obtener $(-25,225)$ g para una muestra de $200$ g con $130$ g de cobre implica un cálculo erróneo. Corrección: $-25+225=200$ y $0.20(-25)+0.60(225)=130$. El resultado satisface los balances, pero la masa negativa no es admisible ([Actividad 2 de la Sesión 40](2026-10-27-sesion-40.qmd#actividad)).
+- **Concluir que no hay solución porque no existe la inversa.** Falso: $S=\begin{bmatrix}1&1\\1&1\end{bmatrix}$ no tiene inversa, así que $x+y=2$, $x+y=2$ no tiene solución. Corrección: $(1,1)$ satisface ambas ecuaciones; $R_2\to R_2-R_1$ produce $0=0$. El sistema es consistente aunque $S$ sea singular ([Ejemplo 3 de la Sesión 41](2026-10-28-sesion-41.qmd#ejemplo-3.-una-matriz-sin-inversa)).
 
 ## Actividad
 
@@ -47,9 +47,9 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    d. Después se recibe el sistema $3x+y=1$, $5x+2y=1$. Elija un método aprovechando el trabajo anterior, resuelva y verifique. Justifique su elección.
 
-2. Dos lotes de polvo metálico, 1 y 2, contienen $20\,\%$ y $60\,\%$ de cobre en masa. Todo lo que no es cobre se registra como **resto**. Un laboratorio recibe muestras preparadas sin pérdidas con $x$ gramos del lote 1 y $y$ gramos del lote 2, con $x,y\ge0$. La masa de cada componente aportada por un lote es la masa tomada de ese lote multiplicada por su fracción del componente.
+2. Dos lotes de polvo metálico, 1 y 2, contienen $20\,\%$ y $60\,\%$ de cobre en masa, como en la [Actividad de la Sesión 36](2026-10-19-sesion-36.qmd#actividad). Todo lo que no es cobre se registra como **resto**. Un laboratorio recibe muestras preparadas sin pérdidas con $x$ gramos del lote 1 y $y$ gramos del lote 2, con $x,y\ge0$. La masa de cada componente aportada por un lote es la masa tomada de ese lote multiplicada por su fracción del componente.
 
-   a. Escriba la matriz de composición $C$, con renglones cobre y resto y columnas lotes 1 y 2. Explique qué representa cada componente de $C(x,y)^{\mathsf T}$.
+   a. Escriba la matriz de composición $C$, con renglones cobre y resto y columnas lotes 1 y 2. Explique qué representa cada componente de $C(x,y)^{\mathsf T}$ mediante la [lectura por columnas](2026-10-19-sesion-36.qmd#producto-de-una-matriz-por-un-vector).
 
    b. Se propone $W=\begin{bmatrix}-1&1.5\\2&-0.5\end{bmatrix}$. Verifique con un producto que $W=C^{-1}$.
 
@@ -61,13 +61,13 @@ Resuelva primero de manera individual y compare después sus respuestas con un c
 
    a. Aplique $R_2\to R_2-3R_1$ a $[G\mid I_2]$ y decida si $G$ tiene inversa.
 
-   b. La matriz $\left[\begin{array}{cc|cc}1&2&4&4\\3&6&12&10\end{array}\right]$ reúne los sistemas $G\mathbf{x}=(4,12)^{\mathsf T}$ y $G\mathbf{x}=(4,10)^{\mathsf T}$. Redúzcala con la misma operación y clasifique cada sistema. Para el consistente, describa las soluciones por componentes con un parámetro y verifíquelas en las ecuaciones originales.
+   b. La matriz $\left[\begin{array}{cc|cc}1&2&4&4\\3&6&12&10\end{array}\right]$ reúne los sistemas $G\mathbf{x}=(4,12)^{\mathsf T}$ y $G\mathbf{x}=(4,10)^{\mathsf T}$. Redúzcala con la misma operación y clasifique cada sistema. Para el consistente, describa las soluciones por componentes con un parámetro, como en la [Sesión 33](2026-10-07-sesion-33.qmd#descripción-paramétrica-del-conjunto-solución), y verifíquelas en las ecuaciones originales.
 
    c. Explique por qué Gauss-Jordan permite decidir ambos sistemas aunque no esté disponible $G^{-1}\mathbf{b}$.
 
 **Comprobación individual.** Sin consultar las soluciones ni comparar respuestas:
 
-a. Para resolver $x+y=5$, $x+2y=8$, se obtuvo $\left[\begin{array}{cc|c}1&1&5\\0&1&3\end{array}\right]$. Complete Gauss-Jordan y compruebe que coincide con $\mathbf{x}=H^{-1}(5,8)^{\mathsf T}$, donde $H^{-1}=\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$ y $H=\begin{bmatrix}1&1\\1&2\end{bmatrix}$. Verifique en las ecuaciones originales.
+a. Resuelva $x+y=5$, $x+2y=8$ por los dos métodos: Gauss-Jordan sobre $[H\mid\mathbf{b}]$ y $\mathbf{x}=H^{-1}\mathbf{b}$, con $H=\begin{bmatrix}1&1\\1&2\end{bmatrix}$ y $\mathbf{b}=(5,8)^{\mathsf T}$. Obtenga $H^{-1}$ aplicando a $[H\mid I_2]$ las mismas operaciones y verifique la solución en las ecuaciones originales.
 
 b. Un laboratorio recibirá diariamente nuevas muestras de los mismos dos lotes del ejercicio 2. ¿Qué procedimiento conviene conservar para recuperar sus masas? Justifique en una oración.
 
@@ -111,7 +111,14 @@ $$
 
 La comprobación es $3(1)-2=1$ y $5(1)+2(-2)=1$. No se repite la eliminación.
 
-**2. a.** $C=\begin{bmatrix}0.20&0.60\\0.80&0.40\end{bmatrix}$. La primera componente de $C(x,y)^{\mathsf T}$ es $0.20x+0.60y$, la masa de cobre en gramos; la segunda es $0.80x+0.40y$, la masa del resto. Cada columna suma $1$ porque registra toda la masa de su lote.
+**2. a.** $C=\begin{bmatrix}0.20&0.60\\0.80&0.40\end{bmatrix}$. Por columnas,
+
+$$
+C\begin{bmatrix}x\\y\end{bmatrix}
+=x\begin{bmatrix}0.20\\0.80\end{bmatrix}+y\begin{bmatrix}0.60\\0.40\end{bmatrix}.
+$$
+
+Cada masa multiplica la composición de su propio lote. La primera componente es $0.20x+0.60y$, la masa de cobre en gramos; la segunda es $0.80x+0.40y$, la masa del resto. Cada columna suma $1$ porque registra toda la masa de su lote.
 
 **2. b.**
 
@@ -163,7 +170,21 @@ Son infinitas soluciones: $(4-2t)+2t=4$ y $3(4-2t)+6t=12$ para todo $t$. El segu
 
 **3. c.** Las operaciones elementales conservan las soluciones de cada sistema sin exigir invertibilidad. Sus resultados distinguen infinitas soluciones de una contradicción; la falta de inversa por sí sola no permite esa distinción.
 
-**Comprobación individual, a.** Falta $R_1\to R_1-R_2$, que da $\left[\begin{array}{cc|c}1&0&2\\0&1&3\end{array}\right]$. También $H^{-1}(5,8)^{\mathsf T}=(10-8,-5+8)^{\mathsf T}=(2,3)^{\mathsf T}$. La solución es $(2,3)$ y satisface $2+3=5$ y $2+2(3)=8$.
+**Comprobación individual, a.** Con $R_2\to R_2-R_1$ y $R_1\to R_1-R_2$:
+
+$$
+\left[\begin{array}{cc|c}1&1&5\\1&2&8\end{array}\right]\to
+\left[\begin{array}{cc|c}1&1&5\\0&1&3\end{array}\right]\to
+\left[\begin{array}{cc|c}1&0&2\\0&1&3\end{array}\right],
+$$
+
+$$
+\left[\begin{array}{cc|cc}1&1&1&0\\1&2&0&1\end{array}\right]\to
+\left[\begin{array}{cc|cc}1&1&1&0\\0&1&-1&1\end{array}\right]\to
+\left[\begin{array}{cc|cc}1&0&2&-1\\0&1&-1&1\end{array}\right].
+$$
+
+Por el primer método, $(x,y)=(2,3)$. Por el segundo, $H^{-1}=\begin{bmatrix}2&-1\\-1&1\end{bmatrix}$, con $HH^{-1}=\begin{bmatrix}2-1&-1+1\\2-2&-1+2\end{bmatrix}=I_2$, y $H^{-1}(5,8)^{\mathsf T}=(10-8,-5+8)^{\mathsf T}=(2,3)^{\mathsf T}$. La solución satisface $2+3=5$ y $2+2(3)=8$.
 
 **Comprobación individual, b.** Conviene conservar $C^{-1}$: cada nueva muestra tiene la misma matriz de composición y se resuelve con un producto, sin repetir la eliminación.
 
@@ -192,7 +213,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
    L=\begin{bmatrix}2&0\\3&4\end{bmatrix}.
    $$
 
-   a. Indique el tamaño de $UL$ y qué representa cada columna.
+   a. Indique el tamaño de $UL$ y qué representa cada columna, como en el [producto de matrices de la Sesión 37](2026-10-20-sesion-37.qmd#producto-de-dos-matrices).
 
    b. Calcule $UL$ e interprete su entrada $(1,2)$.
 
@@ -206,9 +227,9 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
    Calcula correctamente $E^{-1}=\begin{bmatrix}-1&2\\1.5&-0.5\end{bmatrix}$ y obtiene $E^{-1}(220,280)^{\mathsf T}=(340,190)^{\mathsf T}$. Como $E(340,190)^{\mathsf T}=(220,280)^{\mathsf T}$, concluye que las masas son correctas.
 
-   a. Muestre con un balance de masa total que la propuesta no es admisible.
+   a. Muestre con un balance de masa total que la propuesta no puede ser correcta.
 
-   b. Explique la relación entre $E$ y $C$, y por qué la comprobación del estudiante no detectó el error.
+   b. Explique la relación entre $E$ y $C$, recordando la [transpuesta](2026-10-09-sesion-35.qmd#transpuesta), y por qué la comprobación del estudiante no detectó el error.
 
    c. Obtenga las masas correctas de los dos lotes.
 
@@ -218,7 +239,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
    b. Use $T^{-1}$ para resolver $T\mathbf{x}=(4,3,2)^{\mathsf T}$ y $T\mathbf{x}=(3,3,2)^{\mathsf T}$, y verifique una de las soluciones.
 
-5. Sea $D=\begin{bmatrix}1&2\\1&3\end{bmatrix}$, con $D^{-1}=\begin{bmatrix}3&-2\\-1&1\end{bmatrix}$.
+5. Sea $D=\begin{bmatrix}1&2\\1&3\end{bmatrix}$, con $D^{-1}=\begin{bmatrix}3&-2\\-1&1\end{bmatrix}$, obtenida en la [comprobación individual de la Sesión 41](2026-10-28-sesion-41.qmd#actividad).
 
    a. Reduzca mediante Gauss-Jordan $[D\mid\mathbf{b}_1\ \mathbf{b}_2\ \mathbf{b}_3]$, con $\mathbf{b}_1=(1,1)^{\mathsf T}$, $\mathbf{b}_2=(2,3)^{\mathsf T}$ y $\mathbf{b}_3=(0,1)^{\mathsf T}$. Lea las soluciones de los tres sistemas.
 
@@ -260,8 +281,10 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ## Conclusiones del aprendizaje
 
+Si $A$ es cuadrada e invertible, Gauss-Jordan y el producto $A^{-1}\mathbf{b}$ dan la misma solución de $A\mathbf{x}=\mathbf{b}$. Sin disponer de la inversa, reducir directamente la matriz aumentada evita trabajo para un solo sistema; conservar la inversa permite atender después nuevos términos independientes. Las soluciones se verifican en los datos originales y, en los problemas de masas, se comprueba además su admisibilidad.
+
 Al revisar su trabajo, compruebe si puede:
 
-- Resolver un sistema por Gauss-Jordan y mediante una inversa, obtener la misma solución y verificarla en las ecuaciones originales, como en el ejercicio 1 y la comprobación individual.
-- Justificar la elección de método según se disponga de la inversa, se reciban nuevos términos independientes o la matriz carezca de inversa, como en los ejercicios 1 a 3 de la actividad.
-- Recuperar masas a partir de una composición y distinguir una solución algebraica de una mezcla admisible, como en el ejercicio 2 de la actividad y el ejercicio 1 de práctica.
+- Resolver un sistema por Gauss-Jordan y mediante una inversa, obtener la misma solución y verificarla en las ecuaciones originales, como en el ejercicio 1 y la comprobación individual de la [Actividad](#actividad).
+- Justificar la elección de método según se disponga de la inversa, se reciban nuevos términos independientes o la matriz carezca de inversa, como en la [comparación de métodos](#comparación-de-métodos-de-resolución) y los ejercicios 1 a 3 de la Actividad.
+- Recuperar masas a partir de una composición y distinguir una solución algebraica de una mezcla admisible, como en el ejercicio 2 de la Actividad y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
