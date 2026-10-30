@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Determinante de una matriz 2×2, criterio de invertibilidad, fórmula de la inversa y recuperación de masas a partir de una composición.">
+
+<title>Sesión 43. Determinante e invertibilidad de una matriz 2×2 – Álgebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../unidades/05-conceptos-algebra-lineal.html" rel="next">
+<link href="../sesiones/2026-10-29-sesion-42.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-79ac0ee965a210c2d8af87b15635f9fa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 43. Determinante e invertibilidad de una matriz 2×2 – Álgebra">
+<meta property="og:description" content="Determinante de una matriz 2×2, criterio de invertibilidad, fórmula de la inversa y recuperación de masas a partir de una composición.">
+<meta property="og:site_name" content="Álgebra">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-30-sesion-43.html"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Álgebra</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/jfespinoza/jfespinoza.github.io/tree/main/proyectos/curso-algebra-2026-2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Álgebra 22017</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Información del curso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Forma de trabajo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/evaluacion-asistencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluación y asistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calendario del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/acceso-teams.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acceso temporal a Teams</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-11-sesion-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 02. Números reales: clasificación, orden e intervalos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-24-sesion-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-26-sesion-13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 13. Práctica integradora de números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-28-sesion-14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-10-sesion-22.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-15-sesion-25.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 25. Práctica integradora de polinomios y sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-18-sesion-26.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 26. Examen parcial 2: polinomios y sus raíces</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-08-sesion-34.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 34. Práctica de variables libres y ecuaciones paramétricas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unidad 4. Matrices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-09-sesion-35.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-19-sesion-36.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 36. Representación matricial de un sistema y sistemas homogéneos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-20-sesion-37.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-21-sesion-38.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 38. Práctica integradora para el Parcial 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-23-sesion-39.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 39. Examen parcial 3: sistemas lineales y matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-27-sesion-40.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 40. Matriz inversa: definición, verificación y uso en un sistema</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-28-sesion-41.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-29-sesion-42.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 42. Práctica de resolución de sistemas mediante inversa y Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-30-sesion-43.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/05-conceptos-algebra-lineal.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 6. Transformaciones lineales en el plano</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursos de consulta</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/notacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#determinante-de-una-matriz-22" id="toc-determinante-de-una-matriz-22" class="nav-link" data-scroll-target="#determinante-de-una-matriz-22">Determinante de una matriz 2×2</a></li>
+  <li><a href="#criterio-de-invertibilidad-mediante-el-determinante" id="toc-criterio-de-invertibilidad-mediante-el-determinante" class="nav-link" data-scroll-target="#criterio-de-invertibilidad-mediante-el-determinante">Criterio de invertibilidad mediante el determinante</a></li>
+  <li><a href="#fórmula-de-la-inversa-de-una-matriz-22" id="toc-fórmula-de-la-inversa-de-una-matriz-22" class="nav-link" data-scroll-target="#fórmula-de-la-inversa-de-una-matriz-22">Fórmula de la inversa de una matriz 2×2</a>
+  <ul class="collapse">
+  <li><a href="#justificación-del-procedimiento" id="toc-justificación-del-procedimiento" class="nav-link" data-scroll-target="#justificación-del-procedimiento">Justificación del procedimiento</a></li>
+  </ul></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-determinante-e-inversa-con-verificación" id="toc-ejemplo-1.-determinante-e-inversa-con-verificación" class="nav-link" data-scroll-target="#ejemplo-1.-determinante-e-inversa-con-verificación">Ejemplo 1. Determinante e inversa con verificación</a></li>
+  <li><a href="#ejemplo-2.-matriz-con-determinante-nulo" id="toc-ejemplo-2.-matriz-con-determinante-nulo" class="nav-link" data-scroll-target="#ejemplo-2.-matriz-con-determinante-nulo">Ejemplo 2. Matriz con determinante nulo</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-10-30-sesion-43.html"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">30 de octubre de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá calcular el determinante de una matriz <span class="math inline">\(2\times2\)</span>, decidir si tiene inversa y, cuando exista, obtenerla mediante una fórmula y verificarla por producto. Podrá aplicar este criterio a una matriz de composición para decidir si las masas de dos lotes se recuperan de manera única, como en la <a href="#actividad">Actividad</a>.</p>
+</section>
+<section id="determinante-de-una-matriz-22" class="level2">
+<h2 class="anchored" data-anchor-id="determinante-de-una-matriz-22">Determinante de una matriz 2×2</h2>
+<p>Sea <span class="math inline">\(A=\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix}\)</span> una matriz real de tamaño <span class="math inline">\(2\times2\)</span>. Su <strong>determinante</strong>, denotado por <span class="math inline">\(\det A\)</span>, es el número real</p>
+<p><span class="math display">\[
+\det A=ad-bc.
+\]</span></p>
+<p>Se resta del producto de las entradas de la diagonal principal el producto de las otras dos entradas. El orden de la resta forma parte de la definición. El determinante es un <strong>número</strong>, no una matriz, y solo se define para matrices cuadradas. La notación <span class="math inline">\(\lvert A\rvert\)</span>, usada también para el determinante, no significa valor absoluto.</p>
+<p>Para <span class="math inline">\(P=\begin{bmatrix}2&amp;1\\5&amp;3\end{bmatrix}\)</span>, cuya inversa se obtuvo en la <a href="../sesiones/2026-10-28-sesion-41.html#ejemplos">Sesión 41</a>, se tiene <span class="math inline">\(\det P=2(3)-1(5)=1\)</span>.</p>
+</section>
+<section id="criterio-de-invertibilidad-mediante-el-determinante" class="level2">
+<h2 class="anchored" data-anchor-id="criterio-de-invertibilidad-mediante-el-determinante">Criterio de invertibilidad mediante el determinante</h2>
+<p>Una matriz real <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(2\times2\)</span> es invertible <strong>si y solo si</strong> <span class="math inline">\(\det A\ne0\)</span>. Por tanto:</p>
+<ul>
+<li>Si <span class="math inline">\(\det A\ne0\)</span>, existe <span class="math inline">\(A^{-1}\)</span> y cada sistema <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> tiene una única solución.</li>
+<li>Si <span class="math inline">\(\det A=0\)</span>, no existe <span class="math inline">\(A^{-1}\)</span>. Para un término independiente dado, el sistema puede tener infinitas soluciones o ser inconsistente; el determinante nulo no distingue estos dos casos.</li>
+</ul>
+<p>Este criterio permite decidir la invertibilidad sin efectuar la reducción de <span class="math inline">\([A\mid I_2]\)</span>. Es consistente con el <a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio mediante pivotes</a>: una matriz cuadrada tiene inversa cuando su forma escalonada tiene un pivote en cada columna.</p>
+</section>
+<section id="fórmula-de-la-inversa-de-una-matriz-22" class="level2">
+<h2 class="anchored" data-anchor-id="fórmula-de-la-inversa-de-una-matriz-22">Fórmula de la inversa de una matriz 2×2</h2>
+<p>Si <span class="math inline">\(\det A\ne0\)</span>, entonces</p>
+<p><span class="math display">\[
+A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}.
+\]</span></p>
+<p><strong>Procedimiento.</strong></p>
+<ol type="1">
+<li>Calcule <span class="math inline">\(\det A=ad-bc\)</span>. Si es cero, concluya que no existe la inversa.</li>
+<li>Si no es cero, intercambie las entradas de la diagonal principal y cambie el signo de las otras dos.</li>
+<li>Multiplique <strong>las cuatro entradas</strong> por <span class="math inline">\(1/\det A\)</span>.</li>
+<li>Compruebe que el producto de <span class="math inline">\(A\)</span> por la matriz obtenida sea <span class="math inline">\(I_2\)</span>.</li>
+</ol>
+<section id="justificación-del-procedimiento" class="level3">
+<h3 class="anchored" data-anchor-id="justificación-del-procedimiento">Justificación del procedimiento</h3>
+<p>Sea <span class="math inline">\(M=\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}\)</span>. La regla renglón-columna da</p>
+<p><span class="math display">\[
+AM=\begin{bmatrix}ad-bc&amp;-ab+ba\\cd-dc&amp;-cb+da\end{bmatrix}
+=\begin{bmatrix}ad-bc&amp;0\\0&amp;ad-bc\end{bmatrix}
+=(\det A)I_2.
+\]</span></p>
+<p>Si <span class="math inline">\(\det A\ne0\)</span>, al multiplicar <span class="math inline">\(M\)</span> por <span class="math inline">\(1/\det A\)</span> se obtiene <span class="math inline">\(A\bigl((1/\det A)M\bigr)=I_2\)</span>. Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa.</p>
+<p>Si <span class="math inline">\(\det A=0\)</span> y <span class="math inline">\(A\)</span> no es la matriz cero, <span class="math inline">\(M\)</span> tiene alguna columna <span class="math inline">\(\mathbf{v}\ne\mathbf{0}\)</span>. Como <span class="math inline">\(AM=0\)</span>, esa columna satisface <span class="math inline">\(A\mathbf{v}=\mathbf{0}\)</span>. Si existiera <span class="math inline">\(A^{-1}\)</span>, se tendría <span class="math inline">\(\mathbf{v}=A^{-1}\mathbf{0}=\mathbf{0}\)</span>, una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.</p>
+</section>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-determinante-e-inversa-con-verificación" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-determinante-e-inversa-con-verificación">Ejemplo 1. Determinante e inversa con verificación</h3>
+<p>Sea <span class="math inline">\(A=\begin{bmatrix}4&amp;6\\1&amp;2\end{bmatrix}\)</span>. Se tiene</p>
+<p><span class="math display">\[
+\det A=4(2)-6(1)=2\ne0,
+\qquad
+A^{-1}=\frac12\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}
+=\begin{bmatrix}1&amp;-3\\-\frac12&amp;2\end{bmatrix}.
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+AA^{-1}=\begin{bmatrix}4-3&amp;-12+12\\1-1&amp;-3+4\end{bmatrix}=I_2.
+\]</span></p>
+<p>El factor <span class="math inline">\(1/2\)</span> afecta a cada entrada, incluidas las de la diagonal.</p>
+</section>
+<section id="ejemplo-2.-matriz-con-determinante-nulo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-matriz-con-determinante-nulo">Ejemplo 2. Matriz con determinante nulo</h3>
+<p>Para <span class="math inline">\(B=\begin{bmatrix}2&amp;-1\\-6&amp;3\end{bmatrix}\)</span>,</p>
+<p><span class="math display">\[
+\det B=2(3)-(-1)(-6)=6-6=0.
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(B\)</span> no tiene inversa. La segunda fila es <span class="math inline">\(-3\)</span> veces la primera; al eliminarla queda una columna sin pivote. Además, <span class="math inline">\(B(1,2)^{\mathsf T}=(0,0)^{\mathsf T}\)</span>: el sistema homogéneo tiene una solución no trivial, como en la <a href="../sesiones/2026-10-28-sesion-41.html#actividad">Actividad de la Sesión 41</a>.</p>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Invertir el orden de la resta.</strong> Para la matriz del Ejemplo 1, <span class="math inline">\(6(1)-4(2)=-2\)</span> no es su determinante: corresponde <span class="math inline">\(4(2)-6(1)=2\)</span>. Usar <span class="math inline">\(-2\)</span> en la fórmula produciría una matriz cuyo producto con <span class="math inline">\(A\)</span> es <span class="math inline">\(-I_2\)</span>.</li>
+<li><strong>Omitir el factor del determinante.</strong> La matriz <span class="math inline">\(\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}\)</span> no es <span class="math inline">\(A^{-1}\)</span>: su producto por <span class="math inline">\(A\)</span> es <span class="math inline">\(2I_2\)</span>. Falta multiplicar las cuatro entradas por <span class="math inline">\(1/2\)</span>.</li>
+<li><strong>Dividir entre cero.</strong> Si <span class="math inline">\(\det A=0\)</span>, la fórmula no se aplica y no existe la inversa. Esto no implica que todo sistema con esa matriz sea inconsistente: <span class="math inline">\(B\mathbf{x}=\mathbf{0}\)</span>, por ejemplo, siempre admite <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>.</li>
+<li><strong>Confundir determinante con valor absoluto.</strong> Una matriz puede tener determinante negativo y ser invertible: para <span class="math inline">\(\begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix}\)</span>, el determinante es <span class="math inline">\(-1\ne0\)</span>.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual, con registro escrito de su intento. Después compare sus respuestas con un compañero o compañera de grupo y justifique cada corrección.</p>
+<ol type="1">
+<li><p>Considere las matrices</p>
+<p><span class="math display">\[
+F=\begin{bmatrix}5&amp;4\\3&amp;2\end{bmatrix},
+\qquad G=\begin{bmatrix}6&amp;4\\9&amp;6\end{bmatrix}.
+\]</span></p>
+<ol type="a">
+<li><p>Calcule sus determinantes y decida cuáles tienen inversa.</p></li>
+<li><p>Obtenga la inversa de la matriz invertible mediante la fórmula y verifíquela por producto.</p></li>
+</ol></li>
+<li><p>Se mezclan sin pérdidas dos lotes de polvo formados únicamente por níquel y cobre. El lote 1 contiene <span class="math inline">\(30\,\%\)</span> de níquel en masa y el lote 2, <span class="math inline">\(70\,\%\)</span>; el resto es cobre. Si se toman <span class="math inline">\(x,y\ge0\)</span> gramos de los lotes 1 y 2, respectivamente, las masas de níquel y cobre, en ese orden, son las componentes de</p>
+<p><span class="math display">\[
+N\begin{bmatrix}x\\y\end{bmatrix},
+\qquad N=\begin{bmatrix}0.30&amp;0.70\\0.70&amp;0.30\end{bmatrix}.
+\]</span></p>
+<p>Cada masa aportada es la masa tomada del lote multiplicada por su fracción del componente.</p>
+<ol type="a">
+<li><p>Calcule <span class="math inline">\(\det N\)</span>, decida si las masas de los lotes pueden recuperarse de manera única y obtenga <span class="math inline">\(N^{-1}\)</span> mediante la fórmula. La admisibilidad exige además masas no negativas.</p></li>
+<li><p>Una muestra contiene <span class="math inline">\(260\)</span> g de níquel y <span class="math inline">\(240\)</span> g de cobre. Recupere las masas de los lotes con <span class="math inline">\(N^{-1}\)</span>, verifique mediante <span class="math inline">\(N\mathbf{x}\)</span> y compruebe su admisibilidad.</p></li>
+<li><p>Si ambos lotes contienen <span class="math inline">\(40\,\%\)</span> de níquel y <span class="math inline">\(60\,\%\)</span> de cobre, su matriz es <span class="math inline">\(D=\begin{bmatrix}0.40&amp;0.40\\0.60&amp;0.60\end{bmatrix}\)</span>. Calcule <span class="math inline">\(\det D\)</span> y compruebe que las cantidades <span class="math inline">\((100,400)\)</span> g y <span class="math inline">\((250,250)\)</span> g producen las mismas masas de ambos metales. Explique qué impide recuperar de manera única el reparto entre los lotes.</p></li>
+</ol></li>
+</ol>
+<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas, calcule el determinante de <span class="math inline">\(Q=\begin{bmatrix}3&amp;5\\1&amp;2\end{bmatrix}\)</span>, obtenga <span class="math inline">\(Q^{-1}\)</span> mediante la fórmula y verifíquela por producto. Decida también si <span class="math inline">\(R=\begin{bmatrix}2&amp;6\\1&amp;3\end{bmatrix}\)</span> tiene inversa y justifique con su determinante.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\(\det F=5(2)-4(3)=-2\ne0\)</span>: <span class="math inline">\(F\)</span> es invertible. En cambio, <span class="math inline">\(\det G=6(6)-4(9)=0\)</span>, de modo que <span class="math inline">\(G\)</span> no tiene inversa.</p>
+<p><strong>1. b.</strong></p>
+<p><span class="math display">\[
+F^{-1}=-\frac12\begin{bmatrix}2&amp;-4\\-3&amp;5\end{bmatrix}
+=\begin{bmatrix}-1&amp;2\\\frac32&amp;-\frac52\end{bmatrix},
+\qquad
+FF^{-1}=\begin{bmatrix}-5+6&amp;10-10\\-3+3&amp;6-5\end{bmatrix}=I_2.
+\]</span></p>
+<p><strong>2. a.</strong> <span class="math inline">\(\det N=0.30(0.30)-0.70(0.70)=-0.40\ne0\)</span>. Para cualquier par de masas de los metales hay una única solución algebraica; será admisible si sus dos componentes son no negativas. La fórmula da</p>
+<p><span class="math display">\[
+N^{-1}=-2.5\begin{bmatrix}0.30&amp;-0.70\\-0.70&amp;0.30\end{bmatrix}
+=\begin{bmatrix}-0.75&amp;1.75\\1.75&amp;-0.75\end{bmatrix}.
+\]</span></p>
+<p><strong>2. b.</strong></p>
+<p><span class="math display">\[
+\begin{bmatrix}x\\y\end{bmatrix}
+=N^{-1}\begin{bmatrix}260\\240\end{bmatrix}
+=\begin{bmatrix}-195+420\\455-180\end{bmatrix}
+=\begin{bmatrix}225\\275\end{bmatrix}.
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+N\begin{bmatrix}225\\275\end{bmatrix}
+=\begin{bmatrix}67.5+192.5\\157.5+82.5\end{bmatrix}
+=\begin{bmatrix}260\\240\end{bmatrix}.
+\]</span></p>
+<p>Se tomaron <span class="math inline">\(225\)</span> g del lote 1 y <span class="math inline">\(275\)</span> g del lote 2. Son masas no negativas y suman <span class="math inline">\(500\)</span> g, igual que las masas de níquel y cobre.</p>
+<p><strong>2. c.</strong> <span class="math inline">\(\det D=0.40(0.60)-0.40(0.60)=0\)</span>. En los dos casos, <span class="math inline">\(x+y=500\)</span>, y</p>
+<p><span class="math display">\[
+D\begin{bmatrix}100\\400\end{bmatrix}
+=\begin{bmatrix}40+160\\60+240\end{bmatrix}
+=\begin{bmatrix}200\\300\end{bmatrix},
+\qquad
+D\begin{bmatrix}250\\250\end{bmatrix}
+=\begin{bmatrix}100+100\\150+150\end{bmatrix}
+=\begin{bmatrix}200\\300\end{bmatrix}.
+\]</span></p>
+<p>Las columnas iguales hacen que las masas de los metales dependan solo de <span class="math inline">\(x+y\)</span>. Los datos no distinguen el reparto entre los lotes y no existe <span class="math inline">\(D^{-1}\)</span>.</p>
+<p><strong>Comprobación individual.</strong> <span class="math inline">\(\det Q=3(2)-5(1)=1\)</span> y</p>
+<p><span class="math display">\[
+Q^{-1}=\begin{bmatrix}2&amp;-5\\-1&amp;3\end{bmatrix},
+\qquad
+QQ^{-1}=\begin{bmatrix}6-5&amp;-15+15\\2-2&amp;-5+6\end{bmatrix}=I_2.
+\]</span></p>
+<p>Para <span class="math inline">\(R\)</span>, <span class="math inline">\(\det R=2(3)-6(1)=0\)</span>: no tiene inversa.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar los casos con parámetro y el uso de una misma inversa en varios sistemas, según lo necesite. Consulte las respuestas después de completar su intento.</p>
+<ol type="1">
+<li><p>Un laboratorio elige dos lotes de polvo metálico para preparar muestras de masa positiva, sin pérdidas. El lote 1 contiene <span class="math inline">\(20\,\%\)</span> de cobre en masa. La fracción de cobre del lote 2 es <span class="math inline">\(p\)</span>, con <span class="math inline">\(0\le p\le1\)</span>; todo lo que no es cobre se registra como resto. La matriz</p>
+<p><span class="math display">\[
+C(p)=\begin{bmatrix}0.20&amp;p\\0.80&amp;1-p\end{bmatrix}
+\]</span></p>
+<p>convierte las masas de los lotes, en gramos, en las masas de cobre y resto, en ese orden.</p>
+<ol type="a">
+<li><p>Exprese <span class="math inline">\(\det C(p)\)</span> en términos de <span class="math inline">\(p\)</span> y determine qué composiciones del lote 2 permiten recuperar de manera única las masas de los dos lotes, siempre que la muestra sea realizable con ellos.</p></li>
+<li><p>Para un lote 2 con <span class="math inline">\(60\,\%\)</span> de cobre, obtenga <span class="math inline">\(C(0.60)^{-1}\)</span> mediante la fórmula.</p></li>
+</ol></li>
+<li><p>Dos polvos cerámicos contienen <span class="math inline">\(50\,\%\)</span> y <span class="math inline">\(80\,\%\)</span> de alúmina (óxido de aluminio) en masa. Se desean preparar sin pérdidas <span class="math inline">\(600\)</span> g de mezcla con <span class="math inline">\(70\,\%\)</span> de alúmina, usando <span class="math inline">\(x,y\ge0\)</span> gramos de los polvos 1 y 2, respectivamente. Cada polvo aporta su masa multiplicada por su fracción de alúmina.</p>
+<ol type="a">
+<li><p>Plantee las ecuaciones de masa total y masa de alúmina y escriba la matriz aumentada.</p></li>
+<li><p>Resuelva mediante Gauss-Jordan, registrando las operaciones, y verifique las masas de mezcla y alúmina.</p></li>
+<li><p>Calcule el determinante de la matriz de coeficientes y explique por qué la solución es única.</p></li>
+</ol></li>
+<li><p>Para <span class="math inline">\(E=\begin{bmatrix}3&amp;4\\1&amp;2\end{bmatrix}\)</span>, un estudiante obtiene correctamente <span class="math inline">\(\det E=2\)</span> y propone como inversa <span class="math inline">\(V=\frac12\begin{bmatrix}2&amp;4\\1&amp;3\end{bmatrix}\)</span>.</p>
+<ol type="a">
+<li><p>Calcule <span class="math inline">\(EV\)</span> para comprobar la propuesta.</p></li>
+<li><p>Identifique el error y escriba la inversa correcta.</p></li>
+</ol></li>
+<li><p>Sea <span class="math inline">\(H=\begin{bmatrix}k&amp;4\\1&amp;k\end{bmatrix}\)</span>, con <span class="math inline">\(k\in\mathbb R\)</span>.</p>
+<ol type="a">
+<li><p>Determine para qué valores de <span class="math inline">\(k\)</span> tiene inversa <span class="math inline">\(H\)</span>.</p></li>
+<li><p>Para <span class="math inline">\(k=0\)</span>, obtenga <span class="math inline">\(H^{-1}\)</span> mediante la fórmula y verifíquela por producto.</p></li>
+</ol></li>
+<li><p>Sea <span class="math inline">\(A=\begin{bmatrix}5&amp;2\\7&amp;3\end{bmatrix}\)</span>.</p>
+<ol type="a">
+<li><p>Obtenga <span class="math inline">\(A^{-1}\)</span> mediante la fórmula y verifíquela por producto.</p></li>
+<li><p>Resuelva <span class="math inline">\(A\mathbf{x}=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(A\mathbf{x}=(0,1)^{\mathsf T}\)</span> con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla.</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\(\det C(p)=0.20-p\)</span>. La recuperación es única para <span class="math inline">\(p\in[0,1]\)</span> con <span class="math inline">\(p\ne0.20\)</span>; los lotes deben tener distinta fracción de cobre.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(\det C(0.60)=-0.40\)</span> y <span class="math inline">\(C(0.60)^{-1}=\begin{bmatrix}-1&amp;1.5\\2&amp;-0.5\end{bmatrix}\)</span>.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(x+y=600\)</span>, <span class="math inline">\(0.50x+0.80y=420\)</span>; <span class="math inline">\(\left[\begin{array}{cc|c}1&amp;1&amp;600\\0.50&amp;0.80&amp;420\end{array}\right]\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\((x,y)=(200,400)\)</span>: <span class="math inline">\(200\)</span> g del primer polvo y <span class="math inline">\(400\)</span> g del segundo; <span class="math inline">\(200+400=600\)</span> g y <span class="math inline">\(0.50(200)+0.80(400)=420\)</span> g de alúmina.</p>
+<p><strong>2. c.</strong> El determinante es <span class="math inline">\(0.30\ne0\)</span>: la matriz es invertible y el sistema tiene solución única.</p>
+<p><strong>3. a.</strong> <span class="math inline">\(EV=\begin{bmatrix}5&amp;12\\2&amp;5\end{bmatrix}\ne I_2\)</span>.</p>
+<p><strong>3. b.</strong> Faltan los cambios de signo de <span class="math inline">\(4\)</span> y <span class="math inline">\(1\)</span>; <span class="math inline">\(E^{-1}=\begin{bmatrix}1&amp;-2\\-\frac12&amp;\frac32\end{bmatrix}\)</span>.</p>
+<p><strong>4. a.</strong> <span class="math inline">\(\det H=k^2-4\)</span>; <span class="math inline">\(H\)</span> tiene inversa exactamente cuando <span class="math inline">\(k\ne2\)</span> y <span class="math inline">\(k\ne-2\)</span>.</p>
+<p><strong>4. b.</strong> <span class="math inline">\(H^{-1}=\begin{bmatrix}0&amp;1\\\frac14&amp;0\end{bmatrix}\)</span> y <span class="math inline">\(HH^{-1}=I_2\)</span>.</p>
+<p><strong>5. a.</strong> <span class="math inline">\(\det A=1\)</span>; <span class="math inline">\(A^{-1}=\begin{bmatrix}3&amp;-2\\-7&amp;5\end{bmatrix}\)</span> y <span class="math inline">\(AA^{-1}=I_2\)</span>.</p>
+<p><strong>5. b.</strong> Las soluciones son <span class="math inline">\((-1,3)\)</span> y <span class="math inline">\((-2,5)\)</span>, respectivamente; <span class="math inline">\(A(-1,3)^{\mathsf T}=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(A(-2,5)^{\mathsf T}=(0,1)^{\mathsf T}\)</span>. La inversa ya disponible evita repetir su obtención o reducir otra matriz aumentada.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El determinante <span class="math inline">\(\det A=ad-bc\)</span> permite decidir si una matriz <span class="math inline">\(2\times2\)</span> tiene inversa. Cuando es no nulo, la fórmula proporciona la inversa y el producto con la matriz original permite comprobarla. Un determinante nulo impide usar la inversa, pero no determina por sí solo la consistencia de cada sistema.</p>
+<p>Al revisar su trabajo, compruebe si puede:</p>
+<ul>
+<li>Obtener un determinante con el orden y los signos correctos, como en el ejercicio 1 de la <a href="#actividad">Actividad</a>.</li>
+<li>Decidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la comprobación individual.</li>
+<li>Distinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el ejercicio 2 de la Actividad.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jfespinoza\.github\.io\/curso-algebra-2026-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sesiones/2026-10-29-sesion-42.html" class="pagination-link" aria-label="Sesión 42. Práctica de resolución de sistemas mediante inversa y Gauss-Jordan">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 42. Práctica de resolución de sistemas mediante inversa y Gauss-Jordan</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../unidades/05-conceptos-algebra-lineal.html" class="pagination-link" aria-label="Unidad 5. Conceptos básicos de álgebra lineal">
+        <span class="nav-page-text"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Álgebra 22017 · Departamento de Matemáticas · Universidad de Sonora</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2026-2</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -3966,6 +3966,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-10-30-sesion-43.html",
+    "href": "sesiones/2026-10-30-sesion-43.html",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá calcular el determinante de una matriz \\(2\\times2\\), decidir si tiene inversa y, cuando exista, obtenerla mediante una fórmula y verificarla por producto. Podrá aplicar este criterio a una matriz de composición para decidir si las masas de dos lotes se recuperan de manera única, como en la Actividad.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#determinante-de-una-matriz-22",
+    "href": "sesiones/2026-10-30-sesion-43.html#determinante-de-una-matriz-22",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Determinante de una matriz 2×2",
+    "text": "Determinante de una matriz 2×2\nSea \\(A=\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\) una matriz real de tamaño \\(2\\times2\\). Su determinante, denotado por \\(\\det A\\), es el número real\n\\[\n\\det A=ad-bc.\n\\]\nSe resta del producto de las entradas de la diagonal principal el producto de las otras dos entradas. El orden de la resta forma parte de la definición. El determinante es un número, no una matriz, y solo se define para matrices cuadradas. La notación \\(\\lvert A\\rvert\\), usada también para el determinante, no significa valor absoluto.\nPara \\(P=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}\\), cuya inversa se obtuvo en la Sesión 41, se tiene \\(\\det P=2(3)-1(5)=1\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#criterio-de-invertibilidad-mediante-el-determinante",
+    "href": "sesiones/2026-10-30-sesion-43.html#criterio-de-invertibilidad-mediante-el-determinante",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Criterio de invertibilidad mediante el determinante",
+    "text": "Criterio de invertibilidad mediante el determinante\nUna matriz real \\(A\\) de tamaño \\(2\\times2\\) es invertible si y solo si \\(\\det A\\ne0\\). Por tanto:\n\nSi \\(\\det A\\ne0\\), existe \\(A^{-1}\\) y cada sistema \\(A\\mathbf{x}=\\mathbf{b}\\) tiene una única solución.\nSi \\(\\det A=0\\), no existe \\(A^{-1}\\). Para un término independiente dado, el sistema puede tener infinitas soluciones o ser inconsistente; el determinante nulo no distingue estos dos casos.\n\nEste criterio permite decidir la invertibilidad sin efectuar la reducción de \\([A\\mid I_2]\\). Es consistente con el criterio mediante pivotes: una matriz cuadrada tiene inversa cuando su forma escalonada tiene un pivote en cada columna.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22",
+    "href": "sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Fórmula de la inversa de una matriz 2×2",
+    "text": "Fórmula de la inversa de una matriz 2×2\nSi \\(\\det A\\ne0\\), entonces\n\\[\nA^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}.\n\\]\nProcedimiento.\n\nCalcule \\(\\det A=ad-bc\\). Si es cero, concluya que no existe la inversa.\nSi no es cero, intercambie las entradas de la diagonal principal y cambie el signo de las otras dos.\nMultiplique las cuatro entradas por \\(1/\\det A\\).\nCompruebe que el producto de \\(A\\) por la matriz obtenida sea \\(I_2\\).\n\n\nJustificación del procedimiento\nSea \\(M=\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}\\). La regla renglón-columna da\n\\[\nAM=\\begin{bmatrix}ad-bc&-ab+ba\\\\cd-dc&-cb+da\\end{bmatrix}\n=\\begin{bmatrix}ad-bc&0\\\\0&ad-bc\\end{bmatrix}\n=(\\det A)I_2.\n\\]\nSi \\(\\det A\\ne0\\), al multiplicar \\(M\\) por \\(1/\\det A\\) se obtiene \\(A\\bigl((1/\\det A)M\\bigr)=I_2\\). Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa.\nSi \\(\\det A=0\\) y \\(A\\) no es la matriz cero, \\(M\\) tiene alguna columna \\(\\mathbf{v}\\ne\\mathbf{0}\\). Como \\(AM=0\\), esa columna satisface \\(A\\mathbf{v}=\\mathbf{0}\\). Si existiera \\(A^{-1}\\), se tendría \\(\\mathbf{v}=A^{-1}\\mathbf{0}=\\mathbf{0}\\), una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#ejemplos",
+    "href": "sesiones/2026-10-30-sesion-43.html#ejemplos",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Determinante e inversa con verificación\nSea \\(A=\\begin{bmatrix}4&6\\\\1&2\\end{bmatrix}\\). Se tiene\n\\[\n\\det A=4(2)-6(1)=2\\ne0,\n\\qquad\nA^{-1}=\\frac12\\begin{bmatrix}2&-6\\\\-1&4\\end{bmatrix}\n=\\begin{bmatrix}1&-3\\\\-\\frac12&2\\end{bmatrix}.\n\\]\nLa verificación es\n\\[\nAA^{-1}=\\begin{bmatrix}4-3&-12+12\\\\1-1&-3+4\\end{bmatrix}=I_2.\n\\]\nEl factor \\(1/2\\) afecta a cada entrada, incluidas las de la diagonal.\n\n\nEjemplo 2. Matriz con determinante nulo\nPara \\(B=\\begin{bmatrix}2&-1\\\\-6&3\\end{bmatrix}\\),\n\\[\n\\det B=2(3)-(-1)(-6)=6-6=0.\n\\]\nPor tanto, \\(B\\) no tiene inversa. La segunda fila es \\(-3\\) veces la primera; al eliminarla queda una columna sin pivote. Además, \\(B(1,2)^{\\mathsf T}=(0,0)^{\\mathsf T}\\): el sistema homogéneo tiene una solución no trivial, como en la Actividad de la Sesión 41.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#errores-frecuentes",
+    "href": "sesiones/2026-10-30-sesion-43.html#errores-frecuentes",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nInvertir el orden de la resta. Para la matriz del Ejemplo 1, \\(6(1)-4(2)=-2\\) no es su determinante: corresponde \\(4(2)-6(1)=2\\). Usar \\(-2\\) en la fórmula produciría una matriz cuyo producto con \\(A\\) es \\(-I_2\\).\nOmitir el factor del determinante. La matriz \\(\\begin{bmatrix}2&-6\\\\-1&4\\end{bmatrix}\\) no es \\(A^{-1}\\): su producto por \\(A\\) es \\(2I_2\\). Falta multiplicar las cuatro entradas por \\(1/2\\).\nDividir entre cero. Si \\(\\det A=0\\), la fórmula no se aplica y no existe la inversa. Esto no implica que todo sistema con esa matriz sea inconsistente: \\(B\\mathbf{x}=\\mathbf{0}\\), por ejemplo, siempre admite \\(\\mathbf{x}=\\mathbf{0}\\).\nConfundir determinante con valor absoluto. Una matriz puede tener determinante negativo y ser invertible: para \\(\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}\\), el determinante es \\(-1\\ne0\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#actividad",
+    "href": "sesiones/2026-10-30-sesion-43.html#actividad",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual, con registro escrito de su intento. Después compare sus respuestas con un compañero o compañera de grupo y justifique cada corrección.\n\nConsidere las matrices\n\\[\nF=\\begin{bmatrix}5&4\\\\3&2\\end{bmatrix},\n\\qquad G=\\begin{bmatrix}6&4\\\\9&6\\end{bmatrix}.\n\\]\n\nCalcule sus determinantes y decida cuáles tienen inversa.\nObtenga la inversa de la matriz invertible mediante la fórmula y verifíquela por producto.\n\nSe mezclan sin pérdidas dos lotes de polvo formados únicamente por níquel y cobre. El lote 1 contiene \\(30\\,\\%\\) de níquel en masa y el lote 2, \\(70\\,\\%\\); el resto es cobre. Si se toman \\(x,y\\ge0\\) gramos de los lotes 1 y 2, respectivamente, las masas de níquel y cobre, en ese orden, son las componentes de\n\\[\nN\\begin{bmatrix}x\\\\y\\end{bmatrix},\n\\qquad N=\\begin{bmatrix}0.30&0.70\\\\0.70&0.30\\end{bmatrix}.\n\\]\nCada masa aportada es la masa tomada del lote multiplicada por su fracción del componente.\n\nCalcule \\(\\det N\\), decida si las masas de los lotes pueden recuperarse de manera única y obtenga \\(N^{-1}\\) mediante la fórmula. La admisibilidad exige además masas no negativas.\nUna muestra contiene \\(260\\) g de níquel y \\(240\\) g de cobre. Recupere las masas de los lotes con \\(N^{-1}\\), verifique mediante \\(N\\mathbf{x}\\) y compruebe su admisibilidad.\nSi ambos lotes contienen \\(40\\,\\%\\) de níquel y \\(60\\,\\%\\) de cobre, su matriz es \\(D=\\begin{bmatrix}0.40&0.40\\\\0.60&0.60\\end{bmatrix}\\). Calcule \\(\\det D\\) y compruebe que las cantidades \\((100,400)\\) g y \\((250,250)\\) g producen las mismas masas de ambos metales. Explique qué impide recuperar de manera única el reparto entre los lotes.\n\n\nComprobación individual. Sin consultar las soluciones ni comparar respuestas, calcule el determinante de \\(Q=\\begin{bmatrix}3&5\\\\1&2\\end{bmatrix}\\), obtenga \\(Q^{-1}\\) mediante la fórmula y verifíquela por producto. Decida también si \\(R=\\begin{bmatrix}2&6\\\\1&3\\end{bmatrix}\\) tiene inversa y justifique con su determinante.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. \\(\\det F=5(2)-4(3)=-2\\ne0\\): \\(F\\) es invertible. En cambio, \\(\\det G=6(6)-4(9)=0\\), de modo que \\(G\\) no tiene inversa.\n1. b.\n\\[\nF^{-1}=-\\frac12\\begin{bmatrix}2&-4\\\\-3&5\\end{bmatrix}\n=\\begin{bmatrix}-1&2\\\\\\frac32&-\\frac52\\end{bmatrix},\n\\qquad\nFF^{-1}=\\begin{bmatrix}-5+6&10-10\\\\-3+3&6-5\\end{bmatrix}=I_2.\n\\]\n2. a. \\(\\det N=0.30(0.30)-0.70(0.70)=-0.40\\ne0\\). Para cualquier par de masas de los metales hay una única solución algebraica; será admisible si sus dos componentes son no negativas. La fórmula da\n\\[\nN^{-1}=-2.5\\begin{bmatrix}0.30&-0.70\\\\-0.70&0.30\\end{bmatrix}\n=\\begin{bmatrix}-0.75&1.75\\\\1.75&-0.75\\end{bmatrix}.\n\\]\n2. b.\n\\[\n\\begin{bmatrix}x\\\\y\\end{bmatrix}\n=N^{-1}\\begin{bmatrix}260\\\\240\\end{bmatrix}\n=\\begin{bmatrix}-195+420\\\\455-180\\end{bmatrix}\n=\\begin{bmatrix}225\\\\275\\end{bmatrix}.\n\\]\nLa verificación es\n\\[\nN\\begin{bmatrix}225\\\\275\\end{bmatrix}\n=\\begin{bmatrix}67.5+192.5\\\\157.5+82.5\\end{bmatrix}\n=\\begin{bmatrix}260\\\\240\\end{bmatrix}.\n\\]\nSe tomaron \\(225\\) g del lote 1 y \\(275\\) g del lote 2. Son masas no negativas y suman \\(500\\) g, igual que las masas de níquel y cobre.\n2. c. \\(\\det D=0.40(0.60)-0.40(0.60)=0\\). En los dos casos, \\(x+y=500\\), y\n\\[\nD\\begin{bmatrix}100\\\\400\\end{bmatrix}\n=\\begin{bmatrix}40+160\\\\60+240\\end{bmatrix}\n=\\begin{bmatrix}200\\\\300\\end{bmatrix},\n\\qquad\nD\\begin{bmatrix}250\\\\250\\end{bmatrix}\n=\\begin{bmatrix}100+100\\\\150+150\\end{bmatrix}\n=\\begin{bmatrix}200\\\\300\\end{bmatrix}.\n\\]\nLas columnas iguales hacen que las masas de los metales dependan solo de \\(x+y\\). Los datos no distinguen el reparto entre los lotes y no existe \\(D^{-1}\\).\nComprobación individual. \\(\\det Q=3(2)-5(1)=1\\) y\n\\[\nQ^{-1}=\\begin{bmatrix}2&-5\\\\-1&3\\end{bmatrix},\n\\qquad\nQQ^{-1}=\\begin{bmatrix}6-5&-15+15\\\\2-2&-5+6\\end{bmatrix}=I_2.\n\\]\nPara \\(R\\), \\(\\det R=2(3)-6(1)=0\\): no tiene inversa.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-10-30-sesion-43.html#ejercicios-para-practicar",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar los casos con parámetro y el uso de una misma inversa en varios sistemas, según lo necesite. Consulte las respuestas después de completar su intento.\n\nUn laboratorio elige dos lotes de polvo metálico para preparar muestras de masa positiva, sin pérdidas. El lote 1 contiene \\(20\\,\\%\\) de cobre en masa. La fracción de cobre del lote 2 es \\(p\\), con \\(0\\le p\\le1\\); todo lo que no es cobre se registra como resto. La matriz\n\\[\nC(p)=\\begin{bmatrix}0.20&p\\\\0.80&1-p\\end{bmatrix}\n\\]\nconvierte las masas de los lotes, en gramos, en las masas de cobre y resto, en ese orden.\n\nExprese \\(\\det C(p)\\) en términos de \\(p\\) y determine qué composiciones del lote 2 permiten recuperar de manera única las masas de los dos lotes, siempre que la muestra sea realizable con ellos.\nPara un lote 2 con \\(60\\,\\%\\) de cobre, obtenga \\(C(0.60)^{-1}\\) mediante la fórmula.\n\nDos polvos cerámicos contienen \\(50\\,\\%\\) y \\(80\\,\\%\\) de alúmina (óxido de aluminio) en masa. Se desean preparar sin pérdidas \\(600\\) g de mezcla con \\(70\\,\\%\\) de alúmina, usando \\(x,y\\ge0\\) gramos de los polvos 1 y 2, respectivamente. Cada polvo aporta su masa multiplicada por su fracción de alúmina.\n\nPlantee las ecuaciones de masa total y masa de alúmina y escriba la matriz aumentada.\nResuelva mediante Gauss-Jordan, registrando las operaciones, y verifique las masas de mezcla y alúmina.\nCalcule el determinante de la matriz de coeficientes y explique por qué la solución es única.\n\nPara \\(E=\\begin{bmatrix}3&4\\\\1&2\\end{bmatrix}\\), un estudiante obtiene correctamente \\(\\det E=2\\) y propone como inversa \\(V=\\frac12\\begin{bmatrix}2&4\\\\1&3\\end{bmatrix}\\).\n\nCalcule \\(EV\\) para comprobar la propuesta.\nIdentifique el error y escriba la inversa correcta.\n\nSea \\(H=\\begin{bmatrix}k&4\\\\1&k\\end{bmatrix}\\), con \\(k\\in\\mathbb R\\).\n\nDetermine para qué valores de \\(k\\) tiene inversa \\(H\\).\nPara \\(k=0\\), obtenga \\(H^{-1}\\) mediante la fórmula y verifíquela por producto.\n\nSea \\(A=\\begin{bmatrix}5&2\\\\7&3\\end{bmatrix}\\).\n\nObtenga \\(A^{-1}\\) mediante la fórmula y verifíquela por producto.\nResuelva \\(A\\mathbf{x}=(1,2)^{\\mathsf T}\\) y \\(A\\mathbf{x}=(0,1)^{\\mathsf T}\\) con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla.\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a. \\(\\det C(p)=0.20-p\\). La recuperación es única para \\(p\\in[0,1]\\) con \\(p\\ne0.20\\); los lotes deben tener distinta fracción de cobre.\n1. b. \\(\\det C(0.60)=-0.40\\) y \\(C(0.60)^{-1}=\\begin{bmatrix}-1&1.5\\\\2&-0.5\\end{bmatrix}\\).\n2. a. \\(x+y=600\\), \\(0.50x+0.80y=420\\); \\(\\left[\\begin{array}{cc|c}1&1&600\\\\0.50&0.80&420\\end{array}\\right]\\).\n2. b. \\((x,y)=(200,400)\\): \\(200\\) g del primer polvo y \\(400\\) g del segundo; \\(200+400=600\\) g y \\(0.50(200)+0.80(400)=420\\) g de alúmina.\n2. c. El determinante es \\(0.30\\ne0\\): la matriz es invertible y el sistema tiene solución única.\n3. a. \\(EV=\\begin{bmatrix}5&12\\\\2&5\\end{bmatrix}\\ne I_2\\).\n3. b. Faltan los cambios de signo de \\(4\\) y \\(1\\); \\(E^{-1}=\\begin{bmatrix}1&-2\\\\-\\frac12&\\frac32\\end{bmatrix}\\).\n4. a. \\(\\det H=k^2-4\\); \\(H\\) tiene inversa exactamente cuando \\(k\\ne2\\) y \\(k\\ne-2\\).\n4. b. \\(H^{-1}=\\begin{bmatrix}0&1\\\\\\frac14&0\\end{bmatrix}\\) y \\(HH^{-1}=I_2\\).\n5. a. \\(\\det A=1\\); \\(A^{-1}=\\begin{bmatrix}3&-2\\\\-7&5\\end{bmatrix}\\) y \\(AA^{-1}=I_2\\).\n5. b. Las soluciones son \\((-1,3)\\) y \\((-2,5)\\), respectivamente; \\(A(-1,3)^{\\mathsf T}=(1,2)^{\\mathsf T}\\) y \\(A(-2,5)^{\\mathsf T}=(0,1)^{\\mathsf T}\\). La inversa ya disponible evita repetir su obtención o reducir otra matriz aumentada.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-10-30-sesion-43.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-10-30-sesion-43.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 43. Determinante e invertibilidad de una matriz 2×2",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nEl determinante \\(\\det A=ad-bc\\) permite decidir si una matriz \\(2\\times2\\) tiene inversa. Cuando es no nulo, la fórmula proporciona la inversa y el producto con la matriz original permite comprobarla. Un determinante nulo impide usar la inversa, pero no determina por sí solo la consistencia de cada sistema.\nAl revisar su trabajo, compruebe si puede:\n\nObtener un determinante con el orden y los signos correctos, como en el ejercicio 1 de la Actividad.\nDecidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la comprobación individual.\nDistinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el ejercicio 2 de la Actividad.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Sesión 43. Determinante e invertibilidad de una matriz 2×2</span>"
+    ]
+  },
+  {
     "objectID": "unidades/05-conceptos-algebra-lineal.html",
     "href": "unidades/05-conceptos-algebra-lineal.html",
     "title": "Unidad 5. Conceptos básicos de álgebra lineal",
@@ -3973,7 +4072,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3984,7 +4083,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>54</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -3995,7 +4094,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4006,7 +4105,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4017,7 +4116,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4028,7 +4127,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4039,7 +4138,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4050,7 +4149,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4061,7 +4160,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4072,7 +4171,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4083,7 +4182,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4094,7 +4193,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4105,7 +4204,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4116,7 +4215,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
