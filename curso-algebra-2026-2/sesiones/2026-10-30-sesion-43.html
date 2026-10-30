@@ -586,7 +586,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá calcular el determinante de una matriz <span class="math inline">\(2\times2\)</span>, decidir si tiene inversa y, cuando exista, obtenerla mediante una fórmula y verificarla por producto. Podrá aplicar este criterio a una matriz de composición para decidir si las masas de dos lotes se recuperan de manera única, como en la <a href="#actividad">Actividad</a>.</p>
+<p>Al finalizar la sesión podrá calcular el determinante de una matriz <span class="math inline">\(2\times2\)</span>, decidir su invertibilidad, obtener y verificar su inversa cuando exista y aplicar el criterio a la recuperación única de masas. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="determinante-de-una-matriz-22" class="level2">
 <h2 class="anchored" data-anchor-id="determinante-de-una-matriz-22">Determinante de una matriz 2×2</h2>
@@ -604,7 +604,12 @@ window.Quarto = {
 <li>Si <span class="math inline">\(\det A\ne0\)</span>, existe <span class="math inline">\(A^{-1}\)</span> y cada sistema <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> tiene una única solución.</li>
 <li>Si <span class="math inline">\(\det A=0\)</span>, no existe <span class="math inline">\(A^{-1}\)</span>. Para un término independiente dado, el sistema puede tener infinitas soluciones o ser inconsistente; el determinante nulo no distingue estos dos casos.</li>
 </ul>
-<p>Este criterio permite decidir la invertibilidad sin efectuar la reducción de <span class="math inline">\([A\mid I_2]\)</span>. Es consistente con el <a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio mediante pivotes</a>: una matriz cuadrada tiene inversa cuando su forma escalonada tiene un pivote en cada columna.</p>
+<p>Este criterio permite decidir la invertibilidad sin efectuar la reducción de <span class="math inline">\([A\mid I_2]\)</span>. Es consistente con el <a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio mediante pivotes</a>: una matriz cuadrada tiene inversa si y solo si su forma escalonada tiene un pivote en cada columna.</p>
+<p>Si una entrada depende de un parámetro, los valores para los que la matriz no tiene inversa son las soluciones de <span class="math inline">\(\det A=0\)</span>. Por ejemplo, para <span class="math inline">\(k\in\mathbb R\)</span>,</p>
+<p><span class="math display">\[
+\det\begin{bmatrix}k&amp;2\\3&amp;6\end{bmatrix}=6k-6.
+\]</span></p>
+<p>Como <span class="math inline">\(6k-6=0\)</span> equivale a <span class="math inline">\(k=1\)</span>, esta matriz es invertible exactamente cuando <span class="math inline">\(k\ne1\)</span>.</p>
 </section>
 <section id="fórmula-de-la-inversa-de-una-matriz-22" class="level2">
 <h2 class="anchored" data-anchor-id="fórmula-de-la-inversa-de-una-matriz-22">Fórmula de la inversa de una matriz 2×2</h2>
@@ -616,19 +621,19 @@ A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}.
 <ol type="1">
 <li>Calcule <span class="math inline">\(\det A=ad-bc\)</span>. Si es cero, concluya que no existe la inversa.</li>
 <li>Si no es cero, intercambie las entradas de la diagonal principal y cambie el signo de las otras dos.</li>
-<li>Multiplique <strong>las cuatro entradas</strong> por <span class="math inline">\(1/\det A\)</span>.</li>
+<li>Multiplique <strong>las cuatro entradas</strong> por <span class="math inline">\(1/\det A\)</span>, como en el <a href="../sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar">producto por un escalar</a>.</li>
 <li>Compruebe que el producto de <span class="math inline">\(A\)</span> por la matriz obtenida sea <span class="math inline">\(I_2\)</span>.</li>
 </ol>
 <section id="justificación-del-procedimiento" class="level3">
 <h3 class="anchored" data-anchor-id="justificación-del-procedimiento">Justificación del procedimiento</h3>
-<p>Sea <span class="math inline">\(M=\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}\)</span>. La regla renglón-columna da</p>
+<p>Sea <span class="math inline">\(M=\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}\)</span>. La <a href="../sesiones/2026-10-20-sesion-37.html#producto-de-dos-matrices">regla renglón-columna</a> da</p>
 <p><span class="math display">\[
 AM=\begin{bmatrix}ad-bc&amp;-ab+ba\\cd-dc&amp;-cb+da\end{bmatrix}
 =\begin{bmatrix}ad-bc&amp;0\\0&amp;ad-bc\end{bmatrix}
 =(\det A)I_2.
 \]</span></p>
-<p>Si <span class="math inline">\(\det A\ne0\)</span>, al multiplicar <span class="math inline">\(M\)</span> por <span class="math inline">\(1/\det A\)</span> se obtiene <span class="math inline">\(A\bigl((1/\det A)M\bigr)=I_2\)</span>. Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa.</p>
-<p>Si <span class="math inline">\(\det A=0\)</span> y <span class="math inline">\(A\)</span> no es la matriz cero, <span class="math inline">\(M\)</span> tiene alguna columna <span class="math inline">\(\mathbf{v}\ne\mathbf{0}\)</span>. Como <span class="math inline">\(AM=0\)</span>, esa columna satisface <span class="math inline">\(A\mathbf{v}=\mathbf{0}\)</span>. Si existiera <span class="math inline">\(A^{-1}\)</span>, se tendría <span class="math inline">\(\mathbf{v}=A^{-1}\mathbf{0}=\mathbf{0}\)</span>, una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.</p>
+<p>Si <span class="math inline">\(\det A\ne0\)</span>, al multiplicar <span class="math inline">\(M\)</span> por <span class="math inline">\(1/\det A\)</span> se obtiene <span class="math inline">\(A\bigl((1/\det A)M\bigr)=I_2\)</span>. Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa, conforme al <a href="../sesiones/2026-10-27-sesion-40.html#matriz-inversa">criterio de verificación de una inversa</a>.</p>
+<p>Si <span class="math inline">\(\det A=0\)</span> y <span class="math inline">\(A\)</span> no es la matriz cero, <span class="math inline">\(M\)</span> tiene alguna columna <span class="math inline">\(\mathbf{v}\ne\mathbf{0}\)</span>. Como <span class="math inline">\(AM=0\)</span>, esa columna satisface <span class="math inline">\(A\mathbf{v}=\mathbf{0}\)</span>: es una solución no trivial del <a href="../sesiones/2026-10-19-sesion-36.html#sistemas-homogéneos">sistema homogéneo</a>. Si existiera <span class="math inline">\(A^{-1}\)</span>, se tendría <span class="math inline">\(\mathbf{v}=A^{-1}\mathbf{0}=\mathbf{0}\)</span>, una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.</p>
 </section>
 </section>
 <section id="ejemplos" class="level2">
@@ -647,6 +652,7 @@ A^{-1}=\frac12\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}
 AA^{-1}=\begin{bmatrix}4-3&amp;-12+12\\1-1&amp;-3+4\end{bmatrix}=I_2.
 \]</span></p>
 <p>El factor <span class="math inline">\(1/2\)</span> afecta a cada entrada, incluidas las de la diagonal.</p>
+<p>Geométricamente, <span class="math inline">\(\lvert\det A\rvert=2\)</span> es el área del paralelogramo determinado por las columnas <span class="math inline">\((4,1)^{\mathsf T}\)</span> y <span class="math inline">\((6,2)^{\mathsf T}\)</span>, consideradas como vectores desde el origen.</p>
 </section>
 <section id="ejemplo-2.-matriz-con-determinante-nulo" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-matriz-con-determinante-nulo">Ejemplo 2. Matriz con determinante nulo</h3>
@@ -654,21 +660,21 @@ AA^{-1}=\begin{bmatrix}4-3&amp;-12+12\\1-1&amp;-3+4\end{bmatrix}=I_2.
 <p><span class="math display">\[
 \det B=2(3)-(-1)(-6)=6-6=0.
 \]</span></p>
-<p>Por tanto, <span class="math inline">\(B\)</span> no tiene inversa. La segunda fila es <span class="math inline">\(-3\)</span> veces la primera; al eliminarla queda una columna sin pivote. Además, <span class="math inline">\(B(1,2)^{\mathsf T}=(0,0)^{\mathsf T}\)</span>: el sistema homogéneo tiene una solución no trivial, como en la <a href="../sesiones/2026-10-28-sesion-41.html#actividad">Actividad de la Sesión 41</a>.</p>
+<p>Por tanto, <span class="math inline">\(B\)</span> no tiene inversa. El segundo renglón es <span class="math inline">\(-3\)</span> veces el primero: la operación <span class="math inline">\(R_2\to R_2+3R_1\)</span> produce un renglón nulo y la segunda columna queda sin pivote. En este caso, <span class="math inline">\(M=\begin{bmatrix}3&amp;1\\6&amp;2\end{bmatrix}\)</span> y su segunda columna satisface <span class="math inline">\(B(1,2)^{\mathsf T}=(2-2,\ -6+6)^{\mathsf T}=(0,0)^{\mathsf T}\)</span>: el sistema homogéneo tiene una solución no trivial, como en la <a href="../sesiones/2026-10-28-sesion-41.html#actividad">Actividad de la Sesión 41</a>.</p>
 </section>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Invertir el orden de la resta.</strong> Para la matriz del Ejemplo 1, <span class="math inline">\(6(1)-4(2)=-2\)</span> no es su determinante: corresponde <span class="math inline">\(4(2)-6(1)=2\)</span>. Usar <span class="math inline">\(-2\)</span> en la fórmula produciría una matriz cuyo producto con <span class="math inline">\(A\)</span> es <span class="math inline">\(-I_2\)</span>.</li>
-<li><strong>Omitir el factor del determinante.</strong> La matriz <span class="math inline">\(\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}\)</span> no es <span class="math inline">\(A^{-1}\)</span>: su producto por <span class="math inline">\(A\)</span> es <span class="math inline">\(2I_2\)</span>. Falta multiplicar las cuatro entradas por <span class="math inline">\(1/2\)</span>.</li>
-<li><strong>Dividir entre cero.</strong> Si <span class="math inline">\(\det A=0\)</span>, la fórmula no se aplica y no existe la inversa. Esto no implica que todo sistema con esa matriz sea inconsistente: <span class="math inline">\(B\mathbf{x}=\mathbf{0}\)</span>, por ejemplo, siempre admite <span class="math inline">\(\mathbf{x}=\mathbf{0}\)</span>.</li>
-<li><strong>Confundir determinante con valor absoluto.</strong> Una matriz puede tener determinante negativo y ser invertible: para <span class="math inline">\(\begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix}\)</span>, el determinante es <span class="math inline">\(-1\ne0\)</span>.</li>
+<li><strong>Invertir el orden de la resta.</strong> Falso: para la matriz <span class="math inline">\(A\)</span> del Ejemplo 1, <span class="math inline">\(\det A=6(1)-4(2)=-2\)</span>. Corrección: <span class="math inline">\(\det A=4(2)-6(1)=2\)</span>; con <span class="math inline">\(-2\)</span>, la fórmula produce una matriz cuyo producto con <span class="math inline">\(A\)</span> es <span class="math inline">\(-I_2\)</span>.</li>
+<li><strong>Omitir el factor <span class="math inline">\(1/\det A\)</span>.</strong> Falso: <span class="math inline">\(A^{-1}=\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}\)</span>. Corrección: <span class="math inline">\(A\begin{bmatrix}2&amp;-6\\-1&amp;4\end{bmatrix}=2I_2\ne I_2\)</span>; falta multiplicar las cuatro entradas por <span class="math inline">\(\frac12\)</span>.</li>
+<li><strong>Concluir inconsistencia a partir de un determinante nulo.</strong> Falso: como <span class="math inline">\(\det B=0\)</span>, el sistema <span class="math inline">\(B\mathbf{x}=(1,-3)^{\mathsf T}\)</span> no tiene solución. Corrección: <span class="math inline">\(B(1,1)^{\mathsf T}=(2-1,\ -6+3)^{\mathsf T}=(1,-3)^{\mathsf T}\)</span>. El determinante nulo indica que no existe <span class="math inline">\(B^{-1}\)</span>; la consistencia se decide con la reducción.</li>
+<li><strong>Suponer que un determinante negativo impide la inversa.</strong> Falso: <span class="math inline">\(J=\begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix}\)</span> no tiene inversa porque <span class="math inline">\(\det J=-1&lt;0\)</span>. Corrección: el criterio exige <span class="math inline">\(\det J\ne0\)</span>, no <span class="math inline">\(\det J&gt;0\)</span>; de hecho, <span class="math inline">\(JJ=I_2\)</span>. La notación <span class="math inline">\(\lvert A\rvert\)</span> no indica un valor absoluto.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual, con registro escrito de su intento. Después compare sus respuestas con un compañero o compañera de grupo y justifique cada corrección.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.</p>
 <ol type="1">
 <li><p>Considere las matrices</p>
 <p><span class="math display">\[
@@ -684,9 +690,9 @@ F=\begin{bmatrix}5&amp;4\\3&amp;2\end{bmatrix},
 N\begin{bmatrix}x\\y\end{bmatrix},
 \qquad N=\begin{bmatrix}0.30&amp;0.70\\0.70&amp;0.30\end{bmatrix}.
 \]</span></p>
-<p>Cada masa aportada es la masa tomada del lote multiplicada por su fracción del componente.</p>
+<p>Cada masa aportada es la masa tomada del lote multiplicada por su fracción del componente, como en la <a href="../sesiones/2026-10-29-sesion-42.html#actividad">Actividad de la Sesión 42</a>.</p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(\det N\)</span>, decida si las masas de los lotes pueden recuperarse de manera única y obtenga <span class="math inline">\(N^{-1}\)</span> mediante la fórmula. La admisibilidad exige además masas no negativas.</p></li>
+<li><p>Calcule <span class="math inline">\(\det N\)</span>, decida si las masas de los lotes pueden recuperarse de manera única, obtenga <span class="math inline">\(N^{-1}\)</span> mediante la fórmula y verifíquela por producto. La admisibilidad exige además masas no negativas.</p></li>
 <li><p>Una muestra contiene <span class="math inline">\(260\)</span> g de níquel y <span class="math inline">\(240\)</span> g de cobre. Recupere las masas de los lotes con <span class="math inline">\(N^{-1}\)</span>, verifique mediante <span class="math inline">\(N\mathbf{x}\)</span> y compruebe su admisibilidad.</p></li>
 <li><p>Si ambos lotes contienen <span class="math inline">\(40\,\%\)</span> de níquel y <span class="math inline">\(60\,\%\)</span> de cobre, su matriz es <span class="math inline">\(D=\begin{bmatrix}0.40&amp;0.40\\0.60&amp;0.60\end{bmatrix}\)</span>. Calcule <span class="math inline">\(\det D\)</span> y compruebe que las cantidades <span class="math inline">\((100,400)\)</span> g y <span class="math inline">\((250,250)\)</span> g producen las mismas masas de ambos metales. Explique qué impide recuperar de manera única el reparto entre los lotes.</p></li>
 </ol></li>
@@ -716,6 +722,10 @@ FF^{-1}=\begin{bmatrix}-5+6&amp;10-10\\-3+3&amp;6-5\end{bmatrix}=I_2.
 <p><span class="math display">\[
 N^{-1}=-2.5\begin{bmatrix}0.30&amp;-0.70\\-0.70&amp;0.30\end{bmatrix}
 =\begin{bmatrix}-0.75&amp;1.75\\1.75&amp;-0.75\end{bmatrix}.
+\]</span></p>
+<p>La verificación es</p>
+<p><span class="math display">\[
+NN^{-1}=\begin{bmatrix}-0.225+1.225&amp;0.525-0.525\\-0.525+0.525&amp;1.225-0.225\end{bmatrix}=I_2.
 \]</span></p>
 <p><strong>2. b.</strong></p>
 <p><span class="math display">\[
@@ -769,7 +779,7 @@ C(p)=\begin{bmatrix}0.20&amp;p\\0.80&amp;1-p\end{bmatrix}
 <li><p>Dos polvos cerámicos contienen <span class="math inline">\(50\,\%\)</span> y <span class="math inline">\(80\,\%\)</span> de alúmina (óxido de aluminio) en masa. Se desean preparar sin pérdidas <span class="math inline">\(600\)</span> g de mezcla con <span class="math inline">\(70\,\%\)</span> de alúmina, usando <span class="math inline">\(x,y\ge0\)</span> gramos de los polvos 1 y 2, respectivamente. Cada polvo aporta su masa multiplicada por su fracción de alúmina.</p>
 <ol type="a">
 <li><p>Plantee las ecuaciones de masa total y masa de alúmina y escriba la matriz aumentada.</p></li>
-<li><p>Resuelva mediante Gauss-Jordan, registrando las operaciones, y verifique las masas de mezcla y alúmina.</p></li>
+<li><p>Resuelva mediante el <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">método de Gauss-Jordan</a>, registrando las operaciones, y verifique las masas de mezcla y alúmina.</p></li>
 <li><p>Calcule el determinante de la matriz de coeficientes y explique por qué la solución es única.</p></li>
 </ol></li>
 <li><p>Para <span class="math inline">\(E=\begin{bmatrix}3&amp;4\\1&amp;2\end{bmatrix}\)</span>, un estudiante obtiene correctamente <span class="math inline">\(\det E=2\)</span> y propone como inversa <span class="math inline">\(V=\frac12\begin{bmatrix}2&amp;4\\1&amp;3\end{bmatrix}\)</span>.</p>
@@ -785,7 +795,7 @@ C(p)=\begin{bmatrix}0.20&amp;p\\0.80&amp;1-p\end{bmatrix}
 <li><p>Sea <span class="math inline">\(A=\begin{bmatrix}5&amp;2\\7&amp;3\end{bmatrix}\)</span>.</p>
 <ol type="a">
 <li><p>Obtenga <span class="math inline">\(A^{-1}\)</span> mediante la fórmula y verifíquela por producto.</p></li>
-<li><p>Resuelva <span class="math inline">\(A\mathbf{x}=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(A\mathbf{x}=(0,1)^{\mathsf T}\)</span> con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla.</p></li>
+<li><p>Resuelva <span class="math inline">\(A\mathbf{x}=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(A\mathbf{x}=(0,1)^{\mathsf T}\)</span> con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla, como en la <a href="../sesiones/2026-10-29-sesion-42.html#comparación-de-métodos-de-resolución">comparación de métodos de la Sesión 42</a>.</p></li>
 </ol></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
@@ -821,8 +831,8 @@ C(p)=\begin{bmatrix}0.20&amp;p\\0.80&amp;1-p\end{bmatrix}
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
 <li>Obtener un determinante con el orden y los signos correctos, como en el ejercicio 1 de la <a href="#actividad">Actividad</a>.</li>
-<li>Decidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la comprobación individual.</li>
-<li>Distinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el ejercicio 2 de la Actividad.</li>
+<li>Decidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la <a href="#actividad">comprobación individual</a>.</li>
+<li>Distinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el <a href="#actividad">ejercicio 2 de la Actividad</a>.</li>
 </ul>
 
 
