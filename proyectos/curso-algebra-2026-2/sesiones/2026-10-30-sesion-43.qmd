@@ -6,7 +6,7 @@ description: "Determinante de una matriz 2×2, criterio de invertibilidad, fórm
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá calcular el determinante de una matriz $2\times2$, decidir si tiene inversa y, cuando exista, obtenerla mediante una fórmula y verificarla por producto. Podrá aplicar este criterio a una matriz de composición para decidir si las masas de dos lotes se recuperan de manera única, como en la [Actividad](#actividad).
+Al finalizar la sesión podrá calcular el determinante de una matriz $2\times2$, decidir su invertibilidad, obtener y verificar su inversa cuando exista y aplicar el criterio a la recuperación única de masas. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1 y 2 y la comprobación individual de la [Actividad](#actividad).
 
 ## Determinante de una matriz 2×2
 
@@ -27,7 +27,15 @@ Una matriz real $A$ de tamaño $2\times2$ es invertible **si y solo si** $\det A
 - Si $\det A\ne0$, existe $A^{-1}$ y cada sistema $A\mathbf{x}=\mathbf{b}$ tiene una única solución.
 - Si $\det A=0$, no existe $A^{-1}$. Para un término independiente dado, el sistema puede tener infinitas soluciones o ser inconsistente; el determinante nulo no distingue estos dos casos.
 
-Este criterio permite decidir la invertibilidad sin efectuar la reducción de $[A\mid I_2]$. Es consistente con el [criterio mediante pivotes](2026-10-28-sesion-41.qmd#criterio-de-invertibilidad-mediante-pivotes): una matriz cuadrada tiene inversa cuando su forma escalonada tiene un pivote en cada columna.
+Este criterio permite decidir la invertibilidad sin efectuar la reducción de $[A\mid I_2]$. Es consistente con el [criterio mediante pivotes](2026-10-28-sesion-41.qmd#criterio-de-invertibilidad-mediante-pivotes): una matriz cuadrada tiene inversa si y solo si su forma escalonada tiene un pivote en cada columna.
+
+Si una entrada depende de un parámetro, los valores para los que la matriz no tiene inversa son las soluciones de $\det A=0$. Por ejemplo, para $k\in\mathbb R$,
+
+$$
+\det\begin{bmatrix}k&2\\3&6\end{bmatrix}=6k-6.
+$$
+
+Como $6k-6=0$ equivale a $k=1$, esta matriz es invertible exactamente cuando $k\ne1$.
 
 ## Fórmula de la inversa de una matriz 2×2
 
@@ -41,12 +49,12 @@ $$
 
 1. Calcule $\det A=ad-bc$. Si es cero, concluya que no existe la inversa.
 2. Si no es cero, intercambie las entradas de la diagonal principal y cambie el signo de las otras dos.
-3. Multiplique **las cuatro entradas** por $1/\det A$.
+3. Multiplique **las cuatro entradas** por $1/\det A$, como en el [producto por un escalar](2026-10-09-sesion-35.qmd#suma-resta-y-producto-por-un-escalar).
 4. Compruebe que el producto de $A$ por la matriz obtenida sea $I_2$.
 
 ### Justificación del procedimiento
 
-Sea $M=\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$. La regla renglón-columna da
+Sea $M=\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$. La [regla renglón-columna](2026-10-20-sesion-37.qmd#producto-de-dos-matrices) da
 
 $$
 AM=\begin{bmatrix}ad-bc&-ab+ba\\cd-dc&-cb+da\end{bmatrix}
@@ -54,9 +62,9 @@ AM=\begin{bmatrix}ad-bc&-ab+ba\\cd-dc&-cb+da\end{bmatrix}
 =(\det A)I_2.
 $$
 
-Si $\det A\ne0$, al multiplicar $M$ por $1/\det A$ se obtiene $A\bigl((1/\det A)M\bigr)=I_2$. Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa.
+Si $\det A\ne0$, al multiplicar $M$ por $1/\det A$ se obtiene $A\bigl((1/\det A)M\bigr)=I_2$. Las matrices son cuadradas del mismo tamaño, de modo que este producto verifica la fórmula de la inversa, conforme al [criterio de verificación de una inversa](2026-10-27-sesion-40.qmd#matriz-inversa).
 
-Si $\det A=0$ y $A$ no es la matriz cero, $M$ tiene alguna columna $\mathbf{v}\ne\mathbf{0}$. Como $AM=0$, esa columna satisface $A\mathbf{v}=\mathbf{0}$. Si existiera $A^{-1}$, se tendría $\mathbf{v}=A^{-1}\mathbf{0}=\mathbf{0}$, una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.
+Si $\det A=0$ y $A$ no es la matriz cero, $M$ tiene alguna columna $\mathbf{v}\ne\mathbf{0}$. Como $AM=0$, esa columna satisface $A\mathbf{v}=\mathbf{0}$: es una solución no trivial del [sistema homogéneo](2026-10-19-sesion-36.qmd#sistemas-homogéneos). Si existiera $A^{-1}$, se tendría $\mathbf{v}=A^{-1}\mathbf{0}=\mathbf{0}$, una contradicción. La matriz cero tampoco tiene inversa: su producto por cualquier matriz es cero. Así se justifica también la falta de inversa cuando el determinante es nulo.
 
 ## Ejemplos
 
@@ -79,6 +87,8 @@ $$
 
 El factor $1/2$ afecta a cada entrada, incluidas las de la diagonal.
 
+Geométricamente, $\lvert\det A\rvert=2$ es el área del paralelogramo determinado por las columnas $(4,1)^{\mathsf T}$ y $(6,2)^{\mathsf T}$, consideradas como vectores desde el origen.
+
 ### Ejemplo 2. Matriz con determinante nulo
 
 Para $B=\begin{bmatrix}2&-1\\-6&3\end{bmatrix}$,
@@ -87,18 +97,18 @@ $$
 \det B=2(3)-(-1)(-6)=6-6=0.
 $$
 
-Por tanto, $B$ no tiene inversa. La segunda fila es $-3$ veces la primera; al eliminarla queda una columna sin pivote. Además, $B(1,2)^{\mathsf T}=(0,0)^{\mathsf T}$: el sistema homogéneo tiene una solución no trivial, como en la [Actividad de la Sesión 41](2026-10-28-sesion-41.qmd#actividad).
+Por tanto, $B$ no tiene inversa. El segundo renglón es $-3$ veces el primero: la operación $R_2\to R_2+3R_1$ produce un renglón nulo y la segunda columna queda sin pivote. En este caso, $M=\begin{bmatrix}3&1\\6&2\end{bmatrix}$ y su segunda columna satisface $B(1,2)^{\mathsf T}=(2-2,\ -6+6)^{\mathsf T}=(0,0)^{\mathsf T}$: el sistema homogéneo tiene una solución no trivial, como en la [Actividad de la Sesión 41](2026-10-28-sesion-41.qmd#actividad).
 
 ## Errores frecuentes
 
-- **Invertir el orden de la resta.** Para la matriz del Ejemplo 1, $6(1)-4(2)=-2$ no es su determinante: corresponde $4(2)-6(1)=2$. Usar $-2$ en la fórmula produciría una matriz cuyo producto con $A$ es $-I_2$.
-- **Omitir el factor del determinante.** La matriz $\begin{bmatrix}2&-6\\-1&4\end{bmatrix}$ no es $A^{-1}$: su producto por $A$ es $2I_2$. Falta multiplicar las cuatro entradas por $1/2$.
-- **Dividir entre cero.** Si $\det A=0$, la fórmula no se aplica y no existe la inversa. Esto no implica que todo sistema con esa matriz sea inconsistente: $B\mathbf{x}=\mathbf{0}$, por ejemplo, siempre admite $\mathbf{x}=\mathbf{0}$.
-- **Confundir determinante con valor absoluto.** Una matriz puede tener determinante negativo y ser invertible: para $\begin{bmatrix}0&1\\1&0\end{bmatrix}$, el determinante es $-1\ne0$.
+- **Invertir el orden de la resta.** Falso: para la matriz $A$ del Ejemplo 1, $\det A=6(1)-4(2)=-2$. Corrección: $\det A=4(2)-6(1)=2$; con $-2$, la fórmula produce una matriz cuyo producto con $A$ es $-I_2$.
+- **Omitir el factor $1/\det A$.** Falso: $A^{-1}=\begin{bmatrix}2&-6\\-1&4\end{bmatrix}$. Corrección: $A\begin{bmatrix}2&-6\\-1&4\end{bmatrix}=2I_2\ne I_2$; falta multiplicar las cuatro entradas por $\frac12$.
+- **Concluir inconsistencia a partir de un determinante nulo.** Falso: como $\det B=0$, el sistema $B\mathbf{x}=(1,-3)^{\mathsf T}$ no tiene solución. Corrección: $B(1,1)^{\mathsf T}=(2-1,\ -6+3)^{\mathsf T}=(1,-3)^{\mathsf T}$. El determinante nulo indica que no existe $B^{-1}$; la consistencia se decide con la reducción.
+- **Suponer que un determinante negativo impide la inversa.** Falso: $J=\begin{bmatrix}0&1\\1&0\end{bmatrix}$ no tiene inversa porque $\det J=-1<0$. Corrección: el criterio exige $\det J\ne0$, no $\det J>0$; de hecho, $JJ=I_2$. La notación $\lvert A\rvert$ no indica un valor absoluto.
 
 ## Actividad
 
-Resuelva primero de manera individual, con registro escrito de su intento. Después compare sus respuestas con un compañero o compañera de grupo y justifique cada corrección.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. En cada ejercicio, registre por escrito su intento antes de comparar y justifique cada corrección.
 
 1. Considere las matrices
 
@@ -118,9 +128,9 @@ Resuelva primero de manera individual, con registro escrito de su intento. Despu
    \qquad N=\begin{bmatrix}0.30&0.70\\0.70&0.30\end{bmatrix}.
    $$
 
-   Cada masa aportada es la masa tomada del lote multiplicada por su fracción del componente.
+   Cada masa aportada es la masa tomada del lote multiplicada por su fracción del componente, como en la [Actividad de la Sesión 42](2026-10-29-sesion-42.qmd#actividad).
 
-   a. Calcule $\det N$, decida si las masas de los lotes pueden recuperarse de manera única y obtenga $N^{-1}$ mediante la fórmula. La admisibilidad exige además masas no negativas.
+   a. Calcule $\det N$, decida si las masas de los lotes pueden recuperarse de manera única, obtenga $N^{-1}$ mediante la fórmula y verifíquela por producto. La admisibilidad exige además masas no negativas.
 
    b. Una muestra contiene $260$ g de níquel y $240$ g de cobre. Recupere las masas de los lotes con $N^{-1}$, verifique mediante $N\mathbf{x}$ y compruebe su admisibilidad.
 
@@ -146,6 +156,12 @@ $$
 $$
 N^{-1}=-2.5\begin{bmatrix}0.30&-0.70\\-0.70&0.30\end{bmatrix}
 =\begin{bmatrix}-0.75&1.75\\1.75&-0.75\end{bmatrix}.
+$$
+
+La verificación es
+
+$$
+NN^{-1}=\begin{bmatrix}-0.225+1.225&0.525-0.525\\-0.525+0.525&1.225-0.225\end{bmatrix}=I_2.
 $$
 
 **2. b.**
@@ -213,7 +229,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
    a. Plantee las ecuaciones de masa total y masa de alúmina y escriba la matriz aumentada.
 
-   b. Resuelva mediante Gauss-Jordan, registrando las operaciones, y verifique las masas de mezcla y alúmina.
+   b. Resuelva mediante el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan), registrando las operaciones, y verifique las masas de mezcla y alúmina.
 
    c. Calcule el determinante de la matriz de coeficientes y explique por qué la solución es única.
 
@@ -233,7 +249,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
    a. Obtenga $A^{-1}$ mediante la fórmula y verifíquela por producto.
 
-   b. Resuelva $A\mathbf{x}=(1,2)^{\mathsf T}$ y $A\mathbf{x}=(0,1)^{\mathsf T}$ con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla.
+   b. Resuelva $A\mathbf{x}=(1,2)^{\mathsf T}$ y $A\mathbf{x}=(0,1)^{\mathsf T}$ con esa inversa y verifique las soluciones. Explique qué trabajo se evita al reutilizarla, como en la [comparación de métodos de la Sesión 42](2026-10-29-sesion-42.qmd#comparación-de-métodos-de-resolución).
 
 ::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
 
@@ -268,5 +284,5 @@ El determinante $\det A=ad-bc$ permite decidir si una matriz $2\times2$ tiene in
 Al revisar su trabajo, compruebe si puede:
 
 - Obtener un determinante con el orden y los signos correctos, como en el ejercicio 1 de la [Actividad](#actividad).
-- Decidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la comprobación individual.
-- Distinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el ejercicio 2 de la Actividad.
+- Decidir la invertibilidad, obtener la inversa cuando exista y verificarla, como en la [comprobación individual](#actividad).
+- Distinguir la recuperación única de masas de su admisibilidad física, y explicar la falta de unicidad cuando los lotes tienen la misma composición, como en el [ejercicio 2 de la Actividad](#actividad).
