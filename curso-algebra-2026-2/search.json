@@ -4065,6 +4065,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-11-04-sesion-44.html",
+    "href": "sesiones/2026-11-04-sesion-44.html",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá calcular el determinante de una matriz \\(3\\times3\\) por cofactores, justificar la elección de un renglón o una columna y decidir si la matriz tiene inversa. También podrá aplicar tres propiedades elementales de los determinantes.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#menores-y-cofactores",
+    "href": "sesiones/2026-11-04-sesion-44.html#menores-y-cofactores",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Menores y cofactores",
+    "text": "Menores y cofactores\nEn la Sesión 43 se definió el determinante de una matriz \\(2\\times2\\):\n\\[\n\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc.\n\\]\nSea \\(A\\) una matriz real de tamaño \\(3\\times3\\), cuyas entradas se denotan por \\(a_{ij}\\); el primer índice identifica el renglón y el segundo, la columna.\n\nEl menor \\(M_{ij}\\) es el determinante de la matriz \\(2\\times2\\) que queda al suprimir el renglón \\(i\\) y la columna \\(j\\) de \\(A\\).\nEl cofactor de \\(a_{ij}\\) es \\(C_{ij}=(-1)^{i+j}M_{ij}\\).\n\nEl factor \\((-1)^{i+j}\\) determina el signo con el que se multiplica el menor para obtener el cofactor. Los signos de las nueve posiciones son\n\\[\n\\begin{bmatrix}+&-&+\\\\-&+&-\\\\+&-&+\\end{bmatrix}.\n\\]\nPor ejemplo, el cofactor de la posición \\((3,2)\\) es \\(C_{32}=-M_{32}\\), pues \\(3+2\\) es impar. El signo de la posición multiplica al menor, que a su vez puede ser positivo, negativo o cero.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#desarrollo-por-cofactores",
+    "href": "sesiones/2026-11-04-sesion-44.html#desarrollo-por-cofactores",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Desarrollo por cofactores",
+    "text": "Desarrollo por cofactores\nEl determinante de una matriz \\(A\\) de tamaño \\(3\\times3\\) se define mediante el primer renglón:\n\\[\n\\det A=a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}.\n\\]\nSe acepta sin demostración que el mismo determinante se obtiene al desarrollar por cualquier otro renglón o por cualquier columna. Por ejemplo, para el renglón \\(i\\) y la columna \\(j\\), respectivamente,\n\\[\n\\det A=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3},\n\\qquad\n\\det A=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}.\n\\]\nCada entrada se multiplica por el cofactor de su propia posición y se suman los productos. Una entrada cero aporta cero; por ello, al elegir un renglón o una columna con más ceros se calculan menos menores. El determinante es un número y está definido para matrices cuadradas.\nProcedimiento.\n\nElija un renglón o una columna, de preferencia con el mayor número de ceros.\nPara cada entrada no nula, identifique el signo de su posición.\nCalcule el menor correspondiente y multiplíquelo por el signo y por la entrada.\nSume los términos obtenidos.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#ejemplos",
+    "href": "sesiones/2026-11-04-sesion-44.html#ejemplos",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Desarrollo por una columna\nPara\n\\[\nB=\\begin{bmatrix}2&0&1\\\\3&0&-1\\\\4&5&2\\end{bmatrix},\n\\]\nla segunda columna tiene dos ceros. La entrada no nula es \\(b_{32}=5\\) y su posición tiene signo negativo. Al suprimir el tercer renglón y la segunda columna,\n\\[\nM_{32}=\\det\\begin{bmatrix}2&1\\\\3&-1\\end{bmatrix}=2(-1)-1(3)=-5,\n\\qquad C_{32}=-M_{32}=5.\n\\]\nPor tanto, el desarrollo por la segunda columna da\n\\[\n\\det B=5C_{32}=5(5)=25.\n\\]\n\n\nEjemplo 2. Determinante nulo e invertibilidad\nConsidere la matriz de la Actividad de la Sesión 41:\n\\[\nN=\\begin{bmatrix}1&0&2\\\\0&1&-1\\\\1&1&1\\end{bmatrix}.\n\\]\nAl desarrollar por la primera columna, cuyos signos son \\(+\\), \\(-\\) y \\(+\\),\n\\[\n\\det N=1\\cdot\\det\\begin{bmatrix}1&-1\\\\1&1\\end{bmatrix}\n+1\\cdot\\det\\begin{bmatrix}0&2\\\\1&-1\\end{bmatrix}\n=2-2=0.\n\\]\nUna matriz \\(3\\times3\\) es invertible si y solo si su determinante es distinto de cero. Por ello, \\(N\\) no tiene inversa, en concordancia con la falta de un pivote observada en la Sesión 41. El criterio se acepta sin demostración. Un determinante nulo, por sí solo, no indica si un sistema \\(N\\mathbf{x}=\\mathbf{b}\\) es inconsistente o tiene infinitas soluciones.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#propiedades-elementales-de-los-determinantes",
+    "href": "sesiones/2026-11-04-sesion-44.html#propiedades-elementales-de-los-determinantes",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Propiedades elementales de los determinantes",
+    "text": "Propiedades elementales de los determinantes\n\nRenglón de ceros. Si un renglón es cero, el determinante es cero: cada término del desarrollo por ese renglón contiene un factor cero. Por ejemplo, \\(\\det\\begin{bmatrix}2&5&1\\\\0&0&0\\\\3&-1&4\\end{bmatrix}=0\\).\nRenglones iguales. Si dos renglones son iguales, el determinante es cero. Para verlo en una matriz \\(3\\times3\\), se desarrolla por el renglón restante: cada menor tiene dos renglones iguales. Por ejemplo, \\(\\det\\begin{bmatrix}1&2&3\\\\4&5&6\\\\1&2&3\\end{bmatrix}=0\\).\nIntercambio de renglones. Al intercambiar dos renglones, el determinante cambia de signo; esta propiedad se acepta sin demostración. Por ejemplo, si en la matriz \\(B\\) del Ejemplo 1 se intercambian los dos primeros renglones, la matriz obtenida tiene determinante \\(-25\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#errores-frecuentes",
+    "href": "sesiones/2026-11-04-sesion-44.html#errores-frecuentes",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nOmitir el signo del cofactor. En el Ejemplo 1, \\(M_{32}=-5\\), pero \\(C_{32}=-M_{32}=5\\); por ello \\(\\det B=25\\), no \\(-25\\).\nAplicar la regla \\(ad-bc\\) directamente a una matriz \\(3\\times3\\). Esa regla calcula un determinante \\(2\\times2\\); para la matriz \\(3\\times3\\) se aplica a cada menor del desarrollo.\nConcluir que hay determinante cero por la presencia de una entrada cero. La matriz \\(B\\) tiene dos ceros y \\(\\det B=25\\). Un renglón completo de ceros sí garantiza determinante cero.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#actividad",
+    "href": "sesiones/2026-11-04-sesion-44.html#actividad",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero cada ejercicio de manera individual y registre su intento por escrito. Después compare sus respuestas con un compañero o compañera y justifique las correcciones.\n\nSea \\(F=\\begin{bmatrix}3&1&-2\\\\0&4&0\\\\5&2&1\\end{bmatrix}\\).\n\nElija un renglón o una columna y calcule \\(\\det F\\) por cofactores. Justifique su elección.\nSin repetir el desarrollo, determine el determinante de la matriz obtenida al intercambiar los renglones 2 y 3 de \\(F\\).\n\nUna mezcla cerámica se prepara sin pérdidas con sacos de tres tipos: A, B y C. La matriz siguiente indica los kilogramos de arcilla, feldespato y cuarzo contenidos en cada saco. Sus renglones corresponden a esos tres componentes y sus columnas a los tipos A, B y C, en los órdenes indicados:\n\\[\nM=\\begin{bmatrix}2&0&1\\\\0&1&1\\\\0&2&1\\end{bmatrix}.\n\\]\nSi se vacían \\(x\\), \\(y\\) y \\(z\\) sacos de cada tipo, las masas de los componentes se obtienen con \\(M(x,y,z)^{\\mathsf T}\\).\n\nCalcule \\(\\det M\\) por cofactores y decida si la matriz tiene inversa.\nUna mezcla contiene \\(7\\) kg de arcilla, \\(3\\) kg de feldespato y \\(5\\) kg de cuarzo. Compruebe que \\(3\\) sacos A, \\(2\\) B y \\(1\\) C producen esas cantidades. ¿Puede otra combinación de sacos producir las mismas masas? Justifique.\n\n\nComprobación individual. Sin consultar las soluciones ni comparar respuestas, calcule por cofactores el determinante de \\(E=\\begin{bmatrix}1&4&2\\\\0&0&3\\\\2&-1&5\\end{bmatrix}\\). Justifique el renglón o la columna elegidos y decida si \\(E\\) tiene inversa.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. El segundo renglón tiene dos ceros. La entrada \\(4\\) ocupa la posición \\((2,2)\\), de signo positivo:\n\\[\n\\det F=4\\cdot\\det\\begin{bmatrix}3&-2\\\\5&1\\end{bmatrix}=4(3+10)=52.\n\\]\n1. b. Un intercambio de renglones cambia el signo: el determinante es \\(-52\\).\n2. a. La primera columna tiene dos ceros. Su única entrada no nula ocupa la posición \\((1,1)\\), de signo positivo:\n\\[\n\\det M=2\\cdot\\det\\begin{bmatrix}1&1\\\\2&1\\end{bmatrix}=2(1-2)=-2.\n\\]\nComo \\(\\det M\\ne0\\), la matriz tiene inversa.\n2. b.\n\\[\nM\\begin{bmatrix}3\\\\2\\\\1\\end{bmatrix}\n=\\begin{bmatrix}2(3)+0(2)+1(1)\\\\0(3)+1(2)+1(1)\\\\0(3)+2(2)+1(1)\\end{bmatrix}\n=\\begin{bmatrix}7\\\\3\\\\5\\end{bmatrix}.\n\\]\nLa solución \\(\\mathbf{x}=(3,2,1)^{\\mathsf T}\\) es una combinación admisible de sacos. Como \\(M\\) tiene inversa, el sistema tiene una única solución; ninguna otra combinación produce las mismas masas.\nComprobación individual. El segundo renglón tiene dos ceros. La entrada \\(3\\) está en la posición \\((2,3)\\), de signo negativo:\n\\[\n\\det E=-3\\cdot\\det\\begin{bmatrix}1&4\\\\2&-1\\end{bmatrix}=-3(-1-8)=27.\n\\]\nComo \\(\\det E\\ne0\\), la matriz \\(E\\) tiene inversa.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-11-04-sesion-44.html#ejercicios-para-practicar",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar las propiedades y el análisis con parámetros. Consulte las respuestas después de completar su intento.\n\nTres lotes de polvo metálico contienen únicamente cobre, zinc y estaño. En el lote 1 las fracciones en masa son \\(0.6\\) de cobre y \\(0.4\\) de zinc; en el lote 2, \\(0.4\\) de cobre y \\(0.6\\) de estaño. El lote 3 contiene una fracción \\(p\\) de cobre, \\(0.2\\) de zinc y el resto de estaño, con \\(0\\le p\\le0.8\\). La matriz de composición, con renglones cobre, zinc y estaño y columnas lotes 1, 2 y 3, es\n\\[\nP(p)=\\begin{bmatrix}0.6&0.4&p\\\\0.4&0&0.2\\\\0&0.6&0.8-p\\end{bmatrix}.\n\\]\nLas masas de los metales se obtienen multiplicando \\(P(p)\\) por el vector de masas tomadas de los lotes.\n\nCalcule \\(\\det P(p)\\) por cofactores y determine los valores de \\(p\\) para los que las masas de los lotes pueden recuperarse de manera única a partir de las masas de los metales para toda mezcla realizable.\nPara el valor de \\(p\\) excluido, compruebe que \\(100\\) g del lote 3 contienen las mismas masas de cada metal que \\(50\\) g del lote 1 más \\(50\\) g del lote 2.\n\nDos lotes de polvo contienen \\(10\\,\\%\\) y \\(50\\,\\%\\) de estaño en masa, respectivamente; todo lo demás se registra como resto. La matriz de composición, con renglones estaño y resto, es \\(C=\\begin{bmatrix}0.10&0.50\\\\0.90&0.50\\end{bmatrix}\\). Una muestra preparada sin pérdidas contiene \\(110\\) g de estaño y \\(190\\) g de resto. Obtenga \\(C^{-1}\\) con la fórmula para matrices \\(2\\times2\\), recupere las masas de los lotes y verifique el resultado.\nPara \\(H=\\begin{bmatrix}2&1&3\\\\4&0&1\\\\1&0&2\\end{bmatrix}\\), un estudiante desarrolla por el segundo renglón y escribe\n\\[\n\\det H=4\\cdot\\det\\begin{bmatrix}1&3\\\\0&2\\end{bmatrix}\n-0+1\\cdot\\det\\begin{bmatrix}2&1\\\\1&0\\end{bmatrix}=7.\n\\]\nCalcule \\(\\det H\\) por la segunda columna, identifique el error y corrija el desarrollo por el segundo renglón.\nSea \\(X=\\begin{bmatrix}1&2&0\\\\0&3&1\\\\2&0&1\\end{bmatrix}\\).\n\nCalcule \\(\\det X\\) por cofactores.\nSin desarrollar de nuevo, determine los determinantes de las matrices obtenidas de \\(X\\) al intercambiar los renglones 1 y 3; al sustituir el renglón 2 por una copia del renglón 1; y al sustituir el renglón 3 por ceros.\n\nSea \\(K=\\begin{bmatrix}k&0&1\\\\0&2&0\\\\1&0&k\\end{bmatrix}\\), con \\(k\\in\\mathbb R\\).\n\nCalcule \\(\\det K\\) y determine los valores de \\(k\\) para los que \\(K\\) tiene inversa.\nPara \\(k=1\\), justifique que el determinante es cero mediante una de las propiedades estudiadas.\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a. \\(\\det P(p)=0.4p-0.2\\). Se garantiza la recuperación única para toda mezcla realizable cuando \\(0\\le p\\le0.8\\) y \\(p\\ne0.5\\). Para \\(p=0.5\\) existen mezclas realizables que admiten más de un reparto, como muestra el inciso b.\n1. b. Para \\(p=0.5\\), las dos mezclas contienen \\((50,20,30)\\) g de cobre, zinc y estaño, respectivamente.\n2. \\(\\det C=-0.40\\) y \\(C^{-1}=\\begin{bmatrix}-1.25&1.25\\\\2.25&-0.25\\end{bmatrix}\\). Las masas son \\(100\\) g del primer lote y \\(200\\) g del segundo; \\(C(100,200)^{\\mathsf T}=(110,190)^{\\mathsf T}\\) g.\n3. \\(\\det H=-7\\). Los signos del segundo renglón son \\(-\\), \\(+\\), \\(-\\); el desarrollo correcto es \\(-4(2)-1(-1)=-7\\).\n4. a. \\(\\det X=7\\).\n4. b. \\(-7\\), \\(0\\) y \\(0\\), respectivamente.\n5. a. \\(\\det K=2(k^2-1)\\); \\(K\\) es invertible exactamente cuando \\(k\\ne1\\) y \\(k\\ne-1\\).\n5. b. Si \\(k=1\\), los renglones 1 y 3 son iguales a \\((1,0,1)\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-04-sesion-44.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-11-04-sesion-44.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 44. Determinante de una matriz 3×3 por cofactores",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nEl determinante de una matriz \\(3\\times3\\) se obtiene sumando los productos de las entradas de un renglón o una columna por sus respectivos cofactores. Una línea con ceros reduce el número de menores que deben calcularse.\nAl revisar su trabajo, compruebe si puede:\n\nElegir un renglón o una columna y calcular el determinante con los signos correctos.\nAplicar las propiedades de renglón de ceros, renglones iguales e intercambio de renglones.\nDecidir la invertibilidad mediante el determinante y justificar una recuperación única de cantidades en el problema de la actividad.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Sesión 44. Determinante de una matriz 3×3 por cofactores</span>"
+    ]
+  },
+  {
     "objectID": "unidades/05-conceptos-algebra-lineal.html",
     "href": "unidades/05-conceptos-algebra-lineal.html",
     "title": "Unidad 5. Conceptos básicos de álgebra lineal",
@@ -4072,7 +4171,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -4083,7 +4182,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>55</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -4094,7 +4193,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4105,7 +4204,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>56</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4116,7 +4215,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4127,7 +4226,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4138,7 +4237,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4149,7 +4248,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4160,7 +4259,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4171,7 +4270,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4182,7 +4281,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4193,7 +4292,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4204,7 +4303,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4215,7 +4314,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
