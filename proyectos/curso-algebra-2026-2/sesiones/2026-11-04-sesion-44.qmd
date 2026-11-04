@@ -6,17 +6,17 @@ description: "Menores, cofactores, propiedades elementales e invertibilidad de m
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá calcular el determinante de una matriz $3\times3$ por cofactores, justificar la elección de un renglón o una columna y decidir si la matriz tiene inversa. También podrá aplicar tres propiedades elementales de los determinantes.
+Al finalizar la sesión podrá calcular el determinante de una matriz $3\times3$ por cofactores, justificar la elección del renglón o la columna y comprobar el resultado mediante otro desarrollo. También podrá aplicar las propiedades de los determinantes y decidir la invertibilidad de una matriz a partir de su determinante. Compruebe sus cálculos en la [Actividad](#actividad) y sus decisiones de invertibilidad en los ejercicios 1 y 5 de la [práctica](#ejercicios-para-practicar).
 
 ## Menores y cofactores
 
-En la [Sesión 43](2026-10-30-sesion-43.qmd) se definió el determinante de una matriz $2\times2$:
+En la [Sesión 43](2026-10-30-sesion-43.qmd#determinante-de-una-matriz-22) se definió el determinante de una matriz $2\times2$:
 
 $$
 \det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc.
 $$
 
-Sea $A$ una matriz real de tamaño $3\times3$, cuyas entradas se denotan por $a_{ij}$; el primer índice identifica el renglón y el segundo, la columna.
+Sea $A$ una matriz real de tamaño $3\times3$, cuyas entradas se denotan por $a_{ij}$; el primer índice identifica el renglón y el segundo, la columna, como en la [Sesión 29](2026-09-23-sesion-29.qmd#matriz-de-coeficientes-y-matriz-aumentada).
 
 - El **menor** $M_{ij}$ es el determinante de la matriz $2\times2$ que queda al suprimir el renglón $i$ y la columna $j$ de $A$.
 - El **cofactor** de $a_{ij}$ es $C_{ij}=(-1)^{i+j}M_{ij}$.
@@ -77,6 +77,13 @@ $$
 \det B=5C_{32}=5(5)=25.
 $$
 
+**Comprobación por el primer renglón.** Las entradas no nulas están en las posiciones $(1,1)$ y $(1,3)$, ambas de signo positivo:
+
+$$
+\det B=2\cdot\det\begin{bmatrix}0&-1\\5&2\end{bmatrix}
++1\cdot\det\begin{bmatrix}3&0\\4&5\end{bmatrix}
+=2(5)+15=25.
+$$
 
 ### Ejemplo 2. Determinante nulo e invertibilidad
 
@@ -94,79 +101,85 @@ $$
 =2-2=0.
 $$
 
-Una matriz $3\times3$ es invertible si y solo si su determinante es distinto de cero. Por ello, $N$ no tiene inversa, en concordancia con la falta de un pivote observada en la Sesión 41. El criterio se acepta sin demostración. Un determinante nulo, por sí solo, no indica si un sistema $N\mathbf{x}=\mathbf{b}$ es inconsistente o tiene infinitas soluciones.
+Como en el [criterio para matrices $2\times2$](2026-10-30-sesion-43.qmd#criterio-de-invertibilidad-mediante-el-determinante), una matriz $3\times3$ es invertible si y solo si su determinante es distinto de cero. Por ello, $N$ no tiene inversa, en concordancia con la falta de un pivote observada en la Sesión 41 y con el [criterio mediante pivotes](2026-10-28-sesion-41.qmd#criterio-de-invertibilidad-mediante-pivotes). El criterio se acepta sin demostración. Un determinante nulo, por sí solo, no indica si un sistema $N\mathbf{x}=\mathbf{b}$ es inconsistente o tiene infinitas soluciones.
 
 ## Propiedades elementales de los determinantes
 
 - **Renglón de ceros.** Si un renglón es cero, el determinante es cero: cada término del desarrollo por ese renglón contiene un factor cero. Por ejemplo, $\det\begin{bmatrix}2&5&1\\0&0&0\\3&-1&4\end{bmatrix}=0$.
-- **Renglones iguales.** Si dos renglones son iguales, el determinante es cero. Para verlo en una matriz $3\times3$, se desarrolla por el renglón restante: cada menor tiene dos renglones iguales. Por ejemplo, $\det\begin{bmatrix}1&2&3\\4&5&6\\1&2&3\end{bmatrix}=0$.
-- **Intercambio de renglones.** Al intercambiar dos renglones, el determinante cambia de signo; esta propiedad se acepta sin demostración. Por ejemplo, si en la matriz $B$ del Ejemplo 1 se intercambian los dos primeros renglones, la matriz obtenida tiene determinante $-25$.
+- **Renglones iguales.** Si dos renglones son iguales, el determinante es cero. Para verlo en una matriz $3\times3$, se desarrolla por el renglón restante: la matriz $2\times2$ de cada menor tiene dos renglones iguales y, por tanto, su determinante es cero. Por ejemplo, $\det\begin{bmatrix}1&2&3\\4&5&6\\1&2&3\end{bmatrix}=0$.
+- **Intercambio de renglones.** Al intercambiar dos renglones, como en la [eliminación de la Sesión 30](2026-09-24-sesion-30.qmd#ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar), el determinante cambia de signo; esta propiedad se acepta sin demostración. Por ejemplo, si en la matriz $B$ del Ejemplo 1 se intercambian los dos primeros renglones, la matriz obtenida tiene determinante $-25$.
 
 ## Errores frecuentes
 
-- **Omitir el signo del cofactor.** En el Ejemplo 1, $M_{32}=-5$, pero $C_{32}=-M_{32}=5$; por ello $\det B=25$, no $-25$.
-- **Aplicar la regla $ad-bc$ directamente a una matriz $3\times3$.** Esa regla calcula un determinante $2\times2$; para la matriz $3\times3$ se aplica a cada menor del desarrollo.
-- **Concluir que hay determinante cero por la presencia de una entrada cero.** La matriz $B$ tiene dos ceros y $\det B=25$. Un renglón completo de ceros sí garantiza determinante cero.
+- **Omitir el signo del cofactor.** Falso: en el Ejemplo 1, $\det B=5M_{32}=5(-5)=-25$. Corrección: la posición $(3,2)$ lleva signo negativo, por lo que $C_{32}=-M_{32}=5$ y $\det B=25$.
+- **Aplicar la regla $ad-bc$ directamente a una matriz $3\times3$.** Falso: $\det B=2\cdot0\cdot2-1\cdot0\cdot4=0$. Corrección: la regla $ad-bc$ calcula un determinante $2\times2$; en el desarrollo de $B$ se aplica a los menores y se obtiene $\det B=25$.
+- **Concluir que el determinante es cero por la presencia de ceros.** Falso: la segunda columna de $B$ tiene dos ceros, así que $\det B=0$. Corrección: $\det B=25$; los ceros reducen el número de menores que deben calcularse. Un renglón completo de ceros sí garantiza determinante cero.
+- **Ignorar el signo al intercambiar renglones.** Falso: la matriz obtenida de $B$ al intercambiar sus dos primeros renglones tiene determinante $25$. Corrección: cada intercambio cambia el signo, de modo que su determinante es $-25$.
 
 ## Actividad
 
-Resuelva primero cada ejercicio de manera individual y registre su intento por escrito. Después compare sus respuestas con un compañero o compañera y justifique las correcciones.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique las correcciones.
 
-1. Sea $F=\begin{bmatrix}3&1&-2\\0&4&0\\5&2&1\end{bmatrix}$.
+Calcule por cofactores el determinante de cada matriz. En cada caso, indique el renglón o la columna que eligió y explique su elección. Resuelva los ejercicios 1, 2 y 3; si concluye antes de la comprobación individual, continúe con el ejercicio 4.
 
-   a. Elija un renglón o una columna y calcule $\det F$ por cofactores. Justifique su elección.
+1. $F=\begin{bmatrix}3&1&-2\\0&4&0\\5&2&1\end{bmatrix}$.
 
-   b. Sin repetir el desarrollo, determine el determinante de la matriz obtenida al intercambiar los renglones 2 y 3 de $F$.
+2. $G=\begin{bmatrix}1&2&0\\3&-1&2\\0&4&1\end{bmatrix}$. Compruebe su resultado desarrollando también por otro renglón o por otra columna.
 
-2. Una mezcla cerámica se prepara sin pérdidas con sacos de tres tipos: A, B y C. La matriz siguiente indica los kilogramos de arcilla, feldespato y cuarzo contenidos en cada saco. Sus renglones corresponden a esos tres componentes y sus columnas a los tipos A, B y C, en los órdenes indicados:
+3. $J=\begin{bmatrix}2&1&0\\1&2&3\\0&1&4\end{bmatrix}$.
 
-   $$
-   M=\begin{bmatrix}2&0&1\\0&1&1\\0&2&1\end{bmatrix}.
-   $$
+4. $V=\begin{bmatrix}1&2&1\\2&1&-1\\1&-1&2\end{bmatrix}$.
 
-   Si se vacían $x$, $y$ y $z$ sacos de cada tipo, las masas de los componentes se obtienen con $M(x,y,z)^{\mathsf T}$.
-
-   a. Calcule $\det M$ por cofactores y decida si la matriz tiene inversa.
-
-   b. Una mezcla contiene $7$ kg de arcilla, $3$ kg de feldespato y $5$ kg de cuarzo. Compruebe que $3$ sacos A, $2$ B y $1$ C producen esas cantidades. ¿Puede otra combinación de sacos producir las mismas masas? Justifique.
-
-**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas, calcule por cofactores el determinante de $E=\begin{bmatrix}1&4&2\\0&0&3\\2&-1&5\end{bmatrix}$. Justifique el renglón o la columna elegidos y decida si $E$ tiene inversa.
+**Comprobación individual.** Sin consultar las soluciones ni comparar respuestas, calcule por cofactores el determinante de $T=\begin{bmatrix}1&2&0\\2&1&1\\0&3&1\end{bmatrix}$. Indique y justifique el renglón o la columna que eligió.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
-**1. a.** El segundo renglón tiene dos ceros. La entrada $4$ ocupa la posición $(2,2)$, de signo positivo:
+**1.** El segundo renglón tiene dos ceros y la entrada $4$ está en la posición $(2,2)$, de signo positivo:
 
 $$
 \det F=4\cdot\det\begin{bmatrix}3&-2\\5&1\end{bmatrix}=4(3+10)=52.
 $$
 
-**1. b.** Un intercambio de renglones cambia el signo: el determinante es $-52$.
-
-**2. a.** La primera columna tiene dos ceros. Su única entrada no nula ocupa la posición $(1,1)$, de signo positivo:
+**2.** El primer renglón tiene un cero y requiere dos menores:
 
 $$
-\det M=2\cdot\det\begin{bmatrix}1&1\\2&1\end{bmatrix}=2(1-2)=-2.
+\det G=1\cdot\det\begin{bmatrix}-1&2\\4&1\end{bmatrix}
+-2\cdot\det\begin{bmatrix}3&2\\0&1\end{bmatrix}
+=-9-6=-15.
 $$
 
-Como $\det M\ne0$, la matriz tiene inversa.
-
-**2. b.**
+Por la primera columna, que también tiene un cero:
 
 $$
-M\begin{bmatrix}3\\2\\1\end{bmatrix}
-=\begin{bmatrix}2(3)+0(2)+1(1)\\0(3)+1(2)+1(1)\\0(3)+2(2)+1(1)\end{bmatrix}
-=\begin{bmatrix}7\\3\\5\end{bmatrix}.
+\det G=1\cdot\det\begin{bmatrix}-1&2\\4&1\end{bmatrix}
+-3\cdot\det\begin{bmatrix}2&0\\4&1\end{bmatrix}
+=-9-6=-15.
 $$
 
-La solución $\mathbf{x}=(3,2,1)^{\mathsf T}$ es una combinación admisible de sacos. Como $M$ tiene inversa, el sistema tiene una única solución; ninguna otra combinación produce las mismas masas.
-
-**Comprobación individual.** El segundo renglón tiene dos ceros. La entrada $3$ está en la posición $(2,3)$, de signo negativo:
+**3.** Por el primer renglón, que tiene un cero:
 
 $$
-\det E=-3\cdot\det\begin{bmatrix}1&4\\2&-1\end{bmatrix}=-3(-1-8)=27.
+\det J=2\cdot\det\begin{bmatrix}2&3\\1&4\end{bmatrix}
+-1\cdot\det\begin{bmatrix}1&3\\0&4\end{bmatrix}
+=2(5)-4=6.
 $$
 
-Como $\det E\ne0$, la matriz $E$ tiene inversa.
+**4.** Ningún renglón o columna de $V$ tiene ceros. Al desarrollar por el primer renglón se calculan tres menores, con signos $+$, $-$ y $+$:
+
+$$
+\det V=1\cdot\det\begin{bmatrix}1&-1\\-1&2\end{bmatrix}
+-2\cdot\det\begin{bmatrix}2&-1\\1&2\end{bmatrix}
++1\cdot\det\begin{bmatrix}2&1\\1&-1\end{bmatrix}
+=1-10-3=-12.
+$$
+
+**Comprobación individual.** El primer renglón tiene un cero y requiere dos menores:
+
+$$
+\det T=1\cdot\det\begin{bmatrix}1&1\\3&1\end{bmatrix}
+-2\cdot\det\begin{bmatrix}2&1\\0&1\end{bmatrix}
+=-2-4=-6.
+$$
 
 :::
 
@@ -174,19 +187,9 @@ Como $\det E\ne0$, la matriz $E$ tiene inversa.
 
 Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar las propiedades y el análisis con parámetros. Consulte las respuestas después de completar su intento.
 
-1. Tres lotes de polvo metálico contienen únicamente cobre, zinc y estaño. En el lote 1 las fracciones en masa son $0.6$ de cobre y $0.4$ de zinc; en el lote 2, $0.4$ de cobre y $0.6$ de estaño. El lote 3 contiene una fracción $p$ de cobre, $0.2$ de zinc y el resto de estaño, con $0\le p\le0.8$. La matriz de composición, con renglones cobre, zinc y estaño y columnas lotes 1, 2 y 3, es
+1. Sea $U=\begin{bmatrix}1&0&2\\2&1&0\\1&1&1\end{bmatrix}$. Calcule $\det U$ por cofactores, justifique el renglón o la columna que elija y decida si $U$ tiene inversa.
 
-   $$
-   P(p)=\begin{bmatrix}0.6&0.4&p\\0.4&0&0.2\\0&0.6&0.8-p\end{bmatrix}.
-   $$
-
-   Las masas de los metales se obtienen multiplicando $P(p)$ por el vector de masas tomadas de los lotes.
-
-   a. Calcule $\det P(p)$ por cofactores y determine los valores de $p$ para los que las masas de los lotes pueden recuperarse de manera única a partir de las masas de los metales para toda mezcla realizable.
-
-   b. Para el valor de $p$ excluido, compruebe que $100$ g del lote 3 contienen las mismas masas de cada metal que $50$ g del lote 1 más $50$ g del lote 2.
-
-2. Dos lotes de polvo contienen $10\,\%$ y $50\,\%$ de estaño en masa, respectivamente; todo lo demás se registra como resto. La matriz de composición, con renglones estaño y resto, es $C=\begin{bmatrix}0.10&0.50\\0.90&0.50\end{bmatrix}$. Una muestra preparada sin pérdidas contiene $110$ g de estaño y $190$ g de resto. Obtenga $C^{-1}$ con la [fórmula para matrices $2\times2$](2026-10-30-sesion-43.qmd#fórmula-de-la-inversa-de-una-matriz-22), recupere las masas de los lotes y verifique el resultado.
+2. Sea $D=\begin{bmatrix}3&2\\1&1\end{bmatrix}$. Obtenga $D^{-1}$ con la [fórmula para matrices $2\times2$](2026-10-30-sesion-43.qmd#fórmula-de-la-inversa-de-una-matriz-22) y verifique la respuesta mediante un producto.
 
 3. Para $H=\begin{bmatrix}2&1&3\\4&0&1\\1&0&2\end{bmatrix}$, un estudiante desarrolla por el segundo renglón y escribe
 
@@ -211,11 +214,9 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
 
-**1. a.** $\det P(p)=0.4p-0.2$. Se garantiza la recuperación única para toda mezcla realizable cuando $0\le p\le0.8$ y $p\ne0.5$. Para $p=0.5$ existen mezclas realizables que admiten más de un reparto, como muestra el inciso b.
+**1.** El primer renglón tiene un cero y requiere dos menores. $\det U=3$; por tanto, $U$ tiene inversa.
 
-**1. b.** Para $p=0.5$, las dos mezclas contienen $(50,20,30)$ g de cobre, zinc y estaño, respectivamente.
-
-**2.** $\det C=-0.40$ y $C^{-1}=\begin{bmatrix}-1.25&1.25\\2.25&-0.25\end{bmatrix}$. Las masas son $100$ g del primer lote y $200$ g del segundo; $C(100,200)^{\mathsf T}=(110,190)^{\mathsf T}$ g.
+**2.** $\det D=1$; $D^{-1}=\begin{bmatrix}1&-2\\-1&3\end{bmatrix}$ y $DD^{-1}=I_2$.
 
 **3.** $\det H=-7$. Los signos del segundo renglón son $-$, $+$, $-$; el desarrollo correcto es $-4(2)-1(-1)=-7$.
 
@@ -231,10 +232,10 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ## Conclusiones del aprendizaje
 
-El determinante de una matriz $3\times3$ se obtiene sumando los productos de las entradas de un renglón o una columna por sus respectivos cofactores. Una línea con ceros reduce el número de menores que deben calcularse.
+El determinante de una matriz $3\times3$ se obtiene sumando los productos de las entradas de un renglón o una columna por sus respectivos cofactores. Cualquier renglón o columna da el mismo resultado, y uno con ceros reduce el número de menores. Un renglón de ceros o dos renglones iguales dan determinante cero; un intercambio cambia el signo. La matriz tiene inversa exactamente cuando su determinante es distinto de cero.
 
 Al revisar su trabajo, compruebe si puede:
 
-- Elegir un renglón o una columna y calcular el determinante con los signos correctos.
-- Aplicar las propiedades de renglón de ceros, renglones iguales e intercambio de renglones.
-- Decidir la invertibilidad mediante el determinante y justificar una recuperación única de cantidades en el problema de la actividad.
+- Elegir un renglón o una columna y calcular el determinante con los signos correctos, como en la [Actividad](#actividad).
+- Comprobar un determinante desarrollando por otro renglón o columna, como en el [Ejemplo 1](#ejemplo-1.-desarrollo-por-una-columna) y el ejercicio 2 de la Actividad.
+- Aplicar las [propiedades](#propiedades-elementales-de-los-determinantes) y decidir la invertibilidad mediante el determinante, como en los ejercicios 1, 4 y 5 de la [práctica](#ejercicios-para-practicar).
