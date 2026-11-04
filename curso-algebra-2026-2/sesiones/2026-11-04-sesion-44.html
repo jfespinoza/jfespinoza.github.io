@@ -588,15 +588,15 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá calcular el determinante de una matriz <span class="math inline">\(3\times3\)</span> por cofactores, justificar la elección de un renglón o una columna y decidir si la matriz tiene inversa. También podrá aplicar tres propiedades elementales de los determinantes.</p>
+<p>Al finalizar la sesión podrá calcular el determinante de una matriz <span class="math inline">\(3\times3\)</span> por cofactores, justificar la elección del renglón o la columna y comprobar el resultado mediante otro desarrollo. También podrá aplicar las propiedades de los determinantes y decidir la invertibilidad de una matriz a partir de su determinante. Compruebe sus cálculos en la <a href="#actividad">Actividad</a> y sus decisiones de invertibilidad en los ejercicios 1 y 5 de la <a href="#ejercicios-para-practicar">práctica</a>.</p>
 </section>
 <section id="menores-y-cofactores" class="level2">
 <h2 class="anchored" data-anchor-id="menores-y-cofactores">Menores y cofactores</h2>
-<p>En la <a href="../sesiones/2026-10-30-sesion-43.html">Sesión 43</a> se definió el determinante de una matriz <span class="math inline">\(2\times2\)</span>:</p>
+<p>En la <a href="../sesiones/2026-10-30-sesion-43.html#determinante-de-una-matriz-22">Sesión 43</a> se definió el determinante de una matriz <span class="math inline">\(2\times2\)</span>:</p>
 <p><span class="math display">\[
 \det\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix}=ad-bc.
 \]</span></p>
-<p>Sea <span class="math inline">\(A\)</span> una matriz real de tamaño <span class="math inline">\(3\times3\)</span>, cuyas entradas se denotan por <span class="math inline">\(a_{ij}\)</span>; el primer índice identifica el renglón y el segundo, la columna.</p>
+<p>Sea <span class="math inline">\(A\)</span> una matriz real de tamaño <span class="math inline">\(3\times3\)</span>, cuyas entradas se denotan por <span class="math inline">\(a_{ij}\)</span>; el primer índice identifica el renglón y el segundo, la columna, como en la <a href="../sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada">Sesión 29</a>.</p>
 <ul>
 <li>El <strong>menor</strong> <span class="math inline">\(M_{ij}\)</span> es el determinante de la matriz <span class="math inline">\(2\times2\)</span> que queda al suprimir el renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span>.</li>
 <li>El <strong>cofactor</strong> de <span class="math inline">\(a_{ij}\)</span> es <span class="math inline">\(C_{ij}=(-1)^{i+j}M_{ij}\)</span>.</li>
@@ -645,6 +645,12 @@ M_{32}=\det\begin{bmatrix}2&amp;1\\3&amp;-1\end{bmatrix}=2(-1)-1(3)=-5,
 <p><span class="math display">\[
 \det B=5C_{32}=5(5)=25.
 \]</span></p>
+<p><strong>Comprobación por el primer renglón.</strong> Las entradas no nulas están en las posiciones <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((1,3)\)</span>, ambas de signo positivo:</p>
+<p><span class="math display">\[
+\det B=2\cdot\det\begin{bmatrix}0&amp;-1\\5&amp;2\end{bmatrix}
++1\cdot\det\begin{bmatrix}3&amp;0\\4&amp;5\end{bmatrix}
+=2(5)+15=25.
+\]</span></p>
 </section>
 <section id="ejemplo-2.-determinante-nulo-e-invertibilidad" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-determinante-nulo-e-invertibilidad">Ejemplo 2. Determinante nulo e invertibilidad</h3>
@@ -658,45 +664,37 @@ N=\begin{bmatrix}1&amp;0&amp;2\\0&amp;1&amp;-1\\1&amp;1&amp;1\end{bmatrix}.
 +1\cdot\det\begin{bmatrix}0&amp;2\\1&amp;-1\end{bmatrix}
 =2-2=0.
 \]</span></p>
-<p>Una matriz <span class="math inline">\(3\times3\)</span> es invertible si y solo si su determinante es distinto de cero. Por ello, <span class="math inline">\(N\)</span> no tiene inversa, en concordancia con la falta de un pivote observada en la Sesión 41. El criterio se acepta sin demostración. Un determinante nulo, por sí solo, no indica si un sistema <span class="math inline">\(N\mathbf{x}=\mathbf{b}\)</span> es inconsistente o tiene infinitas soluciones.</p>
+<p>Como en el <a href="../sesiones/2026-10-30-sesion-43.html#criterio-de-invertibilidad-mediante-el-determinante">criterio para matrices <span class="math inline">\(2\times2\)</span></a>, una matriz <span class="math inline">\(3\times3\)</span> es invertible si y solo si su determinante es distinto de cero. Por ello, <span class="math inline">\(N\)</span> no tiene inversa, en concordancia con la falta de un pivote observada en la Sesión 41 y con el <a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio mediante pivotes</a>. El criterio se acepta sin demostración. Un determinante nulo, por sí solo, no indica si un sistema <span class="math inline">\(N\mathbf{x}=\mathbf{b}\)</span> es inconsistente o tiene infinitas soluciones.</p>
 </section>
 </section>
 <section id="propiedades-elementales-de-los-determinantes" class="level2">
 <h2 class="anchored" data-anchor-id="propiedades-elementales-de-los-determinantes">Propiedades elementales de los determinantes</h2>
 <ul>
 <li><strong>Renglón de ceros.</strong> Si un renglón es cero, el determinante es cero: cada término del desarrollo por ese renglón contiene un factor cero. Por ejemplo, <span class="math inline">\(\det\begin{bmatrix}2&amp;5&amp;1\\0&amp;0&amp;0\\3&amp;-1&amp;4\end{bmatrix}=0\)</span>.</li>
-<li><strong>Renglones iguales.</strong> Si dos renglones son iguales, el determinante es cero. Para verlo en una matriz <span class="math inline">\(3\times3\)</span>, se desarrolla por el renglón restante: cada menor tiene dos renglones iguales. Por ejemplo, <span class="math inline">\(\det\begin{bmatrix}1&amp;2&amp;3\\4&amp;5&amp;6\\1&amp;2&amp;3\end{bmatrix}=0\)</span>.</li>
-<li><strong>Intercambio de renglones.</strong> Al intercambiar dos renglones, el determinante cambia de signo; esta propiedad se acepta sin demostración. Por ejemplo, si en la matriz <span class="math inline">\(B\)</span> del Ejemplo 1 se intercambian los dos primeros renglones, la matriz obtenida tiene determinante <span class="math inline">\(-25\)</span>.</li>
+<li><strong>Renglones iguales.</strong> Si dos renglones son iguales, el determinante es cero. Para verlo en una matriz <span class="math inline">\(3\times3\)</span>, se desarrolla por el renglón restante: la matriz <span class="math inline">\(2\times2\)</span> de cada menor tiene dos renglones iguales y, por tanto, su determinante es cero. Por ejemplo, <span class="math inline">\(\det\begin{bmatrix}1&amp;2&amp;3\\4&amp;5&amp;6\\1&amp;2&amp;3\end{bmatrix}=0\)</span>.</li>
+<li><strong>Intercambio de renglones.</strong> Al intercambiar dos renglones, como en la <a href="../sesiones/2026-09-24-sesion-30.html#ejemplo-2.-pivote-inicial-cero-intercambiar-antes-de-eliminar">eliminación de la Sesión 30</a>, el determinante cambia de signo; esta propiedad se acepta sin demostración. Por ejemplo, si en la matriz <span class="math inline">\(B\)</span> del Ejemplo 1 se intercambian los dos primeros renglones, la matriz obtenida tiene determinante <span class="math inline">\(-25\)</span>.</li>
 </ul>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Omitir el signo del cofactor.</strong> En el Ejemplo 1, <span class="math inline">\(M_{32}=-5\)</span>, pero <span class="math inline">\(C_{32}=-M_{32}=5\)</span>; por ello <span class="math inline">\(\det B=25\)</span>, no <span class="math inline">\(-25\)</span>.</li>
-<li><strong>Aplicar la regla <span class="math inline">\(ad-bc\)</span> directamente a una matriz <span class="math inline">\(3\times3\)</span>.</strong> Esa regla calcula un determinante <span class="math inline">\(2\times2\)</span>; para la matriz <span class="math inline">\(3\times3\)</span> se aplica a cada menor del desarrollo.</li>
-<li><strong>Concluir que hay determinante cero por la presencia de una entrada cero.</strong> La matriz <span class="math inline">\(B\)</span> tiene dos ceros y <span class="math inline">\(\det B=25\)</span>. Un renglón completo de ceros sí garantiza determinante cero.</li>
+<li><strong>Omitir el signo del cofactor.</strong> Falso: en el Ejemplo 1, <span class="math inline">\(\det B=5M_{32}=5(-5)=-25\)</span>. Corrección: la posición <span class="math inline">\((3,2)\)</span> lleva signo negativo, por lo que <span class="math inline">\(C_{32}=-M_{32}=5\)</span> y <span class="math inline">\(\det B=25\)</span>.</li>
+<li><strong>Aplicar la regla <span class="math inline">\(ad-bc\)</span> directamente a una matriz <span class="math inline">\(3\times3\)</span>.</strong> Falso: <span class="math inline">\(\det B=2\cdot0\cdot2-1\cdot0\cdot4=0\)</span>. Corrección: la regla <span class="math inline">\(ad-bc\)</span> calcula un determinante <span class="math inline">\(2\times2\)</span>; en el desarrollo de <span class="math inline">\(B\)</span> se aplica a los menores y se obtiene <span class="math inline">\(\det B=25\)</span>.</li>
+<li><strong>Concluir que el determinante es cero por la presencia de ceros.</strong> Falso: la segunda columna de <span class="math inline">\(B\)</span> tiene dos ceros, así que <span class="math inline">\(\det B=0\)</span>. Corrección: <span class="math inline">\(\det B=25\)</span>; los ceros reducen el número de menores que deben calcularse. Un renglón completo de ceros sí garantiza determinante cero.</li>
+<li><strong>Ignorar el signo al intercambiar renglones.</strong> Falso: la matriz obtenida de <span class="math inline">\(B\)</span> al intercambiar sus dos primeros renglones tiene determinante <span class="math inline">\(25\)</span>. Corrección: cada intercambio cambia el signo, de modo que su determinante es <span class="math inline">\(-25\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero cada ejercicio de manera individual y registre su intento por escrito. Después compare sus respuestas con un compañero o compañera y justifique las correcciones.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique las correcciones.</p>
+<p>Calcule por cofactores el determinante de cada matriz. En cada caso, indique el renglón o la columna que eligió y explique su elección. Resuelva los ejercicios 1, 2 y 3; si concluye antes de la comprobación individual, continúe con el ejercicio 4.</p>
 <ol type="1">
-<li><p>Sea <span class="math inline">\(F=\begin{bmatrix}3&amp;1&amp;-2\\0&amp;4&amp;0\\5&amp;2&amp;1\end{bmatrix}\)</span>.</p>
-<ol type="a">
-<li><p>Elija un renglón o una columna y calcule <span class="math inline">\(\det F\)</span> por cofactores. Justifique su elección.</p></li>
-<li><p>Sin repetir el desarrollo, determine el determinante de la matriz obtenida al intercambiar los renglones 2 y 3 de <span class="math inline">\(F\)</span>.</p></li>
-</ol></li>
-<li><p>Una mezcla cerámica se prepara sin pérdidas con sacos de tres tipos: A, B y C. La matriz siguiente indica los kilogramos de arcilla, feldespato y cuarzo contenidos en cada saco. Sus renglones corresponden a esos tres componentes y sus columnas a los tipos A, B y C, en los órdenes indicados:</p>
-<p><span class="math display">\[
-M=\begin{bmatrix}2&amp;0&amp;1\\0&amp;1&amp;1\\0&amp;2&amp;1\end{bmatrix}.
-\]</span></p>
-<p>Si se vacían <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> sacos de cada tipo, las masas de los componentes se obtienen con <span class="math inline">\(M(x,y,z)^{\mathsf T}\)</span>.</p>
-<ol type="a">
-<li><p>Calcule <span class="math inline">\(\det M\)</span> por cofactores y decida si la matriz tiene inversa.</p></li>
-<li><p>Una mezcla contiene <span class="math inline">\(7\)</span> kg de arcilla, <span class="math inline">\(3\)</span> kg de feldespato y <span class="math inline">\(5\)</span> kg de cuarzo. Compruebe que <span class="math inline">\(3\)</span> sacos A, <span class="math inline">\(2\)</span> B y <span class="math inline">\(1\)</span> C producen esas cantidades. ¿Puede otra combinación de sacos producir las mismas masas? Justifique.</p></li>
-</ol></li>
+<li><p><span class="math inline">\(F=\begin{bmatrix}3&amp;1&amp;-2\\0&amp;4&amp;0\\5&amp;2&amp;1\end{bmatrix}\)</span>.</p></li>
+<li><p><span class="math inline">\(G=\begin{bmatrix}1&amp;2&amp;0\\3&amp;-1&amp;2\\0&amp;4&amp;1\end{bmatrix}\)</span>. Compruebe su resultado desarrollando también por otro renglón o por otra columna.</p></li>
+<li><p><span class="math inline">\(J=\begin{bmatrix}2&amp;1&amp;0\\1&amp;2&amp;3\\0&amp;1&amp;4\end{bmatrix}\)</span>.</p></li>
+<li><p><span class="math inline">\(V=\begin{bmatrix}1&amp;2&amp;1\\2&amp;1&amp;-1\\1&amp;-1&amp;2\end{bmatrix}\)</span>.</p></li>
 </ol>
-<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas, calcule por cofactores el determinante de <span class="math inline">\(E=\begin{bmatrix}1&amp;4&amp;2\\0&amp;0&amp;3\\2&amp;-1&amp;5\end{bmatrix}\)</span>. Justifique el renglón o la columna elegidos y decida si <span class="math inline">\(E\)</span> tiene inversa.</p>
+<p><strong>Comprobación individual.</strong> Sin consultar las soluciones ni comparar respuestas, calcule por cofactores el determinante de <span class="math inline">\(T=\begin{bmatrix}1&amp;2&amp;0\\2&amp;1&amp;1\\0&amp;3&amp;1\end{bmatrix}\)</span>. Indique y justifique el renglón o la columna que eligió.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -709,28 +707,41 @@ M=\begin{bmatrix}2&amp;0&amp;1\\0&amp;1&amp;1\\0&amp;2&amp;1\end{bmatrix}.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> El segundo renglón tiene dos ceros. La entrada <span class="math inline">\(4\)</span> ocupa la posición <span class="math inline">\((2,2)\)</span>, de signo positivo:</p>
+<p><strong>1.</strong> El segundo renglón tiene dos ceros y la entrada <span class="math inline">\(4\)</span> está en la posición <span class="math inline">\((2,2)\)</span>, de signo positivo:</p>
 <p><span class="math display">\[
 \det F=4\cdot\det\begin{bmatrix}3&amp;-2\\5&amp;1\end{bmatrix}=4(3+10)=52.
 \]</span></p>
-<p><strong>1. b.</strong> Un intercambio de renglones cambia el signo: el determinante es <span class="math inline">\(-52\)</span>.</p>
-<p><strong>2. a.</strong> La primera columna tiene dos ceros. Su única entrada no nula ocupa la posición <span class="math inline">\((1,1)\)</span>, de signo positivo:</p>
+<p><strong>2.</strong> El primer renglón tiene un cero y requiere dos menores:</p>
 <p><span class="math display">\[
-\det M=2\cdot\det\begin{bmatrix}1&amp;1\\2&amp;1\end{bmatrix}=2(1-2)=-2.
+\det G=1\cdot\det\begin{bmatrix}-1&amp;2\\4&amp;1\end{bmatrix}
+-2\cdot\det\begin{bmatrix}3&amp;2\\0&amp;1\end{bmatrix}
+=-9-6=-15.
 \]</span></p>
-<p>Como <span class="math inline">\(\det M\ne0\)</span>, la matriz tiene inversa.</p>
-<p><strong>2. b.</strong></p>
+<p>Por la primera columna, que también tiene un cero:</p>
 <p><span class="math display">\[
-M\begin{bmatrix}3\\2\\1\end{bmatrix}
-=\begin{bmatrix}2(3)+0(2)+1(1)\\0(3)+1(2)+1(1)\\0(3)+2(2)+1(1)\end{bmatrix}
-=\begin{bmatrix}7\\3\\5\end{bmatrix}.
+\det G=1\cdot\det\begin{bmatrix}-1&amp;2\\4&amp;1\end{bmatrix}
+-3\cdot\det\begin{bmatrix}2&amp;0\\4&amp;1\end{bmatrix}
+=-9-6=-15.
 \]</span></p>
-<p>La solución <span class="math inline">\(\mathbf{x}=(3,2,1)^{\mathsf T}\)</span> es una combinación admisible de sacos. Como <span class="math inline">\(M\)</span> tiene inversa, el sistema tiene una única solución; ninguna otra combinación produce las mismas masas.</p>
-<p><strong>Comprobación individual.</strong> El segundo renglón tiene dos ceros. La entrada <span class="math inline">\(3\)</span> está en la posición <span class="math inline">\((2,3)\)</span>, de signo negativo:</p>
+<p><strong>3.</strong> Por el primer renglón, que tiene un cero:</p>
 <p><span class="math display">\[
-\det E=-3\cdot\det\begin{bmatrix}1&amp;4\\2&amp;-1\end{bmatrix}=-3(-1-8)=27.
+\det J=2\cdot\det\begin{bmatrix}2&amp;3\\1&amp;4\end{bmatrix}
+-1\cdot\det\begin{bmatrix}1&amp;3\\0&amp;4\end{bmatrix}
+=2(5)-4=6.
 \]</span></p>
-<p>Como <span class="math inline">\(\det E\ne0\)</span>, la matriz <span class="math inline">\(E\)</span> tiene inversa.</p>
+<p><strong>4.</strong> Ningún renglón o columna de <span class="math inline">\(V\)</span> tiene ceros. Al desarrollar por el primer renglón se calculan tres menores, con signos <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span> y <span class="math inline">\(+\)</span>:</p>
+<p><span class="math display">\[
+\det V=1\cdot\det\begin{bmatrix}1&amp;-1\\-1&amp;2\end{bmatrix}
+-2\cdot\det\begin{bmatrix}2&amp;-1\\1&amp;2\end{bmatrix}
++1\cdot\det\begin{bmatrix}2&amp;1\\1&amp;-1\end{bmatrix}
+=1-10-3=-12.
+\]</span></p>
+<p><strong>Comprobación individual.</strong> El primer renglón tiene un cero y requiere dos menores:</p>
+<p><span class="math display">\[
+\det T=1\cdot\det\begin{bmatrix}1&amp;1\\3&amp;1\end{bmatrix}
+-2\cdot\det\begin{bmatrix}2&amp;1\\0&amp;1\end{bmatrix}
+=-2-4=-6.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -739,16 +750,8 @@ M\begin{bmatrix}3\\2\\1\end{bmatrix}
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar las propiedades y el análisis con parámetros. Consulte las respuestas después de completar su intento.</p>
 <ol type="1">
-<li><p>Tres lotes de polvo metálico contienen únicamente cobre, zinc y estaño. En el lote 1 las fracciones en masa son <span class="math inline">\(0.6\)</span> de cobre y <span class="math inline">\(0.4\)</span> de zinc; en el lote 2, <span class="math inline">\(0.4\)</span> de cobre y <span class="math inline">\(0.6\)</span> de estaño. El lote 3 contiene una fracción <span class="math inline">\(p\)</span> de cobre, <span class="math inline">\(0.2\)</span> de zinc y el resto de estaño, con <span class="math inline">\(0\le p\le0.8\)</span>. La matriz de composición, con renglones cobre, zinc y estaño y columnas lotes 1, 2 y 3, es</p>
-<p><span class="math display">\[
-P(p)=\begin{bmatrix}0.6&amp;0.4&amp;p\\0.4&amp;0&amp;0.2\\0&amp;0.6&amp;0.8-p\end{bmatrix}.
-\]</span></p>
-<p>Las masas de los metales se obtienen multiplicando <span class="math inline">\(P(p)\)</span> por el vector de masas tomadas de los lotes.</p>
-<ol type="a">
-<li><p>Calcule <span class="math inline">\(\det P(p)\)</span> por cofactores y determine los valores de <span class="math inline">\(p\)</span> para los que las masas de los lotes pueden recuperarse de manera única a partir de las masas de los metales para toda mezcla realizable.</p></li>
-<li><p>Para el valor de <span class="math inline">\(p\)</span> excluido, compruebe que <span class="math inline">\(100\)</span> g del lote 3 contienen las mismas masas de cada metal que <span class="math inline">\(50\)</span> g del lote 1 más <span class="math inline">\(50\)</span> g del lote 2.</p></li>
-</ol></li>
-<li><p>Dos lotes de polvo contienen <span class="math inline">\(10\,\%\)</span> y <span class="math inline">\(50\,\%\)</span> de estaño en masa, respectivamente; todo lo demás se registra como resto. La matriz de composición, con renglones estaño y resto, es <span class="math inline">\(C=\begin{bmatrix}0.10&amp;0.50\\0.90&amp;0.50\end{bmatrix}\)</span>. Una muestra preparada sin pérdidas contiene <span class="math inline">\(110\)</span> g de estaño y <span class="math inline">\(190\)</span> g de resto. Obtenga <span class="math inline">\(C^{-1}\)</span> con la <a href="../sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22">fórmula para matrices <span class="math inline">\(2\times2\)</span></a>, recupere las masas de los lotes y verifique el resultado.</p></li>
+<li><p>Sea <span class="math inline">\(U=\begin{bmatrix}1&amp;0&amp;2\\2&amp;1&amp;0\\1&amp;1&amp;1\end{bmatrix}\)</span>. Calcule <span class="math inline">\(\det U\)</span> por cofactores, justifique el renglón o la columna que elija y decida si <span class="math inline">\(U\)</span> tiene inversa.</p></li>
+<li><p>Sea <span class="math inline">\(D=\begin{bmatrix}3&amp;2\\1&amp;1\end{bmatrix}\)</span>. Obtenga <span class="math inline">\(D^{-1}\)</span> con la <a href="../sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22">fórmula para matrices <span class="math inline">\(2\times2\)</span></a> y verifique la respuesta mediante un producto.</p></li>
 <li><p>Para <span class="math inline">\(H=\begin{bmatrix}2&amp;1&amp;3\\4&amp;0&amp;1\\1&amp;0&amp;2\end{bmatrix}\)</span>, un estudiante desarrolla por el segundo renglón y escribe</p>
 <p><span class="math display">\[
 \det H=4\cdot\det\begin{bmatrix}1&amp;3\\0&amp;2\end{bmatrix}
@@ -778,9 +781,8 @@ P(p)=\begin{bmatrix}0.6&amp;0.4&amp;p\\0.4&amp;0&amp;0.2\\0&amp;0.6&amp;0.8-p\en
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> <span class="math inline">\(\det P(p)=0.4p-0.2\)</span>. Se garantiza la recuperación única para toda mezcla realizable cuando <span class="math inline">\(0\le p\le0.8\)</span> y <span class="math inline">\(p\ne0.5\)</span>. Para <span class="math inline">\(p=0.5\)</span> existen mezclas realizables que admiten más de un reparto, como muestra el inciso b.</p>
-<p><strong>1. b.</strong> Para <span class="math inline">\(p=0.5\)</span>, las dos mezclas contienen <span class="math inline">\((50,20,30)\)</span> g de cobre, zinc y estaño, respectivamente.</p>
-<p><strong>2.</strong> <span class="math inline">\(\det C=-0.40\)</span> y <span class="math inline">\(C^{-1}=\begin{bmatrix}-1.25&amp;1.25\\2.25&amp;-0.25\end{bmatrix}\)</span>. Las masas son <span class="math inline">\(100\)</span> g del primer lote y <span class="math inline">\(200\)</span> g del segundo; <span class="math inline">\(C(100,200)^{\mathsf T}=(110,190)^{\mathsf T}\)</span> g.</p>
+<p><strong>1.</strong> El primer renglón tiene un cero y requiere dos menores. <span class="math inline">\(\det U=3\)</span>; por tanto, <span class="math inline">\(U\)</span> tiene inversa.</p>
+<p><strong>2.</strong> <span class="math inline">\(\det D=1\)</span>; <span class="math inline">\(D^{-1}=\begin{bmatrix}1&amp;-2\\-1&amp;3\end{bmatrix}\)</span> y <span class="math inline">\(DD^{-1}=I_2\)</span>.</p>
 <p><strong>3.</strong> <span class="math inline">\(\det H=-7\)</span>. Los signos del segundo renglón son <span class="math inline">\(-\)</span>, <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span>; el desarrollo correcto es <span class="math inline">\(-4(2)-1(-1)=-7\)</span>.</p>
 <p><strong>4. a.</strong> <span class="math inline">\(\det X=7\)</span>.</p>
 <p><strong>4. b.</strong> <span class="math inline">\(-7\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(0\)</span>, respectivamente.</p>
@@ -792,12 +794,12 @@ P(p)=\begin{bmatrix}0.6&amp;0.4&amp;p\\0.4&amp;0&amp;0.2\\0&amp;0.6&amp;0.8-p\en
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>El determinante de una matriz <span class="math inline">\(3\times3\)</span> se obtiene sumando los productos de las entradas de un renglón o una columna por sus respectivos cofactores. Una línea con ceros reduce el número de menores que deben calcularse.</p>
+<p>El determinante de una matriz <span class="math inline">\(3\times3\)</span> se obtiene sumando los productos de las entradas de un renglón o una columna por sus respectivos cofactores. Cualquier renglón o columna da el mismo resultado, y uno con ceros reduce el número de menores. Un renglón de ceros o dos renglones iguales dan determinante cero; un intercambio cambia el signo. La matriz tiene inversa exactamente cuando su determinante es distinto de cero.</p>
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
-<li>Elegir un renglón o una columna y calcular el determinante con los signos correctos.</li>
-<li>Aplicar las propiedades de renglón de ceros, renglones iguales e intercambio de renglones.</li>
-<li>Decidir la invertibilidad mediante el determinante y justificar una recuperación única de cantidades en el problema de la actividad.</li>
+<li>Elegir un renglón o una columna y calcular el determinante con los signos correctos, como en la <a href="#actividad">Actividad</a>.</li>
+<li>Comprobar un determinante desarrollando por otro renglón o columna, como en el <a href="#ejemplo-1.-desarrollo-por-una-columna">Ejemplo 1</a> y el ejercicio 2 de la Actividad.</li>
+<li>Aplicar las <a href="#propiedades-elementales-de-los-determinantes">propiedades</a> y decidir la invertibilidad mediante el determinante, como en los ejercicios 1, 4 y 5 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
