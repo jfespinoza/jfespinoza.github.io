@@ -586,51 +586,53 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Calcular determinantes <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(3\times3\)</span> con los signos correctos y comprobar, mediante los resultados, las propiedades del producto, la inversa y el intercambio de renglones o columnas. Al concluir, podrá registrar un desarrollo por cofactores, verificarlo por otra elección y justificar los determinantes obtenidos mediante propiedades.</p>
+<p>Al finalizar la sesión podrá calcular determinantes <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(3\times3\)</span> con los signos correctos, registrar un desarrollo por cofactores y verificarlo por otro renglón o columna, y reconocer en los resultados el efecto de un intercambio y las propiedades del producto y de la inversa. Compruebe estas capacidades al resolver sin ayuda los ejercicios 2 y 3 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="recordatorio" class="level2">
 <h2 class="anchored" data-anchor-id="recordatorio">Recordatorio</h2>
-<p>El determinante es un número asociado a una matriz cuadrada. Para matrices <span class="math inline">\(2\times2\)</span>,</p>
+<p>El determinante es un número asociado a una matriz cuadrada (<a href="../sesiones/2026-10-30-sesion-43.html#determinante-de-una-matriz-22">Sesión 43</a>). Para matrices <span class="math inline">\(2\times2\)</span>,</p>
 <p><span class="math display">\[
 \det\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix}=ad-bc.
 \]</span></p>
-<p>Para matrices <span class="math inline">\(3\times3\)</span>, se desarrolla por un renglón o una columna: cada entrada se multiplica por su cofactor <span class="math inline">\(C_{ij}=(-1)^{i+j}M_{ij}\)</span>, donde <span class="math inline">\(M_{ij}\)</span> es el determinante <span class="math inline">\(2\times2\)</span> que queda al suprimir el renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span>. Los signos de las posiciones son</p>
+<p>Para matrices <span class="math inline">\(3\times3\)</span>, se desarrolla por un renglón o una columna: cada entrada se multiplica por su cofactor <span class="math inline">\(C_{ij}=(-1)^{i+j}M_{ij}\)</span>, donde <span class="math inline">\(M_{ij}\)</span> es el determinante <span class="math inline">\(2\times2\)</span> que queda al suprimir el renglón <span class="math inline">\(i\)</span> y la columna <span class="math inline">\(j\)</span> (<a href="../sesiones/2026-11-04-sesion-44.html#menores-y-cofactores">menores y cofactores</a>). Los signos de las posiciones son</p>
 <p><span class="math display">\[
 \begin{bmatrix}+&amp;-&amp;+\\-&amp;+&amp;-\\+&amp;-&amp;+\end{bmatrix}.
 \]</span></p>
 <p>Elegir un renglón o una columna con ceros reduce el número de menores. El resultado es el mismo con cualquier elección, como en la <a href="../sesiones/2026-11-04-sesion-44.html#desarrollo-por-cofactores">Sesión 44</a>.</p>
 <p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> matrices cuadradas del mismo tamaño. Se utilizarán las propiedades siguientes:</p>
 <ul>
-<li><strong>Producto:</strong> <span class="math inline">\(\det(AB)=\det A\cdot\det B\)</span>.</li>
-<li><strong>Intercambio:</strong> si <span class="math inline">\(A'\)</span> resulta de intercambiar dos renglones o dos columnas de <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(\det A'=-\det A\)</span>.</li>
+<li><strong>Producto:</strong> <span class="math inline">\(\det(AB)=\det A\cdot\det B\)</span>, con <span class="math inline">\(AB\)</span> calculado mediante el <a href="../sesiones/2026-10-20-sesion-37.html#producto-de-dos-matrices">producto de matrices</a>.</li>
+<li><strong>Intercambio</strong> (<a href="../sesiones/2026-11-04-sesion-44.html#propiedades-elementales-de-los-determinantes">Sesión 44</a>): si <span class="math inline">\(A'\)</span> resulta de intercambiar dos renglones o dos columnas de <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(\det A'=-\det A\)</span>.</li>
 <li><strong>Inversa:</strong> si <span class="math inline">\(\det A\ne0\)</span>, entonces <span class="math inline">\(\det(A^{-1})=1/\det A\)</span>.</li>
 </ul>
-<p>Además, un renglón o una columna de ceros, o dos renglones o dos columnas iguales, dan determinante cero. Una matriz <span class="math inline">\(2\times2\)</span> o <span class="math inline">\(3\times3\)</span> es invertible exactamente cuando su determinante es distinto de cero.</p>
+<p>Las propiedades del producto y del intercambio se aceptan sin demostración. La de la inversa se deduce de <span class="math inline">\(\det A\cdot\det(A^{-1})=\det(AA^{-1})=\det I=1\)</span>.</p>
+<p>Además, un renglón o una columna de ceros, o dos renglones o dos columnas iguales, dan determinante cero; las versiones por columnas se aceptan sin demostración. Una matriz <span class="math inline">\(2\times2\)</span> o <span class="math inline">\(3\times3\)</span> es invertible exactamente cuando su determinante es distinto de cero (<a href="../sesiones/2026-10-30-sesion-43.html#criterio-de-invertibilidad-mediante-el-determinante">criterio de invertibilidad</a>).</p>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Invertir la resta en un menor.</strong> Cada determinante <span class="math inline">\(2\times2\)</span> se calcula como <span class="math inline">\(ad-bc\)</span>, conservando el orden de sus renglones y columnas.</li>
-<li><strong>Confundir el signo de la entrada con el de su posición.</strong> En una posición de signo negativo, una entrada <span class="math inline">\(-2\)</span> aporta <span class="math inline">\(-(-2)M_{ij}=2M_{ij}\)</span>.</li>
-<li><strong>Conservar el determinante después de un intercambio.</strong> Un solo intercambio cambia el signo; dos intercambios sucesivos recuperan el signo inicial.</li>
-<li><strong>Aplicar la propiedad de la inversa cuando el determinante es cero.</strong> En ese caso no existe la inversa ni está definido <span class="math inline">\(1/\det A\)</span>.</li>
+<li><strong>Invertir la resta en un menor.</strong> Falso: <span class="math inline">\(\det\begin{bmatrix}3&amp;5\\1&amp;2\end{bmatrix}=5(1)-3(2)=-1\)</span>. Corrección: <span class="math inline">\(ad-bc=3(2)-5(1)=1\)</span>.</li>
+<li><strong>Omitir el signo de la posición.</strong> Falso: para <span class="math inline">\(G=\begin{bmatrix}1&amp;2&amp;0\\0&amp;1&amp;3\\2&amp;0&amp;1\end{bmatrix}\)</span>, por el primer renglón, <span class="math inline">\(\det G=1(1)+2(-6)=-11\)</span>. Corrección: la posición <span class="math inline">\((1,2)\)</span> lleva signo negativo, de modo que <span class="math inline">\(\det G=1(1)-2(-6)=13\)</span>.</li>
+<li><strong>Conservar el determinante después de un intercambio.</strong> Falso: al intercambiar los renglones 1 y 2 de <span class="math inline">\(G\)</span>, el determinante sigue siendo <span class="math inline">\(13\)</span>. Corrección: un intercambio cambia el signo y da <span class="math inline">\(-13\)</span>; dos intercambios sucesivos recuperan el signo inicial.</li>
+<li><strong>Distribuir el determinante en una suma.</strong> Falso: <span class="math inline">\(\det(I_2+I_2)=\det I_2+\det I_2=2\)</span>. Corrección: <span class="math inline">\(I_2+I_2=\begin{bmatrix}2&amp;0\\0&amp;2\end{bmatrix}\)</span> y su determinante es <span class="math inline">\(4\)</span>; <span class="math inline">\(\det(A+B)=\det A+\det B\)</span> no es una identidad.</li>
+<li><strong>Aplicar la propiedad de la inversa cuando el determinante es cero.</strong> Falso: como <span class="math inline">\(\det\begin{bmatrix}1&amp;2\\2&amp;4\end{bmatrix}=0\)</span>, su inversa tiene determinante <span class="math inline">\(0\)</span>. Corrección: esa matriz no tiene inversa y <span class="math inline">\(1/\det A\)</span> no está definido; la propiedad exige <span class="math inline">\(\det A\ne0\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual, con registro escrito. Después compare sus respuestas con un compañero o compañera y justifique cada corrección. En los determinantes <span class="math inline">\(3\times3\)</span>, indique el renglón o la columna elegidos y escriba los menores que intervienen.</p>
-<p>Resuelva los ejercicios 1 a 4. Si concluye antes de la comprobación individual, continúe con el ejercicio 5. En los ejercicios 1 a 3, calcule los determinantes solicitados directamente antes de compararlos mediante las propiedades.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique cada corrección. En los determinantes <span class="math inline">\(3\times3\)</span>, indique el renglón o la columna elegidos y escriba los menores que intervienen.</p>
+<p>Resuelva los ejercicios 1, 2 y 3. Si concluye antes de la comprobación individual, continúe con el ejercicio 4. Cuando se pida comparar un cálculo con una propiedad, realice primero el cálculo directo indicado.</p>
 <ol type="1">
 <li><p>Considere las matrices</p>
 <p><span class="math display">\[
 A=\begin{bmatrix}3&amp;1\\4&amp;2\end{bmatrix},\qquad
 B=\begin{bmatrix}2&amp;-1\\1&amp;1\end{bmatrix},\qquad
-C=AB=\begin{bmatrix}7&amp;-2\\10&amp;-2\end{bmatrix},\qquad
+K=AB=\begin{bmatrix}7&amp;-2\\10&amp;-2\end{bmatrix},\qquad
 V=A^{-1}=\begin{bmatrix}1&amp;-\frac12\\-2&amp;\frac32\end{bmatrix}.
 \]</span></p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(\det A\)</span>, <span class="math inline">\(\det B\)</span> y <span class="math inline">\(\det C\)</span>. Compare <span class="math inline">\(\det C\)</span> con <span class="math inline">\(\det A\cdot\det B\)</span>.</p></li>
-<li><p>Calcule <span class="math inline">\(\det V\)</span> a partir de sus entradas y compárelo con <span class="math inline">\(1/\det A\)</span>. Determine <span class="math inline">\(\det(B^{-1})\)</span> sin obtener <span class="math inline">\(B^{-1}\)</span>.</p></li>
+<li><p>Calcule <span class="math inline">\(\det A\)</span>, <span class="math inline">\(\det B\)</span> y <span class="math inline">\(\det K\)</span>. Compare <span class="math inline">\(\det K\)</span> con <span class="math inline">\(\det A\cdot\det B\)</span>.</p></li>
+<li><p>La matriz <span class="math inline">\(V\)</span> se obtuvo con la <a href="../sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22">fórmula de la inversa</a>. Calcule <span class="math inline">\(\det V\)</span> a partir de sus entradas y compárelo con <span class="math inline">\(1/\det A\)</span>. Determine <span class="math inline">\(\det(B^{-1})\)</span> sin obtener <span class="math inline">\(B^{-1}\)</span>.</p></li>
 </ol></li>
 <li><p>Sean</p>
 <p><span class="math display">\[
@@ -653,15 +655,6 @@ F=DE=\begin{bmatrix}2&amp;-1&amp;-1\\1&amp;3&amp;2\\4&amp;1&amp;-1\end{bmatrix}.
 <li><p>Calcule <span class="math inline">\(\det D\)</span> y <span class="math inline">\(\det F\)</span> por el primer renglón. Registre por separado el signo de cada posición, su entrada y su menor.</p></li>
 <li><p>Calcule <span class="math inline">\(\det E\)</span> por cofactores y compruebe que <span class="math inline">\(\det F=\det D\cdot\det E\)</span>.</p></li>
 <li><p>Sin calcular las matrices inversas, determine <span class="math inline">\(\det(D^{-1})\)</span> y <span class="math inline">\(\det(F^{-1})\)</span>. ¿Qué ocurre con el determinante al cambiar de signo todas las entradas de una sola columna, como al pasar de <span class="math inline">\(D\)</span> a <span class="math inline">\(F\)</span>?</p></li>
-</ol></li>
-<li><p>Tres lotes de polvo metálico contienen únicamente cobre, zinc y estaño. Sus fracciones en masa se organizan en la matriz</p>
-<p><span class="math display">\[
-L=\begin{bmatrix}0.80&amp;0.60&amp;0.50\\0.20&amp;0.40&amp;0\\0&amp;0&amp;0.50\end{bmatrix}.
-\]</span></p>
-<p>Los renglones corresponden a cobre, zinc y estaño; las columnas, a los lotes 1, 2 y 3. Si <span class="math inline">\(\mathbf{x}\)</span> contiene las masas tomadas de los lotes, en gramos, entonces <span class="math inline">\(L\mathbf{x}\)</span> contiene las masas de los tres metales en una mezcla preparada sin pérdidas.</p>
-<ol type="a">
-<li><p>Calcule <span class="math inline">\(\det L\)</span> por el tercer renglón. Decida si las masas de los lotes pueden recuperarse de manera única cuando la mezcla es realizable con ellos.</p></li>
-<li><p>Si la tabla se reordena intercambiando las columnas de los lotes 1 y 2, determine su nuevo determinante sin desarrollar de nuevo. ¿Cambia la posibilidad de recuperar las masas de manera única?</p></li>
 </ol></li>
 <li><p>Calcule por cofactores los determinantes de</p>
 <p><span class="math display">\[
@@ -693,7 +686,7 @@ W=\begin{bmatrix}2&amp;1&amp;0\\1&amp;3&amp;2\\-1&amp;2&amp;1\end{bmatrix}.
 \det B=2(1)-(-1)(1)=3,
 \]</span></p>
 <p><span class="math display">\[
-\det C=7(-2)-(-2)(10)=-14+20=6=2\cdot3.
+\det K=7(-2)-(-2)(10)=-14+20=6=2\cdot3.
 \]</span></p>
 <p><strong>1. b.</strong></p>
 <p><span class="math display">\[
@@ -750,15 +743,8 @@ W=\begin{bmatrix}2&amp;1&amp;0\\1&amp;3&amp;2\\-1&amp;2&amp;1\end{bmatrix}.
 <p><span class="math display">\[
 \det(D^{-1})=\frac18,\qquad \det(F^{-1})=-\frac18.
 \]</span></p>
-<p>Cambiar de signo una sola columna cambia de signo el determinante. En este caso también se comprueba mediante el producto por <span class="math inline">\(E\)</span>; las entradas de las otras columnas permanecen iguales.</p>
-<p><strong>4. a.</strong> En el tercer renglón solo la posición <span class="math inline">\((3,3)\)</span> es no nula y tiene signo positivo:</p>
-<p><span class="math display">\[
-\det L=0.50\cdot\det\begin{bmatrix}0.80&amp;0.60\\0.20&amp;0.40\end{bmatrix}
-=0.50\bigl(0.32-0.12\bigr)=0.10.
-\]</span></p>
-<p>Como <span class="math inline">\(L\)</span> es invertible, las masas se recuperan de manera única. La hipótesis de que la mezcla es realizable asegura que las masas recuperadas son no negativas.</p>
-<p><strong>4. b.</strong> El nuevo determinante es <span class="math inline">\(-0.10\)</span>. Sigue siendo no nulo: reordenar los lotes cambia el orden de las cantidades recuperadas, pero conserva la unicidad.</p>
-<p><strong>5.</strong> Por la tercera columna de <span class="math inline">\(Q\)</span>, solo contribuye la posición <span class="math inline">\((2,3)\)</span>, de signo negativo:</p>
+<p>Como <span class="math inline">\(F=DE\)</span> y <span class="math inline">\(\det E=-1\)</span>, la propiedad del producto da <span class="math inline">\(\det F=-\det D\)</span>. Para cualquier matriz <span class="math inline">\(3\times3\)</span>, multiplicarla por <span class="math inline">\(E\)</span> a la derecha cambia de signo su tercera columna y multiplica su determinante por <span class="math inline">\(-1\)</span>. El mismo argumento se aplica a las otras columnas colocando el <span class="math inline">\(-1\)</span> en la posición diagonal correspondiente.</p>
+<p><strong>4.</strong> Por la tercera columna de <span class="math inline">\(Q\)</span>, solo contribuye la posición <span class="math inline">\((2,3)\)</span>, de signo negativo:</p>
 <p><span class="math display">\[
 \det Q=-2\cdot\det\begin{bmatrix}1&amp;2\\1&amp;2\end{bmatrix}=-2(2-2)=0.
 \]</span></p>
@@ -778,24 +764,20 @@ W=\begin{bmatrix}2&amp;1&amp;0\\1&amp;3&amp;2\\-1&amp;2&amp;1\end{bmatrix}.
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar los desarrollos por cofactores y las propiedades. Consulte las respuestas después de completar su intento.</p>
 <ol type="1">
-<li><p>Tres lotes de polvo contienen únicamente cobre, zinc y estaño. Sus fracciones en masa forman la matriz</p>
+<li><p>Sea</p>
 <p><span class="math display">\[
-M=\begin{bmatrix}\frac12&amp;\frac14&amp;0\\\frac12&amp;\frac12&amp;\frac14\\0&amp;\frac14&amp;\frac34\end{bmatrix},
+N=\begin{bmatrix}\frac12&amp;\frac14&amp;0\\\frac12&amp;\frac12&amp;\frac14\\0&amp;\frac14&amp;\frac34\end{bmatrix}.
 \]</span></p>
-<p>con renglones cobre, zinc y estaño y columnas lotes 1, 2 y 3. El producto <span class="math inline">\(M\mathbf{x}\)</span> proporciona las masas de los metales al mezclar sin pérdidas las masas de los lotes contenidas en <span class="math inline">\(\mathbf{x}\)</span>.</p>
 <ol type="a">
-<li><p>Calcule <span class="math inline">\(\det M\)</span> por cofactores y decida si, para una mezcla realizable, las masas de los lotes se recuperan de manera única.</p></li>
-<li><p>Determine <span class="math inline">\(\det(M^{-1})\)</span> sin obtener la inversa.</p></li>
-<li><p>Si el lote 3 tuviera exactamente la composición del lote 2, determine el nuevo determinante y explique qué ocurriría con la recuperación del reparto entre esos dos lotes.</p></li>
+<li><p>Calcule <span class="math inline">\(\det N\)</span> por cofactores, indicando el renglón o la columna elegidos.</p></li>
+<li><p>Determine <span class="math inline">\(\det(N^{-1})\)</span> sin obtener la inversa.</p></li>
+<li><p>Sustituya la tercera columna de <span class="math inline">\(N\)</span> por una copia de la segunda y calcule el determinante de la matriz resultante. Compare con la propiedad de las columnas iguales.</p></li>
 </ol></li>
-<li><p>Se preparan sin pérdidas <span class="math inline">\(400\)</span> g de una mezcla con <span class="math inline">\(200\)</span> g de níquel, usando <span class="math inline">\(x,y\ge0\)</span> gramos de dos polvos que contienen <span class="math inline">\(25\,\%\)</span> y <span class="math inline">\(75\,\%\)</span> de níquel en masa, respectivamente. Las ecuaciones son</p>
-<p><span class="math display">\[
-x+y=400,\qquad \frac14x+\frac34y=200.
-\]</span></p>
+<li><p>Sea <span class="math inline">\(T=\begin{bmatrix}1&amp;1\\\frac14&amp;\frac34\end{bmatrix}\)</span>.</p>
 <ol type="a">
-<li><p>Escriba la matriz de coeficientes <span class="math inline">\(T\)</span>, calcule su determinante y decida si el sistema tiene solución única.</p></li>
-<li><p>Verifique si <span class="math inline">\(x=y=200\)</span> satisface ambas ecuaciones y es admisible.</p></li>
-<li><p>Si se escribe primero la ecuación del níquel y después la de masa total, determine el nuevo determinante. Explique si se modifica la solución.</p></li>
+<li><p>Calcule <span class="math inline">\(\det T\)</span> mediante <span class="math inline">\(ad-bc\)</span>.</p></li>
+<li><p>Intercambie los dos renglones de <span class="math inline">\(T\)</span> y calcule directamente el nuevo determinante. Compare ambos resultados.</p></li>
+<li><p>Determine <span class="math inline">\(\det(T^{-1})\)</span> sin obtener la inversa.</p></li>
 </ol></li>
 <li><p>Para <span class="math inline">\(H=\begin{bmatrix}1&amp;2&amp;0\\2&amp;1&amp;-1\\0&amp;3&amp;2\end{bmatrix}\)</span>, un estudiante escribe</p>
 <p><span class="math display">\[
@@ -831,12 +813,12 @@ J=XY=\begin{bmatrix}2&amp;0&amp;1\\1&amp;-2&amp;-1\\0&amp;0&amp;3\end{bmatrix}.
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1. a.</strong> <span class="math inline">\(\det M=1/16\ne0\)</span>; la recuperación es única.</p>
-<p><strong>1. b.</strong> <span class="math inline">\(\det(M^{-1})=16\)</span>.</p>
-<p><strong>1. c.</strong> El determinante es <span class="math inline">\(0\)</span>, pues las columnas 2 y 3 serían iguales. La composición de la mezcla no permitiría distinguir el reparto entre esos dos lotes.</p>
-<p><strong>2. a.</strong> <span class="math inline">\(T=\begin{bmatrix}1&amp;1\\\frac14&amp;\frac34\end{bmatrix}\)</span>; <span class="math inline">\(\det T=1/2\ne0\)</span>. El sistema tiene solución única.</p>
-<p><strong>2. b.</strong> Sí: <span class="math inline">\(200+200=400\)</span> g y <span class="math inline">\((1/4)(200)+(3/4)(200)=200\)</span> g de níquel. Ambas masas son no negativas.</p>
-<p><strong>2. c.</strong> <span class="math inline">\(-1/2\)</span>. La solución sigue siendo <span class="math inline">\((200,200)\)</span>; se intercambian los renglones, y el orden de las ecuaciones no altera las soluciones.</p>
+<p><strong>1. a.</strong> <span class="math inline">\(\det N=1/16\)</span>.</p>
+<p><strong>1. b.</strong> <span class="math inline">\(\det(N^{-1})=16\)</span>.</p>
+<p><strong>1. c.</strong> <span class="math inline">\(0\)</span>, en concordancia con la propiedad de las columnas iguales.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(\det T=1/2\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(-1/2\)</span>; el intercambio cambia el signo.</p>
+<p><strong>2. c.</strong> <span class="math inline">\(\det(T^{-1})=2\)</span>.</p>
 <p><strong>3.</strong> <span class="math inline">\(\det H=-3\)</span> por ambas elecciones. La posición <span class="math inline">\((1,2)\)</span> lleva signo negativo; la contribución de la entrada <span class="math inline">\(2\)</span> debe ser <span class="math inline">\(-8\)</span>.</p>
 <p><strong>4. a.</strong> <span class="math inline">\(\det U=-6\)</span>, igual al producto <span class="math inline">\(2(-1)(3)\)</span> de las entradas diagonales.</p>
 <p><strong>4. b.</strong> Después del primer intercambio, <span class="math inline">\(6\)</span>; después del segundo, <span class="math inline">\(-6\)</span>.</p>
@@ -848,12 +830,13 @@ J=XY=\begin{bmatrix}2&amp;0&amp;1\\1&amp;-2&amp;-1\\0&amp;0&amp;3\end{bmatrix}.
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>El cálculo por cofactores requiere conservar el orden de los renglones y columnas de cada menor y aplicar el signo de su posición. Los resultados permiten comprobar el efecto de los intercambios y las propiedades del producto y de la inversa; la igualdad <span class="math inline">\(\det(A+B)=\det A+\det B\)</span> no es una identidad.</p>
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
-<li>Calcular un determinante <span class="math inline">\(2\times2\)</span> respetando el orden <span class="math inline">\(ad-bc\)</span>, y uno <span class="math inline">\(3\times3\)</span> registrando las entradas, los signos de las posiciones y los menores.</li>
-<li>Verificar un desarrollo por cofactores mediante otro renglón o columna, como en el ejercicio 2 de la Actividad.</li>
-<li>Reconocer en los resultados el cambio de signo por un intercambio, la propiedad <span class="math inline">\(\det(AB)=\det A\cdot\det B\)</span> y la relación <span class="math inline">\(\det(A^{-1})=1/\det A\)</span> cuando <span class="math inline">\(\det A\ne0\)</span>.</li>
-<li>Identificar determinantes nulos mediante renglones o columnas de ceros o iguales, y distinguirlos de los determinantes no nulos que permiten recuperar cantidades de manera única.</li>
+<li>Calcular un determinante <span class="math inline">\(2\times2\)</span> mediante <span class="math inline">\(ad-bc\)</span> y uno <span class="math inline">\(3\times3\)</span> registrando entradas, signos y menores, como en los ejercicios 1 y 3 de la <a href="#actividad">Actividad</a>.</li>
+<li>Comprobar un desarrollo por otro renglón o columna, como en el ejercicio 2 de la <a href="#actividad">Actividad</a> y el ejercicio 3 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
+<li>Reconocer en los resultados el cambio de signo por un intercambio y las propiedades del producto y de la inversa del <a href="#recordatorio">Recordatorio</a>, como en los ejercicios 1 a 3 de la <a href="#actividad">Actividad</a>.</li>
+<li>Calcular determinantes nulos mediante renglones o columnas de ceros o iguales, como en el ejercicio 4 de la <a href="#actividad">Actividad</a> y el ejercicio 1 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
