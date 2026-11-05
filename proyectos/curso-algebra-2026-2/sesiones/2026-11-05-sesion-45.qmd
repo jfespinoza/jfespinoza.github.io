@@ -6,17 +6,17 @@ description: "Cálculo por cofactores y comprobación de las propiedades del pro
 
 ## Objetivo de la sesión
 
-Calcular determinantes $2\times2$ y $3\times3$ con los signos correctos y comprobar, mediante los resultados, las propiedades del producto, la inversa y el intercambio de renglones o columnas. Al concluir, podrá registrar un desarrollo por cofactores, verificarlo por otra elección y justificar los determinantes obtenidos mediante propiedades.
+Al finalizar la sesión podrá calcular determinantes $2\times2$ y $3\times3$ con los signos correctos, registrar un desarrollo por cofactores y verificarlo por otro renglón o columna, y reconocer en los resultados el efecto de un intercambio y las propiedades del producto y de la inversa. Compruebe estas capacidades al resolver sin ayuda los ejercicios 2 y 3 y la comprobación individual de la [Actividad](#actividad).
 
 ## Recordatorio
 
-El determinante es un número asociado a una matriz cuadrada. Para matrices $2\times2$,
+El determinante es un número asociado a una matriz cuadrada ([Sesión 43](2026-10-30-sesion-43.qmd#determinante-de-una-matriz-22)). Para matrices $2\times2$,
 
 $$
 \det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc.
 $$
 
-Para matrices $3\times3$, se desarrolla por un renglón o una columna: cada entrada se multiplica por su cofactor $C_{ij}=(-1)^{i+j}M_{ij}$, donde $M_{ij}$ es el determinante $2\times2$ que queda al suprimir el renglón $i$ y la columna $j$. Los signos de las posiciones son
+Para matrices $3\times3$, se desarrolla por un renglón o una columna: cada entrada se multiplica por su cofactor $C_{ij}=(-1)^{i+j}M_{ij}$, donde $M_{ij}$ es el determinante $2\times2$ que queda al suprimir el renglón $i$ y la columna $j$ ([menores y cofactores](2026-11-04-sesion-44.qmd#menores-y-cofactores)). Los signos de las posiciones son
 
 $$
 \begin{bmatrix}+&-&+\\-&+&-\\+&-&+\end{bmatrix}.
@@ -26,37 +26,40 @@ Elegir un renglón o una columna con ceros reduce el número de menores. El resu
 
 Sean $A$ y $B$ matrices cuadradas del mismo tamaño. Se utilizarán las propiedades siguientes:
 
-- **Producto:** $\det(AB)=\det A\cdot\det B$.
-- **Intercambio:** si $A'$ resulta de intercambiar dos renglones o dos columnas de $A$, entonces $\det A'=-\det A$.
+- **Producto:** $\det(AB)=\det A\cdot\det B$, con $AB$ calculado mediante el [producto de matrices](2026-10-20-sesion-37.qmd#producto-de-dos-matrices).
+- **Intercambio** ([Sesión 44](2026-11-04-sesion-44.qmd#propiedades-elementales-de-los-determinantes)): si $A'$ resulta de intercambiar dos renglones o dos columnas de $A$, entonces $\det A'=-\det A$.
 - **Inversa:** si $\det A\ne0$, entonces $\det(A^{-1})=1/\det A$.
 
-Además, un renglón o una columna de ceros, o dos renglones o dos columnas iguales, dan determinante cero. Una matriz $2\times2$ o $3\times3$ es invertible exactamente cuando su determinante es distinto de cero.
+Las propiedades del producto y del intercambio se aceptan sin demostración. La de la inversa se deduce de $\det A\cdot\det(A^{-1})=\det(AA^{-1})=\det I=1$.
+
+Además, un renglón o una columna de ceros, o dos renglones o dos columnas iguales, dan determinante cero; las versiones por columnas se aceptan sin demostración. Una matriz $2\times2$ o $3\times3$ es invertible exactamente cuando su determinante es distinto de cero ([criterio de invertibilidad](2026-10-30-sesion-43.qmd#criterio-de-invertibilidad-mediante-el-determinante)).
 
 ## Errores frecuentes
 
-- **Invertir la resta en un menor.** Cada determinante $2\times2$ se calcula como $ad-bc$, conservando el orden de sus renglones y columnas.
-- **Confundir el signo de la entrada con el de su posición.** En una posición de signo negativo, una entrada $-2$ aporta $-(-2)M_{ij}=2M_{ij}$.
-- **Conservar el determinante después de un intercambio.** Un solo intercambio cambia el signo; dos intercambios sucesivos recuperan el signo inicial.
-- **Aplicar la propiedad de la inversa cuando el determinante es cero.** En ese caso no existe la inversa ni está definido $1/\det A$.
+- **Invertir la resta en un menor.** Falso: $\det\begin{bmatrix}3&5\\1&2\end{bmatrix}=5(1)-3(2)=-1$. Corrección: $ad-bc=3(2)-5(1)=1$.
+- **Omitir el signo de la posición.** Falso: para $G=\begin{bmatrix}1&2&0\\0&1&3\\2&0&1\end{bmatrix}$, por el primer renglón, $\det G=1(1)+2(-6)=-11$. Corrección: la posición $(1,2)$ lleva signo negativo, de modo que $\det G=1(1)-2(-6)=13$.
+- **Conservar el determinante después de un intercambio.** Falso: al intercambiar los renglones 1 y 2 de $G$, el determinante sigue siendo $13$. Corrección: un intercambio cambia el signo y da $-13$; dos intercambios sucesivos recuperan el signo inicial.
+- **Distribuir el determinante en una suma.** Falso: $\det(I_2+I_2)=\det I_2+\det I_2=2$. Corrección: $I_2+I_2=\begin{bmatrix}2&0\\0&2\end{bmatrix}$ y su determinante es $4$; $\det(A+B)=\det A+\det B$ no es una identidad.
+- **Aplicar la propiedad de la inversa cuando el determinante es cero.** Falso: como $\det\begin{bmatrix}1&2\\2&4\end{bmatrix}=0$, su inversa tiene determinante $0$. Corrección: esa matriz no tiene inversa y $1/\det A$ no está definido; la propiedad exige $\det A\ne0$.
 
 ## Actividad
 
-Resuelva primero de manera individual, con registro escrito. Después compare sus respuestas con un compañero o compañera y justifique cada corrección. En los determinantes $3\times3$, indique el renglón o la columna elegidos y escriba los menores que intervienen.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique cada corrección. En los determinantes $3\times3$, indique el renglón o la columna elegidos y escriba los menores que intervienen.
 
-Resuelva los ejercicios 1 a 4. Si concluye antes de la comprobación individual, continúe con el ejercicio 5. En los ejercicios 1 a 3, calcule los determinantes solicitados directamente antes de compararlos mediante las propiedades.
+Resuelva los ejercicios 1, 2 y 3. Si concluye antes de la comprobación individual, continúe con el ejercicio 4. Cuando se pida comparar un cálculo con una propiedad, realice primero el cálculo directo indicado.
 
 1. Considere las matrices
 
    $$
    A=\begin{bmatrix}3&1\\4&2\end{bmatrix},\qquad
    B=\begin{bmatrix}2&-1\\1&1\end{bmatrix},\qquad
-   C=AB=\begin{bmatrix}7&-2\\10&-2\end{bmatrix},\qquad
+   K=AB=\begin{bmatrix}7&-2\\10&-2\end{bmatrix},\qquad
    V=A^{-1}=\begin{bmatrix}1&-\frac12\\-2&\frac32\end{bmatrix}.
    $$
 
-   a. Calcule $\det A$, $\det B$ y $\det C$. Compare $\det C$ con $\det A\cdot\det B$.
+   a. Calcule $\det A$, $\det B$ y $\det K$. Compare $\det K$ con $\det A\cdot\det B$.
 
-   b. Calcule $\det V$ a partir de sus entradas y compárelo con $1/\det A$. Determine $\det(B^{-1})$ sin obtener $B^{-1}$.
+   b. La matriz $V$ se obtuvo con la [fórmula de la inversa](2026-10-30-sesion-43.qmd#fórmula-de-la-inversa-de-una-matriz-22). Calcule $\det V$ a partir de sus entradas y compárelo con $1/\det A$. Determine $\det(B^{-1})$ sin obtener $B^{-1}$.
 
 2. Sean
 
@@ -86,19 +89,7 @@ Resuelva los ejercicios 1 a 4. Si concluye antes de la comprobación individual,
 
    c. Sin calcular las matrices inversas, determine $\det(D^{-1})$ y $\det(F^{-1})$. ¿Qué ocurre con el determinante al cambiar de signo todas las entradas de una sola columna, como al pasar de $D$ a $F$?
 
-4. Tres lotes de polvo metálico contienen únicamente cobre, zinc y estaño. Sus fracciones en masa se organizan en la matriz
-
-   $$
-   L=\begin{bmatrix}0.80&0.60&0.50\\0.20&0.40&0\\0&0&0.50\end{bmatrix}.
-   $$
-
-   Los renglones corresponden a cobre, zinc y estaño; las columnas, a los lotes 1, 2 y 3. Si $\mathbf{x}$ contiene las masas tomadas de los lotes, en gramos, entonces $L\mathbf{x}$ contiene las masas de los tres metales en una mezcla preparada sin pérdidas.
-
-   a. Calcule $\det L$ por el tercer renglón. Decida si las masas de los lotes pueden recuperarse de manera única cuando la mezcla es realizable con ellos.
-
-   b. Si la tabla se reordena intercambiando las columnas de los lotes 1 y 2, determine su nuevo determinante sin desarrollar de nuevo. ¿Cambia la posibilidad de recuperar las masas de manera única?
-
-5. Calcule por cofactores los determinantes de
+4. Calcule por cofactores los determinantes de
 
    $$
    Q=\begin{bmatrix}1&2&0\\3&-1&2\\1&2&0\end{bmatrix},\qquad
@@ -125,7 +116,7 @@ $$
 $$
 
 $$
-\det C=7(-2)-(-2)(10)=-14+20=6=2\cdot3.
+\det K=7(-2)-(-2)(10)=-14+20=6=2\cdot3.
 $$
 
 **1. b.**
@@ -204,20 +195,9 @@ $$
 \det(D^{-1})=\frac18,\qquad \det(F^{-1})=-\frac18.
 $$
 
-Cambiar de signo una sola columna cambia de signo el determinante. En este caso también se comprueba mediante el producto por $E$; las entradas de las otras columnas permanecen iguales.
+Como $F=DE$ y $\det E=-1$, la propiedad del producto da $\det F=-\det D$. Para cualquier matriz $3\times3$, multiplicarla por $E$ a la derecha cambia de signo su tercera columna y multiplica su determinante por $-1$. El mismo argumento se aplica a las otras columnas colocando el $-1$ en la posición diagonal correspondiente.
 
-**4. a.** En el tercer renglón solo la posición $(3,3)$ es no nula y tiene signo positivo:
-
-$$
-\det L=0.50\cdot\det\begin{bmatrix}0.80&0.60\\0.20&0.40\end{bmatrix}
-=0.50\bigl(0.32-0.12\bigr)=0.10.
-$$
-
-Como $L$ es invertible, las masas se recuperan de manera única. La hipótesis de que la mezcla es realizable asegura que las masas recuperadas son no negativas.
-
-**4. b.** El nuevo determinante es $-0.10$. Sigue siendo no nulo: reordenar los lotes cambia el orden de las cantidades recuperadas, pero conserva la unicidad.
-
-**5.** Por la tercera columna de $Q$, solo contribuye la posición $(2,3)$, de signo negativo:
+**4.** Por la tercera columna de $Q$, solo contribuye la posición $(2,3)$, de signo negativo:
 
 $$
 \det Q=-2\cdot\det\begin{bmatrix}1&2\\1&2\end{bmatrix}=-2(2-2)=0.
@@ -241,31 +221,25 @@ El intercambio de columnas da determinante $5$. Como $\det W\ne0$, existe $W^{-1
 
 Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar los desarrollos por cofactores y las propiedades. Consulte las respuestas después de completar su intento.
 
-1. Tres lotes de polvo contienen únicamente cobre, zinc y estaño. Sus fracciones en masa forman la matriz
+1. Sea
 
    $$
-   M=\begin{bmatrix}\frac12&\frac14&0\\\frac12&\frac12&\frac14\\0&\frac14&\frac34\end{bmatrix},
+   N=\begin{bmatrix}\frac12&\frac14&0\\\frac12&\frac12&\frac14\\0&\frac14&\frac34\end{bmatrix}.
    $$
 
-   con renglones cobre, zinc y estaño y columnas lotes 1, 2 y 3. El producto $M\mathbf{x}$ proporciona las masas de los metales al mezclar sin pérdidas las masas de los lotes contenidas en $\mathbf{x}$.
+   a. Calcule $\det N$ por cofactores, indicando el renglón o la columna elegidos.
 
-   a. Calcule $\det M$ por cofactores y decida si, para una mezcla realizable, las masas de los lotes se recuperan de manera única.
+   b. Determine $\det(N^{-1})$ sin obtener la inversa.
 
-   b. Determine $\det(M^{-1})$ sin obtener la inversa.
+   c. Sustituya la tercera columna de $N$ por una copia de la segunda y calcule el determinante de la matriz resultante. Compare con la propiedad de las columnas iguales.
 
-   c. Si el lote 3 tuviera exactamente la composición del lote 2, determine el nuevo determinante y explique qué ocurriría con la recuperación del reparto entre esos dos lotes.
+2. Sea $T=\begin{bmatrix}1&1\\\frac14&\frac34\end{bmatrix}$.
 
-2. Se preparan sin pérdidas $400$ g de una mezcla con $200$ g de níquel, usando $x,y\ge0$ gramos de dos polvos que contienen $25\,\%$ y $75\,\%$ de níquel en masa, respectivamente. Las ecuaciones son
+   a. Calcule $\det T$ mediante $ad-bc$.
 
-   $$
-   x+y=400,\qquad \frac14x+\frac34y=200.
-   $$
+   b. Intercambie los dos renglones de $T$ y calcule directamente el nuevo determinante. Compare ambos resultados.
 
-   a. Escriba la matriz de coeficientes $T$, calcule su determinante y decida si el sistema tiene solución única.
-
-   b. Verifique si $x=y=200$ satisface ambas ecuaciones y es admisible.
-
-   c. Si se escribe primero la ecuación del níquel y después la de masa total, determine el nuevo determinante. Explique si se modifica la solución.
+   c. Determine $\det(T^{-1})$ sin obtener la inversa.
 
 3. Para $H=\begin{bmatrix}1&2&0\\2&1&-1\\0&3&2\end{bmatrix}$, un estudiante escribe
 
@@ -296,17 +270,17 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
 
-**1. a.** $\det M=1/16\ne0$; la recuperación es única.
+**1. a.** $\det N=1/16$.
 
-**1. b.** $\det(M^{-1})=16$.
+**1. b.** $\det(N^{-1})=16$.
 
-**1. c.** El determinante es $0$, pues las columnas 2 y 3 serían iguales. La composición de la mezcla no permitiría distinguir el reparto entre esos dos lotes.
+**1. c.** $0$, en concordancia con la propiedad de las columnas iguales.
 
-**2. a.** $T=\begin{bmatrix}1&1\\\frac14&\frac34\end{bmatrix}$; $\det T=1/2\ne0$. El sistema tiene solución única.
+**2. a.** $\det T=1/2$.
 
-**2. b.** Sí: $200+200=400$ g y $(1/4)(200)+(3/4)(200)=200$ g de níquel. Ambas masas son no negativas.
+**2. b.** $-1/2$; el intercambio cambia el signo.
 
-**2. c.** $-1/2$. La solución sigue siendo $(200,200)$; se intercambian los renglones, y el orden de las ecuaciones no altera las soluciones.
+**2. c.** $\det(T^{-1})=2$.
 
 **3.** $\det H=-3$ por ambas elecciones. La posición $(1,2)$ lleva signo negativo; la contribución de la entrada $2$ debe ser $-8$.
 
@@ -322,9 +296,11 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar l
 
 ## Conclusiones del aprendizaje
 
+El cálculo por cofactores requiere conservar el orden de los renglones y columnas de cada menor y aplicar el signo de su posición. Los resultados permiten comprobar el efecto de los intercambios y las propiedades del producto y de la inversa; la igualdad $\det(A+B)=\det A+\det B$ no es una identidad.
+
 Al revisar su trabajo, compruebe si puede:
 
-- Calcular un determinante $2\times2$ respetando el orden $ad-bc$, y uno $3\times3$ registrando las entradas, los signos de las posiciones y los menores.
-- Verificar un desarrollo por cofactores mediante otro renglón o columna, como en el ejercicio 2 de la Actividad.
-- Reconocer en los resultados el cambio de signo por un intercambio, la propiedad $\det(AB)=\det A\cdot\det B$ y la relación $\det(A^{-1})=1/\det A$ cuando $\det A\ne0$.
-- Identificar determinantes nulos mediante renglones o columnas de ceros o iguales, y distinguirlos de los determinantes no nulos que permiten recuperar cantidades de manera única.
+- Calcular un determinante $2\times2$ mediante $ad-bc$ y uno $3\times3$ registrando entradas, signos y menores, como en los ejercicios 1 y 3 de la [Actividad](#actividad).
+- Comprobar un desarrollo por otro renglón o columna, como en el ejercicio 2 de la [Actividad](#actividad) y el ejercicio 3 de la [práctica](#ejercicios-para-practicar).
+- Reconocer en los resultados el cambio de signo por un intercambio y las propiedades del producto y de la inversa del [Recordatorio](#recordatorio), como en los ejercicios 1 a 3 de la [Actividad](#actividad).
+- Calcular determinantes nulos mediante renglones o columnas de ceros o iguales, como en el ejercicio 4 de la [Actividad](#actividad) y el ejercicio 1 de la [práctica](#ejercicios-para-practicar).
