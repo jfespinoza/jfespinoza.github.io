@@ -1,24 +1,24 @@
 ---
-title: "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3"
+title: "Sesión 46. Regla de Cramer para sistemas de ecuaciones"
 date: 2026-11-06
 description: "Resolución de sistemas 2×2 y 3×3 mediante determinantes y verificación por sustitución."
 ---
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá resolver sistemas $2\times2$ y $3\times3$ por la regla de Cramer, formar correctamente las matrices de sustitución y verificar la solución en las ecuaciones originales. También podrá reconocer cuándo el determinante de la matriz de coeficientes impide aplicar la regla.
+Al finalizar la sesión podrá resolver sistemas $2\times2$ y $3\times3$ por la regla de Cramer, formar las matrices de sustitución, verificar la solución y reconocer cuándo el determinante impide aplicar la regla. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1, 2 y 3 y la comprobación individual de la [Actividad](#actividad).
 
 ## Regla de Cramer
 
-Un sistema con el mismo número de ecuaciones que de incógnitas tiene una matriz de coeficientes $A$ cuadrada y se escribe como $A\mathbf{x}=\mathbf{b}$, donde $\mathbf{b}$ es la columna de términos independientes ([Sesión 36](2026-10-19-sesion-36.qmd#tres-representaciones-de-un-sistema)). Mantenga el mismo orden de incógnitas en todas las ecuaciones y escriba un $0$ por cada coeficiente ausente.
+Un sistema con el mismo número de ecuaciones que de incógnitas tiene una matriz de coeficientes $A$ cuadrada y se escribe como $A\mathbf{x}=\mathbf{b}$, donde $\mathbf{b}$ es la columna de términos independientes ([Sesión 36](2026-10-19-sesion-36.qmd#tres-representaciones-de-un-sistema)). Mantenga el mismo orden de incógnitas en todas las ecuaciones y escriba un $0$ por cada coeficiente ausente, como en la [matriz de coeficientes](2026-09-23-sesion-29.qmd#matriz-de-coeficientes-y-matriz-aumentada).
 
-Para cada incógnita se forma una matriz a partir de $A$:
+Para cada incógnita se forma una **matriz de sustitución** a partir de $A$:
 
 - $A_x$: se sustituye la columna de los coeficientes de $x$ por $\mathbf{b}$.
 - $A_y$: se sustituye la columna de los coeficientes de $y$ por $\mathbf{b}$.
 - $A_z$: en un sistema $3\times3$, se sustituye la columna de los coeficientes de $z$ por $\mathbf{b}$.
 
-Las demás columnas conservan sus valores y sus posiciones. Cada matriz se forma a partir de la matriz original $A$, no de la sustitución anterior.
+Las demás columnas conservan sus valores y sus posiciones. Cada matriz se forma a partir de la matriz original $A$, no de la sustitución anterior. El subíndice indica la columna sustituida; $A_x$ no es el producto $A\mathbf{x}$.
 
 **Regla de Cramer.** Si $A$ es una matriz real $2\times2$ o $3\times3$ y $\det A\ne0$, el sistema tiene una única solución:
 
@@ -30,15 +30,17 @@ $$
 
 donde la tercera fórmula corresponde únicamente al caso $3\times3$. El denominador es el mismo para todas las incógnitas.
 
-En el caso $ax+by=p$, $cx+dy=q$, eliminar $y$ y después $x$ da
+Como $\det A\ne0$, la matriz $A$ es invertible ([caso $2\times2$](2026-10-30-sesion-43.qmd#criterio-de-invertibilidad-mediante-el-determinante) y [caso $3\times3$](2026-11-04-sesion-44.qmd#ejemplo-2.-determinante-nulo-e-invertibilidad)); por eso el sistema tiene exactamente una solución, $\mathbf{x}=A^{-1}\mathbf{b}$ ([Sesión 40](2026-10-27-sesion-40.qmd#resolver-un-sistema-con-la-inversa)). La regla de Cramer calcula esa solución sin obtener $A^{-1}$.
+
+En el caso $ax+by=p$, $cx+dy=q$, el [método de eliminación](2026-09-22-sesion-28.qmd#método-de-eliminación) aplicado para eliminar $y$ y después $x$ da
 
 $$
 (ad-bc)x=pd-bq,\qquad (ad-bc)y=aq-pc.
 $$
 
-Los factores y términos de estas igualdades son, respectivamente, $\det A$, $\det A_x$ y $\det A_y$. Como $\det A\ne0$, se puede dividir y obtener las fórmulas. La regla para $3\times3$ se acepta sin demostración.
+El coeficiente común $ad-bc$ es $\det A$, y los lados derechos son $\det A_x$ y $\det A_y$. Como $\det A\ne0$, se puede dividir: toda solución tiene esos valores. La regla para $3\times3$ se acepta sin demostración.
 
-Si $\det A=0$, no se divide entre ese valor: la regla no se aplica. El determinante nulo por sí solo no permite decidir si el sistema tiene infinitas soluciones o ninguna; para distinguirlas se utiliza el escalonamiento de la matriz aumentada.
+Si $\det A=0$, no se divide entre ese valor: la regla no se aplica. El determinante nulo por sí solo no permite decidir si el sistema tiene infinitas soluciones o ninguna; para distinguirlas se reduce la matriz aumentada con el [método de Gauss-Jordan](2026-10-06-sesion-32.qmd#método-de-gauss-jordan) y se aplica la [lectura del tipo de solución](2026-10-06-sesion-32.qmd#lectura-del-tipo-de-solución), como en el ejercicio 5 de la [práctica](#ejercicios-para-practicar).
 
 ## Procedimiento de resolución
 
@@ -144,15 +146,15 @@ $$
 
 ## Errores frecuentes
 
-- **Sustituir un renglón.** En el Ejemplo 1, $A_x=\begin{bmatrix}8&2\\12&-4\end{bmatrix}$: los términos independientes sustituyen la primera columna, no el primer renglón.
-- **Cambiar el orden de las columnas.** En el Ejemplo 1, $A_y=\begin{bmatrix}3&8\\1&12\end{bmatrix}$. Colocar $\mathbf{b}$ primero e intercambiar las columnas cambia el signo del determinante y da un valor incorrecto de $y$.
-- **Invertir el cociente.** En el Ejemplo 1, $x=(-56)/(-14)=4$; el cociente $(-14)/(-56)=1/4$ no corresponde a la regla.
-- **Omitir coeficientes cero o signos de cofactores.** En el Ejemplo 2, la primera ecuación tiene coeficientes $(1,-1,0)$ y la posición $(1,2)$ lleva signo negativo. La entrada $-1$ aporta $-(-1)M_{12}$.
-- **Dividir entre cero.** Si $\det A=0$, no se calculan los cocientes de Cramer ni se concluye por ello que el sistema carece de soluciones.
+- **Sustituir un renglón.** Falso: en el Ejemplo 1, $A_x=\begin{bmatrix}8&12\\1&-4\end{bmatrix}$, de modo que $x=\frac{-44}{-14}=\frac{22}{7}$. Corrección: los términos independientes sustituyen la primera **columna**: $A_x=\begin{bmatrix}8&2\\12&-4\end{bmatrix}$, $\det A_x=-56$ y $x=4$.
+- **Cambiar el orden de las columnas.** Falso: en el Ejemplo 1, con $\mathbf{b}$ en la primera columna, $A_y=\begin{bmatrix}8&3\\12&1\end{bmatrix}$ y $y=\frac{-28}{-14}=2$. Corrección: $\mathbf{b}$ ocupa la segunda columna y la primera no se mueve: $A_y=\begin{bmatrix}3&8\\1&12\end{bmatrix}$ y $y=-2$. Intercambiar dos columnas cambia el signo del determinante ([Sesión 45](2026-11-05-sesion-45.qmd#recordatorio)).
+- **Invertir el cociente.** Falso: en el Ejemplo 1, $x=\frac{\det A}{\det A_x}=\frac{-14}{-56}=\frac14$. Corrección: el denominador es $\det A$, de modo que $x=\frac{-56}{-14}=4$.
+- **Omitir el signo de un cofactor.** Falso: en el Ejemplo 2, por el primer renglón, $\det A=1(-2)+(-1)(-3)=1$. Corrección: la posición $(1,2)$ lleva signo negativo, así que la entrada $-1$ aporta $-(-1)M_{12}=-3$ y $\det A=-2-3=-5$. El $0$ de la tercera posición se conserva: sin él, la matriz no sería $3\times3$.
+- **Concluir que no hay solución porque $\det A=0$.** Falso: el sistema $2x-y=3$, $-4x+2y=-6$ tiene $\det A=0$; por tanto, no tiene solución. Corrección: $(2,1)$ y $(0,-3)$ cumplen ambas ecuaciones. Con $\det A=0$ no se calculan los cocientes de Cramer; el escalonamiento decide si hay infinitas soluciones o ninguna.
 
 ## Actividad
 
-Resuelva primero de manera individual, con registro escrito. Después compare sus resultados con un compañero o compañera y justifique cada corrección. En cada sistema, escriba $A$ y $\mathbf{b}$, calcule $\det A$ antes de formar las matrices de sustitución y verifique la solución en las ecuaciones originales. Para los determinantes $3\times3$, indique el renglón o la columna elegidos y registre los menores.
+Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique cada corrección. En cada sistema, escriba $A$ y $\mathbf{b}$, calcule $\det A$ antes de formar las matrices de sustitución y verifique la solución en las ecuaciones originales. Para los determinantes $3\times3$, indique el renglón o la columna elegidos y registre los menores.
 
 Resuelva los ejercicios 1, 2 y 3. Si concluye antes de la comprobación individual, continúe con el ejercicio 4.
 
@@ -313,7 +315,12 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar e
    \left\{\begin{aligned}3y+z&=2\\x-z&=-1\\2x-y&=-5\end{aligned}\right.
    $$
 
-2. Resuelva por la regla de Cramer el sistema $4x+3y=2$, $3x+2y=1$ y verifique la solución.
+2. Resuelva por la regla de Cramer el sistema $4x+3y=2$, $3x+2y=1$ y verifique la solución. Como comprobación, use la inversa dada y calcule $A^{-1}\mathbf{b}$, como en la [resolución mediante la inversa](2026-10-27-sesion-40.qmd#resolver-un-sistema-con-la-inversa):
+
+   $$
+   A^{-1}=\begin{bmatrix}-2&3\\3&-4\end{bmatrix},\qquad
+   \mathbf{b}=\begin{bmatrix}2\\1\end{bmatrix}.
+   $$
 
 3. Para el sistema $2x+y=5$, $x-y=1$, un estudiante calcula $\det A=-3$, pero forma
 
@@ -329,7 +336,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar e
    \left\{\begin{aligned}2x+z&=5\\x+y&=3\\y+2z&=8\end{aligned}\right.
    $$
 
-5. Calcule el determinante de la matriz de coeficientes de cada sistema y decida si se puede aplicar la regla de Cramer. No efectúe cocientes si el determinante es cero.
+5. Calcule el determinante de la matriz de coeficientes de cada sistema y decida si se puede aplicar la regla de Cramer. Si el determinante es cero, no efectúe cocientes: decida con el método de Gauss-Jordan si el sistema tiene infinitas soluciones o ninguna.
 
    a. $x-2y=3$, $-2x+4y=-6$.
 
@@ -339,15 +346,15 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar e
 
 **1.** $\det A=-7$, $\det A_x=14$, $\det A_y=-7$, $\det A_z=7$; la solución es $(-2,1,-1)$.
 
-**2.** $\det A=-1$, $\det A_x=1$, $\det A_y=-2$; la solución es $(-1,2)$.
+**2.** $\det A=-1$, $\det A_x=1$, $\det A_y=-2$; la solución es $(-1,2)$. También $A^{-1}\mathbf{b}=(-1,2)^{\mathsf T}$.
 
 **3.** Se intercambiaron las columnas al formar $A_y$. La matriz correcta es $A_y=\begin{bmatrix}2&5\\1&1\end{bmatrix}$; $\det A_y=-3$, $y=1$. Además, $\det A_x=-6$ y $x=2$; la solución es $(2,1)$.
 
 **4.** $\det A=5$, $\det A_x=5$, $\det A_y=10$, $\det A_z=15$; la solución es $(1,2,3)$.
 
-**5. a.** $\det A=0$; la regla no se aplica.
+**5. a.** $\det A=0$; la regla no se aplica. El sistema tiene infinitas soluciones: $\{(3+2t,t):t\in\mathbb R\}$.
 
-**5. b.** $\det A=0$; la regla no se aplica.
+**5. b.** $\det A=0$; la regla no se aplica. El sistema es inconsistente: su reducción exige $0=-1$. Los dos sistemas tienen determinante cero y distintos tipos de solución.
 
 :::
 
@@ -357,6 +364,6 @@ La regla de Cramer requiere un sistema cuadrado con $\det A\ne0$. Cada incógnit
 
 Al revisar su trabajo, compruebe si puede:
 
-- Formar $A_x$, $A_y$ y $A_z$ conservando las otras columnas de la matriz original.
+- Formar $A_x$, $A_y$ y $A_z$ conservando las otras columnas de la matriz original, como en el [Ejemplo 2](#ejemplo-2.-sistema-de-tres-ecuaciones) y el ejercicio 3 de la [Actividad](#actividad).
 - Resolver sistemas $2\times2$ y $3\times3$ con los cocientes correctos y verificar todas sus ecuaciones, como en los ejercicios 1 a 3 de la [Actividad](#actividad).
 - Reconocer que $\det A=0$ impide aplicar la regla y que ese valor por sí solo no determina si hay soluciones, como en el ejercicio 5 de la [práctica](#ejercicios-para-practicar).
