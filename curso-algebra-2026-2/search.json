@@ -4230,6 +4230,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-11-06-sesion-46.html",
+    "href": "sesiones/2026-11-06-sesion-46.html",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá resolver sistemas \\(2\\times2\\) y \\(3\\times3\\) por la regla de Cramer, formar correctamente las matrices de sustitución y verificar la solución en las ecuaciones originales. También podrá reconocer cuándo el determinante de la matriz de coeficientes impide aplicar la regla.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#regla-de-cramer",
+    "href": "sesiones/2026-11-06-sesion-46.html#regla-de-cramer",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Regla de Cramer",
+    "text": "Regla de Cramer\nUn sistema con el mismo número de ecuaciones que de incógnitas tiene una matriz de coeficientes \\(A\\) cuadrada y se escribe como \\(A\\mathbf{x}=\\mathbf{b}\\), donde \\(\\mathbf{b}\\) es la columna de términos independientes (Sesión 36). Mantenga el mismo orden de incógnitas en todas las ecuaciones y escriba un \\(0\\) por cada coeficiente ausente.\nPara cada incógnita se forma una matriz a partir de \\(A\\):\n\n\\(A_x\\): se sustituye la columna de los coeficientes de \\(x\\) por \\(\\mathbf{b}\\).\n\\(A_y\\): se sustituye la columna de los coeficientes de \\(y\\) por \\(\\mathbf{b}\\).\n\\(A_z\\): en un sistema \\(3\\times3\\), se sustituye la columna de los coeficientes de \\(z\\) por \\(\\mathbf{b}\\).\n\nLas demás columnas conservan sus valores y sus posiciones. Cada matriz se forma a partir de la matriz original \\(A\\), no de la sustitución anterior.\nRegla de Cramer. Si \\(A\\) es una matriz real \\(2\\times2\\) o \\(3\\times3\\) y \\(\\det A\\ne0\\), el sistema tiene una única solución:\n\\[\nx=\\frac{\\det A_x}{\\det A},\\qquad\ny=\\frac{\\det A_y}{\\det A},\\qquad\nz=\\frac{\\det A_z}{\\det A},\n\\]\ndonde la tercera fórmula corresponde únicamente al caso \\(3\\times3\\). El denominador es el mismo para todas las incógnitas.\nEn el caso \\(ax+by=p\\), \\(cx+dy=q\\), eliminar \\(y\\) y después \\(x\\) da\n\\[\n(ad-bc)x=pd-bq,\\qquad (ad-bc)y=aq-pc.\n\\]\nLos factores y términos de estas igualdades son, respectivamente, \\(\\det A\\), \\(\\det A_x\\) y \\(\\det A_y\\). Como \\(\\det A\\ne0\\), se puede dividir y obtener las fórmulas. La regla para \\(3\\times3\\) se acepta sin demostración.\nSi \\(\\det A=0\\), no se divide entre ese valor: la regla no se aplica. El determinante nulo por sí solo no permite decidir si el sistema tiene infinitas soluciones o ninguna; para distinguirlas se utiliza el escalonamiento de la matriz aumentada.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#procedimiento-de-resolución",
+    "href": "sesiones/2026-11-06-sesion-46.html#procedimiento-de-resolución",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Procedimiento de resolución",
+    "text": "Procedimiento de resolución\n\nOrdene las incógnitas en cada ecuación y forme \\(A\\) y \\(\\mathbf{b}\\).\nCalcule \\(\\det A\\). Si es cero, detenga la aplicación de la regla.\nForme \\(A_x\\), \\(A_y\\) y, cuando corresponda, \\(A_z\\), sustituyendo una sola columna de \\(A\\) en cada caso.\nCalcule los determinantes y divida cada uno entre \\(\\det A\\).\nSustituya la pareja o terna obtenida en todas las ecuaciones originales.\n\nPara los determinantes \\(2\\times2\\) use \\(ad-bc\\). Para los \\(3\\times3\\), use el desarrollo por cofactores y elija en cada matriz un renglón o una columna con ceros cuando los haya. Después de sustituir una columna, revise de nuevo qué elección requiere menos menores.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#ejemplos",
+    "href": "sesiones/2026-11-06-sesion-46.html#ejemplos",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Sistema de dos ecuaciones\nResuelva\n\\[\n\\left\\{\\begin{aligned}3x+2y&=8\\\\x-4y&=12\\end{aligned}\\right.\n\\]\nLa matriz de coeficientes y la columna de términos independientes son\n\\[\nA=\\begin{bmatrix}3&2\\\\1&-4\\end{bmatrix},\\qquad\n\\mathbf{b}=\\begin{bmatrix}8\\\\12\\end{bmatrix},\\qquad\n\\det A=3(-4)-2(1)=-14\\ne0.\n\\]\nLa regla se aplica. Al sustituir, por separado, la primera y la segunda columna de \\(A\\) por \\(\\mathbf{b}\\):\n\\[\n\\det A_x=\\det\\begin{bmatrix}8&2\\\\12&-4\\end{bmatrix}=8(-4)-2(12)=-56,\n\\qquad\n\\det A_y=\\det\\begin{bmatrix}3&8\\\\1&12\\end{bmatrix}=3(12)-8(1)=28.\n\\]\nPor tanto,\n\\[\nx=\\frac{-56}{-14}=4,\\qquad y=\\frac{28}{-14}=-2.\n\\]\nVerificación: \\(3(4)+2(-2)=12-4=8\\) y \\(4-4(-2)=4+8=12\\).\n\n\nEjemplo 2. Sistema de tres ecuaciones\nResuelva\n\\[\n\\left\\{\\begin{aligned}x-y&=1\\\\2y+z&=5\\\\3x-z&=3\\end{aligned}\\right.\n\\]\nCon un \\(0\\) por cada incógnita ausente,\n\\[\nA=\\begin{bmatrix}1&-1&0\\\\0&2&1\\\\3&0&-1\\end{bmatrix},\\qquad\n\\mathbf{b}=\\begin{bmatrix}1\\\\5\\\\3\\end{bmatrix}.\n\\]\nCada una de las cuatro matrices tiene un renglón o una columna con un cero, de modo que cada determinante requiere dos menores. Por el primer renglón de \\(A\\), con signos \\(+\\) y \\(-\\):\n\\[\n\\det A=1\\cdot\\det\\begin{bmatrix}2&1\\\\0&-1\\end{bmatrix}\n-(-1)\\cdot\\det\\begin{bmatrix}0&1\\\\3&-1\\end{bmatrix}\n=-2+(-3)=-5\\ne0.\n\\]\nPor el primer renglón de \\(A_x\\), que conserva el cero de la tercera columna:\n\\[\n\\det A_x=\\det\\begin{bmatrix}1&-1&0\\\\5&2&1\\\\3&0&-1\\end{bmatrix}\n=1\\cdot\\det\\begin{bmatrix}2&1\\\\0&-1\\end{bmatrix}\n-(-1)\\cdot\\det\\begin{bmatrix}5&1\\\\3&-1\\end{bmatrix}\n=-2+(-8)=-10.\n\\]\nPor el primer renglón de \\(A_y\\):\n\\[\n\\det A_y=\\det\\begin{bmatrix}1&1&0\\\\0&5&1\\\\3&3&-1\\end{bmatrix}\n=1\\cdot\\det\\begin{bmatrix}5&1\\\\3&-1\\end{bmatrix}\n-1\\cdot\\det\\begin{bmatrix}0&1\\\\3&-1\\end{bmatrix}\n=-8-(-3)=-5.\n\\]\nPor la primera columna de \\(A_z\\), con signos \\(+\\), \\(-\\) y \\(+\\):\n\\[\n\\det A_z=\\det\\begin{bmatrix}1&-1&1\\\\0&2&5\\\\3&0&3\\end{bmatrix}\n=1\\cdot\\det\\begin{bmatrix}2&5\\\\0&3\\end{bmatrix}\n+3\\cdot\\det\\begin{bmatrix}-1&1\\\\2&5\\end{bmatrix}\n=6+3(-7)=-15.\n\\]\nPor tanto,\n\\[\nx=\\frac{-10}{-5}=2,\\qquad y=\\frac{-5}{-5}=1,\\qquad z=\\frac{-15}{-5}=3.\n\\]\nVerificación: \\(2-1=1\\), \\(2(1)+3=5\\) y \\(3(2)-3=3\\).",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#errores-frecuentes",
+    "href": "sesiones/2026-11-06-sesion-46.html#errores-frecuentes",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nSustituir un renglón. En el Ejemplo 1, \\(A_x=\\begin{bmatrix}8&2\\\\12&-4\\end{bmatrix}\\): los términos independientes sustituyen la primera columna, no el primer renglón.\nCambiar el orden de las columnas. En el Ejemplo 1, \\(A_y=\\begin{bmatrix}3&8\\\\1&12\\end{bmatrix}\\). Colocar \\(\\mathbf{b}\\) primero e intercambiar las columnas cambia el signo del determinante y da un valor incorrecto de \\(y\\).\nInvertir el cociente. En el Ejemplo 1, \\(x=(-56)/(-14)=4\\); el cociente \\((-14)/(-56)=1/4\\) no corresponde a la regla.\nOmitir coeficientes cero o signos de cofactores. En el Ejemplo 2, la primera ecuación tiene coeficientes \\((1,-1,0)\\) y la posición \\((1,2)\\) lleva signo negativo. La entrada \\(-1\\) aporta \\(-(-1)M_{12}\\).\nDividir entre cero. Si \\(\\det A=0\\), no se calculan los cocientes de Cramer ni se concluye por ello que el sistema carece de soluciones.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#actividad",
+    "href": "sesiones/2026-11-06-sesion-46.html#actividad",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero de manera individual, con registro escrito. Después compare sus resultados con un compañero o compañera y justifique cada corrección. En cada sistema, escriba \\(A\\) y \\(\\mathbf{b}\\), calcule \\(\\det A\\) antes de formar las matrices de sustitución y verifique la solución en las ecuaciones originales. Para los determinantes \\(3\\times3\\), indique el renglón o la columna elegidos y registre los menores.\nResuelva los ejercicios 1, 2 y 3. Si concluye antes de la comprobación individual, continúe con el ejercicio 4.\n\nResuelva por la regla de Cramer:\n\\[\n\\left\\{\\begin{aligned}2x+5y&=1\\\\3x-y&=10\\end{aligned}\\right.\n\\]\nOrdene las incógnitas, incluya los coeficientes cero y resuelva por la regla de Cramer:\n\\[\n\\left\\{\\begin{aligned}x&=-2y\\\\y+3z&=2\\\\2x+z&=5\\end{aligned}\\right.\n\\]\nResuelva por la regla de Cramer, calculando los cuatro determinantes:\n\\[\n\\left\\{\\begin{aligned}x+2y&=5\\\\2x+y+z&=3\\\\3y+z&=5\\end{aligned}\\right.\n\\]\nResuelva por la regla de Cramer y exprese los resultados como fracciones exactas:\n\\[\n\\left\\{\\begin{aligned}4x+3y&=5\\\\2x-3y&=1\\end{aligned}\\right.\n\\]\n\nComprobación individual. Sin consultar las soluciones ni comparar respuestas, resuelva por la regla de Cramer el sistema \\(3x+2y=4\\), \\(5x+4y=6\\) y verifique la solución. Indique también por qué no se puede aplicar la regla cuando \\(\\det A=0\\) y si ese dato basta para afirmar que un sistema no tiene solución.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. \\(A=\\begin{bmatrix}2&5\\\\3&-1\\end{bmatrix}\\), con \\(\\det A=2(-1)-5(3)=-17\\ne0\\).\n\\[\n\\det A_x=\\det\\begin{bmatrix}1&5\\\\10&-1\\end{bmatrix}=-1-50=-51,\n\\qquad\n\\det A_y=\\det\\begin{bmatrix}2&1\\\\3&10\\end{bmatrix}=20-3=17.\n\\]\nAsí, \\(x=\\frac{-51}{-17}=3\\) y \\(y=\\frac{17}{-17}=-1\\). Verificación: \\(2(3)+5(-1)=1\\) y \\(3(3)-(-1)=10\\).\n2. En la forma ordenada, el sistema es \\(x+2y=0\\), \\(y+3z=2\\), \\(2x+z=5\\), con\n\\[\nA=\\begin{bmatrix}1&2&0\\\\0&1&3\\\\2&0&1\\end{bmatrix},\\qquad\n\\mathbf{b}=\\begin{bmatrix}0\\\\2\\\\5\\end{bmatrix}.\n\\]\nPor el primer renglón de \\(A\\):\n\\[\n\\det A=1\\cdot\\det\\begin{bmatrix}1&3\\\\0&1\\end{bmatrix}\n-2\\cdot\\det\\begin{bmatrix}0&3\\\\2&1\\end{bmatrix}\n=1-2(-6)=13.\n\\]\nEl primer renglón de \\(A_x\\) tiene dos ceros; solo contribuye la posición \\((1,2)\\), de signo negativo:\n\\[\n\\det A_x=\\det\\begin{bmatrix}0&2&0\\\\2&1&3\\\\5&0&1\\end{bmatrix}\n=-2\\cdot\\det\\begin{bmatrix}2&3\\\\5&1\\end{bmatrix}=-2(-13)=26.\n\\]\nEl primer renglón de \\(A_y\\) también tiene dos ceros:\n\\[\n\\det A_y=\\det\\begin{bmatrix}1&0&0\\\\0&2&3\\\\2&5&1\\end{bmatrix}\n=1\\cdot\\det\\begin{bmatrix}2&3\\\\5&1\\end{bmatrix}=-13.\n\\]\nPor el primer renglón de \\(A_z\\):\n\\[\n\\det A_z=\\det\\begin{bmatrix}1&2&0\\\\0&1&2\\\\2&0&5\\end{bmatrix}\n=1\\cdot\\det\\begin{bmatrix}1&2\\\\0&5\\end{bmatrix}\n-2\\cdot\\det\\begin{bmatrix}0&2\\\\2&5\\end{bmatrix}\n=5-2(-4)=13.\n\\]\nAsí, \\(x=\\frac{26}{13}=2\\), \\(y=\\frac{-13}{13}=-1\\) y \\(z=\\frac{13}{13}=1\\). Verificación en las ecuaciones originales: \\(2=-2(-1)\\), \\(-1+3(1)=2\\) y \\(2(2)+1=5\\).\n3. La matriz de coeficientes y la columna de términos independientes son\n\\[\nA=\\begin{bmatrix}1&2&0\\\\2&1&1\\\\0&3&1\\end{bmatrix},\\qquad\n\\mathbf{b}=\\begin{bmatrix}5\\\\3\\\\5\\end{bmatrix}.\n\\]\nPor el primer renglón,\n\\[\n\\det A=1\\cdot\\det\\begin{bmatrix}1&1\\\\3&1\\end{bmatrix}\n-2\\cdot\\det\\begin{bmatrix}2&1\\\\0&1\\end{bmatrix}\n=-2-4=-6\\ne0.\n\\]\nLas matrices de sustitución se obtienen por separado a partir de \\(A\\):\n\\[\nA_x=\\begin{bmatrix}5&2&0\\\\3&1&1\\\\5&3&1\\end{bmatrix},\\qquad\nA_y=\\begin{bmatrix}1&5&0\\\\2&3&1\\\\0&5&1\\end{bmatrix},\\qquad\nA_z=\\begin{bmatrix}1&2&5\\\\2&1&3\\\\0&3&5\\end{bmatrix}.\n\\]\nPor el primer renglón de \\(A_x\\) y de \\(A_y\\):\n\\[\n\\det A_x=5\\cdot\\det\\begin{bmatrix}1&1\\\\3&1\\end{bmatrix}\n-2\\cdot\\det\\begin{bmatrix}3&1\\\\5&1\\end{bmatrix}\n=5(-2)-2(-2)=-6,\n\\]\n\\[\n\\det A_y=1\\cdot\\det\\begin{bmatrix}3&1\\\\5&1\\end{bmatrix}\n-5\\cdot\\det\\begin{bmatrix}2&1\\\\0&1\\end{bmatrix}\n=-2-10=-12.\n\\]\nPor la primera columna de \\(A_z\\), que tiene un cero:\n\\[\n\\det A_z=1\\cdot\\det\\begin{bmatrix}1&3\\\\3&5\\end{bmatrix}\n-2\\cdot\\det\\begin{bmatrix}2&5\\\\3&5\\end{bmatrix}\n=-4-2(-5)=6.\n\\]\nPor tanto,\n\\[\nx=\\frac{-6}{-6}=1,\\qquad y=\\frac{-12}{-6}=2,\\qquad z=\\frac{6}{-6}=-1.\n\\]\nVerificación: \\(1+2(2)=5\\), \\(2(1)+2+(-1)=3\\) y \\(3(2)+(-1)=5\\).\n4. \\(A=\\begin{bmatrix}4&3\\\\2&-3\\end{bmatrix}\\), con \\(\\det A=4(-3)-3(2)=-18\\ne0\\).\n\\[\n\\det A_x=\\det\\begin{bmatrix}5&3\\\\1&-3\\end{bmatrix}=-15-3=-18,\n\\qquad\n\\det A_y=\\det\\begin{bmatrix}4&5\\\\2&1\\end{bmatrix}=4-10=-6.\n\\]\nAsí, \\(x=\\frac{-18}{-18}=1\\) y \\(y=\\frac{-6}{-18}=\\frac13\\). Verificación: \\(4(1)+3\\left(\\frac13\\right)=5\\) y \\(2(1)-3\\left(\\frac13\\right)=1\\).\nComprobación individual. \\(\\det A=3(4)-2(5)=2\\ne0\\), \\(\\det A_x=\\det\\begin{bmatrix}4&2\\\\6&4\\end{bmatrix}=4\\) y \\(\\det A_y=\\det\\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}=-2\\). Así, \\(x=2\\) y \\(y=-1\\); verificación: \\(3(2)+2(-1)=4\\) y \\(5(2)+4(-1)=6\\).\nSi \\(\\det A=0\\), los cocientes no están definidos. Ese dato no distingue entre infinitas soluciones y ninguna: debe examinarse la matriz aumentada mediante escalonamiento.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-11-06-sesion-46.html#ejercicios-para-practicar",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 permiten reforzar el procedimiento y sus condiciones. Consulte las respuestas después de completar su intento.\n\nResuelva por la regla de Cramer y verifique la solución:\n\\[\n\\left\\{\\begin{aligned}3y+z&=2\\\\x-z&=-1\\\\2x-y&=-5\\end{aligned}\\right.\n\\]\nResuelva por la regla de Cramer el sistema \\(4x+3y=2\\), \\(3x+2y=1\\) y verifique la solución.\nPara el sistema \\(2x+y=5\\), \\(x-y=1\\), un estudiante calcula \\(\\det A=-3\\), pero forma\n\\[\nA_y=\\begin{bmatrix}5&2\\\\1&1\\end{bmatrix}\n\\]\ny obtiene \\(y=-1\\). Identifique el error, escriba la matriz \\(A_y\\) correcta, calcule \\(y\\) y complete la solución por Cramer. Verifique la pareja obtenida.\nResuelva por la regla de Cramer, conservando el orden \\(x,y,z\\):\n\\[\n\\left\\{\\begin{aligned}2x+z&=5\\\\x+y&=3\\\\y+2z&=8\\end{aligned}\\right.\n\\]\nCalcule el determinante de la matriz de coeficientes de cada sistema y decida si se puede aplicar la regla de Cramer. No efectúe cocientes si el determinante es cero.\n\n\\(x-2y=3\\), \\(-2x+4y=-6\\).\n\\(x+y=3\\), \\(y+3z=2\\), \\(x+2y+3z=4\\).\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. \\(\\det A=-7\\), \\(\\det A_x=14\\), \\(\\det A_y=-7\\), \\(\\det A_z=7\\); la solución es \\((-2,1,-1)\\).\n2. \\(\\det A=-1\\), \\(\\det A_x=1\\), \\(\\det A_y=-2\\); la solución es \\((-1,2)\\).\n3. Se intercambiaron las columnas al formar \\(A_y\\). La matriz correcta es \\(A_y=\\begin{bmatrix}2&5\\\\1&1\\end{bmatrix}\\); \\(\\det A_y=-3\\), \\(y=1\\). Además, \\(\\det A_x=-6\\) y \\(x=2\\); la solución es \\((2,1)\\).\n4. \\(\\det A=5\\), \\(\\det A_x=5\\), \\(\\det A_y=10\\), \\(\\det A_z=15\\); la solución es \\((1,2,3)\\).\n5. a. \\(\\det A=0\\); la regla no se aplica.\n5. b. \\(\\det A=0\\); la regla no se aplica.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-06-sesion-46.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-11-06-sesion-46.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nLa regla de Cramer requiere un sistema cuadrado con \\(\\det A\\ne0\\). Cada incógnita se obtiene sustituyendo su columna por \\(\\mathbf{b}\\) y dividiendo el nuevo determinante entre \\(\\det A\\). La comprobación por sustitución permite detectar errores de orden, signo o aritmética.\nAl revisar su trabajo, compruebe si puede:\n\nFormar \\(A_x\\), \\(A_y\\) y \\(A_z\\) conservando las otras columnas de la matriz original.\nResolver sistemas \\(2\\times2\\) y \\(3\\times3\\) con los cocientes correctos y verificar todas sus ecuaciones, como en los ejercicios 1 a 3 de la Actividad.\nReconocer que \\(\\det A=0\\) impide aplicar la regla y que ese valor por sí solo no determina si hay soluciones, como en el ejercicio 5 de la práctica.",
+    "crumbs": [
+      "Unidad 4. Matrices",
+      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span>"
+    ]
+  },
+  {
     "objectID": "unidades/05-conceptos-algebra-lineal.html",
     "href": "unidades/05-conceptos-algebra-lineal.html",
     "title": "Unidad 5. Conceptos básicos de álgebra lineal",
@@ -4237,7 +4325,7 @@
     "text": "Contenidos\nDuración prevista: 5 horas.\nLos conceptos se relacionarán con la existencia y la forma de las soluciones de un sistema de ecuaciones lineales.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -4248,7 +4336,7 @@
     "text": "Combinaciones lineales.\nDependencia e independencia lineal.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
-      "<span class='chapter-number'>57</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
+      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Unidad 5. Conceptos básicos de álgebra lineal</span>"
     ]
   },
   {
@@ -4259,7 +4347,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4270,7 +4358,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>58</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4281,7 +4369,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4292,7 +4380,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4303,7 +4391,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4314,7 +4402,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4325,7 +4413,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4336,7 +4424,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4347,7 +4435,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4358,7 +4446,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4369,7 +4457,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4380,7 +4468,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
