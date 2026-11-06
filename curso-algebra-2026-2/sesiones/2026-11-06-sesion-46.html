@@ -8,7 +8,7 @@
 
 <meta name="description" content="Resolución de sistemas 2×2 y 3×3 mediante determinantes y verificación por sustitución.">
 
-<title>Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3 – Álgebra</title>
+<title>Sesión 46. Regla de Cramer para sistemas de ecuaciones – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -107,7 +107,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3 – Álgebra">
+<meta property="og:title" content="Sesión 46. Regla de Cramer para sistemas de ecuaciones – Álgebra">
 <meta property="og:description" content="Resolución de sistemas 2×2 y 3×3 mediante determinantes y verificación por sustitución.">
 <meta property="og:site_name" content="Álgebra">
 </head>
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-06-sesion-46.html"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-06-sesion-46.html"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -484,7 +484,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-11-06-sesion-46.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span></a>
+  <a href="../sesiones/2026-11-06-sesion-46.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></a>
   </div>
 </li>
       </ul>
@@ -570,9 +570,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-06-sesion-46.html"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/04-matrices.html">Unidad 4. Matrices</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-06-sesion-46.html"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas 2×2 y 3×3</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></h1>
 </div>
 
 
@@ -597,18 +597,18 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá resolver sistemas <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(3\times3\)</span> por la regla de Cramer, formar correctamente las matrices de sustitución y verificar la solución en las ecuaciones originales. También podrá reconocer cuándo el determinante de la matriz de coeficientes impide aplicar la regla.</p>
+<p>Al finalizar la sesión podrá resolver sistemas <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(3\times3\)</span> por la regla de Cramer, formar las matrices de sustitución, verificar la solución y reconocer cuándo el determinante impide aplicar la regla. Compruebe estas capacidades al resolver sin ayuda los ejercicios 1, 2 y 3 y la comprobación individual de la <a href="#actividad">Actividad</a>.</p>
 </section>
 <section id="regla-de-cramer" class="level2">
 <h2 class="anchored" data-anchor-id="regla-de-cramer">Regla de Cramer</h2>
-<p>Un sistema con el mismo número de ecuaciones que de incógnitas tiene una matriz de coeficientes <span class="math inline">\(A\)</span> cuadrada y se escribe como <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>, donde <span class="math inline">\(\mathbf{b}\)</span> es la columna de términos independientes (<a href="../sesiones/2026-10-19-sesion-36.html#tres-representaciones-de-un-sistema">Sesión 36</a>). Mantenga el mismo orden de incógnitas en todas las ecuaciones y escriba un <span class="math inline">\(0\)</span> por cada coeficiente ausente.</p>
-<p>Para cada incógnita se forma una matriz a partir de <span class="math inline">\(A\)</span>:</p>
+<p>Un sistema con el mismo número de ecuaciones que de incógnitas tiene una matriz de coeficientes <span class="math inline">\(A\)</span> cuadrada y se escribe como <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>, donde <span class="math inline">\(\mathbf{b}\)</span> es la columna de términos independientes (<a href="../sesiones/2026-10-19-sesion-36.html#tres-representaciones-de-un-sistema">Sesión 36</a>). Mantenga el mismo orden de incógnitas en todas las ecuaciones y escriba un <span class="math inline">\(0\)</span> por cada coeficiente ausente, como en la <a href="../sesiones/2026-09-23-sesion-29.html#matriz-de-coeficientes-y-matriz-aumentada">matriz de coeficientes</a>.</p>
+<p>Para cada incógnita se forma una <strong>matriz de sustitución</strong> a partir de <span class="math inline">\(A\)</span>:</p>
 <ul>
 <li><span class="math inline">\(A_x\)</span>: se sustituye la columna de los coeficientes de <span class="math inline">\(x\)</span> por <span class="math inline">\(\mathbf{b}\)</span>.</li>
 <li><span class="math inline">\(A_y\)</span>: se sustituye la columna de los coeficientes de <span class="math inline">\(y\)</span> por <span class="math inline">\(\mathbf{b}\)</span>.</li>
 <li><span class="math inline">\(A_z\)</span>: en un sistema <span class="math inline">\(3\times3\)</span>, se sustituye la columna de los coeficientes de <span class="math inline">\(z\)</span> por <span class="math inline">\(\mathbf{b}\)</span>.</li>
 </ul>
-<p>Las demás columnas conservan sus valores y sus posiciones. Cada matriz se forma a partir de la matriz original <span class="math inline">\(A\)</span>, no de la sustitución anterior.</p>
+<p>Las demás columnas conservan sus valores y sus posiciones. Cada matriz se forma a partir de la matriz original <span class="math inline">\(A\)</span>, no de la sustitución anterior. El subíndice indica la columna sustituida; <span class="math inline">\(A_x\)</span> no es el producto <span class="math inline">\(A\mathbf{x}\)</span>.</p>
 <p><strong>Regla de Cramer.</strong> Si <span class="math inline">\(A\)</span> es una matriz real <span class="math inline">\(2\times2\)</span> o <span class="math inline">\(3\times3\)</span> y <span class="math inline">\(\det A\ne0\)</span>, el sistema tiene una única solución:</p>
 <p><span class="math display">\[
 x=\frac{\det A_x}{\det A},\qquad
@@ -616,12 +616,13 @@ y=\frac{\det A_y}{\det A},\qquad
 z=\frac{\det A_z}{\det A},
 \]</span></p>
 <p>donde la tercera fórmula corresponde únicamente al caso <span class="math inline">\(3\times3\)</span>. El denominador es el mismo para todas las incógnitas.</p>
-<p>En el caso <span class="math inline">\(ax+by=p\)</span>, <span class="math inline">\(cx+dy=q\)</span>, eliminar <span class="math inline">\(y\)</span> y después <span class="math inline">\(x\)</span> da</p>
+<p>Como <span class="math inline">\(\det A\ne0\)</span>, la matriz <span class="math inline">\(A\)</span> es invertible (<a href="../sesiones/2026-10-30-sesion-43.html#criterio-de-invertibilidad-mediante-el-determinante">caso <span class="math inline">\(2\times2\)</span></a> y <a href="../sesiones/2026-11-04-sesion-44.html#ejemplo-2.-determinante-nulo-e-invertibilidad">caso <span class="math inline">\(3\times3\)</span></a>); por eso el sistema tiene exactamente una solución, <span class="math inline">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span> (<a href="../sesiones/2026-10-27-sesion-40.html#resolver-un-sistema-con-la-inversa">Sesión 40</a>). La regla de Cramer calcula esa solución sin obtener <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>En el caso <span class="math inline">\(ax+by=p\)</span>, <span class="math inline">\(cx+dy=q\)</span>, el <a href="../sesiones/2026-09-22-sesion-28.html#método-de-eliminación">método de eliminación</a> aplicado para eliminar <span class="math inline">\(y\)</span> y después <span class="math inline">\(x\)</span> da</p>
 <p><span class="math display">\[
 (ad-bc)x=pd-bq,\qquad (ad-bc)y=aq-pc.
 \]</span></p>
-<p>Los factores y términos de estas igualdades son, respectivamente, <span class="math inline">\(\det A\)</span>, <span class="math inline">\(\det A_x\)</span> y <span class="math inline">\(\det A_y\)</span>. Como <span class="math inline">\(\det A\ne0\)</span>, se puede dividir y obtener las fórmulas. La regla para <span class="math inline">\(3\times3\)</span> se acepta sin demostración.</p>
-<p>Si <span class="math inline">\(\det A=0\)</span>, no se divide entre ese valor: la regla no se aplica. El determinante nulo por sí solo no permite decidir si el sistema tiene infinitas soluciones o ninguna; para distinguirlas se utiliza el escalonamiento de la matriz aumentada.</p>
+<p>El coeficiente común <span class="math inline">\(ad-bc\)</span> es <span class="math inline">\(\det A\)</span>, y los lados derechos son <span class="math inline">\(\det A_x\)</span> y <span class="math inline">\(\det A_y\)</span>. Como <span class="math inline">\(\det A\ne0\)</span>, se puede dividir: toda solución tiene esos valores. La regla para <span class="math inline">\(3\times3\)</span> se acepta sin demostración.</p>
+<p>Si <span class="math inline">\(\det A=0\)</span>, no se divide entre ese valor: la regla no se aplica. El determinante nulo por sí solo no permite decidir si el sistema tiene infinitas soluciones o ninguna; para distinguirlas se reduce la matriz aumentada con el <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">método de Gauss-Jordan</a> y se aplica la <a href="../sesiones/2026-10-06-sesion-32.html#lectura-del-tipo-de-solución">lectura del tipo de solución</a>, como en el ejercicio 5 de la <a href="#ejercicios-para-practicar">práctica</a>.</p>
 </section>
 <section id="procedimiento-de-resolución" class="level2">
 <h2 class="anchored" data-anchor-id="procedimiento-de-resolución">Procedimiento de resolución</h2>
@@ -708,16 +709,16 @@ x=\frac{-10}{-5}=2,\qquad y=\frac{-5}{-5}=1,\qquad z=\frac{-15}{-5}=3.
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Sustituir un renglón.</strong> En el Ejemplo 1, <span class="math inline">\(A_x=\begin{bmatrix}8&amp;2\\12&amp;-4\end{bmatrix}\)</span>: los términos independientes sustituyen la primera columna, no el primer renglón.</li>
-<li><strong>Cambiar el orden de las columnas.</strong> En el Ejemplo 1, <span class="math inline">\(A_y=\begin{bmatrix}3&amp;8\\1&amp;12\end{bmatrix}\)</span>. Colocar <span class="math inline">\(\mathbf{b}\)</span> primero e intercambiar las columnas cambia el signo del determinante y da un valor incorrecto de <span class="math inline">\(y\)</span>.</li>
-<li><strong>Invertir el cociente.</strong> En el Ejemplo 1, <span class="math inline">\(x=(-56)/(-14)=4\)</span>; el cociente <span class="math inline">\((-14)/(-56)=1/4\)</span> no corresponde a la regla.</li>
-<li><strong>Omitir coeficientes cero o signos de cofactores.</strong> En el Ejemplo 2, la primera ecuación tiene coeficientes <span class="math inline">\((1,-1,0)\)</span> y la posición <span class="math inline">\((1,2)\)</span> lleva signo negativo. La entrada <span class="math inline">\(-1\)</span> aporta <span class="math inline">\(-(-1)M_{12}\)</span>.</li>
-<li><strong>Dividir entre cero.</strong> Si <span class="math inline">\(\det A=0\)</span>, no se calculan los cocientes de Cramer ni se concluye por ello que el sistema carece de soluciones.</li>
+<li><strong>Sustituir un renglón.</strong> Falso: en el Ejemplo 1, <span class="math inline">\(A_x=\begin{bmatrix}8&amp;12\\1&amp;-4\end{bmatrix}\)</span>, de modo que <span class="math inline">\(x=\frac{-44}{-14}=\frac{22}{7}\)</span>. Corrección: los términos independientes sustituyen la primera <strong>columna</strong>: <span class="math inline">\(A_x=\begin{bmatrix}8&amp;2\\12&amp;-4\end{bmatrix}\)</span>, <span class="math inline">\(\det A_x=-56\)</span> y <span class="math inline">\(x=4\)</span>.</li>
+<li><strong>Cambiar el orden de las columnas.</strong> Falso: en el Ejemplo 1, con <span class="math inline">\(\mathbf{b}\)</span> en la primera columna, <span class="math inline">\(A_y=\begin{bmatrix}8&amp;3\\12&amp;1\end{bmatrix}\)</span> y <span class="math inline">\(y=\frac{-28}{-14}=2\)</span>. Corrección: <span class="math inline">\(\mathbf{b}\)</span> ocupa la segunda columna y la primera no se mueve: <span class="math inline">\(A_y=\begin{bmatrix}3&amp;8\\1&amp;12\end{bmatrix}\)</span> y <span class="math inline">\(y=-2\)</span>. Intercambiar dos columnas cambia el signo del determinante (<a href="../sesiones/2026-11-05-sesion-45.html#recordatorio">Sesión 45</a>).</li>
+<li><strong>Invertir el cociente.</strong> Falso: en el Ejemplo 1, <span class="math inline">\(x=\frac{\det A}{\det A_x}=\frac{-14}{-56}=\frac14\)</span>. Corrección: el denominador es <span class="math inline">\(\det A\)</span>, de modo que <span class="math inline">\(x=\frac{-56}{-14}=4\)</span>.</li>
+<li><strong>Omitir el signo de un cofactor.</strong> Falso: en el Ejemplo 2, por el primer renglón, <span class="math inline">\(\det A=1(-2)+(-1)(-3)=1\)</span>. Corrección: la posición <span class="math inline">\((1,2)\)</span> lleva signo negativo, así que la entrada <span class="math inline">\(-1\)</span> aporta <span class="math inline">\(-(-1)M_{12}=-3\)</span> y <span class="math inline">\(\det A=-2-3=-5\)</span>. El <span class="math inline">\(0\)</span> de la tercera posición se conserva: sin él, la matriz no sería <span class="math inline">\(3\times3\)</span>.</li>
+<li><strong>Concluir que no hay solución porque <span class="math inline">\(\det A=0\)</span>.</strong> Falso: el sistema <span class="math inline">\(2x-y=3\)</span>, <span class="math inline">\(-4x+2y=-6\)</span> tiene <span class="math inline">\(\det A=0\)</span>; por tanto, no tiene solución. Corrección: <span class="math inline">\((2,1)\)</span> y <span class="math inline">\((0,-3)\)</span> cumplen ambas ecuaciones. Con <span class="math inline">\(\det A=0\)</span> no se calculan los cocientes de Cramer; el escalonamiento decide si hay infinitas soluciones o ninguna.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual, con registro escrito. Después compare sus resultados con un compañero o compañera y justifique cada corrección. En cada sistema, escriba <span class="math inline">\(A\)</span> y <span class="math inline">\(\mathbf{b}\)</span>, calcule <span class="math inline">\(\det A\)</span> antes de formar las matrices de sustitución y verifique la solución en las ecuaciones originales. Para los determinantes <span class="math inline">\(3\times3\)</span>, indique el renglón o la columna elegidos y registre los menores.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique cada corrección. En cada sistema, escriba <span class="math inline">\(A\)</span> y <span class="math inline">\(\mathbf{b}\)</span>, calcule <span class="math inline">\(\det A\)</span> antes de formar las matrices de sustitución y verifique la solución en las ecuaciones originales. Para los determinantes <span class="math inline">\(3\times3\)</span>, indique el renglón o la columna elegidos y registre los menores.</p>
 <p>Resuelva los ejercicios 1, 2 y 3. Si concluye antes de la comprobación individual, continúe con el ejercicio 4.</p>
 <ol type="1">
 <li><p>Resuelva por la regla de Cramer:</p>
@@ -846,7 +847,11 @@ x=\frac{-6}{-6}=1,\qquad y=\frac{-12}{-6}=2,\qquad z=\frac{6}{-6}=-1.
 <p><span class="math display">\[
 \left\{\begin{aligned}3y+z&amp;=2\\x-z&amp;=-1\\2x-y&amp;=-5\end{aligned}\right.
 \]</span></p></li>
-<li><p>Resuelva por la regla de Cramer el sistema <span class="math inline">\(4x+3y=2\)</span>, <span class="math inline">\(3x+2y=1\)</span> y verifique la solución.</p></li>
+<li><p>Resuelva por la regla de Cramer el sistema <span class="math inline">\(4x+3y=2\)</span>, <span class="math inline">\(3x+2y=1\)</span> y verifique la solución. Como comprobación, use la inversa dada y calcule <span class="math inline">\(A^{-1}\mathbf{b}\)</span>, como en la <a href="../sesiones/2026-10-27-sesion-40.html#resolver-un-sistema-con-la-inversa">resolución mediante la inversa</a>:</p>
+<p><span class="math display">\[
+A^{-1}=\begin{bmatrix}-2&amp;3\\3&amp;-4\end{bmatrix},\qquad
+\mathbf{b}=\begin{bmatrix}2\\1\end{bmatrix}.
+\]</span></p></li>
 <li><p>Para el sistema <span class="math inline">\(2x+y=5\)</span>, <span class="math inline">\(x-y=1\)</span>, un estudiante calcula <span class="math inline">\(\det A=-3\)</span>, pero forma</p>
 <p><span class="math display">\[
 A_y=\begin{bmatrix}5&amp;2\\1&amp;1\end{bmatrix}
@@ -856,7 +861,7 @@ A_y=\begin{bmatrix}5&amp;2\\1&amp;1\end{bmatrix}
 <p><span class="math display">\[
 \left\{\begin{aligned}2x+z&amp;=5\\x+y&amp;=3\\y+2z&amp;=8\end{aligned}\right.
 \]</span></p></li>
-<li><p>Calcule el determinante de la matriz de coeficientes de cada sistema y decida si se puede aplicar la regla de Cramer. No efectúe cocientes si el determinante es cero.</p>
+<li><p>Calcule el determinante de la matriz de coeficientes de cada sistema y decida si se puede aplicar la regla de Cramer. Si el determinante es cero, no efectúe cocientes: decida con el método de Gauss-Jordan si el sistema tiene infinitas soluciones o ninguna.</p>
 <ol type="a">
 <li><p><span class="math inline">\(x-2y=3\)</span>, <span class="math inline">\(-2x+4y=-6\)</span>.</p></li>
 <li><p><span class="math inline">\(x+y=3\)</span>, <span class="math inline">\(y+3z=2\)</span>, <span class="math inline">\(x+2y+3z=4\)</span>.</p></li>
@@ -875,11 +880,11 @@ A_y=\begin{bmatrix}5&amp;2\\1&amp;1\end{bmatrix}
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>1.</strong> <span class="math inline">\(\det A=-7\)</span>, <span class="math inline">\(\det A_x=14\)</span>, <span class="math inline">\(\det A_y=-7\)</span>, <span class="math inline">\(\det A_z=7\)</span>; la solución es <span class="math inline">\((-2,1,-1)\)</span>.</p>
-<p><strong>2.</strong> <span class="math inline">\(\det A=-1\)</span>, <span class="math inline">\(\det A_x=1\)</span>, <span class="math inline">\(\det A_y=-2\)</span>; la solución es <span class="math inline">\((-1,2)\)</span>.</p>
+<p><strong>2.</strong> <span class="math inline">\(\det A=-1\)</span>, <span class="math inline">\(\det A_x=1\)</span>, <span class="math inline">\(\det A_y=-2\)</span>; la solución es <span class="math inline">\((-1,2)\)</span>. También <span class="math inline">\(A^{-1}\mathbf{b}=(-1,2)^{\mathsf T}\)</span>.</p>
 <p><strong>3.</strong> Se intercambiaron las columnas al formar <span class="math inline">\(A_y\)</span>. La matriz correcta es <span class="math inline">\(A_y=\begin{bmatrix}2&amp;5\\1&amp;1\end{bmatrix}\)</span>; <span class="math inline">\(\det A_y=-3\)</span>, <span class="math inline">\(y=1\)</span>. Además, <span class="math inline">\(\det A_x=-6\)</span> y <span class="math inline">\(x=2\)</span>; la solución es <span class="math inline">\((2,1)\)</span>.</p>
 <p><strong>4.</strong> <span class="math inline">\(\det A=5\)</span>, <span class="math inline">\(\det A_x=5\)</span>, <span class="math inline">\(\det A_y=10\)</span>, <span class="math inline">\(\det A_z=15\)</span>; la solución es <span class="math inline">\((1,2,3)\)</span>.</p>
-<p><strong>5. a.</strong> <span class="math inline">\(\det A=0\)</span>; la regla no se aplica.</p>
-<p><strong>5. b.</strong> <span class="math inline">\(\det A=0\)</span>; la regla no se aplica.</p>
+<p><strong>5. a.</strong> <span class="math inline">\(\det A=0\)</span>; la regla no se aplica. El sistema tiene infinitas soluciones: <span class="math inline">\(\{(3+2t,t):t\in\mathbb R\}\)</span>.</p>
+<p><strong>5. b.</strong> <span class="math inline">\(\det A=0\)</span>; la regla no se aplica. El sistema es inconsistente: su reducción exige <span class="math inline">\(0=-1\)</span>. Los dos sistemas tienen determinante cero y distintos tipos de solución.</p>
 </div>
 </div>
 </div>
@@ -889,7 +894,7 @@ A_y=\begin{bmatrix}5&amp;2\\1&amp;1\end{bmatrix}
 <p>La regla de Cramer requiere un sistema cuadrado con <span class="math inline">\(\det A\ne0\)</span>. Cada incógnita se obtiene sustituyendo su columna por <span class="math inline">\(\mathbf{b}\)</span> y dividiendo el nuevo determinante entre <span class="math inline">\(\det A\)</span>. La comprobación por sustitución permite detectar errores de orden, signo o aritmética.</p>
 <p>Al revisar su trabajo, compruebe si puede:</p>
 <ul>
-<li>Formar <span class="math inline">\(A_x\)</span>, <span class="math inline">\(A_y\)</span> y <span class="math inline">\(A_z\)</span> conservando las otras columnas de la matriz original.</li>
+<li>Formar <span class="math inline">\(A_x\)</span>, <span class="math inline">\(A_y\)</span> y <span class="math inline">\(A_z\)</span> conservando las otras columnas de la matriz original, como en el <a href="#ejemplo-2.-sistema-de-tres-ecuaciones">Ejemplo 2</a> y el ejercicio 3 de la <a href="#actividad">Actividad</a>.</li>
 <li>Resolver sistemas <span class="math inline">\(2\times2\)</span> y <span class="math inline">\(3\times3\)</span> con los cocientes correctos y verificar todas sus ecuaciones, como en los ejercicios 1 a 3 de la <a href="#actividad">Actividad</a>.</li>
 <li>Reconocer que <span class="math inline">\(\det A=0\)</span> impide aplicar la regla y que ese valor por sí solo no determina si hay soluciones, como en el ejercicio 5 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
