@@ -1,0 +1,165 @@
+---
+title: "Sesión 47. Combinaciones lineales y sistemas de ecuaciones"
+date: 2026-11-09
+description: "Cálculo de combinaciones lineales y determinación de sus coeficientes mediante sistemas de ecuaciones."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá calcular combinaciones lineales en $\mathbb R^2$ y $\mathbb R^3$ y decidir, mediante un sistema de ecuaciones, si un vector se obtiene como combinación de otros. Compruebe si puede obtener y verificar los coeficientes, o justificar su inexistencia, en la [actividad](#actividad).
+
+## Combinaciones lineales y producto matriz-vector
+
+Una **combinación lineal** de los vectores $\mathbf v_1,\ldots,\mathbf v_k$ es un vector de la forma $c_1\mathbf v_1+\cdots+c_k\mathbf v_k$, donde los coeficientes $c_1,\ldots,c_k$ son números reales. Los vectores deben tener el mismo número de componentes. Cada coeficiente multiplica todas las componentes del vector correspondiente y se suman las componentes de la misma posición.
+
+Por ejemplo, si $\mathbf u=(2,-1)^{\mathsf T}$ y $\mathbf v=(1,3)^{\mathsf T}$, entonces
+
+$$
+2\mathbf u-\mathbf v=
+\begin{bmatrix}4\\-2\end{bmatrix}
+-
+\begin{bmatrix}1\\3\end{bmatrix}
+=
+\begin{bmatrix}3\\-5\end{bmatrix}.
+$$
+
+El mismo cálculo puede escribirse como producto. Con $A=[\,\mathbf u\ \mathbf v\,]$ y $\mathbf c=(2,-1)^{\mathsf T}$, se tiene $A\mathbf c=2\mathbf u-\mathbf v$. La [lectura por columnas del producto](2026-10-19-sesion-36.qmd) indica qué vectores se combinan. El cálculo por renglones da directamente las componentes $2(2)-1=3$ y $2(-1)-3=-5$.
+
+Los coeficientes pueden ser positivos, negativos o cero. Si todos son cero, la combinación da $\mathbf 0$. En el plano, los vectores canónicos $\mathbf e_1=(1,0)^{\mathsf T}$ y $\mathbf e_2=(0,1)^{\mathsf T}$ permiten escribir cualquier vector como $(x,y)^{\mathsf T}=x\mathbf e_1+y\mathbf e_2$.
+
+## Determinación de los coeficientes
+
+Dados $\mathbf v_1,\ldots,\mathbf v_k$ y un vector $\mathbf b$, con el mismo número de componentes, para decidir si $\mathbf b$ es combinación lineal de esos vectores se buscan coeficientes que satisfagan
+
+$$
+c_1\mathbf v_1+\cdots+c_k\mathbf v_k=\mathbf b
+\quad\Longleftrightarrow\quad
+A\mathbf c=\mathbf b,
+\qquad
+A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
+$$
+
+Cada componente aporta una ecuación y cada vector aporta una incógnita. El vector $\mathbf b$ es combinación lineal de los vectores dados exactamente cuando el sistema es consistente. Cada solución da una elección de coeficientes.
+
+| Matriz de coeficientes | Método |
+|---|---|
+| Cuadrada con determinante distinto de cero | Se puede usar la [regla de Cramer](2026-11-06-sesion-46.qmd) o calcular $A^{-1}\mathbf b$ si se dispone de [la inversa](2026-10-27-sesion-40.qmd). Los coeficientes son únicos. |
+| Cuadrada con determinante cero o rectangular | Se puede reducir la matriz aumentada por [Gauss-Jordan](2026-10-06-sesion-32.qmd). Un renglón de la forma $[\,0\ \cdots\ 0\mid d\,]$ con $d\ne0$ indica inconsistencia. |
+
+Gauss-Jordan es aplicable en ambos casos. Si se obtienen coeficientes, se comprueban calculando la combinación y comparando **todas** sus componentes con las de $\mathbf b$.
+
+## Ejemplos
+
+### Ejemplo 1. Coeficientes únicos mediante la regla de Cramer
+
+Escriba $\mathbf b=(7,11)^{\mathsf T}$ como combinación lineal de $\mathbf v_1=(2,1)^{\mathsf T}$ y $\mathbf v_2=(1,3)^{\mathsf T}$. Con los vectores como columnas, se obtiene
+
+$$
+\begin{bmatrix}2&1\\1&3\end{bmatrix}
+\begin{bmatrix}c_1\\c_2\end{bmatrix}
+=
+\begin{bmatrix}7\\11\end{bmatrix}.
+$$
+
+El determinante de la matriz es $5$. Al sustituir la primera y la segunda columna por $\mathbf b$, se obtienen los determinantes $7(3)-11(1)=10$ y $2(11)-7(1)=15$, respectivamente. Por la regla de Cramer, $c_1=2$ y $c_2=3$. La combinación $2(2,1)^{\mathsf T}+3(1,3)^{\mathsf T}=(7,11)^{\mathsf T}$ verifica el resultado.
+
+### Ejemplo 2. Dos términos independientes para una matriz singular
+
+Sean $\mathbf v_1=(1,2)^{\mathsf T}$ y $\mathbf v_2=(2,4)^{\mathsf T}$. Su matriz de columnas tiene determinante cero. Para decidir si $(3,6)^{\mathsf T}$ y $(3,5)^{\mathsf T}$ son combinaciones lineales, se aplica $R_2\gets R_2-2R_1$ a cada matriz aumentada.
+
+$$
+\begin{aligned}
+\left[\begin{array}{cc|c}1&2&3\\2&4&6\end{array}\right]
+&\longrightarrow \left[\begin{array}{cc|c}1&2&3\\0&0&0\end{array}\right],\\[4pt]
+\left[\begin{array}{cc|c}1&2&3\\2&4&5\end{array}\right]
+&\longrightarrow \left[\begin{array}{cc|c}1&2&3\\0&0&-1\end{array}\right].
+\end{aligned}
+$$
+
+Para $(3,6)^{\mathsf T}$, los coeficientes cumplen $c_1+2c_2=3$. Como $c_2$ es libre, hay infinitas elecciones. Por ejemplo, $(c_1,c_2)=(3,0)$ y $(1,1)$ producen el mismo vector. Para $(3,5)^{\mathsf T}$, el segundo renglón representa $0=-1$, así que el sistema es inconsistente.
+
+## Conjunto generado en el plano
+
+El **conjunto generado** por uno o varios vectores es el conjunto de todas sus combinaciones lineales. Se denota $\operatorname{gen}\{\mathbf v_1,\ldots,\mathbf v_k\}$.
+
+| Vectores en $\mathbb R^2$ | Conjunto generado |
+|---|---|
+| Un vector cero o dos vectores cero | Solo $\{\mathbf 0\}$. |
+| Un vector no nulo, o dos vectores con determinante cero de los cuales al menos uno es no nulo | Una recta por el origen. |
+| Dos vectores cuya matriz de columnas tiene determinante distinto de cero | Todo $\mathbb R^2$, porque $A\mathbf c=\mathbf b$ tiene solución para cada $\mathbf b$ del plano. |
+
+Si $(p,q)^{\mathsf T}$ es un vector no nulo, sus múltiplos forman la recta $qx-py=0$. En efecto, el determinante de las columnas $(p,q)^{\mathsf T}$ y $(x,y)^{\mathsf T}$ se anula exactamente cuando $(x,y)^{\mathsf T}$ es múltiplo de $(p,q)^{\mathsf T}$.
+
+En el Ejemplo 2, $\mathbf v_2=2\mathbf v_1$, así que cada combinación es $(c_1+2c_2)\mathbf v_1$. Los múltiplos de $(1,2)^{\mathsf T}$ forman la recta $y=2x$, que contiene a $(3,6)$ y deja fuera a $(3,5)$.
+
+## Errores frecuentes
+
+- **Aplicar un coeficiente a una sola componente.** Por ejemplo, $-2(3,-1)^{\mathsf T}=(-6,2)^{\mathsf T}$. El factor $-2$ multiplica las dos componentes.
+- **Colocar los vectores como renglones.** Para formar $A\mathbf c=\mathbf b$, la columna $j$ de $A$ es el vector que multiplica a $c_j$.
+- **Deducir la inconsistencia a partir de un determinante cero.** En el Ejemplo 2, el mismo determinante corresponde a un sistema consistente y a otro inconsistente. Para distinguirlos se reduce la matriz aumentada.
+- **Comprobar solo algunas componentes.** Con $\mathbf p=(1,0,1)^{\mathsf T}$ y $\mathbf q=(0,1,1)^{\mathsf T}$, las dos primeras componentes de $(2,3,4)^{\mathsf T}$ exigen los coeficientes $2$ y $3$. La tercera componente de $2\mathbf p+3\mathbf q$ vale $5$, de modo que el vector pedido queda fuera del conjunto generado.
+
+## Actividad
+
+Resuelva primero por escrito y de manera individual. Después, compare sus respuestas con un compañero o una compañera y justifique cada corrección. En los ejercicios de pertenencia, verifique los coeficientes obtenidos o indique el renglón que muestra la inconsistencia.
+
+1. Sean $\mathbf u=(3,1)^{\mathsf T}$ y $\mathbf w=(1,2)^{\mathsf T}$.
+   a. Calcule $2\mathbf u-\mathbf w$, $-\mathbf u+3\mathbf w$ y $0\mathbf u-2\mathbf w$.
+   b. Escriba $2\mathbf u-\mathbf w$ como producto $A\mathbf c$ y compruebe el resultado por renglones.
+2. Con los vectores del ejercicio 1, escriba $(5,5)^{\mathsf T}$ como combinación lineal de $\mathbf u$ y $\mathbf w$ mediante la regla de Cramer.
+3. Sean $\mathbf w_1=(2,-1)^{\mathsf T}$ y $\mathbf w_2=(-4,2)^{\mathsf T}$. Use Gauss-Jordan para decidir si $(6,-3)^{\mathsf T}$ y $(1,1)^{\mathsf T}$ son combinaciones lineales de esos vectores. En el caso consistente, dé dos pares de coeficientes. Escriba la ecuación de la recta que generan $\mathbf w_1$ y $\mathbf w_2$.
+
+**Comprobación individual.** Sean $\mathbf p=(2,1,1)^{\mathsf T}$ y $\mathbf q=(1,1,2)^{\mathsf T}$. Decida si $(7,5,8)^{\mathsf T}$ es combinación lineal de $\mathbf p$ y $\mathbf q$. Forme el sistema y, si existen coeficientes, verifíquelos en las tres componentes.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** $2\mathbf u-\mathbf w=(5,0)^{\mathsf T}$, $-\mathbf u+3\mathbf w=(0,5)^{\mathsf T}$ y $0\mathbf u-2\mathbf w=(-2,-4)^{\mathsf T}$.
+
+**1. b.** Con $A=[\,\mathbf u\ \mathbf w\,]$ y $\mathbf c=(2,-1)^{\mathsf T}$, los renglones dan $3(2)+1(-1)=5$ y $1(2)+2(-1)=0$.
+
+**2.** Con los vectores como columnas se obtiene $\det A=5$. Las matrices de sustitución para el término independiente $(5,5)^{\mathsf T}$ tienen determinantes $5$ y $10$. Resultan $c_1=1$ y $c_2=2$. La verificación es $\mathbf u+2\mathbf w=(3+2,1+4)^{\mathsf T}=(5,5)^{\mathsf T}$.
+
+**3.** En cada matriz aumentada, aplique $R_1\gets \tfrac12R_1$ y luego $R_2\gets R_2+R_1$. Para $(6,-3)^{\mathsf T}$ queda $c_1-2c_2=3$. Dos elecciones son $(3,0)$ y $(5,1)$, pues $3\mathbf w_1=5\mathbf w_1+\mathbf w_2=(6,-3)^{\mathsf T}$. Para $(1,1)^{\mathsf T}$, el segundo renglón queda $[\,0\quad 0\mid \tfrac32\,]$, que indica inconsistencia. Como $\mathbf w_2=-2\mathbf w_1$, los vectores generan la recta $x+2y=0$.
+
+**Comprobación individual.** El sistema es $2c_1+c_2=7$, $c_1+c_2=5$, $c_1+2c_2=8$. Al restar la segunda ecuación de la primera, se obtiene $c_1=2$ y luego $c_2=3$. Se verifica que $2\mathbf p+3\mathbf q=(4+3,2+3,2+6)^{\mathsf T}=(7,5,8)^{\mathsf T}$.
+
+:::
+
+## Ejercicios para practicar
+
+Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la descripción del conjunto generado. Consulte las respuestas después de completar su intento.
+
+1. Sean $\mathbf v_1=(1,-1,2)^{\mathsf T}$ y $\mathbf v_2=(2,0,1)^{\mathsf T}$.
+   a. Calcule $3\mathbf v_1-2\mathbf v_2$ y $-\mathbf v_1+2\mathbf v_2$.
+   b. Decida si $(4,-2,5)^{\mathsf T}$ y $(4,-2,6)^{\mathsf T}$ son combinaciones lineales de $\mathbf v_1$ y $\mathbf v_2$. Si existen, dé los coeficientes.
+2. Sea $A=\begin{bmatrix}3&5\\1&2\end{bmatrix}$, con columnas $\mathbf a_1$ y $\mathbf a_2$. Obtenga $A^{-1}$ mediante la [fórmula para matrices de orden dos](2026-10-30-sesion-43.qmd) y úsela para escribir $(4,1)^{\mathsf T}$ como combinación lineal de $\mathbf a_1$ y $\mathbf a_2$. Verifique la combinación.
+3. Para escribir $(5,5)^{\mathsf T}$ como combinación lineal de $(1,2)^{\mathsf T}$ y $(3,1)^{\mathsf T}$, un estudiante usa la matriz $\begin{bmatrix}1&2\\3&1\end{bmatrix}$ y obtiene $c_1=1$ y $c_2=2$. Calcule la combinación propuesta, identifique el error y obtenga los coeficientes correctos.
+4. Describa el conjunto generado por cada pareja.
+   a. $(2,1)^{\mathsf T}$ y $(1,2)^{\mathsf T}$.
+   b. $(3,1)^{\mathsf T}$ y $(-6,-2)^{\mathsf T}$.
+   c. $(0,0)^{\mathsf T}$ y $(0,0)^{\mathsf T}$.
+5. Sean $\mathbf v_1=(1,3)^{\mathsf T}$ y $\mathbf v_2=(-2,-6)^{\mathsf T}$. Determine el valor de $k$ para el que $(2,k)^{\mathsf T}$ es combinación lineal de $\mathbf v_1$ y $\mathbf v_2$. Dé dos pares de coeficientes para ese valor.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $(-1,-3,4)^{\mathsf T}$ y $(3,1,0)^{\mathsf T}$, respectivamente.
+
+**1. b.** $(4,-2,5)^{\mathsf T}=2\mathbf v_1+\mathbf v_2$. El vector $(4,-2,6)^{\mathsf T}$ queda fuera del conjunto generado.
+
+**2.** $A^{-1}=\begin{bmatrix}2&-5\\-1&3\end{bmatrix}$ y $(4,1)^{\mathsf T}=3\mathbf a_1-\mathbf a_2$.
+
+**3.** La combinación propuesta da $(7,4)^{\mathsf T}$. Se colocaron los vectores como renglones. Los coeficientes correctos son $c_1=2$ y $c_2=1$.
+
+**4. a.** $\mathbb R^2$.
+
+**4. b.** La recta $x-3y=0$.
+
+**4. c.** $\{\mathbf 0\}$.
+
+**5.** $k=6$. Dos pares posibles son $(2,0)$ y $(0,-1)$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+Al revisar su trabajo, compruebe si puede calcular una combinación lineal tanto por componentes como mediante el producto $A\mathbf c$. Para determinar si un vector pertenece al conjunto generado, forme $A$ con los vectores como columnas y examine la consistencia de $A\mathbf c=\mathbf b$. Una elección de coeficientes se comprueba en todas las componentes, y un renglón contradictorio permite justificar que el vector queda fuera del conjunto generado.
