@@ -565,7 +565,6 @@ window.Quarto = {
   <li><a href="#ejemplo-1.-coeficientes-únicos-mediante-la-regla-de-cramer" id="toc-ejemplo-1.-coeficientes-únicos-mediante-la-regla-de-cramer" class="nav-link" data-scroll-target="#ejemplo-1.-coeficientes-únicos-mediante-la-regla-de-cramer">Ejemplo 1. Coeficientes únicos mediante la regla de Cramer</a></li>
   <li><a href="#ejemplo-2.-dos-términos-independientes-para-una-matriz-singular" id="toc-ejemplo-2.-dos-términos-independientes-para-una-matriz-singular" class="nav-link" data-scroll-target="#ejemplo-2.-dos-términos-independientes-para-una-matriz-singular">Ejemplo 2. Dos términos independientes para una matriz singular</a></li>
   </ul></li>
-  <li><a href="#conjunto-generado-en-el-plano" id="toc-conjunto-generado-en-el-plano" class="nav-link" data-scroll-target="#conjunto-generado-en-el-plano">Conjunto generado en el plano</a></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -603,11 +602,11 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá calcular combinaciones lineales en <span class="math inline">\(\mathbb R^2\)</span> y <span class="math inline">\(\mathbb R^3\)</span> y decidir, mediante un sistema de ecuaciones, si un vector se obtiene como combinación de otros. Compruebe si puede obtener y verificar los coeficientes, o justificar su inexistencia, en la <a href="#actividad">actividad</a>.</p>
+<p>Al finalizar la sesión podrá calcular combinaciones lineales en <span class="math inline">\(\mathbb R^2\)</span> y <span class="math inline">\(\mathbb R^3\)</span> y decidir, mediante un sistema de ecuaciones, si un vector se obtiene como combinación de otros. Compruebe estas capacidades en los ejercicios 1 a 3 y en la comprobación individual de la <a href="#actividad">actividad</a>.</p>
 </section>
 <section id="combinaciones-lineales-y-producto-matriz-vector" class="level2">
 <h2 class="anchored" data-anchor-id="combinaciones-lineales-y-producto-matriz-vector">Combinaciones lineales y producto matriz-vector</h2>
-<p>Una <strong>combinación lineal</strong> de los vectores <span class="math inline">\(\mathbf v_1,\ldots,\mathbf v_k\)</span> es un vector de la forma <span class="math inline">\(c_1\mathbf v_1+\cdots+c_k\mathbf v_k\)</span>, donde los coeficientes <span class="math inline">\(c_1,\ldots,c_k\)</span> son números reales. Los vectores deben tener el mismo número de componentes. Cada coeficiente multiplica todas las componentes del vector correspondiente y se suman las componentes de la misma posición.</p>
+<p>Una <strong>combinación lineal</strong> de los vectores <span class="math inline">\(\mathbf v_1,\ldots,\mathbf v_k\)</span> es un vector de la forma <span class="math inline">\(c_1\mathbf v_1+\cdots+c_k\mathbf v_k\)</span>, donde los coeficientes <span class="math inline">\(c_1,\ldots,c_k\)</span> son números reales. Los vectores deben tener el mismo número de componentes. Cada coeficiente multiplica todas las componentes del vector correspondiente, como en el <a href="../sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar">producto por un escalar</a>, y se suman las componentes de la misma posición.</p>
 <p>Por ejemplo, si <span class="math inline">\(\mathbf u=(2,-1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v=(1,3)^{\mathsf T}\)</span>, entonces</p>
 <p><span class="math display">\[
 2\mathbf u-\mathbf v=
@@ -617,8 +616,8 @@ window.Quarto = {
 =
 \begin{bmatrix}3\\-5\end{bmatrix}.
 \]</span></p>
-<p>El mismo cálculo puede escribirse como producto. Con <span class="math inline">\(A=[\,\mathbf u\ \mathbf v\,]\)</span> y <span class="math inline">\(\mathbf c=(2,-1)^{\mathsf T}\)</span>, se tiene <span class="math inline">\(A\mathbf c=2\mathbf u-\mathbf v\)</span>. La <a href="../sesiones/2026-10-19-sesion-36.html">lectura por columnas del producto</a> indica qué vectores se combinan. El cálculo por renglones da directamente las componentes <span class="math inline">\(2(2)-1=3\)</span> y <span class="math inline">\(2(-1)-3=-5\)</span>.</p>
-<p>Los coeficientes pueden ser positivos, negativos o cero. Si todos son cero, la combinación da <span class="math inline">\(\mathbf 0\)</span>. En el plano, los vectores canónicos <span class="math inline">\(\mathbf e_1=(1,0)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf e_2=(0,1)^{\mathsf T}\)</span> permiten escribir cualquier vector como <span class="math inline">\((x,y)^{\mathsf T}=x\mathbf e_1+y\mathbf e_2\)</span>.</p>
+<p>El mismo cálculo puede escribirse como producto. Con <span class="math inline">\(A=[\,\mathbf u\ \mathbf v\,]\)</span> y <span class="math inline">\(\mathbf c=(2,-1)^{\mathsf T}\)</span>, se tiene <span class="math inline">\(A\mathbf c=2\mathbf u-\mathbf v\)</span>. La <a href="../sesiones/2026-10-19-sesion-36.html#producto-de-una-matriz-por-un-vector">lectura por columnas del producto</a> indica qué vectores se combinan. El cálculo por renglones da directamente las componentes <span class="math inline">\(2(2)-1=3\)</span> y <span class="math inline">\(2(-1)-3=-5\)</span>.</p>
+<p>Los coeficientes pueden ser positivos, negativos o cero. Si todos son cero, la combinación da <span class="math inline">\(\mathbf 0\)</span>.</p>
 </section>
 <section id="determinación-de-los-coeficientes" class="level2">
 <h2 class="anchored" data-anchor-id="determinación-de-los-coeficientes">Determinación de los coeficientes</h2>
@@ -641,11 +640,11 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 <tbody>
 <tr class="odd">
 <td>Cuadrada con determinante distinto de cero</td>
-<td>Se puede usar la <a href="../sesiones/2026-11-06-sesion-46.html">regla de Cramer</a> o calcular <span class="math inline">\(A^{-1}\mathbf b\)</span> si se dispone de <a href="../sesiones/2026-10-27-sesion-40.html">la inversa</a>. Los coeficientes son únicos.</td>
+<td>Se puede usar la <a href="../sesiones/2026-11-06-sesion-46.html#regla-de-cramer">regla de Cramer</a> o calcular <span class="math inline">\(A^{-1}\mathbf b\)</span> si se dispone de <a href="../sesiones/2026-10-27-sesion-40.html#resolver-un-sistema-con-la-inversa">la inversa</a>. Los coeficientes son únicos.</td>
 </tr>
 <tr class="even">
 <td>Cuadrada con determinante cero o rectangular</td>
-<td>Se puede reducir la matriz aumentada por <a href="../sesiones/2026-10-06-sesion-32.html">Gauss-Jordan</a>. Un renglón de la forma <span class="math inline">\([\,0\ \cdots\ 0\mid d\,]\)</span> con <span class="math inline">\(d\ne0\)</span> indica inconsistencia.</td>
+<td>Se puede reducir la matriz aumentada por <a href="../sesiones/2026-10-06-sesion-32.html#método-de-gauss-jordan">Gauss-Jordan</a>. Un renglón de la forma <span class="math inline">\([\,0\ \cdots\ 0\mid d\,]\)</span> con <span class="math inline">\(d\ne0\)</span> indica inconsistencia, según la <a href="../sesiones/2026-10-06-sesion-32.html#lectura-del-tipo-de-solución">lectura del tipo de solución</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -666,7 +665,7 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 </section>
 <section id="ejemplo-2.-dos-términos-independientes-para-una-matriz-singular" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-dos-términos-independientes-para-una-matriz-singular">Ejemplo 2. Dos términos independientes para una matriz singular</h3>
-<p>Sean <span class="math inline">\(\mathbf v_1=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v_2=(2,4)^{\mathsf T}\)</span>. Su matriz de columnas tiene determinante cero. Para decidir si <span class="math inline">\((3,6)^{\mathsf T}\)</span> y <span class="math inline">\((3,5)^{\mathsf T}\)</span> son combinaciones lineales, se aplica <span class="math inline">\(R_2\gets R_2-2R_1\)</span> a cada matriz aumentada.</p>
+<p>Sean <span class="math inline">\(\mathbf v_1=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v_2=(2,4)^{\mathsf T}\)</span>. Su matriz de columnas tiene determinante cero. Para decidir si <span class="math inline">\((3,6)^{\mathsf T}\)</span> y <span class="math inline">\((3,5)^{\mathsf T}\)</span> son combinaciones lineales, se aplica <span class="math inline">\(R_2\to R_2-2R_1\)</span> a cada matriz aumentada.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \left[\begin{array}{cc|c}1&amp;2&amp;3\\2&amp;4&amp;6\end{array}\right]
@@ -675,53 +674,21 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 &amp;\longrightarrow \left[\begin{array}{cc|c}1&amp;2&amp;3\\0&amp;0&amp;-1\end{array}\right].
 \end{aligned}
 \]</span></p>
-<p>Para <span class="math inline">\((3,6)^{\mathsf T}\)</span>, los coeficientes cumplen <span class="math inline">\(c_1+2c_2=3\)</span>. Como <span class="math inline">\(c_2\)</span> es libre, hay infinitas elecciones. Por ejemplo, <span class="math inline">\((c_1,c_2)=(3,0)\)</span> y <span class="math inline">\((1,1)\)</span> producen el mismo vector. Para <span class="math inline">\((3,5)^{\mathsf T}\)</span>, el segundo renglón representa <span class="math inline">\(0=-1\)</span>, así que el sistema es inconsistente.</p>
+<p>Para <span class="math inline">\((3,6)^{\mathsf T}\)</span>, los coeficientes cumplen <span class="math inline">\(c_1+2c_2=3\)</span>. Como <span class="math inline">\(c_2\)</span> es una <a href="../sesiones/2026-10-07-sesion-33.html#variables-con-pivote-y-variables-libres">variable libre</a>, hay infinitas elecciones de la forma <span class="math inline">\(c_1=3-2t\)</span> y <span class="math inline">\(c_2=t\)</span>, con <span class="math inline">\(t\in\mathbb R\)</span>. Por ejemplo, <span class="math inline">\((c_1,c_2)=(3,0)\)</span> y <span class="math inline">\((1,1)\)</span> producen el mismo vector. Para <span class="math inline">\((3,5)^{\mathsf T}\)</span>, el segundo renglón representa <span class="math inline">\(0=-1\)</span>, así que el sistema es inconsistente.</p>
 </section>
-</section>
-<section id="conjunto-generado-en-el-plano" class="level2">
-<h2 class="anchored" data-anchor-id="conjunto-generado-en-el-plano">Conjunto generado en el plano</h2>
-<p>El <strong>conjunto generado</strong> por uno o varios vectores es el conjunto de todas sus combinaciones lineales. Se denota <span class="math inline">\(\operatorname{gen}\{\mathbf v_1,\ldots,\mathbf v_k\}\)</span>.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Vectores en <span class="math inline">\(\mathbb R^2\)</span></th>
-<th>Conjunto generado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Un vector cero o dos vectores cero</td>
-<td>Solo <span class="math inline">\(\{\mathbf 0\}\)</span>.</td>
-</tr>
-<tr class="even">
-<td>Un vector no nulo, o dos vectores con determinante cero de los cuales al menos uno es no nulo</td>
-<td>Una recta por el origen.</td>
-</tr>
-<tr class="odd">
-<td>Dos vectores cuya matriz de columnas tiene determinante distinto de cero</td>
-<td>Todo <span class="math inline">\(\mathbb R^2\)</span>, porque <span class="math inline">\(A\mathbf c=\mathbf b\)</span> tiene solución para cada <span class="math inline">\(\mathbf b\)</span> del plano.</td>
-</tr>
-</tbody>
-</table>
-<p>Si <span class="math inline">\((p,q)^{\mathsf T}\)</span> es un vector no nulo, sus múltiplos forman la recta <span class="math inline">\(qx-py=0\)</span>. En efecto, el determinante de las columnas <span class="math inline">\((p,q)^{\mathsf T}\)</span> y <span class="math inline">\((x,y)^{\mathsf T}\)</span> se anula exactamente cuando <span class="math inline">\((x,y)^{\mathsf T}\)</span> es múltiplo de <span class="math inline">\((p,q)^{\mathsf T}\)</span>.</p>
-<p>En el Ejemplo 2, <span class="math inline">\(\mathbf v_2=2\mathbf v_1\)</span>, así que cada combinación es <span class="math inline">\((c_1+2c_2)\mathbf v_1\)</span>. Los múltiplos de <span class="math inline">\((1,2)^{\mathsf T}\)</span> forman la recta <span class="math inline">\(y=2x\)</span>, que contiene a <span class="math inline">\((3,6)\)</span> y deja fuera a <span class="math inline">\((3,5)\)</span>.</p>
 </section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Aplicar un coeficiente a una sola componente.</strong> Por ejemplo, <span class="math inline">\(-2(3,-1)^{\mathsf T}=(-6,2)^{\mathsf T}\)</span>. El factor <span class="math inline">\(-2\)</span> multiplica las dos componentes.</li>
-<li><strong>Colocar los vectores como renglones.</strong> Para formar <span class="math inline">\(A\mathbf c=\mathbf b\)</span>, la columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span> es el vector que multiplica a <span class="math inline">\(c_j\)</span>.</li>
-<li><strong>Deducir la inconsistencia a partir de un determinante cero.</strong> En el Ejemplo 2, el mismo determinante corresponde a un sistema consistente y a otro inconsistente. Para distinguirlos se reduce la matriz aumentada.</li>
-<li><strong>Comprobar solo algunas componentes.</strong> Con <span class="math inline">\(\mathbf p=(1,0,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf q=(0,1,1)^{\mathsf T}\)</span>, las dos primeras componentes de <span class="math inline">\((2,3,4)^{\mathsf T}\)</span> exigen los coeficientes <span class="math inline">\(2\)</span> y <span class="math inline">\(3\)</span>. La tercera componente de <span class="math inline">\(2\mathbf p+3\mathbf q\)</span> vale <span class="math inline">\(5\)</span>, de modo que el vector pedido queda fuera del conjunto generado.</li>
+<li><strong>Aplicar un coeficiente a una sola componente.</strong> <strong>Falso.</strong> <span class="math inline">\(-2(3,-1)^{\mathsf T}=(-6,-1)^{\mathsf T}\)</span>. <strong>Corrección.</strong> El factor <span class="math inline">\(-2\)</span> multiplica las dos componentes. Por ello, <span class="math inline">\(-2(3,-1)^{\mathsf T}=(-6,2)^{\mathsf T}\)</span>.</li>
+<li><strong>Colocar los vectores como renglones.</strong> <strong>Falso.</strong> Los coeficientes <span class="math inline">\((-2,3)\)</span> obtenidos con la matriz de renglones <span class="math inline">\(\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}\)</span> producen <span class="math inline">\((4,6)^{\mathsf T}\)</span> como combinación de <span class="math inline">\((1,2)^{\mathsf T}\)</span> y <span class="math inline">\((3,4)^{\mathsf T}\)</span>. <strong>Corrección.</strong> <span class="math inline">\(-2(1,2)^{\mathsf T}+3(3,4)^{\mathsf T}=(7,8)^{\mathsf T}\ne(4,6)^{\mathsf T}\)</span>. La columna <span class="math inline">\(j\)</span> de <span class="math inline">\(A\)</span> es el vector que multiplica a <span class="math inline">\(c_j\)</span>. Con <span class="math inline">\(\begin{bmatrix}1&amp;3\\2&amp;4\end{bmatrix}\)</span> se obtiene <span class="math inline">\((1,1)\)</span>, y <span class="math inline">\((1,2)^{\mathsf T}+(3,4)^{\mathsf T}=(4,6)^{\mathsf T}\)</span>.</li>
+<li><strong>Deducir la inconsistencia a partir de un determinante cero.</strong> <strong>Falso.</strong> Como la matriz de columnas del Ejemplo 2 tiene determinante cero, <span class="math inline">\((3,6)^{\mathsf T}\)</span> no es combinación lineal de <span class="math inline">\(\mathbf v_1\)</span> y <span class="math inline">\(\mathbf v_2\)</span>. <strong>Corrección.</strong> <span class="math inline">\(3\mathbf v_1+0\mathbf v_2=(3,6)^{\mathsf T}\)</span>. El mismo determinante corresponde a un sistema consistente y a otro inconsistente. Para distinguirlos se reduce la matriz aumentada.</li>
+<li><strong>Comprobar solo algunas componentes.</strong> <strong>Falso.</strong> Con <span class="math inline">\(\mathbf g=(1,0,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf h=(0,1,1)^{\mathsf T}\)</span>, las dos primeras componentes de <span class="math inline">\((2,3,4)^{\mathsf T}\)</span> exigen los coeficientes <span class="math inline">\(2\)</span> y <span class="math inline">\(3\)</span>. Por tanto, <span class="math inline">\((2,3,4)^{\mathsf T}=2\mathbf g+3\mathbf h\)</span>. <strong>Corrección.</strong> <span class="math inline">\(2\mathbf g+3\mathbf h=(2,3,5)^{\mathsf T}\)</span>. La tercera componente también debe coincidir.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero por escrito y de manera individual. Después, compare sus respuestas con un compañero o una compañera y justifique cada corrección. En los ejercicios de pertenencia, verifique los coeficientes obtenidos o indique el renglón que muestra la inconsistencia.</p>
+<p>Resuelva primero de manera individual y compare después sus respuestas con un compañero o compañera de grupo. Registre por escrito su intento antes de comparar y justifique cada corrección. Cuando deba decidir si un vector es combinación lineal de otros, verifique los coeficientes obtenidos o justifique la inconsistencia del sistema.</p>
 <ol type="1">
 <li>Sean <span class="math inline">\(\mathbf u=(3,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf w=(1,2)^{\mathsf T}\)</span>.
 <ol type="a">
@@ -729,9 +696,9 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 <li>Escriba <span class="math inline">\(2\mathbf u-\mathbf w\)</span> como producto <span class="math inline">\(A\mathbf c\)</span> y compruebe el resultado por renglones.</li>
 </ol></li>
 <li>Con los vectores del ejercicio 1, escriba <span class="math inline">\((5,5)^{\mathsf T}\)</span> como combinación lineal de <span class="math inline">\(\mathbf u\)</span> y <span class="math inline">\(\mathbf w\)</span> mediante la regla de Cramer.</li>
-<li>Sean <span class="math inline">\(\mathbf w_1=(2,-1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf w_2=(-4,2)^{\mathsf T}\)</span>. Use Gauss-Jordan para decidir si <span class="math inline">\((6,-3)^{\mathsf T}\)</span> y <span class="math inline">\((1,1)^{\mathsf T}\)</span> son combinaciones lineales de esos vectores. En el caso consistente, dé dos pares de coeficientes. Escriba la ecuación de la recta que generan <span class="math inline">\(\mathbf w_1\)</span> y <span class="math inline">\(\mathbf w_2\)</span>.</li>
+<li>Sean <span class="math inline">\(\mathbf w_1=(2,-1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf w_2=(-4,2)^{\mathsf T}\)</span>. Use Gauss-Jordan para decidir si <span class="math inline">\((6,-3)^{\mathsf T}\)</span> y <span class="math inline">\((1,1)^{\mathsf T}\)</span> son combinaciones lineales de esos vectores. En el caso consistente, dé dos pares de coeficientes.</li>
 </ol>
-<p><strong>Comprobación individual.</strong> Sean <span class="math inline">\(\mathbf p=(2,1,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf q=(1,1,2)^{\mathsf T}\)</span>. Decida si <span class="math inline">\((7,5,8)^{\mathsf T}\)</span> es combinación lineal de <span class="math inline">\(\mathbf p\)</span> y <span class="math inline">\(\mathbf q\)</span>. Forme el sistema y, si existen coeficientes, verifíquelos en las tres componentes.</p>
+<p><strong>Comprobación individual.</strong> Sean <span class="math inline">\(\mathbf p=(2,1,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf q=(1,1,2)^{\mathsf T}\)</span>. Decida si <span class="math inline">\((7,5,8)^{\mathsf T}\)</span> y <span class="math inline">\((7,5,7)^{\mathsf T}\)</span> son combinaciones lineales de <span class="math inline">\(\mathbf p\)</span> y <span class="math inline">\(\mathbf q\)</span>. Plantee ambos sistemas. Verifique los coeficientes en las tres componentes cuando existan y justifique la inconsistencia cuando corresponda.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -747,30 +714,29 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 <p><strong>1. a.</strong> <span class="math inline">\(2\mathbf u-\mathbf w=(5,0)^{\mathsf T}\)</span>, <span class="math inline">\(-\mathbf u+3\mathbf w=(0,5)^{\mathsf T}\)</span> y <span class="math inline">\(0\mathbf u-2\mathbf w=(-2,-4)^{\mathsf T}\)</span>.</p>
 <p><strong>1. b.</strong> Con <span class="math inline">\(A=[\,\mathbf u\ \mathbf w\,]\)</span> y <span class="math inline">\(\mathbf c=(2,-1)^{\mathsf T}\)</span>, los renglones dan <span class="math inline">\(3(2)+1(-1)=5\)</span> y <span class="math inline">\(1(2)+2(-1)=0\)</span>.</p>
 <p><strong>2.</strong> Con los vectores como columnas se obtiene <span class="math inline">\(\det A=5\)</span>. Las matrices de sustitución para el término independiente <span class="math inline">\((5,5)^{\mathsf T}\)</span> tienen determinantes <span class="math inline">\(5\)</span> y <span class="math inline">\(10\)</span>. Resultan <span class="math inline">\(c_1=1\)</span> y <span class="math inline">\(c_2=2\)</span>. La verificación es <span class="math inline">\(\mathbf u+2\mathbf w=(3+2,1+4)^{\mathsf T}=(5,5)^{\mathsf T}\)</span>.</p>
-<p><strong>3.</strong> En cada matriz aumentada, aplique <span class="math inline">\(R_1\gets \tfrac12R_1\)</span> y luego <span class="math inline">\(R_2\gets R_2+R_1\)</span>. Para <span class="math inline">\((6,-3)^{\mathsf T}\)</span> queda <span class="math inline">\(c_1-2c_2=3\)</span>. Dos elecciones son <span class="math inline">\((3,0)\)</span> y <span class="math inline">\((5,1)\)</span>, pues <span class="math inline">\(3\mathbf w_1=5\mathbf w_1+\mathbf w_2=(6,-3)^{\mathsf T}\)</span>. Para <span class="math inline">\((1,1)^{\mathsf T}\)</span>, el segundo renglón queda <span class="math inline">\([\,0\quad 0\mid \tfrac32\,]\)</span>, que indica inconsistencia. Como <span class="math inline">\(\mathbf w_2=-2\mathbf w_1\)</span>, los vectores generan la recta <span class="math inline">\(x+2y=0\)</span>.</p>
-<p><strong>Comprobación individual.</strong> El sistema es <span class="math inline">\(2c_1+c_2=7\)</span>, <span class="math inline">\(c_1+c_2=5\)</span>, <span class="math inline">\(c_1+2c_2=8\)</span>. Al restar la segunda ecuación de la primera, se obtiene <span class="math inline">\(c_1=2\)</span> y luego <span class="math inline">\(c_2=3\)</span>. Se verifica que <span class="math inline">\(2\mathbf p+3\mathbf q=(4+3,2+3,2+6)^{\mathsf T}=(7,5,8)^{\mathsf T}\)</span>.</p>
+<p><strong>3.</strong> En cada matriz aumentada, aplique <span class="math inline">\(R_1\to \tfrac12R_1\)</span> y luego <span class="math inline">\(R_2\to R_2+R_1\)</span>. Para <span class="math inline">\((6,-3)^{\mathsf T}\)</span> queda <span class="math inline">\(c_1-2c_2=3\)</span>. Dos elecciones son <span class="math inline">\((3,0)\)</span> y <span class="math inline">\((5,1)\)</span>, pues <span class="math inline">\(3\mathbf w_1=5\mathbf w_1+\mathbf w_2=(6,-3)^{\mathsf T}\)</span>. Para <span class="math inline">\((1,1)^{\mathsf T}\)</span>, el segundo renglón queda <span class="math inline">\([\,0\quad 0\mid \tfrac32\,]\)</span>, que indica inconsistencia.</p>
+<p><strong>Comprobación individual.</strong> El sistema es <span class="math inline">\(2c_1+c_2=7\)</span>, <span class="math inline">\(c_1+c_2=5\)</span>, <span class="math inline">\(c_1+2c_2=8\)</span>. Al restar la segunda ecuación de la primera, se obtiene <span class="math inline">\(c_1=2\)</span> y luego <span class="math inline">\(c_2=3\)</span>. Se verifica que <span class="math inline">\(2\mathbf p+3\mathbf q=(4+3,2+3,2+6)^{\mathsf T}=(7,5,8)^{\mathsf T}\)</span>. Para <span class="math inline">\((7,5,7)^{\mathsf T}\)</span>, las dos primeras ecuaciones siguen dando <span class="math inline">\(c_1=2\)</span> y <span class="math inline">\(c_2=3\)</span>. La tercera exigiría <span class="math inline">\(c_1+2c_2=7\)</span>, pero estos coeficientes dan <span class="math inline">\(8\)</span>. El segundo sistema es inconsistente.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="ejercicios-para-practicar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
-<p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la descripción del conjunto generado. Consulte las respuestas después de completar su intento.</p>
+<p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálculo de combinaciones y la determinación de coeficientes. Consulte las respuestas después de completar su intento.</p>
 <ol type="1">
 <li>Sean <span class="math inline">\(\mathbf v_1=(1,-1,2)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v_2=(2,0,1)^{\mathsf T}\)</span>.
 <ol type="a">
 <li>Calcule <span class="math inline">\(3\mathbf v_1-2\mathbf v_2\)</span> y <span class="math inline">\(-\mathbf v_1+2\mathbf v_2\)</span>.</li>
 <li>Decida si <span class="math inline">\((4,-2,5)^{\mathsf T}\)</span> y <span class="math inline">\((4,-2,6)^{\mathsf T}\)</span> son combinaciones lineales de <span class="math inline">\(\mathbf v_1\)</span> y <span class="math inline">\(\mathbf v_2\)</span>. Si existen, dé los coeficientes.</li>
 </ol></li>
-<li>Sea <span class="math inline">\(A=\begin{bmatrix}3&amp;5\\1&amp;2\end{bmatrix}\)</span>, con columnas <span class="math inline">\(\mathbf a_1\)</span> y <span class="math inline">\(\mathbf a_2\)</span>. Obtenga <span class="math inline">\(A^{-1}\)</span> mediante la <a href="../sesiones/2026-10-30-sesion-43.html">fórmula para matrices de orden dos</a> y úsela para escribir <span class="math inline">\((4,1)^{\mathsf T}\)</span> como combinación lineal de <span class="math inline">\(\mathbf a_1\)</span> y <span class="math inline">\(\mathbf a_2\)</span>. Verifique la combinación.</li>
+<li>Sea <span class="math inline">\(A=\begin{bmatrix}3&amp;5\\1&amp;2\end{bmatrix}\)</span>, con columnas <span class="math inline">\(\mathbf a_1\)</span> y <span class="math inline">\(\mathbf a_2\)</span>. Obtenga <span class="math inline">\(A^{-1}\)</span> mediante la <a href="../sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22">fórmula para matrices de orden dos</a> y úsela para escribir <span class="math inline">\((4,1)^{\mathsf T}\)</span> como combinación lineal de <span class="math inline">\(\mathbf a_1\)</span> y <span class="math inline">\(\mathbf a_2\)</span>. Verifique la combinación.</li>
 <li>Para escribir <span class="math inline">\((5,5)^{\mathsf T}\)</span> como combinación lineal de <span class="math inline">\((1,2)^{\mathsf T}\)</span> y <span class="math inline">\((3,1)^{\mathsf T}\)</span>, un estudiante usa la matriz <span class="math inline">\(\begin{bmatrix}1&amp;2\\3&amp;1\end{bmatrix}\)</span> y obtiene <span class="math inline">\(c_1=1\)</span> y <span class="math inline">\(c_2=2\)</span>. Calcule la combinación propuesta, identifique el error y obtenga los coeficientes correctos.</li>
-<li>Describa el conjunto generado por cada pareja.
+<li>Sean <span class="math inline">\(\mathbf u=(2,-1,3)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf v=(0,2,-1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf w=(4,2,0)^{\mathsf T}\)</span>. Calcule <span class="math inline">\(2\mathbf u-\mathbf v+0\mathbf w\)</span> y <span class="math inline">\(-\mathbf u+\tfrac12\mathbf v+2\mathbf w\)</span>.</li>
+<li>Sean <span class="math inline">\(\mathbf u=(1,2,-1)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf v=(3,-1,2)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf w=(2,0,1)^{\mathsf T}\)</span>. Determine, para cada vector, si existe un coeficiente <span class="math inline">\(c\)</span> tal que <span class="math inline">\(2\mathbf u-\mathbf v+c\mathbf w\)</span> sea igual a ese vector. Cuando exista, indique su valor.
 <ol type="a">
-<li><span class="math inline">\((2,1)^{\mathsf T}\)</span> y <span class="math inline">\((1,2)^{\mathsf T}\)</span>.</li>
-<li><span class="math inline">\((3,1)^{\mathsf T}\)</span> y <span class="math inline">\((-6,-2)^{\mathsf T}\)</span>.</li>
-<li><span class="math inline">\((0,0)^{\mathsf T}\)</span> y <span class="math inline">\((0,0)^{\mathsf T}\)</span>.</li>
+<li><span class="math inline">\((5,5,-1)^{\mathsf T}\)</span>.</li>
+<li><span class="math inline">\((5,4,-1)^{\mathsf T}\)</span>.</li>
 </ol></li>
-<li>Sean <span class="math inline">\(\mathbf v_1=(1,3)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v_2=(-2,-6)^{\mathsf T}\)</span>. Determine el valor de <span class="math inline">\(k\)</span> para el que <span class="math inline">\((2,k)^{\mathsf T}\)</span> es combinación lineal de <span class="math inline">\(\mathbf v_1\)</span> y <span class="math inline">\(\mathbf v_2\)</span>. Dé dos pares de coeficientes para ese valor.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -785,20 +751,24 @@ A=[\,\mathbf v_1\ \cdots\ \mathbf v_k\,].
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>1. a.</strong> <span class="math inline">\((-1,-3,4)^{\mathsf T}\)</span> y <span class="math inline">\((3,1,0)^{\mathsf T}\)</span>, respectivamente.</p>
-<p><strong>1. b.</strong> <span class="math inline">\((4,-2,5)^{\mathsf T}=2\mathbf v_1+\mathbf v_2\)</span>. El vector <span class="math inline">\((4,-2,6)^{\mathsf T}\)</span> queda fuera del conjunto generado.</p>
+<p><strong>1. b.</strong> <span class="math inline">\((4,-2,5)^{\mathsf T}=2\mathbf v_1+\mathbf v_2\)</span>. El vector <span class="math inline">\((4,-2,6)^{\mathsf T}\)</span> no es combinación lineal de <span class="math inline">\(\mathbf v_1\)</span> y <span class="math inline">\(\mathbf v_2\)</span>.</p>
 <p><strong>2.</strong> <span class="math inline">\(A^{-1}=\begin{bmatrix}2&amp;-5\\-1&amp;3\end{bmatrix}\)</span> y <span class="math inline">\((4,1)^{\mathsf T}=3\mathbf a_1-\mathbf a_2\)</span>.</p>
 <p><strong>3.</strong> La combinación propuesta da <span class="math inline">\((7,4)^{\mathsf T}\)</span>. Se colocaron los vectores como renglones. Los coeficientes correctos son <span class="math inline">\(c_1=2\)</span> y <span class="math inline">\(c_2=1\)</span>.</p>
-<p><strong>4. a.</strong> <span class="math inline">\(\mathbb R^2\)</span>.</p>
-<p><strong>4. b.</strong> La recta <span class="math inline">\(x-3y=0\)</span>.</p>
-<p><strong>4. c.</strong> <span class="math inline">\(\{\mathbf 0\}\)</span>.</p>
-<p><strong>5.</strong> <span class="math inline">\(k=6\)</span>. Dos pares posibles son <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((0,-1)\)</span>.</p>
+<p><strong>4.</strong> <span class="math inline">\((4,-4,7)^{\mathsf T}\)</span> y <span class="math inline">\((6,6,-\tfrac72)^{\mathsf T}\)</span>, respectivamente.</p>
+<p><strong>5. a.</strong> <span class="math inline">\(c=3\)</span>.</p>
+<p><strong>5. b.</strong> No existe tal coeficiente.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>Al revisar su trabajo, compruebe si puede calcular una combinación lineal tanto por componentes como mediante el producto <span class="math inline">\(A\mathbf c\)</span>. Para determinar si un vector pertenece al conjunto generado, forme <span class="math inline">\(A\)</span> con los vectores como columnas y examine la consistencia de <span class="math inline">\(A\mathbf c=\mathbf b\)</span>. Una elección de coeficientes se comprueba en todas las componentes, y un renglón contradictorio permite justificar que el vector queda fuera del conjunto generado.</p>
+<p>Al revisar su trabajo, compruebe si puede realizar las siguientes operaciones.</p>
+<ul>
+<li>Calcular una combinación lineal por componentes y como producto <span class="math inline">\(A\mathbf c\)</span>, como en el ejercicio 1 de la <a href="#actividad">actividad</a>.</li>
+<li>Formar un sistema con los vectores como columnas, obtener los coeficientes cuando existan y verificar todas las componentes, como en el ejercicio 2 y la comprobación individual.</li>
+<li>Justificar la inconsistencia del sistema al resolver el ejercicio 3 y el segundo caso de la comprobación individual.</li>
+</ul>
 
 
 </section>
