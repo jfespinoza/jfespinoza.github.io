@@ -4340,6 +4340,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-11-09-sesion-47.html",
+    "href": "sesiones/2026-11-09-sesion-47.html",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá calcular combinaciones lineales en \\(\\mathbb R^2\\) y \\(\\mathbb R^3\\) y decidir, mediante un sistema de ecuaciones, si un vector se obtiene como combinación de otros. Compruebe si puede obtener y verificar los coeficientes, o justificar su inexistencia, en la actividad.",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector",
+    "href": "sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Combinaciones lineales y producto matriz-vector",
+    "text": "Combinaciones lineales y producto matriz-vector\nUna combinación lineal de los vectores \\(\\mathbf v_1,\\ldots,\\mathbf v_k\\) es un vector de la forma \\(c_1\\mathbf v_1+\\cdots+c_k\\mathbf v_k\\), donde los coeficientes \\(c_1,\\ldots,c_k\\) son números reales. Los vectores deben tener el mismo número de componentes. Cada coeficiente multiplica todas las componentes del vector correspondiente y se suman las componentes de la misma posición.\nPor ejemplo, si \\(\\mathbf u=(2,-1)^{\\mathsf T}\\) y \\(\\mathbf v=(1,3)^{\\mathsf T}\\), entonces\n\\[\n2\\mathbf u-\\mathbf v=\n\\begin{bmatrix}4\\\\-2\\end{bmatrix}\n-\n\\begin{bmatrix}1\\\\3\\end{bmatrix}\n=\n\\begin{bmatrix}3\\\\-5\\end{bmatrix}.\n\\]\nEl mismo cálculo puede escribirse como producto. Con \\(A=[\\,\\mathbf u\\ \\mathbf v\\,]\\) y \\(\\mathbf c=(2,-1)^{\\mathsf T}\\), se tiene \\(A\\mathbf c=2\\mathbf u-\\mathbf v\\). La lectura por columnas del producto indica qué vectores se combinan. El cálculo por renglones da directamente las componentes \\(2(2)-1=3\\) y \\(2(-1)-3=-5\\).\nLos coeficientes pueden ser positivos, negativos o cero. Si todos son cero, la combinación da \\(\\mathbf 0\\). En el plano, los vectores canónicos \\(\\mathbf e_1=(1,0)^{\\mathsf T}\\) y \\(\\mathbf e_2=(0,1)^{\\mathsf T}\\) permiten escribir cualquier vector como \\((x,y)^{\\mathsf T}=x\\mathbf e_1+y\\mathbf e_2\\).",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#determinación-de-los-coeficientes",
+    "href": "sesiones/2026-11-09-sesion-47.html#determinación-de-los-coeficientes",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Determinación de los coeficientes",
+    "text": "Determinación de los coeficientes\nDados \\(\\mathbf v_1,\\ldots,\\mathbf v_k\\) y un vector \\(\\mathbf b\\), con el mismo número de componentes, para decidir si \\(\\mathbf b\\) es combinación lineal de esos vectores se buscan coeficientes que satisfagan\n\\[\nc_1\\mathbf v_1+\\cdots+c_k\\mathbf v_k=\\mathbf b\n\\quad\\Longleftrightarrow\\quad\nA\\mathbf c=\\mathbf b,\n\\qquad\nA=[\\,\\mathbf v_1\\ \\cdots\\ \\mathbf v_k\\,].\n\\]\nCada componente aporta una ecuación y cada vector aporta una incógnita. El vector \\(\\mathbf b\\) es combinación lineal de los vectores dados exactamente cuando el sistema es consistente. Cada solución da una elección de coeficientes.\n\n\n\nMatriz de coeficientes\nMétodo\n\n\n\n\nCuadrada con determinante distinto de cero\nSe puede usar la regla de Cramer o calcular \\(A^{-1}\\mathbf b\\) si se dispone de la inversa. Los coeficientes son únicos.\n\n\nCuadrada con determinante cero o rectangular\nSe puede reducir la matriz aumentada por Gauss-Jordan. Un renglón de la forma \\([\\,0\\ \\cdots\\ 0\\mid d\\,]\\) con \\(d\\ne0\\) indica inconsistencia.\n\n\n\nGauss-Jordan es aplicable en ambos casos. Si se obtienen coeficientes, se comprueban calculando la combinación y comparando todas sus componentes con las de \\(\\mathbf b\\).",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#ejemplos",
+    "href": "sesiones/2026-11-09-sesion-47.html#ejemplos",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Coeficientes únicos mediante la regla de Cramer\nEscriba \\(\\mathbf b=(7,11)^{\\mathsf T}\\) como combinación lineal de \\(\\mathbf v_1=(2,1)^{\\mathsf T}\\) y \\(\\mathbf v_2=(1,3)^{\\mathsf T}\\). Con los vectores como columnas, se obtiene\n\\[\n\\begin{bmatrix}2&1\\\\1&3\\end{bmatrix}\n\\begin{bmatrix}c_1\\\\c_2\\end{bmatrix}\n=\n\\begin{bmatrix}7\\\\11\\end{bmatrix}.\n\\]\nEl determinante de la matriz es \\(5\\). Al sustituir la primera y la segunda columna por \\(\\mathbf b\\), se obtienen los determinantes \\(7(3)-11(1)=10\\) y \\(2(11)-7(1)=15\\), respectivamente. Por la regla de Cramer, \\(c_1=2\\) y \\(c_2=3\\). La combinación \\(2(2,1)^{\\mathsf T}+3(1,3)^{\\mathsf T}=(7,11)^{\\mathsf T}\\) verifica el resultado.\n\n\nEjemplo 2. Dos términos independientes para una matriz singular\nSean \\(\\mathbf v_1=(1,2)^{\\mathsf T}\\) y \\(\\mathbf v_2=(2,4)^{\\mathsf T}\\). Su matriz de columnas tiene determinante cero. Para decidir si \\((3,6)^{\\mathsf T}\\) y \\((3,5)^{\\mathsf T}\\) son combinaciones lineales, se aplica \\(R_2\\gets R_2-2R_1\\) a cada matriz aumentada.\n\\[\n\\begin{aligned}\n\\left[\\begin{array}{cc|c}1&2&3\\\\2&4&6\\end{array}\\right]\n&\\longrightarrow \\left[\\begin{array}{cc|c}1&2&3\\\\0&0&0\\end{array}\\right],\\\\[4pt]\n\\left[\\begin{array}{cc|c}1&2&3\\\\2&4&5\\end{array}\\right]\n&\\longrightarrow \\left[\\begin{array}{cc|c}1&2&3\\\\0&0&-1\\end{array}\\right].\n\\end{aligned}\n\\]\nPara \\((3,6)^{\\mathsf T}\\), los coeficientes cumplen \\(c_1+2c_2=3\\). Como \\(c_2\\) es libre, hay infinitas elecciones. Por ejemplo, \\((c_1,c_2)=(3,0)\\) y \\((1,1)\\) producen el mismo vector. Para \\((3,5)^{\\mathsf T}\\), el segundo renglón representa \\(0=-1\\), así que el sistema es inconsistente.",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#conjunto-generado-en-el-plano",
+    "href": "sesiones/2026-11-09-sesion-47.html#conjunto-generado-en-el-plano",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Conjunto generado en el plano",
+    "text": "Conjunto generado en el plano\nEl conjunto generado por uno o varios vectores es el conjunto de todas sus combinaciones lineales. Se denota \\(\\operatorname{gen}\\{\\mathbf v_1,\\ldots,\\mathbf v_k\\}\\).\n\n\n\n\n\n\n\nVectores en \\(\\mathbb R^2\\)\nConjunto generado\n\n\n\n\nUn vector cero o dos vectores cero\nSolo \\(\\{\\mathbf 0\\}\\).\n\n\nUn vector no nulo, o dos vectores con determinante cero de los cuales al menos uno es no nulo\nUna recta por el origen.\n\n\nDos vectores cuya matriz de columnas tiene determinante distinto de cero\nTodo \\(\\mathbb R^2\\), porque \\(A\\mathbf c=\\mathbf b\\) tiene solución para cada \\(\\mathbf b\\) del plano.\n\n\n\nSi \\((p,q)^{\\mathsf T}\\) es un vector no nulo, sus múltiplos forman la recta \\(qx-py=0\\). En efecto, el determinante de las columnas \\((p,q)^{\\mathsf T}\\) y \\((x,y)^{\\mathsf T}\\) se anula exactamente cuando \\((x,y)^{\\mathsf T}\\) es múltiplo de \\((p,q)^{\\mathsf T}\\).\nEn el Ejemplo 2, \\(\\mathbf v_2=2\\mathbf v_1\\), así que cada combinación es \\((c_1+2c_2)\\mathbf v_1\\). Los múltiplos de \\((1,2)^{\\mathsf T}\\) forman la recta \\(y=2x\\), que contiene a \\((3,6)\\) y deja fuera a \\((3,5)\\).",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#errores-frecuentes",
+    "href": "sesiones/2026-11-09-sesion-47.html#errores-frecuentes",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAplicar un coeficiente a una sola componente. Por ejemplo, \\(-2(3,-1)^{\\mathsf T}=(-6,2)^{\\mathsf T}\\). El factor \\(-2\\) multiplica las dos componentes.\nColocar los vectores como renglones. Para formar \\(A\\mathbf c=\\mathbf b\\), la columna \\(j\\) de \\(A\\) es el vector que multiplica a \\(c_j\\).\nDeducir la inconsistencia a partir de un determinante cero. En el Ejemplo 2, el mismo determinante corresponde a un sistema consistente y a otro inconsistente. Para distinguirlos se reduce la matriz aumentada.\nComprobar solo algunas componentes. Con \\(\\mathbf p=(1,0,1)^{\\mathsf T}\\) y \\(\\mathbf q=(0,1,1)^{\\mathsf T}\\), las dos primeras componentes de \\((2,3,4)^{\\mathsf T}\\) exigen los coeficientes \\(2\\) y \\(3\\). La tercera componente de \\(2\\mathbf p+3\\mathbf q\\) vale \\(5\\), de modo que el vector pedido queda fuera del conjunto generado.",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#actividad",
+    "href": "sesiones/2026-11-09-sesion-47.html#actividad",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero por escrito y de manera individual. Después, compare sus respuestas con un compañero o una compañera y justifique cada corrección. En los ejercicios de pertenencia, verifique los coeficientes obtenidos o indique el renglón que muestra la inconsistencia.\n\nSean \\(\\mathbf u=(3,1)^{\\mathsf T}\\) y \\(\\mathbf w=(1,2)^{\\mathsf T}\\).\n\nCalcule \\(2\\mathbf u-\\mathbf w\\), \\(-\\mathbf u+3\\mathbf w\\) y \\(0\\mathbf u-2\\mathbf w\\).\nEscriba \\(2\\mathbf u-\\mathbf w\\) como producto \\(A\\mathbf c\\) y compruebe el resultado por renglones.\n\nCon los vectores del ejercicio 1, escriba \\((5,5)^{\\mathsf T}\\) como combinación lineal de \\(\\mathbf u\\) y \\(\\mathbf w\\) mediante la regla de Cramer.\nSean \\(\\mathbf w_1=(2,-1)^{\\mathsf T}\\) y \\(\\mathbf w_2=(-4,2)^{\\mathsf T}\\). Use Gauss-Jordan para decidir si \\((6,-3)^{\\mathsf T}\\) y \\((1,1)^{\\mathsf T}\\) son combinaciones lineales de esos vectores. En el caso consistente, dé dos pares de coeficientes. Escriba la ecuación de la recta que generan \\(\\mathbf w_1\\) y \\(\\mathbf w_2\\).\n\nComprobación individual. Sean \\(\\mathbf p=(2,1,1)^{\\mathsf T}\\) y \\(\\mathbf q=(1,1,2)^{\\mathsf T}\\). Decida si \\((7,5,8)^{\\mathsf T}\\) es combinación lineal de \\(\\mathbf p\\) y \\(\\mathbf q\\). Forme el sistema y, si existen coeficientes, verifíquelos en las tres componentes.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. \\(2\\mathbf u-\\mathbf w=(5,0)^{\\mathsf T}\\), \\(-\\mathbf u+3\\mathbf w=(0,5)^{\\mathsf T}\\) y \\(0\\mathbf u-2\\mathbf w=(-2,-4)^{\\mathsf T}\\).\n1. b. Con \\(A=[\\,\\mathbf u\\ \\mathbf w\\,]\\) y \\(\\mathbf c=(2,-1)^{\\mathsf T}\\), los renglones dan \\(3(2)+1(-1)=5\\) y \\(1(2)+2(-1)=0\\).\n2. Con los vectores como columnas se obtiene \\(\\det A=5\\). Las matrices de sustitución para el término independiente \\((5,5)^{\\mathsf T}\\) tienen determinantes \\(5\\) y \\(10\\). Resultan \\(c_1=1\\) y \\(c_2=2\\). La verificación es \\(\\mathbf u+2\\mathbf w=(3+2,1+4)^{\\mathsf T}=(5,5)^{\\mathsf T}\\).\n3. En cada matriz aumentada, aplique \\(R_1\\gets \\tfrac12R_1\\) y luego \\(R_2\\gets R_2+R_1\\). Para \\((6,-3)^{\\mathsf T}\\) queda \\(c_1-2c_2=3\\). Dos elecciones son \\((3,0)\\) y \\((5,1)\\), pues \\(3\\mathbf w_1=5\\mathbf w_1+\\mathbf w_2=(6,-3)^{\\mathsf T}\\). Para \\((1,1)^{\\mathsf T}\\), el segundo renglón queda \\([\\,0\\quad 0\\mid \\tfrac32\\,]\\), que indica inconsistencia. Como \\(\\mathbf w_2=-2\\mathbf w_1\\), los vectores generan la recta \\(x+2y=0\\).\nComprobación individual. El sistema es \\(2c_1+c_2=7\\), \\(c_1+c_2=5\\), \\(c_1+2c_2=8\\). Al restar la segunda ecuación de la primera, se obtiene \\(c_1=2\\) y luego \\(c_2=3\\). Se verifica que \\(2\\mathbf p+3\\mathbf q=(4+3,2+3,2+6)^{\\mathsf T}=(7,5,8)^{\\mathsf T}\\).",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-11-09-sesion-47.html#ejercicios-para-practicar",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la descripción del conjunto generado. Consulte las respuestas después de completar su intento.\n\nSean \\(\\mathbf v_1=(1,-1,2)^{\\mathsf T}\\) y \\(\\mathbf v_2=(2,0,1)^{\\mathsf T}\\).\n\nCalcule \\(3\\mathbf v_1-2\\mathbf v_2\\) y \\(-\\mathbf v_1+2\\mathbf v_2\\).\nDecida si \\((4,-2,5)^{\\mathsf T}\\) y \\((4,-2,6)^{\\mathsf T}\\) son combinaciones lineales de \\(\\mathbf v_1\\) y \\(\\mathbf v_2\\). Si existen, dé los coeficientes.\n\nSea \\(A=\\begin{bmatrix}3&5\\\\1&2\\end{bmatrix}\\), con columnas \\(\\mathbf a_1\\) y \\(\\mathbf a_2\\). Obtenga \\(A^{-1}\\) mediante la fórmula para matrices de orden dos y úsela para escribir \\((4,1)^{\\mathsf T}\\) como combinación lineal de \\(\\mathbf a_1\\) y \\(\\mathbf a_2\\). Verifique la combinación.\nPara escribir \\((5,5)^{\\mathsf T}\\) como combinación lineal de \\((1,2)^{\\mathsf T}\\) y \\((3,1)^{\\mathsf T}\\), un estudiante usa la matriz \\(\\begin{bmatrix}1&2\\\\3&1\\end{bmatrix}\\) y obtiene \\(c_1=1\\) y \\(c_2=2\\). Calcule la combinación propuesta, identifique el error y obtenga los coeficientes correctos.\nDescriba el conjunto generado por cada pareja.\n\n\\((2,1)^{\\mathsf T}\\) y \\((1,2)^{\\mathsf T}\\).\n\\((3,1)^{\\mathsf T}\\) y \\((-6,-2)^{\\mathsf T}\\).\n\\((0,0)^{\\mathsf T}\\) y \\((0,0)^{\\mathsf T}\\).\n\nSean \\(\\mathbf v_1=(1,3)^{\\mathsf T}\\) y \\(\\mathbf v_2=(-2,-6)^{\\mathsf T}\\). Determine el valor de \\(k\\) para el que \\((2,k)^{\\mathsf T}\\) es combinación lineal de \\(\\mathbf v_1\\) y \\(\\mathbf v_2\\). Dé dos pares de coeficientes para ese valor.\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a. \\((-1,-3,4)^{\\mathsf T}\\) y \\((3,1,0)^{\\mathsf T}\\), respectivamente.\n1. b. \\((4,-2,5)^{\\mathsf T}=2\\mathbf v_1+\\mathbf v_2\\). El vector \\((4,-2,6)^{\\mathsf T}\\) queda fuera del conjunto generado.\n2. \\(A^{-1}=\\begin{bmatrix}2&-5\\\\-1&3\\end{bmatrix}\\) y \\((4,1)^{\\mathsf T}=3\\mathbf a_1-\\mathbf a_2\\).\n3. La combinación propuesta da \\((7,4)^{\\mathsf T}\\). Se colocaron los vectores como renglones. Los coeficientes correctos son \\(c_1=2\\) y \\(c_2=1\\).\n4. a. \\(\\mathbb R^2\\).\n4. b. La recta \\(x-3y=0\\).\n4. c. \\(\\{\\mathbf 0\\}\\).\n5. \\(k=6\\). Dos pares posibles son \\((2,0)\\) y \\((0,-1)\\).",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-09-sesion-47.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-11-09-sesion-47.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 47. Combinaciones lineales y sistemas de ecuaciones",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nAl revisar su trabajo, compruebe si puede calcular una combinación lineal tanto por componentes como mediante el producto \\(A\\mathbf c\\). Para determinar si un vector pertenece al conjunto generado, forme \\(A\\) con los vectores como columnas y examine la consistencia de \\(A\\mathbf c=\\mathbf b\\). Una elección de coeficientes se comprueba en todas las componentes, y un renglón contradictorio permite justificar que el vector queda fuera del conjunto generado.",
+    "crumbs": [
+      "Unidad 5. Conceptos básicos de álgebra lineal",
+      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span>"
+    ]
+  },
+  {
     "objectID": "unidades/06-transformaciones-lineales.html",
     "href": "unidades/06-transformaciones-lineales.html",
     "title": "Unidad 6. Transformaciones lineales en el plano",
@@ -4347,7 +4446,7 @@
     "text": "Contenidos\nDuración prevista: 15 horas.\nLas sesiones de esta unidad se incorporarán conforme se desarrollen en clase.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4358,7 +4457,7 @@
     "text": "Definición y ejemplos de transformaciones lineales en el plano.\nMatriz estándar de una transformación lineal.\nAproximación intuitiva al núcleo y a la imagen.",
     "crumbs": [
       "Unidad 6. Transformaciones lineales en el plano",
-      "<span class='chapter-number'>59</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
+      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Unidad 6. Transformaciones lineales en el plano</span>"
     ]
   },
   {
@@ -4369,7 +4468,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4380,7 +4479,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4391,7 +4490,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4402,7 +4501,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4413,7 +4512,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4424,7 +4523,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4435,7 +4534,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>60</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4446,7 +4545,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4457,7 +4556,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4468,7 +4567,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>61</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>62</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
