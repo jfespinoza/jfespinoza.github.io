@@ -4443,7 +4443,7 @@
     "href": "sesiones/2026-11-11-sesion-48.html#actividad",
     "title": "Sesión 48. Práctica integradora para el Parcial 4",
     "section": "Actividad",
-    "text": "Actividad\nDescargue la versión asignada. Cada versión tiene once secciones con dos alternativas por sección. Resuelva una alternativa de cada sección, de manera individual y sin calculadora. Escriba el procedimiento y, después de cada intento, compare su resultado con la respuesta en azul.\nPara el determinante de orden cuatro, aplique las operaciones \\(R_i\\leftarrow R_i+kR_j\\) en el orden indicado y justifique por qué conservan el determinante.",
+    "text": "Actividad\nDescargue la versión asignada. Cada versión tiene once secciones con dos alternativas por sección. Resuelva una alternativa de cada sección, de manera individual y sin calculadora. Escriba el procedimiento y, después de cada intento, compare su resultado con la respuesta en azul.\nPara el determinante de orden cuatro, aplique las operaciones \\(R_i\\to R_i+kR_j\\) en el orden indicado y justifique por qué conservan el determinante.",
     "crumbs": [
       "Unidad 5. Conceptos básicos de álgebra lineal",
       "<span class='chapter-number'>60</span>  <span class='chapter-title'>Sesión 48. Práctica integradora para el Parcial 4</span>"
