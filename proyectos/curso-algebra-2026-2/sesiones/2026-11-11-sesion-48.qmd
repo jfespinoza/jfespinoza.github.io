@@ -12,6 +12,8 @@ Resolver un ejercicio de cada sección del simulacro y comprobar los resultados.
 
 Descargue la versión asignada. Cada versión tiene once secciones con dos alternativas por sección. **Resuelva una alternativa de cada sección**, de manera individual y sin calculadora. Escriba el procedimiento y, después de cada intento, compare su resultado con la respuesta en azul.
 
+Para el determinante de orden cuatro, aplique las operaciones $R_i\leftarrow R_i+kR_j$ en el orden indicado y justifique por qué conservan el determinante.
+
 ## Simulacros para descargar
 
 | Versión | Archivo |
