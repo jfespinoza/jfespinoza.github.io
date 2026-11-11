@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - mathjax/**
+    - examenes/parcial-4/simulacros/*.pdf
 
 lang: es
 language:
@@ -96,6 +97,7 @@ book:
       chapters:
         - unidades/05-conceptos-algebra-lineal.qmd
         - sesiones/2026-11-09-sesion-47.qmd
+        - sesiones/2026-11-11-sesion-48.qmd
     - part: "Unidad 6. Transformaciones lineales en el plano"
       chapters:
         - unidades/06-transformaciones-lineales.qmd

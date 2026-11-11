@@ -1,0 +1,25 @@
+---
+title: "Sesión 48. Práctica integradora para el Parcial 4"
+date: 2026-11-11
+description: "Simulacro de matriz inversa, determinantes, regla de Cramer y combinaciones lineales."
+---
+
+## Objetivo de la sesión
+
+Resolver un ejercicio de cada sección del simulacro y comprobar los resultados. Al concluir, identificar los procedimientos que requieren revisión antes del examen.
+
+## Actividad
+
+Descargue la versión asignada. Cada versión tiene once secciones con dos alternativas por sección. **Resuelva una alternativa de cada sección**, de manera individual y sin calculadora. Escriba el procedimiento y, después de cada intento, compare su resultado con la respuesta en azul.
+
+## Simulacros para descargar
+
+| Versión | Archivo |
+|:---:|---|
+| 1 | [Simulacro del Parcial 4, versión 1 (PDF)](../examenes/parcial-4/simulacros/IMA-simulacro-parcial-4-version-01.pdf){download="IMA-simulacro-parcial-4-version-01.pdf"} |
+| 2 | [Simulacro del Parcial 4, versión 2 (PDF)](../examenes/parcial-4/simulacros/IMA-simulacro-parcial-4-version-02.pdf){download="IMA-simulacro-parcial-4-version-02.pdf"} |
+| 3 | [Simulacro del Parcial 4, versión 3 (PDF)](../examenes/parcial-4/simulacros/IMA-simulacro-parcial-4-version-03.pdf){download="IMA-simulacro-parcial-4-version-03.pdf"} |
+
+## Conclusiones del aprendizaje
+
+Revise cuáles resultados pudo justificar y señale el primer paso que debe corregir en los ejercicios donde encontró una discrepancia. Lleve a la asesoría las dudas que no haya resuelto.
