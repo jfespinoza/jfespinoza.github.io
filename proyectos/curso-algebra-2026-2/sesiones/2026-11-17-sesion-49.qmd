@@ -6,11 +6,11 @@ description: "Aditividad y homogeneidad en transformaciones del plano. Escalamie
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá calcular la salida de una transformación del plano y justificar su linealidad mediante la aditividad y la homogeneidad. Podrá exhibir un contraejemplo cuando alguna condición falle.
+Al finalizar la sesión podrá calcular la salida de una transformación del plano, justificar su linealidad mediante aditividad y homogeneidad y encontrar un contraejemplo cuando alguna condición falle. Compruebe estas capacidades en el ejercicio 1 y en la comprobación individual de la [actividad](#actividad).
 
 ## Transformaciones del plano
 
-Una **transformación del plano** $T\colon\mathbb R^2\to\mathbb R^2$ asigna a cada vector de entrada $\mathbf u=(x,y)$ un único vector de salida $T(\mathbf u)$ en el mismo plano. También se escribe $T(x,y)$. Por ejemplo, si $T(x,y)=(2x,3y)$, la entrada $(1,-2)$ produce la salida $(2,-6)$.
+Una **transformación del plano** $T\colon\mathbb R^2\to\mathbb R^2$ asigna a cada [vector columna](2026-10-19-sesion-36.qmd#vectores-columna) de entrada $\mathbf u=(x,y)^{\mathsf T}$ un único vector columna de salida $T(\mathbf u)$ en el mismo plano. Al escribir $T(x,y)=(p,q)$, las parejas indican las componentes de los vectores columna de entrada y salida. Por ejemplo, si $T(x,y)=(2x,3y)$, la entrada $(1,-2)$ produce la salida $(2,-6)$.
 
 La transformación $T$ es **lineal** si satisface estas dos condiciones para cualesquiera $\mathbf u,\mathbf v\in\mathbb R^2$ y $a\in\mathbb R$.
 
@@ -19,7 +19,7 @@ La transformación $T$ es **lineal** si satisface estas dos condiciones para cua
 | Aditividad | $T(\mathbf u+\mathbf v)=T(\mathbf u)+T(\mathbf v)$ |
 | Homogeneidad | $T(a\mathbf u)=aT(\mathbf u)$ |
 
-La aditividad permite sumar antes o después de transformar los vectores. La homogeneidad permite multiplicar por un escalar antes o después de transformar. Para cualesquiera escalares $a,b\in\mathbb R$, ambas propiedades permiten calcular la salida de una [combinación lineal](2026-11-09-sesion-47.qmd#combinaciones-lineales-y-producto-matriz-vector).
+La aditividad permite sumar antes o después de transformar los vectores. La homogeneidad permite efectuar el [producto por un escalar](2026-10-09-sesion-35.qmd#suma-resta-y-producto-por-un-escalar) antes o después de transformar. Para cualesquiera escalares $a,b\in\mathbb R$, ambas propiedades permiten calcular la salida de una [combinación lineal](2026-11-09-sesion-47.qmd#combinaciones-lineales-y-producto-matriz-vector).
 
 $$
 T(a\mathbf u+b\mathbf v)=T(a\mathbf u)+T(b\mathbf v)=aT(\mathbf u)+bT(\mathbf v).
@@ -31,7 +31,7 @@ Al tomar $a=0$ en la homogeneidad se obtiene $T(\mathbf 0)=\mathbf 0$. Toda tran
 
 ### Ejemplo 1. Escalamiento por coordenadas
 
-Sea $S(x,y)=(2x,3y)$. Tome $\mathbf u=(x_1,y_1)$, $\mathbf v=(x_2,y_2)$ y $a\in\mathbb R$. La aditividad se obtiene distribuyendo el factor de cada coordenada:
+Sea $S(x,y)=(2x,3y)$. Tome $\mathbf u=(x_1,y_1)^{\mathsf T}$, $\mathbf v=(x_2,y_2)^{\mathsf T}$ y $a\in\mathbb R$. La aditividad se obtiene distribuyendo el factor de cada coordenada:
 
 $$
 \begin{aligned}
@@ -48,7 +48,7 @@ $$
 S(a\mathbf u)=(2ax_1,3ay_1)=a(2x_1,3y_1)=aS(\mathbf u).
 $$
 
-Las igualdades valen para todas las entradas y todos los escalares. Por tanto, $S$ es lineal. El mismo argumento vale para cualquier escalamiento por coordenadas $(x,y)\mapsto(kx,ly)$ con factores reales fijos $k,l$.
+Las igualdades valen para todas las entradas y todos los escalares. Por tanto, $S$ es lineal. En general, para una coordenada de la forma $px+qy$, con $p$ y $q$ fijos, la aditividad se obtiene al agrupar $px_1+qy_1$ y $px_2+qy_2$, y la homogeneidad al extraer el factor común $a$. Si las dos coordenadas tienen esta forma, la regla es lineal.
 
 ### Ejemplo 2. Traslación por un vector no nulo
 
@@ -56,21 +56,21 @@ Sea $R(x,y)=(x+2,y-1)$. Cada punto se desplaza por el mismo vector $(2,-1)$. En 
 
 ## Errores frecuentes
 
-- **Comprobar las igualdades con algunos valores y concluir que siempre se cumplen.** Una prueba de linealidad debe justificar ambas propiedades para entradas y escalares arbitrarios. Para refutar la linealidad basta una sola falla.
-- **Concluir que $T$ es lineal porque $T(\mathbf 0)=\mathbf 0$.** Considere $G(x,y)=(x^2,y)$. Aunque $G(0,0)=(0,0)$, se tiene $G(2(1,0))=(4,0)$ y $2G(1,0)=(2,0)$. La homogeneidad falla.
+- **Concluir la linealidad a partir de casos particulares.** **Falso.** Para $T(x,y)=(x^3,y)$, se cumple $T(-1,0)=-T(1,0)$. A partir de este cálculo se concluye que $T$ es lineal. **Corrección.** Con $a=2$, se obtiene $T(2,0)=(8,0)$ y $2T(1,0)=(2,0)$. Un solo contraejemplo basta para refutar la homogeneidad.
+- **Deducir la linealidad a partir del origen.** **Falso.** Como $G(x,y)=(x^2,y)$ satisface $G(0,0)=(0,0)$, se concluye que $G$ es lineal. **Corrección.** $G(2,0)=(4,0)$ y $2G(1,0)=(2,0)$. Fijar el origen es una condición necesaria para la linealidad.
 
 ## Actividad
 
-Resuelva primero de manera individual y registre por escrito su justificación. Compare después sus respuestas con un compañero de grupo e indique qué propiedad respalda cada corrección.
+Resuelva primero de manera individual y registre por escrito su justificación. Compare después sus respuestas con otra persona del grupo e indique qué propiedad respalda cada corrección.
 
 1. Sea $F(x,y)=(x+2y,-y)$. Calcule $F(-1,2)$ y justifique que $F$ satisface la aditividad y la homogeneidad para entradas arbitrarias.
-2. En una imagen de una muestra pulida, un programa corrige la escala horizontal por un factor de $2$ y conserva la escala vertical. La corrección debe conservar la misma marca como origen. Las coordenadas se expresan en micrómetros. Se proponen las reglas $C(x,y)=(2x,y)$ y $D(x,y)=(2x+1,y)$. Calcule con cada regla la posición de una partícula visible situada en $(2,3)$. Determine cuál conserva el origen de referencia y justifique si cada regla es lineal.
+2. En una fotografía de una muestra pulida, un programa corrige la escala horizontal por un factor de $2$ y conserva la escala vertical. La corrección debe conservar la misma marca como origen. Las coordenadas se expresan en micrómetros. Se proponen las reglas $C(x,y)=(2x,y)$ y $D(x,y)=(2x+1,y)$. Calcule con cada regla la posición de una partícula visible situada en $(2,3)$. Determine cuál conserva el origen de referencia y justifique si cada regla es lineal.
 
-**Comprobación individual.** Para $P(x,y)=(x,y^2)$, use $\mathbf u=(0,1)$ y $a=2$ para decidir si $P$ es lineal. Escriba las dos salidas que compara y nombre la propiedad que falla.
+**Comprobación individual.** Para $P(x,y)=(x,y^2)$, use $\mathbf u=(0,1)^{\mathsf T}$ y $a=2$ para decidir si $P$ es lineal. Escriba las dos salidas que compara y nombre la propiedad que falla.
 
 ::: {.callout-note collapse="true" title="Soluciones de la actividad"}
 
-**1.** $F(-1,2)=(3,-2)$. Para $\mathbf u=(x_1,y_1)$ y $\mathbf v=(x_2,y_2)$,
+**1.** $F(-1,2)=(3,-2)$. Para $\mathbf u=(x_1,y_1)^{\mathsf T}$ y $\mathbf v=(x_2,y_2)^{\mathsf T}$,
 
 $$
 \begin{aligned}
@@ -83,7 +83,7 @@ $$
 
 Para cualquier $a\in\mathbb R$, $F(a\mathbf u)=(ax_1+2ay_1,-ay_1)=aF(\mathbf u)$. Se cumplen ambas propiedades.
 
-**2.** $C(2,3)=(4,3)$ y $D(2,3)=(5,3)$, en micrómetros. La regla $C$ conserva el origen y es lineal por ser un escalamiento por coordenadas con factores $2$ y $1$. La regla $D$ desplaza la marca de referencia un micrómetro en el eje horizontal, pues $D(0,0)=(1,0)$. Por ello $D$ no es lineal y no satisface la condición de conservar el origen en la imagen corregida.
+**2.** $C(2,3)=(4,3)$ y $D(2,3)=(5,3)$, en micrómetros. La regla $C$ conserva el origen y es lineal por ser un escalamiento por coordenadas con factores $2$ y $1$. La regla $D$ desplaza la marca de referencia un micrómetro en el eje horizontal, pues $D(0,0)=(1,0)$. Por ello $D$ no es lineal y no satisface la condición de conservar el origen en la fotografía corregida.
 
 **Comprobación individual.** $P(2\mathbf u)=P(0,2)=(0,4)$ y $2P(\mathbf u)=2(0,1)=(0,2)$. Falla la homogeneidad, de modo que $P$ no es lineal.
 
@@ -93,9 +93,9 @@ Para cualquier $a\in\mathbb R$, $F(a\mathbf u)=(ax_1+2ay_1,-ay_1)=aF(\mathbf u)$
 
 Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la justificación de las propiedades. Consulte las respuestas después de registrar su intento.
 
-1. En una prueba de calibración, un programa recibe dos lecturas de desplazamiento $x,y$ en micrómetros y reporta su suma y su diferencia mediante $M(x,y)=(x+y,x-y)$. Justifique que $M$ es lineal. Para las lecturas $\mathbf u=(3,1)$ y $\mathbf v=(-1,2)$, calcule $M(\mathbf u+\mathbf v)$ y $M(\mathbf u)+M(\mathbf v)$. Interprete la coincidencia en términos de las lecturas y los reportes.
-2. Un laboratorio prepara dos tipos de paquetes de probetas, que son muestras destinadas a ensayos. Un paquete del primer tipo contiene dos probetas cortas y una larga. Uno del segundo tipo contiene una corta y tres largas. Plantee una combinación lineal y determine cuántos paquetes enteros de cada tipo se requieren para reunir ocho probetas cortas y nueve largas. Compruebe ambas cantidades.
-3. Un estudiante afirma que $H(x,y)=(|x|,y)$ es lineal porque $H(0,0)=(0,0)$. Use $\mathbf u=(1,0)$ y $a=-1$ para analizar la afirmación. ¿Qué condición deja de cumplirse?
+1. En una prueba de calibración, un programa recibe dos lecturas de desplazamiento $x,y$ en micrómetros y reporta su suma y su diferencia mediante $M(x,y)=(x+y,x-y)$. Justifique que $M$ es lineal. Para las lecturas $\mathbf u=(3,1)^{\mathsf T}$ y $\mathbf v=(-1,2)^{\mathsf T}$, calcule $M(\mathbf u+\mathbf v)$ y $M(\mathbf u)+M(\mathbf v)$. Interprete la coincidencia en términos de las lecturas y los reportes.
+2. Un laboratorio prepara dos tipos de paquetes de probetas, que son muestras destinadas a ensayos. Un paquete del primer tipo contiene dos probetas cortas y una larga. Uno del segundo tipo contiene una corta y tres largas. Plantee una combinación lineal y use la [determinación de los coeficientes](2026-11-09-sesion-47.qmd#determinación-de-los-coeficientes) para calcular cuántos paquetes enteros de cada tipo se requieren para reunir ocho probetas cortas y nueve largas. Compruebe ambas cantidades.
+3. Un estudiante afirma que $H(x,y)=(|x|,y)$ es lineal porque $H(0,0)=(0,0)$. Use $\mathbf u=(1,0)^{\mathsf T}$ y $a=-1$ para analizar la afirmación. ¿Qué condición deja de cumplirse?
 4. Sea $L(x,y)=(2x+y,x-y)$. Calcule $L(2,-1)$ y compruebe la aditividad y la homogeneidad con entradas arbitrarias.
 5. Sea $Q(x,y)=(x-y,3y+d)$, donde $d\in\mathbb R$ es fijo. Determine para qué valores de $d$ es lineal. Justifique tanto la necesidad como la suficiencia de su respuesta.
 
@@ -107,14 +107,18 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la justif
 
 **3.** $H(-\mathbf u)=(1,0)$ y $-H(\mathbf u)=(-1,0)$. Falla la homogeneidad. Que $H$ fije el origen es una condición necesaria para la linealidad, pero por sí sola es insuficiente.
 
-**4.** $L(2,-1)=(3,3)$. Es lineal: ambas coordenadas son combinaciones lineales de $x,y$ con coeficientes fijos, de modo que satisfacen las dos propiedades.
+**4.** $L(2,-1)=(3,3)$. La regla es lineal por distributividad en ambas coordenadas, de la misma forma que en el ejercicio 1 de la [actividad](#actividad).
 
-**5.** Solo $d=0$. El origen debe ir a $(0,0)$ y $Q(0,0)=(0,d)$. Para $d=0$, las dos coordenadas son combinaciones lineales de $x,y$ con coeficientes fijos.
+**5.** Solo $d=0$. La necesidad se obtiene de $Q(0,0)=(0,d)$. Con $d=0$, la distributividad en ambas coordenadas garantiza la aditividad y la homogeneidad de $Q(x,y)=(x-y,3y)$.
 
 :::
 
 ## Conclusiones del aprendizaje
 
-- El cálculo de $T(x,y)$ identifica la salida de una entrada dada.
-- La aditividad y la homogeneidad, verificadas para entradas y escalares arbitrarios, justifican la linealidad.
-- Una traslación por un vector no nulo se descarta examinando el origen. Para una transformación que fija el origen todavía es necesario comprobar ambas propiedades o encontrar un contraejemplo.
+La aditividad y la homogeneidad permiten calcular la salida de una combinación lineal a partir de las salidas de sus vectores. Una transformación lineal fija el origen.
+
+Al revisar su trabajo, compruebe si puede realizar lo siguiente.
+
+- Calcular la salida de un vector y justificar la linealidad para entradas arbitrarias, como en el ejercicio 1 de la [actividad](#actividad).
+- Distinguir un escalamiento que conserva el origen de una regla que añade un desplazamiento, como en el ejercicio 2 de la [actividad](#actividad).
+- Encontrar un contraejemplo para una regla que fija el origen, como en la comprobación individual y en el ejercicio 3 de la [práctica](#ejercicios-para-practicar).
