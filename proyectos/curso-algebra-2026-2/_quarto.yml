@@ -101,6 +101,7 @@ book:
     - part: "Unidad 6. Transformaciones lineales en el plano"
       chapters:
         - unidades/06-transformaciones-lineales.qmd
+        - sesiones/2026-11-17-sesion-49.qmd
     - part: "Recursos de consulta"
       chapters:
         - recursos/notacion.qmd
