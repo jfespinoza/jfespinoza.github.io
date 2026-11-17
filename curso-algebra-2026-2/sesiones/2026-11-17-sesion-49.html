@@ -611,11 +611,11 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá calcular la salida de una transformación del plano y justificar su linealidad mediante la aditividad y la homogeneidad. Podrá exhibir un contraejemplo cuando alguna condición falle.</p>
+<p>Al finalizar la sesión podrá calcular la salida de una transformación del plano, justificar su linealidad mediante aditividad y homogeneidad y encontrar un contraejemplo cuando alguna condición falle. Compruebe estas capacidades en el ejercicio 1 y en la comprobación individual de la <a href="#actividad">actividad</a>.</p>
 </section>
 <section id="transformaciones-del-plano" class="level2">
 <h2 class="anchored" data-anchor-id="transformaciones-del-plano">Transformaciones del plano</h2>
-<p>Una <strong>transformación del plano</strong> <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> asigna a cada vector de entrada <span class="math inline">\(\mathbf u=(x,y)\)</span> un único vector de salida <span class="math inline">\(T(\mathbf u)\)</span> en el mismo plano. También se escribe <span class="math inline">\(T(x,y)\)</span>. Por ejemplo, si <span class="math inline">\(T(x,y)=(2x,3y)\)</span>, la entrada <span class="math inline">\((1,-2)\)</span> produce la salida <span class="math inline">\((2,-6)\)</span>.</p>
+<p>Una <strong>transformación del plano</strong> <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> asigna a cada <a href="../sesiones/2026-10-19-sesion-36.html#vectores-columna">vector columna</a> de entrada <span class="math inline">\(\mathbf u=(x,y)^{\mathsf T}\)</span> un único vector columna de salida <span class="math inline">\(T(\mathbf u)\)</span> en el mismo plano. Al escribir <span class="math inline">\(T(x,y)=(p,q)\)</span>, las parejas indican las componentes de los vectores columna de entrada y salida. Por ejemplo, si <span class="math inline">\(T(x,y)=(2x,3y)\)</span>, la entrada <span class="math inline">\((1,-2)\)</span> produce la salida <span class="math inline">\((2,-6)\)</span>.</p>
 <p>La transformación <span class="math inline">\(T\)</span> es <strong>lineal</strong> si satisface estas dos condiciones para cualesquiera <span class="math inline">\(\mathbf u,\mathbf v\in\mathbb R^2\)</span> y <span class="math inline">\(a\in\mathbb R\)</span>.</p>
 <table class="caption-top table">
 <thead>
@@ -635,7 +635,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>La aditividad permite sumar antes o después de transformar los vectores. La homogeneidad permite multiplicar por un escalar antes o después de transformar. Para cualesquiera escalares <span class="math inline">\(a,b\in\mathbb R\)</span>, ambas propiedades permiten calcular la salida de una <a href="../sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector">combinación lineal</a>.</p>
+<p>La aditividad permite sumar antes o después de transformar los vectores. La homogeneidad permite efectuar el <a href="../sesiones/2026-10-09-sesion-35.html#suma-resta-y-producto-por-un-escalar">producto por un escalar</a> antes o después de transformar. Para cualesquiera escalares <span class="math inline">\(a,b\in\mathbb R\)</span>, ambas propiedades permiten calcular la salida de una <a href="../sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector">combinación lineal</a>.</p>
 <p><span class="math display">\[
 T(a\mathbf u+b\mathbf v)=T(a\mathbf u)+T(b\mathbf v)=aT(\mathbf u)+bT(\mathbf v).
 \]</span></p>
@@ -645,7 +645,7 @@ T(a\mathbf u+b\mathbf v)=T(a\mathbf u)+T(b\mathbf v)=aT(\mathbf u)+bT(\mathbf v)
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
 <section id="ejemplo-1.-escalamiento-por-coordenadas" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-1.-escalamiento-por-coordenadas">Ejemplo 1. Escalamiento por coordenadas</h3>
-<p>Sea <span class="math inline">\(S(x,y)=(2x,3y)\)</span>. Tome <span class="math inline">\(\mathbf u=(x_1,y_1)\)</span>, <span class="math inline">\(\mathbf v=(x_2,y_2)\)</span> y <span class="math inline">\(a\in\mathbb R\)</span>. La aditividad se obtiene distribuyendo el factor de cada coordenada:</p>
+<p>Sea <span class="math inline">\(S(x,y)=(2x,3y)\)</span>. Tome <span class="math inline">\(\mathbf u=(x_1,y_1)^{\mathsf T}\)</span>, <span class="math inline">\(\mathbf v=(x_2,y_2)^{\mathsf T}\)</span> y <span class="math inline">\(a\in\mathbb R\)</span>. La aditividad se obtiene distribuyendo el factor de cada coordenada:</p>
 <p><span class="math display">\[
 \begin{aligned}
 S(\mathbf u+\mathbf v)
@@ -658,7 +658,7 @@ S(\mathbf u+\mathbf v)
 <p><span class="math display">\[
 S(a\mathbf u)=(2ax_1,3ay_1)=a(2x_1,3y_1)=aS(\mathbf u).
 \]</span></p>
-<p>Las igualdades valen para todas las entradas y todos los escalares. Por tanto, <span class="math inline">\(S\)</span> es lineal. El mismo argumento vale para cualquier escalamiento por coordenadas <span class="math inline">\((x,y)\mapsto(kx,ly)\)</span> con factores reales fijos <span class="math inline">\(k,l\)</span>.</p>
+<p>Las igualdades valen para todas las entradas y todos los escalares. Por tanto, <span class="math inline">\(S\)</span> es lineal. En general, para una coordenada de la forma <span class="math inline">\(px+qy\)</span>, con <span class="math inline">\(p\)</span> y <span class="math inline">\(q\)</span> fijos, la aditividad se obtiene al agrupar <span class="math inline">\(px_1+qy_1\)</span> y <span class="math inline">\(px_2+qy_2\)</span>, y la homogeneidad al extraer el factor común <span class="math inline">\(a\)</span>. Si las dos coordenadas tienen esta forma, la regla es lineal.</p>
 </section>
 <section id="ejemplo-2.-traslación-por-un-vector-no-nulo" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-2.-traslación-por-un-vector-no-nulo">Ejemplo 2. Traslación por un vector no nulo</h3>
@@ -668,18 +668,18 @@ S(a\mathbf u)=(2ax_1,3ay_1)=a(2x_1,3y_1)=aS(\mathbf u).
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Comprobar las igualdades con algunos valores y concluir que siempre se cumplen.</strong> Una prueba de linealidad debe justificar ambas propiedades para entradas y escalares arbitrarios. Para refutar la linealidad basta una sola falla.</li>
-<li><strong>Concluir que <span class="math inline">\(T\)</span> es lineal porque <span class="math inline">\(T(\mathbf 0)=\mathbf 0\)</span>.</strong> Considere <span class="math inline">\(G(x,y)=(x^2,y)\)</span>. Aunque <span class="math inline">\(G(0,0)=(0,0)\)</span>, se tiene <span class="math inline">\(G(2(1,0))=(4,0)\)</span> y <span class="math inline">\(2G(1,0)=(2,0)\)</span>. La homogeneidad falla.</li>
+<li><strong>Concluir la linealidad a partir de casos particulares.</strong> <strong>Falso.</strong> Para <span class="math inline">\(T(x,y)=(x^3,y)\)</span>, se cumple <span class="math inline">\(T(-1,0)=-T(1,0)\)</span>. A partir de este cálculo se concluye que <span class="math inline">\(T\)</span> es lineal. <strong>Corrección.</strong> Con <span class="math inline">\(a=2\)</span>, se obtiene <span class="math inline">\(T(2,0)=(8,0)\)</span> y <span class="math inline">\(2T(1,0)=(2,0)\)</span>. Un solo contraejemplo basta para refutar la homogeneidad.</li>
+<li><strong>Deducir la linealidad a partir del origen.</strong> <strong>Falso.</strong> Como <span class="math inline">\(G(x,y)=(x^2,y)\)</span> satisface <span class="math inline">\(G(0,0)=(0,0)\)</span>, se concluye que <span class="math inline">\(G\)</span> es lineal. <strong>Corrección.</strong> <span class="math inline">\(G(2,0)=(4,0)\)</span> y <span class="math inline">\(2G(1,0)=(2,0)\)</span>. Fijar el origen es una condición necesaria para la linealidad.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
 <h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
-<p>Resuelva primero de manera individual y registre por escrito su justificación. Compare después sus respuestas con un compañero de grupo e indique qué propiedad respalda cada corrección.</p>
+<p>Resuelva primero de manera individual y registre por escrito su justificación. Compare después sus respuestas con otra persona del grupo e indique qué propiedad respalda cada corrección.</p>
 <ol type="1">
 <li>Sea <span class="math inline">\(F(x,y)=(x+2y,-y)\)</span>. Calcule <span class="math inline">\(F(-1,2)\)</span> y justifique que <span class="math inline">\(F\)</span> satisface la aditividad y la homogeneidad para entradas arbitrarias.</li>
-<li>En una imagen de una muestra pulida, un programa corrige la escala horizontal por un factor de <span class="math inline">\(2\)</span> y conserva la escala vertical. La corrección debe conservar la misma marca como origen. Las coordenadas se expresan en micrómetros. Se proponen las reglas <span class="math inline">\(C(x,y)=(2x,y)\)</span> y <span class="math inline">\(D(x,y)=(2x+1,y)\)</span>. Calcule con cada regla la posición de una partícula visible situada en <span class="math inline">\((2,3)\)</span>. Determine cuál conserva el origen de referencia y justifique si cada regla es lineal.</li>
+<li>En una fotografía de una muestra pulida, un programa corrige la escala horizontal por un factor de <span class="math inline">\(2\)</span> y conserva la escala vertical. La corrección debe conservar la misma marca como origen. Las coordenadas se expresan en micrómetros. Se proponen las reglas <span class="math inline">\(C(x,y)=(2x,y)\)</span> y <span class="math inline">\(D(x,y)=(2x+1,y)\)</span>. Calcule con cada regla la posición de una partícula visible situada en <span class="math inline">\((2,3)\)</span>. Determine cuál conserva el origen de referencia y justifique si cada regla es lineal.</li>
 </ol>
-<p><strong>Comprobación individual.</strong> Para <span class="math inline">\(P(x,y)=(x,y^2)\)</span>, use <span class="math inline">\(\mathbf u=(0,1)\)</span> y <span class="math inline">\(a=2\)</span> para decidir si <span class="math inline">\(P\)</span> es lineal. Escriba las dos salidas que compara y nombre la propiedad que falla.</p>
+<p><strong>Comprobación individual.</strong> Para <span class="math inline">\(P(x,y)=(x,y^2)\)</span>, use <span class="math inline">\(\mathbf u=(0,1)^{\mathsf T}\)</span> y <span class="math inline">\(a=2\)</span> para decidir si <span class="math inline">\(P\)</span> es lineal. Escriba las dos salidas que compara y nombre la propiedad que falla.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -692,7 +692,7 @@ S(a\mathbf u)=(2ax_1,3ay_1)=a(2x_1,3y_1)=aS(\mathbf u).
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.</strong> <span class="math inline">\(F(-1,2)=(3,-2)\)</span>. Para <span class="math inline">\(\mathbf u=(x_1,y_1)\)</span> y <span class="math inline">\(\mathbf v=(x_2,y_2)\)</span>,</p>
+<p><strong>1.</strong> <span class="math inline">\(F(-1,2)=(3,-2)\)</span>. Para <span class="math inline">\(\mathbf u=(x_1,y_1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v=(x_2,y_2)^{\mathsf T}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 F(\mathbf u+\mathbf v)
@@ -702,7 +702,7 @@ F(\mathbf u+\mathbf v)
 \end{aligned}
 \]</span></p>
 <p>Para cualquier <span class="math inline">\(a\in\mathbb R\)</span>, <span class="math inline">\(F(a\mathbf u)=(ax_1+2ay_1,-ay_1)=aF(\mathbf u)\)</span>. Se cumplen ambas propiedades.</p>
-<p><strong>2.</strong> <span class="math inline">\(C(2,3)=(4,3)\)</span> y <span class="math inline">\(D(2,3)=(5,3)\)</span>, en micrómetros. La regla <span class="math inline">\(C\)</span> conserva el origen y es lineal por ser un escalamiento por coordenadas con factores <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span>. La regla <span class="math inline">\(D\)</span> desplaza la marca de referencia un micrómetro en el eje horizontal, pues <span class="math inline">\(D(0,0)=(1,0)\)</span>. Por ello <span class="math inline">\(D\)</span> no es lineal y no satisface la condición de conservar el origen en la imagen corregida.</p>
+<p><strong>2.</strong> <span class="math inline">\(C(2,3)=(4,3)\)</span> y <span class="math inline">\(D(2,3)=(5,3)\)</span>, en micrómetros. La regla <span class="math inline">\(C\)</span> conserva el origen y es lineal por ser un escalamiento por coordenadas con factores <span class="math inline">\(2\)</span> y <span class="math inline">\(1\)</span>. La regla <span class="math inline">\(D\)</span> desplaza la marca de referencia un micrómetro en el eje horizontal, pues <span class="math inline">\(D(0,0)=(1,0)\)</span>. Por ello <span class="math inline">\(D\)</span> no es lineal y no satisface la condición de conservar el origen en la fotografía corregida.</p>
 <p><strong>Comprobación individual.</strong> <span class="math inline">\(P(2\mathbf u)=P(0,2)=(0,4)\)</span> y <span class="math inline">\(2P(\mathbf u)=2(0,1)=(0,2)\)</span>. Falla la homogeneidad, de modo que <span class="math inline">\(P\)</span> no es lineal.</p>
 </div>
 </div>
@@ -712,9 +712,9 @@ F(\mathbf u+\mathbf v)
 <h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
 <p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la justificación de las propiedades. Consulte las respuestas después de registrar su intento.</p>
 <ol type="1">
-<li>En una prueba de calibración, un programa recibe dos lecturas de desplazamiento <span class="math inline">\(x,y\)</span> en micrómetros y reporta su suma y su diferencia mediante <span class="math inline">\(M(x,y)=(x+y,x-y)\)</span>. Justifique que <span class="math inline">\(M\)</span> es lineal. Para las lecturas <span class="math inline">\(\mathbf u=(3,1)\)</span> y <span class="math inline">\(\mathbf v=(-1,2)\)</span>, calcule <span class="math inline">\(M(\mathbf u+\mathbf v)\)</span> y <span class="math inline">\(M(\mathbf u)+M(\mathbf v)\)</span>. Interprete la coincidencia en términos de las lecturas y los reportes.</li>
-<li>Un laboratorio prepara dos tipos de paquetes de probetas, que son muestras destinadas a ensayos. Un paquete del primer tipo contiene dos probetas cortas y una larga. Uno del segundo tipo contiene una corta y tres largas. Plantee una combinación lineal y determine cuántos paquetes enteros de cada tipo se requieren para reunir ocho probetas cortas y nueve largas. Compruebe ambas cantidades.</li>
-<li>Un estudiante afirma que <span class="math inline">\(H(x,y)=(|x|,y)\)</span> es lineal porque <span class="math inline">\(H(0,0)=(0,0)\)</span>. Use <span class="math inline">\(\mathbf u=(1,0)\)</span> y <span class="math inline">\(a=-1\)</span> para analizar la afirmación. ¿Qué condición deja de cumplirse?</li>
+<li>En una prueba de calibración, un programa recibe dos lecturas de desplazamiento <span class="math inline">\(x,y\)</span> en micrómetros y reporta su suma y su diferencia mediante <span class="math inline">\(M(x,y)=(x+y,x-y)\)</span>. Justifique que <span class="math inline">\(M\)</span> es lineal. Para las lecturas <span class="math inline">\(\mathbf u=(3,1)^{\mathsf T}\)</span> y <span class="math inline">\(\mathbf v=(-1,2)^{\mathsf T}\)</span>, calcule <span class="math inline">\(M(\mathbf u+\mathbf v)\)</span> y <span class="math inline">\(M(\mathbf u)+M(\mathbf v)\)</span>. Interprete la coincidencia en términos de las lecturas y los reportes.</li>
+<li>Un laboratorio prepara dos tipos de paquetes de probetas, que son muestras destinadas a ensayos. Un paquete del primer tipo contiene dos probetas cortas y una larga. Uno del segundo tipo contiene una corta y tres largas. Plantee una combinación lineal y use la <a href="../sesiones/2026-11-09-sesion-47.html#determinación-de-los-coeficientes">determinación de los coeficientes</a> para calcular cuántos paquetes enteros de cada tipo se requieren para reunir ocho probetas cortas y nueve largas. Compruebe ambas cantidades.</li>
+<li>Un estudiante afirma que <span class="math inline">\(H(x,y)=(|x|,y)\)</span> es lineal porque <span class="math inline">\(H(0,0)=(0,0)\)</span>. Use <span class="math inline">\(\mathbf u=(1,0)^{\mathsf T}\)</span> y <span class="math inline">\(a=-1\)</span> para analizar la afirmación. ¿Qué condición deja de cumplirse?</li>
 <li>Sea <span class="math inline">\(L(x,y)=(2x+y,x-y)\)</span>. Calcule <span class="math inline">\(L(2,-1)\)</span> y compruebe la aditividad y la homogeneidad con entradas arbitrarias.</li>
 <li>Sea <span class="math inline">\(Q(x,y)=(x-y,3y+d)\)</span>, donde <span class="math inline">\(d\in\mathbb R\)</span> es fijo. Determine para qué valores de <span class="math inline">\(d\)</span> es lineal. Justifique tanto la necesidad como la suficiencia de su respuesta.</li>
 </ol>
@@ -733,18 +733,20 @@ F(\mathbf u+\mathbf v)
 <p><strong>1.</strong> <span class="math inline">\(M\)</span> es lineal por la aditividad y la homogeneidad de la suma y la diferencia de coordenadas. Los dos cálculos dan <span class="math inline">\((5,-1)\)</span> en micrómetros. Sumar las lecturas antes de procesarlas produce el mismo reporte que sumar los dos reportes.</p>
 <p><strong>2.</strong> <span class="math inline">\(3(2,1)+2(1,3)=(8,9)\)</span>. Se requieren tres paquetes del primer tipo y dos del segundo.</p>
 <p><strong>3.</strong> <span class="math inline">\(H(-\mathbf u)=(1,0)\)</span> y <span class="math inline">\(-H(\mathbf u)=(-1,0)\)</span>. Falla la homogeneidad. Que <span class="math inline">\(H\)</span> fije el origen es una condición necesaria para la linealidad, pero por sí sola es insuficiente.</p>
-<p><strong>4.</strong> <span class="math inline">\(L(2,-1)=(3,3)\)</span>. Es lineal: ambas coordenadas son combinaciones lineales de <span class="math inline">\(x,y\)</span> con coeficientes fijos, de modo que satisfacen las dos propiedades.</p>
-<p><strong>5.</strong> Solo <span class="math inline">\(d=0\)</span>. El origen debe ir a <span class="math inline">\((0,0)\)</span> y <span class="math inline">\(Q(0,0)=(0,d)\)</span>. Para <span class="math inline">\(d=0\)</span>, las dos coordenadas son combinaciones lineales de <span class="math inline">\(x,y\)</span> con coeficientes fijos.</p>
+<p><strong>4.</strong> <span class="math inline">\(L(2,-1)=(3,3)\)</span>. La regla es lineal por distributividad en ambas coordenadas, de la misma forma que en el ejercicio 1 de la <a href="#actividad">actividad</a>.</p>
+<p><strong>5.</strong> Solo <span class="math inline">\(d=0\)</span>. La necesidad se obtiene de <span class="math inline">\(Q(0,0)=(0,d)\)</span>. Con <span class="math inline">\(d=0\)</span>, la distributividad en ambas coordenadas garantiza la aditividad y la homogeneidad de <span class="math inline">\(Q(x,y)=(x-y,3y)\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>La aditividad y la homogeneidad permiten calcular la salida de una combinación lineal a partir de las salidas de sus vectores. Una transformación lineal fija el origen.</p>
+<p>Al revisar su trabajo, compruebe si puede realizar lo siguiente.</p>
 <ul>
-<li>El cálculo de <span class="math inline">\(T(x,y)\)</span> identifica la salida de una entrada dada.</li>
-<li>La aditividad y la homogeneidad, verificadas para entradas y escalares arbitrarios, justifican la linealidad.</li>
-<li>Una traslación por un vector no nulo se descarta examinando el origen. Para una transformación que fija el origen todavía es necesario comprobar ambas propiedades o encontrar un contraejemplo.</li>
+<li>Calcular la salida de un vector y justificar la linealidad para entradas arbitrarias, como en el ejercicio 1 de la <a href="#actividad">actividad</a>.</li>
+<li>Distinguir un escalamiento que conserva el origen de una regla que añade un desplazamiento, como en el ejercicio 2 de la <a href="#actividad">actividad</a>.</li>
+<li>Encontrar un contraejemplo para una regla que fija el origen, como en la comprobación individual y en el ejercicio 3 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
