@@ -623,7 +623,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en la <a href="#actividad">actividad</a>.</p>
+<p>Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en los ejercicios 1 y 2 y en la comprobación individual de la <a href="#actividad">actividad</a>.</p>
 </section>
 <section id="imagen-de-un-segmento" class="level2">
 <h2 class="anchored" data-anchor-id="imagen-de-un-segmento">Imagen de un segmento</h2>
@@ -640,19 +640,19 @@ T\bigl((1-t)\mathbf a+t\mathbf b\bigr)=(1-t)T(\mathbf a)+tT(\mathbf b).
 </section>
 <section id="escalamiento-por-coordenadas" class="level2">
 <h2 class="anchored" data-anchor-id="escalamiento-por-coordenadas">Escalamiento por coordenadas</h2>
-<p>El escalamiento <span class="math inline">\(E(x,y)=(kx,\,ly)\)</span>, con <span class="math inline">\(k,l&gt;0\)</span>, tiene matriz estándar</p>
+<p>El escalamiento <span class="math inline">\(E(x,y)=(kx,\,ly)\)</span>, con <span class="math inline">\(k,l&gt;0\)</span>, tiene matriz estándar <span class="math inline">\(A_E\)</span>, dada por</p>
 <p><span class="math display">\[
-[E]=\begin{bmatrix}k&amp;0\\0&amp;l\end{bmatrix}.
+A_E=\begin{bmatrix}k&amp;0\\0&amp;l\end{bmatrix}.
 \]</span></p>
 <p>Un lado horizontal conserva su dirección y su longitud se multiplica por <span class="math inline">\(k\)</span>. Un lado vertical conserva su dirección y su longitud se multiplica por <span class="math inline">\(l\)</span>. Si un lado es oblicuo y sus desplazamientos horizontal y vertical son <span class="math inline">\(d_1\)</span> y <span class="math inline">\(d_2\)</span>, la longitud transformada se calcula a partir de ambas componentes y es <span class="math inline">\(\sqrt{(kd_1)^2+(ld_2)^2}\)</span>.</p>
 </section>
 <section id="proyección-sobre-un-eje" class="level2">
 <h2 class="anchored" data-anchor-id="proyección-sobre-un-eje">Proyección sobre un eje</h2>
-<p>La proyección <span class="math inline">\(P(x,y)=(x,0)\)</span> conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección <span class="math inline">\(Q(x,y)=(0,y)\)</span> conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son</p>
+<p>La proyección <span class="math inline">\(P(x,y)=(x,0)\)</span> conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección <span class="math inline">\(Q(x,y)=(0,y)\)</span> conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son <span class="math inline">\(A_P\)</span> y <span class="math inline">\(A_Q\)</span>, respectivamente.</p>
 <p><span class="math display">\[
-[P]=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix},
+A_P=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix},
 \qquad
-[Q]=\begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}.
+A_Q=\begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}.
 \]</span></p>
 <p>Bajo <span class="math inline">\(P\)</span>, un lado horizontal conserva su longitud, un lado vertical se reduce a un punto y un lado oblicuo se transforma en un segmento horizontal de longitud <span class="math inline">\(|d_1|\)</span>, donde <span class="math inline">\(d_1\)</span> es su desplazamiento horizontal. Bajo <span class="math inline">\(Q\)</span>, se intercambian los papeles de las dos coordenadas.</p>
 </section>
@@ -828,9 +828,9 @@ A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Alteración del orden de los vértices.</strong> En el rectángulo del ejercicio 1 de la actividad, el contorno recorre <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> y regresa a <span class="math inline">\(O\)</span>. El segmento entre <span class="math inline">\(O'\)</span> y <span class="math inline">\(B'\)</span> es la imagen de la diagonal <span class="math inline">\(OB\)</span> y queda en el interior del nuevo contorno, salvo en sus extremos.</li>
-<li><strong>Uso de un factor común para las longitudes.</strong> En el Ejemplo 1, el escalamiento duplica la longitud de <span class="math inline">\(AB\)</span>, reduce a la mitad la de <span class="math inline">\(AC\)</span> y modifica las dos componentes del desplazamiento de <span class="math inline">\(B\)</span> a <span class="math inline">\(C\)</span>.</li>
-<li><strong>Conteo de vértices coincidentes como puntos distintos.</strong> En el Ejemplo 2, <span class="math inline">\(A'\)</span> y <span class="math inline">\(C'\)</span> representan el mismo punto. La imagen del triángulo es un segmento.</li>
+<li><strong>Alteración del orden de los vértices.</strong> Sean <span class="math inline">\(O(0,0)\)</span>, <span class="math inline">\(A(2,0)\)</span>, <span class="math inline">\(B(2,1)\)</span> y <span class="math inline">\(C(0,1)\)</span> los vértices de un rectángulo en orden consecutivo. <strong>Falso.</strong> Con <span class="math inline">\(E(x,y)=(x,2y)\)</span>, el contorno transformado es <span class="math inline">\(O'B'A'C'O'\)</span>. <strong>Corrección.</strong> Los segmentos <span class="math inline">\(O'B'\)</span> y <span class="math inline">\(A'C'\)</span> son las imágenes de las diagonales y se cruzan en <span class="math inline">\((1,1)\)</span>. Los lados del contorno transformado se obtienen al recorrer <span class="math inline">\(O'A'B'C'O'\)</span>.</li>
+<li><strong>Uso de un factor común para las longitudes.</strong> <strong>Falso.</strong> El escalamiento del Ejemplo 1 duplica la longitud de cada lado. <strong>Corrección.</strong> La longitud de <span class="math inline">\(AB\)</span> pasa de <span class="math inline">\(2\)</span> a <span class="math inline">\(4\)</span>, la de <span class="math inline">\(AC\)</span> de <span class="math inline">\(3\)</span> a <span class="math inline">\(\tfrac32\)</span> y la de <span class="math inline">\(BC\)</span> de <span class="math inline">\(\sqrt{13}\)</span> a <span class="math inline">\(\tfrac{\sqrt{73}}2\)</span>.</li>
+<li><strong>Conteo de vértices coincidentes como puntos distintos.</strong> <strong>Falso.</strong> La proyección del Ejemplo 2 produce un triángulo con vértices <span class="math inline">\((1,0)\)</span>, <span class="math inline">\((3,0)\)</span> y <span class="math inline">\((1,0)\)</span>. <strong>Corrección.</strong> Los vértices <span class="math inline">\(A'\)</span> y <span class="math inline">\(C'\)</span> coinciden en <span class="math inline">\((1,0)\)</span>. La proyección produce el segmento entre <span class="math inline">\((1,0)\)</span> y <span class="math inline">\((3,0)\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -877,7 +877,7 @@ A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
 <li><p>La sección de una barra tiene forma de trapecio, con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((10,0)\)</span>, <span class="math inline">\((8,4)\)</span> y <span class="math inline">\((2,4)\)</span> en milímetros. En un ensayo idealizado, la sección se deforma mediante <span class="math inline">\(E(x,y)=(1.2x,\,0.5y)\)</span>.</p>
 <ol type="a">
 <li><p>Calcule las imágenes de los vértices.</p></li>
-<li><p>Determine las longitudes de las bases horizontales y la altura antes y después de la deformación. Justifique que las bases transformadas siguen siendo paralelas.</p></li>
+<li><p>Determine las longitudes de los dos lados horizontales y la altura antes y después de la deformación. Justifique que esos lados siguen siendo paralelos después de la deformación.</p></li>
 </ol></li>
 <li><p>Dos lotes de polvo cerámico contienen alúmina y sílice. El lote 1 contiene <span class="math inline">\(80\,\%\)</span> de alúmina y <span class="math inline">\(20\,\%\)</span> de sílice en masa. El lote 2 contiene <span class="math inline">\(40\,\%\)</span> de alúmina y <span class="math inline">\(60\,\%\)</span> de sílice. Una mezcla preparada sin pérdidas contiene <span class="math inline">\(280\)</span> g de alúmina y <span class="math inline">\(120\)</span> g de sílice.</p>
 <ol type="a">
@@ -913,7 +913,7 @@ A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>1. a.</strong> <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((12,0)\)</span>, <span class="math inline">\((9.6,2)\)</span> y <span class="math inline">\((2.4,2)\)</span>.</p>
-<p><strong>1. b.</strong> Las bases pasan de <span class="math inline">\(10\)</span> a <span class="math inline">\(12\)</span> mm y de <span class="math inline">\(6\)</span> a <span class="math inline">\(7.2\)</span> mm. La altura pasa de <span class="math inline">\(4\)</span> a <span class="math inline">\(2\)</span> mm. Las bases permanecen paralelas porque ambas imágenes son horizontales.</p>
+<p><strong>1. b.</strong> Los lados horizontales pasan de <span class="math inline">\(10\)</span> a <span class="math inline">\(12\)</span> mm y de <span class="math inline">\(6\)</span> a <span class="math inline">\(7.2\)</span> mm. La altura pasa de <span class="math inline">\(4\)</span> a <span class="math inline">\(2\)</span> mm. Esos lados permanecen paralelos porque sus imágenes son horizontales.</p>
 <p><strong>2. a.</strong> <span class="math inline">\(\begin{bmatrix}0.8&amp;0.4\\0.2&amp;0.6\end{bmatrix}\mathbf m=\begin{bmatrix}280\\120\end{bmatrix}\)</span> y <span class="math inline">\(\det K=0.4\)</span>.</p>
 <p><strong>2. b.</strong> <span class="math inline">\(K^{-1}=\begin{bmatrix}1.5&amp;-1\\-0.5&amp;2\end{bmatrix}\)</span>. Se usan <span class="math inline">\(300\)</span> g del lote 1 y <span class="math inline">\(100\)</span> g del lote 2. Las masas obtenidas son <span class="math inline">\(240+40=280\)</span> g de alúmina y <span class="math inline">\(60+60=120\)</span> g de sílice.</p>
 <p><strong>3. a.</strong> <span class="math inline">\((2,1)\)</span>, <span class="math inline">\((6,1)\)</span>, <span class="math inline">\((6,3)\)</span> y <span class="math inline">\((2,3)\)</span>.</p>
@@ -928,7 +928,13 @@ A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
-<p>Compruebe que puede dibujar la imagen del contorno de una figura uniendo las imágenes de sus vértices en el orden original. A partir de ese dibujo y de las coordenadas, explique cómo cambian las longitudes bajo un escalamiento e identifique los lados que se reducen a puntos bajo una proyección.</p>
+<p>La linealidad permite obtener la imagen de cada lado a partir de las imágenes de sus extremos. En un escalamiento por coordenadas, el factor de cambio de longitud puede depender de la dirección del lado. En una proyección sobre un eje, los lados perpendiculares a ese eje se reducen a puntos.</p>
+<p>Al revisar su trabajo, compruebe si puede realizar lo siguiente.</p>
+<ul>
+<li>Calcular las imágenes de los vértices y dibujar el contorno transformado en el orden original, como en el ejercicio 1 de la <a href="#actividad">actividad</a>.</li>
+<li>Explicar cómo cambian las longitudes de los lados horizontales, verticales y oblicuos en el <a href="#ejemplo-1.-escalamiento-de-un-triángulo">Ejemplo 1</a>.</li>
+<li>Dibujar la imagen de una figura bajo una proyección y determinar qué lados se reducen a puntos, como en el <a href="#ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal">Ejemplo 2</a> y en la comprobación individual de la <a href="#actividad">actividad</a>.</li>
+</ul>
 
 
 </section>
