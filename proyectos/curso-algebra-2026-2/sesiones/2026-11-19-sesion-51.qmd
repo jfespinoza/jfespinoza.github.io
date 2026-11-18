@@ -1,0 +1,307 @@
+---
+title: "Sesión 51. Efecto de una transformación lineal sobre figuras del plano"
+date: 2026-11-19
+description: "Transformación de segmentos, escalamientos por coordenadas y proyecciones sobre los ejes."
+---
+
+## Objetivo de la sesión
+
+Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en la [actividad](#actividad).
+
+## Imagen de un segmento
+
+Sean $A$ y $B$ puntos del plano con vectores de posición $\mathbf a$ y $\mathbf b$. Los puntos del segmento $AB$ tienen vectores de posición de la forma
+
+$$
+(1-t)\mathbf a+t\mathbf b,\qquad 0\le t\le 1.
+$$
+
+Los valores $t=0$, $t=1$ y $t=\tfrac12$ corresponden a $A$, a $B$ y al punto medio, respectivamente. Si $T$ es lineal, la [aditividad y la homogeneidad](2026-11-17-sesion-49.qmd#transformaciones-del-plano) dan
+
+$$
+T\bigl((1-t)\mathbf a+t\mathbf b\bigr)=(1-t)T(\mathbf a)+tT(\mathbf b).
+$$
+
+Al variar $t$ entre $0$ y $1$ se obtiene todo el segmento entre $A'=T(A)$ y $B'=T(B)$. Si $A'=B'$, la imagen de $AB$ es un punto. El valor $t=\tfrac12$ muestra que el punto medio se transforma en el punto medio de las imágenes, incluso si estas coinciden.
+
+Para dibujar la imagen del **contorno** de un polígono, calcule la imagen de cada vértice con la [matriz estándar](2026-11-18-sesion-50.qmd#matriz-estándar) y una las imágenes en el orden del contorno original. Los lados transformados pueden coincidir entre sí o reducirse a puntos. El desplazamiento de $A'$ a $B'$ es $T(\mathbf b-\mathbf a)$, pues $T(\mathbf b)-T(\mathbf a)=T(\mathbf b-\mathbf a)$. Si ese vector es distinto de cero, sus componentes determinan la longitud y la dirección del nuevo lado.
+
+## Escalamiento por coordenadas
+
+El escalamiento $E(x,y)=(kx,\,ly)$, con $k,l>0$, tiene matriz estándar
+
+$$
+[E]=\begin{bmatrix}k&0\\0&l\end{bmatrix}.
+$$
+
+Un lado horizontal conserva su dirección y su longitud se multiplica por $k$. Un lado vertical conserva su dirección y su longitud se multiplica por $l$. Si un lado es oblicuo y sus desplazamientos horizontal y vertical son $d_1$ y $d_2$, la longitud transformada se calcula a partir de ambas componentes y es $\sqrt{(kd_1)^2+(ld_2)^2}$.
+
+## Proyección sobre un eje
+
+La proyección $P(x,y)=(x,0)$ conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección $Q(x,y)=(0,y)$ conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son
+
+$$
+[P]=\begin{bmatrix}1&0\\0&0\end{bmatrix},
+\qquad
+[Q]=\begin{bmatrix}0&0\\0&1\end{bmatrix}.
+$$
+
+Bajo $P$, un lado horizontal conserva su longitud, un lado vertical se reduce a un punto y un lado oblicuo se transforma en un segmento horizontal de longitud $|d_1|$, donde $d_1$ es su desplazamiento horizontal. Bajo $Q$, se intercambian los papeles de las dos coordenadas.
+
+## Ejemplos
+
+### Ejemplo 1. Escalamiento de un triángulo
+
+Considere el triángulo de vértices $A(1,1)$, $B(3,1)$ y $C(1,4)$ y el escalamiento $E(x,y)=(2x,\tfrac12 y)$. Las imágenes de los vértices son
+
+$$
+A'=\bigl(2,\tfrac12\bigr),\qquad B'=\bigl(6,\tfrac12\bigr),\qquad C'=(2,2).
+$$
+
+| Lado | Longitud original | Longitud transformada |
+|---|---:|---:|
+| $AB$, horizontal | $2$ | $4$ |
+| $AC$, vertical | $3$ | $\tfrac32$ |
+| $BC$, oblicuo | $\sqrt{13}$ | $\tfrac{\sqrt{73}}2$ |
+
+El desplazamiento de $B'$ a $C'$ es $(-4,\tfrac32)$. Por ello, la longitud de $B'C'$ es $\sqrt{(-4)^2+(\tfrac32)^2}=\tfrac{\sqrt{73}}2$. El ángulo en $A'$ sigue siendo recto porque $A'B'$ es horizontal y $A'C'$ es vertical.
+
+```{=html}
+<figure style="width:100%; max-width:27rem; margin:1.25rem auto 1.65rem;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 250" role="img" aria-labelledby="s51-escalamiento-title" aria-describedby="s51-escalamiento-desc" style="display:block; width:100%; height:auto; font-family:inherit;">
+<title id="s51-escalamiento-title">Escalamiento de un triángulo</title>
+<desc id="s51-escalamiento-desc">El triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). Su imagen tiene vértices A′(2, ½), B′(6, ½) y C′(2, 2). Los ejes usan la misma escala.</desc>
+<rect x="27" y="17" width="298" height="196" rx="3" fill="var(--course-soft, #f4f7fa)"/>
+<g stroke="var(--course-line, #d9e1e8)" stroke-width="1">
+<line x1="87" y1="17" x2="87" y2="213"/>
+<line x1="130" y1="17" x2="130" y2="213"/>
+<line x1="173" y1="17" x2="173" y2="213"/>
+<line x1="216" y1="17" x2="216" y2="213"/>
+<line x1="259" y1="17" x2="259" y2="213"/>
+<line x1="302" y1="17" x2="302" y2="213"/>
+<line x1="27" y1="163" x2="325" y2="163"/>
+<line x1="27" y1="120" x2="325" y2="120"/>
+<line x1="27" y1="77" x2="325" y2="77"/>
+<line x1="27" y1="34" x2="325" y2="34"/>
+</g>
+<g stroke="var(--course-navy, #17365d)" stroke-width="1.35">
+<line x1="27" y1="206" x2="328" y2="206"/>
+<line x1="44" y1="213" x2="44" y2="17"/>
+</g>
+<g fill="var(--course-ink, #20262e)" font-size="14">
+<text x="335" y="210" text-anchor="start">x</text>
+<text x="51" y="25" text-anchor="start">y</text>
+<text x="44" y="243" text-anchor="middle">0</text>
+<text x="87" y="243" text-anchor="middle">1</text>
+<text x="130" y="243" text-anchor="middle">2</text>
+<text x="173" y="243" text-anchor="middle">3</text>
+<text x="216" y="243" text-anchor="middle">4</text>
+<text x="259" y="243" text-anchor="middle">5</text>
+<text x="302" y="243" text-anchor="middle">6</text>
+<text x="21" y="168" text-anchor="end">1</text>
+<text x="21" y="125" text-anchor="end">2</text>
+<text x="21" y="82" text-anchor="end">3</text>
+<text x="21" y="39" text-anchor="end">4</text>
+</g>
+<g fill="none" stroke="#215981" stroke-width="2.15" stroke-dasharray="6 4" stroke-linejoin="round">
+<polygon points="87,163 173,163 87,34"/>
+</g>
+<g fill="#8c3c29" fill-opacity=".11" stroke="#8c3c29" stroke-width="2.4" stroke-linejoin="round">
+<polygon points="130,184.5 302,184.5 130,120"/>
+</g>
+<g fill="#215981" font-size="15">
+<circle cx="87" cy="163" r="3.7"/>
+<text x="70" y="178" text-anchor="start">A</text>
+<circle cx="173" cy="163" r="3.7"/>
+<text x="181" y="157" text-anchor="start">B</text>
+<circle cx="87" cy="34" r="3.7"/>
+<text x="71" y="27" text-anchor="start">C</text>
+</g>
+<g fill="#8c3c29" font-size="15">
+<circle cx="130" cy="184.5" r="3.7"/>
+<text x="111" y="178.5" text-anchor="start">A′</text>
+<circle cx="302" cy="184.5" r="3.7"/>
+<text x="310" y="179.5" text-anchor="start">B′</text>
+<circle cx="130" cy="120" r="3.7"/>
+<text x="111" y="114" text-anchor="start">C′</text>
+</g>
+</svg>
+<figcaption style="margin-top:.25rem; text-align:center;">Trazo discontinuo para el triángulo original y trazo continuo para el triángulo resultante.</figcaption>
+</figure>
+```
+
+### Ejemplo 2. Proyección del triángulo sobre el eje horizontal
+
+Con $P(x,y)=(x,0)$, las imágenes de los mismos vértices son
+
+$$
+A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
+$$
+
+El lado vertical $AC$ se reduce a $(1,0)$. Los lados $AB$ y $BC$ tienen como imagen el mismo segmento, desde $(1,0)$ hasta $(3,0)$. Su longitud es $2$, que coincide con la de $AB$ y con el valor absoluto del desplazamiento horizontal de $B$ a $C$.
+
+```{=html}
+<figure style="width:100%; max-width:27rem; margin:1.25rem auto 1.65rem;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 250" role="img" aria-labelledby="s51-proyeccion-title" aria-describedby="s51-proyeccion-desc" style="display:block; width:100%; height:auto; font-family:inherit;">
+<title id="s51-proyeccion-title">Proyección de un triángulo sobre el eje horizontal</title>
+<desc id="s51-proyeccion-desc">El triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). El segmento proyectado va del punto común A′ = C′(1, 0) a B′(3, 0).</desc>
+<rect x="27" y="17" width="298" height="196" rx="3" fill="var(--course-soft, #f4f7fa)"/>
+<g stroke="var(--course-line, #d9e1e8)" stroke-width="1">
+<line x1="87" y1="17" x2="87" y2="213"/>
+<line x1="130" y1="17" x2="130" y2="213"/>
+<line x1="173" y1="17" x2="173" y2="213"/>
+<line x1="216" y1="17" x2="216" y2="213"/>
+<line x1="259" y1="17" x2="259" y2="213"/>
+<line x1="302" y1="17" x2="302" y2="213"/>
+<line x1="27" y1="163" x2="325" y2="163"/>
+<line x1="27" y1="120" x2="325" y2="120"/>
+<line x1="27" y1="77" x2="325" y2="77"/>
+<line x1="27" y1="34" x2="325" y2="34"/>
+</g>
+<g stroke="var(--course-navy, #17365d)" stroke-width="1.35">
+<line x1="27" y1="206" x2="328" y2="206"/>
+<line x1="44" y1="213" x2="44" y2="17"/>
+</g>
+<g fill="var(--course-ink, #20262e)" font-size="14">
+<text x="335" y="210" text-anchor="start">x</text>
+<text x="51" y="25" text-anchor="start">y</text>
+<text x="44" y="243" text-anchor="middle">0</text>
+<text x="87" y="243" text-anchor="middle">1</text>
+<text x="130" y="243" text-anchor="middle">2</text>
+<text x="173" y="243" text-anchor="middle">3</text>
+<text x="216" y="243" text-anchor="middle">4</text>
+<text x="259" y="243" text-anchor="middle">5</text>
+<text x="302" y="243" text-anchor="middle">6</text>
+<text x="21" y="168" text-anchor="end">1</text>
+<text x="21" y="125" text-anchor="end">2</text>
+<text x="21" y="82" text-anchor="end">3</text>
+<text x="21" y="39" text-anchor="end">4</text>
+</g>
+<g stroke="#526678" stroke-width="1.25" stroke-dasharray="2 3">
+<line x1="87" y1="163" x2="87" y2="206"/>
+<line x1="173" y1="163" x2="173" y2="206"/>
+</g>
+<g fill="none" stroke="#215981" stroke-width="2.15" stroke-dasharray="6 4" stroke-linejoin="round">
+<polygon points="87,163 173,163 87,34"/>
+</g>
+<g stroke="#8c3c29" stroke-width="4.3" stroke-linecap="round">
+<line x1="87" y1="206" x2="173" y2="206"/>
+</g>
+<g fill="#215981" font-size="15">
+<circle cx="87" cy="163" r="3.7"/>
+<text x="70" y="178" text-anchor="start">A</text>
+<circle cx="173" cy="163" r="3.7"/>
+<text x="181" y="157" text-anchor="start">B</text>
+<circle cx="87" cy="34" r="3.7"/>
+<text x="71" y="27" text-anchor="start">C</text>
+</g>
+<g fill="#8c3c29" font-size="15">
+<circle cx="87" cy="206" r="3.7"/>
+<text x="87" y="225" text-anchor="middle">A′ = C′</text>
+<circle cx="173" cy="206" r="3.7"/>
+<text x="173" y="225" text-anchor="middle">B′</text>
+</g>
+</svg>
+<figcaption style="margin-top:.25rem; text-align:center;">Trazo discontinuo para el triángulo original y trazo continuo para el segmento proyectado.</figcaption>
+</figure>
+```
+
+## Errores frecuentes
+
+- **Alteración del orden de los vértices.** En el rectángulo del ejercicio 1 de la actividad, el contorno recorre $O$, $A$, $B$, $C$ y regresa a $O$. El segmento entre $O'$ y $B'$ es la imagen de la diagonal $OB$ y queda en el interior del nuevo contorno, salvo en sus extremos.
+- **Uso de un factor común para las longitudes.** En el Ejemplo 1, el escalamiento duplica la longitud de $AB$, reduce a la mitad la de $AC$ y modifica las dos componentes del desplazamiento de $B$ a $C$.
+- **Conteo de vértices coincidentes como puntos distintos.** En el Ejemplo 2, $A'$ y $C'$ representan el mismo punto. La imagen del triángulo es un segmento.
+
+## Actividad
+
+Resuelva primero los ejercicios de forma individual y registre su procedimiento por escrito. Después, compare sus resultados con los de otra persona del grupo y justifique las correcciones mediante los cálculos o el croquis.
+
+1. Considere el rectángulo con vértices $O(0,0)$, $A(4,0)$, $B(4,2)$ y $C(0,2)$ y el escalamiento $E(x,y)=(\tfrac12x,\,3y)$.
+
+   a. Escriba la matriz estándar y calcule las imágenes de los cuatro vértices.
+
+   b. Dibuje ambas figuras en el mismo plano. Indique las longitudes de los lados antes y después del escalamiento y justifique por qué la imagen sigue siendo un rectángulo.
+
+2. El contorno de una muestra cerámica vista desde arriba es un triángulo de vértices $O(0,0)$, $A(6,0)$ y $B(2,4)$, con coordenadas en milímetros. Un lector óptico registra únicamente la posición horizontal de cada punto. La lectura se representa en el plano mediante $P(x,y)=(x,0)$.
+
+   a. Escriba la matriz estándar y dibuje la imagen del contorno. Indique la imagen de cada lado y su longitud en el registro.
+
+   b. Determine el ancho horizontal de la muestra a partir de la lectura. Explique qué sucede con la información sobre la altura.
+
+**Comprobación individual.** Aplique $Q(x,y)=(0,y)$ a los vértices $(1,0)$, $(0,2)$ y $(2,2)$ de un triángulo. Identifique el lado que se reduce a un punto y describa la imagen del contorno.
+
+::: {.callout-note collapse="true" title="Soluciones de la actividad"}
+
+**1. a.** La matriz es $\begin{bmatrix}\tfrac12&0\\0&3\end{bmatrix}$. Las imágenes son $O'=(0,0)$, $A'=(2,0)$, $B'=(2,6)$ y $C'=(0,6)$.
+
+**1. b.** En el croquis, ambos rectángulos tienen su esquina inferior izquierda en el origen. Los lados horizontales $OA$ y $BC$ pasan de longitud $4$ a $2$. Los verticales $AB$ y $CO$ pasan de $2$ a $6$. Los lados consecutivos siguen siendo perpendiculares, por lo que $O'A'B'C'$ es un rectángulo de ancho $2$ y altura $6$.
+
+**2. a.** La matriz es $\begin{bmatrix}1&0\\0&0\end{bmatrix}$ y los vértices se transforman en $O'=(0,0)$, $A'=(6,0)$ y $B'=(2,0)$. El lado $OA$ corresponde al segmento de $(0,0)$ a $(6,0)$, con longitud $6$ mm. El lado $OB$ corresponde al segmento de $(0,0)$ a $(2,0)$, con longitud $2$ mm. El lado $AB$ corresponde al segmento de $(2,0)$ a $(6,0)$, con longitud $4$ mm. El croquis consta del segmento horizontal completo, con $B'$ entre $O'$ y $A'$.
+
+**2. b.** El ancho registrado es $6-0=6$ mm. La altura de la muestra es $4$ mm y se pierde al sustituir todas las coordenadas verticales por cero.
+
+**Comprobación individual.** Los vértices se transforman en $(0,0)$, $(0,2)$ y $(0,2)$, respectivamente. El lado entre $(0,2)$ y $(2,2)$ se reduce al punto $(0,2)$. El contorno se transforma en el segmento del eje vertical entre $(0,0)$ y $(0,2)$.
+
+:::
+
+## Ejercicios para practicar
+
+Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálculo y la interpretación de las imágenes. Consulte las respuestas después de registrar su intento.
+
+1. La sección de una barra tiene forma de trapecio, con vértices $(0,0)$, $(10,0)$, $(8,4)$ y $(2,4)$ en milímetros. En un ensayo idealizado, la sección se deforma mediante $E(x,y)=(1.2x,\,0.5y)$.
+
+   a. Calcule las imágenes de los vértices.
+
+   b. Determine las longitudes de las bases horizontales y la altura antes y después de la deformación. Justifique que las bases transformadas siguen siendo paralelas.
+
+2. Dos lotes de polvo cerámico contienen alúmina y sílice. El lote 1 contiene $80\,\%$ de alúmina y $20\,\%$ de sílice en masa. El lote 2 contiene $40\,\%$ de alúmina y $60\,\%$ de sílice. Una mezcla preparada sin pérdidas contiene $280$ g de alúmina y $120$ g de sílice.
+
+   a. Escriba el sistema matricial $K\mathbf m=\mathbf b$, con una columna de $K$ por lote. Calcule $\det K$.
+
+   b. Obtenga $K^{-1}$ con la [fórmula de la inversa de una matriz $2\times2$](2026-10-30-sesion-43.qmd#fórmula-de-la-inversa-de-una-matriz-22). Determine la masa usada de cada lote y compruebe las masas de alúmina y sílice obtenidas.
+
+3. Al aplicar $E(x,y)=(2x,y)$ al cuadrado de vértices $(1,1)$, $(3,1)$, $(3,3)$ y $(1,3)$, un estudiante afirma que el resultado es un cuadrado de lado $4$ porque se duplican las longitudes de todos los lados.
+
+   a. Calcule las imágenes de los vértices.
+
+   b. Identifique el error y describa la figura transformada.
+
+4. Considere el cuadrilátero de vértices $(1,0)$, $(3,1)$, $(2,3)$ y $(0,2)$, en ese orden, y la proyección $Q(x,y)=(0,y)$.
+
+   a. Calcule las imágenes de los vértices.
+
+   b. Describa la imagen del contorno y determine su longitud.
+
+5. Un escalamiento por coordenadas transforma los vértices $(0,0)$, $(2,0)$ y $(0,2)$ de un triángulo en $(0,0)$, $(6,0)$ y $(0,1)$, respectivamente.
+
+   a. Determine los factores del escalamiento y su matriz estándar.
+
+   b. Calcule la imagen de $(1,1)$, punto medio del lado entre $(2,0)$ y $(0,2)$. Compruebe que es el punto medio del lado transformado.
+
+::: {.callout-note collapse="true" title="Respuestas de los ejercicios para practicar"}
+
+**1. a.** $(0,0)$, $(12,0)$, $(9.6,2)$ y $(2.4,2)$.
+
+**1. b.** Las bases pasan de $10$ a $12$ mm y de $6$ a $7.2$ mm. La altura pasa de $4$ a $2$ mm. Las bases permanecen paralelas porque ambas imágenes son horizontales.
+
+**2. a.** $\begin{bmatrix}0.8&0.4\\0.2&0.6\end{bmatrix}\mathbf m=\begin{bmatrix}280\\120\end{bmatrix}$ y $\det K=0.4$.
+
+**2. b.** $K^{-1}=\begin{bmatrix}1.5&-1\\-0.5&2\end{bmatrix}$. Se usan $300$ g del lote 1 y $100$ g del lote 2. Las masas obtenidas son $240+40=280$ g de alúmina y $60+60=120$ g de sílice.
+
+**3. a.** $(2,1)$, $(6,1)$, $(6,3)$ y $(2,3)$.
+
+**3. b.** Se duplican las longitudes horizontales y se conservan las verticales. La imagen es un rectángulo de ancho $4$ y altura $2$.
+
+**4. a.** $(0,0)$, $(0,1)$, $(0,3)$ y $(0,2)$.
+
+**4. b.** El segmento entre $(0,0)$ y $(0,3)$, de longitud $3$.
+
+**5. a.** Los factores horizontal y vertical son $3$ y $\tfrac12$, respectivamente. La matriz es $\begin{bmatrix}3&0\\0&\tfrac12\end{bmatrix}$.
+
+**5. b.** $\bigl(3,\tfrac12\bigr)$, que coincide con el promedio de los extremos $(6,0)$ y $(0,1)$.
+
+:::
+
+## Conclusiones del aprendizaje
+
+Compruebe que puede dibujar la imagen del contorno de una figura uniendo las imágenes de sus vértices en el orden original. A partir de ese dibujo y de las coordenadas, explique cómo cambian las longitudes bajo un escalamiento e identifique los lados que se reducen a puntos bajo una proyección.
