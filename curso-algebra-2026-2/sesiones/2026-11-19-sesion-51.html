@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Transformación de segmentos, escalamientos por coordenadas y proyecciones sobre los ejes.">
+
+<title>Sesión 51. Efecto de una transformación lineal sobre figuras del plano – Álgebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../recursos/notacion.html" rel="next">
+<link href="../sesiones/2026-11-18-sesion-50.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a5c8077981869bb58818cce5ddee2b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 51. Efecto de una transformación lineal sobre figuras del plano – Álgebra">
+<meta property="og:description" content="Transformación de segmentos, escalamientos por coordenadas y proyecciones sobre los ejes.">
+<meta property="og:site_name" content="Álgebra">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-19-sesion-51.html"><span class="chapter-title">Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Álgebra</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/jfespinoza/jfespinoza.github.io/tree/main/proyectos/curso-algebra-2026-2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Álgebra 22017</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Información del curso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Forma de trabajo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/evaluacion-asistencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluación y asistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calendario del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/acceso-teams.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acceso temporal a Teams</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-11-sesion-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 02. Números reales: clasificación, orden e intervalos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-24-sesion-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-26-sesion-13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 13. Práctica integradora de números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-28-sesion-14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-10-sesion-22.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-15-sesion-25.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 25. Práctica integradora de polinomios y sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-18-sesion-26.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 26. Examen parcial 2: polinomios y sus raíces</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-08-sesion-34.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 34. Práctica de variables libres y ecuaciones paramétricas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 4. Matrices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-09-sesion-35.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-19-sesion-36.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 36. Representación matricial de un sistema y sistemas homogéneos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-20-sesion-37.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-21-sesion-38.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 38. Práctica integradora para el Parcial 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-23-sesion-39.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 39. Examen parcial 3: sistemas lineales y matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-27-sesion-40.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 40. Matriz inversa: definición, verificación y uso en un sistema</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-28-sesion-41.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-29-sesion-42.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 42. Práctica de resolución de sistemas mediante inversa y Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-30-sesion-43.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-04-sesion-44.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 44. Determinante de una matriz 3×3 por cofactores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-05-sesion-45.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 45. Práctica de determinantes 2×2 y 3×3 y sus propiedades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-06-sesion-46.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/05-conceptos-algebra-lineal.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-09-sesion-47.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-11-sesion-48.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 48. Práctica integradora para el Parcial 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unidad 6. Transformaciones lineales en el plano</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-17-sesion-49.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 49. Transformaciones lineales del plano</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-18-sesion-50.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-19-sesion-51.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursos de consulta</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/notacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#imagen-de-un-segmento" id="toc-imagen-de-un-segmento" class="nav-link" data-scroll-target="#imagen-de-un-segmento">Imagen de un segmento</a></li>
+  <li><a href="#escalamiento-por-coordenadas" id="toc-escalamiento-por-coordenadas" class="nav-link" data-scroll-target="#escalamiento-por-coordenadas">Escalamiento por coordenadas</a></li>
+  <li><a href="#proyección-sobre-un-eje" id="toc-proyección-sobre-un-eje" class="nav-link" data-scroll-target="#proyección-sobre-un-eje">Proyección sobre un eje</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-escalamiento-de-un-triángulo" id="toc-ejemplo-1.-escalamiento-de-un-triángulo" class="nav-link" data-scroll-target="#ejemplo-1.-escalamiento-de-un-triángulo">Ejemplo 1. Escalamiento de un triángulo</a></li>
+  <li><a href="#ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal" id="toc-ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal" class="nav-link" data-scroll-target="#ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal">Ejemplo 2. Proyección del triángulo sobre el eje horizontal</a></li>
+  </ul></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-19-sesion-51.html"><span class="chapter-title">Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">19 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en la <a href="#actividad">actividad</a>.</p>
+</section>
+<section id="imagen-de-un-segmento" class="level2">
+<h2 class="anchored" data-anchor-id="imagen-de-un-segmento">Imagen de un segmento</h2>
+<p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> puntos del plano con vectores de posición <span class="math inline">\(\mathbf a\)</span> y <span class="math inline">\(\mathbf b\)</span>. Los puntos del segmento <span class="math inline">\(AB\)</span> tienen vectores de posición de la forma</p>
+<p><span class="math display">\[
+(1-t)\mathbf a+t\mathbf b,\qquad 0\le t\le 1.
+\]</span></p>
+<p>Los valores <span class="math inline">\(t=0\)</span>, <span class="math inline">\(t=1\)</span> y <span class="math inline">\(t=\tfrac12\)</span> corresponden a <span class="math inline">\(A\)</span>, a <span class="math inline">\(B\)</span> y al punto medio, respectivamente. Si <span class="math inline">\(T\)</span> es lineal, la <a href="../sesiones/2026-11-17-sesion-49.html#transformaciones-del-plano">aditividad y la homogeneidad</a> dan</p>
+<p><span class="math display">\[
+T\bigl((1-t)\mathbf a+t\mathbf b\bigr)=(1-t)T(\mathbf a)+tT(\mathbf b).
+\]</span></p>
+<p>Al variar <span class="math inline">\(t\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span> se obtiene todo el segmento entre <span class="math inline">\(A'=T(A)\)</span> y <span class="math inline">\(B'=T(B)\)</span>. Si <span class="math inline">\(A'=B'\)</span>, la imagen de <span class="math inline">\(AB\)</span> es un punto. El valor <span class="math inline">\(t=\tfrac12\)</span> muestra que el punto medio se transforma en el punto medio de las imágenes, incluso si estas coinciden.</p>
+<p>Para dibujar la imagen del <strong>contorno</strong> de un polígono, calcule la imagen de cada vértice con la <a href="../sesiones/2026-11-18-sesion-50.html#matriz-estándar">matriz estándar</a> y una las imágenes en el orden del contorno original. Los lados transformados pueden coincidir entre sí o reducirse a puntos. El desplazamiento de <span class="math inline">\(A'\)</span> a <span class="math inline">\(B'\)</span> es <span class="math inline">\(T(\mathbf b-\mathbf a)\)</span>, pues <span class="math inline">\(T(\mathbf b)-T(\mathbf a)=T(\mathbf b-\mathbf a)\)</span>. Si ese vector es distinto de cero, sus componentes determinan la longitud y la dirección del nuevo lado.</p>
+</section>
+<section id="escalamiento-por-coordenadas" class="level2">
+<h2 class="anchored" data-anchor-id="escalamiento-por-coordenadas">Escalamiento por coordenadas</h2>
+<p>El escalamiento <span class="math inline">\(E(x,y)=(kx,\,ly)\)</span>, con <span class="math inline">\(k,l&gt;0\)</span>, tiene matriz estándar</p>
+<p><span class="math display">\[
+[E]=\begin{bmatrix}k&amp;0\\0&amp;l\end{bmatrix}.
+\]</span></p>
+<p>Un lado horizontal conserva su dirección y su longitud se multiplica por <span class="math inline">\(k\)</span>. Un lado vertical conserva su dirección y su longitud se multiplica por <span class="math inline">\(l\)</span>. Si un lado es oblicuo y sus desplazamientos horizontal y vertical son <span class="math inline">\(d_1\)</span> y <span class="math inline">\(d_2\)</span>, la longitud transformada se calcula a partir de ambas componentes y es <span class="math inline">\(\sqrt{(kd_1)^2+(ld_2)^2}\)</span>.</p>
+</section>
+<section id="proyección-sobre-un-eje" class="level2">
+<h2 class="anchored" data-anchor-id="proyección-sobre-un-eje">Proyección sobre un eje</h2>
+<p>La proyección <span class="math inline">\(P(x,y)=(x,0)\)</span> conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección <span class="math inline">\(Q(x,y)=(0,y)\)</span> conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son</p>
+<p><span class="math display">\[
+[P]=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix},
+\qquad
+[Q]=\begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}.
+\]</span></p>
+<p>Bajo <span class="math inline">\(P\)</span>, un lado horizontal conserva su longitud, un lado vertical se reduce a un punto y un lado oblicuo se transforma en un segmento horizontal de longitud <span class="math inline">\(|d_1|\)</span>, donde <span class="math inline">\(d_1\)</span> es su desplazamiento horizontal. Bajo <span class="math inline">\(Q\)</span>, se intercambian los papeles de las dos coordenadas.</p>
+</section>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-escalamiento-de-un-triángulo" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-escalamiento-de-un-triángulo">Ejemplo 1. Escalamiento de un triángulo</h3>
+<p>Considere el triángulo de vértices <span class="math inline">\(A(1,1)\)</span>, <span class="math inline">\(B(3,1)\)</span> y <span class="math inline">\(C(1,4)\)</span> y el escalamiento <span class="math inline">\(E(x,y)=(2x,\tfrac12 y)\)</span>. Las imágenes de los vértices son</p>
+<p><span class="math display">\[
+A'=\bigl(2,\tfrac12\bigr),\qquad B'=\bigl(6,\tfrac12\bigr),\qquad C'=(2,2).
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lado</th>
+<th style="text-align: right;">Longitud original</th>
+<th style="text-align: right;">Longitud transformada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(AB\)</span>, horizontal</td>
+<td style="text-align: right;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(AC\)</span>, vertical</td>
+<td style="text-align: right;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\tfrac32\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(BC\)</span>, oblicuo</td>
+<td style="text-align: right;"><span class="math inline">\(\sqrt{13}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\tfrac{\sqrt{73}}2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El desplazamiento de <span class="math inline">\(B'\)</span> a <span class="math inline">\(C'\)</span> es <span class="math inline">\((-4,\tfrac32)\)</span>. Por ello, la longitud de <span class="math inline">\(B'C'\)</span> es <span class="math inline">\(\sqrt{(-4)^2+(\tfrac32)^2}=\tfrac{\sqrt{73}}2\)</span>. El ángulo en <span class="math inline">\(A'\)</span> sigue siendo recto porque <span class="math inline">\(A'B'\)</span> es horizontal y <span class="math inline">\(A'C'\)</span> es vertical.</p>
+<figure style="width:100%; max-width:27rem; margin:1.25rem auto 1.65rem;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 350 250" role="img" aria-labelledby="s51-escalamiento-title" aria-describedby="s51-escalamiento-desc" style="display:block; width:100%; height:auto; font-family:inherit;">
+<title id="s51-escalamiento-title">Escalamiento de un triángulo</title>
+<desc id="s51-escalamiento-desc">El triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). Su imagen tiene vértices A′(2, ½), B′(6, ½) y C′(2, 2). Los ejes usan la misma escala.</desc>
+<rect x="27" y="17" width="298" height="196" rx="3" fill="var(--course-soft, #f4f7fa)"></rect>
+<g stroke="var(--course-line, #d9e1e8)" stroke-width="1">
+<line x1="87" y1="17" x2="87" y2="213"></line>
+<line x1="130" y1="17" x2="130" y2="213"></line>
+<line x1="173" y1="17" x2="173" y2="213"></line>
+<line x1="216" y1="17" x2="216" y2="213"></line>
+<line x1="259" y1="17" x2="259" y2="213"></line>
+<line x1="302" y1="17" x2="302" y2="213"></line>
+<line x1="27" y1="163" x2="325" y2="163"></line>
+<line x1="27" y1="120" x2="325" y2="120"></line>
+<line x1="27" y1="77" x2="325" y2="77"></line>
+<line x1="27" y1="34" x2="325" y2="34"></line>
+</g>
+<g stroke="var(--course-navy, #17365d)" stroke-width="1.35">
+<line x1="27" y1="206" x2="328" y2="206"></line>
+<line x1="44" y1="213" x2="44" y2="17"></line>
+</g>
+<g fill="var(--course-ink, #20262e)" font-size="14">
+<text x="335" y="210" text-anchor="start">x</text>
+<text x="51" y="25" text-anchor="start">y</text>
+<text x="44" y="243" text-anchor="middle">0</text>
+<text x="87" y="243" text-anchor="middle">1</text>
+<text x="130" y="243" text-anchor="middle">2</text>
+<text x="173" y="243" text-anchor="middle">3</text>
+<text x="216" y="243" text-anchor="middle">4</text>
+<text x="259" y="243" text-anchor="middle">5</text>
+<text x="302" y="243" text-anchor="middle">6</text>
+<text x="21" y="168" text-anchor="end">1</text>
+<text x="21" y="125" text-anchor="end">2</text>
+<text x="21" y="82" text-anchor="end">3</text>
+<text x="21" y="39" text-anchor="end">4</text>
+</g>
+<g fill="none" stroke="#215981" stroke-width="2.15" stroke-dasharray="6 4" stroke-linejoin="round">
+<polygon points="87,163 173,163 87,34"></polygon>
+</g>
+<g fill="#8c3c29" fill-opacity=".11" stroke="#8c3c29" stroke-width="2.4" stroke-linejoin="round">
+<polygon points="130,184.5 302,184.5 130,120"></polygon>
+</g>
+<g fill="#215981" font-size="15">
+<circle cx="87" cy="163" r="3.7"></circle>
+<text x="70" y="178" text-anchor="start">A</text>
+<circle cx="173" cy="163" r="3.7"></circle>
+<text x="181" y="157" text-anchor="start">B</text>
+<circle cx="87" cy="34" r="3.7"></circle>
+<text x="71" y="27" text-anchor="start">C</text>
+</g>
+<g fill="#8c3c29" font-size="15">
+<circle cx="130" cy="184.5" r="3.7"></circle>
+<text x="111" y="178.5" text-anchor="start">A′</text>
+<circle cx="302" cy="184.5" r="3.7"></circle>
+<text x="310" y="179.5" text-anchor="start">B′</text>
+<circle cx="130" cy="120" r="3.7"></circle>
+<text x="111" y="114" text-anchor="start">C′</text>
+</g>
+</svg>
+<figcaption style="margin-top:.25rem; text-align:center;">Trazo discontinuo para el triángulo original y trazo continuo para el triángulo resultante.</figcaption>
+</figure>
+</section>
+<section id="ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal">Ejemplo 2. Proyección del triángulo sobre el eje horizontal</h3>
+<p>Con <span class="math inline">\(P(x,y)=(x,0)\)</span>, las imágenes de los mismos vértices son</p>
+<p><span class="math display">\[
+A'=(1,0),\qquad B'=(3,0),\qquad C'=(1,0).
+\]</span></p>
+<p>El lado vertical <span class="math inline">\(AC\)</span> se reduce a <span class="math inline">\((1,0)\)</span>. Los lados <span class="math inline">\(AB\)</span> y <span class="math inline">\(BC\)</span> tienen como imagen el mismo segmento, desde <span class="math inline">\((1,0)\)</span> hasta <span class="math inline">\((3,0)\)</span>. Su longitud es <span class="math inline">\(2\)</span>, que coincide con la de <span class="math inline">\(AB\)</span> y con el valor absoluto del desplazamiento horizontal de <span class="math inline">\(B\)</span> a <span class="math inline">\(C\)</span>.</p>
+<figure style="width:100%; max-width:27rem; margin:1.25rem auto 1.65rem;" class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 350 250" role="img" aria-labelledby="s51-proyeccion-title" aria-describedby="s51-proyeccion-desc" style="display:block; width:100%; height:auto; font-family:inherit;">
+<title id="s51-proyeccion-title">Proyección de un triángulo sobre el eje horizontal</title>
+<desc id="s51-proyeccion-desc">El triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). El segmento proyectado va del punto común A′ = C′(1, 0) a B′(3, 0).</desc>
+<rect x="27" y="17" width="298" height="196" rx="3" fill="var(--course-soft, #f4f7fa)"></rect>
+<g stroke="var(--course-line, #d9e1e8)" stroke-width="1">
+<line x1="87" y1="17" x2="87" y2="213"></line>
+<line x1="130" y1="17" x2="130" y2="213"></line>
+<line x1="173" y1="17" x2="173" y2="213"></line>
+<line x1="216" y1="17" x2="216" y2="213"></line>
+<line x1="259" y1="17" x2="259" y2="213"></line>
+<line x1="302" y1="17" x2="302" y2="213"></line>
+<line x1="27" y1="163" x2="325" y2="163"></line>
+<line x1="27" y1="120" x2="325" y2="120"></line>
+<line x1="27" y1="77" x2="325" y2="77"></line>
+<line x1="27" y1="34" x2="325" y2="34"></line>
+</g>
+<g stroke="var(--course-navy, #17365d)" stroke-width="1.35">
+<line x1="27" y1="206" x2="328" y2="206"></line>
+<line x1="44" y1="213" x2="44" y2="17"></line>
+</g>
+<g fill="var(--course-ink, #20262e)" font-size="14">
+<text x="335" y="210" text-anchor="start">x</text>
+<text x="51" y="25" text-anchor="start">y</text>
+<text x="44" y="243" text-anchor="middle">0</text>
+<text x="87" y="243" text-anchor="middle">1</text>
+<text x="130" y="243" text-anchor="middle">2</text>
+<text x="173" y="243" text-anchor="middle">3</text>
+<text x="216" y="243" text-anchor="middle">4</text>
+<text x="259" y="243" text-anchor="middle">5</text>
+<text x="302" y="243" text-anchor="middle">6</text>
+<text x="21" y="168" text-anchor="end">1</text>
+<text x="21" y="125" text-anchor="end">2</text>
+<text x="21" y="82" text-anchor="end">3</text>
+<text x="21" y="39" text-anchor="end">4</text>
+</g>
+<g stroke="#526678" stroke-width="1.25" stroke-dasharray="2 3">
+<line x1="87" y1="163" x2="87" y2="206"></line>
+<line x1="173" y1="163" x2="173" y2="206"></line>
+</g>
+<g fill="none" stroke="#215981" stroke-width="2.15" stroke-dasharray="6 4" stroke-linejoin="round">
+<polygon points="87,163 173,163 87,34"></polygon>
+</g>
+<g stroke="#8c3c29" stroke-width="4.3" stroke-linecap="round">
+<line x1="87" y1="206" x2="173" y2="206"></line>
+</g>
+<g fill="#215981" font-size="15">
+<circle cx="87" cy="163" r="3.7"></circle>
+<text x="70" y="178" text-anchor="start">A</text>
+<circle cx="173" cy="163" r="3.7"></circle>
+<text x="181" y="157" text-anchor="start">B</text>
+<circle cx="87" cy="34" r="3.7"></circle>
+<text x="71" y="27" text-anchor="start">C</text>
+</g>
+<g fill="#8c3c29" font-size="15">
+<circle cx="87" cy="206" r="3.7"></circle>
+<text x="87" y="225" text-anchor="middle">A′ = C′</text>
+<circle cx="173" cy="206" r="3.7"></circle>
+<text x="173" y="225" text-anchor="middle">B′</text>
+</g>
+</svg>
+<figcaption style="margin-top:.25rem; text-align:center;">Trazo discontinuo para el triángulo original y trazo continuo para el segmento proyectado.</figcaption>
+</figure>
+</section>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Alteración del orden de los vértices.</strong> En el rectángulo del ejercicio 1 de la actividad, el contorno recorre <span class="math inline">\(O\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> y regresa a <span class="math inline">\(O\)</span>. El segmento entre <span class="math inline">\(O'\)</span> y <span class="math inline">\(B'\)</span> es la imagen de la diagonal <span class="math inline">\(OB\)</span> y queda en el interior del nuevo contorno, salvo en sus extremos.</li>
+<li><strong>Uso de un factor común para las longitudes.</strong> En el Ejemplo 1, el escalamiento duplica la longitud de <span class="math inline">\(AB\)</span>, reduce a la mitad la de <span class="math inline">\(AC\)</span> y modifica las dos componentes del desplazamiento de <span class="math inline">\(B\)</span> a <span class="math inline">\(C\)</span>.</li>
+<li><strong>Conteo de vértices coincidentes como puntos distintos.</strong> En el Ejemplo 2, <span class="math inline">\(A'\)</span> y <span class="math inline">\(C'\)</span> representan el mismo punto. La imagen del triángulo es un segmento.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero los ejercicios de forma individual y registre su procedimiento por escrito. Después, compare sus resultados con los de otra persona del grupo y justifique las correcciones mediante los cálculos o el croquis.</p>
+<ol type="1">
+<li><p>Considere el rectángulo con vértices <span class="math inline">\(O(0,0)\)</span>, <span class="math inline">\(A(4,0)\)</span>, <span class="math inline">\(B(4,2)\)</span> y <span class="math inline">\(C(0,2)\)</span> y el escalamiento <span class="math inline">\(E(x,y)=(\tfrac12x,\,3y)\)</span>.</p>
+<ol type="a">
+<li><p>Escriba la matriz estándar y calcule las imágenes de los cuatro vértices.</p></li>
+<li><p>Dibuje ambas figuras en el mismo plano. Indique las longitudes de los lados antes y después del escalamiento y justifique por qué la imagen sigue siendo un rectángulo.</p></li>
+</ol></li>
+<li><p>El contorno de una muestra cerámica vista desde arriba es un triángulo de vértices <span class="math inline">\(O(0,0)\)</span>, <span class="math inline">\(A(6,0)\)</span> y <span class="math inline">\(B(2,4)\)</span>, con coordenadas en milímetros. Un lector óptico registra únicamente la posición horizontal de cada punto. La lectura se representa en el plano mediante <span class="math inline">\(P(x,y)=(x,0)\)</span>.</p>
+<ol type="a">
+<li><p>Escriba la matriz estándar y dibuje la imagen del contorno. Indique la imagen de cada lado y su longitud en el registro.</p></li>
+<li><p>Determine el ancho horizontal de la muestra a partir de la lectura. Explique qué sucede con la información sobre la altura.</p></li>
+</ol></li>
+</ol>
+<p><strong>Comprobación individual.</strong> Aplique <span class="math inline">\(Q(x,y)=(0,y)\)</span> a los vértices <span class="math inline">\((1,0)\)</span>, <span class="math inline">\((0,2)\)</span> y <span class="math inline">\((2,2)\)</span> de un triángulo. Identifique el lado que se reduce a un punto y describa la imagen del contorno.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> La matriz es <span class="math inline">\(\begin{bmatrix}\tfrac12&amp;0\\0&amp;3\end{bmatrix}\)</span>. Las imágenes son <span class="math inline">\(O'=(0,0)\)</span>, <span class="math inline">\(A'=(2,0)\)</span>, <span class="math inline">\(B'=(2,6)\)</span> y <span class="math inline">\(C'=(0,6)\)</span>.</p>
+<p><strong>1. b.</strong> En el croquis, ambos rectángulos tienen su esquina inferior izquierda en el origen. Los lados horizontales <span class="math inline">\(OA\)</span> y <span class="math inline">\(BC\)</span> pasan de longitud <span class="math inline">\(4\)</span> a <span class="math inline">\(2\)</span>. Los verticales <span class="math inline">\(AB\)</span> y <span class="math inline">\(CO\)</span> pasan de <span class="math inline">\(2\)</span> a <span class="math inline">\(6\)</span>. Los lados consecutivos siguen siendo perpendiculares, por lo que <span class="math inline">\(O'A'B'C'\)</span> es un rectángulo de ancho <span class="math inline">\(2\)</span> y altura <span class="math inline">\(6\)</span>.</p>
+<p><strong>2. a.</strong> La matriz es <span class="math inline">\(\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span> y los vértices se transforman en <span class="math inline">\(O'=(0,0)\)</span>, <span class="math inline">\(A'=(6,0)\)</span> y <span class="math inline">\(B'=(2,0)\)</span>. El lado <span class="math inline">\(OA\)</span> corresponde al segmento de <span class="math inline">\((0,0)\)</span> a <span class="math inline">\((6,0)\)</span>, con longitud <span class="math inline">\(6\)</span> mm. El lado <span class="math inline">\(OB\)</span> corresponde al segmento de <span class="math inline">\((0,0)\)</span> a <span class="math inline">\((2,0)\)</span>, con longitud <span class="math inline">\(2\)</span> mm. El lado <span class="math inline">\(AB\)</span> corresponde al segmento de <span class="math inline">\((2,0)\)</span> a <span class="math inline">\((6,0)\)</span>, con longitud <span class="math inline">\(4\)</span> mm. El croquis consta del segmento horizontal completo, con <span class="math inline">\(B'\)</span> entre <span class="math inline">\(O'\)</span> y <span class="math inline">\(A'\)</span>.</p>
+<p><strong>2. b.</strong> El ancho registrado es <span class="math inline">\(6-0=6\)</span> mm. La altura de la muestra es <span class="math inline">\(4\)</span> mm y se pierde al sustituir todas las coordenadas verticales por cero.</p>
+<p><strong>Comprobación individual.</strong> Los vértices se transforman en <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((0,2)\)</span> y <span class="math inline">\((0,2)\)</span>, respectivamente. El lado entre <span class="math inline">\((0,2)\)</span> y <span class="math inline">\((2,2)\)</span> se reduce al punto <span class="math inline">\((0,2)\)</span>. El contorno se transforma en el segmento del eje vertical entre <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((0,2)\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálculo y la interpretación de las imágenes. Consulte las respuestas después de registrar su intento.</p>
+<ol type="1">
+<li><p>La sección de una barra tiene forma de trapecio, con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((10,0)\)</span>, <span class="math inline">\((8,4)\)</span> y <span class="math inline">\((2,4)\)</span> en milímetros. En un ensayo idealizado, la sección se deforma mediante <span class="math inline">\(E(x,y)=(1.2x,\,0.5y)\)</span>.</p>
+<ol type="a">
+<li><p>Calcule las imágenes de los vértices.</p></li>
+<li><p>Determine las longitudes de las bases horizontales y la altura antes y después de la deformación. Justifique que las bases transformadas siguen siendo paralelas.</p></li>
+</ol></li>
+<li><p>Dos lotes de polvo cerámico contienen alúmina y sílice. El lote 1 contiene <span class="math inline">\(80\,\%\)</span> de alúmina y <span class="math inline">\(20\,\%\)</span> de sílice en masa. El lote 2 contiene <span class="math inline">\(40\,\%\)</span> de alúmina y <span class="math inline">\(60\,\%\)</span> de sílice. Una mezcla preparada sin pérdidas contiene <span class="math inline">\(280\)</span> g de alúmina y <span class="math inline">\(120\)</span> g de sílice.</p>
+<ol type="a">
+<li><p>Escriba el sistema matricial <span class="math inline">\(K\mathbf m=\mathbf b\)</span>, con una columna de <span class="math inline">\(K\)</span> por lote. Calcule <span class="math inline">\(\det K\)</span>.</p></li>
+<li><p>Obtenga <span class="math inline">\(K^{-1}\)</span> con la <a href="../sesiones/2026-10-30-sesion-43.html#fórmula-de-la-inversa-de-una-matriz-22">fórmula de la inversa de una matriz <span class="math inline">\(2\times2\)</span></a>. Determine la masa usada de cada lote y compruebe las masas de alúmina y sílice obtenidas.</p></li>
+</ol></li>
+<li><p>Al aplicar <span class="math inline">\(E(x,y)=(2x,y)\)</span> al cuadrado de vértices <span class="math inline">\((1,1)\)</span>, <span class="math inline">\((3,1)\)</span>, <span class="math inline">\((3,3)\)</span> y <span class="math inline">\((1,3)\)</span>, un estudiante afirma que el resultado es un cuadrado de lado <span class="math inline">\(4\)</span> porque se duplican las longitudes de todos los lados.</p>
+<ol type="a">
+<li><p>Calcule las imágenes de los vértices.</p></li>
+<li><p>Identifique el error y describa la figura transformada.</p></li>
+</ol></li>
+<li><p>Considere el cuadrilátero de vértices <span class="math inline">\((1,0)\)</span>, <span class="math inline">\((3,1)\)</span>, <span class="math inline">\((2,3)\)</span> y <span class="math inline">\((0,2)\)</span>, en ese orden, y la proyección <span class="math inline">\(Q(x,y)=(0,y)\)</span>.</p>
+<ol type="a">
+<li><p>Calcule las imágenes de los vértices.</p></li>
+<li><p>Describa la imagen del contorno y determine su longitud.</p></li>
+</ol></li>
+<li><p>Un escalamiento por coordenadas transforma los vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((0,2)\)</span> de un triángulo en <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((6,0)\)</span> y <span class="math inline">\((0,1)\)</span>, respectivamente.</p>
+<ol type="a">
+<li><p>Determine los factores del escalamiento y su matriz estándar.</p></li>
+<li><p>Calcule la imagen de <span class="math inline">\((1,1)\)</span>, punto medio del lado entre <span class="math inline">\((2,0)\)</span> y <span class="math inline">\((0,2)\)</span>. Compruebe que es el punto medio del lado transformado.</p></li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((12,0)\)</span>, <span class="math inline">\((9.6,2)\)</span> y <span class="math inline">\((2.4,2)\)</span>.</p>
+<p><strong>1. b.</strong> Las bases pasan de <span class="math inline">\(10\)</span> a <span class="math inline">\(12\)</span> mm y de <span class="math inline">\(6\)</span> a <span class="math inline">\(7.2\)</span> mm. La altura pasa de <span class="math inline">\(4\)</span> a <span class="math inline">\(2\)</span> mm. Las bases permanecen paralelas porque ambas imágenes son horizontales.</p>
+<p><strong>2. a.</strong> <span class="math inline">\(\begin{bmatrix}0.8&amp;0.4\\0.2&amp;0.6\end{bmatrix}\mathbf m=\begin{bmatrix}280\\120\end{bmatrix}\)</span> y <span class="math inline">\(\det K=0.4\)</span>.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(K^{-1}=\begin{bmatrix}1.5&amp;-1\\-0.5&amp;2\end{bmatrix}\)</span>. Se usan <span class="math inline">\(300\)</span> g del lote 1 y <span class="math inline">\(100\)</span> g del lote 2. Las masas obtenidas son <span class="math inline">\(240+40=280\)</span> g de alúmina y <span class="math inline">\(60+60=120\)</span> g de sílice.</p>
+<p><strong>3. a.</strong> <span class="math inline">\((2,1)\)</span>, <span class="math inline">\((6,1)\)</span>, <span class="math inline">\((6,3)\)</span> y <span class="math inline">\((2,3)\)</span>.</p>
+<p><strong>3. b.</strong> Se duplican las longitudes horizontales y se conservan las verticales. La imagen es un rectángulo de ancho <span class="math inline">\(4\)</span> y altura <span class="math inline">\(2\)</span>.</p>
+<p><strong>4. a.</strong> <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((0,1)\)</span>, <span class="math inline">\((0,3)\)</span> y <span class="math inline">\((0,2)\)</span>.</p>
+<p><strong>4. b.</strong> El segmento entre <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((0,3)\)</span>, de longitud <span class="math inline">\(3\)</span>.</p>
+<p><strong>5. a.</strong> Los factores horizontal y vertical son <span class="math inline">\(3\)</span> y <span class="math inline">\(\tfrac12\)</span>, respectivamente. La matriz es <span class="math inline">\(\begin{bmatrix}3&amp;0\\0&amp;\tfrac12\end{bmatrix}\)</span>.</p>
+<p><strong>5. b.</strong> <span class="math inline">\(\bigl(3,\tfrac12\bigr)\)</span>, que coincide con el promedio de los extremos <span class="math inline">\((6,0)\)</span> y <span class="math inline">\((0,1)\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>Compruebe que puede dibujar la imagen del contorno de una figura uniendo las imágenes de sus vértices en el orden original. A partir de ese dibujo y de las coordenadas, explique cómo cambian las longitudes bajo un escalamiento e identifique los lados que se reducen a puntos bajo una proyección.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jfespinoza\.github\.io\/curso-algebra-2026-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sesiones/2026-11-18-sesion-50.html" class="pagination-link" aria-label="Sesión 50. Matriz estándar de una transformación lineal">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../recursos/notacion.html" class="pagination-link" aria-label="Notación">
+        <span class="nav-page-text"><span class="chapter-title">Notación</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Álgebra 22017 · Departamento de Matemáticas · Universidad de Sonora</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2026-2</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

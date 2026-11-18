@@ -4659,6 +4659,105 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-11-19-sesion-51.html",
+    "href": "sesiones/2026-11-19-sesion-51.html",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en la actividad.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#imagen-de-un-segmento",
+    "href": "sesiones/2026-11-19-sesion-51.html#imagen-de-un-segmento",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Imagen de un segmento",
+    "text": "Imagen de un segmento\nSean \\(A\\) y \\(B\\) puntos del plano con vectores de posición \\(\\mathbf a\\) y \\(\\mathbf b\\). Los puntos del segmento \\(AB\\) tienen vectores de posición de la forma\n\\[\n(1-t)\\mathbf a+t\\mathbf b,\\qquad 0\\le t\\le 1.\n\\]\nLos valores \\(t=0\\), \\(t=1\\) y \\(t=\\tfrac12\\) corresponden a \\(A\\), a \\(B\\) y al punto medio, respectivamente. Si \\(T\\) es lineal, la aditividad y la homogeneidad dan\n\\[\nT\\bigl((1-t)\\mathbf a+t\\mathbf b\\bigr)=(1-t)T(\\mathbf a)+tT(\\mathbf b).\n\\]\nAl variar \\(t\\) entre \\(0\\) y \\(1\\) se obtiene todo el segmento entre \\(A'=T(A)\\) y \\(B'=T(B)\\). Si \\(A'=B'\\), la imagen de \\(AB\\) es un punto. El valor \\(t=\\tfrac12\\) muestra que el punto medio se transforma en el punto medio de las imágenes, incluso si estas coinciden.\nPara dibujar la imagen del contorno de un polígono, calcule la imagen de cada vértice con la matriz estándar y una las imágenes en el orden del contorno original. Los lados transformados pueden coincidir entre sí o reducirse a puntos. El desplazamiento de \\(A'\\) a \\(B'\\) es \\(T(\\mathbf b-\\mathbf a)\\), pues \\(T(\\mathbf b)-T(\\mathbf a)=T(\\mathbf b-\\mathbf a)\\). Si ese vector es distinto de cero, sus componentes determinan la longitud y la dirección del nuevo lado.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#escalamiento-por-coordenadas",
+    "href": "sesiones/2026-11-19-sesion-51.html#escalamiento-por-coordenadas",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Escalamiento por coordenadas",
+    "text": "Escalamiento por coordenadas\nEl escalamiento \\(E(x,y)=(kx,\\,ly)\\), con \\(k,l&gt;0\\), tiene matriz estándar\n\\[\n[E]=\\begin{bmatrix}k&0\\\\0&l\\end{bmatrix}.\n\\]\nUn lado horizontal conserva su dirección y su longitud se multiplica por \\(k\\). Un lado vertical conserva su dirección y su longitud se multiplica por \\(l\\). Si un lado es oblicuo y sus desplazamientos horizontal y vertical son \\(d_1\\) y \\(d_2\\), la longitud transformada se calcula a partir de ambas componentes y es \\(\\sqrt{(kd_1)^2+(ld_2)^2}\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#proyección-sobre-un-eje",
+    "href": "sesiones/2026-11-19-sesion-51.html#proyección-sobre-un-eje",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Proyección sobre un eje",
+    "text": "Proyección sobre un eje\nLa proyección \\(P(x,y)=(x,0)\\) conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección \\(Q(x,y)=(0,y)\\) conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son\n\\[\n[P]=\\begin{bmatrix}1&0\\\\0&0\\end{bmatrix},\n\\qquad\n[Q]=\\begin{bmatrix}0&0\\\\0&1\\end{bmatrix}.\n\\]\nBajo \\(P\\), un lado horizontal conserva su longitud, un lado vertical se reduce a un punto y un lado oblicuo se transforma en un segmento horizontal de longitud \\(|d_1|\\), donde \\(d_1\\) es su desplazamiento horizontal. Bajo \\(Q\\), se intercambian los papeles de las dos coordenadas.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#ejemplos",
+    "href": "sesiones/2026-11-19-sesion-51.html#ejemplos",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Escalamiento de un triángulo\nConsidere el triángulo de vértices \\(A(1,1)\\), \\(B(3,1)\\) y \\(C(1,4)\\) y el escalamiento \\(E(x,y)=(2x,\\tfrac12 y)\\). Las imágenes de los vértices son\n\\[\nA'=\\bigl(2,\\tfrac12\\bigr),\\qquad B'=\\bigl(6,\\tfrac12\\bigr),\\qquad C'=(2,2).\n\\]\n\n\n\nLado\nLongitud original\nLongitud transformada\n\n\n\n\n\\(AB\\), horizontal\n\\(2\\)\n\\(4\\)\n\n\n\\(AC\\), vertical\n\\(3\\)\n\\(\\tfrac32\\)\n\n\n\\(BC\\), oblicuo\n\\(\\sqrt{13}\\)\n\\(\\tfrac{\\sqrt{73}}2\\)\n\n\n\nEl desplazamiento de \\(B'\\) a \\(C'\\) es \\((-4,\\tfrac32)\\). Por ello, la longitud de \\(B'C'\\) es \\(\\sqrt{(-4)^2+(\\tfrac32)^2}=\\tfrac{\\sqrt{73}}2\\). El ángulo en \\(A'\\) sigue siendo recto porque \\(A'B'\\) es horizontal y \\(A'C'\\) es vertical.\n\n\nEscalamiento de un triángulo\nEl triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). Su imagen tiene vértices A′(2, ½), B′(6, ½) y C′(2, 2). Los ejes usan la misma escala.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n0\n1\n2\n3\n4\n5\n6\n1\n2\n3\n4\n\n\n\n\n\n\n\n\n\nA\n\nB\n\nC\n\n\n\nA′\n\nB′\n\nC′\n\n\nTrazo discontinuo para el triángulo original y trazo continuo para el triángulo resultante.\n\n\n\nEjemplo 2. Proyección del triángulo sobre el eje horizontal\nCon \\(P(x,y)=(x,0)\\), las imágenes de los mismos vértices son\n\\[\nA'=(1,0),\\qquad B'=(3,0),\\qquad C'=(1,0).\n\\]\nEl lado vertical \\(AC\\) se reduce a \\((1,0)\\). Los lados \\(AB\\) y \\(BC\\) tienen como imagen el mismo segmento, desde \\((1,0)\\) hasta \\((3,0)\\). Su longitud es \\(2\\), que coincide con la de \\(AB\\) y con el valor absoluto del desplazamiento horizontal de \\(B\\) a \\(C\\).\n\n\nProyección de un triángulo sobre el eje horizontal\nEl triángulo original tiene vértices A(1, 1), B(3, 1) y C(1, 4). El segmento proyectado va del punto común A′ = C′(1, 0) a B′(3, 0).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n0\n1\n2\n3\n4\n5\n6\n1\n2\n3\n4\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\n\nB\n\nC\n\n\n\nA′ = C′\n\nB′\n\n\nTrazo discontinuo para el triángulo original y trazo continuo para el segmento proyectado.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#errores-frecuentes",
+    "href": "sesiones/2026-11-19-sesion-51.html#errores-frecuentes",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAlteración del orden de los vértices. En el rectángulo del ejercicio 1 de la actividad, el contorno recorre \\(O\\), \\(A\\), \\(B\\), \\(C\\) y regresa a \\(O\\). El segmento entre \\(O'\\) y \\(B'\\) es la imagen de la diagonal \\(OB\\) y queda en el interior del nuevo contorno, salvo en sus extremos.\nUso de un factor común para las longitudes. En el Ejemplo 1, el escalamiento duplica la longitud de \\(AB\\), reduce a la mitad la de \\(AC\\) y modifica las dos componentes del desplazamiento de \\(B\\) a \\(C\\).\nConteo de vértices coincidentes como puntos distintos. En el Ejemplo 2, \\(A'\\) y \\(C'\\) representan el mismo punto. La imagen del triángulo es un segmento.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#actividad",
+    "href": "sesiones/2026-11-19-sesion-51.html#actividad",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero los ejercicios de forma individual y registre su procedimiento por escrito. Después, compare sus resultados con los de otra persona del grupo y justifique las correcciones mediante los cálculos o el croquis.\n\nConsidere el rectángulo con vértices \\(O(0,0)\\), \\(A(4,0)\\), \\(B(4,2)\\) y \\(C(0,2)\\) y el escalamiento \\(E(x,y)=(\\tfrac12x,\\,3y)\\).\n\nEscriba la matriz estándar y calcule las imágenes de los cuatro vértices.\nDibuje ambas figuras en el mismo plano. Indique las longitudes de los lados antes y después del escalamiento y justifique por qué la imagen sigue siendo un rectángulo.\n\nEl contorno de una muestra cerámica vista desde arriba es un triángulo de vértices \\(O(0,0)\\), \\(A(6,0)\\) y \\(B(2,4)\\), con coordenadas en milímetros. Un lector óptico registra únicamente la posición horizontal de cada punto. La lectura se representa en el plano mediante \\(P(x,y)=(x,0)\\).\n\nEscriba la matriz estándar y dibuje la imagen del contorno. Indique la imagen de cada lado y su longitud en el registro.\nDetermine el ancho horizontal de la muestra a partir de la lectura. Explique qué sucede con la información sobre la altura.\n\n\nComprobación individual. Aplique \\(Q(x,y)=(0,y)\\) a los vértices \\((1,0)\\), \\((0,2)\\) y \\((2,2)\\) de un triángulo. Identifique el lado que se reduce a un punto y describa la imagen del contorno.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. a. La matriz es \\(\\begin{bmatrix}\\tfrac12&0\\\\0&3\\end{bmatrix}\\). Las imágenes son \\(O'=(0,0)\\), \\(A'=(2,0)\\), \\(B'=(2,6)\\) y \\(C'=(0,6)\\).\n1. b. En el croquis, ambos rectángulos tienen su esquina inferior izquierda en el origen. Los lados horizontales \\(OA\\) y \\(BC\\) pasan de longitud \\(4\\) a \\(2\\). Los verticales \\(AB\\) y \\(CO\\) pasan de \\(2\\) a \\(6\\). Los lados consecutivos siguen siendo perpendiculares, por lo que \\(O'A'B'C'\\) es un rectángulo de ancho \\(2\\) y altura \\(6\\).\n2. a. La matriz es \\(\\begin{bmatrix}1&0\\\\0&0\\end{bmatrix}\\) y los vértices se transforman en \\(O'=(0,0)\\), \\(A'=(6,0)\\) y \\(B'=(2,0)\\). El lado \\(OA\\) corresponde al segmento de \\((0,0)\\) a \\((6,0)\\), con longitud \\(6\\) mm. El lado \\(OB\\) corresponde al segmento de \\((0,0)\\) a \\((2,0)\\), con longitud \\(2\\) mm. El lado \\(AB\\) corresponde al segmento de \\((2,0)\\) a \\((6,0)\\), con longitud \\(4\\) mm. El croquis consta del segmento horizontal completo, con \\(B'\\) entre \\(O'\\) y \\(A'\\).\n2. b. El ancho registrado es \\(6-0=6\\) mm. La altura de la muestra es \\(4\\) mm y se pierde al sustituir todas las coordenadas verticales por cero.\nComprobación individual. Los vértices se transforman en \\((0,0)\\), \\((0,2)\\) y \\((0,2)\\), respectivamente. El lado entre \\((0,2)\\) y \\((2,2)\\) se reduce al punto \\((0,2)\\). El contorno se transforma en el segmento del eje vertical entre \\((0,0)\\) y \\((0,2)\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-11-19-sesion-51.html#ejercicios-para-practicar",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálculo y la interpretación de las imágenes. Consulte las respuestas después de registrar su intento.\n\nLa sección de una barra tiene forma de trapecio, con vértices \\((0,0)\\), \\((10,0)\\), \\((8,4)\\) y \\((2,4)\\) en milímetros. En un ensayo idealizado, la sección se deforma mediante \\(E(x,y)=(1.2x,\\,0.5y)\\).\n\nCalcule las imágenes de los vértices.\nDetermine las longitudes de las bases horizontales y la altura antes y después de la deformación. Justifique que las bases transformadas siguen siendo paralelas.\n\nDos lotes de polvo cerámico contienen alúmina y sílice. El lote 1 contiene \\(80\\,\\%\\) de alúmina y \\(20\\,\\%\\) de sílice en masa. El lote 2 contiene \\(40\\,\\%\\) de alúmina y \\(60\\,\\%\\) de sílice. Una mezcla preparada sin pérdidas contiene \\(280\\) g de alúmina y \\(120\\) g de sílice.\n\nEscriba el sistema matricial \\(K\\mathbf m=\\mathbf b\\), con una columna de \\(K\\) por lote. Calcule \\(\\det K\\).\nObtenga \\(K^{-1}\\) con la fórmula de la inversa de una matriz \\(2\\times2\\). Determine la masa usada de cada lote y compruebe las masas de alúmina y sílice obtenidas.\n\nAl aplicar \\(E(x,y)=(2x,y)\\) al cuadrado de vértices \\((1,1)\\), \\((3,1)\\), \\((3,3)\\) y \\((1,3)\\), un estudiante afirma que el resultado es un cuadrado de lado \\(4\\) porque se duplican las longitudes de todos los lados.\n\nCalcule las imágenes de los vértices.\nIdentifique el error y describa la figura transformada.\n\nConsidere el cuadrilátero de vértices \\((1,0)\\), \\((3,1)\\), \\((2,3)\\) y \\((0,2)\\), en ese orden, y la proyección \\(Q(x,y)=(0,y)\\).\n\nCalcule las imágenes de los vértices.\nDescriba la imagen del contorno y determine su longitud.\n\nUn escalamiento por coordenadas transforma los vértices \\((0,0)\\), \\((2,0)\\) y \\((0,2)\\) de un triángulo en \\((0,0)\\), \\((6,0)\\) y \\((0,1)\\), respectivamente.\n\nDetermine los factores del escalamiento y su matriz estándar.\nCalcule la imagen de \\((1,1)\\), punto medio del lado entre \\((2,0)\\) y \\((0,2)\\). Compruebe que es el punto medio del lado transformado.\n\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n1. a. \\((0,0)\\), \\((12,0)\\), \\((9.6,2)\\) y \\((2.4,2)\\).\n1. b. Las bases pasan de \\(10\\) a \\(12\\) mm y de \\(6\\) a \\(7.2\\) mm. La altura pasa de \\(4\\) a \\(2\\) mm. Las bases permanecen paralelas porque ambas imágenes son horizontales.\n2. a. \\(\\begin{bmatrix}0.8&0.4\\\\0.2&0.6\\end{bmatrix}\\mathbf m=\\begin{bmatrix}280\\\\120\\end{bmatrix}\\) y \\(\\det K=0.4\\).\n2. b. \\(K^{-1}=\\begin{bmatrix}1.5&-1\\\\-0.5&2\\end{bmatrix}\\). Se usan \\(300\\) g del lote 1 y \\(100\\) g del lote 2. Las masas obtenidas son \\(240+40=280\\) g de alúmina y \\(60+60=120\\) g de sílice.\n3. a. \\((2,1)\\), \\((6,1)\\), \\((6,3)\\) y \\((2,3)\\).\n3. b. Se duplican las longitudes horizontales y se conservan las verticales. La imagen es un rectángulo de ancho \\(4\\) y altura \\(2\\).\n4. a. \\((0,0)\\), \\((0,1)\\), \\((0,3)\\) y \\((0,2)\\).\n4. b. El segmento entre \\((0,0)\\) y \\((0,3)\\), de longitud \\(3\\).\n5. a. Los factores horizontal y vertical son \\(3\\) y \\(\\tfrac12\\), respectivamente. La matriz es \\(\\begin{bmatrix}3&0\\\\0&\\tfrac12\\end{bmatrix}\\).\n5. b. \\(\\bigl(3,\\tfrac12\\bigr)\\), que coincide con el promedio de los extremos \\((6,0)\\) y \\((0,1)\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-19-sesion-51.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-11-19-sesion-51.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 51. Efecto de una transformación lineal sobre figuras del plano",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\nCompruebe que puede dibujar la imagen del contorno de una figura uniendo las imágenes de sus vértices en el orden original. A partir de ese dibujo y de las coordenadas, explique cómo cambian las longitudes bajo un escalamiento e identifique los lados que se reducen a puntos bajo una proyección.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Sesión 51. Efecto de una transformación lineal sobre figuras del plano</span>"
+    ]
+  },
+  {
     "objectID": "recursos/notacion.html",
     "href": "recursos/notacion.html",
     "title": "Notación",
@@ -4666,7 +4765,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4677,7 +4776,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4688,7 +4787,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4699,7 +4798,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4710,7 +4809,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4721,7 +4820,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4732,7 +4831,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>64</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4743,7 +4842,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4754,7 +4853,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4765,7 +4864,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
