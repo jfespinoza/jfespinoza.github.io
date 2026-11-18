@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Construcción de la matriz estándar e interpretación del producto matriz-vector mediante sus columnas.">
+
+<title>Sesión 50. Matriz estándar de una transformación lineal – Álgebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../recursos/notacion.html" rel="next">
+<link href="../sesiones/2026-11-17-sesion-49.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0a5c8077981869bb58818cce5ddee2b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script defer="" src="../mathjax/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Sesión 50. Matriz estándar de una transformación lineal – Álgebra">
+<meta property="og:description" content="Construcción de la matriz estándar e interpretación del producto matriz-vector mediante sus columnas.">
+<meta property="og:site_name" content="Álgebra">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-18-sesion-50.html"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Álgebra</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/jfespinoza/jfespinoza.github.io/tree/main/proyectos/curso-algebra-2026-2" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Álgebra 22017</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Información del curso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/identificacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Identificación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/metodologia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Forma de trabajo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/contenidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Contenidos y resultados de aprendizaje</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/evaluacion-asistencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluación y asistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/calendario.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Calendario del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/acceso-teams.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Acceso temporal a Teams</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 1. Números reales y complejos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/01-reales-complejos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 1. Números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-10-sesion-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 01. Presentación y encuadre del curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-11-sesion-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 02. Números reales: clasificación, orden e intervalos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-12-sesion-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 03. Potencias, radicales y expresiones equivalentes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-13-sesion-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 04. Productos notables, factorización y fracciones algebraicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-14-sesion-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 05. Ecuaciones lineales y despeje de fórmulas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-17-sesion-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 06. Inecuaciones lineales y valor absoluto como distancia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-18-sesion-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 07. Números complejos: forma cartesiana, plano, suma y resta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-19-sesion-08.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 08. Números complejos: multiplicación, división y conjugado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-20-sesion-09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 09. Números complejos: módulo, argumento y forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-21-sesion-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 10. Números complejos: multiplicación y división en forma polar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-24-sesion-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 11. Números complejos: potencias enteras y teorema de De Moivre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-25-sesion-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 12. Números complejos: raíces n-ésimas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-26-sesion-13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 13. Práctica integradora de números reales y complejos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-08-28-sesion-14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 14. Examen parcial 1: números reales y complejos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 2. Polinomios y raíces</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/02-polinomios-raices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 2. Polinomios y raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-01-sesion-15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 15. Polinomios: estructura, operaciones y evaluación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-02-sesion-16.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 16. Ecuaciones cuadráticas: factorización, fórmula general y discriminante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-03-sesion-17.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 17. Teoremas del residuo y del factor; regla de Ruffini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-04-sesion-18.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 18. Teorema de la raíz racional: candidatos y reducción del grado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-07-sesion-19.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 19. Ecuaciones cúbicas reducibles: raíz racional, Ruffini y cuadrática resultante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-08-sesion-20.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 20. Teorema fundamental del álgebra: multiplicidad y conteo de raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-09-sesion-21.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 21. Construcción de un polinomio a partir de sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-10-sesion-22.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 22. Raíces, factores y multiplicidad: lectura cualitativa de la gráfica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-11-sesion-23.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 23. Aproximación de una raíz real por bisección</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-14-sesion-24.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 24. Selección del método para ecuaciones polinómicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-15-sesion-25.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 25. Práctica integradora de polinomios y sus raíces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-18-sesion-26.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 26. Examen parcial 2: polinomios y sus raíces</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/03-sistemas-ecuaciones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 3. Sistemas de ecuaciones lineales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-21-sesion-27.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 27. Sistemas de ecuaciones lineales: planteamiento y verificación de soluciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-22-sesion-28.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 28. Sistemas de dos ecuaciones: tipos de solución y consistencia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-23-sesion-29.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 29. Matriz aumentada y operaciones elementales de renglón</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-09-24-sesion-30.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 30. Eliminación de Gauss y sustitución regresiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-05-sesion-31.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 31. Método de Gauss: fracciones y corrección de errores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-06-sesion-32.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 32. Método de Gauss-Jordan y forma escalonada reducida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-07-sesion-33.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 33. Variables libres y descripción paramétrica del conjunto solución</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-08-sesion-34.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 34. Práctica de variables libres y ecuaciones paramétricas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 4. Matrices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/04-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 4. Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-09-sesion-35.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 35. Operaciones con matrices: suma, múltiplo escalar y transpuesta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-19-sesion-36.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 36. Representación matricial de un sistema y sistemas homogéneos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-20-sesion-37.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 37. Producto de matrices: tamaños, cálculo y orden de los factores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-21-sesion-38.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 38. Práctica integradora para el Parcial 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-23-sesion-39.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 39. Examen parcial 3: sistemas lineales y matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-27-sesion-40.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 40. Matriz inversa: definición, verificación y uso en un sistema</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-28-sesion-41.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 41. Inversión de matrices mediante el método de Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-29-sesion-42.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 42. Práctica de resolución de sistemas mediante inversa y Gauss-Jordan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-10-30-sesion-43.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 43. Determinante e invertibilidad de una matriz 2×2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-04-sesion-44.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 44. Determinante de una matriz 3×3 por cofactores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-05-sesion-45.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 45. Práctica de determinantes 2×2 y 3×3 y sus propiedades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-06-sesion-46.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 46. Regla de Cramer para sistemas de ecuaciones</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/05-conceptos-algebra-lineal.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 5. Conceptos básicos de álgebra lineal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-09-sesion-47.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 47. Combinaciones lineales y sistemas de ecuaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-11-sesion-48.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 48. Práctica integradora para el Parcial 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unidad 6. Transformaciones lineales en el plano</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unidades/06-transformaciones-lineales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unidad 6. Transformaciones lineales en el plano</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-17-sesion-49.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 49. Transformaciones lineales del plano</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sesiones/2026-11-18-sesion-50.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursos de consulta</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/notacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Notación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../recursos/bibliografia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bibliografía</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
+  <li><a href="#representación-mediante-los-vectores-coordenados" id="toc-representación-mediante-los-vectores-coordenados" class="nav-link" data-scroll-target="#representación-mediante-los-vectores-coordenados">Representación mediante los vectores coordenados</a></li>
+  <li><a href="#matriz-estándar" id="toc-matriz-estándar" class="nav-link" data-scroll-target="#matriz-estándar">Matriz estándar</a></li>
+  <li><a href="#ejemplo.-matriz-estándar-a-partir-de-una-regla" id="toc-ejemplo.-matriz-estándar-a-partir-de-una-regla" class="nav-link" data-scroll-target="#ejemplo.-matriz-estándar-a-partir-de-una-regla">Ejemplo. Matriz estándar a partir de una regla</a></li>
+  <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
+  <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
+  <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
+  <li><a href="#conclusiones-del-aprendizaje" id="toc-conclusiones-del-aprendizaje" class="nav-link" data-scroll-target="#conclusiones-del-aprendizaje">Conclusiones del aprendizaje</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-18-sesion-50.html"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Sesión 50. Matriz estándar de una transformación lineal</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">18 de noviembre de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-la-sesión" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
+<p>Al finalizar la sesión podrá construir la matriz estándar de una transformación lineal del plano a partir de las imágenes de los vectores coordenados y calcular una salida como producto matriz-vector y como combinación lineal de sus columnas. Compruebe ambas representaciones en la actividad y en la comprobación individual.</p>
+</section>
+<section id="representación-mediante-los-vectores-coordenados" class="level2">
+<h2 class="anchored" data-anchor-id="representación-mediante-los-vectores-coordenados">Representación mediante los vectores coordenados</h2>
+<p>Los <strong>vectores coordenados</strong> del plano son</p>
+<p><span class="math display">\[
+\mathbf e_1=\begin{bmatrix}1\\0\end{bmatrix},
+\qquad
+\mathbf e_2=\begin{bmatrix}0\\1\end{bmatrix}.
+\]</span></p>
+<p>Todo vector <span class="math inline">\(\mathbf x=(x,y)^{\mathsf T}\)</span> se escribe como <span class="math inline">\(\mathbf x=x\mathbf e_1+y\mathbf e_2\)</span>. Si <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> es <strong>lineal</strong>, la <a href="../sesiones/2026-11-17-sesion-49.html#transformaciones-del-plano">aditividad y la homogeneidad</a> permiten obtener su salida:</p>
+<p><span class="math display">\[
+T(\mathbf x)=T(x\mathbf e_1+y\mathbf e_2)
+=xT(\mathbf e_1)+yT(\mathbf e_2).
+\]</span></p>
+<p>Por tanto, conocer <span class="math inline">\(T(\mathbf e_1)\)</span> y <span class="math inline">\(T(\mathbf e_2)\)</span> determina la salida de cualquier vector. La primera coordenada de la entrada multiplica a <span class="math inline">\(T(\mathbf e_1)\)</span> y la segunda multiplica a <span class="math inline">\(T(\mathbf e_2)\)</span>.</p>
+</section>
+<section id="matriz-estándar" class="level2">
+<h2 class="anchored" data-anchor-id="matriz-estándar">Matriz estándar</h2>
+<p>La <strong>matriz estándar</strong> de una transformación lineal <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> es la matriz cuyas columnas son, en ese orden, <span class="math inline">\(T(\mathbf e_1)\)</span> y <span class="math inline">\(T(\mathbf e_2)\)</span>:</p>
+<p><span class="math display">\[
+A=\begin{bmatrix}\,T(\mathbf e_1)&amp;T(\mathbf e_2)\,\end{bmatrix}.
+\]</span></p>
+<p>Si <span class="math inline">\(T(\mathbf e_1)=(a,c)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(b,d)^{\mathsf T}\)</span>, entonces</p>
+<p><span class="math display">\[
+A=\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix},
+\qquad
+T(\mathbf x)=A\mathbf x
+=x\begin{bmatrix}a\\c\end{bmatrix}
++y\begin{bmatrix}b\\d\end{bmatrix}
+=\begin{bmatrix}ax+by\\cx+dy\end{bmatrix}.
+\]</span></p>
+<p>Esta igualdad conecta la transformación con la <a href="../sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector">lectura por columnas del producto matriz-vector</a>. Los renglones dan las componentes de la salida; las columnas indican las imágenes de los vectores coordenados.</p>
+<p>La representación es única: multiplicar una matriz por <span class="math inline">\(\mathbf e_1\)</span> selecciona su primera columna y multiplicarla por <span class="math inline">\(\mathbf e_2\)</span> selecciona la segunda. Cualquier matriz que represente a <span class="math inline">\(T\)</span> para todas las entradas debe tener precisamente esas columnas.</p>
+<p>Recíprocamente, toda matriz real <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(2\times2\)</span> define una transformación lineal mediante <span class="math inline">\(T(\mathbf x)=A\mathbf x\)</span>, pues el producto cumple</p>
+<p><span class="math display">\[
+A(\mathbf u+\mathbf v)=A\mathbf u+A\mathbf v,
+\qquad
+A(r\mathbf u)=r(A\mathbf u)
+\quad(r\in\mathbb R).
+\]</span></p>
+<p>Para construir la matriz, identifique primero si la linealidad está dada o justificada; después obtenga las dos imágenes, colóquelas como columnas y compruebe el producto con una entrada.</p>
+</section>
+<section id="ejemplo.-matriz-estándar-a-partir-de-una-regla" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo.-matriz-estándar-a-partir-de-una-regla">Ejemplo. Matriz estándar a partir de una regla</h2>
+<p>Sea <span class="math inline">\(T(x,y)=(2x+y,3y)\)</span>. Es lineal porque sus dos coordenadas son combinaciones lineales de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>, como se justificó en la <a href="../sesiones/2026-11-17-sesion-49.html#ejemplo-1-escalamiento-por-coordenadas">sesión anterior</a>. Al sustituir los vectores coordenados se obtiene</p>
+<p><span class="math display">\[
+T(1,0)=\begin{bmatrix}2\\0\end{bmatrix},
+\qquad
+T(0,1)=\begin{bmatrix}1\\3\end{bmatrix},
+\qquad
+A=\begin{bmatrix}2&amp;1\\0&amp;3\end{bmatrix}.
+\]</span></p>
+<p>Para la entrada <span class="math inline">\(\mathbf x=(-1,2)^{\mathsf T}\)</span>, el producto puede calcularse por columnas:</p>
+<p><span class="math display">\[
+T(\mathbf x)
+=A\begin{bmatrix}-1\\2\end{bmatrix}
+=-\begin{bmatrix}2\\0\end{bmatrix}
++2\begin{bmatrix}1\\3\end{bmatrix}
+=\begin{bmatrix}0\\6\end{bmatrix}.
+\]</span></p>
+<p>La sustitución en la regla original confirma la salida: <span class="math inline">\(T(-1,2)=(2(-1)+2,3(2))=(0,6)\)</span>.</p>
+</section>
+<section id="errores-frecuentes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Colocar las imágenes como renglones.</strong> Si <span class="math inline">\(T(\mathbf e_1)=(2,0)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(1,3)^{\mathsf T}\)</span>, la matriz <span class="math inline">\(\begin{bmatrix}2&amp;0\\1&amp;3\end{bmatrix}\)</span> es incorrecta: al multiplicarla por <span class="math inline">\(\mathbf e_1\)</span> se obtiene <span class="math inline">\((2,1)^{\mathsf T}\)</span>. La matriz correcta es <span class="math inline">\(\begin{bmatrix}2&amp;1\\0&amp;3\end{bmatrix}\)</span>.</li>
+<li><strong>Usar las dos imágenes sin comprobar la linealidad.</strong> Para <span class="math inline">\(F(x,y)=(x,y^2)\)</span>, las imágenes de <span class="math inline">\(\mathbf e_1\)</span> y <span class="math inline">\(\mathbf e_2\)</span> coinciden con las de la identidad. Sin embargo, <span class="math inline">\(F(0,2)=(0,4)\)</span> y la matriz identidad produce <span class="math inline">\((0,2)\)</span>. No existe una matriz <span class="math inline">\(A\)</span> que satisfaga <span class="math inline">\(F(\mathbf x)=A\mathbf x\)</span> para todas las entradas, porque <span class="math inline">\(F\)</span> no es lineal.</li>
+<li><strong>Sumar las columnas sin los coeficientes de la entrada.</strong> La suma <span class="math inline">\(T(\mathbf e_1)+T(\mathbf e_2)\)</span> corresponde a la entrada <span class="math inline">\((1,1)^{\mathsf T}\)</span>. Para <span class="math inline">\((x,y)^{\mathsf T}\)</span> se requiere <span class="math inline">\(xT(\mathbf e_1)+yT(\mathbf e_2)\)</span>.</li>
+</ul>
+</section>
+<section id="actividad" class="level2">
+<h2 class="anchored" data-anchor-id="actividad">Actividad</h2>
+<p>Resuelva primero de manera individual y registre por escrito su intento. Compare después sus respuestas con otra persona del grupo y justifique cada corrección mediante la posición de las columnas o las propiedades de linealidad.</p>
+<ol type="1">
+<li>Una transformación lineal <span class="math inline">\(L\)</span> satisface <span class="math inline">\(L(\mathbf e_1)=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(L(\mathbf e_2)=(-2,1)^{\mathsf T}\)</span>.
+<ol type="a">
+<li>Construya su matriz estándar <span class="math inline">\(A\)</span> y escriba la regla <span class="math inline">\(L(x,y)\)</span>.</li>
+<li>Calcule <span class="math inline">\(L(2,1)\)</span> por renglones y como combinación de las columnas de <span class="math inline">\(A\)</span>.</li>
+</ol></li>
+<li>En la imagen de una muestra de material, las posiciones se miden en micrómetros respecto de una marca fija. Una corrección de escala se modela mediante una transformación lineal <span class="math inline">\(C\)</span> que conserva esa marca como origen. El vector de un micrómetro horizontal se transforma en <span class="math inline">\((\tfrac32,0)^{\mathsf T}\)</span> micrómetros y el de un micrómetro vertical en <span class="math inline">\((0,2)^{\mathsf T}\)</span> micrómetros.
+<ol type="a">
+<li>Construya la matriz estándar y determine la posición corregida de una partícula situada en <span class="math inline">\((4,1)\)</span> micrómetros.</li>
+<li>Calcule la imagen del vector <span class="math inline">\((2,0)^{\mathsf T}\)</span> micrómetros. Explique qué indica la primera columna sobre la corrección horizontal.</li>
+</ol></li>
+</ol>
+<p><strong>Comprobación individual.</strong> Una transformación lineal <span class="math inline">\(H\)</span> cumple <span class="math inline">\(H(\mathbf e_1)=(0,2)^{\mathsf T}\)</span> y <span class="math inline">\(H(\mathbf e_2)=(3,-1)^{\mathsf T}\)</span>. Escriba su matriz estándar y calcule <span class="math inline">\(H(-1,2)\)</span> como combinación de sus columnas.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Soluciones de la actividad">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Soluciones de la actividad
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1. a.</strong> Las imágenes se colocan como columnas:</p>
+<p><span class="math display">\[
+A=\begin{bmatrix}1&amp;-2\\2&amp;1\end{bmatrix},
+\qquad
+L(x,y)=(x-2y,2x+y).
+\]</span></p>
+<p><strong>1. b.</strong> Por renglones, las componentes son <span class="math inline">\(1(2)-2(1)=0\)</span> y <span class="math inline">\(2(2)+1(1)=5\)</span>. Por columnas,</p>
+<p><span class="math display">\[
+L(2,1)=2\begin{bmatrix}1\\2\end{bmatrix}
++\begin{bmatrix}-2\\1\end{bmatrix}
+=\begin{bmatrix}0\\5\end{bmatrix}.
+\]</span></p>
+<p><strong>2. a.</strong> Con las coordenadas de entrada y salida expresadas en micrómetros, los factores de la matriz son adimensionales:</p>
+<p><span class="math display">\[
+A_C=\begin{bmatrix}\tfrac32&amp;0\\0&amp;2\end{bmatrix},
+\qquad
+A_C\begin{bmatrix}4\\1\end{bmatrix}
+=4\begin{bmatrix}\tfrac32\\0\end{bmatrix}
++\begin{bmatrix}0\\2\end{bmatrix}
+=\begin{bmatrix}6\\2\end{bmatrix}.
+\]</span></p>
+<p>La posición corregida es <span class="math inline">\((6,2)\)</span> micrómetros respecto de la misma marca.</p>
+<p><strong>2. b.</strong> <span class="math inline">\(C(2,0)=2C(\mathbf e_1)=(3,0)^{\mathsf T}\)</span> micrómetros. La primera columna indica que cada micrómetro horizontal se representa por <span class="math inline">\(\tfrac32\)</span> micrómetros horizontales, sin componente vertical.</p>
+<p><strong>Comprobación individual.</strong> La matriz es <span class="math inline">\(\begin{bmatrix}0&amp;3\\2&amp;-1\end{bmatrix}\)</span> y</p>
+<p><span class="math display">\[
+H(-1,2)=-\begin{bmatrix}0\\2\end{bmatrix}
++2\begin{bmatrix}3\\-1\end{bmatrix}
+=\begin{bmatrix}6\\-4\end{bmatrix}.
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicios-para-practicar" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-para-practicar">Ejercicios para practicar</h2>
+<p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la relación entre la regla, la matriz y sus columnas. Consulte las respuestas después de registrar su intento.</p>
+<ol type="1">
+<li>En un croquis de una lámina, con coordenadas en milímetros, un programa conserva el origen y modifica las posiciones mediante <span class="math inline">\(S(x,y)=(2x,\tfrac12 y)\)</span>. Construya su matriz estándar. Para una marca situada en <span class="math inline">\((3,4)\)</span> milímetros se proponen las posiciones corregidas <span class="math inline">\((6,2)\)</span> y <span class="math inline">\((3,4)\)</span> milímetros. Determine cuál corresponde a la regla e interprete los dos factores de escala.</li>
+<li>Un laboratorio dispone de dos tipos de paquetes con porciones separadas de cobre y zinc. Cada paquete del primer tipo contiene <span class="math inline">\(3\)</span> gramos de cobre y <span class="math inline">\(1\)</span> de zinc; cada paquete del segundo, <span class="math inline">\(1\)</span> gramo de cobre y <span class="math inline">\(2\)</span> de zinc. Las masas se suman sin pérdidas. Forme una matriz que transforme el número de paquetes de cada tipo en las masas totales, ordenadas como cobre y zinc. Plantee y resuelva un sistema para reunir <span class="math inline">\(11\)</span> gramos de cobre y <span class="math inline">\(7\)</span> de zinc; compruebe que los números de paquetes sean enteros no negativos.</li>
+<li>Una transformación lineal <span class="math inline">\(T\)</span> satisface <span class="math inline">\(T(\mathbf e_1)=(2,1)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(-1,3)^{\mathsf T}\)</span>. Un estudiante propone <span class="math inline">\(B=\begin{bmatrix}2&amp;1\\-1&amp;3\end{bmatrix}\)</span>. Calcule <span class="math inline">\(B\mathbf e_1\)</span>, identifique el error y escriba la matriz correcta.</li>
+<li>Sea <span class="math inline">\(G(x,y)=(x-3y,2x+y)\)</span>. Obtenga <span class="math inline">\(G(\mathbf e_1)\)</span>, <span class="math inline">\(G(\mathbf e_2)\)</span> y la matriz estándar. Calcule <span class="math inline">\(G(2,-1)\)</span>.</li>
+<li>Una transformación lineal <span class="math inline">\(P\)</span> tiene matriz estándar <span class="math inline">\(\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span>. Escriba <span class="math inline">\(P(\mathbf e_1)\)</span>, <span class="math inline">\(P(\mathbf e_2)\)</span> y <span class="math inline">\(P(x,y)\)</span>. Calcule <span class="math inline">\(P(-2,5)\)</span> y <span class="math inline">\(P(-2,-1)\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Respuestas de los ejercicios para practicar">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Respuestas de los ejercicios para practicar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.</strong> <span class="math inline">\(A_S=\begin{bmatrix}2&amp;0\\0&amp;\tfrac12\end{bmatrix}\)</span>. La posición correcta es <span class="math inline">\((6,2)\)</span> milímetros. La coordenada horizontal se duplica y la vertical se reduce a la mitad.</p>
+<p><strong>2.</strong> <span class="math inline">\(A=\begin{bmatrix}3&amp;1\\1&amp;2\end{bmatrix}\)</span> y el sistema es <span class="math inline">\(3a+b=11\)</span>, <span class="math inline">\(a+2b=7\)</span>. Se requieren <span class="math inline">\(a=3\)</span> paquetes del primer tipo y <span class="math inline">\(b=2\)</span> del segundo; son enteros no negativos y proporcionan <span class="math inline">\(11\)</span> gramos de cobre y <span class="math inline">\(7\)</span> de zinc.</p>
+<p><strong>3.</strong> <span class="math inline">\(B\mathbf e_1=(2,-1)^{\mathsf T}\)</span>. Se colocaron las imágenes como renglones. La matriz correcta es <span class="math inline">\(\begin{bmatrix}2&amp;-1\\1&amp;3\end{bmatrix}\)</span>.</p>
+<p><strong>4.</strong> <span class="math inline">\(G(\mathbf e_1)=(1,2)^{\mathsf T}\)</span>, <span class="math inline">\(G(\mathbf e_2)=(-3,1)^{\mathsf T}\)</span>, <span class="math inline">\(A_G=\begin{bmatrix}1&amp;-3\\2&amp;1\end{bmatrix}\)</span> y <span class="math inline">\(G(2,-1)=(5,3)\)</span>.</p>
+<p><strong>5.</strong> <span class="math inline">\(P(\mathbf e_1)=(1,0)^{\mathsf T}\)</span>, <span class="math inline">\(P(\mathbf e_2)=(0,0)^{\mathsf T}\)</span> y <span class="math inline">\(P(x,y)=(x,0)\)</span>. Las dos entradas indicadas producen <span class="math inline">\((-2,0)\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusiones-del-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>La matriz estándar de una transformación lineal del plano queda determinada por las imágenes de <span class="math inline">\(\mathbf e_1\)</span> y <span class="math inline">\(\mathbf e_2\)</span>, colocadas como primera y segunda columna. La salida de cualquier vector se obtiene combinando esas columnas con las coordenadas de la entrada.</p>
+<p>Al revisar su trabajo, compruebe si puede realizar lo siguiente.</p>
+<ul>
+<li>Construir la matriz a partir de una regla o de las dos imágenes dadas.</li>
+<li>Obtener la misma salida por renglones y por combinación lineal de columnas.</li>
+<li>Detectar una colocación incorrecta de las imágenes al multiplicar la matriz por un vector coordenado.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jfespinoza\.github\.io\/curso-algebra-2026-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sesiones/2026-11-17-sesion-49.html" class="pagination-link" aria-label="Sesión 49. Transformaciones lineales del plano">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sesión 49. Transformaciones lineales del plano</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../recursos/notacion.html" class="pagination-link" aria-label="Notación">
+        <span class="nav-page-text"><span class="chapter-title">Notación</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Álgebra 22017 · Departamento de Matemáticas · Universidad de Sonora</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2026-2</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
