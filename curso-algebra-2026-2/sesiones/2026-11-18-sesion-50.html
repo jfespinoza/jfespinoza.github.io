@@ -575,7 +575,11 @@ window.Quarto = {
   <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
   <li><a href="#representación-mediante-los-vectores-coordenados" id="toc-representación-mediante-los-vectores-coordenados" class="nav-link" data-scroll-target="#representación-mediante-los-vectores-coordenados">Representación mediante los vectores coordenados</a></li>
   <li><a href="#matriz-estándar" id="toc-matriz-estándar" class="nav-link" data-scroll-target="#matriz-estándar">Matriz estándar</a></li>
-  <li><a href="#ejemplo.-matriz-estándar-a-partir-de-una-regla" id="toc-ejemplo.-matriz-estándar-a-partir-de-una-regla" class="nav-link" data-scroll-target="#ejemplo.-matriz-estándar-a-partir-de-una-regla">Ejemplo. Matriz estándar a partir de una regla</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-1.-matriz-estándar-a-partir-de-una-regla" id="toc-ejemplo-1.-matriz-estándar-a-partir-de-una-regla" class="nav-link" data-scroll-target="#ejemplo-1.-matriz-estándar-a-partir-de-una-regla">Ejemplo 1. Matriz estándar a partir de una regla</a></li>
+  <li><a href="#ejemplo-2.-matriz-estándar-a-partir-de-dos-imágenes" id="toc-ejemplo-2.-matriz-estándar-a-partir-de-dos-imágenes" class="nav-link" data-scroll-target="#ejemplo-2.-matriz-estándar-a-partir-de-dos-imágenes">Ejemplo 2. Matriz estándar a partir de dos imágenes</a></li>
+  </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
   <li><a href="#ejercicios-para-practicar" id="toc-ejercicios-para-practicar" class="nav-link" data-scroll-target="#ejercicios-para-practicar">Ejercicios para practicar</a></li>
@@ -613,7 +617,7 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá construir la matriz estándar de una transformación lineal del plano a partir de las imágenes de los vectores coordenados y calcular una salida como producto matriz-vector y como combinación lineal de sus columnas. Compruebe ambas representaciones en la actividad y en la comprobación individual.</p>
+<p>Al finalizar la sesión podrá construir la matriz estándar de una transformación lineal del plano a partir de las imágenes de los vectores coordenados y calcular una salida como producto matriz-vector y como combinación lineal de sus columnas. Compruebe estas capacidades en los ejercicios 1 y 2 y en la comprobación individual de la <a href="#actividad">actividad</a>.</p>
 </section>
 <section id="representación-mediante-los-vectores-coordenados" class="level2">
 <h2 class="anchored" data-anchor-id="representación-mediante-los-vectores-coordenados">Representación mediante los vectores coordenados</h2>
@@ -645,9 +649,9 @@ T(\mathbf x)=A\mathbf x
 +y\begin{bmatrix}b\\d\end{bmatrix}
 =\begin{bmatrix}ax+by\\cx+dy\end{bmatrix}.
 \]</span></p>
-<p>Esta igualdad conecta la transformación con la <a href="../sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector">lectura por columnas del producto matriz-vector</a>. Los renglones dan las componentes de la salida; las columnas indican las imágenes de los vectores coordenados.</p>
+<p>Esta igualdad conecta la transformación con la <a href="../sesiones/2026-11-09-sesion-47.html#combinaciones-lineales-y-producto-matriz-vector">lectura por columnas del producto matriz-vector</a>. Los renglones dan las componentes de la salida, como en la <a href="../sesiones/2026-10-19-sesion-36.html#producto-de-una-matriz-por-un-vector">lectura por renglones</a>; las columnas indican las imágenes de los vectores coordenados.</p>
 <p>La representación es única: multiplicar una matriz por <span class="math inline">\(\mathbf e_1\)</span> selecciona su primera columna y multiplicarla por <span class="math inline">\(\mathbf e_2\)</span> selecciona la segunda. Cualquier matriz que represente a <span class="math inline">\(T\)</span> para todas las entradas debe tener precisamente esas columnas.</p>
-<p>Recíprocamente, toda matriz real <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(2\times2\)</span> define una transformación lineal mediante <span class="math inline">\(T(\mathbf x)=A\mathbf x\)</span>, pues el producto cumple</p>
+<p>Recíprocamente, toda matriz real <span class="math inline">\(A\)</span> de tamaño <span class="math inline">\(2\times2\)</span> define una transformación lineal mediante <span class="math inline">\(T(\mathbf x)=A\mathbf x\)</span>, pues el producto cumple las <a href="../sesiones/2026-10-20-sesion-37.html#propiedades-del-producto">propiedades</a></p>
 <p><span class="math display">\[
 A(\mathbf u+\mathbf v)=A\mathbf u+A\mathbf v,
 \qquad
@@ -656,9 +660,11 @@ A(r\mathbf u)=r(A\mathbf u)
 \]</span></p>
 <p>Para construir la matriz, identifique primero si la linealidad está dada o justificada; después obtenga las dos imágenes, colóquelas como columnas y compruebe el producto con una entrada.</p>
 </section>
-<section id="ejemplo.-matriz-estándar-a-partir-de-una-regla" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo.-matriz-estándar-a-partir-de-una-regla">Ejemplo. Matriz estándar a partir de una regla</h2>
-<p>Sea <span class="math inline">\(T(x,y)=(2x+y,3y)\)</span>. Es lineal porque sus dos coordenadas son combinaciones lineales de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>, como se justificó en la <a href="../sesiones/2026-11-17-sesion-49.html#ejemplo-1-escalamiento-por-coordenadas">sesión anterior</a>. Al sustituir los vectores coordenados se obtiene</p>
+<section id="ejemplos" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
+<section id="ejemplo-1.-matriz-estándar-a-partir-de-una-regla" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-1.-matriz-estándar-a-partir-de-una-regla">Ejemplo 1. Matriz estándar a partir de una regla</h3>
+<p>Sea <span class="math inline">\(T(x,y)=(2x+y,3y)\)</span>. Es lineal porque sus dos coordenadas son combinaciones lineales de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>, como se justificó en la <a href="../sesiones/2026-11-17-sesion-49.html#ejemplo-1.-escalamiento-por-coordenadas">sesión anterior</a>. Al sustituir los vectores coordenados se obtiene</p>
 <p><span class="math display">\[
 T(1,0)=\begin{bmatrix}2\\0\end{bmatrix},
 \qquad
@@ -676,12 +682,28 @@ T(\mathbf x)
 \]</span></p>
 <p>La sustitución en la regla original confirma la salida: <span class="math inline">\(T(-1,2)=(2(-1)+2,3(2))=(0,6)\)</span>.</p>
 </section>
+<section id="ejemplo-2.-matriz-estándar-a-partir-de-dos-imágenes" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplo-2.-matriz-estándar-a-partir-de-dos-imágenes">Ejemplo 2. Matriz estándar a partir de dos imágenes</h3>
+<p>Una transformación lineal <span class="math inline">\(K\)</span> satisface <span class="math inline">\(K(\mathbf e_1)=(1,2)^{\mathsf T}\)</span> y <span class="math inline">\(K(\mathbf e_2)=(3,-1)^{\mathsf T}\)</span>. Al colocar esas imágenes como columnas se obtiene</p>
+<p><span class="math display">\[
+A_K=\begin{bmatrix}1&amp;3\\2&amp;-1\end{bmatrix}.
+\]</span></p>
+<p>Para la entrada <span class="math inline">\((2,1)^{\mathsf T}\)</span>, la lectura por columnas da</p>
+<p><span class="math display">\[
+K(2,1)=A_K\begin{bmatrix}2\\1\end{bmatrix}
+=2\begin{bmatrix}1\\2\end{bmatrix}
++\begin{bmatrix}3\\-1\end{bmatrix}
+=\begin{bmatrix}5\\3\end{bmatrix}.
+\]</span></p>
+<p>Por renglones se obtienen las mismas componentes: <span class="math inline">\(1(2)+3(1)=5\)</span> y <span class="math inline">\(2(2)-1(1)=3\)</span>. Para una entrada general, <span class="math inline">\(A_K\mathbf x=(x+3y,2x-y)^{\mathsf T}\)</span>; por tanto, la regla es <span class="math inline">\(K(x,y)=(x+3y,2x-y)\)</span>.</p>
+</section>
+</section>
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Colocar las imágenes como renglones.</strong> Si <span class="math inline">\(T(\mathbf e_1)=(2,0)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(1,3)^{\mathsf T}\)</span>, la matriz <span class="math inline">\(\begin{bmatrix}2&amp;0\\1&amp;3\end{bmatrix}\)</span> es incorrecta: al multiplicarla por <span class="math inline">\(\mathbf e_1\)</span> se obtiene <span class="math inline">\((2,1)^{\mathsf T}\)</span>. La matriz correcta es <span class="math inline">\(\begin{bmatrix}2&amp;1\\0&amp;3\end{bmatrix}\)</span>.</li>
-<li><strong>Usar las dos imágenes sin comprobar la linealidad.</strong> Para <span class="math inline">\(F(x,y)=(x,y^2)\)</span>, las imágenes de <span class="math inline">\(\mathbf e_1\)</span> y <span class="math inline">\(\mathbf e_2\)</span> coinciden con las de la identidad. Sin embargo, <span class="math inline">\(F(0,2)=(0,4)\)</span> y la matriz identidad produce <span class="math inline">\((0,2)\)</span>. No existe una matriz <span class="math inline">\(A\)</span> que satisfaga <span class="math inline">\(F(\mathbf x)=A\mathbf x\)</span> para todas las entradas, porque <span class="math inline">\(F\)</span> no es lineal.</li>
-<li><strong>Sumar las columnas sin los coeficientes de la entrada.</strong> La suma <span class="math inline">\(T(\mathbf e_1)+T(\mathbf e_2)\)</span> corresponde a la entrada <span class="math inline">\((1,1)^{\mathsf T}\)</span>. Para <span class="math inline">\((x,y)^{\mathsf T}\)</span> se requiere <span class="math inline">\(xT(\mathbf e_1)+yT(\mathbf e_2)\)</span>.</li>
+<li><strong>Colocar las imágenes como renglones.</strong> <strong>Falso.</strong> Si <span class="math inline">\(T(\mathbf e_1)=(2,0)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(1,3)^{\mathsf T}\)</span>, su matriz estándar es <span class="math inline">\(\begin{bmatrix}2&amp;0\\1&amp;3\end{bmatrix}\)</span>. <strong>Corrección.</strong> Esta matriz envía <span class="math inline">\(\mathbf e_1\)</span> a <span class="math inline">\((2,1)^{\mathsf T}\)</span>, que difiere de <span class="math inline">\(T(\mathbf e_1)\)</span>. Las imágenes se colocan como columnas: <span class="math inline">\(\begin{bmatrix}2&amp;1\\0&amp;3\end{bmatrix}\)</span>.</li>
+<li><strong>Usar las dos imágenes sin comprobar la linealidad.</strong> <strong>Falso.</strong> Como <span class="math inline">\(F(x,y)=(x,y^2)\)</span> coincide con la identidad en <span class="math inline">\(\mathbf e_1\)</span> y <span class="math inline">\(\mathbf e_2\)</span>, su matriz estándar es la identidad. <strong>Corrección.</strong> <span class="math inline">\(F(0,2)=(0,4)\)</span>, mientras que la matriz identidad produce <span class="math inline">\((0,2)\)</span>. Ninguna matriz <span class="math inline">\(A\)</span> satisface <span class="math inline">\(F(\mathbf x)=A\mathbf x\)</span> para todas las entradas, porque <span class="math inline">\(F\)</span> no es lineal.</li>
+<li><strong>Sumar las columnas sin los coeficientes de la entrada.</strong> <strong>Falso.</strong> Para la transformación del Ejemplo 1, <span class="math inline">\(T(2,1)=T(\mathbf e_1)+T(\mathbf e_2)=(3,3)\)</span>. <strong>Corrección.</strong> Esa suma corresponde a la entrada <span class="math inline">\((1,1)^{\mathsf T}\)</span>. La entrada <span class="math inline">\((2,1)^{\mathsf T}\)</span> requiere <span class="math inline">\(2T(\mathbf e_1)+T(\mathbf e_2)=(5,3)\)</span>, que coincide con la regla <span class="math inline">\(T(x,y)=(2x+y,3y)\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -693,7 +715,7 @@ T(\mathbf x)
 <li>Construya su matriz estándar <span class="math inline">\(A\)</span> y escriba la regla <span class="math inline">\(L(x,y)\)</span>.</li>
 <li>Calcule <span class="math inline">\(L(2,1)\)</span> por renglones y como combinación de las columnas de <span class="math inline">\(A\)</span>.</li>
 </ol></li>
-<li>En la imagen de una muestra de material, las posiciones se miden en micrómetros respecto de una marca fija. Una corrección de escala se modela mediante una transformación lineal <span class="math inline">\(C\)</span> que conserva esa marca como origen. El vector de un micrómetro horizontal se transforma en <span class="math inline">\((\tfrac32,0)^{\mathsf T}\)</span> micrómetros y el de un micrómetro vertical en <span class="math inline">\((0,2)^{\mathsf T}\)</span> micrómetros.
+<li>En una fotografía de una muestra de material, las posiciones se miden en micrómetros respecto de una marca fija. Una corrección de escala se modela mediante una transformación lineal <span class="math inline">\(C\)</span> que conserva esa marca como origen. El vector de un micrómetro horizontal se transforma en <span class="math inline">\((\tfrac32,0)^{\mathsf T}\)</span> micrómetros y el de un micrómetro vertical en <span class="math inline">\((0,2)^{\mathsf T}\)</span> micrómetros.
 <ol type="a">
 <li>Construya la matriz estándar y determine la posición corregida de una partícula situada en <span class="math inline">\((4,1)\)</span> micrómetros.</li>
 <li>Calcule la imagen del vector <span class="math inline">\((2,0)^{\mathsf T}\)</span> micrómetros. Explique qué indica la primera columna sobre la corrección horizontal.</li>
@@ -750,7 +772,7 @@ H(-1,2)=-\begin{bmatrix}0\\2\end{bmatrix}
 <p>Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan la relación entre la regla, la matriz y sus columnas. Consulte las respuestas después de registrar su intento.</p>
 <ol type="1">
 <li>En un croquis de una lámina, con coordenadas en milímetros, un programa conserva el origen y modifica las posiciones mediante <span class="math inline">\(S(x,y)=(2x,\tfrac12 y)\)</span>. Construya su matriz estándar. Para una marca situada en <span class="math inline">\((3,4)\)</span> milímetros se proponen las posiciones corregidas <span class="math inline">\((6,2)\)</span> y <span class="math inline">\((3,4)\)</span> milímetros. Determine cuál corresponde a la regla e interprete los dos factores de escala.</li>
-<li>Un laboratorio dispone de dos tipos de paquetes con porciones separadas de cobre y zinc. Cada paquete del primer tipo contiene <span class="math inline">\(3\)</span> gramos de cobre y <span class="math inline">\(1\)</span> de zinc; cada paquete del segundo, <span class="math inline">\(1\)</span> gramo de cobre y <span class="math inline">\(2\)</span> de zinc. Las masas se suman sin pérdidas. Forme una matriz que transforme el número de paquetes de cada tipo en las masas totales, ordenadas como cobre y zinc. Plantee y resuelva un sistema para reunir <span class="math inline">\(11\)</span> gramos de cobre y <span class="math inline">\(7\)</span> de zinc; compruebe que los números de paquetes sean enteros no negativos.</li>
+<li>Un laboratorio dispone de dos tipos de paquetes con porciones separadas de cobre y zinc. Cada paquete del primer tipo contiene <span class="math inline">\(3\)</span> gramos de cobre y <span class="math inline">\(1\)</span> de zinc; cada paquete del segundo, <span class="math inline">\(1\)</span> gramo de cobre y <span class="math inline">\(2\)</span> de zinc. Las masas se suman sin pérdidas. Forme una matriz que transforme el número de paquetes de cada tipo en las masas totales, ordenadas como cobre y zinc. Plantee y resuelva un sistema, como en la <a href="../sesiones/2026-11-09-sesion-47.html#determinación-de-los-coeficientes">determinación de los coeficientes</a>, para reunir <span class="math inline">\(11\)</span> gramos de cobre y <span class="math inline">\(7\)</span> de zinc; compruebe que los números de paquetes sean enteros no negativos.</li>
 <li>Una transformación lineal <span class="math inline">\(T\)</span> satisface <span class="math inline">\(T(\mathbf e_1)=(2,1)^{\mathsf T}\)</span> y <span class="math inline">\(T(\mathbf e_2)=(-1,3)^{\mathsf T}\)</span>. Un estudiante propone <span class="math inline">\(B=\begin{bmatrix}2&amp;1\\-1&amp;3\end{bmatrix}\)</span>. Calcule <span class="math inline">\(B\mathbf e_1\)</span>, identifique el error y escriba la matriz correcta.</li>
 <li>Sea <span class="math inline">\(G(x,y)=(x-3y,2x+y)\)</span>. Obtenga <span class="math inline">\(G(\mathbf e_1)\)</span>, <span class="math inline">\(G(\mathbf e_2)\)</span> y la matriz estándar. Calcule <span class="math inline">\(G(2,-1)\)</span>.</li>
 <li>Una transformación lineal <span class="math inline">\(P\)</span> tiene matriz estándar <span class="math inline">\(\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span>. Escriba <span class="math inline">\(P(\mathbf e_1)\)</span>, <span class="math inline">\(P(\mathbf e_2)\)</span> y <span class="math inline">\(P(x,y)\)</span>. Calcule <span class="math inline">\(P(-2,5)\)</span> y <span class="math inline">\(P(-2,-1)\)</span>.</li>
@@ -781,9 +803,9 @@ H(-1,2)=-\begin{bmatrix}0\\2\end{bmatrix}
 <p>La matriz estándar de una transformación lineal del plano queda determinada por las imágenes de <span class="math inline">\(\mathbf e_1\)</span> y <span class="math inline">\(\mathbf e_2\)</span>, colocadas como primera y segunda columna. La salida de cualquier vector se obtiene combinando esas columnas con las coordenadas de la entrada.</p>
 <p>Al revisar su trabajo, compruebe si puede realizar lo siguiente.</p>
 <ul>
-<li>Construir la matriz a partir de una regla o de las dos imágenes dadas.</li>
-<li>Obtener la misma salida por renglones y por combinación lineal de columnas.</li>
-<li>Detectar una colocación incorrecta de las imágenes al multiplicar la matriz por un vector coordenado.</li>
+<li>Construir la matriz a partir de una regla o de las dos imágenes dadas, como en los <a href="#ejemplos">ejemplos</a>.</li>
+<li>Obtener la misma salida por renglones y por combinación lineal de columnas, como en el ejercicio 1b de la <a href="#actividad">actividad</a>.</li>
+<li>Detectar una colocación incorrecta de las imágenes al multiplicar la matriz por un vector coordenado, como en el ejercicio 3 de la <a href="#ejercicios-para-practicar">práctica</a>.</li>
 </ul>
 
 
