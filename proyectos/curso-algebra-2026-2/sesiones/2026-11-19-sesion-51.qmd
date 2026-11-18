@@ -6,7 +6,7 @@ description: "Transformación de segmentos, escalamientos por coordenadas y proy
 
 ## Objetivo de la sesión
 
-Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en la [actividad](#actividad).
+Al finalizar la sesión podrá aplicar un escalamiento y una proyección a los vértices de una figura del plano, dibujar su imagen y explicar qué ocurre con la longitud y la dirección de sus lados. Compruebe estas capacidades en los ejercicios 1 y 2 y en la comprobación individual de la [actividad](#actividad).
 
 ## Imagen de un segmento
 
@@ -28,22 +28,22 @@ Para dibujar la imagen del **contorno** de un polígono, calcule la imagen de ca
 
 ## Escalamiento por coordenadas
 
-El escalamiento $E(x,y)=(kx,\,ly)$, con $k,l>0$, tiene matriz estándar
+El escalamiento $E(x,y)=(kx,\,ly)$, con $k,l>0$, tiene matriz estándar $A_E$, dada por
 
 $$
-[E]=\begin{bmatrix}k&0\\0&l\end{bmatrix}.
+A_E=\begin{bmatrix}k&0\\0&l\end{bmatrix}.
 $$
 
 Un lado horizontal conserva su dirección y su longitud se multiplica por $k$. Un lado vertical conserva su dirección y su longitud se multiplica por $l$. Si un lado es oblicuo y sus desplazamientos horizontal y vertical son $d_1$ y $d_2$, la longitud transformada se calcula a partir de ambas componentes y es $\sqrt{(kd_1)^2+(ld_2)^2}$.
 
 ## Proyección sobre un eje
 
-La proyección $P(x,y)=(x,0)$ conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección $Q(x,y)=(0,y)$ conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son
+La proyección $P(x,y)=(x,0)$ conserva la primera coordenada y lleva los puntos al eje horizontal. La proyección $Q(x,y)=(0,y)$ conserva la segunda coordenada y lleva los puntos al eje vertical. Sus matrices estándar son $A_P$ y $A_Q$, respectivamente.
 
 $$
-[P]=\begin{bmatrix}1&0\\0&0\end{bmatrix},
+A_P=\begin{bmatrix}1&0\\0&0\end{bmatrix},
 \qquad
-[Q]=\begin{bmatrix}0&0\\0&1\end{bmatrix}.
+A_Q=\begin{bmatrix}0&0\\0&1\end{bmatrix}.
 $$
 
 Bajo $P$, un lado horizontal conserva su longitud, un lado vertical se reduce a un punto y un lado oblicuo se transforma en un segmento horizontal de longitud $|d_1|$, donde $d_1$ es su desplazamiento horizontal. Bajo $Q$, se intercambian los papeles de las dos coordenadas.
@@ -208,9 +208,9 @@ El lado vertical $AC$ se reduce a $(1,0)$. Los lados $AB$ y $BC$ tienen como ima
 
 ## Errores frecuentes
 
-- **Alteración del orden de los vértices.** En el rectángulo del ejercicio 1 de la actividad, el contorno recorre $O$, $A$, $B$, $C$ y regresa a $O$. El segmento entre $O'$ y $B'$ es la imagen de la diagonal $OB$ y queda en el interior del nuevo contorno, salvo en sus extremos.
-- **Uso de un factor común para las longitudes.** En el Ejemplo 1, el escalamiento duplica la longitud de $AB$, reduce a la mitad la de $AC$ y modifica las dos componentes del desplazamiento de $B$ a $C$.
-- **Conteo de vértices coincidentes como puntos distintos.** En el Ejemplo 2, $A'$ y $C'$ representan el mismo punto. La imagen del triángulo es un segmento.
+- **Alteración del orden de los vértices.** Sean $O(0,0)$, $A(2,0)$, $B(2,1)$ y $C(0,1)$ los vértices de un rectángulo en orden consecutivo. **Falso.** Con $E(x,y)=(x,2y)$, el contorno transformado es $O'B'A'C'O'$. **Corrección.** Los segmentos $O'B'$ y $A'C'$ son las imágenes de las diagonales y se cruzan en $(1,1)$. Los lados del contorno transformado se obtienen al recorrer $O'A'B'C'O'$.
+- **Uso de un factor común para las longitudes.** **Falso.** El escalamiento del Ejemplo 1 duplica la longitud de cada lado. **Corrección.** La longitud de $AB$ pasa de $2$ a $4$, la de $AC$ de $3$ a $\tfrac32$ y la de $BC$ de $\sqrt{13}$ a $\tfrac{\sqrt{73}}2$.
+- **Conteo de vértices coincidentes como puntos distintos.** **Falso.** La proyección del Ejemplo 2 produce un triángulo con vértices $(1,0)$, $(3,0)$ y $(1,0)$. **Corrección.** Los vértices $A'$ y $C'$ coinciden en $(1,0)$. La proyección produce el segmento entre $(1,0)$ y $(3,0)$.
 
 ## Actividad
 
@@ -252,7 +252,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálcu
 
    a. Calcule las imágenes de los vértices.
 
-   b. Determine las longitudes de las bases horizontales y la altura antes y después de la deformación. Justifique que las bases transformadas siguen siendo paralelas.
+   b. Determine las longitudes de los dos lados horizontales y la altura antes y después de la deformación. Justifique que esos lados siguen siendo paralelos después de la deformación.
 
 2. Dos lotes de polvo cerámico contienen alúmina y sílice. El lote 1 contiene $80\,\%$ de alúmina y $20\,\%$ de sílice en masa. El lote 2 contiene $40\,\%$ de alúmina y $60\,\%$ de sílice. Una mezcla preparada sin pérdidas contiene $280$ g de alúmina y $120$ g de sílice.
 
@@ -282,7 +282,7 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálcu
 
 **1. a.** $(0,0)$, $(12,0)$, $(9.6,2)$ y $(2.4,2)$.
 
-**1. b.** Las bases pasan de $10$ a $12$ mm y de $6$ a $7.2$ mm. La altura pasa de $4$ a $2$ mm. Las bases permanecen paralelas porque ambas imágenes son horizontales.
+**1. b.** Los lados horizontales pasan de $10$ a $12$ mm y de $6$ a $7.2$ mm. La altura pasa de $4$ a $2$ mm. Esos lados permanecen paralelos porque sus imágenes son horizontales.
 
 **2. a.** $\begin{bmatrix}0.8&0.4\\0.2&0.6\end{bmatrix}\mathbf m=\begin{bmatrix}280\\120\end{bmatrix}$ y $\det K=0.4$.
 
@@ -304,4 +304,10 @@ Se recomiendan los ejercicios 1, 2 y 3. Los ejercicios 4 y 5 refuerzan el cálcu
 
 ## Conclusiones del aprendizaje
 
-Compruebe que puede dibujar la imagen del contorno de una figura uniendo las imágenes de sus vértices en el orden original. A partir de ese dibujo y de las coordenadas, explique cómo cambian las longitudes bajo un escalamiento e identifique los lados que se reducen a puntos bajo una proyección.
+La linealidad permite obtener la imagen de cada lado a partir de las imágenes de sus extremos. En un escalamiento por coordenadas, el factor de cambio de longitud puede depender de la dirección del lado. En una proyección sobre un eje, los lados perpendiculares a ese eje se reducen a puntos.
+
+Al revisar su trabajo, compruebe si puede realizar lo siguiente.
+
+- Calcular las imágenes de los vértices y dibujar el contorno transformado en el orden original, como en el ejercicio 1 de la [actividad](#actividad).
+- Explicar cómo cambian las longitudes de los lados horizontales, verticales y oblicuos en el [Ejemplo 1](#ejemplo-1.-escalamiento-de-un-triángulo).
+- Dibujar la imagen de una figura bajo una proyección y determinar qué lados se reducen a puntos, como en el [Ejemplo 2](#ejemplo-2.-proyección-del-triángulo-sobre-el-eje-horizontal) y en la comprobación individual de la [actividad](#actividad).
