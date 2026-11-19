@@ -4758,6 +4758,94 @@
     ]
   },
   {
+    "objectID": "sesiones/2026-11-20-sesion-52.html",
+    "href": "sesiones/2026-11-20-sesion-52.html",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "",
+    "text": "Objetivo de la sesión\nAl finalizar la sesión podrá usar el determinante de la matriz estándar para decidir si se puede recuperar una entrada de manera única, calcularla y verificarla. Podrá distinguir, en una proyección sobre un eje, una salida alcanzable de una inalcanzable.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#recuperación-de-la-entrada",
+    "href": "sesiones/2026-11-20-sesion-52.html#recuperación-de-la-entrada",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Recuperación de la entrada",
+    "text": "Recuperación de la entrada\nSea \\(T\\colon\\mathbb R^2\\to\\mathbb R^2\\) una transformación lineal con matriz estándar \\(A\\). Dado un vector \\(\\mathbf b\\in\\mathbb R^2\\), las entradas que lo producen son las soluciones de\n\\[\nA\\mathbf x=\\mathbf b.\n\\]\nSi el sistema tiene solución, \\(\\mathbf b\\) es una salida alcanzable. La entrada se recupera de manera única cuando el sistema tiene exactamente una solución. La transformación \\(T\\) es invertible si esto ocurre para todo \\(\\mathbf b\\in\\mathbb R^2\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#criterio-de-invertibilidad-mediante-el-determinante",
+    "href": "sesiones/2026-11-20-sesion-52.html#criterio-de-invertibilidad-mediante-el-determinante",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Criterio de invertibilidad mediante el determinante",
+    "text": "Criterio de invertibilidad mediante el determinante\nSi \\(\\det A\\ne0\\), la matriz \\(A\\) tiene inversa por el criterio de invertibilidad para matrices \\(2\\times2\\). Para cualquier \\(\\mathbf b\\), el vector \\(\\mathbf x_0=A^{-1}\\mathbf b\\) es una solución porque\n\\[\nA\\mathbf x_0=A(A^{-1}\\mathbf b)=(AA^{-1})\\mathbf b=\\mathbf b.\n\\]\nSi \\(A\\mathbf x=\\mathbf b\\), al multiplicar por \\(A^{-1}\\) por la izquierda se obtiene\n\\[\n\\mathbf x=(A^{-1}A)\\mathbf x=A^{-1}\\mathbf b=\\mathbf x_0.\n\\]\nPor lo tanto, la solución existe y es única para todo \\(\\mathbf b\\). Puede calcularse mediante la inversa o la regla de Cramer. Para comprobarla, se sustituye en la regla de \\(T\\).\nSi \\(\\det A=0\\), en la forma escalonada de \\([A\\mid\\mathbf b]\\) hay a lo sumo un pivote en las columnas de coeficientes. Si la reducción produce una contradicción, la salida es inalcanzable. Si el sistema es consistente, queda al menos una variable libre y hay infinitas entradas. En ambos casos, \\(T\\) carece de inversa. La lectura del sistema reducido permite decidir cuál de los dos casos se presenta para cada \\(\\mathbf b\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#ejemplos",
+    "href": "sesiones/2026-11-20-sesion-52.html#ejemplos",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Ejemplos",
+    "text": "Ejemplos\n\nEjemplo 1. Recuperación mediante la matriz inversa\nConsidere la transformación \\(K(x,y)=(x+3y,\\,2x-y)\\) de la Sesión 50. Su matriz estándar es \\(A=\\begin{bmatrix}1&3\\\\2&-1\\end{bmatrix}\\) y \\(\\det A=1(-1)-3(2)=-7\\). La única entrada que produce la salida \\((-1,5)\\) se obtiene mediante\n\\[\nA^{-1}\\begin{bmatrix}-1\\\\5\\end{bmatrix}\n=\\frac{1}{-7}\\begin{bmatrix}-1&-3\\\\-2&1\\end{bmatrix}\n\\begin{bmatrix}-1\\\\5\\end{bmatrix}\n=\\frac{1}{-7}\\begin{bmatrix}-14\\\\7\\end{bmatrix}\n=\\begin{bmatrix}2\\\\-1\\end{bmatrix}.\n\\]\nAl sustituir en la regla de \\(K\\) se obtiene \\(K(2,-1)=(2-3,\\,4+1)=(-1,5)\\).\n\n\nEjemplo 2. Salidas de una proyección sobre el eje horizontal\nLa proyección \\(P(x,y)=(x,0)\\) tiene matriz estándar \\(A_P=\\begin{bmatrix}1&0\\\\0&0\\end{bmatrix}\\), con \\(\\det A_P=0\\). Para estudiar las salidas \\((3,0)\\) y \\((3,2)\\) se forman, respectivamente, las matrices aumentadas\n\\[\n\\left[\\begin{array}{cc|c}1&0&3\\\\0&0&0\\end{array}\\right],\n\\qquad\n\\left[\\begin{array}{cc|c}1&0&3\\\\0&0&2\\end{array}\\right].\n\\]\nEn el primer sistema, \\(x=3\\) e \\(y\\) es libre. Todas las entradas \\((3,t)\\), con \\(t\\in\\mathbb R\\), producen \\((3,0)\\). En el segundo sistema aparece la contradicción \\(0=2\\). La salida \\((3,2)\\) es inalcanzable porque la segunda coordenada de toda salida de \\(P\\) es cero.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#errores-frecuentes",
+    "href": "sesiones/2026-11-20-sesion-52.html#errores-frecuentes",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAplicar \\(A\\) a la salida para recuperar la entrada. El producto \\(A\\mathbf b\\) calcula \\(T\\) en el vector \\(\\mathbf b\\). La entrada solicitada se obtiene de \\(A\\mathbf x=\\mathbf b\\).\nMultiplicar por la inversa por la derecha. La expresión \\(\\mathbf b A^{-1}\\) carece de sentido con \\(\\mathbf b\\) de tamaño \\(2\\times1\\) y \\(A^{-1}\\) de tamaño \\(2\\times2\\). En \\(A\\mathbf x=\\mathbf b\\) se multiplica por \\(A^{-1}\\) por la izquierda.\nDeducir unicidad de una sustitución. La igualdad \\(P(3,0)=(3,0)\\) verifica una entrada. También se cumple \\(P(3,5)=(3,0)\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#actividad",
+    "href": "sesiones/2026-11-20-sesion-52.html#actividad",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Actividad",
+    "text": "Actividad\nResuelva primero los ejercicios de forma individual y registre su procedimiento. Después, compare sus resultados con los de otra persona del grupo y justifique por escrito las correcciones.\n\nSea \\(T(x,y)=(2x+y,\\,5x+3y)\\). Escriba su matriz estándar, calcule el determinante y recupere la entrada de la salida \\((1,4)\\). Compruebe el resultado con la regla de \\(T\\) y justifique la unicidad.\nUna fundición obtiene un lingote al mezclar dos aleaciones de cobre y zinc sin pérdidas de masa. La aleación 1 contiene \\(70\\,\\%\\) de cobre y \\(30\\,\\%\\) de zinc en masa. La aleación 2 contiene \\(60\\,\\%\\) de cobre y \\(40\\,\\%\\) de zinc. Las entradas son las masas no negativas usadas de cada aleación. Las salidas son las masas totales de cobre y de zinc, en ese orden. Todas las masas se expresan en kilogramos.\n\nEscriba la matriz de la transformación y calcule su determinante. Si el lingote contiene \\(66\\) kg de cobre y \\(34\\) kg de zinc, determine cuánto se usó de cada aleación y compruebe el resultado.\nSe sustituye la aleación 2 por otra con los mismos porcentajes que la aleación 1. Calcule el determinante de la nueva matriz y determine si un análisis que reporta \\(70\\) kg de cobre y \\(30\\) kg de zinc permite recuperar las masas de ambas aleaciones. Justifique su respuesta.\n\n\nComprobación individual. Para \\(Q(x,y)=(0,y)\\), calcule el determinante de la matriz estándar y describa todas las entradas que producen \\((0,4)\\). Decida si \\((1,4)\\) es alcanzable y justifique su respuesta.\n\n\n\n\n\n\nNotaSoluciones de la actividad\n\n\n\n\n\n1. La matriz estándar es \\(A=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}\\) y \\(\\det A=6-5=1\\). Como \\(A\\) es invertible, la entrada es única y está dada por\n\\[\nA^{-1}\\begin{bmatrix}1\\\\4\\end{bmatrix}\n=\\begin{bmatrix}3&-1\\\\-5&2\\end{bmatrix}\\begin{bmatrix}1\\\\4\\end{bmatrix}\n=\\begin{bmatrix}-1\\\\3\\end{bmatrix}.\n\\]\nSe verifica que \\(T(-1,3)=(-2+3,\\,-5+9)=(1,4)\\).\n2a. Cada columna contiene las fracciones de cobre y zinc en una aleación. La matriz y su determinante son\n\\[\nA=\\begin{bmatrix}0.7&0.6\\\\0.3&0.4\\end{bmatrix},\n\\qquad\n\\det A=0.7(0.4)-0.6(0.3)=0.1.\n\\]\nSi \\(m_1\\) y \\(m_2\\) son las masas usadas, por la regla de Cramer se obtiene\n\\[\nm_1=\\frac{66(0.4)-0.6(34)}{0.1}=60,\n\\qquad\nm_2=\\frac{0.7(34)-66(0.3)}{0.1}=40.\n\\]\nLas masas de cobre y de zinc son \\(0.7(60)+0.6(40)=66\\) kg y \\(0.3(60)+0.4(40)=34\\) kg. Como \\(\\det A\\ne0\\), las masas de \\(60\\) kg y \\(40\\) kg son las únicas compatibles con el análisis.\n2b. La nueva matriz es \\(\\begin{bmatrix}0.7&0.7\\\\0.3&0.3\\end{bmatrix}\\) y su determinante es cero. Si \\(m_3\\) denota la masa usada de la aleación sustituta, ambas ecuaciones equivalen a \\(m_1+m_3=100\\). Las parejas \\((60,40)\\) y \\((40,60)\\), por ejemplo, producen el mismo resultado. El análisis determina la masa total de \\(100\\) kg y deja indeterminada la masa de cada aleación.\nComprobación individual. La matriz de \\(Q\\) es \\(\\begin{bmatrix}0&0\\\\0&1\\end{bmatrix}\\) y su determinante es cero. Las entradas que producen \\((0,4)\\) son \\((t,4)\\), con \\(t\\in\\mathbb R\\). La salida \\((1,4)\\) es inalcanzable porque la primera coordenada de toda salida es cero.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#ejercicios-para-practicar",
+    "href": "sesiones/2026-11-20-sesion-52.html#ejercicios-para-practicar",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Ejercicios para practicar",
+    "text": "Ejercicios para practicar\nSe recomiendan los ejercicios 1, 2 y 3. Consulte las respuestas después de registrar su intento.\n\nEn un informe se reproduce el croquis de una placa cerámica mediante \\(E(x,y)=(0.5x,\\,0.25y)\\). Las coordenadas se miden en milímetros desde la misma esquina de referencia. En la reproducción, el centro de una perforación aparece en \\((7,3)\\). Calcule el determinante de la matriz estándar, recupere las coordenadas del centro en el croquis original y compruebe su resultado.\nPara calibrar el desplazamiento de una muestra en un microscopio, se usa un modelo lineal \\(L\\). Un desplazamiento de \\((1,0)\\) micrómetros en el soporte produce una lectura de \\((2,1)\\) divisiones en la pantalla, y uno de \\((0,1)\\) micrómetros produce \\((1,3)\\) divisiones. Construya la matriz estándar de \\(L\\) y use sus columnas para determinar la lectura correspondiente a un desplazamiento de \\((2,1)\\) micrómetros.\nUn estudiante verifica que \\(T(1,2)=(5,10)\\) para \\(T(x,y)=(x+2y,\\,2x+4y)\\) y concluye que \\((1,2)\\) es la única entrada que produce \\((5,10)\\). Calcule el determinante de la matriz estándar y dé otra entrada que muestre el error. Decida si \\((5,9)\\) es una salida alcanzable.\nSea \\(B=\\begin{bmatrix}3&2\\\\4&3\\end{bmatrix}\\) la matriz estándar de una transformación lineal. Use \\(B^{-1}\\) para hallar la entrada de \\((1,2)\\) y compruebe el resultado. Identifique, mediante las columnas de \\(B\\), la entrada de \\((2,3)\\).\nSea \\(S(x,y)=(x-y,\\,y-x)\\). Calcule el determinante de la matriz estándar, describa todas las entradas que producen \\((1,-1)\\) y describa la relación que deben satisfacer las coordenadas de una salida alcanzable.\n\n\n\n\n\n\n\nNotaRespuestas de los ejercicios para practicar\n\n\n\n\n\n\nEl determinante es \\(0.125\\). El centro está en \\((14,12)\\) mm y \\(E(14,12)=(7,3)\\).\nLa matriz es \\(\\begin{bmatrix}2&1\\\\1&3\\end{bmatrix}\\). La lectura es \\((5,5)\\) divisiones.\nEl determinante es cero. La entrada \\((5,0)\\) también produce \\((5,10)\\). La salida \\((5,9)\\) es inalcanzable porque la segunda coordenada de cualquier salida es el doble de la primera.\n\\(B^{-1}=\\begin{bmatrix}3&-2\\\\-4&3\\end{bmatrix}\\). La primera entrada es \\((-1,2)\\) y \\(B\\begin{bmatrix}-1\\\\2\\end{bmatrix}=\\begin{bmatrix}1\\\\2\\end{bmatrix}\\). La segunda es \\((0,1)\\), pues \\((2,3)^{\\mathsf T}\\) es la segunda columna de \\(B\\).\nEl determinante es cero. Las entradas de \\((1,-1)\\) son \\((1+t,t)\\), con \\(t\\in\\mathbb R\\). Un vector \\((b_1,b_2)\\) es alcanzable si y solo si \\(b_2=-b_1\\).",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
+    "objectID": "sesiones/2026-11-20-sesion-52.html#conclusiones-del-aprendizaje",
+    "href": "sesiones/2026-11-20-sesion-52.html#conclusiones-del-aprendizaje",
+    "title": "Sesión 52. Invertibilidad y recuperación de la entrada",
+    "section": "Conclusiones del aprendizaje",
+    "text": "Conclusiones del aprendizaje\n\nEl determinante de la matriz estándar permite decidir si cada vector del plano se obtiene a partir de una única entrada.\nCuando \\(\\det A\\ne0\\), la entrada se obtiene al resolver \\(A\\mathbf x=\\mathbf b\\) y se verifica al sustituirla en la regla de la transformación.\nEn una proyección sobre un eje, una salida en ese eje proviene de infinitas entradas. Las salidas fuera del eje son inalcanzables.",
+    "crumbs": [
+      "Unidad 6. Transformaciones lineales en el plano",
+      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Sesión 52. Invertibilidad y recuperación de la entrada</span>"
+    ]
+  },
+  {
     "objectID": "recursos/notacion.html",
     "href": "recursos/notacion.html",
     "title": "Notación",
@@ -4765,7 +4853,7 @@
     "text": "Conjuntos numéricos",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4776,7 +4864,7 @@
     "text": "Símbolo\nSignificado\n\n\n\n\n\\(\\mathbb N\\)\nNúmeros naturales; en este curso incluye al cero.\n\n\n\\(\\mathbb Z\\)\nNúmeros enteros.\n\n\n\\(\\mathbb Q\\)\nNúmeros racionales.\n\n\n\\(\\mathbb R\\)\nNúmeros reales.\n\n\n\\(\\mathbb R\\setminus\\mathbb Q\\)\nNúmeros irracionales.\n\n\n\\(\\mathbb C\\)\nNúmeros complejos.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4787,7 +4875,7 @@
     "text": "Elementos y conjuntos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(\\{a_1,a_2,\\ldots\\}\\)\nConjunto descrito por extensión, mediante la enumeración de sus elementos.\n\n\n\\(\\{x\\in A:P(x)\\}\\)\nConjunto descrito por comprensión: elementos \\(x\\) de \\(A\\) que satisfacen la condición \\(P(x)\\); los dos puntos se leen «tal que».\n\n\n\\(\\varnothing\\)\nConjunto vacío; no contiene elementos.\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\).\n\n\n\\(x\\notin A\\)\n\\(x\\) no pertenece a \\(A\\).\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\); todos los elementos de \\(A\\) pertenecen a \\(B\\).\n\n\n\\(A\\nsubseteq B\\)\n\\(A\\) no es subconjunto de \\(B\\).\n\n\n\\(A\\subsetneq B\\)\n\\(A\\) es subconjunto propio de \\(B\\): \\(A\\subseteq B\\) y \\(A\\ne B\\).\n\n\n\\(A\\supseteq B\\)\n\\(A\\) contiene a \\(B\\).\n\n\n\\(A\\cap B\\)\nIntersección de \\(A\\) y \\(B\\): elementos que pertenecen a ambos conjuntos.\n\n\n\\(A\\setminus B\\)\nElementos de \\(A\\) que no pertenecen a \\(B\\).",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4798,7 +4886,7 @@
     "text": "Operaciones y relaciones\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(a&lt;b\\), \\(a\\le b\\), \\(a&gt;b\\), \\(a\\ge b\\)\nRelaciones de orden en \\(\\mathbb R\\): menor que, menor o igual que, mayor que y mayor o igual que, respectivamente.\n\n\n\\(a\\ne b\\)\n\\(a\\) es distinto de \\(b\\).\n\n\n\\(a^n\\)\nPotencia de base \\(a\\) y exponente entero \\(n\\); la base puede ser real o compleja, según el contexto.\n\n\n\\(a^0\\), \\(a^{-n}\\)\nSi \\(a\\ne0\\) y \\(n\\) es un entero positivo, \\(a^0=1\\) y \\(a^{-n}=\\dfrac{1}{a^n}\\).\n\n\n\\(\\lvert a\\rvert\\)\nValor absoluto de \\(a\\); distancia de \\(a\\) al cero en la recta real. En general, \\(\\lvert x-y\\rvert\\) es la distancia entre \\(x\\) y \\(y\\).\n\n\n\\(\\sqrt[n]{a}\\)\nEn \\(\\mathbb R\\), para \\(n\\ge2\\) entero, denota la raíz \\(n\\)-ésima principal de \\(a\\). Si \\(n\\) es par, requiere \\(a\\ge0\\) y denota la raíz no negativa; si \\(n\\) es impar, está definida para todo \\(a\\in\\mathbb R\\). Para \\(\\sqrt{-d}\\), véase «Números complejos».\n\n\n\\(a^{p/q}\\)\nSi \\(p/q\\) está en forma irreducible y \\(q\\ge2\\), entonces \\(a^{p/q}=\\bigl(\\sqrt[q]{a}\\bigr)^p\\) cuando la raíz real está definida; si \\(p&lt;0\\), además se requiere \\(a\\ne0\\).\n\n\n\\(a\\pm b\\)\nAbrevia las dos expresiones \\(a+b\\) y \\(a-b\\).\n\n\n\\(0.1\\overline{3}\\)\nLa barra señala el período, es decir, el bloque de cifras que se repite: \\(0.1\\overline{3}=0.1333\\ldots\\).\n\n\n\\(\\Rightarrow\\), \\(\\Longrightarrow\\)\nImplica.\n\n\n\\(\\Leftrightarrow\\), \\(\\Longleftrightarrow\\)\nEquivale lógicamente a; implica en ambos sentidos.\n\n\n\\(\\therefore\\)\nPor lo tanto.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4809,7 +4897,7 @@
     "text": "Intervalos\nSean \\(a,b\\in\\mathbb R\\) con \\(a&lt;b\\).\n\n\n\nSímbolo\nConjunto representado\n\n\n\n\n\\((a,b)\\)\n\\(\\{x\\in\\mathbb R:a&lt;x&lt;b\\}\\)\n\n\n\\([a,b]\\)\n\\(\\{x\\in\\mathbb R:a\\le x\\le b\\}\\)\n\n\n\\([a,b)\\)\n\\(\\{x\\in\\mathbb R:a\\le x&lt;b\\}\\)\n\n\n\\((a,b]\\)\n\\(\\{x\\in\\mathbb R:a&lt;x\\le b\\}\\)\n\n\n\\((-\\infty,b)\\)\n\\(\\{x\\in\\mathbb R:x&lt;b\\}\\)\n\n\n\\((-\\infty,b]\\)\n\\(\\{x\\in\\mathbb R:x\\le b\\}\\)\n\n\n\\((a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x&gt;a\\}\\)\n\n\n\\([a,\\infty)\\)\n\\(\\{x\\in\\mathbb R:x\\ge a\\}\\)\n\n\n\\((-\\infty,\\infty)\\)\n\\(\\mathbb R\\); toda la recta real.\n\n\n\nLos símbolos \\(\\infty\\) y \\(-\\infty\\) no representan números reales; por ello, siempre se escriben con paréntesis como extremos de un intervalo.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4820,7 +4908,7 @@
     "text": "Números complejos\n\n\n\n\n\n\n\nSímbolo\nLectura o uso\n\n\n\n\n\\(i\\)\nUnidad imaginaria: \\(i^2=-1\\).\n\n\n\\(z=a+bi\\)\nForma cartesiana de un número complejo, con \\(a,b\\in\\mathbb R\\); corresponde al punto \\((a,b)\\) del plano complejo. En este contexto, \\((a,b)\\) es un par ordenado, no un intervalo.\n\n\n\\(\\operatorname{Re}(z)\\)\nParte real de \\(z=a+bi\\): \\(\\operatorname{Re}(z)=a\\).\n\n\n\\(\\operatorname{Im}(z)\\)\nParte imaginaria de \\(z=a+bi\\): \\(\\operatorname{Im}(z)=b\\). Es el número real \\(b\\), no \\(bi\\).\n\n\n\\(\\overline z\\)\nConjugado de \\(z=a+bi\\): \\(\\overline z=a-bi\\); solo cambia el signo de la parte imaginaria. En el plano complejo, los puntos que representan a \\(z\\) y \\(\\overline z\\) son simétricos respecto del eje real. Además, \\(z\\overline z=a^2+b^2\\ge0\\).\n\n\n\\(\\sqrt{-d}\\)\nPara \\(d&gt;0\\), en este curso se adopta la convención \\(\\sqrt{-d}=(\\sqrt d)i\\). Las leyes de los radicales con índice par no se aplican directamente a radicandos negativos.\n\n\n\nEl significado de la barra superior depende del contexto: en \\(\\overline z\\) indica conjugación; en \\(0.1\\overline{3}\\), el período decimal.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4831,7 +4919,7 @@
     "text": "Letras de uso frecuente\n\n\n\n\n\n\n\nSímbolo\nUso en este curso\n\n\n\n\n\\(D\\)\nDominio o conjunto de valores considerado, según se declare en el contexto.\n\n\n\\(S\\)\nConjunto solución de la ecuación o inecuación considerada.\n\n\n\\(\\mathbf{x},\\mathbf{b},\\mathbf{v}\\); \\(\\mathbf{0}\\)\nVectores columna; las componentes se escriben sin negrita. Por ejemplo, \\(\\mathbf{x}=(x,y,z)^{\\mathsf T}\\) y \\(\\mathbf{0}=(0,0,0)^{\\mathsf T}\\), con la dimensión determinada por el contexto.\n\n\n\nCuando \\(S\\) denota un conjunto solución, \\(S=\\varnothing\\) indica que no hay soluciones, mientras que \\(S=\\{0\\}\\) indica que el cero es la única solución.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>65</span>  <span class='chapter-title'>Notación</span>"
+      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Notación</span>"
     ]
   },
   {
@@ -4842,7 +4930,7 @@
     "text": "Texto principal\nEl texto principal del curso es Álgebra superior, de Humberto Cárdenas y colaboradores, publicado por Editorial Trillas (Cárdenas et al. 1990).\nEl texto principal servirá como referencia para definiciones, estructura temática y práctica adicional. El material publicado en este sitio será autocontenido y mantendrá una redacción propia.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>67</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4853,7 +4941,7 @@
     "text": "Bibliografía completa del programa\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1990. Álgebra Superior. Trillas.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>67</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   },
   {
@@ -4864,7 +4952,7 @@
     "text": "Documentos institucionales\n\nPrograma del espacio educativo Álgebra, clave 22017.\nUniversidad de Sonora, Calendario Escolar 2026.\nUniversidad de Sonora, Reglamento Escolar, en particular el artículo 70.",
     "crumbs": [
       "Recursos de consulta",
-      "<span class='chapter-number'>66</span>  <span class='chapter-title'>Bibliografía</span>"
+      "<span class='chapter-number'>67</span>  <span class='chapter-title'>Bibliografía</span>"
     ]
   }
 ]
