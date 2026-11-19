@@ -104,6 +104,7 @@ book:
         - sesiones/2026-11-17-sesion-49.qmd
         - sesiones/2026-11-18-sesion-50.qmd
         - sesiones/2026-11-19-sesion-51.qmd
+        - sesiones/2026-11-20-sesion-52.qmd
     - part: "Recursos de consulta"
       chapters:
         - recursos/notacion.qmd
