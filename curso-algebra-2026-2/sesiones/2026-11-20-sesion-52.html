@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Criterio de invertibilidad de una transformación lineal del plano y recuperación de la entrada mediante un sistema lineal.">
+<meta name="description" content="Criterio del determinante, solución única mediante la matriz inversa y sistemas asociados a una proyección.">
 
-<title>Sesión 52. Invertibilidad y recuperación de la entrada – Álgebra</title>
+<title>Sesión 52. Invertibilidad de transformaciones lineales del plano – Álgebra</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -107,8 +107,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Sesión 52. Invertibilidad y recuperación de la entrada – Álgebra">
-<meta property="og:description" content="Criterio de invertibilidad de una transformación lineal del plano y recuperación de la entrada mediante un sistema lineal.">
+<meta property="og:title" content="Sesión 52. Invertibilidad de transformaciones lineales del plano – Álgebra">
+<meta property="og:description" content="Criterio del determinante, solución única mediante la matriz inversa y sistemas asociados a una proyección.">
 <meta property="og:site_name" content="Álgebra">
 </head>
 
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-20-sesion-52.html"><span class="chapter-title">Sesión 52. Invertibilidad y recuperación de la entrada</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-20-sesion-52.html"><span class="chapter-title">Sesión 52. Invertibilidad de transformaciones lineales del plano</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -546,7 +546,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sesiones/2026-11-20-sesion-52.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 52. Invertibilidad y recuperación de la entrada</span></a>
+  <a href="../sesiones/2026-11-20-sesion-52.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 52. Invertibilidad de transformaciones lineales del plano</span></a>
   </div>
 </li>
       </ul>
@@ -583,12 +583,12 @@ window.Quarto = {
    
   <ul>
   <li><a href="#objetivo-de-la-sesión" id="toc-objetivo-de-la-sesión" class="nav-link active" data-scroll-target="#objetivo-de-la-sesión">Objetivo de la sesión</a></li>
-  <li><a href="#recuperación-de-la-entrada" id="toc-recuperación-de-la-entrada" class="nav-link" data-scroll-target="#recuperación-de-la-entrada">Recuperación de la entrada</a></li>
+  <li><a href="#recuperación-de-la-entrada" id="toc-recuperación-de-la-entrada" class="nav-link" data-scroll-target="#recuperación-de-la-entrada">Sistema lineal asociado a una transformación</a></li>
   <li><a href="#criterio-de-invertibilidad-mediante-el-determinante" id="toc-criterio-de-invertibilidad-mediante-el-determinante" class="nav-link" data-scroll-target="#criterio-de-invertibilidad-mediante-el-determinante">Criterio de invertibilidad mediante el determinante</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-1.-recuperación-mediante-la-matriz-inversa" id="toc-ejemplo-1.-recuperación-mediante-la-matriz-inversa" class="nav-link" data-scroll-target="#ejemplo-1.-recuperación-mediante-la-matriz-inversa">Ejemplo 1. Recuperación mediante la matriz inversa</a></li>
-  <li><a href="#ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal" id="toc-ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal" class="nav-link" data-scroll-target="#ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal">Ejemplo 2. Salidas de una proyección sobre el eje horizontal</a></li>
+  <li><a href="#ejemplo-1.-recuperación-mediante-la-matriz-inversa" id="toc-ejemplo-1.-recuperación-mediante-la-matriz-inversa" class="nav-link" data-scroll-target="#ejemplo-1.-recuperación-mediante-la-matriz-inversa">Ejemplo 1. Solución de un sistema lineal mediante la matriz inversa</a></li>
+  <li><a href="#ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal" id="toc-ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal" class="nav-link" data-scroll-target="#ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal">Ejemplo 2. Sistemas asociados a la proyección sobre el eje horizontal</a></li>
   </ul></li>
   <li><a href="#errores-frecuentes" id="toc-errores-frecuentes" class="nav-link" data-scroll-target="#errores-frecuentes">Errores frecuentes</a></li>
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad">Actividad</a></li>
@@ -600,9 +600,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-20-sesion-52.html"><span class="chapter-title">Sesión 52. Invertibilidad y recuperación de la entrada</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unidades/06-transformaciones-lineales.html">Unidad 6. Transformaciones lineales en el plano</a></li><li class="breadcrumb-item"><a href="../sesiones/2026-11-20-sesion-52.html"><span class="chapter-title">Sesión 52. Invertibilidad de transformaciones lineales del plano</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Sesión 52. Invertibilidad y recuperación de la entrada</span></h1>
+<h1 class="title"><span class="chapter-title">Sesión 52. Invertibilidad de transformaciones lineales del plano</span></h1>
 </div>
 
 
@@ -627,11 +627,11 @@ window.Quarto = {
 
 <section id="objetivo-de-la-sesión" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-de-la-sesión">Objetivo de la sesión</h2>
-<p>Al finalizar la sesión podrá usar el determinante de la matriz estándar para decidir si se puede recuperar una entrada de manera única, calcularla y verificarla. Podrá distinguir, en una proyección sobre un eje, una salida alcanzable de una inalcanzable.</p>
+<p>Al finalizar la sesión podrá decidir, mediante el determinante, si una transformación lineal del plano es invertible y resolver el sistema <span class="math inline">\(A\mathbf x=\mathbf b\)</span>. En los ejercicios 1 y 2 de la <a href="#actividad">actividad</a> podrá calcular la solución, justificar su unicidad y verificarla, y en la comprobación individual distinguirá, para una proyección, entre un sistema con infinitas soluciones y uno sin solución.</p>
 </section>
 <section id="recuperación-de-la-entrada" class="level2">
-<h2 class="anchored" data-anchor-id="recuperación-de-la-entrada">Recuperación de la entrada</h2>
-<p>Sea <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> una transformación lineal con <a href="../sesiones/2026-11-18-sesion-50.html#matriz-estándar">matriz estándar</a> <span class="math inline">\(A\)</span>. Dado un vector <span class="math inline">\(\mathbf b\in\mathbb R^2\)</span>, las entradas que lo producen son las soluciones de</p>
+<h2 class="anchored" data-anchor-id="recuperación-de-la-entrada">Sistema lineal asociado a una transformación</h2>
+<p>Sea <span class="math inline">\(T\colon\mathbb R^2\to\mathbb R^2\)</span> una transformación lineal con <a href="../sesiones/2026-11-18-sesion-50.html#matriz-estándar">matriz estándar</a> <span class="math inline">\(A\)</span>, de modo que <span class="math inline">\(T(\mathbf x)=A\mathbf x\)</span>. Dado un vector <span class="math inline">\(\mathbf b\in\mathbb R^2\)</span>, las entradas que lo producen son las soluciones de</p>
 <p><span class="math display">\[
 A\mathbf x=\mathbf b.
 \]</span></p>
@@ -645,15 +645,15 @@ A\mathbf x_0=A(A^{-1}\mathbf b)=(AA^{-1})\mathbf b=\mathbf b.
 \]</span></p>
 <p>Si <span class="math inline">\(A\mathbf x=\mathbf b\)</span>, al multiplicar por <span class="math inline">\(A^{-1}\)</span> por la izquierda se obtiene</p>
 <p><span class="math display">\[
-\mathbf x=(A^{-1}A)\mathbf x=A^{-1}\mathbf b=\mathbf x_0.
+\mathbf x=(A^{-1}A)\mathbf x=A^{-1}(A\mathbf x)=A^{-1}\mathbf b=\mathbf x_0.
 \]</span></p>
 <p>Por lo tanto, la solución existe y es única para todo <span class="math inline">\(\mathbf b\)</span>. Puede calcularse mediante la inversa o la <a href="../sesiones/2026-11-06-sesion-46.html#regla-de-cramer">regla de Cramer</a>. Para comprobarla, se sustituye en la regla de <span class="math inline">\(T\)</span>.</p>
-<p>Si <span class="math inline">\(\det A=0\)</span>, en la forma escalonada de <span class="math inline">\([A\mid\mathbf b]\)</span> hay a lo sumo un pivote en las columnas de coeficientes. Si la reducción produce una contradicción, la salida es inalcanzable. Si el sistema es consistente, queda al menos una variable libre y hay infinitas entradas. En ambos casos, <span class="math inline">\(T\)</span> carece de inversa. La <a href="../sesiones/2026-10-06-sesion-32.html#lectura-del-tipo-de-solución">lectura del sistema reducido</a> permite decidir cuál de los dos casos se presenta para cada <span class="math inline">\(\mathbf b\)</span>.</p>
+<p>Si <span class="math inline">\(\det A=0\)</span>, la matriz <span class="math inline">\(A\)</span> no es invertible. Por el <a href="../sesiones/2026-10-28-sesion-41.html#criterio-de-invertibilidad-mediante-pivotes">criterio de invertibilidad mediante pivotes</a>, en la forma escalonada de <span class="math inline">\([A\mid\mathbf b]\)</span> hay a lo sumo un pivote en las columnas de coeficientes. Si la reducción produce una contradicción, la salida es inalcanzable. Si el sistema es consistente, queda al menos una variable libre y hay infinitas entradas. Por tanto, <span class="math inline">\(T\)</span> no es invertible. La <a href="../sesiones/2026-10-06-sesion-32.html#lectura-del-tipo-de-solución">lectura del sistema reducido</a> permite decidir cuál de los dos casos se presenta para cada <span class="math inline">\(\mathbf b\)</span>.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
 <section id="ejemplo-1.-recuperación-mediante-la-matriz-inversa" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-1.-recuperación-mediante-la-matriz-inversa">Ejemplo 1. Recuperación mediante la matriz inversa</h3>
+<h3 class="anchored" data-anchor-id="ejemplo-1.-recuperación-mediante-la-matriz-inversa">Ejemplo 1. Solución de un sistema lineal mediante la matriz inversa</h3>
 <p>Considere la transformación <span class="math inline">\(K(x,y)=(x+3y,\,2x-y)\)</span> de la <a href="../sesiones/2026-11-18-sesion-50.html">Sesión 50</a>. Su matriz estándar es <span class="math inline">\(A=\begin{bmatrix}1&amp;3\\2&amp;-1\end{bmatrix}\)</span> y <span class="math inline">\(\det A=1(-1)-3(2)=-7\)</span>. La única entrada que produce la salida <span class="math inline">\((-1,5)\)</span> se obtiene mediante</p>
 <p><span class="math display">\[
 A^{-1}\begin{bmatrix}-1\\5\end{bmatrix}
@@ -665,7 +665,7 @@ A^{-1}\begin{bmatrix}-1\\5\end{bmatrix}
 <p>Al sustituir en la regla de <span class="math inline">\(K\)</span> se obtiene <span class="math inline">\(K(2,-1)=(2-3,\,4+1)=(-1,5)\)</span>.</p>
 </section>
 <section id="ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal">Ejemplo 2. Salidas de una proyección sobre el eje horizontal</h3>
+<h3 class="anchored" data-anchor-id="ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal">Ejemplo 2. Sistemas asociados a la proyección sobre el eje horizontal</h3>
 <p>La <a href="../sesiones/2026-11-19-sesion-51.html#proyección-sobre-un-eje">proyección</a> <span class="math inline">\(P(x,y)=(x,0)\)</span> tiene matriz estándar <span class="math inline">\(A_P=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}\)</span>, con <span class="math inline">\(\det A_P=0\)</span>. Para estudiar las salidas <span class="math inline">\((3,0)\)</span> y <span class="math inline">\((3,2)\)</span> se forman, respectivamente, las matrices aumentadas</p>
 <p><span class="math display">\[
 \left[\begin{array}{cc|c}1&amp;0&amp;3\\0&amp;0&amp;0\end{array}\right],
@@ -678,9 +678,9 @@ A^{-1}\begin{bmatrix}-1\\5\end{bmatrix}
 <section id="errores-frecuentes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
 <ul>
-<li><strong>Aplicar <span class="math inline">\(A\)</span> a la salida para recuperar la entrada.</strong> El producto <span class="math inline">\(A\mathbf b\)</span> calcula <span class="math inline">\(T\)</span> en el vector <span class="math inline">\(\mathbf b\)</span>. La entrada solicitada se obtiene de <span class="math inline">\(A\mathbf x=\mathbf b\)</span>.</li>
-<li><strong>Multiplicar por la inversa por la derecha.</strong> La expresión <span class="math inline">\(\mathbf b A^{-1}\)</span> carece de sentido con <span class="math inline">\(\mathbf b\)</span> de tamaño <span class="math inline">\(2\times1\)</span> y <span class="math inline">\(A^{-1}\)</span> de tamaño <span class="math inline">\(2\times2\)</span>. En <span class="math inline">\(A\mathbf x=\mathbf b\)</span> se multiplica por <span class="math inline">\(A^{-1}\)</span> por la izquierda.</li>
-<li><strong>Deducir unicidad de una sustitución.</strong> La igualdad <span class="math inline">\(P(3,0)=(3,0)\)</span> verifica una entrada. También se cumple <span class="math inline">\(P(3,5)=(3,0)\)</span>.</li>
+<li><strong>Uso de la matriz estándar en lugar de su inversa.</strong> Afirmación incorrecta. La entrada de <span class="math inline">\(K\)</span> que produce <span class="math inline">\((-1,5)\)</span> se obtiene al aplicar <span class="math inline">\(A\)</span> a esa salida, lo que da <span class="math inline">\((14,-7)\)</span>. Corrección. El resultado <span class="math inline">\((14,-7)\)</span> es <span class="math inline">\(K(-1,5)\)</span> y, al sustituirlo, se obtiene <span class="math inline">\(K(14,-7)=(-7,35)\)</span>. La solución de <span class="math inline">\(A\mathbf x=(-1,5)^{\mathsf T}\)</span> es <span class="math inline">\((2,-1)\)</span>.</li>
+<li><strong>Multiplicación por la inversa por la derecha.</strong> Afirmación incorrecta. Para <span class="math inline">\(\mathbf b=(-1,5)^{\mathsf T}\)</span>, la solución de <span class="math inline">\(A\mathbf x=\mathbf b\)</span> es <span class="math inline">\(\mathbf bA^{-1}\)</span>. Corrección. Ese producto no está definido porque <span class="math inline">\(\mathbf b\)</span> es de tamaño <span class="math inline">\(2\times1\)</span> y <span class="math inline">\(A^{-1}\)</span> es de tamaño <span class="math inline">\(2\times2\)</span>. Al multiplicar por la izquierda se obtiene <span class="math inline">\(\mathbf x=A^{-1}\mathbf b=(2,-1)^{\mathsf T}\)</span>.</li>
+<li><strong>Deducción de unicidad por sustitución.</strong> Afirmación incorrecta. Como <span class="math inline">\(P(3,0)=(3,0)\)</span>, la única entrada que produce <span class="math inline">\((3,0)\)</span> es <span class="math inline">\((3,0)\)</span>. Corrección. También se cumple <span class="math inline">\(P(3,5)=(3,0)\)</span>. Para esta salida el sistema es consistente y, como <span class="math inline">\(\det A_P=0\)</span>, tiene infinitas soluciones de la forma <span class="math inline">\((3,t)\)</span>, con <span class="math inline">\(t\in\mathbb R\)</span>.</li>
 </ul>
 </section>
 <section id="actividad" class="level2">
@@ -691,7 +691,7 @@ A^{-1}\begin{bmatrix}-1\\5\end{bmatrix}
 <li><p>Una fundición obtiene un lingote al mezclar dos aleaciones de cobre y zinc sin pérdidas de masa. La aleación 1 contiene <span class="math inline">\(70\,\%\)</span> de cobre y <span class="math inline">\(30\,\%\)</span> de zinc en masa. La aleación 2 contiene <span class="math inline">\(60\,\%\)</span> de cobre y <span class="math inline">\(40\,\%\)</span> de zinc. Las entradas son las masas no negativas usadas de cada aleación. Las salidas son las masas totales de cobre y de zinc, en ese orden. Todas las masas se expresan en kilogramos.</p>
 <ol type="a">
 <li><p>Escriba la matriz de la transformación y calcule su determinante. Si el lingote contiene <span class="math inline">\(66\)</span> kg de cobre y <span class="math inline">\(34\)</span> kg de zinc, determine cuánto se usó de cada aleación y compruebe el resultado.</p></li>
-<li><p>Se sustituye la aleación 2 por otra con los mismos porcentajes que la aleación 1. Calcule el determinante de la nueva matriz y determine si un análisis que reporta <span class="math inline">\(70\)</span> kg de cobre y <span class="math inline">\(30\)</span> kg de zinc permite recuperar las masas de ambas aleaciones. Justifique su respuesta.</p></li>
+<li><p>Se sustituye la aleación 2 por otra con los mismos porcentajes que la aleación 1. Calcule el determinante de la nueva matriz y determine si un análisis que reporta <span class="math inline">\(70\)</span> kg de cobre y <span class="math inline">\(30\)</span> kg de zinc permite recuperar las masas de ambas aleaciones. Determine también si con esas aleaciones se puede obtener un lingote con <span class="math inline">\(60\)</span> kg de cobre y <span class="math inline">\(40\)</span> kg de zinc. Justifique sus respuestas.</p></li>
 </ol></li>
 </ol>
 <p><strong>Comprobación individual.</strong> Para <span class="math inline">\(Q(x,y)=(0,y)\)</span>, calcule el determinante de la matriz estándar y describa todas las entradas que producen <span class="math inline">\((0,4)\)</span>. Decida si <span class="math inline">\((1,4)\)</span> es alcanzable y justifique su respuesta.</p>
@@ -727,7 +727,7 @@ m_1=\frac{66(0.4)-0.6(34)}{0.1}=60,
 m_2=\frac{0.7(34)-66(0.3)}{0.1}=40.
 \]</span></p>
 <p>Las masas de cobre y de zinc son <span class="math inline">\(0.7(60)+0.6(40)=66\)</span> kg y <span class="math inline">\(0.3(60)+0.4(40)=34\)</span> kg. Como <span class="math inline">\(\det A\ne0\)</span>, las masas de <span class="math inline">\(60\)</span> kg y <span class="math inline">\(40\)</span> kg son las únicas compatibles con el análisis.</p>
-<p><strong>2b.</strong> La nueva matriz es <span class="math inline">\(\begin{bmatrix}0.7&amp;0.7\\0.3&amp;0.3\end{bmatrix}\)</span> y su determinante es cero. Si <span class="math inline">\(m_3\)</span> denota la masa usada de la aleación sustituta, ambas ecuaciones equivalen a <span class="math inline">\(m_1+m_3=100\)</span>. Las parejas <span class="math inline">\((60,40)\)</span> y <span class="math inline">\((40,60)\)</span>, por ejemplo, producen el mismo resultado. El análisis determina la masa total de <span class="math inline">\(100\)</span> kg y deja indeterminada la masa de cada aleación.</p>
+<p><strong>2b.</strong> La nueva matriz es <span class="math inline">\(\begin{bmatrix}0.7&amp;0.7\\0.3&amp;0.3\end{bmatrix}\)</span> y su determinante es cero. Si <span class="math inline">\(m_3\)</span> denota la masa usada de la aleación sustituta, ambas ecuaciones equivalen a <span class="math inline">\(m_1+m_3=100\)</span>. Las parejas <span class="math inline">\((60,40)\)</span> y <span class="math inline">\((40,60)\)</span>, por ejemplo, producen el mismo resultado. El análisis determina la masa total de <span class="math inline">\(100\)</span> kg y deja indeterminada la masa de cada aleación. Todo lingote de <span class="math inline">\(100\)</span> kg fabricado con esas aleaciones contiene <span class="math inline">\(0.7(100)=70\)</span> kg de cobre. Por tanto, el lingote con <span class="math inline">\(60\)</span> kg de cobre y <span class="math inline">\(40\)</span> kg de zinc es inalcanzable.</p>
 <p><strong>Comprobación individual.</strong> La matriz de <span class="math inline">\(Q\)</span> es <span class="math inline">\(\begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}\)</span> y su determinante es cero. Las entradas que producen <span class="math inline">\((0,4)\)</span> son <span class="math inline">\((t,4)\)</span>, con <span class="math inline">\(t\in\mathbb R\)</span>. La salida <span class="math inline">\((1,4)\)</span> es inalcanzable porque la primera coordenada de toda salida es cero.</p>
 </div>
 </div>
@@ -768,10 +768,12 @@ m_2=\frac{0.7(34)-66(0.3)}{0.1}=40.
 </section>
 <section id="conclusiones-del-aprendizaje" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones-del-aprendizaje">Conclusiones del aprendizaje</h2>
+<p>Determinar qué vectores se transforman en <span class="math inline">\(\mathbf b\)</span> equivale a resolver <span class="math inline">\(A\mathbf x=\mathbf b\)</span>. Si <span class="math inline">\(\det A\ne0\)</span>, la solución es única y se obtiene mediante <span class="math inline">\(A^{-1}\mathbf b\)</span>. Si <span class="math inline">\(\det A=0\)</span>, un sistema consistente tiene infinitas soluciones. Si el sistema es inconsistente, ningún vector se transforma en <span class="math inline">\(\mathbf b\)</span>.</p>
+<p>Compruebe estas capacidades al revisar sus soluciones.</p>
 <ul>
-<li>El determinante de la matriz estándar permite decidir si cada vector del plano se obtiene a partir de una única entrada.</li>
-<li>Cuando <span class="math inline">\(\det A\ne0\)</span>, la entrada se obtiene al resolver <span class="math inline">\(A\mathbf x=\mathbf b\)</span> y se verifica al sustituirla en la regla de la transformación.</li>
-<li>En una proyección sobre un eje, una salida en ese eje proviene de infinitas entradas. Las salidas fuera del eje son inalcanzables.</li>
+<li>Aplique el <a href="#criterio-de-invertibilidad-mediante-el-determinante">criterio del determinante</a> para justificar la unicidad en el ejercicio 1 de la <a href="#actividad">actividad</a>.</li>
+<li>Verifique por sustitución la solución obtenida mediante la <a href="#ejemplo-1.-recuperación-mediante-la-matriz-inversa">matriz inversa</a> o la regla de Cramer, como en los ejercicios 1 y 2a de la <a href="#actividad">actividad</a>.</li>
+<li>Distinga un sistema con infinitas soluciones de uno sin solución en el <a href="#ejemplo-2.-salidas-de-una-proyección-sobre-el-eje-horizontal">ejemplo de la proyección</a> y en la comprobación individual.</li>
 </ul>
 
 
