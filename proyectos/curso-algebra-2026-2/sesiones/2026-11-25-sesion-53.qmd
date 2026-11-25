@@ -1,0 +1,27 @@
+---
+title: "Sesión 53. Práctica integradora para el Parcial 5"
+date: 2026-11-25
+description: "Simulacro de linealidad, matriz estándar, efecto sobre figuras e invertibilidad de transformaciones del plano."
+---
+
+## Objetivo de la sesión
+
+Resolver los diez ejercicios del simulacro y justificar los resultados mediante las propiedades de las transformaciones lineales, su matriz estándar y los sistemas asociados. Al concluir, identificar los procedimientos y las interpretaciones que requieren revisión antes del examen.
+
+## Actividad
+
+Descargue la versión asignada. Cada versión contiene cinco secciones con dos ejercicios por sección. **Resuelva los dos ejercicios de cada sección**, de manera individual y sin calculadora. Escriba el procedimiento y, después de cada intento, compare su resultado con la respuesta en azul.
+
+El simulacro integra linealidad, matriz estándar, efecto de escalamientos y proyecciones sobre figuras del plano e invertibilidad. En las aplicaciones a una probeta, interprete los datos y compruebe las coordenadas o dimensiones obtenidas. Para verificar una entrada, sustitúyala en la regla de la transformación o en la ecuación $A\mathbf{x}=\mathbf{b}$.
+
+## Simulacros para descargar
+
+| Versión | Archivo |
+|:---:|---|
+| 1 | [Simulacro del Parcial 5, versión 1 (PDF)](../examenes/parcial-5/simulacros/IMA-simulacro-parcial-5-version-01.pdf){download="IMA-simulacro-parcial-5-version-01.pdf"} |
+| 2 | [Simulacro del Parcial 5, versión 2 (PDF)](../examenes/parcial-5/simulacros/IMA-simulacro-parcial-5-version-02.pdf){download="IMA-simulacro-parcial-5-version-02.pdf"} |
+| 3 | [Simulacro del Parcial 5, versión 3 (PDF)](../examenes/parcial-5/simulacros/IMA-simulacro-parcial-5-version-03.pdf){download="IMA-simulacro-parcial-5-version-03.pdf"} |
+
+## Conclusiones del aprendizaje
+
+Revise cuáles resultados pudo justificar y señale el primer paso que debe corregir en los ejercicios donde encontró una discrepancia. Distinga los errores de cálculo de los errores al interpretar una transformación, una coordenada o una dimensión. Lleve a la asesoría las dudas que no haya resuelto.
