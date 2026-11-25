@@ -24,4 +24,4 @@ El simulacro integra linealidad, matriz estándar, efecto de escalamientos y pro
 
 ## Conclusiones del aprendizaje
 
-Revise cuáles resultados pudo justificar y señale el primer paso que debe corregir en los ejercicios donde encontró una discrepancia. Distinga los errores de cálculo de los errores al interpretar una transformación, una coordenada o una dimensión. Lleve a la asesoría las dudas que no haya resuelto.
+Revise cuáles resultados pudo justificar y señale el primer paso que debe corregir en los ejercicios donde encontró una discrepancia. Distinga los errores de cálculo de los errores al interpretar una transformación, una coordenada o una dimensión.
