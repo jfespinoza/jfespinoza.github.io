@@ -1,0 +1,13 @@
+---
+title: "Sesión 54. Examen parcial 5: transformaciones lineales"
+date: 2026-11-27
+description: "Examen del quinto parcial del grupo IMA, con las respuestas correctas señaladas."
+---
+
+## Exámenes aplicados
+
+El siguiente documento reúne las 40 versiones del quinto examen parcial. En el PDF, las respuestas correctas están señaladas en color rojo.
+
+### IMA — Ingeniería en Materiales
+
+[Consultar el examen aplicado al grupo IMA, con respuestas correctas (PDF)](../examenes/parcial-5/IMA-Examen-respuestas.pdf){.btn .btn-primary target="_blank"}
